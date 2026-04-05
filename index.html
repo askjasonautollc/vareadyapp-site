@@ -5,108 +5,235 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VA Ready - Know Your Rating. Claim Your Benefits.</title>
     <meta name="description" content="VA Ready helps veterans calculate their VA disability rating, discover federal and state benefits, and prepare their claim with confidence.">
+    <meta name="keywords" content="VA disability, veteran benefits, VA rating calculator, PACT Act, military, veteran claims">
+    <meta property="og:title" content="VA Ready - Know Your Rating. Claim Your Benefits.">
+    <meta property="og:description" content="The app built to help veterans calculate their VA disability rating and claim every benefit they've earned.">
+    <meta property="og:image" content="https://vareadyapp.com/logo.png">
+    <meta property="og:url" content="https://vareadyapp.com">
     <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --navy: #101624;
+            --navy: #0a0f1a;
+            --navy-mid: #101624;
             --navy-light: #1a2236;
+            --card: #141b2d;
             --gold: #d9a621;
-            --tan: #d1c4a5;
+            --gold-dim: #b8891a;
+            --tan: #c8bda5;
             --green: #2ea65a;
-            --white: #ffffff;
-            --gray: #4a5568;
+            --green-dim: #1a5c33;
+            --orange: #e68a2e;
+            --white: #f0f0f0;
+            --gray: #5a6478;
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
             background: var(--navy);
             color: var(--white);
             line-height: 1.6;
+            overflow-x: hidden;
         }
-        a { color: var(--gold); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        a { color: var(--gold); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #f0c040; }
+
+        /* Animated background */
+        .bg-glow {
+            position: fixed; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 20%, rgba(217,166,33,0.03) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(46,166,90,0.02) 0%, transparent 50%);
+            z-index: -1; animation: drift 20s ease-in-out infinite alternate;
+        }
+        @keyframes drift {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(-3%, 2%) rotate(1deg); }
+        }
 
         /* Nav */
         nav {
             display: flex; align-items: center; justify-content: space-between;
             padding: 20px 40px; max-width: 1200px; margin: 0 auto;
+            position: relative; z-index: 10;
         }
-        .nav-brand { display: flex; align-items: center; gap: 10px; }
-        .nav-brand img { width: 36px; height: 36px; border-radius: 8px; }
-        .nav-brand span { font-size: 18px; font-weight: 900; letter-spacing: 2px; }
-        .nav-links { display: flex; gap: 24px; }
+        .nav-brand { display: flex; align-items: center; gap: 12px; }
+        .nav-brand img { width: 40px; height: 40px; border-radius: 10px; box-shadow: 0 2px 12px rgba(217,166,33,0.2); }
+        .nav-brand span { font-size: 18px; font-weight: 900; letter-spacing: 3px; color: var(--white); }
+        .nav-links { display: flex; gap: 24px; align-items: center; }
         .nav-links a { color: var(--tan); font-size: 14px; font-weight: 600; }
+        .nav-cta {
+            background: var(--gold); color: var(--navy); padding: 8px 20px;
+            border-radius: 8px; font-weight: 800; font-size: 13px; letter-spacing: 0.5px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(217,166,33,0.3); color: var(--navy); }
 
         /* Hero */
         .hero {
-            text-align: center; padding: 80px 24px 60px;
-            max-width: 800px; margin: 0 auto;
+            text-align: center; padding: 100px 24px 80px;
+            max-width: 900px; margin: 0 auto; position: relative;
         }
-        .hero img { width: 120px; height: 120px; border-radius: 24px; margin-bottom: 24px; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(217,166,33,0.1); border: 1px solid rgba(217,166,33,0.2);
+            padding: 6px 16px; border-radius: 20px; font-size: 12px;
+            font-weight: 700; color: var(--gold); letter-spacing: 1px;
+            margin-bottom: 32px; text-transform: uppercase;
+        }
+        .hero img {
+            width: 100px; height: 100px; border-radius: 22px;
+            margin-bottom: 32px; box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 60px rgba(217,166,33,0.1);
+        }
         .hero h1 {
-            font-size: 48px; font-weight: 900; letter-spacing: 3px;
-            margin-bottom: 16px;
+            font-size: 52px; font-weight: 900; letter-spacing: 1px;
+            line-height: 1.15; margin-bottom: 20px;
         }
-        .hero h1 span { color: var(--gold); }
-        .hero p { font-size: 20px; color: var(--tan); margin-bottom: 40px; }
-        .app-store-btn {
-            display: inline-block; background: var(--white); color: #000;
-            padding: 14px 32px; border-radius: 12px; font-weight: 700;
-            font-size: 16px; transition: transform 0.2s;
+        .hero h1 .gold { color: var(--gold); }
+        .hero h1 .green { color: var(--green); }
+        .hero p {
+            font-size: 19px; color: var(--tan); margin-bottom: 40px;
+            max-width: 600px; margin-left: auto; margin-right: auto;
         }
-        .app-store-btn:hover { transform: scale(1.05); text-decoration: none; }
-        .app-store-btn img { height: 20px; vertical-align: middle; margin-right: 8px; }
+        .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--gold); color: var(--navy);
+            padding: 16px 36px; border-radius: 14px; font-weight: 800;
+            font-size: 16px; transition: all 0.2s; letter-spacing: 0.5px;
+            box-shadow: 0 4px 20px rgba(217,166,33,0.25);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(217,166,33,0.35); color: var(--navy); }
+        .btn-secondary {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: transparent; color: var(--tan);
+            padding: 16px 32px; border-radius: 14px; font-weight: 700;
+            font-size: 15px; border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.2s;
+        }
+        .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
 
-        /* Features */
+        /* Stats bar */
+        .stats {
+            max-width: 900px; margin: 0 auto; padding: 20px 24px 60px;
+            display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;
+        }
+        .stat {
+            background: var(--card); border: 1px solid rgba(255,255,255,0.04);
+            border-radius: 12px; padding: 16px 28px; text-align: center;
+            min-width: 140px;
+        }
+        .stat-num { font-size: 28px; font-weight: 900; color: var(--gold); }
+        .stat-label { font-size: 11px; color: var(--gray); letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; }
+
+        /* Section titles */
+        .section-title {
+            text-align: center; padding: 60px 24px 40px; max-width: 700px; margin: 0 auto;
+        }
+        .section-title .tag {
+            font-size: 11px; font-weight: 800; letter-spacing: 3px;
+            text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+        }
+        .section-title h2 { font-size: 36px; font-weight: 900; margin-bottom: 12px; }
+        .section-title p { font-size: 16px; color: var(--tan); }
+
+        /* Features grid */
         .features {
-            max-width: 1000px; margin: 0 auto; padding: 60px 24px;
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
+            max-width: 1100px; margin: 0 auto; padding: 0 24px 80px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
         }
         .feature {
-            background: var(--navy-light); border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 16px; padding: 32px;
+            background: var(--card); border: 1px solid rgba(255,255,255,0.04);
+            border-radius: 18px; padding: 36px 28px;
+            transition: transform 0.2s, border-color 0.2s;
+            position: relative; overflow: hidden;
         }
-        .feature-icon { font-size: 32px; margin-bottom: 16px; }
+        .feature:hover { transform: translateY(-4px); border-color: rgba(217,166,33,0.15); }
+        .feature::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--gold), transparent);
+            opacity: 0; transition: opacity 0.2s;
+        }
+        .feature:hover::before { opacity: 1; }
+        .feature-icon {
+            width: 48px; height: 48px; border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px; margin-bottom: 20px;
+        }
+        .feature-icon.gold { background: rgba(217,166,33,0.12); }
+        .feature-icon.green { background: rgba(46,166,90,0.12); }
+        .feature-icon.blue { background: rgba(59,130,246,0.12); }
+        .feature-icon.orange { background: rgba(230,138,46,0.12); }
         .feature h3 { font-size: 18px; font-weight: 800; margin-bottom: 8px; }
-        .feature p { font-size: 14px; color: var(--tan); }
-
-        /* Stats */
-        .stats {
-            max-width: 1000px; margin: 0 auto; padding: 40px 24px;
-            display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
-            text-align: center;
+        .feature p { font-size: 14px; color: var(--tan); line-height: 1.7; }
+        .feature .tag-sm {
+            display: inline-block; font-size: 10px; font-weight: 800;
+            letter-spacing: 1px; text-transform: uppercase;
+            padding: 3px 8px; border-radius: 4px; margin-top: 12px;
         }
-        .stat-num { font-size: 36px; font-weight: 900; color: var(--gold); }
-        .stat-label { font-size: 13px; color: var(--tan); letter-spacing: 1px; text-transform: uppercase; }
+        .tag-free { background: rgba(46,166,90,0.15); color: var(--green); }
+        .tag-pro { background: rgba(217,166,33,0.15); color: var(--gold); }
+
+        /* How it works */
+        .steps {
+            max-width: 800px; margin: 0 auto; padding: 0 24px 80px;
+        }
+        .step {
+            display: flex; gap: 24px; align-items: flex-start;
+            padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+        .step-num {
+            width: 40px; height: 40px; border-radius: 10px;
+            background: var(--gold); color: var(--navy);
+            font-size: 18px; font-weight: 900;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .step h3 { font-size: 17px; font-weight: 800; margin-bottom: 4px; }
+        .step p { font-size: 14px; color: var(--tan); }
 
         /* Disclaimer */
         .disclaimer {
-            max-width: 800px; margin: 0 auto; padding: 60px 24px;
+            max-width: 800px; margin: 0 auto; padding: 40px 24px;
             text-align: center;
         }
         .disclaimer p {
-            font-size: 12px; color: var(--gray); line-height: 1.8;
+            font-size: 11px; color: var(--gray); line-height: 1.8;
+            background: var(--card); padding: 24px; border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.04);
         }
+
+        /* CTA */
+        .cta-section {
+            text-align: center; padding: 80px 24px;
+            background: linear-gradient(180deg, transparent 0%, rgba(217,166,33,0.03) 100%);
+        }
+        .cta-section h2 { font-size: 32px; font-weight: 900; margin-bottom: 12px; }
+        .cta-section p { font-size: 16px; color: var(--tan); margin-bottom: 32px; }
 
         /* Footer */
         footer {
             text-align: center; padding: 40px 24px;
-            border-top: 1px solid rgba(255,255,255,0.06);
+            border-top: 1px solid rgba(255,255,255,0.04);
         }
         footer p { font-size: 12px; color: var(--gray); }
-        .footer-links { margin-top: 12px; }
-        .footer-links a { color: var(--tan); font-size: 12px; margin: 0 12px; }
+        .footer-links { margin-top: 12px; display: flex; justify-content: center; gap: 24px; }
+        .footer-links a { color: var(--tan); font-size: 12px; }
 
         @media (max-width: 600px) {
             .hero h1 { font-size: 32px; }
             .hero p { font-size: 16px; }
             nav { padding: 16px 20px; }
-            .stats { gap: 24px; }
+            .nav-links a:not(.nav-cta) { display: none; }
+            .section-title h2 { font-size: 28px; }
+            .step { gap: 16px; }
+            .features { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
+    <div class="bg-glow"></div>
+
     <nav>
         <div class="nav-brand">
             <img src="logo.png" alt="VA Ready">
@@ -115,54 +242,114 @@
         <div class="nav-links">
             <a href="privacy.html">Privacy</a>
             <a href="terms.html">Terms</a>
+            <a href="#" class="nav-cta">Download</a>
         </div>
     </nav>
 
     <section class="hero">
+        <div class="hero-badge">&#9733; Built for Veterans, by Veterans</div>
         <img src="logo.png" alt="VA Ready App Icon">
-        <h1>Know Your Rating.<br><span>Claim Your Benefits.</span></h1>
-        <p>The only app built to help veterans calculate their VA disability rating, discover every benefit they've earned, and file with confidence.</p>
-        <a href="#" class="app-store-btn">Download on the App Store</a>
+        <h1>Know Your Rating.<br><span class="gold">Claim Your Benefits.</span></h1>
+        <p>Calculate your VA disability rating, discover every benefit you've earned, and prepare your claim with confidence.</p>
+        <div class="hero-buttons">
+            <a href="#" class="btn-primary">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                Download on the App Store
+            </a>
+            <a href="#features" class="btn-secondary">See Features &darr;</a>
+        </div>
     </section>
 
     <section class="stats">
-        <div><div class="stat-num">730</div><div class="stat-label">Conditions</div></div>
-        <div><div class="stat-num">112</div><div class="stat-label">MOS Profiles</div></div>
-        <div><div class="stat-num">50</div><div class="stat-label">States Covered</div></div>
-        <div><div class="stat-num">12</div><div class="stat-label">Filing Guides</div></div>
+        <div class="stat"><div class="stat-num">730</div><div class="stat-label">Conditions</div></div>
+        <div class="stat"><div class="stat-num">112</div><div class="stat-label">MOS Profiles</div></div>
+        <div class="stat"><div class="stat-num">50</div><div class="stat-label">States</div></div>
+        <div class="stat"><div class="stat-num">13</div><div class="stat-label">Add'l Duties</div></div>
+        <div class="stat"><div class="stat-num">12</div><div class="stat-label">Filing Guides</div></div>
     </section>
 
-    <section class="features">
-        <div class="feature">
-            <div class="feature-icon">&#9889;</div>
-            <h3>VA Math Calculator</h3>
-            <p>Calculate your combined rating with the real VA math formula. Step-by-step breakdown, bilateral factor, and compensation estimates based on 2026 rates.</p>
+    <div id="features">
+        <div class="section-title">
+            <div class="tag">Features</div>
+            <h2>Everything You Need to File</h2>
+            <p>From calculating your rating to tracking your evidence &mdash; VA Ready covers every step of the claims process.</p>
         </div>
-        <div class="feature">
-            <div class="feature-icon">&#11088;</div>
-            <h3>Benefits Explorer</h3>
-            <p>See every federal and state benefit you qualify for at any rating level. Property tax exemptions, education, healthcare, and more across all 50 states.</p>
+
+        <section class="features">
+            <div class="feature">
+                <div class="feature-icon gold">&#9889;</div>
+                <h3>VA Math Calculator</h3>
+                <p>Calculate your combined rating with the real VA math formula. Step-by-step breakdown, bilateral factor detection, and monthly compensation estimates based on 2026 rates and your dependents.</p>
+                <span class="tag-sm tag-free">FREE</span>
+            </div>
+            <div class="feature">
+                <div class="feature-icon green">&#11088;</div>
+                <h3>Benefits Explorer</h3>
+                <p>Tap any rating level to see every federal benefit you qualify for. Property tax exemptions, education, healthcare, CHAMPVA, TDIU &mdash; grouped by category with eligibility status and estimated dollar values.</p>
+                <span class="tag-sm tag-free">FREE</span>
+            </div>
+            <div class="feature">
+                <div class="feature-icon blue">&#128203;</div>
+                <h3>Personal Filing Plan</h3>
+                <p>Personalized timeline based on YOUR separation date. BDD window tracking, 11-step claim status tracker, interactive checklists, and 12 in-depth guides with step-by-step instructions.</p>
+                <span class="tag-sm tag-free">FREE</span>
+            </div>
+            <div class="feature">
+                <div class="feature-icon orange">&#128737;</div>
+                <h3>MOS Intel</h3>
+                <p>112 MOS profiles across all 6 branches. See conditions common to your job, exposure flags, PACT Act presumptives, and additional duty qualifications like Airborne, Ranger, and Combat Diver.</p>
+                <span class="tag-sm tag-pro">PRO</span>
+            </div>
+            <div class="feature">
+                <div class="feature-icon gold">&#9989;</div>
+                <h3>Evidence Checklists</h3>
+                <p>Track your diagnosis, nexus letter, buddy statements, service records, and DBQ review for each condition. Know exactly what's required, what's optional, and what you still need before filing.</p>
+                <span class="tag-sm tag-pro">PRO</span>
+            </div>
+            <div class="feature">
+                <div class="feature-icon green">&#128274;</div>
+                <h3>100% Private</h3>
+                <p>All data stays on your device. No accounts, no cloud storage, no tracking, no ads. We never see, store, or transmit your personal information. Delete the app and it's gone.</p>
+                <span class="tag-sm tag-free">ALWAYS</span>
+            </div>
+        </section>
+    </div>
+
+    <div class="section-title">
+        <div class="tag">How It Works</div>
+        <h2>From Setup to Filing in Minutes</h2>
+    </div>
+
+    <section class="steps">
+        <div class="step">
+            <div class="step-num">1</div>
+            <div><h3>Set Up Your Profile</h3><p>Enter your branch, MOS, service dates, separation date, state, and deployment history. Takes 2 minutes. Everything stays on your device.</p></div>
         </div>
-        <div class="feature">
-            <div class="feature-icon">&#128737;</div>
-            <h3>MOS Intel</h3>
-            <p>Conditions common to your MOS, exposure flags, PACT Act presumptives, and additional duty qualifications like Airborne, Ranger, and Combat Diver.</p>
+        <div class="step">
+            <div class="step-num">2</div>
+            <div><h3>Build Your Claim List</h3><p>Add conditions from the most-claimed list or search all 730. Select your estimated rating or use the full VA criteria (Pro) to match your symptoms to the right level.</p></div>
         </div>
-        <div class="feature">
-            <div class="feature-icon">&#128203;</div>
-            <h3>Filing Guide</h3>
-            <p>Personalized filing timeline based on your separation date. BDD window tracking, claim status tracker, and 12 in-depth guides with step-by-step instructions.</p>
+        <div class="step">
+            <div class="step-num">3</div>
+            <div><h3>See Your Combined Rating</h3><p>Watch the VA math engine calculate your combined rating in real-time with step-by-step breakdown, bilateral factor, and monthly compensation estimate.</p></div>
         </div>
-        <div class="feature">
-            <div class="feature-icon">&#9989;</div>
-            <h3>Evidence Checklists</h3>
-            <p>Track your diagnosis, nexus letter, buddy statements, and service records for each condition. Know exactly what you need before you file.</p>
+        <div class="step">
+            <div class="step-num">4</div>
+            <div><h3>Track Your Evidence</h3><p>Check off each piece of evidence as you gather it &mdash; diagnosis, service records, nexus letters, buddy statements. Know when you're ready to file.</p></div>
         </div>
-        <div class="feature">
-            <div class="feature-icon">&#128274;</div>
-            <h3>100% Private</h3>
-            <p>All data stays on your device. No accounts, no cloud storage, no tracking. We never see or store your personal information.</p>
+        <div class="step">
+            <div class="step-num">5</div>
+            <div><h3>Export and File</h3><p>Export your claim summary with all conditions, diagnostic codes, and estimated ratings. Use it as your checklist when filing on VA.gov.</p></div>
         </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to Claim What You've Earned?</h2>
+        <p>Join thousands of veterans who are filing smarter, not harder.</p>
+        <a href="#" class="btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on the App Store
+        </a>
     </section>
 
     <section class="disclaimer">
@@ -175,6 +362,10 @@
     </section>
 
     <footer>
+        <div class="nav-brand" style="justify-content: center; margin-bottom: 16px;">
+            <img src="logo.png" alt="VA Ready" style="width: 28px; height: 28px; border-radius: 7px;">
+            <span style="font-size: 14px; font-weight: 900; letter-spacing: 2px;">VA READY</span>
+        </div>
         <p>&copy; 2026 VA Ready LLC. All rights reserved.</p>
         <div class="footer-links">
             <a href="privacy.html">Privacy Policy</a>
