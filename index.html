@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VA Ready - Know Your Rating. Claim Your Benefits.</title>
+    <meta name="description" content="VA Ready helps veterans calculate their VA disability rating, discover federal and state benefits, and prepare their claim with confidence.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --navy: #101624;
+            --navy-light: #1a2236;
+            --gold: #d9a621;
+            --tan: #d1c4a5;
+            --green: #2ea65a;
+            --white: #ffffff;
+            --gray: #4a5568;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+            background: var(--navy);
+            color: var(--white);
+            line-height: 1.6;
+        }
+        a { color: var(--gold); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* Nav */
+        nav {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 20px 40px; max-width: 1200px; margin: 0 auto;
+        }
+        .nav-brand { display: flex; align-items: center; gap: 10px; }
+        .nav-brand img { width: 36px; height: 36px; border-radius: 8px; }
+        .nav-brand span { font-size: 18px; font-weight: 900; letter-spacing: 2px; }
+        .nav-links { display: flex; gap: 24px; }
+        .nav-links a { color: var(--tan); font-size: 14px; font-weight: 600; }
+
+        /* Hero */
+        .hero {
+            text-align: center; padding: 80px 24px 60px;
+            max-width: 800px; margin: 0 auto;
+        }
+        .hero img { width: 120px; height: 120px; border-radius: 24px; margin-bottom: 24px; }
+        .hero h1 {
+            font-size: 48px; font-weight: 900; letter-spacing: 3px;
+            margin-bottom: 16px;
+        }
+        .hero h1 span { color: var(--gold); }
+        .hero p { font-size: 20px; color: var(--tan); margin-bottom: 40px; }
+        .app-store-btn {
+            display: inline-block; background: var(--white); color: #000;
+            padding: 14px 32px; border-radius: 12px; font-weight: 700;
+            font-size: 16px; transition: transform 0.2s;
+        }
+        .app-store-btn:hover { transform: scale(1.05); text-decoration: none; }
+        .app-store-btn img { height: 20px; vertical-align: middle; margin-right: 8px; }
+
+        /* Features */
+        .features {
+            max-width: 1000px; margin: 0 auto; padding: 60px 24px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .feature {
+            background: var(--navy-light); border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px; padding: 32px;
+        }
+        .feature-icon { font-size: 32px; margin-bottom: 16px; }
+        .feature h3 { font-size: 18px; font-weight: 800; margin-bottom: 8px; }
+        .feature p { font-size: 14px; color: var(--tan); }
+
+        /* Stats */
+        .stats {
+            max-width: 1000px; margin: 0 auto; padding: 40px 24px;
+            display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
+            text-align: center;
+        }
+        .stat-num { font-size: 36px; font-weight: 900; color: var(--gold); }
+        .stat-label { font-size: 13px; color: var(--tan); letter-spacing: 1px; text-transform: uppercase; }
+
+        /* Disclaimer */
+        .disclaimer {
+            max-width: 800px; margin: 0 auto; padding: 60px 24px;
+            text-align: center;
+        }
+        .disclaimer p {
+            font-size: 12px; color: var(--gray); line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center; padding: 40px 24px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        footer p { font-size: 12px; color: var(--gray); }
+        .footer-links { margin-top: 12px; }
+        .footer-links a { color: var(--tan); font-size: 12px; margin: 0 12px; }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 16px; }
+            nav { padding: 16px 20px; }
+            .stats { gap: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-brand">
+            <img src="logo.png" alt="VA Ready">
+            <span>VA READY</span>
+        </div>
+        <div class="nav-links">
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <img src="logo.png" alt="VA Ready App Icon">
+        <h1>Know Your Rating.<br><span>Claim Your Benefits.</span></h1>
+        <p>The only app built to help veterans calculate their VA disability rating, discover every benefit they've earned, and file with confidence.</p>
+        <a href="#" class="app-store-btn">Download on the App Store</a>
+    </section>
+
+    <section class="stats">
+        <div><div class="stat-num">730</div><div class="stat-label">Conditions</div></div>
+        <div><div class="stat-num">112</div><div class="stat-label">MOS Profiles</div></div>
+        <div><div class="stat-num">50</div><div class="stat-label">States Covered</div></div>
+        <div><div class="stat-num">12</div><div class="stat-label">Filing Guides</div></div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <div class="feature-icon">&#9889;</div>
+            <h3>VA Math Calculator</h3>
+            <p>Calculate your combined rating with the real VA math formula. Step-by-step breakdown, bilateral factor, and compensation estimates based on 2026 rates.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">&#11088;</div>
+            <h3>Benefits Explorer</h3>
+            <p>See every federal and state benefit you qualify for at any rating level. Property tax exemptions, education, healthcare, and more across all 50 states.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">&#128737;</div>
+            <h3>MOS Intel</h3>
+            <p>Conditions common to your MOS, exposure flags, PACT Act presumptives, and additional duty qualifications like Airborne, Ranger, and Combat Diver.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">&#128203;</div>
+            <h3>Filing Guide</h3>
+            <p>Personalized filing timeline based on your separation date. BDD window tracking, claim status tracker, and 12 in-depth guides with step-by-step instructions.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">&#9989;</div>
+            <h3>Evidence Checklists</h3>
+            <p>Track your diagnosis, nexus letter, buddy statements, and service records for each condition. Know exactly what you need before you file.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">&#128274;</div>
+            <h3>100% Private</h3>
+            <p>All data stays on your device. No accounts, no cloud storage, no tracking. We never see or store your personal information.</p>
+        </div>
+    </section>
+
+    <section class="disclaimer">
+        <p>
+            VA Ready is not affiliated with, endorsed by, or connected to the U.S. Department of Veterans Affairs or any government agency.
+            This app does not provide legal or medical advice. All information is based on publicly available VA regulations (38 CFR)
+            and documented best practices. Ratings and benefit estimates are for informational purposes only. Always consult a qualified
+            healthcare provider for medical decisions and a VA-accredited attorney or claims agent for legal counsel.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 VA Ready LLC. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="mailto:support@vareadyapp.com">Contact</a>
+        </div>
+    </footer>
+</body>
+</html>
