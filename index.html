@@ -112,6 +112,21 @@
             color: var(--navy);
             box-shadow: 0 6px 28px rgba(255,255,255,0.28);
         }
+        .btn-pending {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: rgba(255,255,255,0.06); color: var(--tan);
+            padding: 16px 28px; border-radius: 14px; font-weight: 700;
+            font-size: 15px; cursor: not-allowed;
+            border: 1px dashed rgba(255,255,255,0.18);
+            position: relative;
+        }
+        .btn-pending .pending-tag {
+            position: absolute; top: -8px; right: 12px;
+            background: var(--gold); color: var(--navy);
+            font-size: 9px; font-weight: 900; letter-spacing: 1px;
+            padding: 3px 8px; border-radius: 6px;
+            text-transform: uppercase;
+        }
 
         /* Dual platform hero logo */
         .hero-logos {
@@ -324,7 +339,7 @@
 
     <!-- HERO -->
     <section class="hero" id="download">
-        <div class="hero-badge">&#10024; Now on iOS &amp; Android &mdash; Lifetime Pro is here</div>
+        <div class="hero-badge">&#10024; iOS 1.0.11 live &middot; Android in Google Play review</div>
         <div class="hero-logos">
             <div class="logo-wrap">
                 <img src="logo.png" alt="VA Ready App Icon (iOS)">
@@ -344,18 +359,19 @@
                 <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
                 App Store &mdash; VA Ready
             </a>
-            <a href="https://play.google.com/store/apps/details?id=com.vaready.app" class="btn-primary btn-play">
+            <span class="btn-pending" aria-disabled="true">
+                <span class="pending-tag">Coming Soon</span>
                 <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.609 22.186A.997.997 0 013 21.286V2.714a.997.997 0 01.609-.9zm10.89 10.892l2.302 2.302-12.4 7.16 10.098-9.462zM18.16 9.18l2.578 1.49a1 1 0 010 1.66l-2.66 1.534-2.99-2.99 3.072-1.694zM4.398 1.815l12.4 7.16-2.282 2.282L4.398 1.815z"/></svg>
                 Google Play &mdash; Vet Ready
-            </a>
+            </span>
             <a href="#how" class="btn-secondary">How It Works &darr;</a>
         </div>
         <p style="font-size: 12px; color: var(--gray); margin-top: 18px; letter-spacing: 0.5px;">
             <span style="color: var(--green); font-weight: 700;">&#9679;</span> Live on the App Store as <strong style="color: var(--white);">VA Ready</strong> &nbsp;&middot;&nbsp;
-            <span style="color: var(--green); font-weight: 700;">&#9679;</span> Live on Google Play as <strong style="color: var(--white);">Vet Ready</strong>
+            <span style="color: var(--gold); font-weight: 700;">&#9679;</span> Pending Google Play review as <strong style="color: var(--white);">Vet Ready</strong>
         </p>
         <p style="font-size: 11px; color: var(--gray); margin-top: 8px; max-width: 520px; margin-left: auto; margin-right: auto;">
-            Different name per platform, same app. Google Play required a non-government-sounding name, so on Android it&rsquo;s <em>Vet Ready</em>. Same features, same data, same privacy.
+            Different name per platform, same app. Google Play required a non-government-sounding name, so on Android it&rsquo;s <em>Vet Ready</em>. Same features, same data, same privacy. Android version is currently in Google Play review &mdash; we&rsquo;ll flip the button live as soon as it&rsquo;s approved.
         </p>
     </section>
 
@@ -385,9 +401,9 @@
 
     <div class="divider"></div>
 
-    <!-- WHAT'S NEW IN 1.0.9 -->
+    <!-- WHAT'S NEW IN 1.0.11 -->
     <div class="section-title">
-        <div class="tag">Version 1.0.9 &middot; April 2026</div>
+        <div class="tag">Version 1.0.11 &middot; April 2026</div>
         <h2>What&rsquo;s New</h2>
         <p>Lifetime Pro, smarter exposures, symptom PDFs, and your claim list saving for free.</p>
     </div>
@@ -498,7 +514,7 @@
     <section class="split">
         <div class="split-content">
             <h3>Claim Intel &mdash; One Screen for Everything You Can Claim</h3>
-            <p>Your MOS, your PACT Act presumptives, and your selected exposures &mdash; merged into one ranked list of conditions to consider. New in 1.0.9.</p>
+            <p>Your MOS, your PACT Act presumptives, and your selected exposures &mdash; merged into one ranked list of conditions to consider. New in 1.0.11.</p>
             <ul>
                 <li><span class="check">&#10003;</span> 523 MOS profiles across Army, Navy, Marines, Air Force, Coast Guard, and Space Force (181 Army alone)</li>
                 <li><span class="check">&#10003;</span> Held more than one MOS? Add secondary and prior roles &mdash; conditions merge across every job you worked</li>
@@ -597,9 +613,9 @@
             <ul>
                 <li><span class="yes">&#10003;</span> VA math calculator with combined rating</li>
                 <li><span class="yes">&#10003;</span> TDIU &amp; P&amp;T math (100% pay rate)</li>
-                <li><span class="yes">&#10003;</span> <strong>Your claim list saves automatically</strong> &mdash; new in 1.0.9</li>
-                <li><span class="yes">&#10003;</span> All 23 recognized exposures &mdash; new in 1.0.9</li>
-                <li><span class="yes">&#10003;</span> Pyramiding &amp; stacking warnings &mdash; new in 1.0.9</li>
+                <li><span class="yes">&#10003;</span> <strong>Your claim list saves automatically</strong> &mdash; new in 1.0.11</li>
+                <li><span class="yes">&#10003;</span> All 23 recognized exposures &mdash; new in 1.0.11</li>
+                <li><span class="yes">&#10003;</span> Pyramiding &amp; stacking warnings &mdash; new in 1.0.11</li>
                 <li><span class="yes">&#10003;</span> Daily symptom log + plain-text export</li>
                 <li><span class="yes">&#10003;</span> Federal benefits explorer + Texas state preview</li>
                 <li><span class="yes">&#10003;</span> Filing Guide preview for all 50 conditions</li>
@@ -614,7 +630,7 @@
                 <li><span class="yes">&#10003;</span> Everything in Free</li>
                 <li><span class="yes">&#10003;</span> Full VA rating criteria from 38 CFR on every condition</li>
                 <li><span class="yes">&#10003;</span> All 50 Filing Guides unlocked in full</li>
-                <li><span class="yes">&#10003;</span> Symptom Log PDF export &mdash; new in 1.0.9</li>
+                <li><span class="yes">&#10003;</span> Symptom Log PDF export &mdash; new in 1.0.11</li>
                 <li><span class="yes">&#10003;</span> All 50 states + DC and US territories (PR, GU, USVI, AS, CNMI)</li>
                 <li><span class="yes">&#10003;</span> Claim Intel &mdash; 523 MOS profiles, multi-MOS merging, exposure-driven suggestions</li>
                 <li><span class="yes">&#10003;</span> Additional duty profiles (Airborne, Ranger, Diver, etc.)</li>
@@ -623,7 +639,7 @@
                 <li><span class="yes">&#10003;</span> One-tap add from Claim Intel &amp; Suggestions to your claim</li>
             </ul>
             <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(217,166,33,0.15); font-size: 12px; color: var(--tan);">
-                <strong style="color: var(--gold);">&#11088; Lifetime Pro</strong> &mdash; new in 1.0.9. Pay once, never expires. No subscription, no renewals.
+                <strong style="color: var(--gold);">&#11088; Lifetime Pro</strong> &mdash; new in 1.0.11. Pay once, never expires. No subscription, no renewals.
                 <br><span style="font-size: 11px; color: var(--gray);">Subscriptions handled by Apple on iOS and Google Play on Android.</span>
             </div>
         </div>
@@ -638,10 +654,11 @@
                 <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
                 App Store &mdash; VA Ready
             </a>
-            <a href="https://play.google.com/store/apps/details?id=com.vaready.app" class="btn-primary btn-play">
+            <span class="btn-pending" aria-disabled="true">
+                <span class="pending-tag">Coming Soon</span>
                 <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.609 22.186A.997.997 0 013 21.286V2.714a.997.997 0 01.609-.9zm10.89 10.892l2.302 2.302-12.4 7.16 10.098-9.462zM18.16 9.18l2.578 1.49a1 1 0 010 1.66l-2.66 1.534-2.99-2.99 3.072-1.694zM4.398 1.815l12.4 7.16-2.282 2.282L4.398 1.815z"/></svg>
                 Google Play &mdash; Vet Ready
-            </a>
+            </span>
         </div>
     </section>
 
