@@ -255,24 +255,76 @@
         .j-step h3 { font-size: 16px; font-weight: 800; margin-bottom: 4px; }
         .j-step p { font-size: 13px; color: var(--tan); }
 
-        /* Comparison */
+        /* Hero stats strip */
+        .hero-stats {
+            display: flex; justify-content: center; flex-wrap: wrap;
+            gap: 32px; margin: 36px auto 36px;
+            max-width: 720px; padding: 0 12px;
+        }
+        .hero-stats .stat { text-align: center; }
+        .hero-stats .stat-num {
+            font-size: 28px; font-weight: 900; color: var(--gold);
+            letter-spacing: -0.5px;
+        }
+        .hero-stats .stat-lbl {
+            font-size: 10px; font-weight: 700; color: var(--gray);
+            text-transform: uppercase; letter-spacing: 1.2px; margin-top: 2px;
+        }
+        @media (max-width: 600px) {
+            .hero-stats { gap: 18px 22px; }
+            .hero-stats .stat-num { font-size: 22px; }
+        }
+
+        /* Comparison — three-tier layout */
         .comparison {
-            max-width: 800px; margin: 0 auto; padding: 0 24px 80px;
-            display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+            max-width: 1080px; margin: 0 auto; padding: 0 24px 80px;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
         }
         .plan {
-            background: var(--card); border-radius: 18px; padding: 32px;
+            background: var(--card); border-radius: 18px; padding: 32px 28px;
             border: 1px solid rgba(255,255,255,0.04);
+            position: relative; display: flex; flex-direction: column;
         }
-        .plan.pro { border-color: rgba(217,166,33,0.3); }
-        .plan-name { font-size: 13px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; }
+        .plan.pro-annual {
+            border-color: rgba(217,166,33,0.25);
+        }
+        .plan.pro-lifetime {
+            border-color: rgba(217,166,33,0.45);
+            background: linear-gradient(180deg, var(--card) 0%, rgba(217,166,33,0.04) 100%);
+        }
+        .plan .ribbon {
+            position: absolute; top: -10px; right: 18px;
+            background: var(--gold); color: var(--navy);
+            font-size: 10px; font-weight: 900; letter-spacing: 1.5px;
+            padding: 4px 10px; border-radius: 6px;
+            text-transform: uppercase;
+        }
+        .plan-name { font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; color: var(--gray); }
         .plan-name.gold { color: var(--gold); }
-        .plan-price { font-size: 28px; font-weight: 900; margin-bottom: 16px; }
-        .plan-price span { font-size: 14px; color: var(--gray); font-weight: 600; }
-        .plan ul { list-style: none; padding: 0; }
-        .plan li { font-size: 13px; color: var(--tan); padding: 5px 0; display: flex; gap: 8px; }
-        .plan li .yes { color: var(--green); }
+        .plan-price {
+            font-size: 34px; font-weight: 900; line-height: 1;
+            margin-bottom: 4px; letter-spacing: -1px;
+        }
+        .plan-price .currency { font-size: 20px; vertical-align: top; margin-right: 2px; color: var(--tan); }
+        .plan-price-period {
+            font-size: 13px; color: var(--gray); font-weight: 600;
+            margin-bottom: 18px; min-height: 18px;
+        }
+        .plan-price-alt {
+            font-size: 11px; color: var(--gray); font-weight: 600;
+            margin-bottom: 18px; letter-spacing: 0.3px;
+        }
+        .plan-tagline {
+            font-size: 12px; color: var(--tan); font-style: italic;
+            margin-bottom: 18px; min-height: 30px;
+        }
+        .plan ul { list-style: none; padding: 0; margin-bottom: 0; flex-grow: 1; }
+        .plan li { font-size: 13px; color: var(--tan); padding: 6px 0; display: flex; gap: 8px; align-items: flex-start; line-height: 1.5; }
+        .plan li .yes { color: var(--green); flex-shrink: 0; }
         .plan li .no { color: var(--gray); }
+        @media (max-width: 880px) {
+            .comparison { grid-template-columns: 1fr; max-width: 480px; }
+        }
 
         /* Disclaimer */
         .disclaimer {
@@ -352,8 +404,15 @@
             </div>
         </div>
         <h1>Know Your Rating.<br><span class="gold">Claim Your Benefits.</span></h1>
-        <p>Tell us your MOS, time in service, and deployments. We'll show you what to claim, how to rate it, what benefits you qualify for, and exactly how to file.</p>
-        <p class="sub">Same app, two stores. <strong style="color: var(--gold);">VA Ready</strong> on the App Store, <strong style="color: var(--gold);">Vet Ready</strong> on Google Play. 749 conditions. 1,045 MOS / rating / AFSC profiles. 43 cited exposures. 137 bases tracked. All 50 states plus DC and the territories. Daily symptom log with PDF export.</p>
+        <p>The disability calculator and filing toolkit veterans actually use. Calculate your combined rating, surface every condition you can claim, find the benefits you've earned, and file ready.</p>
+        <p class="sub"><strong style="color: var(--gold);">VA Ready</strong> on the App Store. <strong style="color: var(--gold);">Vet Ready</strong> on Google Play. One app, two stores.</p>
+        <div class="hero-stats">
+            <div class="stat"><div class="stat-num">749</div><div class="stat-lbl">Conditions</div></div>
+            <div class="stat"><div class="stat-num">1,045</div><div class="stat-lbl">MOS &middot; AFSC &middot; Rating profiles</div></div>
+            <div class="stat"><div class="stat-num">43</div><div class="stat-lbl">Cited exposures</div></div>
+            <div class="stat"><div class="stat-num">137</div><div class="stat-lbl">Bases tracked</div></div>
+            <div class="stat"><div class="stat-num">50</div><div class="stat-lbl">States &middot; DC &middot; territories</div></div>
+        </div>
         <div class="hero-buttons">
             <a href="https://apps.apple.com/app/id6761733758" class="btn-primary">
                 <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -365,12 +424,11 @@
             </a>
             <a href="#how" class="btn-secondary">How It Works &darr;</a>
         </div>
-        <p style="font-size: 12px; color: var(--gray); margin-top: 18px; letter-spacing: 0.5px;">
-            <span style="color: var(--green); font-weight: 700;">&#9679;</span> Live on the App Store as <strong style="color: var(--white);">VA Ready</strong> &nbsp;&middot;&nbsp;
-            <span style="color: var(--green); font-weight: 700;">&#9679;</span> Live on Google Play as <strong style="color: var(--white);">Vet Ready</strong>
+        <p style="font-size: 11px; color: var(--tan); margin-top: 22px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.7; letter-spacing: 0.3px;">
+            Built by a veteran. Audited against current 38 CFR. Cited primary sources. Your data never leaves your device.
         </p>
-        <p style="font-size: 11px; color: var(--gray); margin-top: 8px; max-width: 520px; margin-left: auto; margin-right: auto;">
-            Different name per platform, same app. Google Play required a non-government-sounding name, so on Android it&rsquo;s <em>Vet Ready</em>. Same features, same data, same privacy.
+        <p style="font-size: 11px; color: var(--gray); margin-top: 10px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.7;">
+            <span style="color: var(--green); font-weight: 700;">&#9679;</span> Live on iOS &amp; Android. Different name per platform (Google Play requires a non-government-sounding name), same app, same data.
         </p>
     </section>
 
@@ -394,7 +452,7 @@
         </div>
         <div class="pitch-item">
             <div class="pitch-icon">&#128640;</div>
-            <div class="pitch-text">File with confidence &mdash; nothing missed</div>
+            <div class="pitch-text">File ready. Nothing missed.</div>
         </div>
     </section>
 
@@ -413,7 +471,7 @@
                 <div class="feature-icon fi-gold">&#9883;</div>
                 <h3>Map Your Service. Unlock Every Presumptive You&rsquo;ve Earned.</h3>
             </div>
-            <p>The next release adds a Location-first exposure engine inside Claim Intel. Add Camp Lejeune, Iraq, K2, Pease AFB, the F-16 you maintained &mdash; the app cross-references your service against the <strong>PACT Act, Camp Lejeune, AFFF/PFAS, K2, Agent Orange,</strong> and 30+ other registries to surface every presumptive condition that applies to you. <strong style="color: var(--white);">43 cited exposures. 137 bases. 38 airframes.</strong> Every match cites a primary source &mdash; VA.gov, 38 CFR, ATSDR, or congress.gov.</p>
+            <p>1.1.0 introduces a location-first exposure engine inside Claim Intel. Add the bases you served at and the airframes you worked on. The app cross-references your service against the <strong>PACT Act, Camp Lejeune, AFFF/PFAS, K2, Agent Orange,</strong> and 30+ other registries, then surfaces every presumptive condition that applies. <strong style="color: var(--white);">43 cited exposures. 137 bases. 38 airframes.</strong> Every match links back to a primary source: VA.gov, 38 CFR, ATSDR, or congress.gov.</p>
             <span class="tag-sm tag-pro">Coming in 1.1.0</span>
         </div>
     </section>
@@ -433,7 +491,7 @@
                 <div class="feature-icon fi-gold">&#128101;</div>
                 <h3>Find Help Went National</h3>
             </div>
-            <p>Every state is now covered. Pulled <strong>thousands of accredited representatives</strong> straight from the VA&rsquo;s official accreditation list &mdash; county VSOs, state DVAs, national HQ chapters, VA OGC reps. If you&rsquo;re in the US, there&rsquo;s a real local rep within driving distance.</p>
+            <p>Every state is now covered. <strong>Thousands of accredited representatives</strong> pulled straight from the VA's official accreditation list: county VSOs, state DVAs, national HQ chapters, VA OGC reps. If you're in the US, there's a real local rep within driving distance.</p>
             <span class="tag-sm tag-free">Free &amp; Pro</span>
         </div>
         <div class="feature green-line">
@@ -449,7 +507,7 @@
                 <div class="feature-icon fi-blue">&#128205;</div>
                 <h3>&ldquo;Closest to Me&rdquo; Sorts by Distance</h3>
             </div>
-            <p>Tap one button and every rep sorts by how far they are from you. Each row shows the miles &mdash; &lsquo;3.2 mi&rsquo;, &lsquo;17 mi&rsquo; &mdash; so you can pick the closest free help. Location is read once and never stored.</p>
+            <p>Tap one button and every rep sorts by distance. Each row shows the miles (3.2&nbsp;mi, 17&nbsp;mi) so you can pick the closest free help. Location is read once and never stored.</p>
             <span class="tag-sm tag-free">Free &amp; Pro</span>
         </div>
         <div class="feature gold-line">
@@ -465,7 +523,7 @@
                 <div class="feature-icon fi-green">&#9742;&#65039;</div>
                 <h3>Bigger Call &amp; Email Buttons</h3>
             </div>
-            <p>Each office row now has a clear green Call pill and a blue Email pill &mdash; no more squinting at tiny icons. Haptic tap feedback so you know it registered.</p>
+            <p>Each office row now has a clear green Call pill and a blue Email pill. No more squinting at tiny icons. Haptic tap feedback so you know it registered.</p>
             <span class="tag-sm tag-free">Free &amp; Pro</span>
         </div>
         <div class="feature orange-line">
@@ -483,14 +541,14 @@
     <!-- MY CLAIM -->
     <section class="split">
         <div class="split-content">
-            <h3>Build Your Claim Like a Mission</h3>
+            <h3>Build your claim like a mission.</h3>
             <p>Add conditions from the 15 most-claimed list or search all 749 in the VA's rating schedule. For each one:</p>
             <ul>
-                <li><span class="check">&#10003;</span> Select your estimated rating &mdash; or use the full CFR criteria to match your exact symptoms (Pro)</li>
+                <li><span class="check">&#10003;</span> Select your estimated rating, or use the full CFR criteria to match your exact symptoms (Pro)</li>
                 <li><span class="check">&#10003;</span> See the step-by-step VA math as each condition combines with the others</li>
                 <li><span class="check">&#10003;</span> Bilateral factor auto-detects for paired extremity conditions</li>
                 <li><span class="check">&#10003;</span> Run what-if scenarios: "What if I add a 30% condition?"</li>
-                <li><span class="check">&#10003;</span> Track evidence for each condition &mdash; diagnosis, nexus letter, buddy statements, service records</li>
+                <li><span class="check">&#10003;</span> Track evidence for each condition: diagnosis, nexus letter, buddy statements, service records</li>
                 <li><span class="check">&#10003;</span> Export your full claim summary to use when filing on VA.gov</li>
             </ul>
         </div>
@@ -505,11 +563,11 @@
     <!-- BENEFITS -->
     <section class="split reverse">
         <div class="split-content">
-            <h3>See What You've Earned at Every Level</h3>
-            <p>Tap any rating from 0% to 100% and instantly see every benefit that unlocks &mdash; federal and state.</p>
+            <h3>See what you've earned at every level.</h3>
+            <p>Tap any rating from 0% to 100% and see every benefit it unlocks. Federal and state.</p>
             <ul>
                 <li><span class="check">&#10003;</span> Federal benefits grouped by category: healthcare, education, housing, financial, dependents</li>
-                <li><span class="check">&#10003;</span> State benefits for all 50 states &mdash; property tax exemptions, free plates, tuition waivers (Pro)</li>
+                <li><span class="check">&#10003;</span> State benefits for all 50 states: property tax exemptions, free plates, tuition waivers (Pro)</li>
                 <li><span class="check">&#10003;</span> Estimated annual dollar value for each benefit where calculable</li>
                 <li><span class="check">&#10003;</span> Qualified / May Qualify / Not Eligible status for each benefit</li>
                 <li><span class="check">&#10003;</span> How-to-claim instructions with agency names and form numbers</li>
@@ -532,15 +590,15 @@
     <!-- CLAIM INTEL -->
     <section class="split">
         <div class="split-content">
-            <h3>Claim Intel &mdash; One Screen for Everything You Can Claim</h3>
-            <p>Your MOS, your PACT Act presumptives, and your service-based exposures &mdash; merged into one ranked list of conditions to consider.</p>
+            <h3>Claim Intel: every condition you can claim.</h3>
+            <p>Your MOS, your PACT Act presumptives, and your exposures, merged into one ranked list.</p>
             <ul>
-                <li><span class="check">&#10003;</span> 1,045 MOS / rating / AFSC profiles across Army, Navy, Marines, Air Force, Coast Guard, and Space Force</li>
-                <li><span class="check">&#10003;</span> Held more than one MOS? Add secondary and prior roles &mdash; conditions merge across every job you worked</li>
+                <li><span class="check">&#10003;</span> 1,045 MOS / rating / AFSC profiles across all six branches</li>
+                <li><span class="check">&#10003;</span> Held more than one MOS? Add secondary and prior roles. Conditions merge across every job you worked.</li>
                 <li><span class="check">&#10003;</span> 77 additional-duty profiles: Airborne, Ranger, Pararescue, Combat Controller, MARSOC, Navy SEAL, USCG MSRT, Space Force operators, and more</li>
-                <li><span class="check">&#10003;</span> PACT Act presumptive matching with a green &ldquo;PRESUMPTIVE PATHS&rdquo; badge on each condition&rsquo;s evidence checklist</li>
-                <li><span class="check">&#10003;</span> Tap any condition to see why it&rsquo;s on your list &mdash; the source MOS, the exposures that surfaced it, and the citation</li>
-                <li><span class="check">&#10003;</span> Tap to add it straight to your claim list &mdash; with pyramiding warnings if it conflicts</li>
+                <li><span class="check">&#10003;</span> PACT Act presumptive matching, with a green PRESUMPTIVE PATHS badge on each condition's evidence checklist</li>
+                <li><span class="check">&#10003;</span> Tap any condition to see why it's on your list: the source MOS, the exposures that surfaced it, and the citation</li>
+                <li><span class="check">&#10003;</span> Tap to add it to your claim, with pyramiding warnings before it lands</li>
             </ul>
         </div>
         <div class="split-visual">
@@ -561,15 +619,15 @@
     <!-- FILING -->
     <section class="split reverse">
         <div class="split-content">
-            <h3>Your Personal Filing Coach</h3>
-            <p>Based on YOUR separation date, we tell you exactly where you are in the process and what to do next.</p>
+            <h3>Your filing coach.</h3>
+            <p>Based on your separation date, the app tells you where you are in the VA process and what to do next.</p>
             <ul>
                 <li><span class="check">&#10003;</span> Personalized timeline: BDD window, presumptive period, days since separation</li>
                 <li><span class="check">&#10003;</span> 11-step claim status tracker from "Preparing" to "Decision Made"</li>
                 <li><span class="check">&#10003;</span> Interactive action checklists tailored to your filing phase</li>
                 <li><span class="check">&#10003;</span> Claim readiness score: see your evidence completion percentage across all conditions</li>
                 <li><span class="check">&#10003;</span> 12 in-depth filing guides: Intent to File, BDD, C&amp;P Exam Prep, Nexus Letters, Appeals, PACT Act, and more</li>
-                <li><span class="check">&#10003;</span> C&amp;P exam preparation &mdash; know what the examiner will ask before you walk in</li>
+                <li><span class="check">&#10003;</span> C&amp;P exam preparation: know what the examiner will ask before you walk in</li>
             </ul>
         </div>
         <div class="split-visual">
@@ -588,9 +646,9 @@
     <!-- HOW IT WORKS -->
     <div id="how">
         <div class="section-title">
-            <div class="tag">How It Works</div>
-            <h2>From Setup to Filing</h2>
-            <p>Five minutes to set up. A lifetime of benefits.</p>
+            <div class="tag">How it works</div>
+            <h2>Setup to filed, five steps.</h2>
+            <p>Five minutes of setup buys a lifetime of benefits you've already earned.</p>
         </div>
 
         <section class="journey">
@@ -604,7 +662,7 @@
             </div>
             <div class="j-step">
                 <div class="j-num">3</div>
-                <div><h3>Open Claim Intel</h3><p>One screen merging your MOS-typical conditions, PACT Act presumptives, and conditions tied to your selected exposures. Tap to add &mdash; the app warns you about pyramiding before it lands on your claim. Multi-MOS support combines every role you held.</p></div>
+                <div><h3>Open Claim Intel</h3><p>One screen merging your MOS-typical conditions, PACT Act presumptives, and conditions tied to your exposures. Tap to add. The app warns you about pyramiding before it lands. Multi-MOS supported.</p></div>
             </div>
             <div class="j-step">
                 <div class="j-num">4</div>
@@ -615,68 +673,76 @@
                 <div><h3>File With Confidence</h3><p>Export your claim summary with every condition, diagnostic code, and estimated rating. Use it as your checklist on VA.gov. Nothing missed, nothing forgotten.</p></div>
             </div>
         </section>
-        <div style="max-width: 720px; margin: 12px auto 0; padding: 18px 20px; border-radius: 14px; background: rgba(217,166,33,0.08); border: 1px solid rgba(217,166,33,0.25); text-align: center;">
-            <div style="font-size: 11px; font-weight: 800; letter-spacing: 1.5px; color: var(--gold); text-transform: uppercase; margin-bottom: 6px;">&#11088; Lifetime Pro</div>
-            <p style="font-size: 14px; color: var(--white); margin: 0;">
-                Free covers the whole flow. Upgrade if you want full rating criteria, every Filing Guide, all 50 states, and Claim Intel &mdash;
-                <strong style="color: var(--gold);">$4.99/mo</strong>, <strong style="color: var(--gold);">$39.99/yr</strong>, or
-                <strong style="color: var(--gold);">$59.99 once for lifetime</strong>. Lifetime is now live on both <strong style="color: var(--white);">iOS</strong> and <strong style="color: var(--white);">Android</strong> &mdash; pay once, never expires.
-            </p>
-        </div>
     </div>
 
     <div class="divider"></div>
 
-    <!-- FREE VS PRO -->
+    <!-- PLANS -->
     <div class="section-title">
         <div class="tag">Plans</div>
-        <h2>Free Gets You Started. Pro Gets You There.</h2>
+        <h2>Pick the plan that fits.</h2>
+        <p>Free covers the full claim-building flow. Pro unlocks the deep rating criteria, every state's benefits, and the full Claim Intel engine.</p>
     </div>
 
     <section class="comparison">
         <div class="plan">
             <div class="plan-name">Free</div>
-            <div class="plan-price">$0 <span>forever</span></div>
+            <div class="plan-price"><span class="currency">$</span>0</div>
+            <div class="plan-price-period">forever, no card needed</div>
+            <div class="plan-tagline">Everything you need to start a claim today.</div>
             <ul>
-                <li><span class="yes">&#10003;</span> VA math calculator with combined rating</li>
-                <li><span class="yes">&#10003;</span> TDIU &amp; P&amp;T math (100% pay rate)</li>
-                <li><span class="yes">&#10003;</span> <strong>Your claim list saves automatically</strong></li>
+                <li><span class="yes">&#10003;</span> VA combined-rating calculator with TDIU &amp; P&amp;T math</li>
+                <li><span class="yes">&#10003;</span> Auto-saving claim list</li>
                 <li><span class="yes">&#10003;</span> All 43 cited exposures with primary-source citations</li>
-                <li><span class="yes">&#10003;</span> Pyramiding &amp; stacking warnings before you add</li>
-                <li><span class="yes">&#10003;</span> Find Help &mdash; thousands of accredited VSOs, sortable by distance</li>
-                <li><span class="yes">&#10003;</span> Daily symptom log + plain-text export</li>
-                <li><span class="yes">&#10003;</span> Federal benefits explorer + Texas state preview</li>
-                <li><span class="yes">&#10003;</span> Filing Guide preview for all 50 conditions</li>
-                <li><span class="yes">&#10003;</span> C&amp;P exam reminder + up to 3 claim milestones</li>
-                <li><span class="no">&mdash;</span> Claim Intel locked (preview only)</li>
+                <li><span class="yes">&#10003;</span> Pyramiding and stacking warnings</li>
+                <li><span class="yes">&#10003;</span> Find Help: thousands of accredited VSOs, sortable by distance</li>
+                <li><span class="yes">&#10003;</span> Daily symptom log with plain-text export</li>
+                <li><span class="yes">&#10003;</span> Federal benefits at every rating, plus Texas state preview</li>
+                <li><span class="yes">&#10003;</span> Filing Guide previews and C&amp;P exam reminders</li>
             </ul>
         </div>
-        <div class="plan pro">
-            <div class="plan-name gold">Pro</div>
-            <div class="plan-price">$4.99 <span>/mo &middot; $39.99/yr &middot; $59.99 lifetime</span></div>
+
+        <div class="plan pro-annual">
+            <div class="plan-name gold">Pro Annual</div>
+            <div class="plan-price"><span class="currency">$</span>39.99</div>
+            <div class="plan-price-period">per year &middot; saves 33% vs monthly</div>
+            <div class="plan-tagline">The full toolkit, renewed yearly.</div>
             <ul>
                 <li><span class="yes">&#10003;</span> Everything in Free</li>
-                <li><span class="yes">&#10003;</span> Full VA rating criteria from 38 CFR on every condition</li>
-                <li><span class="yes">&#10003;</span> All 50 Filing Guides unlocked in full</li>
+                <li><span class="yes">&#10003;</span> Full 38 CFR rating criteria on every condition</li>
+                <li><span class="yes">&#10003;</span> Claim Intel: 1,045 MOS / AFSC / rating profiles with multi-MOS merging</li>
+                <li><span class="yes">&#10003;</span> 77 additional-duty profiles across all six branches</li>
+                <li><span class="yes">&#10003;</span> All 50 Filing Guides unlocked</li>
+                <li><span class="yes">&#10003;</span> All 50 states, DC, and US territories</li>
                 <li><span class="yes">&#10003;</span> Symptom Log PDF export</li>
-                <li><span class="yes">&#10003;</span> All 50 states + DC and US territories (PR, GU, USVI, AS, CNMI)</li>
-                <li><span class="yes">&#10003;</span> Claim Intel &mdash; 1,045 MOS / AFSC profiles, multi-MOS merging, exposure-driven suggestions</li>
-                <li><span class="yes">&#10003;</span> 77 additional-duty profiles (Airborne, Ranger, Pararescue, MARSOC, Space Force operators, etc.)</li>
-                <li><span class="yes">&#10003;</span> Unlimited claim milestone reminders, persistent</li>
-                <li><span class="yes">&#10003;</span> Interactive filing checklists &amp; claim readiness</li>
-                <li><span class="yes">&#10003;</span> One-tap add from Claim Intel &amp; Suggestions to your claim</li>
+                <li><span class="yes">&#10003;</span> One-tap add from Claim Intel into your claim</li>
+                <li><span class="yes">&#10003;</span> Unlimited claim milestones &amp; interactive checklists</li>
             </ul>
-            <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(217,166,33,0.15); font-size: 12px; color: var(--tan);">
-                <strong style="color: var(--gold);">&#11088; Lifetime Pro</strong> &mdash; pay once, never expires. No subscription, no renewals.
-                <br><span style="font-size: 11px; color: var(--gray);">Subscriptions handled by Apple on iOS and Google Play on Android.</span>
-            </div>
+            <div class="plan-price-alt">Also available monthly at $4.99/mo.</div>
+        </div>
+
+        <div class="plan pro-lifetime">
+            <div class="ribbon">Best value</div>
+            <div class="plan-name gold">Pro Lifetime</div>
+            <div class="plan-price"><span class="currency">$</span>59.99</div>
+            <div class="plan-price-period">once &middot; never expires</div>
+            <div class="plan-tagline">Pay once, keep it. No subscription.</div>
+            <ul>
+                <li><span class="yes">&#10003;</span> Every Pro feature, forever</li>
+                <li><span class="yes">&#10003;</span> No renewals, no auto-billing, no surprises</li>
+                <li><span class="yes">&#10003;</span> All future Pro features at no extra cost</li>
+                <li><span class="yes">&#10003;</span> Pays for itself in 18 months vs. annual</li>
+                <li><span class="yes">&#10003;</span> Available on both iOS and Android</li>
+                <li><span class="yes">&#10003;</span> Restore on any device with the same App Store / Play Store account</li>
+            </ul>
+            <div class="plan-price-alt">Transactions and renewals handled by Apple on iOS and Google Play on Android.</div>
         </div>
     </section>
 
     <!-- CTA -->
     <section class="cta-section">
-        <h2>You Served. Now Get What You've Earned.</h2>
-        <p>Every day you wait is a day of benefits you're not receiving.<br>Start building your claim today &mdash; on iPhone or Android.</p>
+        <h2>You served. Get what you've earned.</h2>
+        <p>Every day you wait is a day of benefits you're not receiving.<br>Start building your claim on iPhone or Android.</p>
         <div class="hero-buttons" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
             <a href="https://apps.apple.com/app/id6761733758" class="btn-primary">
                 <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
