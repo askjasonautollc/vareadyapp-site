@@ -1,0 +1,8 @@
+# vareadyapp.com
+# Public marketing site for the VA Ready (iOS) / Vet Ready (Android) apps.
+
+User-agent: *
+Allow: /
+Disallow:
+
+Sitemap: https://vareadyapp.com/sitemap.xml
