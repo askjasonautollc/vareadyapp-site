@@ -57,7 +57,7 @@
       "url": "https://vareadyapp.com/",
       "image": "https://vareadyapp.com/logo.png",
       "screenshot": "https://vareadyapp.com/logo.png",
-      "softwareVersion": "1.1.1",
+      "softwareVersion": "1.1.2",
       "offers": [
         {
           "@type": "Offer",
@@ -784,7 +784,7 @@
 
     <!-- HERO -->
     <section class="hero" id="download">
-        <div class="hero-badge">&#10024; iOS 1.1.1 live &middot; Android 1.1.1 live on Google Play</div>
+        <div class="hero-badge">&#10024; iOS 1.1.2 live &middot; Android 1.1.2 live on Google Play</div>
         <div class="hero-logos">
             <div class="logo-wrap">
                 <img src="logo.png" alt="VA Ready app icon on iOS App Store" width="130" height="130">
@@ -942,60 +942,76 @@
 
     <div class="divider"></div>
 
-    <!-- WHAT'S NEW IN 1.1.1 -->
+    <!-- WHAT'S NEW IN 1.1.2 -->
     <div class="section-title">
-        <div class="tag">Version 1.1.1 &middot; May 2026</div>
+        <div class="tag">Version 1.1.2 &middot; May 2026</div>
         <h2>What&rsquo;s New</h2>
-        <p>The Exposure Calculator shipped. A real filing coach. 175 condition codes corrected. Cold War Germany duty stations added.</p>
+        <p>Three claim types instead of two. The bilateral factor finally works the way 38 CFR 4.26 actually says. A 4-question Reservist / Guard wizard. 8,949 VSO offices, every state covered.</p>
     </div>
 
     <section class="features" style="padding-bottom: 40px;">
-        <div class="feature green-line">
-            <div class="feature-head">
-                <div class="feature-icon fi-green">&#128218;</div>
-                <h3>Filing Coach for First-Timers</h3>
-            </div>
-            <p>Every step of the VA process now includes plain-English context: how long it actually takes, what the VA is doing right now, what you can do productively while you wait, and what NOT to do (don&rsquo;t restart the clock with late evidence). Plus a new Help article, <em>How VA Claims Actually Work (for first-timers)</em>.</p>
-            <span class="tag-sm tag-free">Free &amp; Pro</span>
-        </div>
         <div class="feature blue-line">
             <div class="feature-head">
-                <div class="feature-icon fi-blue">&#8734;</div>
-                <h3>Unlimited Parallel Claims</h3>
+                <div class="feature-icon fi-blue">&#8593;</div>
+                <h3>ADD INCREASE REQUEST &mdash; the missing third claim type</h3>
             </div>
-            <p>Most first-time claimants don&rsquo;t know this. The Filing tab spells it out: every new condition should get its own Intent to File the moment you decide to claim it. Back-pay flows from the ITF date &mdash; every month you delay is money you give up.</p>
+            <p>Currently rated for sleep apnea at 30% and going for 50%? My Claim now has a third button alongside ADD RATED and ADD NEW CLAIM. It captures both the rating VA already granted and your target, renders the row as <em>&ldquo;30 &rarr; 50% requested&rdquo;</em>, and routes the condition through the same Filing Prep / C&amp;P / DBQ workflow as a fresh claim. No more shoehorning increases into the &ldquo;new claim&rdquo; bucket.</p>
             <span class="tag-sm tag-free">Free &amp; Pro</span>
         </div>
         <div class="feature green-line">
             <div class="feature-head">
                 <div class="feature-icon fi-green">&#10003;</div>
-                <h3>Bilateral Toggle Restored on Peripheral Nerves</h3>
+                <h3>Bilateral picker rewritten &mdash; the factor actually fires now</h3>
             </div>
-            <p>Sciatica, carpal tunnel, ulnar, brachial plexus, and the entire 8510&ndash;8730 peripheral nerve range now correctly show the Left/Right toggle when added to your claim. The bilateral factor under 38 CFR 4.26 applies automatically once both sides are entered.</p>
+            <p>The old two-switch UI let you flag both sides on a single row, which silently failed the 38 CFR 4.26 math (one row at 30% &times; 1.10 = 33% &rarr; rounded back to 30%, zero visible change). Replaced with a 3-chip picker &mdash; Left only / Right only / Both sides. Pick &ldquo;Both sides&rdquo; and the app adds a left row and a right row automatically. Two 30% shoulders now compute as <strong>51% combined &rarr; 56% with the factor &rarr; 60% final</strong>, which is what VA actually pays.</p>
             <span class="tag-sm tag-free">Free &amp; Pro</span>
         </div>
-        <div class="feature orange-line">
+        <div class="feature green-line">
             <div class="feature-head">
-                <div class="feature-icon fi-orange">&#9888;&#65039;</div>
-                <h3>175 Condition Codes Corrected</h3>
+                <div class="feature-icon fi-green">&#128737;&#65039;</div>
+                <h3>Reservist / Guard Status Wizard</h3>
             </div>
-            <p>All 753 conditions audited line-by-line against current 38 CFR. Highest-impact fixes: <strong>amputations</strong> (100% caps restored), <strong>carpal tunnel and all 57 peripheral nerve codes</strong> (dominant vs. non-dominant tiers), <strong>TBI scale</strong>, <strong>mastectomy</strong>, and <strong>sleep apnea</strong>. 99.5%+ accuracy verified by two random spot-check passes.</p>
-            <span class="tag-sm tag-free">Free &amp; Pro</span>
-        </div>
-        <div class="feature gold-line">
-            <div class="feature-head">
-                <div class="feature-icon fi-gold">&#129701;</div>
-                <h3>New Ratable Conditions</h3>
-            </div>
-            <p>Heat Injury Residuals (heat stroke and heat exhaustion &mdash; common for infantry, deployed and Basic / OSUT) with the rate-by-affected-system framework, Chronic Idiopathic Constipation (deployed-CENTCOM signature), Pilonidal Cyst / Disease (&ldquo;jeep disease&rdquo;), Ganglion Cyst, and bundle branch block aliases on the AV-block code. Plus 30+ new search aliases across existing conditions.</p>
+            <p>Reserve and Guard claims get denied for periods that weren&rsquo;t &ldquo;active duty&rdquo; the way VA defines it. A new 4-question wizard in Help classifies your service period under <strong>38 CFR 3.6</strong> &mdash; Active Duty / ACDUTRA / INACDUTRA / Title 32 §§316,502,503,504,505 / State Active Duty &mdash; and tells you exactly what documentation to gather before filing. Now also wired inline when you add a condition, so the eligibility check happens at the point of decision.</p>
             <span class="tag-sm tag-free">Free &amp; Pro</span>
         </div>
         <div class="feature gold-line">
             <div class="feature-head">
-                <div class="feature-icon fi-gold">&#127919;</div>
-                <h3>2 New MOSes Added</h3>
+                <div class="feature-icon fi-gold">&#11088;</div>
+                <h3>VSO ratings, reviews, and Recommend to a Buddy</h3>
             </div>
-            <p>Air Force <strong>1C0X2</strong> (Aviation Resource Management Systems / ARMS) and Marine Corps <strong>6469</strong> (RTCASS Avionics Technician, IMA) added by user feedback. Plus tactical comm exposures filled in on cyber AFSCs (1D7X1 / 3D0X2 / 2E2X1): RF radiation, JP-8 jet fuel, and diesel generator exhaust (IARC Group 1 carcinogen).</p>
+            <p>Tap any office in Find Help to see what other veterans thought, leave your own 1&ndash;5 star rating and a comment, and use the Recommend button to text or email an office contact directly to a buddy who needs help. Reviews are visible to free and Pro users alike. Filing claims is hard; word-of-mouth on VSOs has historically been the only signal &mdash; now it&rsquo;s in the app.</p>
+            <span class="tag-sm tag-free">Free &amp; Pro</span>
+        </div>
+        <div class="feature blue-line">
+            <div class="feature-head">
+                <div class="feature-icon fi-blue">&#127760;</div>
+                <h3>8,949 accredited VSO offices &mdash; national finder complete</h3>
+            </div>
+            <p>Find Help grew from 1,496 to 8,949 offices via a bulk import from the VA Office of General Counsel API. Every state and territory is now covered with named accredited representatives, phone, email, address, and distance from you. The &ldquo;beta&rdquo; tag is officially off.</p>
+            <span class="tag-sm tag-free">Free &amp; Pro</span>
+        </div>
+        <div class="feature gold-line">
+            <div class="feature-head">
+                <div class="feature-icon fi-gold">&#128296;</div>
+                <h3>Equipment icons that match what you served on</h3>
+            </div>
+            <p>Tanks no longer show a plane icon. The Exposure Calculator now picks a matching icon per equipment type &mdash; aircraft for fighters / helicopters / transports, ferry for carriers / submarines / destroyers / frigates, wrench for tanks / APCs / fuels / occupational. Small detail, but the lazy-plane-for-everything bug is gone.</p>
+            <span class="tag-sm tag-free">Free &amp; Pro</span>
+        </div>
+        <div class="feature gold-line">
+            <div class="feature-head">
+                <div class="feature-icon fi-gold">&#129489;&#8205;&#9876;&#65039;</div>
+                <h3>Same base, multiple deployments</h3>
+            </div>
+            <p>Served at the same base across multiple deployments or PCS cycles? You can now add it more than once, each with its own start and end dates. The Exposure Calculator evaluates each window separately. Common for Air Force 4&ndash;5 month rotations and Army Germany / Korea repeats.</p>
+            <span class="tag-sm tag-free">Free &amp; Pro</span>
+        </div>
+        <div class="feature blue-line">
+            <div class="feature-head">
+                <div class="feature-icon fi-blue">&#128270;</div>
+                <h3>Smarter MOS picker + 5 new MOSes</h3>
+            </div>
+            <p>Type your rate as you identify yourself &mdash; &ldquo;MM3&rdquo;, &ldquo;EN2&rdquo;, &ldquo;HT1&rdquo; &mdash; and the search finds your Navy or Coast Guard rating. Default MOS dropdown is now sorted by job title so common roles like Security Forces or Aviation Resource Management surface without scrolling. Added Air Force <strong>1C0X2</strong> (ARMS) and Marine Corps <strong>6469</strong> (RTCASS Avionics) plus 30+ new search aliases across existing conditions.</p>
             <span class="tag-sm tag-free">Free &amp; Pro</span>
         </div>
     </section>
