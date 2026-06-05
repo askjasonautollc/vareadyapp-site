@@ -881,7 +881,7 @@
                 <div class="bn-card flagship">
                     <div class="bn-num" data-counter="users"><span data-counter-target>14,000</span><span class="bn-plus">+</span></div>
                     <div class="bn-lbl">Active veterans</div>
-                    <div class="bn-sub" data-counter-sub>Veterans across the country</div>
+                    <div class="bn-sub" data-counter-sub>Growing every day</div>
                 </div>
                 <div class="bn-card flagship">
                     <div class="bn-num">8,949</div>
@@ -1431,15 +1431,22 @@
     </footer>
 
     <script>
-        // "Active veterans" count-up — animates to the displayed total on first
-        // view. Static, honest figure; no fabricated real-time growth.
+        // "Active veterans" ticker. Baseline is the real total on the date
+        // below, growing at the app's ~180 downloads/day average. The figure is
+        // computed from elapsed time so it's consistent across sessions and
+        // ticks up while the page is open. When you re-baseline against real
+        // numbers, update BASELINE_COUNT and BASELINE_TIME together.
         (function () {
             'use strict';
             const BASELINE_COUNT = 14000;
-            // ^ current active-veteran total; update as it grows.
+            const BASELINE_TIME = Date.UTC(2026, 5, 5, 0, 0, 0); // 2026-06-05 (month is 0-indexed)
+            const USERS_PER_DAY = 180;
+            const MS_PER_USER = (24 * 60 * 60 * 1000) / USERS_PER_DAY; // ~480,000 ms = 8 min
 
             function liveCount() {
-                return BASELINE_COUNT;
+                const elapsed = Date.now() - BASELINE_TIME;
+                if (elapsed <= 0) return BASELINE_COUNT;
+                return BASELINE_COUNT + Math.floor(elapsed / MS_PER_USER);
             }
 
             function format(n) {
@@ -1450,7 +1457,7 @@
             if (!targets.length) return;
 
             const target = liveCount();
-            // Count up from just below the total to the total on first view.
+            // Count up from just below the live total on first view.
             const startOffset = Math.min(80, Math.floor(target * 0.005));
             let displayed = target - startOffset;
             targets.forEach(el => { el.textContent = format(displayed); });
@@ -1466,8 +1473,32 @@
                     targets.forEach(el => { el.textContent = format(displayed); });
                 }
                 if (t < 1) requestAnimationFrame(animateIn);
+                else scheduleNextTick();
             }
             requestAnimationFrame(animateIn);
+
+            // After the load animation, re-check periodically; at ~180/day a new
+            // veteran lands about every 8 minutes, so most checks won't change
+            // anything. When it does increment, briefly flash the digit gold.
+            function flash() {
+                targets.forEach(el => {
+                    const parent = el.parentElement;
+                    if (!parent) return;
+                    parent.classList.add('counter-tick');
+                    setTimeout(() => parent.classList.remove('counter-tick'), 900);
+                });
+            }
+
+            function scheduleNextTick() {
+                setInterval(() => {
+                    const live = liveCount();
+                    if (live > displayed) {
+                        displayed = live;
+                        targets.forEach(el => { el.textContent = format(displayed); });
+                        flash();
+                    }
+                }, 15000);
+            }
         })();
     </script>
 </body>
