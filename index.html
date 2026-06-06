@@ -239,11 +239,9 @@
         /* Hero */
         .hero { text-align: center; padding: 80px 24px 60px; max-width: 900px; margin: 0 auto; }
         .hero-badge {
-            display: inline-flex; align-items: center; gap: 8px;
-            background: rgba(217,166,33,0.1); border: 1px solid rgba(217,166,33,0.2);
-            padding: 6px 16px; border-radius: 20px; font-size: 12px;
-            font-weight: 700; color: var(--gold); letter-spacing: 1px;
-            margin-bottom: 32px; text-transform: uppercase;
+            display: inline-flex; align-items: center; gap: 9px;
+            font-size: 12px; font-weight: 700; color: var(--tan);
+            letter-spacing: 1.5px; margin-bottom: 32px; text-transform: uppercase;
         }
         .hero-logo {
             display: flex; justify-content: center; margin-bottom: 32px;
@@ -262,9 +260,8 @@
             background: var(--gold); color: var(--navy);
             padding: 16px 36px; border-radius: 14px; font-weight: 800;
             font-size: 16px; transition: all 0.2s;
-            box-shadow: 0 4px 20px rgba(217,166,33,0.25);
         }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(217,166,33,0.35); color: var(--navy); }
+        .btn-primary:hover { transform: translateY(-1px); background: #e8b733; color: var(--navy); }
         .btn-secondary {
             display: inline-flex; align-items: center; gap: 8px;
             background: transparent; color: var(--tan);
@@ -333,11 +330,8 @@
         }
         .section-title .tag {
             display: inline-block;
-            font-size: 10px; font-weight: 800; letter-spacing: 3px;
+            font-size: 11px; font-weight: 800; letter-spacing: 3px;
             text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
-            padding: 5px 12px; border-radius: 999px;
-            background: rgba(217,166,33,0.08);
-            border: 1px solid rgba(217,166,33,0.18);
         }
         .section-title h2 {
             font-size: 38px; font-weight: 900; margin-bottom: 14px;
@@ -406,10 +400,15 @@
             display: flex; align-items: center; justify-content: center; font-size: 20px;
             box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
         }
-        .fi-gold { background: rgba(217,166,33,0.12); }
-        .fi-green { background: rgba(46,166,90,0.12); }
-        .fi-blue { background: rgba(59,130,246,0.12); }
-        .fi-orange { background: rgba(230,138,46,0.12); }
+        .fi-gold { background: rgba(217,166,33,0.12); color: var(--gold); }
+        .fi-green { background: rgba(46,166,90,0.12); color: var(--green); }
+        .fi-blue { background: rgba(59,130,246,0.12); color: var(--blue); }
+        .fi-orange { background: rgba(230,138,46,0.12); color: var(--orange); }
+        svg.ic { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+        .feature-icon svg.ic { width: 22px; height: 22px; }
+        .pitch-icon svg.ic { width: 28px; height: 28px; color: var(--gold); }
+        .trust-pill svg.ic { width: 14px; height: 14px; margin-right: 4px; vertical-align: -2px; }
+        .live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); display: inline-block; }
         .feature h3 { font-size: 17px; font-weight: 800; letter-spacing: -0.3px; }
         .feature p { font-size: 13px; color: var(--tan); line-height: 1.7; }
         .tag-sm {
@@ -535,11 +534,8 @@
         }
         .by-numbers-header .tag {
             display: inline-block;
-            font-size: 10px; font-weight: 800; letter-spacing: 3px;
+            font-size: 11px; font-weight: 800; letter-spacing: 3px;
             text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
-            padding: 5px 12px; border-radius: 999px;
-            background: rgba(217,166,33,0.08);
-            border: 1px solid rgba(217,166,33,0.18);
         }
         .by-numbers-header h2 {
             font-size: 36px; font-weight: 900; letter-spacing: -1px;
@@ -807,9 +803,46 @@
             .features { grid-template-columns: 1fr; }
             .pitch { gap: 20px; }
         }
+        /* Free calculator highlight band */
+        .calc-band {
+            display: flex; align-items: center; gap: 18px; max-width: 760px; margin: 0 auto;
+            padding: 20px 24px; background: var(--card); border: 1px solid rgba(217,166,33,0.28);
+            border-left: 4px solid var(--gold); border-radius: 14px; transition: border-color 0.2s, transform 0.2s;
+        }
+        .calc-band:hover { border-color: var(--gold); transform: translateY(-1px); }
+        .calc-band .ci { width: 30px; height: 30px; color: var(--gold); flex: none; }
+        .calc-band .ct { flex: 1; }
+        .calc-band .ct strong { display: block; font-size: 17px; color: var(--white); font-weight: 800; margin-bottom: 2px; }
+        .calc-band .ct span { font-size: 13.5px; color: var(--tan); }
+        .calc-band .cgo { color: var(--gold); font-weight: 800; font-size: 14px; white-space: nowrap; }
+        .free-pill { display: inline-block; font-size: 10px; font-weight: 900; letter-spacing: 1px;
+            text-transform: uppercase; color: var(--navy); background: var(--gold); padding: 2px 8px;
+            border-radius: 6px; margin-left: 8px; vertical-align: 2px; }
+        @media (max-width: 560px) { .calc-band .cgo { display: none; } }
     </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="ic-shield" viewBox="0 0 24 24"><path d="M12 3.2l6.5 2.3v5.2c0 4-2.8 7-6.5 8-3.7-1-6.5-4-6.5-8V5.5z"/></symbol>
+  <symbol id="ic-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="4.5"/><path d="M9.2 13l-1.4 6.3L12 16.6l4.2 2.7-1.4-6.3"/></symbol>
+  <symbol id="ic-clipboard" viewBox="0 0 24 24"><rect x="6.5" y="4.5" width="11" height="15" rx="2"/><path d="M9.5 4.5h5V7h-5z"/><path d="M9 11h6M9 14.5h4"/></symbol>
+  <symbol id="ic-bolt" viewBox="0 0 24 24"><path d="M13 2L6 13h5l-1 9 8-12h-6z"/></symbol>
+  <symbol id="ic-star" viewBox="0 0 24 24"><path d="M12 3.6l2.5 5.1 5.6.8-4 3.9 1 5.6L12 16.4l-5 2.6 1-5.6-4-3.9 5.6-.8z"/></symbol>
+  <symbol id="ic-send" viewBox="0 0 24 24"><path d="M21 3L3 10.5l6.5 2.5L21 3z"/><path d="M21 3l-6.5 18-3-9"/></symbol>
+  <symbol id="ic-mappin" viewBox="0 0 24 24"><path d="M12 21c4-4 6.5-7.3 6.5-10.5a6.5 6.5 0 10-13 0C5.5 13.7 8 17 12 21z"/><circle cx="12" cy="10.5" r="2.3"/></symbol>
+  <symbol id="ic-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="ic-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17"/><path d="M12 3.5c2.6 2.6 2.6 14.4 0 17M12 3.5c-2.6 2.6-2.6 14.4 0 17"/></symbol>
+  <symbol id="ic-book" viewBox="0 0 24 24"><path d="M6.5 4.5H17a1 1 0 011 1V18H8a1.5 1.5 0 00-1.5 1.5z"/><path d="M6.5 19.5A1.5 1.5 0 018 18h10"/></symbol>
+  <symbol id="ic-document" viewBox="0 0 24 24"><path d="M7.5 3.5h6l4 4V20.5h-10z"/><path d="M13.5 3.5v4h4"/><path d="M10 13h5M10 16h5"/></symbol>
+  <symbol id="ic-pulse" viewBox="0 0 24 24"><path d="M3.5 12h4l2.5-6.5 4 13 2.5-6.5h4"/></symbol>
+  <symbol id="ic-form" viewBox="0 0 24 24"><rect x="6.5" y="3.5" width="11" height="17" rx="2"/><path d="M9.5 8.5h5M9.5 12h5M9.5 15.5h3"/></symbol>
+  <symbol id="ic-folder" viewBox="0 0 24 24"><path d="M3.5 7.5a1.5 1.5 0 011.5-1.5h3.5l2 2h8a1.5 1.5 0 011.5 1.5v8a1.5 1.5 0 01-1.5 1.5H5a1.5 1.5 0 01-1.5-1.5z"/></symbol>
+  <symbol id="ic-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M19.5 19.5l-4-4"/></symbol>
+  <symbol id="ic-wrench" viewBox="0 0 24 24"><path d="M14.5 6.5a3.8 3.8 0 00-4.8 4.8l-5.7 5.7 2.5 2.5 5.7-5.7a3.8 3.8 0 004.8-4.8l-2.6 2.6-2-2 2.1-2.6z"/></symbol>
+  <symbol id="ic-repeat" viewBox="0 0 24 24"><path d="M17 7a6.5 6.5 0 00-11 2.5"/><path d="M7 17a6.5 6.5 0 0011-2.5"/><path d="M17.5 4v3.2h-3.2M6.5 20v-3.2h3.2"/></symbol>
+  <symbol id="ic-lock" viewBox="0 0 24 24"><rect x="5.5" y="11" width="13" height="8.5" rx="1.8"/><path d="M8 11V8a4 4 0 018 0v3"/></symbol>
+  <symbol id="ic-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M16 11h.5M8 14.5h2M12 14.5h2M16 14.5h.5M8 18h2M12 18h4"/></symbol>
+</svg>
     <div class="bg-glow"></div>
 
     <nav>
@@ -828,7 +861,7 @@
 
     <!-- HERO -->
     <section class="hero" id="download">
-        <div class="hero-badge">&#10024; iOS 1.2.1 live &middot; Android 1.2.0 live on Google Play</div>
+        <div class="hero-badge"><span class="live-dot"></span> iOS 1.2.1 &amp; Android 1.2.0 live on the App Store &amp; Google Play</div>
         <div class="hero-logos">
             <div class="logo-wrap">
                 <img src="logo.png" alt="VA Ready app icon on iOS App Store" width="130" height="130">
@@ -859,17 +892,30 @@
                 <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.609 22.186A.997.997 0 013 21.286V2.714a.997.997 0 01.609-.9zm10.89 10.892l2.302 2.302-12.4 7.16 10.098-9.462zM18.16 9.18l2.578 1.49a1 1 0 010 1.66l-2.66 1.534-2.99-2.99 3.072-1.694zM4.398 1.815l12.4 7.16-2.282 2.282L4.398 1.815z"/></svg>
                 Google Play &mdash; Vet Ready
             </a>
+            <a href="va-disability-calculator.html" class="btn-secondary" style="border-color: rgba(217,166,33,0.5); color: var(--gold);">Free Rating Calculator &rarr;</a>
             <a href="#how" class="btn-secondary">How It Works &darr;</a>
         </div>
         <p class="hero-trust">
-            <span class="trust-pill">&#11088; Used by 14,000+ veterans</span>
-            <span class="trust-pill">&#9989; Sourced from current 38 CFR</span>
-            <span class="trust-pill">&#128274; Data stays on your device</span>
+            <span class="trust-pill"><svg class="ic"><use href="#ic-star"/></svg>Used by 14,000+ veterans</span>
+            <span class="trust-pill"><svg class="ic"><use href="#ic-shield"/></svg>Sourced from current 38 CFR</span>
+            <span class="trust-pill"><svg class="ic"><use href="#ic-lock"/></svg>Data stays on your device</span>
         </p>
         <p style="font-size: 11px; color: var(--gray); margin-top: 14px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.7;">
             <span style="color: var(--green); font-weight: 700;">&#9679;</span> Live on iOS and Android. Different name per platform (Google Play requires a non-government-sounding name), same app, same data.
         </p>
     </section>
+
+    <!-- FREE CALCULATOR HIGHLIGHT -->
+    <div style="padding: 0 24px 8px;">
+        <a href="va-disability-calculator.html" class="calc-band">
+            <svg class="ci ic"><use href="#ic-calc"/></svg>
+            <span class="ct">
+                <strong>Free VA Disability Calculator<span class="free-pill">Free</span></strong>
+                <span>Combine your ratings with the VA's real math and see your 2026 monthly pay. No download needed.</span>
+            </span>
+            <span class="cgo">Open the calculator &rarr;</span>
+        </a>
+    </div>
 
     <!-- BY THE NUMBERS -->
     <div class="by-numbers-wrap">
@@ -932,23 +978,23 @@
     <!-- WHAT IT DOES -->
     <section class="pitch">
         <div class="pitch-item">
-            <div class="pitch-icon">&#127894;</div>
+            <div class="pitch-icon"><svg class="ic"><use href="#ic-award"/></svg></div>
             <div class="pitch-text">Enter your MOS, branch, & service dates</div>
         </div>
         <div class="pitch-item">
-            <div class="pitch-icon">&#128203;</div>
+            <div class="pitch-icon"><svg class="ic"><use href="#ic-clipboard"/></svg></div>
             <div class="pitch-text">Build your claim list condition by condition</div>
         </div>
         <div class="pitch-item">
-            <div class="pitch-icon">&#9889;</div>
+            <div class="pitch-icon"><svg class="ic"><use href="#ic-bolt"/></svg></div>
             <div class="pitch-text">See your combined rating with real VA math</div>
         </div>
         <div class="pitch-item">
-            <div class="pitch-icon">&#11088;</div>
+            <div class="pitch-icon"><svg class="ic"><use href="#ic-star"/></svg></div>
             <div class="pitch-text">Discover every benefit you've earned</div>
         </div>
         <div class="pitch-item">
-            <div class="pitch-icon">&#128640;</div>
+            <div class="pitch-icon"><svg class="ic"><use href="#ic-send"/></svg></div>
             <div class="pitch-text">File ready. Nothing missed.</div>
         </div>
     </section>
@@ -957,7 +1003,7 @@
 
     <!-- THE EXPOSURE CALCULATOR (shipped marquee feature) -->
     <div class="section-title">
-        <div class="tag" style="background: rgba(59,130,246,0.15); color: var(--blue); border: 1px solid rgba(59,130,246,0.4);">&#9889; Marquee Feature &middot; Now Live</div>
+        <div class="tag" style="color: var(--blue);">Marquee Feature &middot; Now Live</div>
         <h2>The Exposure Calculator</h2>
         <p>Add the bases you served at and the aircraft you worked on. Watch every presumptive condition you may be eligible for tick up in real time.</p>
     </div>
@@ -965,7 +1011,7 @@
     <section class="features" style="padding-bottom: 40px;">
         <div class="feature gold-line">
             <div class="feature-head">
-                <div class="feature-icon fi-gold">&#9883;</div>
+                <div class="feature-icon fi-gold"><svg class="ic"><use href="#ic-mappin"/></svg></div>
                 <h3>Map Your Service. Unlock Every Presumptive You&rsquo;ve Earned.</h3>
             </div>
             <p>A location-first exposure engine inside Claim Intel. Add the bases you served at and the airframes you worked on, and the app cross-references your service against the <strong>PACT Act, Camp Lejeune, AFFF/PFAS, K2 (Karshi-Khanabad), Agent Orange,</strong> and 40+ other registries, then surfaces every presumptive condition that applies. <strong style="color: var(--white);">44 cited exposures. 177 bases (US + Cold War Germany + CENTCOM). 47 airframes.</strong> Every match links back to a primary source: VA.gov, 38 CFR, ATSDR, congress.gov, or the VA OGC API.</p>
@@ -973,7 +1019,7 @@
         </div>
         <div class="feature blue-line">
             <div class="feature-head">
-                <div class="feature-icon fi-blue">&#127919;</div>
+                <div class="feature-icon fi-blue"><svg class="ic"><use href="#ic-target"/></svg></div>
                 <h3>One-Tap Add From Presumptive to Claim</h3>
             </div>
             <p>Pro users see each matching presumptive with its diagnostic code, the exposures that surfaced it, and a [+] button that adds it straight to your claim &mdash; landing in Filing Prep with rating breakpoints, evidence checklist, and DBQ link already wired up.</p>
@@ -981,7 +1027,7 @@
         </div>
         <div class="feature green-line">
             <div class="feature-head">
-                <div class="feature-icon fi-green">&#127758;</div>
+                <div class="feature-icon fi-green"><svg class="ic"><use href="#ic-globe"/></svg></div>
                 <h3>First Overseas Coverage: 20 Germany Installations</h3>
             </div>
             <p>Cold War Army duty stations are now in the Exposure Calculator: Friedberg (Ray Barracks), Kitzingen (Larson), Schweinfurt (Conn / Ledward), W&uuml;rzburg (Leighton / Faulenberg), Mannheim, Heidelberg, Hanau, Rhein-Main AB &mdash; plus active sites at Grafenw&ouml;hr, Vilseck, Hohenfels, Wiesbaden, Baumholder, KMC, Stuttgart, and Ansbach. Korea, UK, and Italy coverage queued next.</p>
@@ -993,7 +1039,7 @@
 
     <!-- THE RESEARCH LIBRARY (shipped marquee feature) -->
     <div class="section-title">
-        <div class="tag" style="background: rgba(34,197,94,0.15); color: var(--green); border: 1px solid rgba(34,197,94,0.4);">&#9889; Marquee Feature &middot; Now Live</div>
+        <div class="tag" style="color: var(--green);">Marquee Feature &middot; Now Live</div>
         <h2>The Peer-Reviewed Research Library</h2>
         <p>Every claim is stronger with evidence behind it. Tap a condition and see the real, peer-reviewed studies that back it &mdash; sourced from PubMed and the NIH, with a direct link to every paper.</p>
     </div>
@@ -1001,7 +1047,7 @@
     <section class="features" style="padding-bottom: 40px;">
         <div class="feature green-line">
             <div class="feature-head">
-                <div class="feature-icon fi-green">&#128218;</div>
+                <div class="feature-icon fi-green"><svg class="ic"><use href="#ic-book"/></svg></div>
                 <h3>1,535 Studies, Linked to the Conditions Vets Actually Claim</h3>
             </div>
             <p>Open any condition in My Claim to see the peer-reviewed literature tied to it &mdash; title, journal, year, key findings, why it matters, and a direct PubMed link. The library now spans <strong style="color: var(--white);">1,535 studies across 280 diagnostic codes</strong>, from PTSD, depression, knee, back, sleep apnea, hypertension, and hearing loss to the cancers presumptive under PACT and Agent Orange. Every reference is real and verified against the live National Library of Medicine database &mdash; no placeholder citations.</p>
@@ -1009,7 +1055,7 @@
         </div>
         <div class="feature gold-line">
             <div class="feature-head">
-                <div class="feature-icon fi-gold">&#128196;</div>
+                <div class="feature-icon fi-gold"><svg class="ic"><use href="#ic-document"/></svg></div>
                 <h3>Evidence Pack &mdash; Hand Your C&amp;P Examiner the Receipts</h3>
             </div>
             <p>From any condition&rsquo;s studies sheet, tap Share and get a printable PDF: citation, key findings, plain-language relevance, and the PubMed link for every study. Bring it to your C&amp;P exam, hand it to your VSO, or attach it to your claim. Your full Claim Summary PDF now ends with the same peer-reviewed evidence appendix, one block per condition.</p>
@@ -1017,7 +1063,7 @@
         </div>
         <div class="feature blue-line">
             <div class="feature-head">
-                <div class="feature-icon fi-blue">&#129504;</div>
+                <div class="feature-icon fi-blue"><svg class="ic"><use href="#ic-pulse"/></svg></div>
                 <h3>Now Covering Parkinson&rsquo;s, ALS, MS, Sarcoidosis &amp; More</h3>
             </div>
             <p>The latest expansion added research for dozens of conditions that didn&rsquo;t have it before &mdash; <strong>Parkinson&rsquo;s disease, ALS, multiple sclerosis, sarcoidosis, asbestosis, and TBI-related dementia</strong>, plus cranial- and peripheral-nerve conditions, the full mental-health spectrum, and kidney and endocrine disorders. More diagnostic codes are added every cycle.</p>
@@ -1037,7 +1083,7 @@
     <section class="features" style="padding-bottom: 40px;">
         <div class="feature gold-line">
             <div class="feature-head">
-                <div class="feature-icon fi-gold">&#128221;</div>
+                <div class="feature-icon fi-gold"><svg class="ic"><use href="#ic-form"/></svg></div>
                 <h3>Help with Forms &mdash; every VA form, in plain language</h3>
             </div>
             <p>A section on the Filing tab walks you through every VA form you might touch: 21-526EZ (disability comp), 21-0966 (intent to file), 21-22 (VSO appointment), 20-0995 (supplemental), 20-0996 (HLR), 10182 (Board appeal), 21-2680 (A&amp;A), 21-8940 (TDIU), 21-0781 (PTSD stressor), DD-214, and more. What each form does, when you need it, what to gather, and the common pitfalls &mdash; each cited to VA.gov and the governing 38 CFR section.</p>
@@ -1045,7 +1091,7 @@
         </div>
         <div class="feature gold-line">
             <div class="feature-head">
-                <div class="feature-icon fi-gold">&#128193;</div>
+                <div class="feature-icon fi-gold"><svg class="ic"><use href="#ic-folder"/></svg></div>
                 <h3>Exposure Profile PDF &mdash; your case-walk-in document</h3>
             </div>
             <p>The Exposure Calculator can surface dozens of presumptive conditions for a deployed vet. Now you can walk away with them: a single branded PDF with your service profile (bases, airframes, MOSes, exposures) and every presumptive it surfaced &mdash; each with its diagnostic code, body system, source label, and primary-source citation. Built to hand to your VSO or bring to your exam.</p>
@@ -1053,7 +1099,7 @@
         </div>
         <div class="feature blue-line">
             <div class="feature-head">
-                <div class="feature-icon fi-blue">&#128269;</div>
+                <div class="feature-icon fi-blue"><svg class="ic"><use href="#ic-search"/></svg></div>
                 <h3>Find your base faster &mdash; and more bases to find</h3>
             </div>
             <p>Base search now matches older and alternate names and state abbreviations, so renamed posts come right up &mdash; search &ldquo;Fort Gordon&rdquo; and land on Fort Eisenhower, &ldquo;Fort Polk&rdquo; on Fort Johnson, &ldquo;Lackland&rdquo; on Joint Base San Antonio. We also added <strong>Ramstein, Andersen, Fort Jackson, Fort Johnson</strong>, and more &mdash; now 177 installations tracked, each tied to its documented exposures.</p>
@@ -1061,7 +1107,7 @@
         </div>
         <div class="feature green-line">
             <div class="feature-head">
-                <div class="feature-icon fi-green">&#128737;&#65039;</div>
+                <div class="feature-icon fi-green"><svg class="ic"><use href="#ic-shield"/></svg></div>
                 <h3>Reservist / Guard Status Wizard</h3>
             </div>
             <p>Reserve and Guard claims get denied for periods that weren&rsquo;t &ldquo;active duty&rdquo; the way VA defines it. A new 4-question wizard in Help classifies your service period under <strong>38 CFR 3.6</strong> &mdash; Active Duty / ACDUTRA / INACDUTRA / Title 32 §§316,502,503,504,505 / State Active Duty &mdash; and tells you exactly what documentation to gather before filing. Now also wired inline when you add a condition, so the eligibility check happens at the point of decision.</p>
@@ -1069,7 +1115,7 @@
         </div>
         <div class="feature gold-line">
             <div class="feature-head">
-                <div class="feature-icon fi-gold">&#11088;</div>
+                <div class="feature-icon fi-gold"><svg class="ic"><use href="#ic-star"/></svg></div>
                 <h3>VSO ratings, reviews, and Recommend to a Buddy</h3>
             </div>
             <p>Tap any office in Find Help to see what other veterans thought, leave your own 1&ndash;5 star rating and a comment, and use the Recommend button to text or email an office contact directly to a buddy who needs help. Reviews are visible to free and Pro users alike. Filing claims is hard; word-of-mouth on VSOs has historically been the only signal &mdash; now it&rsquo;s in the app.</p>
@@ -1077,7 +1123,7 @@
         </div>
         <div class="feature blue-line">
             <div class="feature-head">
-                <div class="feature-icon fi-blue">&#127760;</div>
+                <div class="feature-icon fi-blue"><svg class="ic"><use href="#ic-globe"/></svg></div>
                 <h3>8,949 accredited VSO offices &mdash; national finder complete</h3>
             </div>
             <p>Find Help grew from 1,496 to 8,949 offices via a bulk import from the VA Office of General Counsel API. Every state and territory is now covered with named accredited representatives, phone, email, address, and distance from you. The &ldquo;beta&rdquo; tag is officially off.</p>
@@ -1085,7 +1131,7 @@
         </div>
         <div class="feature gold-line">
             <div class="feature-head">
-                <div class="feature-icon fi-gold">&#128296;</div>
+                <div class="feature-icon fi-gold"><svg class="ic"><use href="#ic-wrench"/></svg></div>
                 <h3>Equipment icons that match what you served on</h3>
             </div>
             <p>Tanks no longer show a plane icon. The Exposure Calculator now picks a matching icon per equipment type &mdash; aircraft for fighters / helicopters / transports, ferry for carriers / submarines / destroyers / frigates, wrench for tanks / APCs / fuels / occupational. Small detail, but the lazy-plane-for-everything bug is gone.</p>
@@ -1093,7 +1139,7 @@
         </div>
         <div class="feature gold-line">
             <div class="feature-head">
-                <div class="feature-icon fi-gold">&#129489;&#8205;&#9876;&#65039;</div>
+                <div class="feature-icon fi-gold"><svg class="ic"><use href="#ic-repeat"/></svg></div>
                 <h3>Same base, multiple deployments</h3>
             </div>
             <p>Served at the same base across multiple deployments or PCS cycles? You can now add it more than once, each with its own start and end dates. The Exposure Calculator evaluates each window separately. Common for Air Force 4&ndash;5 month rotations and Army Germany / Korea repeats.</p>
@@ -1101,7 +1147,7 @@
         </div>
         <div class="feature blue-line">
             <div class="feature-head">
-                <div class="feature-icon fi-blue">&#128270;</div>
+                <div class="feature-icon fi-blue"><svg class="ic"><use href="#ic-search"/></svg></div>
                 <h3>Smarter MOS picker + new MOSes</h3>
             </div>
             <p>Type your rate as you identify yourself &mdash; &ldquo;MM3&rdquo;, &ldquo;EN2&rdquo;, &ldquo;HT1&rdquo; &mdash; and the search finds your Navy or Coast Guard rating. Default MOS dropdown is now sorted by job title so common roles like Security Forces or Aviation Resource Management surface without scrolling. Added Air Force <strong>1C0X2</strong> (ARMS) and Marine Corps <strong>6469</strong> (RTCASS Avionics) plus 30+ new search aliases across existing conditions.</p>
