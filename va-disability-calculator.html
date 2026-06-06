@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VA Disability Calculator (2026) &mdash; Combined Rating &amp; Monthly Pay</title>
+    <meta name="description" content="Free VA disability calculator. Combine your ratings the way the VA really does it, add the bilateral factor, and estimate your 2026 monthly pay with dependents. No login. Nothing leaves your browser.">
+    <meta name="keywords" content="VA disability calculator, VA combined rating calculator, VA disability pay calculator 2026, VA math, bilateral factor, VA compensation with dependents, VA Ready">
+    <meta name="author" content="JDL Software LLC">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#0a0f1a">
+    <link rel="canonical" href="https://vareadyapp.com/va-disability-calculator.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VA Ready">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="VA Disability Calculator (2026) — Combined Rating &amp; Monthly Pay">
+    <meta property="og:description" content="Combine your ratings with the VA's real math, apply the bilateral factor, and estimate your 2026 monthly pay with dependents. Free, no login.">
+    <meta property="og:image" content="https://vareadyapp.com/logo.png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:image:alt" content="VA Ready app icon: a gold shield on dark navy">
+    <meta property="og:url" content="https://vareadyapp.com/va-disability-calculator.html">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VA Disability Calculator (2026) — Combined Rating &amp; Monthly Pay">
+    <meta name="twitter:description" content="Combine your ratings the way the VA really does it, with bilateral factor and 2026 dependent pay. Free. Nothing leaves your browser.">
+    <meta name="twitter:image" content="https://vareadyapp.com/logo.png">
+    <meta name="twitter:image:alt" content="VA Ready app icon">
+
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+
+    <!-- JSON-LD: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://vareadyapp.com/" },
+        { "@type": "ListItem", "position": 2, "name": "VA Disability Calculator", "item": "https://vareadyapp.com/va-disability-calculator.html" }
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD: WebApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "VA Disability Calculator",
+      "url": "https://vareadyapp.com/va-disability-calculator.html",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any (web browser)",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Combine VA disability ratings using the VA's combined-ratings table (38 CFR 4.25), apply the bilateral factor, and estimate 2026 monthly compensation with dependents."
+    }
+    </script>
+
+    <!-- JSON-LD: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why isn't my VA combined rating just the sum of my conditions?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The VA uses a combined-ratings table (38 CFR 4.25), not simple addition. Each condition is applied to your remaining non-disabled percentage, so a 50% and a 30% combine to 65%, not 80%. The final value is then rounded to the nearest 10%." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the bilateral factor?",
+          "acceptedAnswer": { "@type": "Answer", "text": "When you have disabilities affecting both arms, both legs, or paired skeletal muscles, the VA combines those bilateral conditions, then adds an extra 10% of that combined value before combining with the rest of your ratings. It can raise your final rating." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this calculator include dependents?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. At a combined rating of 30% or higher, the VA adds compensation for a spouse and children. This calculator uses the 2026 rate tables to estimate your monthly payment with a spouse and dependent children. Ratings of 10% and 20% are paid at a flat rate regardless of dependents." }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate is this VA disability calculator?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The combined-rating math follows 38 CFR 4.25 exactly, and the pay figures use the published 2026 VA rates. It is an estimate. Your actual award depends on the VA's decision, your effective date, and factors like SMC. This tool is not affiliated with the VA." }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --navy: #0a0f1a; --card: #141b2d; --gold: #d9a621; --tan: #c8bda5;
+            --white: #fff; --green: #34a853; --gray: #8a93a6; --line: rgba(255,255,255,0.08);
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+            background: var(--navy); color: var(--white); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        a { color: var(--gold); text-decoration: none; }
+        .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+        nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; max-width: 1100px; margin: 0 auto; }
+        .nav-brand { display: flex; align-items: center; gap: 10px; }
+        .nav-brand img { width: 34px; height: 34px; border-radius: 9px; }
+        .nav-brand span { font-size: 14px; font-weight: 900; letter-spacing: 2px; }
+        .nav-links a { font-size: 13px; color: var(--tan); margin-left: 16px; font-weight: 600; }
+
+        header.hero { text-align: center; padding: 44px 20px 16px; }
+        .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 800;
+            letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+        .eyebrow::before { content: ""; width: 24px; height: 2px; background: var(--gold); }
+        h1 { font-size: 34px; line-height: 1.15; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 12px; }
+        .lede { font-size: 16px; color: var(--tan); max-width: 560px; margin: 0 auto; }
+
+        .calc { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 22px; margin: 24px 0; }
+        .calc h2 { font-size: 15px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gold); margin-bottom: 4px; }
+        .calc .hint { font-size: 13px; color: var(--gray); margin-bottom: 16px; }
+        .cond-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+        .cond-row .lbl { font-size: 13px; color: var(--tan); width: 26px; text-align: right; flex: none; }
+        select, input[type=number] { background: #0c1322; color: var(--white); border: 1px solid var(--line);
+            border-radius: 9px; padding: 10px 12px; font-size: 15px; font-family: inherit; }
+        select.pct { flex: 1; }
+        .bilat { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--tan); white-space: nowrap; cursor: pointer; }
+        .bilat input { width: 16px; height: 16px; accent-color: var(--gold); }
+        .rm { background: none; border: none; color: var(--gray); font-size: 20px; cursor: pointer; line-height: 1; padding: 0 4px; }
+        .rm:hover { color: var(--red, #e0564b); }
+        .add-btn { background: rgba(217,166,33,0.12); color: var(--gold); border: 1px dashed rgba(217,166,33,0.5);
+            border-radius: 10px; padding: 11px; width: 100%; font-weight: 700; font-size: 14px; cursor: pointer; margin-top: 4px; }
+        .deps { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+        .deps label { font-size: 13px; color: var(--tan); display: flex; align-items: center; gap: 8px; }
+        .deps input[type=checkbox] { width: 18px; height: 18px; accent-color: var(--gold); }
+        .deps input[type=number] { width: 66px; }
+
+        .result { background: #0c1322; border: 1px solid var(--line); border-top: 3px solid var(--gold);
+            border-radius: 14px; padding: 24px; margin-top: 18px; text-align: center; }
+        .result .rate { font-size: 52px; font-weight: 900; color: var(--gold); line-height: 1; }
+        .result .rate-sub { font-size: 13px; color: var(--tan); margin-top: 6px; }
+        .result .pay { font-size: 26px; font-weight: 900; margin-top: 16px; }
+        .result .pay-sub { font-size: 12px; color: var(--gray); margin-top: 4px; }
+        .result .none { font-size: 15px; color: var(--tan); }
+        .result-cta { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); }
+        .result-cta p { font-size: 14px; color: var(--tan); margin-bottom: 12px; }
+        .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: #1a1205;
+            font-weight: 800; font-size: 14px; padding: 12px 20px; border-radius: 11px; }
+        .btn.ghost { background: transparent; color: var(--tan); border: 1px solid var(--line); }
+        .btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
+        section.content { padding: 18px 0; }
+        h2.sec { font-size: 24px; font-weight: 900; margin: 22px 0 10px; letter-spacing: -0.3px; }
+        section.content p { color: var(--tan); font-size: 15.5px; margin-bottom: 12px; }
+        .example { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; margin: 12px 0; font-size: 14.5px; color: var(--tan); }
+        .example strong { color: var(--white); }
+        ul.lift { list-style: none; margin: 6px 0 14px; }
+        ul.lift li { position: relative; padding-left: 26px; color: var(--tan); margin-bottom: 8px; font-size: 15px; }
+        ul.lift li::before { content: "\2192"; position: absolute; left: 0; color: var(--gold); font-weight: 900; }
+        .faq-item { border-top: 1px solid var(--line); padding: 18px 0; }
+        .faq-item:first-of-type { border-top: none; }
+        .faq-item h3 { font-size: 16px; font-weight: 800; color: var(--gold); margin-bottom: 6px; }
+        .faq-item p { font-size: 14.5px; color: var(--tan); }
+        .disclaimer { font-size: 12px; color: var(--gray); line-height: 1.7; padding: 20px 0; border-top: 1px solid var(--line); margin-top: 16px; }
+
+        footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--line); margin-top: 24px; }
+        footer p { font-size: 12px; color: var(--gray); max-width: 700px; margin: 0 auto 8px; }
+        .footer-links a { color: var(--tan); font-size: 12px; margin: 0 11px; }
+        @media (max-width: 560px) { h1 { font-size: 28px; } .cond-row { flex-wrap: wrap; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="nav-brand">
+            <img src="logo.png" alt="VA Ready and Vet Ready logo" width="34" height="34">
+            <span>VA READY <span style="color: var(--gray); font-weight: 400;">/</span> VET READY</span>
+        </a>
+        <div class="nav-links">
+            <a href="the-va-ready-difference.html">The Difference</a>
+            <a href="index.html#download">Download</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="eyebrow">Free &middot; No login &middot; 2026 rates</div>
+        <h1>VA Disability Calculator</h1>
+        <p class="lede">The VA combines your ratings. It does not add them. Enter what you've been rated below to see your true combined percentage, the bilateral factor, and your 2026 monthly pay with dependents.</p>
+    </header>
+
+    <div class="wrap">
+        <div class="calc">
+            <h2>Your conditions</h2>
+            <p class="hint">Add each rated condition. Check "both sides" for paired limbs (left and right) so the bilateral factor applies.</p>
+            <div id="rows"></div>
+            <button class="add-btn" id="addBtn">+ Add another condition</button>
+
+            <div class="deps">
+                <label><input type="checkbox" id="spouse"> Married (spouse)</label>
+                <label>Children under 18: <input type="number" id="kids" min="0" max="20" value="0"></label>
+            </div>
+
+            <div class="result" id="result"></div>
+        </div>
+
+        <section class="content">
+            <h2 class="sec">How VA combined ratings work</h2>
+            <p>Most veterans assume the VA adds their ratings. It does not. Under <strong>38 CFR 4.25</strong>, the VA combines them. Each condition counts against the healthy percentage you have left, and the total is rounded to the nearest 10 percent.</p>
+            <div class="example">
+                <strong>Example.</strong> A 50% rating leaves you 50% healthy. A 30% rating then takes 30% of that remaining 50%, which is 15%. Combined, that is 65%, not 80%. Add a 20% rating and you reach 72%, which rounds to a <strong>70%</strong> rating.
+            </div>
+            <p>That rounding is why one more condition sometimes changes nothing, while the right condition pushes you past the next 10 percent line. The calculator above runs this exact math.</p>
+
+            <h2 class="sec">Want the full picture? Get the app.</h2>
+            <p>This page does one thing: it combines ratings you already have. VA Ready does the rest.</p>
+            <ul class="lift">
+                <li>Rates every condition for you, condition by condition, with the real 38 CFR criteria for 755 conditions</li>
+                <li>Finds what you can claim from your bases and your job, duty station by duty station: PACT Act, Camp Lejeune, Agent Orange, AFFF</li>
+                <li>Flags secondary conditions, pyramiding traps, and the bilateral splits that move your rating</li>
+                <li>Links peer-reviewed research to your conditions and builds a claim summary for your VSO</li>
+            </ul>
+            <p style="color: var(--white); font-weight: 700; font-size: 16px;">Condition by condition. Duty station by duty station. Download VA Ready, free.</p>
+            <div class="btns">
+                <a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a>
+                <a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn">Get Vet Ready for Android</a>
+                <a href="the-va-ready-difference.html" class="btn ghost">The VA Ready Difference</a>
+            </div>
+
+            <h2 class="sec">Common questions</h2>
+            <div class="faq-item">
+                <h3>Why isn't my combined rating just the sum of my conditions?</h3>
+                <p>The VA uses a combined-ratings table (38 CFR 4.25), not addition. Each condition applies to your remaining non-disabled percentage, so 50% and 30% combine to 65%, not 80%. The final value is rounded to the nearest 10%.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is the bilateral factor?</h3>
+                <p>When disabilities affect both arms, both legs, or paired skeletal muscles, the VA combines those bilateral conditions and adds an extra 10% of that value before combining with the rest. Check "both sides" on a condition above to apply it.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Does this include dependents?</h3>
+                <p>Yes. At 30% and above, the VA adds pay for a spouse and children. This tool uses the 2026 rate tables. At 10% and 20%, pay is a flat rate regardless of dependents. Additional pay for parents, aid &amp; attendance, and SMC is handled in the app.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How accurate is this?</h3>
+                <p>The combined-rating math follows 38 CFR 4.25 exactly, and the pay figures use the published 2026 rates. It's an estimate. Your actual award depends on the VA's decision, your effective date, and factors like SMC.</p>
+            </div>
+        </section>
+
+        <p class="disclaimer">
+            VA Ready is a free tool and is not affiliated with, endorsed by, or connected to the U.S. Department of Veterans Affairs. This calculator does not provide legal or medical advice. Combined ratings follow 38 CFR 4.25; compensation figures use the 2026 VA rate tables and are estimates for informational purposes only. Nothing you enter is stored or sent. The math runs entirely in your browser.
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 JDL Software LLC. All rights reserved. &middot; VA Ready (iOS) &amp; Vet Ready (Android).</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="the-va-ready-difference.html">The VA Ready Difference</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+        </div>
+    </footer>
+
+    <script>
+        'use strict';
+        // 2026 VA compensation rate tables (monthly USD). Source: published VA rates.
+        // spouse1 = spouse + 1 child; spouse2 = spouse + 2 children; child1 = no spouse + 1 child;
+        // addChild = each additional child under 18 beyond the table base. 10%/20% pay a flat rate.
+        const RATES = {
+            10:  { alone:180.42,  spouse:180.42,  spouse1:180.42,  spouse2:180.42,  child1:180.42,  addChild:0 },
+            20:  { alone:356.66,  spouse:356.66,  spouse1:356.66,  spouse2:356.66,  child1:356.66,  addChild:0 },
+            30:  { alone:552.47,  spouse:617.47,  spouse1:666.47,  spouse2:698.47,  child1:596.47,  addChild:32.00 },
+            40:  { alone:795.84,  spouse:882.84,  spouse1:947.84,  spouse2:990.84,  child1:853.84,  addChild:43.00 },
+            50:  { alone:1132.90, spouse:1241.90, spouse1:1322.90, spouse2:1376.90, child1:1205.90, addChild:54.00 },
+            60:  { alone:1435.02, spouse:1566.02, spouse1:1663.02, spouse2:1728.02, child1:1523.02, addChild:65.00 },
+            70:  { alone:1808.45, spouse:1961.45, spouse1:2074.45, spouse2:2150.45, child1:1910.45, addChild:76.00 },
+            80:  { alone:2102.15, spouse:2277.15, spouse1:2406.15, spouse2:2493.15, child1:2219.15, addChild:87.00 },
+            90:  { alone:2362.30, spouse:2559.30, spouse1:2704.30, spouse2:2802.30, child1:2494.30, addChild:98.00 },
+            100: { alone:3938.58, spouse:4158.17, spouse1:4318.99, spouse2:4428.10, child1:4085.43, addChild:109.11 }
+        };
+
+        let conds = [{ pct: 50, bilateral: false }, { pct: 30, bilateral: false }];
+
+        const rowsEl = document.getElementById('rows');
+        const resultEl = document.getElementById('result');
+        const spouseEl = document.getElementById('spouse');
+        const kidsEl = document.getElementById('kids');
+
+        function pctOptions(sel) {
+            let out = '';
+            for (let v = 0; v <= 100; v += 10) {
+                out += '<option value="' + v + '"' + (v === sel ? ' selected' : '') + '>' + v + '%</option>';
+            }
+            return out;
+        }
+
+        function render() {
+            rowsEl.innerHTML = '';
+            conds.forEach((c, i) => {
+                const row = document.createElement('div');
+                row.className = 'cond-row';
+                row.innerHTML =
+                    '<span class="lbl">' + (i + 1) + '</span>' +
+                    '<select class="pct" data-i="' + i + '">' + pctOptions(c.pct) + '</select>' +
+                    '<label class="bilat"><input type="checkbox" data-bi="' + i + '"' + (c.bilateral ? ' checked' : '') + '> both sides</label>' +
+                    '<button class="rm" data-rm="' + i + '" aria-label="Remove condition">&times;</button>';
+                rowsEl.appendChild(row);
+            });
+            calc();
+        }
+
+        // Combine a list of percentages using the VA combined-ratings method.
+        function combineList(list) {
+            let combined = 0;
+            list.slice().sort((a, b) => b - a).forEach(p => { combined = combined + p * (100 - combined) / 100; });
+            return combined;
+        }
+
+        function combinedRating() {
+            const bil = conds.filter(c => c.bilateral && c.pct > 0).map(c => c.pct);
+            const reg = conds.filter(c => !c.bilateral && c.pct > 0).map(c => c.pct);
+            const values = reg.slice();
+            if (bil.length) {
+                const b = combineList(bil) * 1.10; // bilateral factor: +10%
+                values.push(b);
+            }
+            return Math.min(100, combineList(values));
+        }
+
+        function monthlyPay(rating, hasSpouse, kids) {
+            const r = RATES[rating];
+            if (!r) return 0;
+            if (rating < 30) return r.alone; // flat at 10%/20%
+            let amt;
+            if (!hasSpouse && kids === 0) amt = r.alone;
+            else if (hasSpouse && kids === 0) amt = r.spouse;
+            else if (!hasSpouse && kids >= 1) amt = r.child1 + Math.max(0, kids - 1) * r.addChild;
+            else if (hasSpouse && kids === 1) amt = r.spouse1;
+            else amt = r.spouse2 + Math.max(0, kids - 2) * r.addChild; // spouse + 2+
+            return amt;
+        }
+
+        function money(n) {
+            return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+
+        function calc() {
+            const exact = combinedRating();
+            const official = Math.min(100, Math.round(exact / 10) * 10);
+            const hasSpouse = spouseEl.checked;
+            const kids = Math.max(0, parseInt(kidsEl.value, 10) || 0);
+
+            if (official < 10) {
+                resultEl.innerHTML = '<p class="none">Add your rated conditions above to see your combined rating and estimated monthly pay.</p>';
+                return;
+            }
+            const pay = monthlyPay(official, hasSpouse, kids);
+            let depText = 'veteran alone';
+            if (hasSpouse || kids > 0) {
+                const parts = [];
+                if (hasSpouse) parts.push('spouse');
+                if (kids > 0) parts.push(kids + ' child' + (kids > 1 ? 'ren' : ''));
+                depText = parts.join(' + ');
+            }
+            const flatNote = official < 30 && (hasSpouse || kids > 0)
+                ? '<div class="pay-sub">At 10% and 20%, pay is a flat rate. Dependents are added at 30% and above.</div>'
+                : '<div class="pay-sub">2026 rate &middot; ' + depText + (official >= 30 ? '' : '') + '</div>';
+
+            resultEl.innerHTML =
+                '<div class="rate">' + official + '%</div>' +
+                '<div class="rate-sub">Combined value ' + exact.toFixed(1) + '% &rarr; rounded to ' + official + '%</div>' +
+                '<div class="pay">' + money(pay) + '<span style="font-size:14px;color:var(--gray);font-weight:600;">/mo</span></div>' +
+                flatNote +
+                '<div class="result-cta">' +
+                    '<p>This is the math on ratings you already have. To see what each condition is worth, condition by condition, and every presumptive you earned, duty station by duty station, get the app free.</p>' +
+                    '<div class="btns">' +
+                        '<a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a>' +
+                        '<a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn">Get Vet Ready for Android</a>' +
+                    '</div>' +
+                '</div>';
+        }
+
+        rowsEl.addEventListener('change', e => {
+            const i = e.target.getAttribute('data-i');
+            const bi = e.target.getAttribute('data-bi');
+            if (i !== null) { conds[+i].pct = parseInt(e.target.value, 10); calc(); }
+            if (bi !== null) { conds[+bi].bilateral = e.target.checked; calc(); }
+        });
+        rowsEl.addEventListener('click', e => {
+            const rm = e.target.getAttribute('data-rm');
+            if (rm !== null) { conds.splice(+rm, 1); if (!conds.length) conds.push({ pct: 0, bilateral: false }); render(); }
+        });
+        document.getElementById('addBtn').addEventListener('click', () => { conds.push({ pct: 10, bilateral: false }); render(); });
+        spouseEl.addEventListener('change', calc);
+        kidsEl.addEventListener('input', calc);
+
+        render();
+    </script>
+</body>
+</html>
