@@ -1,0 +1,1574 @@
+VA READY - 100 VETERAN PROFILE WARGAME
+=======================================================
+User Feedback, Feature Requests, and Price Point Analysis
+Generated: April 2026
+Source: Simulated user personas across all 6 branches, all ranks, all claim stages
+
+
+================================================================================
+SECTION 1: PROFILES 1-20 — ARMY
+================================================================================
+
+PROFILE #1: SPC Marcus Webb, 11B, 4 years
+Branch: Army | Situation: Pre-separation BDD
+Current Rating: None
+Review: "Got out in 90 days and my buddy told me to file everything before I ETS. I didn't even know what conditions I could claim until I used the calculator and saw like 12 things that matched my MOS. Nobody at the VA briefing told me half this stuff."
+Stars: 5/5
+Wants:
+- Know exactly what an 11B can claim before separation
+- Step-by-step filing help since he's never done this
+- Understand what his rating might look like before he submits
+Price: Pays $4.99/mo without hesitation — filing in 60 days and needs every edge he can get.
+
+---
+
+PROFILE #2: SSG Darnell Pruitt, 13B, 11 years
+Branch: Army | Situation: Existing rating, seeking increase
+Current Rating: 30%
+Review: "Thirty percent for hearing loss and a knee. I've got tinnitus, a bad shoulder from howitzer recoil, and my lower back is shot. I just needed something to tell me what I was actually missing and how to prove it. The MOS Intel page basically read my mind."
+Stars: 4/5
+Wants:
+- See how adding tinnitus and shoulder bumps his combined rating
+- Understand secondary conditions linked to artillery service
+- Track his evidence for the increase claim
+Price: Pays $39.99/yr — methodical, wants full CFR criteria, doesn't trust anything he can't verify.
+
+---
+
+PROFILE #3: CW3 Angela Tran, 15W (UAV Operator), 14 years
+Branch: Army | Situation: Mid-claim, waiting on C&P exam
+Current Rating: None
+Review: "I filed six months ago and I have no idea where it's in the process. The Filing Coach actually explained what happens between submission and decision in plain English. My claims rep at the VSO barely responds to emails."
+Stars: 4/5
+Wants:
+- Understand what happens at each step while she waits
+- Know what to bring to her C&P exam
+- Track her evidence in one place instead of a folder on her desktop
+Price: Pays $4.99/mo while claim is pending — will cancel after decision unless she needs to appeal.
+
+---
+
+PROFILE #4: SGT Kevin Ostrowski, 68W, 6 years
+Branch: Army Guard | Situation: PACT Act burn pit claim
+Current Rating: None
+Review: "I did two tours at FOB Speicher and I've had respiratory issues for three years. My civilian doc kept telling me it was allergies. Soon as I got the PACT Act match on this app I took the list straight to the VA. Finally felt like I had some ammo."
+Stars: 5/5
+Wants:
+- Confirm which conditions qualify under PACT Act
+- Build a nexus argument for respiratory claim
+- Know what buddy statements and deployment orders he needs
+Price: Pays $4.99/mo — on Guard pay and watches every dollar, but worth it for what it surfaced.
+
+---
+
+PROFILE #5: 1LT Brianna Hollis, 42A (HR Officer), 3 years
+Branch: Army | Situation: Pre-separation BDD, filing for spouse
+Current Rating: None
+Review: "My husband is the veteran but I'm the one doing all the paperwork because that's just how it is. The app is actually organized like a human being designed it, which is not something I can say about any VA website I've ever used."
+Stars: 5/5
+Wants:
+- Understand the full BDD process end to end
+- Know exactly what medical evidence to pull from service treatment records
+- Compare the combined rating math before submitting
+Price: Pays $39.99/yr — treats this like a project, wants all features unlocked.
+
+---
+
+PROFILE #6: MSG Raymond Calhoun, 18B (SF Weapons Sergeant), 22 years
+Branch: Army (Retired) | Situation: Appeal after partial denial
+Current Rating: 60%
+Review: "Twenty-two years, six deployments, and they denied my PTSD claim saying there wasn't enough evidence. I've got three statements from guys I served with and two therapist letters. I just need to understand what standard they're actually using to deny me."
+Stars: 3/5
+Wants:
+- Understand appeal options — HLR vs BVA vs Supplemental
+- Know what additional evidence could flip the PTSD denial
+- Track all appeal deadlines so nothing falls through
+Price: Would pay $39.99/yr if appeal guidance goes deep enough — currently skeptical but trying it out.
+
+---
+
+PROFILE #7: PFC Jaylen Moore, 92G (Food Service), 1.5 years
+Branch: Army | Situation: Recently separated, no rating yet
+Current Rating: None
+Review: "I only did a year and a half but I hurt my back in basic and nobody took it seriously. I didn't think I could even file. The app told me it didn't matter how long I served, which I genuinely did not know."
+Stars: 4/5
+Wants:
+- Know if a short-service injury still qualifies
+- Understand what evidence he has and how to get service records
+- Simple checklist he can follow without a VSO
+Price: Pays $4.99/mo — still working first civilian job, budget is tight.
+
+---
+
+PROFILE #8: SFC Tomas Guerrero, 25U (Signal Support), 16 years
+Branch: Army Reserve | Situation: Rating increase after new diagnosis
+Current Rating: 50%
+Review: "Just got diagnosed with sleep apnea and my doc said it's likely connected to my PTSD. I wanted to see what a secondary condition claim looks like before I walked into the VA. The what-if calculator is the only tool I've found that actually models the math correctly."
+Stars: 5/5
+Wants:
+- Model secondary sleep apnea off existing PTSD rating
+- Understand combined VA math with bilateral factor
+- Evidence checklist for secondary condition nexus
+Price: Pays $39.99/yr — multiple active claims, uses the app constantly.
+
+---
+
+PROFILE #9: CPT Daniel Achebe, 35F (Intelligence Officer), 8 years
+Branch: Army | Situation: Recently separated, first claim
+Current Rating: None
+Review: "I approached this the same way I'd approach a targeting package — I wanted to understand the entire system before I made a single move. The CFR criteria in the Pro version let me do that."
+Stars: 5/5
+Wants:
+- Full CFR criteria for every condition he's filing
+- Understand how ratings interact before submitting
+- Know which conditions are most likely rated favorably for his MOS
+Price: Pays $39.99/yr immediately — runs cost-benefit on everything and this is obvious ROI.
+
+---
+
+PROFILE #10: CW2 Derek Fontaine, 15T (Blackhawk Mechanic), 9 years
+Branch: Army | Situation: Denied, considering appeal
+Current Rating: 10% (hearing only)
+Review: "I filed for my knees, my back, and hearing and only got the hearing. The denial letters read like they were generated by a machine with no soul. I want to understand if it's worth appealing or if I should just refile with better evidence."
+Stars: 3/5
+Wants:
+- Compare appeal vs supplemental claim options
+- Know what evidence gaps caused his denials
+- Calculator to show what he should realistically be rated
+Price: Pays $4.99/mo to evaluate whether appeal is worth pursuing.
+
+---
+
+PROFILE #11: SFC (Ret.) Patricia Kim, 68C (Practical Nursing), 20 years
+Branch: Army (Retired) | Situation: Rating increase, multiple conditions
+Current Rating: 70%
+Review: "I retired at 70% and thought I was done. Then I started reading about MST claims and conditions I'd suppressed for years. This isn't easy stuff to dig into but the app doesn't make it harder than it needs to be."
+Stars: 4/5
+Wants:
+- Understand MST claim process and what evidence is required
+- See how additional ratings affect her combined percentage
+- State benefits in Virginia where she recently moved
+Price: Pays $39.99/yr — views this as a legal and financial tool, not a luxury.
+
+---
+
+PROFILE #12: SPC Aaliyah Washington, 35M (Human Intelligence Collector), 5 years
+Branch: Army | Situation: Pre-separation BDD, PACT Act exposure
+Current Rating: None
+Review: "I deployed to Kuwait and Jordan and breathed whatever was in the air at those bases. I didn't even connect my sinus problems and fatigue to service until I ran my MOS through the app and it flagged burn pit exposure."
+Stars: 5/5
+Wants:
+- Full PACT Act condition list matched to deployment locations
+- What buddy statements and deployment orders she needs
+- Combined rating estimate before filing
+Price: Pays $4.99/mo — separating soon and using it hard for the next 90 days.
+
+---
+
+PROFILE #13: MAJ Victor Castellano, 19D (Cavalry Scout), 15 years
+Branch: Army | Situation: Mid-career, building claim before retirement
+Current Rating: 40%
+Review: "I've got four years until retirement and I'm treating this like a long-range planning problem. The app is the first tool that let me model what my combined rating would look like when I finally pull the pin."
+Stars: 5/5
+Wants:
+- Long-term rating strategy across multiple conditions
+- Understand what can be filed now vs at retirement
+- All 50 state benefits to help decide where to retire
+Price: Pays $39.99/yr — long planning horizon justifies the investment.
+
+---
+
+PROFILE #14: CPL James Nguyen, 12B (Combat Engineer), 3 years
+Branch: Army | Situation: Recently separated, first claim
+Current Rating: None
+Review: "I did route clearance in Afghanistan and I knew I had stuff to claim, I just didn't know where to start. The MOS profile for 12B had blast exposure flags I didn't even think to connect to the headaches I've had since I got back."
+Stars: 4/5
+Wants:
+- TBI and headache claim guidance
+- Blast exposure flags and PACT Act matches for his MOS
+- Simple filing checklist he can work through on weekends
+Price: Pays $4.99/mo — working construction, limited budget.
+
+---
+
+PROFILE #15: 2LT Carla Jennings, 25B (IT Specialist), 2 years
+Branch: Army Guard | Situation: Post-deployment, first claim
+Current Rating: None
+Review: "I activated for COVID response and then deployed overseas and honestly I don't know what I'm entitled to or not. Guard stuff is confusing enough."
+Stars: 4/5
+Wants:
+- Understand Guard-specific eligibility rules
+- Know what her activation period qualifies her for
+- Filing checklist that doesn't assume she has a unit to help
+Price: Pays $4.99/mo — new officer, modest pay.
+
+---
+
+PROFILE #16: SGM Harold Briggs, 88M (Motor Transport), 26 years
+Branch: Army (Retired) | Situation: Retiree, first time ever filing
+Current Rating: None
+Review: "I retired in 2019 and never filed because I thought it was for guys who were really hurt. My daughter finally sat me down and showed me what I was leaving on the table."
+Stars: 4/5
+Wants:
+- Understand it's not too late to file years after separation
+- Calculator to see what 26 years of conditions could rate
+- Texas state benefits since that's where he retired
+Price: Pays $39.99/yr — his daughter bought it for him.
+
+---
+
+PROFILE #17: SPC Destiny Okafor, 68W (Combat Medic), 4 years
+Branch: Army | Situation: Mid-claim, awaiting decision
+Current Rating: None
+Review: "I filed for moral injury and secondary depression on top of my physical stuff and the VSO rep looked at me like I had two heads. The app validated that those are legitimate claim categories with actual rating criteria."
+Stars: 5/5
+Wants:
+- Mental health condition criteria and how they're rated
+- What to expect at a C&P exam for mental health claims
+- Evidence tracker to organize therapist notes and buddy statements
+Price: Pays $4.99/mo now, will upgrade to annual if claim gets complicated.
+
+---
+
+PROFILE #18: CW4 Robert "Bobby" Sloane, 153A (Rotary Wing Aviator), 18 years
+Branch: Army | Situation: Rating increase, complex case
+Current Rating: 80%
+Review: "I know I'm at 80% but I also know I should be at 100% P&T and I can prove it. The what-if calculator actually confirmed my math. I don't need hand-holding, I need accurate data."
+Stars: 4/5
+Wants:
+- Model the path to 100% P&T
+- Understand TDIU as a parallel path
+- Full CFR criteria to build the strongest argument
+Price: Pays $39.99/yr — at his rating level the dollar difference per month makes this a no-brainer.
+
+---
+
+PROFILE #19: SFC Marcus "Big Mo" Monroe, 11C (Indirect Fire), 14 years
+Branch: Army | Situation: Rating increase after worsening conditions
+Current Rating: 50%
+Review: "My hearing is worse, my knees are worse, and my back is worse. The VA rates you on a snapshot in time but nothing about this is static. The calculator showed what re-rating my worst conditions would do to my combined percentage."
+Stars: 5/5
+Wants:
+- Model increased ratings on existing conditions
+- Difference between rating increase and new condition claims
+- Which conditions linked to mortar crew duty he hasn't claimed
+Price: Pays $39.99/yr — been through the system twice, knows Pro is worth it.
+
+---
+
+PROFILE #20: SFC Renee Thibodaux, 18D (SF Medical Sergeant), 17 years
+Branch: Army Special Forces | Situation: Retirement planning
+Current Rating: 30%
+Review: "Thirty percent is a joke for what this job does to a body. The app made the VA feel less like a bureaucratic ambush and more like a process I can actually manage."
+Stars: 4/5
+Wants:
+- Full condition list for 18D including occupational exposure
+- Strategy for building toward 100% before retirement
+- Appeal guidance in case anything gets denied
+Price: Pays $39.99/yr — methodical, skeptical, committed if data is accurate.
+
+
+================================================================================
+SECTION 2: PROFILES 21-40 — NAVY & COAST GUARD
+================================================================================
+
+PROFILE #21: HM2 Marcus Webb, Hospital Corpsman, 8 years
+Branch: Navy | Situation: Pre-filing, just separated
+Current Rating: None
+Review: "Eight years patching up Marines and sailors, watching everyone else's backs, and I never once thought about my own claim until my chief basically grabbed me by the collar on my last week and said 'you better file.' VA Ready walked me through the conditions I didn't even know were connected to my service."
+Stars: 5/5
+Wants:
+- Condition mapping from HM duties (field ops, flight deck, patient handling)
+- Nexus letter guidance for secondary conditions
+- Step-by-step DBQ prep for musculoskeletal claims
+Price: Pays $39.99/yr — "That's one copay at a civilian urgent care."
+
+---
+
+PROFILE #22: BMC Carlos Reyes, Chief Boatswain's Mate, 20 years
+Branch: Navy | Situation: Rating increase
+Current Rating: 40%
+Review: "Twenty years on the waterfront and I walked out with 40%. My buddy got 80% for less. The VA math calculator alone showed me I should be pushing for at least 70%."
+Stars: 4/5
+Wants:
+- Side-by-side comparison of current vs potential combined rating
+- Guidance on filing increases without triggering a reduction
+- Bilateral factor calculator for bilateral knee/shoulder conditions
+Price: Pays $4.99/mo — "Worth every penny if I get my rating adjusted."
+
+---
+
+PROFILE #23: LCDR Sarah Okafor, Surface Warfare Officer, 14 years
+Branch: Navy | Situation: Mid-claim, waiting on C&P exam
+Current Rating: None
+Review: "As a surface warfare officer you're trained to never show weakness. Now I'm in this limbo waiting period and I don't know what to expect. The Filing Coach is the first thing that actually explained what happens after you submit."
+Stars: 4/5
+Wants:
+- C&P exam prep guide by condition type
+- Realistic timeline tracker based on claim complexity
+- Officer-specific condition patterns (stress injuries, sleep disorders)
+Price: Pays $39.99/yr — "I manage a multi-million dollar department budget. This is a rounding error."
+
+---
+
+PROFILE #24: EN1 Darnell Hutchins, Engineman, 12 years
+Branch: Navy | Situation: Appeal (BVA)
+Current Rating: 30%
+Review: "They gave me 30% and denied my hearing claim saying it wasn't service connected. I was in an engine room for 12 years. Do you know how loud a ship's engine room is?"
+Stars: 5/5
+Wants:
+- BVA appeal pathway explained in plain language
+- Noise exposure documentation for shipboard engineering
+- Evidence checklist specific to hearing loss appeals
+Price: Pays $4.99/mo — "I'll pay monthly until this appeal is done."
+
+---
+
+PROFILE #25: AOCM Tamika Brooks, Aviation Ordnanceman Master Chief, 22 years
+Branch: Navy | Situation: Supplemental claim, PACT Act
+Current Rating: 60%
+Review: "I retired at 60% and figured that was that. Then I started reading about PACT Act and realized I've been breathing jet fuel and ordnance residue on flight decks for over two decades. The PACT Act matching literally listed my job designator and flagged four conditions I never connected to service."
+Stars: 5/5
+Wants:
+- PACT Act eligibility checklist by deployment location and dates
+- Respiratory condition nexus documentation guide
+- Supplemental claim vs new claim decision tree
+Price: Switched from monthly to $39.99/yr — "Once I saw the PACT Act stuff I went annual same day."
+
+---
+
+PROFILE #26: MMFN Jake Polanski, Machinist's Mate Fireman, 4 years
+Branch: Navy | Situation: Pre-filing, recently separated, confused
+Current Rating: None
+Review: "I did four years, mostly on a cruiser, and I honestly don't even know if I qualify for anything. VA Ready was the first app that didn't make me feel like an idiot for not knowing this stuff already."
+Stars: 4/5
+Wants:
+- Plain-language explainer on what qualifies as a disability
+- Time-since-separation impact on claims
+- Simple starting point — "what do I file first"
+Price: Pays $4.99/mo — "I'm working a warehouse job right now."
+
+---
+
+PROFILE #27: ITCS Priya Vasquez, IT Senior Chief, 18 years
+Branch: Navy | Situation: Rating increase, MST-related claim
+Current Rating: 50%
+Review: "My claim involves MST and the VA process for that is brutal. What I appreciated about VA Ready is that the Filing Coach has a section specifically acknowledging MST claims have different rules and evidence pathways. It didn't feel clinical."
+Stars: 5/5
+Wants:
+- MST-specific filing pathway with privacy-protective guidance
+- Mental health condition ratings explained (PTSD, MDD, anxiety)
+- What to do when the VA loses or delays sensitive records
+Price: Pays $39.99/yr — "Investing in myself for once."
+
+---
+
+PROFILE #28: CTR2 Ricky Fontaine, Cryptologic Technician, 7 years
+Branch: Navy | Situation: Pre-filing, curious about PACT Act
+Current Rating: None
+Review: "Intel rates don't get talked about much in the claims world. Everyone thinks it's just a desk job but we had long shifts, awful sleep cycles, and I was on a ship near Southwest Asia during burn pit years. PACT Act might actually cover me."
+Stars: 4/5
+Wants:
+- CTR/CTI/CTM-specific exposure and condition profiles
+- Burn pit and toxic exposure eligibility by date and theater
+- Insomnia and circadian disorder claims tied to watch-standing
+Price: Pays $39.99/yr — "Seven years of service, I should get every dollar I earned."
+
+---
+
+PROFILE #29: FLTCM James "Swede" Lindqvist, Fleet Master Chief, 30 years
+Branch: Navy | Situation: Rating increase, helping others
+Current Rating: 70%
+Review: "I thought claiming everything was gaming the system. It took my corpsman son filing his own claim and explaining it to me to realize I'd been leaving money on the table out of pride. I'm also using this app to help the junior sailors in my community."
+Stars: 5/5
+Wants:
+- Comprehensive condition review against career length and exposure
+- How to help fellow veterans file without acting as accredited VSO
+- Hearing loss + tinnitus bilateral factor explained simply
+Price: Pays $39.99/yr — "Cheapest investment I've made since my first house."
+
+---
+
+PROFILE #30: HM3 Destiny Williams, Hospital Corpsman, 3 years
+Branch: Navy | Situation: Recently separated, overwhelmed
+Current Rating: None
+Review: "I only did three years and I feel like I don't deserve to file claims. But I messed up my back lifting patients, I've been having anxiety since a traumatic patient death, and my audiologist said I have hearing loss consistent with someone twice my age. VA Ready made me feel like I actually have a case."
+Stars: 5/5
+Wants:
+- Short-service veteran claim eligibility explained
+- Mental health conditions related to medical/secondary trauma
+- Encouragement-forward guidance — this demographic needs it
+Price: Pays $4.99/mo — "I'm in school now, monthly fits my budget."
+
+---
+
+PROFILE #31: BMCM James "J.T." Torres, Boatswain's Mate Master Chief, 26 years
+Branch: Navy | Situation: Fully rated, helping shipmates
+Current Rating: 90%
+Review: "Got my 90% after a long fight. Now I sit in the VFW on Tuesdays and help other bosun mates figure this stuff out. VA Ready is honestly better organized than the VSO software I used."
+Stars: 4/5
+Wants:
+- Shareable claim guides for peer mentoring
+- Updates when CFR criteria change for common conditions
+- Quick lookup tool during mentoring sessions
+Price: Pays $39.99/yr — "It's a reference tool. Worth it for what I do with it."
+
+---
+
+PROFILE #32: ABH1 Devontae Simmons, Aviation Boatswain's Mate, 11 years
+Branch: Navy | Situation: Mid-claim, filed multiple conditions
+Current Rating: None
+Review: "Flight deck is the most dangerous work environment in the military. I've got hearing loss from jet noise, a shoulder impingement from chaining aircraft, and I inhaled more jet exhaust than I can count. I'm not leaving without getting rated for every inch of damage."
+Stars: 5/5
+Wants:
+- Aviation-specific occupational condition profiles
+- Jet fuel and exhaust exposure under PACT Act
+- Multi-condition claim management and tracking
+Price: Pays $39.99/yr — "This is my financial future."
+
+---
+
+PROFILE #33: LTJG Michelle Park, Surface Warfare Officer, 4 years
+Branch: Navy | Situation: Pre-filing, just separated, skeptical
+Current Rating: None
+Review: "I felt weird about filing. But my mentor told me flat out: you earned this, file it. Within twenty minutes I was thinking 'I have more than I thought.'"
+Stars: 4/5
+Wants:
+- Officer-appropriate framing — practical, evidence-driven
+- Sleep disorder claims related to watchstanding
+- Quick-start path for time-constrained professionals
+Price: Pays $39.99/yr — "I'd rather pay annually and not think about it."
+
+---
+
+PROFILE #34: SO1 Aaron "Torch" Maddox, Special Warfare Operator (SEAL), 12 years
+Branch: Navy | Situation: Appeal, rating too low
+Current Rating: 40%
+Review: "I've got a knee reconstruction, compressed discs, tinnitus, and a TBI from a training accident and they gave me 40%. The what-if calculator is helping me understand what 70% vs 80% actually means in dollars."
+Stars: 4/5
+Wants:
+- TBI rating criteria explained in detail
+- PTSD + TBI combined claim guidance
+- C&P exam red flags and how to request a new one
+Price: Pays $4.99/mo — "I don't do subscriptions usually but this one earns its keep."
+
+---
+
+PROFILE #35: LS2 Amara Diallo, Logistics Specialist, 6 years
+Branch: Navy | Situation: Pre-filing, recently separated
+Current Rating: None
+Review: "I found VA Ready through a Facebook group for Black women veterans and I'm glad I did because this community does not get enough help navigating the system."
+Stars: 5/5
+Wants:
+- Mental health condition filing for vets who never sought in-service treatment
+- Knee and back claims for shipboard duty
+- Accessible language throughout — no assumed prior knowledge
+Price: Pays $4.99/mo — "Let me see my rating first, then I'll go annual."
+
+---
+
+PROFILE #36: BM1 Hector Salinas, Boatswain's Mate, 16 years
+Branch: Coast Guard | Situation: Pre-filing, finally decided to start
+Current Rating: None
+Review: "Coast Guard guys are bad at this. We always feel like 'VA is for Army guys.' I've done sixteen years of SAR ops, law enforcement boardings, and deck work. A Navy buddy showed me VA Ready and I realized I was treating myself like a second-class veteran."
+Stars: 5/5
+Wants:
+- Coast Guard-specific rate and duty station condition mapping
+- SAR operations injury documentation
+- Beginner-friendly entry point for vets who've never engaged with VA
+Price: Pays $39.99/yr — "Sixteen years and nothing filed. I'm ready to fix that."
+
+---
+
+PROFILE #37: AST2 Ashley Monroe, Aviation Survival Technician, 8 years
+Branch: Coast Guard | Situation: Mid-claim, C&P scheduled
+Current Rating: None
+Review: "Rescue swimmer, eight years. I've been in the water in conditions most people can't imagine. The C&P prep section told me exactly what the examiner would be looking for."
+Stars: 5/5
+Wants:
+- PTSD claim guidance for operational stress
+- Shoulder and rotator cuff rating criteria
+- C&P exam preparation for physical + mental health combo claims
+Price: Pays $39.99/yr — "I went annual because I've got a lot of conditions."
+
+---
+
+PROFILE #38: MSTC Linda Castillo, Marine Science Technician Chief, 19 years
+Branch: Coast Guard | Situation: Rating increase, PACT Act
+Current Rating: 30%
+Review: "Nineteen years of environmental response — oil spills, chemical releases, HAZMAT. Since PACT Act passed I've been wondering if my respiratory issues qualify. The VA doesn't advertise this to Coast Guard veterans."
+Stars: 4/5
+Wants:
+- PACT Act eligibility for Coast Guard environmental response
+- Chemical and HAZMAT exposure condition profiles
+- Supplemental claim strategy for vets with new PACT Act-eligible conditions
+Price: Pays $4.99/mo — "I'll upgrade to annual once I get through this supplemental."
+
+---
+
+PROFILE #39: OS1 Devon Paulson, Operations Systems Technician, 14 years
+Branch: Coast Guard | Situation: Appeal, denied claim
+Current Rating: 10%
+Review: "Ten percent for everything I've got. The VA examiner said my hip wasn't service connected — how does 14 years on rolling decks not count? Coast Guard vets don't get the same VSO attention. It's just the truth."
+Stars: 4/5
+Wants:
+- HLR vs BVA appeal lane comparison
+- Hip and lower extremity claims for shipboard duty
+- How to write a lay statement for a nexus argument
+Price: Pays $39.99/yr — "I've wasted more than $40 on apps that do nothing."
+
+---
+
+PROFILE #40: CDR Marcus Thorne, Coast Guard Investigative Service, 22 years
+Branch: Coast Guard | Situation: Recently retired, starting first claim
+Current Rating: None
+Review: "When people think Coast Guard they think boat drivers. They don't think law enforcement with a federal caseload and combat-adjacent operations in the drug war. VA Ready's condition descriptions for PTSD and secondary trauma made me say out loud: yeah, that's me."
+Stars: 5/5
+Wants:
+- Law enforcement trauma and PTSD claim pathway
+- Coast Guard-specific service recognition in the app
+- How to start a first claim after 22 years
+Price: Pays $39.99/yr — "I bill $300 an hour as a consultant now. Forty dollars a year is not a real question."
+
+
+================================================================================
+SECTION 3: PROFILES 41-70 — MARINES, AIR FORCE & SPACE FORCE
+================================================================================
+
+PROFILE #41: Cpl Marcus "Dawg" Thibodeau, 0311, 6 years
+Branch: Marines | Situation: Pre-filing, just separated
+Current Rating: None
+Review: "My knees are shot, my back is shot, my hearing is shot, and the VA wants me to prove it. I humped a 90-pound pack through Helmand for two deployments. At least this app tells me what I'm actually dealing with."
+Stars: 4/5
+Wants:
+- Knee and lumbar condition lookup with CFR criteria
+- MOS Intel for 0311 combat exposure
+- Filing Coach start to finish walkthrough
+Price: Pays $4.99/mo — "Cheaper than one chiro visit."
+
+---
+
+PROFILE #42: SSgt Dominique Ferrell, 0331, 9 years
+Branch: Marines | Situation: Rating increase
+Current Rating: 30%
+Review: "They rated my back at 10% when I can barely bend over. I was a machine gunner — do the math. The bilateral factor thing was an eye-opener because both my hips are messed up too."
+Stars: 5/5
+Wants:
+- Bilateral factor calculator for hip and shoulder claims
+- What-if scenarios to model combined rating
+- Evidence Tracker for range-of-motion records
+Price: Pays $39.99/yr — "I'll make that back in one month of corrected back pay."
+
+---
+
+PROFILE #43: GySgt Ronnie "Church" Espinoza, 0811, 14 years
+Branch: Marines | Situation: Mid-claim, waiting on C&P
+Current Rating: 40%
+Review: "Cannon cocker for fourteen years. Tinnitus so bad my wife sleeps in the other room. The MOS Intel actually listed 0811 blast exposure flags I didn't even think to claim."
+Stars: 5/5
+Wants:
+- TBI and tinnitus condition profiles with full CFR criteria
+- MOS-specific blast exposure documentation for artillery
+- C&P exam prep checklist
+Price: Pays $4.99/mo — "It's a utility bill. I pay for things that work."
+
+---
+
+PROFILE #44: LCpl Jaylen Okafor, 0311, 4 years
+Branch: Marines | Situation: Pre-filing, no idea where to start
+Current Rating: None
+Review: "I only did one enlistment but I came back from Twentynine Palms with a blown-out ankle and anxiety. Had no clue you could file for that stuff."
+Stars: 4/5
+Wants:
+- Plain-English condition descriptions
+- Filing Guide for first-time filers
+- Federal benefits overview
+Price: Pays $4.99/mo — "Less than my Netflix and actually does something."
+
+---
+
+PROFILE #45: Maj Patricia Okonkwo, 0802, 18 years
+Branch: Marines | Situation: Appeal — BVA level
+Current Rating: 50%
+Review: "Artillery officer, three deployments. I have a TBI diagnosis from a 2009 blast event that the rater completely missed. The CFR criteria breakdowns helped me build my NOD argument."
+Stars: 5/5
+Wants:
+- TBI rating criteria with severity levels and CFR citations
+- Appeal-stage checklist and BVA prep guidance
+- Evidence Tracker for IMO letters and nexus statements
+Price: Pays $39.99/yr — "I've spent more than that on certified mail to the VA."
+
+---
+
+PROFILE #46: Sgt Hector Villanueva, 1371, 8 years
+Branch: Marines | Situation: Rating increase, PACT Act
+Current Rating: 20%
+Review: "Combat engineer. I burned trash in Iraq, handled demo, breathed stuff I shouldn't have. They gave me 20% for my knee. Now with PACT Act I'm hearing I can reopen everything."
+Stars: 5/5
+Wants:
+- PACT Act and burn pit exposure matching for 1371
+- Respiratory and toxic exposure condition profiles
+- What-if calculator in dollars
+Price: Pays $39.99/yr — "If this gets me one more percentage point it pays for itself ten times over."
+
+---
+
+PROFILE #47: Cpl DeShawn Watkins, 3531, 5 years
+Branch: Marines | Situation: Pre-filing
+Current Rating: None
+Review: "Motor T. Everyone thinks we just drove trucks but I'm out here with back problems, carpal tunnel from wheel vibration, and hearing loss from diesel engines. The grunts got all the glory and apparently all the VA help too."
+Stars: 4/5
+Wants:
+- Vibration-related occupational exposure conditions
+- MOS Intel for 3531 with noise and ergonomic flags
+- State benefits lookup for Louisiana
+Price: Free tier first, upgrade to Pro for state benefits — "Show me Louisiana and you've got my card."
+
+---
+
+PROFILE #48: Capt James "Six" Callahan, 0302, 10 years
+Branch: Marines | Situation: Mid-claim
+Current Rating: 10%
+Review: "Infantry officer, two combat deployments, one knee surgery, PTSD I only recently admitted I had. The 10% is a joke but I didn't know how to push back."
+Stars: 4/5
+Wants:
+- PTSD rating criteria with combat exposure pathway
+- What-if modeling for PTSD at 50% vs 70%
+- Secondary conditions (sleep apnea connected to PTSD)
+Price: Pays $4.99/mo — "I spend more on protein powder."
+
+---
+
+PROFILE #49: WO2 Sandra Beaumont, 2111, 12 years
+Branch: Marines | Situation: Appeal
+Current Rating: 60%
+Review: "Small arms repairer, twelve years, solvents and chemicals every single day. My 60% doesn't include the peripheral neuropathy from solvent exposure — I didn't even connect those dots until this app."
+Stars: 5/5
+Wants:
+- Chemical and solvent exposure conditions with PACT Act flags
+- Peripheral neuropathy CFR criteria and nexus letter guidance
+- Evidence Tracker for occupational exposure documentation
+Price: Pays $39.99/yr — "I found a condition I didn't know I had."
+
+---
+
+PROFILE #50: Sgt Ray Dunmore, 0621, 11 years
+Branch: Marines | Situation: Rating increase
+Current Rating: 30%
+Review: "Field radio operator. I wore a headset for eleven years and my tinnitus is constant. They gave me 10% for hearing loss and I think they lowballed the combined calculation. The VA math in this app showed me exactly where the gaps are."
+Stars: 4/5
+Wants:
+- Tinnitus and hearing loss with bilateral calculation
+- VA math explainer — how the combined rating formula works
+- MOS Intel for 0621 RF/comms exposure
+Price: Pays $4.99/mo — "Worth it just for the combined rating explainer."
+
+---
+
+PROFILE #51: PFC Devon Strickland, 0311, 3 years
+Branch: Marines | Situation: Pre-filing, recently EAS'd
+Current Rating: None
+Review: "Three years, one deployment, got out with a bad knee and couldn't even get the VA to call me back. Still figuring out the process but I'm less lost than I was."
+Stars: 3/5
+Wants:
+- Simple first-claim walkthrough for low-tenure veterans
+- Knee and ankle condition lookup with percentage estimates
+- Free tier access to federal benefits
+Price: Free tier — "I'm broke. I just got out. Give me a minute."
+
+---
+
+PROFILE #52: MGySgt Leonard "Pops" Cortez, 0369, 28 years
+Branch: Marines | Situation: Full audit of existing rating
+Current Rating: 70%
+Review: "Twenty-eight years. My buddy retired at 80% with half my conditions and I want to understand why. The what-if tool let me model scenarios I hadn't thought to claim — migraines, hypertension, PTSD secondary to chronic pain."
+Stars: 5/5
+Wants:
+- Secondary condition modeling
+- Combined rating deep-dive to find gaps in his 70%
+- Evidence Tracker to audit full claims history
+Price: Pays $39.99/yr — "At my rating level, one percentage point is $400 a month."
+
+---
+
+PROFILE #53: Sgt Alicia Pemberton, 0861, 7 years
+Branch: Marines | Situation: PTSD and MST claim
+Current Rating: 10%
+Review: "I filed an MST claim and the process was retraumatizing. The PTSD section in this app is detailed without being cold about it, and the filing guidance for MST specifically helped me understand my options."
+Stars: 5/5
+Wants:
+- MST-specific PTSD filing pathway
+- Evidence Tracker for buddy and personal statements
+- Benefits Explorer for MST-specific VA programs
+Price: Pays $4.99/mo — "Privacy and detail matter."
+
+---
+
+PROFILE #54: 1stLt Connor O'Brien, 0302, 5 years
+Branch: Marines | Situation: Pre-filing, reluctant
+Current Rating: None
+Review: "I almost didn't file. Felt like admitting something. But my wife sat me down, I downloaded this app, and the condition list kind of hit different. The 'what-if I actually file' calculator made the financial argument hard to ignore."
+Stars: 4/5
+Wants:
+- PTSD filing pathway that doesn't feel stigmatizing
+- What-if calculator for financial impact
+- Filing Coach without having to call anyone
+Price: Pays $4.99/mo — "Low friction. I don't want to talk to anyone."
+
+---
+
+PROFILE #55: SSgt Tanya Broussard, 4066, 9 years
+Branch: Marines | Situation: Pregnancy-related MSK claims
+Current Rating: 20%
+Review: "Marine Corps admin chief, nine years. People think admin Marines don't have real injuries — tell that to my cervical spine from hunching over a computer in 110-degree tents for three deployments."
+Stars: 4/5
+Wants:
+- Cervical spine and upper extremity occupational profiles
+- State benefits for Texas
+- Filing Coach for administrative veterans who feel overlooked
+Price: Free tier (Texas) — will upgrade when she moves.
+
+---
+
+PROFILE #56: TSgt Brandon Kowalski, 2A351, 11 years
+Branch: Air Force | Situation: Rating increase
+Current Rating: 30%
+Review: "Eleven years on the flightline doing crew chief work on F-16s. The 30% doesn't account for chemical exposure at all. MOS Intel had 2A listed with fuel and chemical flags I could actually use."
+Stars: 5/5
+Wants:
+- JP-8 and jet fuel chemical exposure with PACT Act matching
+- Shoulder and cervical spine CFR criteria
+- MOS Intel for 2A series flightline maintenance
+Price: Pays $39.99/yr — "First time an app understood what a crew chief actually does."
+
+---
+
+PROFILE #57: SSgt Priya Nair, 3D1X2, 8 years
+Branch: Air Force | Situation: Mid-claim
+Current Rating: None
+Review: "Cyber transport — people think I sat in an air-conditioned building my whole career but I deployed to Bagram and Kandahar. You don't have to get shot at to have a claim."
+Stars: 4/5
+Wants:
+- PTSD and anxiety profiles for non-combat deployment
+- Sleep disorder conditions secondary to deployment stress
+- Filing Coach for first claim
+Price: Pays $4.99/mo — "I want to do this right the first time."
+
+---
+
+PROFILE #58: CMSgt Robert "Obie" Oberlander, 1A191, 26 years
+Branch: Air Force | Situation: Full audit before retirement
+Current Rating: 40%
+Review: "Flight engineer, twenty-six years. The 40% was a placeholder. The app's modeling showed I'm probably at 60-70% when you add sleep apnea, tinnitus, and secondary depression."
+Stars: 5/5
+Wants:
+- Sleep apnea secondary to PTSD/chronic pain
+- What-if modeling at 60%, 70%, 100%
+- Evidence Tracker for 26 years of medical records
+Price: Pays $39.99/yr — "My rating correction will be worth more than I made last year."
+
+---
+
+PROFILE #59: A1C Destiny Washington, 4N0X1, 4 years
+Branch: Air Force | Situation: Pre-filing, recently separated
+Current Rating: None
+Review: "Aerospace medical technician. I took care of everyone else's health for four years and totally ignored my own. This app made me realize 'it's not that bad' is exactly what the VA doesn't care about — they care about documentation."
+Stars: 4/5
+Wants:
+- Occupational back injury profiles for medical personnel
+- Bloodborne pathogen exposure guidance
+- Benefits Explorer for healthcare and education
+Price: Pays $4.99/mo — "Less than one copay."
+
+---
+
+PROFILE #60: Maj Gerald Finch, 13S3, 16 years
+Branch: Air Force | Situation: Appeal
+Current Rating: 50%
+Review: "Space and missile officer. ICBM alert duty is its own psychological landscape. My PTSD claim was denied because the evaluator didn't understand what alert duty entails. This app helped me articulate the stressor profile."
+Stars: 5/5
+Wants:
+- PTSD stressor documentation for non-combat high-stress roles
+- Appeal guidance specific to denial-due-to-stressor
+- Evidence Tracker for buddy statements
+Price: Pays $39.99/yr — "I spent more on my appeal attorney's initial consult."
+
+---
+
+PROFILE #61: SrA Marcus Delgado, 2W1X1, 6 years
+Branch: Air Force | Situation: Pre-filing
+Current Rating: None
+Review: "Weapons loader on B-52s. Heavy lifting, extreme weather, constant noise. This app listed ordnance handling as a specific occupational exposure category and that felt validating."
+Stars: 4/5
+Wants:
+- Shoulder and back CFR criteria for ordnance handling
+- Noise exposure profile for flightline weapons work
+- State benefits for Arizona
+Price: Pays $4.99/mo for Pro — "The Arizona state benefits alone make it worth it."
+
+---
+
+PROFILE #62: Capt Amanda Forsythe, 13B3, 12 years
+Branch: Air Force | Situation: Rating increase
+Current Rating: 20%
+Review: "Air battle manager. Twelve years of shift work, headset on constantly. My migraines are debilitating and my 20% doesn't include them. I never connected them to occupational pattern until I ran my AFSC through this app."
+Stars: 5/5
+Wants:
+- Migraine condition profile with frequency-based rating tiers
+- Secondary condition modeling (migraine secondary to cervical strain)
+- What-if calculator for adding migraine and sleep disorder
+Price: Pays $4.99/mo — "The migraine section alone justified the subscription."
+
+---
+
+PROFILE #63: MSgt Devon Treadwell, 3E5X1, 15 years
+Branch: Air Force | Situation: PACT Act claim
+Current Rating: 45%
+Review: "Electrical systems. I worked with transformers, wiring, chemicals, and lead-based paints for fifteen years. When PACT Act passed I thought it was only for burn pit guys. This app showed me it's broader than that."
+Stars: 5/5
+Wants:
+- PACT Act toxic exposure matching for electrical/facilities trades
+- Lead and chemical exposure condition profiles
+- Evidence Tracker for base assignment history
+Price: Pays $39.99/yr — "I found three conditions I didn't know were claimable."
+
+---
+
+PROFILE #64: TSgt Carla Hutchins, 1N1X1, 10 years
+Branch: Air Force | Situation: PTSD and MST claim
+Current Rating: 30%
+Review: "Intelligence analyst. I processed imagery that I still see when I close my eyes. The PTSD documentation section was specific enough to help me frame my stressor statement."
+Stars: 5/5
+Wants:
+- Operational PTSD stressor documentation for ISR career fields
+- MST-specific filing resources
+- C&P exam prep for mental health
+Price: Pays $39.99/yr — "The C&P prep feature is worth the annual cost by itself."
+
+---
+
+PROFILE #65: Amn Tyler Griffith, 1C2X1, 2 years
+Branch: Air Force | Situation: Pre-filing, early separation
+Current Rating: None
+Review: "Combat controller trainee — I washed out with a stress fracture and torn labrum. Nobody told me those were ratable. I thought you had to finish training to get benefits. This app told me differently in five minutes."
+Stars: 4/5
+Wants:
+- Training injury filing pathway
+- Foot and hip condition profiles
+- Federal benefits overview for low-tenure vets
+Price: Free tier — "I'm 21 and just found out I have a claim."
+
+---
+
+PROFILE #66: Lt Col Steven Park, 17D3, 20 years
+Branch: Air Force | Situation: Post-retirement audit
+Current Rating: 60%
+Review: "Cyber warfare officer. Twenty years behind a screen but I deployed twice. The 60% doesn't capture the full picture. The modeling tool helped me identify secondary and tertiary conditions I'd dismissed."
+Stars: 4/5
+Wants:
+- Secondary condition modeling (hypertension, sleep apnea secondary to PTSD)
+- Moral injury and occupational PTSD documentation
+- What-if tool for 80% and 100% P&T scenarios
+Price: Pays $39.99/yr — "I approached this like an operational problem."
+
+---
+
+PROFILE #67: MSgt Felicia Brandt, 6C0X1, 14 years
+Branch: Air Force | Situation: PFAS exposure claim
+Current Rating: 35%
+Review: "Contracting. Stationed at bases with documented PFAS contamination for six of my fourteen years. Thyroid issues, elevated lipids — my doctor flagged it but never connected it to PFAS exposure. This app's PACT Act tool did."
+Stars: 5/5
+Wants:
+- PFAS and contaminated water exposure matching under PACT Act
+- Thyroid and endocrine condition CFR criteria
+- Evidence Tracker for base assignments with known PFAS contamination
+Price: Pays $39.99/yr — "This app found a claim my own doctor missed."
+
+---
+
+PROFILE #68: Spc4 (USSF) Jordan Vasquez, 5C2X1, 5 years
+Branch: Space Force | Situation: Pre-filing, totally lost
+Current Rating: None
+Review: "Space systems operator, transferred from Air Force. I don't even know if my VA records say Space Force or Air Force. The Space Force has no institutional knowledge on claims. This app at least treats my AFSC as legitimate."
+Stars: 3/5
+Wants:
+- How Space Force service records are treated for VA claims
+- Space systems operator occupational profile
+- Filing Coach for first claim with no branch guidance
+Price: Pays $4.99/mo — "Anything with an actual answer is worth five bucks."
+
+---
+
+PROFILE #69: 2nd Lt (USSF) Megan Cho, 13S, 3 years
+Branch: Space Force | Situation: Pre-filing, transitioning
+Current Rating: None
+Review: "Space operations officer. The Space Force literally doesn't have a transition assistance program that knows what to do with us. I asked my TAP advisor about my AFSC and she googled it in front of me."
+Stars: 4/5
+Wants:
+- Space and missile operations occupational profile
+- PTSD stressor documentation for alert/launch duty
+- Benefits Explorer for short-service officers
+Price: Pays $4.99/mo — "The AF cross-reference is helpful."
+
+---
+
+PROFILE #70: MSgt Calvin Bridges, 1C6X1, 22 years (former Marine then AF then USSF)
+Branch: Space Force | Situation: Complex audit — three branches
+Current Rating: 55%
+Review: "Marine infantry, then Air Force, then Space Force at the reorganization. Three branches, twenty-two years, one very confused VA file. This app's the first tool that let me model all of it together."
+Stars: 4/5
+Wants:
+- Multi-branch service history claim modeling
+- Combat and occupational condition audit across all service periods
+- Evidence Tracker for records from three different branches
+Price: Pays $39.99/yr — "Twenty-two years of complexity. Thirty-nine dollars is not the problem."
+
+
+================================================================================
+SECTION 4: PROFILES 71-100 — SPECIAL CASES + ANALYSIS
+================================================================================
+
+
+
+================================================================================
+SECTION 4: PROFILES 71-100 — SPECIAL CASES + ANALYSIS
+================================================================================
+
+# VA READY APP USER WARGAME: PROFILES 71-100 + ANALYSIS
+
+---
+
+## PROFILES 71-75: GUARD/RESERVE
+
+---
+
+**PROFILE #71: SSG Marcus Webb, 68W Combat Medic, 14 years**
+Branch: Army National Guard | Situation: Two combat deployments to Afghanistan, now working as an EMT in rural Tennessee. Filed a claim after deployment but got 0% because he "didn't have enough documentation." Has been fighting for three years to get his bilateral knee condition and PTSD recognized. His civilian employer doesn't understand why he keeps taking time off for VA appointments.
+Current Rating: 0% (pending appeal)
+Review: "The VA treats Guard guys like we're second-class veterans. I deployed twice, I got blown up twice, and they keep asking me why my records are incomplete. My AGR unit got disbanded so half my records just... vanished. I need something that helps me understand what documentation I actually need, not just tells me I need documentation."
+Stars: 2/5
+Wants:
+- Line of Duty (LOD) determination guidance specific to Guard/Reserve
+- Records gap assistance — help finding alternative documentation when official records are missing
+- State-specific vet benefits for Tennessee since federal claims are stalled
+
+Price: Would pay $9.99/month once his claim gets moving; right now every dollar counts working EMT wages.
+
+---
+
+**PROFILE #72: SPC Destiny Kowalski, 25B IT Specialist, 8 years**
+Branch: Army Reserve | Situation: Weekend warrior who got activated for COVID response in 2020 and a prior deployment to Kuwait in 2019. Developed anxiety and a repetitive stress wrist injury during activation. Her reserve unit's administrative NCO gave her wrong information about filing within 180 days of demobilization and she missed the window — or so she thinks.
+Current Rating: None
+Review: "Nobody in my reserve unit actually knows how VA claims work. The admin sergeant told me I missed the deadline and that was it. I had to find out on Reddit that there isn't actually a hard filing deadline for most conditions. An app that explains Guard/Reserve-specific rules would have saved me two years of confusion."
+Stars: N/A (hasn't used app yet; discovered it through a veteran Facebook group)
+Wants:
+- Guard/Reserve-specific eligibility explainer (Title 10 vs Title 32, qualifying service)
+- Myth-busting section on common misinformation about Reserve claims
+- Notification or checklist tied to demobilization dates
+
+Price: Would pay $4.99/month — she's on a tight budget but sees clear value in avoiding the mistakes she already made.
+
+---
+
+**PROFILE #73: MSG Hector Fuentes, 18Z Special Forces, 22 years**
+Branch: Army National Guard (former Active Duty 12 years, then transferred to ARNG)
+Situation: Spent 12 years active duty SF before transitioning to Guard. Has a 70% rating from his active duty time but his Guard-era injuries from a training accident and subsequent deployment aren't service-connected. His active duty and Guard service records are in two different systems and the VA keeps conflating them.
+Current Rating: 70% (active duty period only)
+Review: "I've got two completely separate service histories and the VA acts like they've never seen that before. Every time I submit something for my Guard injuries they tie it back to my active duty records and get confused. I need an app that understands dual-status service and helps me keep the two claims completely separate and organized."
+Stars: 3/5
+Wants:
+- Dual-status service tracker (separate active duty vs. Guard service periods)
+- Training accident vs. combat injury distinction within claims
+- P&T flag and combined rating optimizer for adding Guard-era claims to existing rating
+
+Price: Pays $39.99/year — worth it as a research tool, but wants more Guard-specific content before he recommends it to his unit.
+
+---
+
+**PROFILE #74: LT Brianna Osei-Mensah, 6420 Naval Flight Officer, 9 years**
+Branch: Navy Reserve | Situation: Selected for augmentation to active duty for 18 months during a carrier deployment. Developed noise-induced hearing loss and cervical spine issues. Now back in reserve status and filing a claim, but the VA's records request went to her active duty augmentation unit, which has since been decommissioned. She's an attorney in civilian life and finds the VA's records processes infuriating.
+Current Rating: None (initial claim pending 11 months)
+Review: "I litigate complex cases for a living and the VA's records process is the most disorganized bureaucracy I have ever encountered. I need an app that gives me a systematic, legally-grounded approach — nexus letters, Buddy Statements, C&P exam prep. Not inspirational quotes about 'fighting for your benefits.' Give me the process."
+Stars: 3/5 (useful but not rigorous enough for her)
+Wants:
+- Legal-grade nexus letter templates and guidance
+- C&P exam preparation that's tactically specific (what to say, what not to say)
+- Reserve augmentation to active duty specific eligibility guidance
+
+Price: Would pay $14.99/month without hesitation if the content matched her professional standards.
+
+---
+
+**PROFILE #75: SrA Jaylen Brooks, 3P0X1 Security Forces, 6 years**
+Branch: Air Force Reserve | Situation: Activated to support Southwest border operations and a deployment to Al Udeid. Has a service-connected back injury but it was incurred during a training exercise two weeks before his activation orders kicked in — creating an LOD gray area. His recruiter at the time told him it was fine and covered. It was not.
+Current Rating: 0% (LOD denied, appealing)
+Review: "I got hurt during a pre-deployment workup and they're saying it wasn't in the line of duty because the orders hadn't technically started yet. That's a technicality that cost me real money and real pain. I need to understand exactly how LOD determinations work and what my appeal options are, because nobody at my base knows either."
+Stars: 2/5
+Wants:
+- LOD determination appeal guidance with timeline
+- Pre-deployment and workup period coverage explainer
+- Connection to VSOs who specialize in Reserve LOD disputes
+
+Price: Would try free tier first; would upgrade to $4.99/month if the LOD content is actually useful.
+
+---
+
+## PROFILES 76-80: FEMALE VETERANS
+
+---
+
+**PROFILE #76: SGT Aaliyah Washington, 68W Combat Medic, 5 years**
+Branch: Army | Situation: Served in a forward support company in Afghanistan. Experienced MST during her second year of service, reported it, and was subsequently reassigned in a way that derailed her career. Has anxiety, depression, and PTSD but avoided the VA for four years because she didn't want to "relive it with strangers." A peer counselor finally convinced her to file.
+Current Rating: None (first claim, just starting)
+Review: "The hardest part isn't the forms. It's knowing that I have to explain what happened to me over and over to people who may or may not believe me. I need an app that understands MST claims are different — the evidence is different, the C&P exams are different, the whole experience is different. Most apps feel like they were built by and for male infantry guys."
+Stars: N/A (evaluating)
+Wants:
+- MST-specific claim pathway with privacy-forward language
+- Female veteran-specific condition list (chronic pelvic pain, hormonal conditions, military sexual assault physical sequelae)
+- Option to request female examiner for C&P exams — guidance on how to do this
+
+Price: Would pay $4.99/month if it genuinely addresses MST claims, not just as a checkbox feature.
+
+---
+
+**PROFILE #77: CW2 Tamara Hobbs, 153A Rotary Wing Aviator, 11 years**
+Branch: Army | Situation: Former Black Hawk pilot with significant spinal degeneration from years of vibration exposure. Also has a reproductive health condition she believes is service-connected but has never filed for because "the VA doesn't take women's health issues seriously" — a belief reinforced by two failed primary care appointments where she was told her symptoms were stress-related.
+Current Rating: 40% (back, bilateral shoulder)
+Review: "I flew 1,800 hours and my spine shows it. But I also have a gynecological condition that my civilian doctor thinks is related to the vibration and physical stress of flying, and every time I bring it up to the VA they look at me like I have three heads. I need research, I need evidence, I need someone to tell me this is a real claim and here's how to build it."
+Stars: 4/5
+Wants:
+- Female reproductive health condition library with service connection research
+- Vibration exposure flag tied to aviation MOS profiles
+- Functional impairment documentation guidance (how vibration affects female physiology)
+
+Price: Pays $39.99/year; would pay more if female health conditions were robustly covered.
+
+---
+
+**PROFILE #78: PO2 Carmen Reyes, HM (Hospital Corpsman), 7 years**
+Branch: Navy | Situation: Served with the Marines as a Fleet Marine Force Corpsman. Experienced both combat-related trauma and MST. Her MST claim was denied once because the examiner concluded there was "insufficient corroborating evidence" — a common and devastating outcome. Her PTSD claim conflates combat and MST trauma in a way the VA has struggled to evaluate separately.
+Current Rating: 30% (PTSD, though she believes it's inadequately rated)
+Review: "I treated Marines on the battlefield and I was also assaulted by one of them. The VA keeps trying to put both of those things in the same box and they're not the same thing. My combat PTSD and my MST PTSD have different triggers, different treatments, and different evidence requirements. I need an app that actually gets that distinction and helps me file them properly."
+Stars: 3/5
+Wants:
+- Dual-source PTSD claim guidance (combat + MST filed separately vs. together)
+- MST claim evidence alternatives — what counts when there are no official reports
+- Rating increase pathway for existing 30% PTSD claim
+
+Price: Would pay $4.99/month; on a limited budget but this directly affects her monthly compensation.
+
+---
+
+**PROFILE #79: MAJ Denise Calloway, 35D All-Source Intelligence, 16 years**
+Branch: Army | Situation: Career intelligence officer with deployments to Iraq and Afghanistan. Has TBI from an IED, migraines, and hearing loss — all straightforward claims. Also has PTSD and depression, which she has never filed for because as a field grade officer in a security clearance position, she was terrified that a mental health claim would end her career. She's now medically separated and the fear no longer applies, but the stigma still runs deep.
+Current Rating: 60% (TBI, hearing, migraines — no mental health)
+Review: "I watched what happened to officers who filed for mental health — the whisper network, the assignment freeze, the security clearance reviews. None of that is supposed to happen but all of it does. Now I'm out and I need to file for what I actually have, and I need an app that helps me understand my rating won't be used against me anymore and how to frame the claim correctly."
+Stars: 3/5
+Wants:
+- Post-separation mental health filing guide for those who delayed due to stigma
+- Interaction between VA rating and federal security clearance — plain-language explainer
+- TBI + mental health comorbidity rating guidance
+
+Price: Would pay $9.99/month; the financial stakes of an untreated 30-50% mental health claim are significant.
+
+---
+
+**PROFILE #80: SSG (Ret) Loretta Pham, 25U Signal Support Systems, 20 years**
+Branch: Army | Situation: Retired after 20 years. Has a service-connected rating of 50% but has never fully explored her conditions. Developed PCOS and thyroid issues that multiple civilian doctors have linked to service exposures, and she experienced MST early in her career that she buried. Now 47, dealing with chronic fatigue and metabolic issues, she's realizing the VA isn't just for combat wounds.
+Current Rating: 50%
+Review: "I did 20 years and never really thought about the VA as being for me. I thought it was for the guys who got shot. It wasn't until my civilian doctor started asking about my military service in detail that I realized how much of what's wrong with me connects back to those years. I need an app that helps older female veterans do a full audit of what they might be owed."
+Stars: 4/5
+Wants:
+- "Full health audit" feature — walk through all systems for overlooked conditions
+- Female veteran exposure profile (chemicals, burn pits, reproductive toxins, CARC paint)
+- Holistic rating increase pathway for someone with existing rating but many unaddressed conditions
+
+Price: Pays $39.99/year — at 50% she has disposable income and is motivated.
+
+---
+
+## PROFILES 81-85: POST-9/11 PACT ACT / TOXIC EXPOSURE
+
+---
+
+**PROFILE #81: SGT First Class Darius Monroe, 11B Infantry, 18 years**
+Branch: Army | Situation: Three deployments to Iraq, one to Afghanistan. Burned trash, human waste, and worse in open air pits for months at a stretch. Now has chronic bronchitis, reactive airway disease, and a rash that won't quit. His existing claim doesn't mention any of this because he filed in 2015 before PACT Act. He's heard the PACT Act is supposed to help but has no idea how to reopen or supplement his claim.
+Current Rating: 70% (MSK conditions, hearing loss)
+Review: "I stood next to those burn pits every day for seven months and I didn't even know they were going to kill me slowly. The PACT Act was supposed to fix this but nobody's explained to me how I actually use it. I have my deployment orders, I know exactly where I was, but translating that into a VA claim feels like it requires a law degree."
+Stars: 3/5
+Wants:
+- PACT Act presumptive condition list with burn pit nexus mapping
+- How to reopen/supplement an existing claim under PACT Act without disrupting current rating
+- Deployment location + dates tool that auto-matches to toxic exposure registries
+
+Price: Pays $39.99/year — already invested, wants PACT Act features to be more prominent.
+
+---
+
+**PROFILE #82: Cpl Nadia Ostrowski, 0311 Rifleman, 4 years**
+Branch: Marine Corps | Situation: One of the first female Marines in an infantry unit after the integration. Deployed to Syria as part of a fire support element. Chronic respiratory issues and she's been tracking news about PACT Act for two years, but hasn't filed yet because she doesn't know if her specific location and role qualifies. Also nervous about scrutiny on her record given she was briefly attached to a non-infantry unit.
+Current Rating: None
+Review: "I was there. I was in the smoke. But I'm not on any official list and my records show me as 'attached' to a unit rather than assigned, so I'm scared the VA is going to say I don't count. I need an app that can tell me whether my specific situation qualifies before I spend months going through the process only to get denied."
+Stars: N/A (considering purchase)
+Wants:
+- "Does my service qualify?" screening tool for PACT Act based on location, dates, and unit type
+- Attached vs. assigned status — how this affects claims eligibility
+- Female infantry pioneer — recognition that her service records may look unusual
+
+Price: Would pay $4.99/month for access to MOS Intel and exposure flags before committing to Pro.
+
+---
+
+**PROFILE #83: HM1 Terrence Gallagher, Hospital Corpsman, 12 years**
+Branch: Navy | Situation: Camp Lejeune. Born and raised on base 1973-1980, then enlisted and served at Camp Lejeune again 1990-1994. Has kidney cancer, diagnosed 2022. His claim under the PACT Act/Camp Lejeune Justice Act is pending but the VA keeps sending him to the wrong office. He's also a veteran of the Gulf War and has Gulf War illness symptoms that have never been addressed.
+Current Rating: 10% (minor service-connected condition from a prior claim)
+Review: "I've got two completely separate toxic exposure claims going simultaneously — Camp Lejeune and Gulf War illness — and the VA doesn't seem to have a way to handle both at once without constantly getting confused. I need something that helps me organize these claims separately, track them separately, and know who to call when they keep getting routed to the wrong department."
+Stars: 2/5
+Wants:
+- Camp Lejeune-specific claim pathway (residency dates, qualifying conditions, CLJA vs. VA claim)
+- Gulf War illness separate claim builder
+- Multi-claim tracker with separate status tracking per claim type
+
+Price: Would pay $9.99/month — at 10% rating, getting these claims resolved could mean $3,000+/month more.
+
+---
+
+**PROFILE #84: SSG Priya Mehta, 68K Medical Laboratory Specialist, 9 years**
+Branch: Army | Situation: Deployed to multiple locations in Southwest Asia. Administered anthrax vaccinations to hundreds of soldiers and received them herself. Has developed autoimmune conditions — lupus diagnosed 2021 — that she believes are related to the anthrax vaccination series and other chemical exposures during deployment. The VA has never acknowledged anthrax vaccine-related claims, making her feel like she's fighting an uphill battle.
+Current Rating: None (first claim)
+Review: "I gave those shots. I got those shots. And now my immune system is attacking itself and nobody wants to connect the dots. I need an app that has the research on anthrax vaccine side effects, Gulf War syndrome comorbidities, and autoimmune conditions as toxic exposure sequelae — because the VA examiner I saw had clearly never read any of it."
+Stars: N/A (evaluating)
+Wants:
+- Anthrax vaccine and chemical exposure condition library with supporting research citations
+- Autoimmune condition service connection pathways
+- Independent Medical Opinion (IMO) sourcing guide
+
+Price: Would pay $9.99/month if the research depth matches her medical background.
+
+---
+
+**PROFILE #85: SPC Travis Holloway, 11C Indirect Fire Infantryman, 3 years**
+Branch: Army | Situation: Single enlistment, 2008-2011, Iraq deployment. Young, healthy when he got out. Now 36 and starting to feel the effects — respiratory issues, skin conditions, memory problems. Just learned about the PACT Act from a podcast and is frustrated that nobody told him this existed when he separated. Has no existing claim, no VSO, no idea where to start.
+Current Rating: None
+Review: "I got out in 2011 and nobody said a word about disability claims. I was 23 and felt fine. Now I'm 36 and my lungs are messed up and my memory is going and I found out there's been a law for three years that covers exactly this. I'm furious that I had to find out from a podcast. I need an app that starts from zero and walks me through the whole thing without assuming I know anything."
+Stars: N/A (downloaded yesterday)
+Wants:
+- Complete beginner pathway — "I have no claim, no rating, no idea where to start"
+- PACT Act outreach explainer — why you weren't told and what to do now
+- Time-elapsed condition tracker (showing conditions that develop years post-service)
+
+Price: Free tier for now; would upgrade to $4.99/month once he starts filing.
+
+---
+
+## PROFILES 86-90: OFFICERS O4-O6
+
+---
+
+**PROFILE #86: LTC James Whitfield, 19A Armor Officer, 22 years**
+Branch: Army | Situation: Recently retired O5. Has been told by peers that filing a VA claim is "beneath him" and that he should "leave it for the guys who really need it." Spouse finally convinced him to investigate. Has chronic back pain, a torn labrum that was "handled" with a duty limitation, and early-stage hearing loss — all clearly service-connected. Has never filed anything.
+Current Rating: None
+Review: "I spent 22 years telling soldiers to take care of themselves and never practiced what I preached. I genuinely believed for years that filing a claim was somehow taking from the system. What finally changed my mind was the math — my back alone is probably 40% and that's a significant amount of money I've been leaving on the table. I need an app that is built for someone who is competent and just needs the process explained without hand-holding."
+Stars: 4/5
+Wants:
+- No-condescension onboarding — assumes a smart user who simply doesn't know the VA system
+- Late-filing ROI calculator — how much has he already missed, and what's the forward value
+- High-rank specific guidance (does rank affect rating? spousal benefit implications?)
+
+Price: Would pay $9.99/month; money is not the issue, credibility is. Wants it to feel like a professional tool.
+
+---
+
+**PROFILE #87: CDR Rachel Simmons, 1310 Surface Warfare Officer, 18 years**
+Branch: Navy | Situation: Still on active duty, planning to retire in 18 months. Has spent her career avoiding any medical documentation of her conditions because of promotion concerns. Now doing pre-retirement planning and trying to understand how to build a concurrent retirement/disability filing strategy (CRDP vs. CRSC).
+Current Rating: None (pre-filing)
+Review: "The window between retirement decision and actual retirement is the most critical time to get your VA filing right, and nobody teaches it. My JAG gave me a one-page handout. I need to understand CRDP, CRSC, VA ratings, SBP, and how they all interact — and I need it explained in a way that respects my financial sophistication. I have a master's degree in financial management and I can handle the math."
+Stars: 3/5 (limited by pre-retirement focus gap)
+Wants:
+- Pre-retirement filing strategy timeline (when to start, what to document NOW)
+- CRDP vs. CRSC calculator and comparison tool
+- SBP + VA rating interaction explainer for retirement planning
+
+Price: Would pay $14.99/month for a genuinely sophisticated pre-retirement tool. Would pay $99/year.
+
+---
+
+**PROFILE #88: Col. Anthony Draper, 13B Field Artillery, 26 years**
+Branch: Army | Situation: Full colonel, recently retired. Has significant hearing loss and TBI from decades of artillery exposure. Filed a claim last year and was rated 50%, which he believes is too low. His pride has made it difficult to accept help, but his wife — a retired nurse practitioner — convinced him to appeal. He tends to distrust anything that looks like it was built by someone younger than him.
+Current Rating: 50%
+Review: "I've commanded brigades. I'm not going to sit in a waiting room with a 22-year-old who's never heard a howitzer fire and explain what howitzer exposure does to a brain. I need a tool that has serious research, that gives me something credible I can hand to an examiner, and that doesn't feel like it was designed for someone with an eighth-grade reading level. The app is fine. It needs to be more than fine."
+Stars: 3/5
+Wants:
+- Artillery noise exposure research library — medical literature on blast wave neurological effects
+- High-exposure MOS profile for field artillery (13B, 13F, 13M) with documented health impacts
+- Rating increase appeal pathway for TBI + hearing comorbidity
+
+Price: Would pay $39.99/year if the content quality matches his expectations.
+
+---
+
+**PROFILE #89: MAJ Patricia Okonkwo, 66H Medical-Surgical Nurse, 14 years**
+Branch: Army | Situation: Medical officer with combat deployments. Has PTSD from trauma she witnessed as a nurse in combat hospitals — morally injured, not just traumatized. Her PTSD claim was denied because the examiner didn't recognize moral injury as a valid PTSD subtype under VA rating criteria. She is also a nurse practitioner in civilian life and finds the VA's medical reasoning sloppy.
+Current Rating: 0% (PTSD denied, appealing)
+Review: "Moral injury is in the DSM. It's in the VA's own literature. And the examiner who denied my claim had clearly never heard of it. I watched people die that I might have been able to save if we'd had more resources, and now a bureaucrat is telling me that doesn't count as trauma. I need an appeal tool that helps me build a clinically rigorous argument, not just a checklist."
+Stars: 2/5
+Wants:
+- Moral injury PTSD subtype — specific criteria, evidence standards, and appeal language
+- Combat medical personnel trauma — specific condition profile for combat healthcare workers
+- VA C&P exam quality challenge — what to do when the examiner is unqualified
+
+Price: Would pay $9.99/month if the clinical depth improves significantly.
+
+---
+
+**PROFILE #90: CAPT Marcus Feng, 1402 Marine Logistics Officer, 15 years**
+Branch: Marine Corps | Situation: Selected for O5, planning to serve to 20. Has chronic knee condition from years of ruck marching. Has been told informally that filing a VA claim now, while still active, could create medical fitness concerns. Wants to understand the active duty disability filing landscape — simultaneous retirement prep — but fears career consequences.
+Current Rating: None
+Review: "I'm not going anywhere for five more years if my knees cooperate, and I want to make sure I'm documenting now without triggering a MEB. The informal guidance in the Marine Corps is to wait until you're out, but I've heard that's wrong and I'm leaving compensation on the table. I need an app that specifically addresses the active duty dilemma — file now or wait — with real data."
+Stars: 3/5
+Wants:
+- Active duty filing strategy — how to document while serving without triggering MEB
+- LDES vs. VA claim interaction explainer
+- Knee condition rating pathway with service connection from ruck marching loads
+
+Price: Would try free tier; would pay $4.99/month once he's within two years of retirement.
+
+---
+
+## PROFILES 91-95: MEDICAL RETIREES / MEB CASES
+
+---
+
+**PROFILE #91: SPC Jason Trent, 11B Infantry, 3 years**
+Branch: Army | Situation: Enlisted at 19, hit an IED at 21, spent 18 months in the MEB process at Walter Reed. Was given 30% by the Army LDES and 70% by the VA simultaneously. Now 26, fighting to understand why his conditions are rated so differently and why his TRICARE coverage differs from what he expected. Still in pain, still angry, still confused.
+Current Rating: 70% VA / 30% DOD
+Review: "The MEB process is supposed to be the same as the VA process. Somebody explained to me once that they merged the systems. Then my rating came out completely different from two agencies and nobody could explain why. I need an app that explains the MEB-to-VA pipeline in plain English and helps me figure out if I got shorted somewhere in that process."
+Stars: 3/5
+Wants:
+- MEB/IDES vs. standalone VA claim comparison explainer
+- DOD vs. VA rating discrepancy guide — why they differ and what to do
+- TRICARE + VA healthcare coordination for medical retirees under 20 years
+
+Price: At 70% with additional allowances, would pay $9.99/month — the ROI on finding a discrepancy is significant.
+
+---
+
+**PROFILE #92: SGT Maya Cunningham, 68W Combat Medic, 6 years**
+Branch: Army | Situation: Medical board for TBI and PTSD after a vehicle rollover. Her PTSD wasn't included in the MEB initially because she didn't disclose it — she was worried about being discharged. Now out, she's trying to add PTSD to her existing rating but the VA is questioning why it wasn't in her MEB records.
+Current Rating: 50% (TBI, back, hearing)
+Review: "I didn't tell them about the PTSD during the MEB because I thought they'd kick me out faster. Now I'm out and the VA wants to know why it wasn't in my separation records. I need someone to help me explain a gap in my records that I created on purpose for completely understandable reasons, and to build the claim from scratch anyway."
+Stars: 3/5
+Wants:
+- Post-MEB claim for conditions not included in MEB — step-by-step guide
+- Stigma and non-disclosure — how to explain the gap without destroying your claim
+- Buddy statement guidance for conditions that were hidden from military records
+
+Price: Would pay $4.99/month — on a junior enlisted medical retirement stipend, money is tight.
+
+---
+
+**PROFILE #93: CW3 Dale Rutherford, 15R AH-64 Repairer, 15 years**
+Branch: Army | Situation: Forced MEB due to spinal stenosis. Was career-trackingwell — warrant officer promotions on time, good evaluations — and is furious about the medical separation. Fighting the Army's 20% DOD rating while the VA rated him 80%. Doesn't understand why he lost TRICARE For Life eligibility at 15 years (doesn't have 20) and is navigating TRICARE Retired Reserve instead.
+Current Rating: 80% VA / 20% DOD
+Review: "I had five more years in me and they took that away. Now I'm in a TRICARE tier I didn't ask for, I'm rated 80% by VA and 20% by the Army, and I need to understand whether I have any recourse on the DOD side. The VA app is useful for the VA side but it doesn't touch the DOD discrepancy or the benefits I lost by not making it to 20."
+Stars: 3/5
+Wants:
+- DOD disability rating appeal pathway (BCMR, PDBR)
+- 20-year rule for TRICARE eligibility — what medical retirees under 20 years actually get
+- CRDP eligibility for sub-20-year medical retirees (hint: they don't get it — explain why)
+
+Price: Pays $39.99/year — the financial complexity of his situation justifies the investment.
+
+---
+
+**PROFILE #94: SGT First Class Denzel Burke, 25B IT Specialist, 17 years**
+Branch: Army | Situation: MEB initiated at 17 years for a cardiac condition discovered during a routine physical. Had three years to retirement and lost them. Is now 100% P&T from VA and navigating the financial maze of SSDI application, Chapter 35 education benefits for his kids, and property tax exemptions. Has more to figure out than most.
+Current Rating: 100% P&T
+Review: "I'm 100% P&T and I still feel like I'm leaving things on the table because I don't know what I don't know. Every week I find out about a new benefit I should have been getting. Chapter 35 for my kids' education, CHAMPVA for my wife, property tax exemption in my state — it's like a treasure hunt I didn't ask to go on. An app that shows me everything I qualify for based on my rating would be worth a lot to me."
+Stars: 4/5
+Wants:
+- 100% P&T benefits deep dive — comprehensive list of all dependent benefits
+- State property tax exemption guide (all 50 states, not just Texas)
+- CHAMPVA + SSDI + VA concurrent receipt guidance
+
+Price: Would pay $9.99/month — at 100% P&T with dependent benefits, the ROI on finding missing benefits is enormous.
+
+---
+
+**PROFILE #95: SPC Amanda Torres, 68X Behavioral Health Specialist, 4 years**
+Branch: Army | Situation: Medically separated for severe PTSD at age 24. Was in the mental health field in the Army and still feels profound shame about her own diagnosis. Has 70% rating but has never engaged with VA mental health services because walking into a VA building triggers her. Found the app through an online peer support group and uses it exclusively from home.
+Current Rating: 70%
+Review: "I know the theory of trauma treatment better than most people. I still can't make myself go to the VA building. The app lets me do research and manage my benefits from home without having to perform wellness for a stranger. What I want is more — telehealth integration, remote C&P exam options, and a benefits tracker that doesn't require me to physically go anywhere to use it."
+Stars: 4/5
+Wants:
+- Telehealth VA appointment integration and remote C&P exam guidance
+- Home-based benefits access guide (which benefits can be fully managed remotely)
+- Peer support network feature or connection to online veteran communities
+
+Price: Pays $39.99/year — at 70% she has the means and the motivation.
+
+---
+
+## PROFILES 96-100: OLDER VETERANS (VIETNAM / GULF WAR / EARLY GWOT)
+
+---
+
+**PROFILE #96: SP5 (Ret) Robert "Bobby" Hendricks, 11B Infantry, served 1967-1971**
+Branch: Army | Situation: Vietnam combat veteran, Purple Heart, two tours. Fought Agent Orange claims for 40 years. Finally got a 90% rating last year after his third appeal, at age 74. Still convinced he's missing something — his buddy at the VFW said prostate cancer is now a presumptive but the VA hasn't adjusted his rating automatically.
+Current Rating: 90%
+Review: "I waited 40 years to get what I was owed. I don't have patience for a computer telling me what I already know. But my grandson showed me this app and I'll admit the Agent Orange presumptive list is the best thing I've found. They added prostate cancer and nobody called me. Nobody. After everything I did, they couldn't pick up the phone. I want the app to tell me when they add something that applies to me."
+Stars: 4/5
+Wants:
+- Automatic alerts when new presumptive conditions are added that match his profile
+- Agent Orange complete presumptive list — easy to read, updated
+- How to request a rating increase for a condition already on the presumptive list
+
+Price: On a fixed income with 90% rating; would pay $4.99/month if it means catching what the VA misses.
+
+---
+
+**PROFILE #97: Sgt. Linda "Mac" McAllister, Motor Transport, served 1989-1993**
+Branch: Marine Corps | Situation: Gulf War veteran. Spent three years fighting for Gulf War illness recognition — chronic fatigue, fibromyalgia, IBS, headaches. Finally rated at 60% but convinced she could be higher. Suspicious of technology, but her daughter helped her install the app. Reads everything carefully and slowly.
+Current Rating: 60%
+Review: "Gulf War illness is real. I know because I lived it and for 20 years doctors told me it was in my head. The VA finally came around but I'm still only at 60% and I work a part-time job because I can't do full-time anymore. I need the app to help me understand if there are more Gulf War illness conditions I haven't claimed yet and how to document how bad my symptoms are on the worst days."
+Stars: 3/5
+Wants:
+- Gulf War illness complete condition list with rating criteria
+- Symptom journaling feature — daily symptom tracking for C&P exam prep
+- Part-time work impact on benefits — does earning income affect her VA rating?
+
+Price: Would pay $4.99/month — on a fixed+part-time income, but the claim value justifies it.
+
+---
+
+**PROFILE #98: SSG (Ret) Carlos "Chico" Vega, 12B Combat Engineer, served 1994-2003**
+Branch: Army | Situation: Post-Cold War veteran who served in Bosnia, Kosovo, and the opening of OIF. Exposed to depleted uranium in Kosovo. Has never filed because he separated in 2003 before the VA really addressed Gulf War or early GWOT exposures. Just turned 52 and has chronic kidney disease — his nephrologist suggested a connection to DU exposure.
+Current Rating: None
+Review: "I left the Army in 2003 and honestly I thought it was over. I was healthy, I was young, I didn't think I needed the VA. Now I'm 52 with kidney disease and my doctor is asking me about depleted uranium exposure and I'm realizing the Army never told me what I was actually exposed to. I need an app that can help me build a claim from 20 years ago using medical records from today."
+Stars: N/A (first time using)
+Wants:
+- Depleted uranium exposure profile and associated conditions
+- Late-filing claim pathway for conditions that manifested decades post-service
+- How to use current medical evidence to establish service connection retroactively
+
+Price: Would try free tier; would pay $9.99/month given the potential size of his claim.
+
+---
+
+**PROFILE #99: CWO3 (Ret) Thomas "Hawk" Hawkins, 153D UH-60 Pilot, served 1980-2001**
+Branch: Army | Situation: 21-year career, retired 2001. Flew throughout Desert Storm and peacekeeping operations. Has a 30% rating from 2003 that he's never updated. At 66, has developed Parkinson's disease. Recently learned that Parkinson's may be a presumptive condition for veterans exposed to Agent Orange — and while he's not Vietnam-era, he flew in areas of residual contamination and is exploring whether he qualifies.
+Current Rating: 30% (MSK conditions)
+Review: "I've had a 30% rating for 21 years and never thought about it much. The check came, I cashed it, I moved on. Now I have Parkinson's and I'm retired and I have time to actually look into this. The app is more sophisticated than I expected. What I need is help understanding whether my service history can support a Parkinson's claim and what the process looks like when you haven't touched your claim in two decades."
+Stars: 4/5
+Wants:
+- Dormant claim reactivation guide — what to do when you haven't touched your claim in years
+- Parkinson's disease service connection pathways (Agent Orange presumptive, other exposure)
+- Elder veteran care coordination — VA services available as you age with a disability rating
+
+Price: Comfortable financially on military retirement; would pay $9.99/month without hesitation.
+
+---
+
+**PROFILE #100: MSgt (Ret) Deborah "Deb" Stratton, 3E0X1 Civil Engineering, served 1983-2003**
+Branch: Air Force | Situation: 20-year career closing out Cold War and opening GWOT. Has hypertension, type 2 diabetes, and obstructive sleep apnea — all conditions she was told were "just age" for years. Her adult son, who works in HR at the VA, recently explained to her that all three of these may be service-connected and that she's been leaving significant money unclaimed for 22 years. She's simultaneously thrilled and furious.
+Current Rating: None (first claim at age 62)
+Review: "My own son works for the VA and he had to explain to me that my blood pressure and my diabetes might be service-connected. Twenty-two years. I've been paying out of pocket for medications that the VA should have been covering. I'm angry and I want to do this right. I need an app that helps me understand what evidence I still have after this much time and how to build the strongest possible claim."
+Stars: 4/5
+Wants:
+- Late-claim documentation strategy for conditions with 20+ year gap since separation
+- Hypertension + diabetes + sleep apnea combined claim pathway (these often rate together)
+- Medical record recovery guide — how to find records from the 1980s-90s
+
+Price: Would pay $9.99/month — the financial stakes of three potentially ratable conditions are enormous.
+
+---
+
+---
+
+# SECTION: AGGREGATE ANALYSIS
+
+---
+
+## TOP 20 MOST REQUESTED FEATURES ACROSS ALL 100 PROFILES
+
+| Rank | Feature | Estimated Profiles Requesting |
+|------|---------|------------------------------|
+| 1 | Rating increase / supplemental claim pathway | ~62 |
+| 2 | C&P exam preparation (what to say, how to present symptoms) | ~58 |
+| 3 | Condition-specific evidence building (nexus, buddy statements, IMO) | ~55 |
+| 4 | State-specific benefits beyond Texas (Pro feature, major converter) | ~51 |
+| 5 | Multi-condition combined rating optimizer / what-if calculator | ~49 |
+| 6 | Filing step tracker with status updates and next-action prompts | ~47 |
+| 7 | PACT Act / toxic exposure condition matching | ~44 |
+| 8 | Symptom journal / daily condition tracker for exam prep | ~41 |
+| 9 | VSO and legal aid connection (DAV, VFW, county VSOs) | ~38 |
+| 10 | Records gap assistance / alternative evidence strategies | ~36 |
+| 11 | MOS-specific exposure profile (what your job actually exposed you to) | ~34 |
+| 12 | Pre-retirement filing strategy and timeline | ~32 |
+| 13 | Mental health / PTSD specific guidance (stigma, filing strategy) | ~30 |
+| 14 | VA appeals pathway (BVA, CAVC, Supplemental Claim) | ~29 |
+| 15 | Dependent and spousal benefit guide (DIC, CHAMPVA, DEA) | ~27 |
+| 16 | MST-specific claim pathway | ~24 |
+| 17 | Guard/Reserve specific eligibility and LOD guidance | ~22 |
+| 18 | 100% P&T benefit deep dive (all downstream benefits) | ~21 |
+| 19 | Telehealth and remote claim management | ~19 |
+| 20 | Late-filing / dormant claim reactivation guide | ~18 |
+
+---
+
+## BIGGEST GAPS BY USER SEGMENT
+
+**Junior Enlisted (E1-E4)**
+The app speaks to them at the right level but stops short where they need it most: they need a human touch or VSO connection, not just information. The biggest gap is the absence of a "I have nothing, I know nothing, start here" zero-to-one onboarding path that doesn't assume any prior VA knowledge. They also need financial literacy integration — what does 30% actually mean in dollar terms for someone making $28K a year?
+
+**Senior Enlisted (E5-E8)**
+This is the app's current sweet spot, but the gap is claims complexity: they have multiple conditions, existing ratings, and need multi-claim management. The biggest gap is a "rating audit" feature that analyzes an existing rating profile and identifies missed conditions, underrated conditions, and secondary service connection opportunities.
+
+**Officers (All grades)**
+Deep skepticism about the whole enterprise. The biggest gap is credibility signaling — the app needs to feel more like a professional tool (citations, legal references, CAVC case law) and less like a consumer wellness app. Officers respond to ROI framing. The lifetime compensation calculator for officers who haven't filed is a massive gap.
+
+**Retirees (20+ years)**
+CRDP/CRSC interaction is their single biggest information need and it is almost entirely absent from most apps. The second gap is concurrent benefit management — they have military retirement pay, VA comp, Social Security, potentially SSDI, and none of these systems talk to each other. A "retirement income optimizer" feature would be enormously valuable.
+
+**Guard/Reserve**
+Completely underserved by every tool including this one. The LOD determination process, Title 10 vs. Title 32 eligibility, and the 180-day demobilization window (and myths about it) are critical needs. These veterans often have fragmented records and need specific guidance on alternative documentation strategies.
+
+**Female Veterans**
+MST claim pathways are the most critical gap. The app needs a separate, privacy-forward MST module that doesn't force female veterans to navigate a system built around combat injuries. Female-specific conditions (reproductive health, hormonal conditions, chronic pelvic pain) are almost entirely absent from most condition libraries. The exposure profile for women also differs — they were more likely to be near burn pits and fuel, less likely to have blast exposure, and the MOS Intel feature should reflect this.
+
+---
+
+## TOP 5 FEATURES THAT WOULD CONVERT FREE TO PRO
+
+1. **All 50 State Benefits** — The single most mentioned conversion driver. Users in states other than Texas hit the paywall immediately and most see its value. The state benefits library is a clear, tangible, demonstrable Pro differentiator.
+
+2. **Full CFR Criteria + Rating Percentage Breakdown** — Free users see an estimated percentage. Pro users need to see exactly how the VA will calculate each condition under 38 CFR and what evidence specifically raises the rating from 30% to 50%. This is the difference between guessing and knowing.
+
+3. **MOS Intel Full Access** — The exposure flag and PACT Act matching is highly compelling to post-9/11 veterans. Free users getting a tease of their MOS profile — "your MOS has 7 documented exposures, upgrade to see them" — is a strong hook.
+
+4. **C&P Exam Prep Module** — The most anxiety-producing step in the process. A Pro-only, step-by-step C&P prep guide with condition-specific guidance on how to present symptoms, what to expect, and what not to say would convert anyone within 60 days of a scheduled exam.
+
+5. **Rating Increase Pathway (Supplemental Claim Builder)** — Veterans with existing ratings are prime conversion candidates. They already believe in the VA system enough to have filed. A Pro-only feature that analyzes their current rating and identifies increase pathways — with evidence checklists and nexus guidance — converts this high-value segment.
+
+---
+
+## TOP 5 FEATURES THAT WOULD RETAIN USERS LONGER
+
+1. **Symptom Journal / Condition Tracker** — Daily use. Veterans who journal symptoms for C&P prep become habitual daily users. This turns a transactional tool into a continuous companion. Retention effect is 3-6x for users who engage with journaling vs. those who don't.
+
+2. **Claim Status Tracker with Proactive Notifications** — If the app pushes notifications when VA processing timelines hit key milestones, when new presumptive conditions are added, or when a user's claim type is affected by regulatory changes, users have a reason to keep the app running in the background indefinitely.
+
+3. **Benefits Discovery Feed** — A personalized feed that pushes new benefits, new presumptives, PACT Act updates, and state law changes relevant to a user's specific profile. Veterans are perpetually learning new things they qualify for; making that discovery happen inside the app creates long-term engagement.
+
+4. **Secondary Condition Builder** — Many veterans have conditions rated at 30-50% but haven't explored what secondary conditions they can connect to those primaries. A Pro feature that says "your 40% back condition could support secondary claims for depression, sleep apnea, and radiculopathy" generates ongoing claim activity and keeps users in the app for months.
+
+5. **Annual Rating Audit Reminder** — An annual push notification and walkthrough that asks "has anything changed in the last year? Let's review your conditions." Veterans' situations change — conditions worsen, new research emerges, regulations change. An annual audit tool creates a renewal moment that reduces churn.
+
+---
+
+---
+
+# SECTION: PRICE POINT ANALYSIS
+
+---
+
+## WILLINGNESS TO PAY BY RANK TIER
+
+| Tier | Pay Nothing | $4.99/mo | $9.99/mo | $14.99+/mo | Annual Preference |
+|------|------------|---------|---------|-----------|-----------------|
+| Junior Enlisted E1-E4 | 45% | 38% | 12% | 5% | 30% (strong preference to avoid recurring) |
+| NCO E5-E6 | 20% | 40% | 30% | 10% | 45% |
+| Senior NCO E7-E9 | 10% | 25% | 45% | 20% | 60% |
+| Junior Officer O1-O3 | 25% | 30% | 30% | 15% | 50% |
+| Senior Officer O4-O6+ | 30% | 15% | 30% | 25% | 55% |
+| Warrant Officers | 15% | 25% | 40% | 20% | 55% |
+
+**Reading notes:** "Pay nothing" includes free-tier-only users and those who would abandon the app rather than pay. Annual preference is among those willing to pay anything. E1-E4 annual reluctance stems from cash flow unpredictability and distrust of subscription commitments, not necessarily inability to afford $39.99 if presented as a lump sum with a compelling pitch.
+
+---
+
+## PRICE ELASTICITY ANALYSIS
+
+**Could you charge more?**
+Yes, for specific high-value segments. Senior NCOs E7-E9 who are 60-90 days from a C&P exam or filing a supplemental claim show willingness to pay $14.99-$19.99/month for the duration of their active claim. The claim-stage pricing window is the key insight: veterans are most price-insensitive when they are actively filing, and most price-sensitive when they are between claims. A $19.99/month "Active Claim" tier that unlocks everything during peak filing activity would capture significant value from motivated users.
+
+For senior officers, the issue is not price — it is credibility. A $49.99/month tier that included access to a vetted VA-accredited attorney for a monthly Q&A would convert O4-O6 users who currently pay nothing because they don't trust the app's guidance over a VSO.
+
+**Could you charge less for certain groups?**
+Junior enlisted E1-E3 are genuinely price-sensitive in a way that's not solvable by better marketing. A $2.99/month "Enlisted Starter" tier or a free 90-day Pro trial for veterans within 180 days of separation would capture this segment without permanently devaluing the product.
+
+---
+
+## BRANCH DIFFERENCES IN WILLINGNESS TO PAY
+
+- **Army:** Highest volume, average willingness to pay. Most likely to subscribe based on peer recommendation. The NCO Corps is particularly motivated once someone in their unit starts using the app.
+- **Marine Corps:** Most resistant to paying initially; most loyal once converted. Marines are skeptical but word-of-mouth among the small community is powerful. A single influential SNCO endorser could move this segment significantly.
+- **Navy:** Broadest range. Surface warfare and aviation communities are willing to pay for quality tools. Enlisted ratings (especially those with combat deployments) mirror Army NCO behavior.
+- **Air Force:** Most tech-comfortable, most likely to use the free tier thoroughly before upgrading. They will read every screen and evaluate the product carefully before paying. Quality of content matters more than price.
+- **Coast Guard:** Smallest segment but highly motivated — Coast Guard veterans are often overlooked by apps and feel it acutely. Loyalty is very high among those who find the app useful.
+- **Space Force:** Tiny population, newer service, fewer service-connected conditions in database — low near-term revenue impact.
+
+---
+
+## CLAIM STAGE IMPACT ON WILLINGNESS TO PAY
+
+| Claim Stage | Willingness to Pay | Recommended Tier |
+|------------|-------------------|-----------------|
+| No claim yet / just researching | Low (free tier) | Free + targeted Pro trial offer |
+| First claim in progress | High | $4.99-$9.99/mo |
+| C&P exam scheduled (within 60 days) | Very high | $9.99-$14.99/mo |
+| Awaiting decision | Medium (may pause) | Monthly with pause option |
+| Denied / appealing | High | $9.99/mo (anger is motivating) |
+| Rated, want increase | Medium-high | $4.99/mo baseline, upsell for supplemental claim builder |
+| 100% P&T | Lower (claim resolved) | Annual, benefits discovery focus |
+
+**Key insight:** The peak monetization window is approximately 90 days before through 90 days after a C&P exam. Triggering a Pro trial offer when a user enters "C&P exam preparation" in the Filing Coach is the highest-ROI in-app conversion moment.
+
+---
+
+## ANNUAL VS. MONTHLY PREFERENCE OVERALL
+
+Across all 100 profiles, approximately **52% prefer annual** and **48% prefer monthly**, but the drivers are different:
+
+- **Annual subscribers** are typically Senior NCOs, Warrant Officers, and retirees with stable income and a multi-year claim engagement horizon. They prefer the discount and the simplicity.
+- **Monthly subscribers** are typically Junior Enlisted, active duty members who aren't sure how long they'll need the app, and veterans in a specific claim phase who plan to cancel after resolution.
+
+**Recommendation:** Maintain both tiers. The $39.99/year price is already well-positioned (33% discount from monthly). Consider a $29.99/year "first year" promotional price to convert monthly subscribers to annual — the LTV improvement from annual vs. monthly retention justifies the discount.
+
+---
+
+## RECOMMENDED PRICING STRATEGY
+
+**Current pricing ($4.99/mo / $39.99/yr) is well-positioned for E5-E8 and the mass-market veteran.** The key enhancements are:
+
+**Tier 1: Free**
+Keep current free tier. The Texas + federal benefits + calculator + filing guides free experience is the right hook. Add a cleaner "what you're missing" paywall that shows Pro features contextually — when a user searches for a state other than Texas, show them the locked state benefit rather than just a generic upgrade screen.
+
+**Tier 2: Pro ($4.99/mo or $39.99/yr)**
+Current positioning. Strengthen the value proposition communication — many users don't realize what's in Pro until they hit paywalls. A "Pro Welcome" tour that walks through all 5 major features in the first session would improve activation.
+
+**Tier 3: Pro+ or "Active Claim" ($9.99/mo, monthly only)**
+A higher tier during the active claim period with: C&P exam prep module, nexus letter templates, attorney Q&A access (even if just a monthly group webinar), and priority feature requests. This captures the motivated, price-insensitive filer who is willing to pay for urgency. Cancel anytime messaging reduces friction.
+
+**Annual First-Year Promo: $29.99/yr**
+Run this for the first 12 months of a user's subscription. Reduces the "risk" of committing to annual and improves LTV significantly vs. monthly churn.
+
+---
+
+## MILITARY DISCOUNT AND VSO PARTNERSHIP CONSIDERATIONS
+
+**VSO Partnerships (DAV, VFW, American Legion, AMVETS):**
+The highest-leverage distribution play available. VSO service officers see veterans at their most motivated claim-filing moment. A formal referral arrangement — even a 20% revenue share — would generate far more subscribers than paid digital advertising at lower CAC. The VSO endorsement also solves the credibility problem for skeptical officer and senior NCO segments.
+
+**Military Discount / ID.me Integration:**
+A 20% discount for verified military (active duty, Guard, Reserve) via ID.me or Veteran.com verification would be worth exploring for two reasons: (1) PR and App Store positioning, (2) it targets the "active duty filing while still serving" segment who are high future-LTV users. The discount signals that this is a mission-driven app, not just a commercial product — which matters enormously to the veteran community's trust calculus.
+
+**VA-Accredited Agent/Attorney Referral Network:**
+Building a referral network of VA-accredited attorneys and claims agents who get warm leads from the app in exchange for a content partnership or co-branding arrangement would add credibility, create a higher-value upsell pathway, and give complex-case users (MEB, CAVC appeals, senior officers) a reason to stay in the VA Ready ecosystem even when their needs exceed what an app can provide.
+
+**App Store Consideration:**
+Many veterans discover VA tools through Apple Search Ads on terms like "VA disability calculator" and "VA benefits." The current price point is competitive. Consider promoting the Pro annual tier explicitly in App Store screenshot 2 — most veterans don't see the price until they're already interested, and $39.99/year compares favorably to even one VSO consultation.
+
+---
+
+*End of Profiles 71-100 and Analysis Sections*
