@@ -819,6 +819,13 @@
             text-transform: uppercase; color: var(--navy); background: var(--gold); padding: 2px 8px;
             border-radius: 6px; margin-left: 8px; vertical-align: 2px; }
         @media (max-width: 560px) { .calc-band .cgo { display: none; } }
+        /* In-app screenshot gallery */
+        .gallery { display:flex; gap:24px; justify-content:center; flex-wrap:wrap; max-width:1080px; margin:0 auto; padding:0 24px 30px; }
+        .shot { width:228px; margin:0; }
+        .phone { background:#05070d; padding:7px; border-radius:30px; border:1px solid rgba(255,255,255,0.1); box-shadow:0 24px 60px -24px rgba(0,0,0,0.8), inset 0 0 0 1px rgba(255,255,255,0.03); }
+        .phone img { display:block; width:100%; border-radius:24px; }
+        .shot figcaption { text-align:center; font-size:13px; color:var(--tan); margin-top:16px; font-weight:600; line-height:1.4; }
+        @media (max-width:560px){ .shot { width:46%; } .shot figcaption { font-size:12px; } }
     </style>
 </head>
 <body>
@@ -998,6 +1005,33 @@
             <div class="pitch-icon"><svg class="ic"><use href="#ic-send"/></svg></div>
             <div class="pitch-text">File ready. Nothing missed.</div>
         </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- IN-APP GALLERY -->
+    <div class="section-title">
+        <div class="tag">See it in action</div>
+        <h2>Inside the app</h2>
+        <p>Real screens from VA Ready &mdash; your combined rating, the benefits you've earned, the presumptives your service unlocks, and exactly where you stand in the filing process.</p>
+    </div>
+    <section class="gallery">
+        <figure class="shot">
+            <div class="phone"><picture><source srcset="img/app-my-claim.webp" type="image/webp"><img src="img/app-my-claim.png" alt="VA Ready My Claim screen showing a 90% projected combined VA disability rating with the conditions list and real VA combined-rating math" width="680" height="1374" loading="lazy"></picture></div>
+            <figcaption>Your combined rating, real VA math</figcaption>
+        </figure>
+        <figure class="shot">
+            <div class="phone"><picture><source srcset="img/app-exposure.webp" type="image/webp"><img src="img/app-exposure.png" alt="VA Ready Exposure Calculator showing service locations like Camp Lejeune and the presumptive conditions they unlock" width="680" height="1374" loading="lazy"></picture></div>
+            <figcaption>Map your service, surface presumptives</figcaption>
+        </figure>
+        <figure class="shot">
+            <div class="phone"><picture><source srcset="img/app-benefits.webp" type="image/webp"><img src="img/app-benefits.png" alt="VA Ready Benefits screen showing federal benefits and estimated value unlocked at a 90% rating" width="680" height="1374" loading="lazy"></picture></div>
+            <figcaption>Every benefit you've earned, by rating</figcaption>
+        </figure>
+        <figure class="shot">
+            <div class="phone"><picture><source srcset="img/app-filing.webp" type="image/webp"><img src="img/app-filing.png" alt="VA Ready Filing screen showing the presumptive-period countdown and an 11-step claim status tracker" width="680" height="1374" loading="lazy"></picture></div>
+            <figcaption>Know exactly where you stand</figcaption>
+        </figure>
     </section>
 
     <div class="divider"></div>
