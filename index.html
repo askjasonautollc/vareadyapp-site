@@ -237,6 +237,8 @@
         .nav-brand span { font-size: 18px; font-weight: 900; letter-spacing: 3px; white-space: nowrap; }
         .nav-links { display: flex; gap: 20px; align-items: center; }
         .nav-links a { color: var(--tan); font-size: 14px; font-weight: 600; white-space: nowrap; }
+        .nav-burger { display: none; font-size: 27px; color: var(--tan); cursor: pointer; line-height: 1; padding: 2px 6px; user-select: none; }
+        .nav-toggle-cb { display: none; }
         .nav-cta {
             background: var(--gold); color: var(--navy); padding: 8px 20px;
             border-radius: 8px; font-weight: 800; font-size: 13px;
@@ -802,8 +804,12 @@
             .hero-logos img { width: 96px; height: 96px; border-radius: 22px; }
             .hero-logos { gap: 16px; }
             .hero-logos .plus { font-size: 18px; }
-            nav { padding: 16px 20px; }
-            .nav-links a:not(.nav-cta) { display: none; }
+            nav { padding: 16px 20px; flex-wrap: wrap; }
+            .nav-burger { display: block; }
+            .nav-links { display: none; flex-basis: 100%; flex-direction: column; align-items: stretch; gap: 0; margin-top: 12px; }
+            .nav-toggle-cb:checked ~ .nav-links { display: flex; }
+            .nav-links a { padding: 13px 4px; border-top: 1px solid var(--line); font-size: 16px; white-space: normal; }
+            .nav-links a.nav-cta { margin-top: 12px; text-align: center; border-top: none; }
             .section-title h2 { font-size: 28px; }
             .cta-section h2 { font-size: 26px; }
             .split { grid-template-columns: 1fr; gap: 24px; }
@@ -865,6 +871,8 @@
             <img src="logo.png" alt="VA Ready and Vet Ready logo" width="40" height="40">
             <span>VA READY <span style="color: var(--gray); font-weight: 400; letter-spacing: 1px;">/</span> VET READY</span>
         </div>
+        <input type="checkbox" id="navToggle" class="nav-toggle-cb">
+        <label for="navToggle" class="nav-burger" aria-label="Open menu">&#9776;</label>
         <div class="nav-links">
             <a href="va-disability-calculator.html">Calculator</a>
             <a href="conditions.html">Conditions</a>

@@ -33,6 +33,8 @@ CSS += """
 
 NAV = """<nav>
     <a href="/index.html" class="nav-brand"><img src="/logo.png" alt="VA Ready logo" width="34" height="34"><span>VA READY <span style="color:var(--gray);font-weight:400;">/</span> VET READY</span></a>
+    <input type="checkbox" id="nv" class="nv-cb">
+    <label for="nv" class="nv-burger" aria-label="Open menu">&#9776;</label>
     <div class="nav-links"><a href="/va-disability-calculator.html">Calculator</a><a href="/conditions.html">Conditions</a><a href="/states.html">State Benefits</a><a href="/guides.html">Guides</a><a href="/founders.html">Our Story</a><a href="/index.html#download">Get the App</a></div>
 </nav>"""
 FOOTER = """<footer>
