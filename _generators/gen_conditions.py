@@ -30,6 +30,7 @@ META = [
  ("7346","gerd-acid-reflux","GERD / Acid Reflux","GERD and hiatal hernia are rated on symptoms like reflux, regurgitation, and pain, and are a frequent secondary to other conditions and medications."),
  ("7913","diabetes","Diabetes (Type 2)","Type 2 diabetes is rated on the treatment it requires &mdash; diet, oral medication, insulin, and activity restriction &mdash; and is an Agent Orange presumptive condition."),
  ("7805","scars","Scars","Scars are rated on their size, whether they are painful or unstable, and any functional limitation they cause &mdash; and can be claimed in addition to the underlying injury."),
+ ("9905","tmj","TMJ / Temporomandibular Disorder","Temporomandibular disorder (TMJ/TMD) &mdash; jaw pain, clicking, locking, and limited opening &mdash; is rated on how far you can open your jaw (inter-incisal range) and any dietary restrictions. It is commonly claimed secondary to PTSD-related teeth grinding (bruxism) or jaw trauma."),
 ]
 
 def esc(s): return html.escape(s or "", quote=True)
