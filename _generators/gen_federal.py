@@ -12,6 +12,12 @@ def money(v):
     except: return None
 
 ROWS = json.load(open(os.path.join(HERE,"data","federal_benefits.json")))
+# Exclude DB entries that aren't true federal benefit programs, are mis-categorized, or duplicate another.
+# id 10 = "10% Bilateral Factor" (a rating-combination rule, handled by the calculator, not a benefit);
+# id 30 = "Property Tax Exemptions (State-Specific)" (a STATE benefit — covered on the State Benefits pages);
+# id 4  = "Commissary & Exchange Access" (duplicate of id 32 "...Full Access", which is kept as the fuller entry).
+EXCLUDE_IDS = {10, 30, 4}
+ROWS = [r for r in ROWS if r.get("id") not in EXCLUDE_IDS]
 CAT = [("financial","Financial & Compensation"),("healthcare","Health Care"),("housing","Housing"),
        ("education","Education"),("employment","Employment"),("life_insurance","Life Insurance"),("other","Other")]
 CATLABEL = dict(CAT)
