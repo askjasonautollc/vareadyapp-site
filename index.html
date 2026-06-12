@@ -239,7 +239,7 @@
         .nav-links a { color: var(--tan); font-size: 14px; font-weight: 600; white-space: nowrap; }
         .nav-burger { display: none; font-size: 27px; color: var(--tan); cursor: pointer; line-height: 1; padding: 2px 6px; user-select: none; }
         .nav-toggle-cb { display: none; }
-        .video-band { padding: 44px 24px 20px; text-align: center; }
+        .video-band { padding: 12px 24px 20px; text-align: center; }
         .video-band .eyebrow-v { color: var(--gold); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
         .video-band h2 { font-size: 28px; line-height: 1.2; margin-bottom: 8px; }
         .video-band p.vb-sub { color: var(--tan); max-width: 560px; margin: 0 auto 20px; font-size: 16px; line-height: 1.6; }
@@ -255,7 +255,7 @@
         .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(217,166,33,0.3); color: var(--navy); }
 
         /* Hero */
-        .hero { text-align: center; padding: 80px 24px 60px; max-width: 900px; margin: 0 auto; }
+        .hero { text-align: center; padding: 80px 24px 16px; max-width: 900px; margin: 0 auto; }
         .hero-badge {
             display: inline-flex; align-items: center; gap: 9px;
             font-size: 12px; font-weight: 700; color: var(--tan);
@@ -950,8 +950,16 @@
         <div class="video-frame">
             <video src="/video/peer-evidence.mp4" poster="/video/peer-evidence-poster.jpg" muted autoplay loop playsinline controls preload="metadata" aria-label="How to access peer-reviewed evidence in the VA Ready app"></video>
         </div>
-        <p class="vb-cap">&#128266; Tap for sound &middot; <a href="#download">Get the app free &rarr;</a></p>
+        <p class="vb-cap">&#128266; Sound turns on when you tap or scroll &middot; <a href="#download">Get the app free &rarr;</a></p>
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":"How to access peer-reviewed evidence in VA Ready","description":"A 30-second look at how the VA Ready app links every condition to the real peer-reviewed studies behind it, sourced from PubMed and the NIH.","thumbnailUrl":"https://vareadyapp.com/video/peer-evidence-poster.jpg","contentUrl":"https://vareadyapp.com/video/peer-evidence.mp4","uploadDate":"2026-06-12","duration":"PT38S"}</script>
+        <script>
+        (function(){
+            var v=document.querySelector('.video-frame video'); if(!v) return;
+            function on(){ v.muted=false; v.volume=1; try{var p=v.play(); if(p&&p.catch)p.catch(function(){});}catch(e){} off(); }
+            function off(){ ['pointerdown','touchstart','click','keydown','scroll'].forEach(function(e){window.removeEventListener(e,on);}); }
+            ['pointerdown','touchstart','click','keydown','scroll'].forEach(function(e){window.addEventListener(e,on,{once:true,passive:true});});
+        })();
+        </script>
     </section>
 
     <!-- FREE CALCULATOR HIGHLIGHT -->
