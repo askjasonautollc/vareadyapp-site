@@ -955,7 +955,7 @@
         <script>
         (function(){
             var v=document.querySelector('.video-frame video'); if(!v) return;
-            function on(){ v.muted=false; v.volume=1; try{var p=v.play(); if(p&&p.catch)p.catch(function(){});}catch(e){} off(); }
+            function on(){ v.muted=false; v.volume=1; try{var p=v.play(); if(p&&p.catch)p.catch(function(){});}catch(e){} if(typeof window.va==='function'){window.va('event',{name:'video_sound_on',data:{video:'peer-evidence',page:location.pathname}});} off(); }
             function off(){ ['pointerdown','touchstart','click','keydown','scroll'].forEach(function(e){window.removeEventListener(e,on);}); }
             ['pointerdown','touchstart','click','keydown','scroll'].forEach(function(e){window.addEventListener(e,on,{once:true,passive:true});});
         })();
