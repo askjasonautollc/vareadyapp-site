@@ -239,6 +239,14 @@
         .nav-links a { color: var(--tan); font-size: 14px; font-weight: 600; white-space: nowrap; }
         .nav-burger { display: none; font-size: 27px; color: var(--tan); cursor: pointer; line-height: 1; padding: 2px 6px; user-select: none; }
         .nav-toggle-cb { display: none; }
+        .video-band { padding: 44px 24px 20px; text-align: center; }
+        .video-band .eyebrow-v { color: var(--gold); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
+        .video-band h2 { font-size: 28px; line-height: 1.2; margin-bottom: 8px; }
+        .video-band p.vb-sub { color: var(--tan); max-width: 560px; margin: 0 auto 20px; font-size: 16px; line-height: 1.6; }
+        .video-frame { position: relative; width: min(330px, 84vw); margin: 0 auto; border-radius: 24px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 16px 50px rgba(0,0,0,0.5); background: #000; }
+        .video-frame video { display: block; width: 100%; height: auto; max-height: 80vh; }
+        .video-band .vb-cap { color: var(--gray); font-size: 12px; margin-top: 12px; }
+        .video-band .vb-cap a { color: var(--gold); font-weight: 700; }
         .nav-cta {
             background: var(--gold); color: var(--navy); padding: 8px 20px;
             border-radius: 8px; font-weight: 800; font-size: 13px;
@@ -932,6 +940,18 @@
         <p style="font-size: 11px; color: var(--gray); margin-top: 14px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.7;">
             <span style="color: var(--green); font-weight: 700;">&#9679;</span> Live on iOS and Android. Different name per platform (Google Play requires a non-government-sounding name), same app, same data.
         </p>
+    </section>
+
+    <!-- FEATURED VIDEO -->
+    <section class="video-band">
+        <div class="eyebrow-v">See it in action</div>
+        <h2>The proof is right in your pocket</h2>
+        <p class="vb-sub">Tap any condition in VA Ready and see the real, peer-reviewed studies behind it &mdash; sourced from PubMed and the NIH, across <strong style="color:var(--white);">2,305</strong> studies. Here's how, in 30 seconds.</p>
+        <div class="video-frame">
+            <video src="/video/peer-evidence.mp4" poster="/video/peer-evidence-poster.jpg" muted autoplay loop playsinline controls preload="metadata" aria-label="How to access peer-reviewed evidence in the VA Ready app"></video>
+        </div>
+        <p class="vb-cap">&#128266; Tap for sound &middot; <a href="#download">Get the app free &rarr;</a></p>
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":"How to access peer-reviewed evidence in VA Ready","description":"A 30-second look at how the VA Ready app links every condition to the real peer-reviewed studies behind it, sourced from PubMed and the NIH.","thumbnailUrl":"https://vareadyapp.com/video/peer-evidence-poster.jpg","contentUrl":"https://vareadyapp.com/video/peer-evidence.mp4","uploadDate":"2026-06-12","duration":"PT38S"}</script>
     </section>
 
     <!-- FREE CALCULATOR HIGHLIGHT -->
