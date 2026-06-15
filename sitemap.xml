@@ -296,6 +296,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://vareadyapp.com/guides/changing-your-vso.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://vareadyapp.com/conditions.html</loc>
     <lastmod>2026-06-07</lastmod>
     <priority>0.8</priority>
@@ -401,6 +406,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://vareadyapp.com/conditions/tmj.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://vareadyapp.com/states.html</loc>
     <lastmod>2026-06-08</lastmod>
     <priority>0.8</priority>
@@ -502,11 +512,6 @@
   </url>
   <url>
     <loc>https://vareadyapp.com/states/alabama.html</loc>
-    <lastmod>2026-06-08</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://vareadyapp.com/founders.html</loc>
     <lastmod>2026-06-08</lastmod>
     <priority>0.7</priority>
   </url>
@@ -921,13 +926,8 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vareadyapp.com/federal-benefits.html</loc>
-    <lastmod>2026-06-12</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vareadyapp.com/conditions/tmj.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <loc>https://vareadyapp.com/founders.html</loc>
+    <lastmod>2026-06-08</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -936,12 +936,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vareadyapp.com/blog/no-free-lunch.html</loc>
+    <loc>https://vareadyapp.com/blog/bridge-the-gap.html</loc>
     <lastmod>2026-06-14</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vareadyapp.com/blog/bridge-the-gap.html</loc>
+    <loc>https://vareadyapp.com/blog/no-free-lunch.html</loc>
     <lastmod>2026-06-14</lastmod>
     <priority>0.7</priority>
   </url>
