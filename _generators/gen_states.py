@@ -197,7 +197,7 @@ def hub():
         cats = sorted(set(r["benefit_category"] for r in rows), key=cat_rank)
         cards += (f'<div class="hub-card"><a href="/states/{slug(sn)}.html">{esc(sn)} Veterans Benefits</a>'
                   f'<p>{len(rows)} benefits &middot; {esc(", ".join(cats[:3]))}{"&hellip;" if len(cats)>3 else ""}</p></div>')
-    desc = "Veterans benefits by state: property tax exemptions, education, vehicle, and recreation perks for the 20 states with the most veterans. What disabled veterans qualify for and how to claim it."
+    desc = "Veteran benefits for all 50 states plus DC: property tax exemptions, tuition waivers, vehicle and recreation perks, and how military-retirement pay is taxed. What disabled veterans qualify for in your state and how to claim it."
     bc = json.dumps({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
         {"@type":"ListItem","position":1,"name":"Home","item":"https://vareadyapp.com/"},
         {"@type":"ListItem","position":2,"name":"Veterans Benefits by State","item":"https://vareadyapp.com/states.html"}]})
@@ -226,7 +226,7 @@ def hub():
     <div class="crumb"><a href="/index.html">Home</a> / Veterans Benefits by State</div>
     <div class="eyebrow">By State</div>
     <h1>Veterans Benefits by State</h1>
-    <p class="lede">Your VA rating can unlock more than federal compensation. Most states offer their own benefits &mdash; property-tax exemptions, free or reduced tuition, vehicle and license breaks, and hunting/fishing perks. Here are the states with the most veterans; the VA Ready app covers all 50.</p>
+    <p class="lede">Your VA rating can unlock more than federal compensation. Most states offer their own benefits &mdash; property-tax exemptions, free or reduced tuition, vehicle and license breaks, and hunting/fishing perks. Browse all 50 states plus DC below &mdash; each fact-checked against official state sources, with how to claim every benefit.</p>
     <div class="hub-sec"><div class="hub-grid">{cards}</div></div>
     <p class="trustline">More from VA Ready: <a href="/conditions.html">VA ratings by condition</a> &middot; <a href="/guides.html">VA claim guides</a> &middot; <a href="/va-disability-calculator.html">Combined-rating calculator</a></p>
     {APP_CTA}
