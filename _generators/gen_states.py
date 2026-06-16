@@ -10,7 +10,9 @@ ROWS = json.load(open(os.path.join(HERE,"data","benefits.json")))
 def esc(s): return html.escape(s or "", quote=True)
 
 # top-20 states by veteran population (search-demand order)
-ORDER = ["CA","TX","FL","VA","NC","GA","PA","NY","OH","WA","AZ","MI","TN","IL","CO","MO","SC","MD","IN","AL"]
+ORDER = ["CA","TX","FL","VA","NC","GA","PA","NY","OH","WA","AZ","MI","TN","IL","CO","MO","SC","MD","IN","AL",
+         "NJ","MA","MN","WI","KY","OR","OK","CT","UT","NV","IA","AR","MS","KS","NM","NE","WV","ID","HI","NH",
+         "ME","RI","MT","DE","SD","ND","AK","VT","WY","LA","DC"]
 NAMES = {r["state_code"]: r["state_name"] for r in ROWS}
 BY = defaultdict(list)
 for r in ROWS: BY[r["state_code"]].append(r)
