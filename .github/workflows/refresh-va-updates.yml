@@ -1,0 +1,44 @@
+name: Refresh VA Updates
+
+# Re-pulls VA regulatory actions from the Federal Register daily and pushes if
+# anything changed. The push triggers Vercel to redeploy automatically.
+# gen_news.py ties the page's "updated" date to the newest rule's publish date,
+# so this only commits when a real new rule appears (no fake daily churn).
+
+on:
+  schedule:
+    - cron: '0 11 * * *'   # daily at 11:00 UTC (~6-7am US Eastern)
+  workflow_dispatch: {}     # allow manual "Run workflow" from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-va-updates
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Regenerate VA Updates tracker + homepage ticker
+        run: python3 _generators/gen_news.py
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "vareadyapp-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if [ -n "$(git status --porcelain va-updates.html index.html sitemap.xml)" ]; then
+            git add va-updates.html index.html sitemap.xml
+            git commit -m "Auto: refresh VA Updates from the Federal Register"
+            git push
+            echo "Pushed updated VA rules."
+          else
+            echo "No new VA rules — nothing to commit."
+          fi

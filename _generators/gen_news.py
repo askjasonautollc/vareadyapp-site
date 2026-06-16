@@ -141,28 +141,83 @@ def updates_page(docs, generated):
     <p class="lede">The latest VA regulatory actions that can affect your claim — disability ratings, presumptive conditions, the PACT Act, and toxic exposure — in plain language, pulled straight from the Federal Register.</p>
     <div class="upd-note">These updates come directly from the <strong>Federal Register</strong>, the U.S. government's official record of rules and proposed rules. We summarize and link to the source; we never change what it says. Remember: a <strong>proposed</strong> rule is not law and you can't claim under it until it's finalized. Always verify current rules at VA.gov and with an accredited VSO.</div>
     {cards if cards else '<p class="lede">No qualifying VA rule actions found in the latest pull. Check back soon.</p>'}
-    <p class="upd-note">Last updated {esc(fmt_date(generated)[0])}. This page refreshes automatically.</p>
+    <p class="upd-note">Most recent VA action shown: {esc(fmt_date(generated)[0])}. This page refreshes automatically as new rules publish in the Federal Register.</p>
 </div>
 {FOOTER}
 </body>
 </html>"""
 
+TICKER_CSS = """<style>
+.va-ticker{display:flex;align-items:stretch;background:#0e1626;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);overflow:hidden;font-size:13px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.va-ticker__label{flex:0 0 auto;display:flex;align-items:center;gap:7px;background:#d9a621;color:#1a1205;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:9px 14px;font-size:11px;white-space:nowrap;text-decoration:none;z-index:2}
+.va-ticker__label .dot{width:7px;height:7px;border-radius:50%;background:#1a1205;animation:vablink 1.6s ease-in-out infinite}
+@keyframes vablink{0%,100%{opacity:1}50%{opacity:.25}}
+.va-ticker__win{flex:1;overflow:hidden;position:relative}
+.va-ticker__track{display:inline-flex;white-space:nowrap;align-items:center;animation:vascroll 80s linear infinite;will-change:transform}
+.va-ticker__win:hover .va-ticker__track{animation-play-state:paused}
+@keyframes vascroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.va-ticker__item{display:inline-flex;align-items:center;gap:8px;color:#c8bda5;text-decoration:none;padding:9px 0;margin:0 20px}
+.va-ticker__item:hover{color:#fff}
+.va-ticker__item .tb{font-size:9px;font-weight:900;letter-spacing:.5px;text-transform:uppercase;padding:2px 7px;border-radius:4px;flex:0 0 auto}
+.va-ticker__item .tb.p{background:rgba(217,166,33,.9);color:#1a1205}
+.va-ticker__item .tb.f{background:rgba(52,168,83,.9);color:#06210f}
+@media (max-width:700px){.va-ticker__label span.txt{display:none}}
+@media (prefers-reduced-motion:reduce){.va-ticker__track{animation:none}}
+</style>"""
+
+def ticker_block(docs):
+    if not docs:
+        return ""
+    items = ""
+    for d in docs[:10]:
+        cls = "p" if d.get("type") == "Proposed Rule" else "f"
+        lbl = "Proposed" if cls == "p" else "Final"
+        title = re.sub(r"\s+", " ", (d.get("title") or "").strip())
+        title = (title[:74].rsplit(" ", 1)[0] + "…") if len(title) > 76 else title
+        items += f'<a class="va-ticker__item" href="/va-updates.html"><span class="tb {cls}">{lbl}</span>{esc(title)}</a>'
+    # duplicate the run so the -50% scroll loops seamlessly
+    return (TICKER_CSS +
+            '<div class="va-ticker" aria-label="Latest VA rule and policy updates">'
+            '<a class="va-ticker__label" href="/va-updates.html"><span class="dot"></span><span class="txt">VA Updates</span></a>'
+            '<div class="va-ticker__win"><div class="va-ticker__track">' + items + items +
+            '</div></div></div>')
+
 # ---------- run ----------
-generated = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 try:
     raw = fetch()
 except Exception as e:
     raise SystemExit(f"Federal Register fetch failed: {e}")
 docs = [d for d in raw if relevant(d)][:20]
+# "Updated" = the newest rule's actual publication date, NOT today — so the page
+# (and dateModified/sitemap) only change when real new content appears, avoiding
+# fake daily freshness + pointless redeploys.
+generated = max((d.get("publication_date") for d in docs if d.get("publication_date")),
+                default=datetime.now(timezone.utc).strftime("%Y-%m-%d"))
 open(os.path.join(SITE, "va-updates.html"), "w", encoding="utf-8").write(updates_page(docs, generated))
 
-# sitemap append
+# sitemap: update lastmod if present, else add
 sp = os.path.join(SITE, "sitemap.xml")
 xml = open(sp).read()
 u = "https://vareadyapp.com/va-updates.html"
-if u not in xml:
+if u in xml:
+    xml = re.sub(r'(<loc>' + re.escape(u) + r'</loc>\s*<lastmod>)[^<]*(</lastmod>)',
+                 r'\g<1>' + generated + r'\g<2>', xml)
+else:
     xml = xml.replace("</urlset>", f'  <url>\n    <loc>{u}</loc>\n    <lastmod>{generated}</lastmod>\n    <priority>0.7</priority>\n  </url>\n</urlset>')
-    open(sp, "w").write(xml)
+open(sp, "w").write(xml)
+
+# inject the homepage scrolling ticker (between markers in index.html)
+idx_path = os.path.join(SITE, "index.html")
+idx = open(idx_path, encoding="utf-8").read()
+tb = ticker_block(docs)
+new_idx = re.sub(r'<!-- VATICKER:START -->.*?<!-- VATICKER:END -->',
+                 lambda m: '<!-- VATICKER:START -->' + tb + '<!-- VATICKER:END -->',
+                 idx, count=1, flags=re.S)
+if new_idx != idx:
+    open(idx_path, "w", encoding="utf-8").write(new_idx)
+    print(f"index.html ticker: injected {len(docs[:10])} items")
+else:
+    print("index.html ticker: no change (markers missing or identical)")
 
 # validate JSON-LD
 page = open(os.path.join(SITE, "va-updates.html")).read()
