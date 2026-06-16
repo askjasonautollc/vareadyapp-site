@@ -461,22 +461,21 @@
 
         /* Hero stats strip — refined with subtle separators + highlighted leaders */
         .hero-stats {
-            display: flex; justify-content: center; align-items: stretch; flex-wrap: wrap;
-            gap: 0; margin: 40px auto 24px;
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            gap: 1px; margin: 40px auto 24px;
             max-width: 860px; padding: 0;
-            background: linear-gradient(180deg, rgba(217,166,33,0.04) 0%, rgba(255,255,255,0.015) 100%);
+            background: rgba(255,255,255,0.07);
             border: 1px solid rgba(255,255,255,0.06);
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 10px 40px -20px rgba(0,0,0,0.6);
         }
         .hero-stats .stat {
-            flex: 1; min-width: 130px; text-align: center;
-            padding: 20px 14px;
-            border-right: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
+            padding: 18px 12px;
             position: relative;
+            background: linear-gradient(180deg, rgba(217,166,33,0.045) 0%, rgba(10,15,26,0.65) 100%);
         }
-        .hero-stats .stat:last-child { border-right: none; }
         .hero-stats .stat.highlight::before {
             content: ''; position: absolute; top: 0; left: 15%; right: 15%;
             height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
@@ -501,10 +500,8 @@
             color: var(--tan);
         }
         @media (max-width: 720px) {
-            .hero-stats { flex-wrap: wrap; }
-            .hero-stats .stat { flex: 1 1 33%; min-width: 90px; border-bottom: 1px solid rgba(255,255,255,0.05); }
-            .hero-stats .stat:nth-child(3n) { border-right: none; }
-            .hero-stats .stat:nth-last-child(-n+2) { border-bottom: none; }
+            .hero-stats { grid-template-columns: repeat(2, 1fr); }
+            .hero-stats .stat { padding: 16px 10px; }
             .hero-stats .stat-num { font-size: 22px; }
             .hero-stats .stat.highlight .stat-num { font-size: 26px; }
         }
@@ -938,8 +935,10 @@
             <div class="stat highlight"><div class="stat-num">8,949</div><div class="stat-lbl">Accredited VSOs</div></div>
             <div class="stat"><div class="stat-num">757</div><div class="stat-lbl">Conditions</div></div>
             <div class="stat"><div class="stat-num">2,305</div><div class="stat-lbl">Peer-reviewed studies</div></div>
+            <div class="stat"><div class="stat-num">1,052</div><div class="stat-lbl">MOS profiles</div></div>
             <div class="stat"><div class="stat-num">478</div><div class="stat-lbl">Bases tracked</div></div>
             <div class="stat"><div class="stat-num">644</div><div class="stat-lbl">State benefits</div></div>
+            <div class="stat"><div class="stat-num">30</div><div class="stat-lbl">Federal benefits</div></div>
         </div>
         <div class="hero-buttons">
             <a href="https://apps.apple.com/app/id6761733758" class="btn-primary">
@@ -1050,6 +1049,11 @@
                     <div class="bn-num">644</div>
                     <div class="bn-lbl">State benefits</div>
                     <div class="bn-sub">All 50 states + DC, fact-checked to official state sources</div>
+                </div>
+                <div class="bn-card">
+                    <div class="bn-num">30</div>
+                    <div class="bn-lbl">Federal benefits</div>
+                    <div class="bn-sub">VR&amp;E, VA home-loan funding-fee waiver, CHAMPVA, Chapter 35, and more</div>
                 </div>
                 <div class="bn-card">
                     <div class="bn-num">83</div>
