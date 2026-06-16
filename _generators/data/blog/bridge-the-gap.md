@@ -66,4 +66,4 @@ I built VA Ready because too many good vets get stuck right here and either give
 
 You earned this. Go get it.
 
-Built by a vet, for vets.
+Built by vets, for vets.
