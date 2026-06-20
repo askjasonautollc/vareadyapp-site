@@ -172,13 +172,21 @@ def post_page(p, related):
         {"@type":"ListItem","position":1,"name":"Home","item":"https://vareadyapp.com/"},
         {"@type":"ListItem","position":2,"name":"Blog","item":"https://vareadyapp.com/blog.html"},
         {"@type":"ListItem","position":3,"name":p["title"],"item":canon}]})
+    # Optional per-post byline (frontmatter `author` / `author_url`). When absent,
+    # the post is published under the app's name, as before.
+    author_name = p.get("author", "VA Ready App")
+    author_url = p.get("author_url") or ("/founders.html" if p.get("author") else "https://vareadyapp.com/")
+    author_url_abs = author_url if author_url.startswith("http") else f"https://vareadyapp.com{author_url}"
+    author_ld = ({"@type":"Person","name":author_name,"url":author_url_abs} if p.get("author")
+                 else {"@type":"Organization","name":"VA Ready App","url":"https://vareadyapp.com/"})
     article_ld = json.dumps({
         "@context":"https://schema.org","@type":"BlogPosting","headline":p["title"][:110],
         "description":p["excerpt"],"datePublished":p["date"],"dateModified":p["date"],
         "image":img_url,"articleSection":p["category"],
-        "author":{"@type":"Organization","name":"VA Ready App","url":"https://vareadyapp.com/"},
+        "author":author_ld,
         "publisher":{"@type":"Organization","name":"VA Ready","logo":{"@type":"ImageObject","url":"https://vareadyapp.com/logo.png"}},
         "mainEntityOfPage":canon,"inLanguage":"en-US"})
+    byline = (f'<a href="{esc(author_url)}">{esc(author_name)}</a>' if p.get("author") else "<strong>VA Ready App</strong>")
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -213,7 +221,7 @@ def post_page(p, related):
     <div class="eyebrow">{esc(p['category'])}</div>
     <h1>{esc(p['title'])}</h1>
     <p class="lede">{esc(p['excerpt'])}</p>
-    <div class="meta"><strong>VA Ready App</strong> &middot; {p['date_label']} &middot; {p['reading']} min read</div>
+    <div class="meta">{byline} &middot; {p['date_label']} &middot; {p['reading']} min read</div>
     {hero}
     <article>
 {body}
