@@ -61,7 +61,7 @@ FOOTER = """<footer>
 APP_CTA = """<div class="cta">
     <h3>See every benefit you've earned &mdash; free</h3>
     <p>VA Ready checks your rating against state and federal benefits for all 50 states, builds your combined rating with real VA math, and walks you through filing. No account required.</p>
-    <div class="cta-pro"><span class="pro-pill">With Pro</span><p>Get your full <strong>Benefits &amp; Exposure Profile PDF</strong>, every-state lookups, and the complete criteria for all 755 conditions.</p></div>
+    <div class="cta-pro"><span class="pro-pill">With Pro</span><p>Get your full <strong>Benefits &amp; Exposure Profile PDF</strong>, every-state lookups, and the complete criteria for all 757 conditions.</p></div>
     <div class="btns"><a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a><a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn ghost">Get Vet Ready for Android</a></div>
 </div>"""
 

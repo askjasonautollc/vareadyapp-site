@@ -98,6 +98,15 @@ CSS += """
     .trustline { font-size:13.5px; color:var(--tan); background:var(--card); border:1px solid var(--line); border-left:3px solid var(--gold); border-radius:10px; padding:9px 13px; margin:14px 0 4px; }
     .trustline a { color:var(--gold); font-weight:700; text-decoration:none; }
     .trustline a:hover { text-decoration:underline; }
+    .lib-hero { display:flex; align-items:center; gap:0; background:linear-gradient(135deg, rgba(217,166,33,0.10), rgba(217,166,33,0.02)); border:1px solid rgba(217,166,33,0.28); border-radius:16px; padding:22px 24px; margin:20px 0 14px; }
+    .lib-num { flex:0 0 auto; text-align:center; padding-right:24px; margin-right:24px; border-right:1px solid var(--line); }
+    .lib-num strong { display:block; font-size:46px; font-weight:900; color:var(--gold); line-height:1; letter-spacing:-1.5px; }
+    .lib-num span { display:block; font-size:11px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--tan); margin-top:8px; max-width:104px; }
+    .lib-body p { color:var(--tan); font-size:15px; margin:0 0 13px; line-height:1.6; }
+    .lib-body strong { color:var(--white); }
+    .lib-body .btns { display:flex; gap:10px; flex-wrap:wrap; }
+    .grid-eyebrow { margin:18px 0 12px; }
+    @media (max-width:560px){ .lib-hero{ flex-direction:column; align-items:stretch; } .lib-num{ border-right:none; border-bottom:1px solid var(--line); padding:0 0 14px; margin:0 0 16px; } .lib-num span{ max-width:none; } .lib-num strong{ font-size:40px; } }
 """
 
 NAV = """<nav>
@@ -115,7 +124,7 @@ FOOTER = """<footer>
 APP_CTA = """<div class="cta">
     <h3>Rate this condition in the VA Ready app</h3>
     <p>Free, no account: pick this condition, see the exact 38 CFR criteria, and watch your combined rating update with real VA math &mdash; plus the 50+ filing guides and a personalized timeline.</p>
-    <div class="cta-pro"><span class="pro-pill">With Pro</span><p>Walk away with a <strong>VSO-ready Claim Summary PDF</strong> (peer-reviewed evidence appendix), an <strong>Exposure Profile PDF</strong> of every presumptive your service earned, and the full criteria for all 755 conditions.</p></div>
+    <div class="cta-pro"><span class="pro-pill">With Pro</span><p>Walk away with a <strong>VSO-ready Claim Summary PDF</strong> (peer-reviewed evidence appendix), an <strong>Exposure Profile PDF</strong> of every presumptive your service earned, and the full criteria for all 757 conditions.</p></div>
     <div class="btns"><a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a><a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn ghost">Get Vet Ready for Android</a></div>
 </div>"""
 DISCLAIMER = """<div class="disclaimer">This page is for general informational purposes only and is not legal or medical advice. Rating criteria are summarized from 38 CFR Part 4; the VA determines actual ratings based on your evidence and exam. VA Ready is not affiliated with the U.S. Department of Veterans Affairs. Always verify current criteria at VA.gov and consult a VA-accredited representative.</div>"""
@@ -277,6 +286,7 @@ def hub():
     cards = "".join(
         f'<div class="hub-card"><a href="/conditions/{slug}.html">VA Rating for {esc(re.sub("<.*?>","",fname))}</a><p>Diagnostic code {dc} &middot; up to {DATA[dc].get("max_rating")}%' + (f' &middot; {len(STUDIES.get(dc) or [])} studies' if STUDIES.get(dc) else '') + f'</p></div>'
         for dc, slug, fname, intro in META if dc in DATA)
+    n_top = sum(1 for dc, *_ in META if dc in DATA)  # featured count, kept in sync with the grid
     desc = "VA disability ratings for the most-claimed conditions: tinnitus, PTSD, back pain, sleep apnea, migraines, hearing loss, and more. Rating criteria, diagnostic codes, and how to claim each."
     bc = json.dumps({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
         {"@type":"ListItem","position":1,"name":"Home","item":"https://vareadyapp.com/"},
@@ -307,6 +317,14 @@ def hub():
     <div class="eyebrow">By Condition</div>
     <h1>VA Disability Ratings by Condition</h1>
     <p class="lede">Plain-language rating breakdowns for the conditions veterans claim most &mdash; the exact 38 CFR breakpoints, diagnostic codes, secondary conditions, and how to claim each. Every page now includes the <strong style="color:var(--white);">real peer-reviewed studies</strong> linked to that condition, with a direct PubMed link for each. All sourced from the regulations and the U.S. National Library of Medicine.</p>
+    <div class="lib-hero">
+        <div class="lib-num"><strong>757</strong><span>Conditions in the app</span></div>
+        <div class="lib-body">
+            <p>This page details the <strong>{n_top} most-claimed</strong> conditions. The free VA Ready app carries the <strong>complete library &mdash; all 757 diagnostic codes</strong> in 38 CFR Part 4, fully searchable, each with its exact rating criteria and your combined rating calculated as you add them.</p>
+            <div class="btns"><a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a><a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn ghost">Get Vet Ready for Android</a></div>
+        </div>
+    </div>
+    <div class="eyebrow grid-eyebrow">The {n_top} Most-Claimed</div>
     <div class="hub-sec"><div class="hub-grid">{cards}</div></div>
     <p class="trustline">More from VA Ready: <a href="/states.html">Veterans benefits by state</a> &middot; <a href="/guides.html">VA claim guides</a> &middot; <a href="/va-disability-calculator.html">Combined-rating calculator</a></p>
     {APP_CTA}
