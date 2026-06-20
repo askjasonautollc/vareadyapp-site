@@ -37,6 +37,13 @@ CSS = re.search(r'CSS = """(.*?)"""', open(os.path.join(HERE,"gen_guides.py")).r
     .ben-foot a { color:var(--gold); font-weight:700; text-decoration:none; } .ben-foot a:hover { text-decoration:underline; }
     .trustline { font-size:13.5px; color:var(--tan); background:var(--card); border:1px solid var(--line); border-left:3px solid var(--gold); border-radius:10px; padding:9px 13px; margin:14px 0; }
     .trustline a { color:var(--gold); font-weight:700; text-decoration:none; }
+    .spotlight { background:linear-gradient(135deg, rgba(217,166,33,0.12), rgba(217,166,33,0.02)); border:1px solid rgba(217,166,33,0.30); border-radius:16px; padding:20px 22px; margin:18px 0 24px; }
+    .spotlight .spot-tag { display:inline-block; font-size:11px; font-weight:900; letter-spacing:1px; text-transform:uppercase; color:#1a1205; background:var(--gold); padding:3px 10px; border-radius:6px; margin-bottom:11px; }
+    .spotlight h2 { font-size:21px; font-weight:900; color:var(--white); margin:0 0 8px; letter-spacing:-0.3px; }
+    .spotlight > p { color:var(--tan); font-size:15px; margin:0 0 11px; line-height:1.6; }
+    .spot-elig { color:var(--tan); font-size:14px; background:rgba(255,255,255,0.04); border-left:2px solid var(--gold); border-radius:8px; padding:8px 12px; margin:0 0 13px; }
+    .spot-elig strong { color:var(--white); }
+    a.spot-cta { display:inline-block; background:var(--gold); color:#1a1205; font-weight:800; font-size:14px; padding:9px 16px; border-radius:10px; }
 """
 NAV = re.search(r'NAV = """(.*?)"""', open(os.path.join(HERE,"gen_states.py")).read(), re.S).group(1)
 FOOTER = re.search(r'FOOTER = """(.*?)"""', open(os.path.join(HERE,"gen_states.py")).read(), re.S).group(1)
@@ -65,6 +72,18 @@ def ben(r):
     if link: fh += (' &middot; ' if fh else '')+f'<a href="{esc(link)}" target="_blank" rel="noopener">Official details &#8599;</a>'
     return (f'<li class="ben"><div class="ben-top"><span class="ben-name">{esc(r["benefit_name"])}</span>{badges(r)}</div>'
             f'{vline}<p>{esc(r.get("description"))}</p>{how}'+(f'<div class="ben-foot">{fh}</div>' if fh else '')+'</li>')
+
+# Featured spotlight — pulled from the TSA PreCheck row so it stays in sync with the data.
+def spotlight():
+    row=next((r for r in ROWS if "vets-safe" in (r.get("website_url") or "")), None)
+    if not row: return ""
+    return (f'<div class="spotlight"><span class="spot-tag">New federal benefit</span>'
+            f'<h2>{esc(row["benefit_name"])}</h2>'
+            f'<p>{esc(row["description"])}</p>'
+            f'<div class="spot-elig"><strong>Who qualifies:</strong> Veterans enrolled in VA health care who have a '
+            f'service-connected disability of permanent blindness, or who require a VA-issued wheelchair or prosthetic limb.</div>'
+            f'<a class="spot-cta" href="{esc(row["website_url"])}" target="_blank" rel="noopener">How to enroll on TSA.gov &#8599;</a></div>')
+SPOTLIGHT=spotlight()
 
 cats_present=[c for c,_ in CAT if any(r["benefit_category"]==c for r in ROWS)]
 blocks=""
@@ -116,6 +135,7 @@ page=f"""<!DOCTYPE html>
     <p class="lede">Your VA disability rating unlocks far more than a monthly check. These are the <strong>{len(ROWS)}</strong> federal programs &mdash; health care, housing, education, financial, and employment &mdash; that a service-connected rating can make you eligible for, nationwide.</p>
     <div class="meta"><strong>{len(ROWS)} federal benefits</strong> &middot; {', '.join(esc(CATLABEL[c]) for c in cats_present)}</div>
     <p class="trustline">Not sure what your rating qualifies you for? <a href="/va-disability-calculator.html">Check your combined rating &rarr;</a></p>
+    {SPOTLIGHT}
     {blocks}
     <p style="margin:22px 0;"><a href="/va-disability-calculator.html" class="btn">Estimate your combined rating &rarr;</a> &nbsp; <a href="/states.html" class="btn ghost">Your state's benefits too &rarr;</a></p>
     {APP_CTA}
