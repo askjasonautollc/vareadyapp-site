@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """VSO finder vertical (Cluster C): a crawlable, searchable page per state from vso_offices.
-Build-time baked — NO Supabase key on the site. Public = aggregate star ratings only
+Build-time baked. NO Supabase key on the site. Public = aggregate star ratings only
 (comments stay in-app). Each state page bakes its offices as HTML + a JS filter + geo 'near me'."""
 import json, re, os, html
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -106,7 +106,7 @@ def page(sc):
     faqs = [
         (f"Is a VSO free in {sn}?", f"Yes. Accredited Veterans Service Officers in {sn} help you file your VA claim at no charge. You never pay a VSO to prepare or file your claim."),
         (f"How do I find a VSO near me in {sn}?", f"Use the search above to filter {len(offs)} accredited {sn} offices by city or name, or tap 'Near me' to sort by distance. You can also use the free locator in the VA Ready app."),
-        ("What does a VSO do?", "A VSO helps you file your claim, gather evidence, becomes your representative (VA Form 21-22), and represents you through appeals — all free. They help you avoid paying a 'claim shark' for help you can get at no cost."),
+        ("What does a VSO do?", "A VSO helps you file your claim, gather evidence, becomes your representative (VA Form 21-22), and represents you through appeals, all free. They help you avoid paying a 'claim shark' for help you can get at no cost."),
     ]
     faq_v = "".join(f'<div class="faq-item"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q,a in faqs)
     lds = [
@@ -139,7 +139,7 @@ def page(sc):
     <div class="crumb"><a href="/index.html">Home</a> / <a href="/find-a-vso.html">Find a VSO</a> / {esc(sn)}</div>
     <div class="eyebrow">Free Accredited VSO Finder</div>
     <h1>Find a Free, Accredited VSO in {esc(sn)}</h1>
-    <p class="lede">A Veterans Service Officer (VSO) helps you file your VA claim &mdash; <strong>for free</strong>. Below are <strong>{len(offs)}</strong> accredited offices across {esc(sn)}. Search by city or name, or tap <em>Near me</em>. Never pay a claim shark for help you can get at no cost.</p>
+    <p class="lede">A Veterans Service Officer (VSO) helps you file your VA claim, <strong>for free</strong>. Below are <strong>{len(offs)}</strong> accredited offices across {esc(sn)}. Search by city or name, or tap <em>Near me</em>. Never pay a claim shark for help you can get at no cost.</p>
     <div class="vso-tools">
         <input id="vsoFilter" type="text" placeholder="Search by city, county, or office name&hellip;" aria-label="Filter VSO offices">
         <button id="vsoNear" type="button">&#128205; Near me</button>
@@ -183,7 +183,7 @@ def hub():
     canon="https://vareadyapp.com/find-a-vso.html"
     total=sum(len(by[sc]) for sc in states_out)
     picks="".join(f'<a href="/vso/{slug(STATES[sc])}.html"><b>{esc(STATES[sc])}</b> <span>{len(by[sc])}</span></a>' for sc in sorted(states_out, key=lambda s:STATES[s]))
-    desc=f"Find a free, VA-accredited Veterans Service Officer (VSO) near you. Search {total:,} accredited offices across {len(states_out)} states and territories. Free claim help — no claim sharks."
+    desc=f"Find a free, VA-accredited Veterans Service Officer (VSO) near you. Search {total,} accredited offices across {len(states_out)} states and territories. Free claim help, no claim sharks."
     desc=desc[:160]
     bc={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://vareadyapp.com/"},{"@type":"ListItem","position":2,"name":"Find a VSO","item":canon}]}
     return f"""<!DOCTYPE html>
@@ -207,7 +207,7 @@ def hub():
     <div class="crumb"><a href="/index.html">Home</a> / Find a VSO</div>
     <div class="eyebrow">Free Accredited VSO Finder</div>
     <h1>Find a Free, Accredited VSO Near You</h1>
-    <p class="lede">A Veterans Service Officer helps you file your VA claim &mdash; <strong>for free</strong>. We track <strong>{total:,}</strong> VA-accredited offices across {len(states_out)} states and territories. Pick your state to search offices near you, call, and get help &mdash; and never pay a claim shark for what a VSO does at no cost.</p>
+    <p class="lede">A Veterans Service Officer helps you file your VA claim, <strong>for free</strong>. We track <strong>{total,}</strong> VA-accredited offices across {len(states_out)} states and territories. Pick your state to search offices near you, call, and get help, and never pay a claim shark for what a VSO does at no cost.</p>
     <p class="trustline">First time? Start with <a href="/guides/veterans-service-officers-vsos.html">what a VSO is, what they do, and how they keep you from paying a claim shark &rarr;</a></p>
     <h2>Choose your state</h2>
     <div class="statepick">{picks}</div>

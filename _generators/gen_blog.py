@@ -74,7 +74,7 @@ FOOTER = """<footer>
 
 BLOG_CTA = """<div class="cta">
     <h3>VA Ready is the app that practices what this preaches</h3>
-    <p>No account, no login, no data ever leaving your phone &mdash; and real, peer-reviewed studies instead of AI guesses. The combined-rating calculator, VSO finder, and core tools are free.</p>
+    <p>No account, no login, no data ever leaving your phone, and real, peer-reviewed studies instead of AI guesses. The combined-rating calculator, VSO finder, and core tools are free.</p>
     <div class="btns"><a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a><a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn ghost">Get Vet Ready for Android</a></div>
 </div>"""
 
@@ -261,7 +261,7 @@ def index_page():
     for cat, items in cats.items():
         cards = "".join(card(p) for p in items)
         sections += f'<div class="cat-head"><h2>{esc(cat)}</h2></div><div class="blog-grid">{cards}</div>'
-    desc = "Straight-talk reads for veterans filing VA disability claims — filing smarter, protecting your information, and getting the rating you earned. From the team behind VA Ready."
+    desc = "Straight-talk reads for veterans filing VA disability claims, filing smarter, protecting your information, and getting the rating you earned. From the team behind VA Ready."
     breadcrumb = json.dumps({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
         {"@type":"ListItem","position":1,"name":"Home","item":"https://vareadyapp.com/"},
         {"@type":"ListItem","position":2,"name":"Blog","item":"https://vareadyapp.com/blog.html"}]})
@@ -274,14 +274,14 @@ def index_page():
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VA Ready Blog — Straight Talk for Veterans Filing VA Claims</title>
+<title>VA Ready Blog: Straight Talk for Veterans Filing VA Claims</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0a0f1a">
 <link rel="canonical" href="https://vareadyapp.com/blog.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="VA Ready">
-<meta property="og:title" content="VA Ready Blog — Straight Talk for Veterans">
+<meta property="og:title" content="VA Ready Blog. Straight Talk for Veterans">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="https://vareadyapp.com/blog.html">
 <meta property="og:image" content="https://vareadyapp.com/logo.png">
@@ -297,7 +297,7 @@ def index_page():
     <div class="crumb"><a href="/index.html">Home</a> / Blog</div>
     <div class="eyebrow">VA Ready Blog</div>
     <h1>Straight Talk for Veterans Filing VA Claims</h1>
-    <p class="lede">Plain-language reads on filing smarter, protecting your information, and getting the rating you earned &mdash; from the team behind VA Ready.</p>
+    <p class="lede">Plain-language reads on filing smarter, protecting your information, and getting the rating you earned, from the team behind VA Ready.</p>
     {sections}
     {BLOG_CTA}
     {DISCLAIMER}

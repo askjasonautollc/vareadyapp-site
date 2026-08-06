@@ -73,7 +73,7 @@ def ben(r):
     return (f'<li class="ben"><div class="ben-top"><span class="ben-name">{esc(r["benefit_name"])}</span>{badges(r)}</div>'
             f'{vline}<p>{esc(r.get("description"))}</p>{how}'+(f'<div class="ben-foot">{fh}</div>' if fh else '')+'</li>')
 
-# Featured spotlight — pulled from the TSA PreCheck row so it stays in sync with the data.
+# Featured spotlight, pulled from the TSA PreCheck row so it stays in sync with the data.
 def spotlight():
     row=next((r for r in ROWS if "vets-safe" in (r.get("website_url") or "")), None)
     if not row: return ""
@@ -96,11 +96,11 @@ desc="Federal benefits for disabled veterans: health care, housing, education, f
 desc=desc[:160]
 faqs=[
  ("What federal benefits do disabled veterans get?",
-  f"Beyond monthly compensation, VA rating unlocks {len(ROWS)} federal benefits across health care, housing, education, financial, and employment — like VR&E, the VA home loan funding-fee waiver, CHAMPVA, Chapter 35 education, and property/loan programs. Eligibility depends on your rating, and some require 100% P&T or TDIU."),
+  f"Beyond monthly compensation, VA rating unlocks {len(ROWS)} federal benefits across health care, housing, education, financial, and employment, like VR&E, the VA home loan funding-fee waiver, CHAMPVA, Chapter 35 education, and property/loan programs. Eligibility depends on your rating, and some require 100% P&T or TDIU."),
  ("Do federal veteran benefits depend on my disability rating?",
   "Many do. Some are open to any service-connected veteran; others require a minimum rating, 100% Permanent & Total, or TDIU. Use the free calculator to confirm your combined rating, then see what you qualify for."),
  ("Are these different from state benefits?",
-  "Yes. These are federal programs available nationwide. Your state also offers its own benefits (property-tax exemptions, tuition, vehicle and recreation perks) — see the State Benefits pages for yours."),
+  "Yes. These are federal programs available nationwide. Your state also offers its own benefits (property-tax exemptions, tuition, vehicle and recreation perks), see the State Benefits pages for yours."),
 ]
 faq_v="".join(f'<div class="faq-item"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q,a in faqs)
 lds=[
@@ -132,7 +132,7 @@ page=f"""<!DOCTYPE html>
     <div class="crumb"><a href="/index.html">Home</a> / Federal Benefits</div>
     <div class="eyebrow">Federal Veteran Benefits</div>
     <h1>Federal Benefits for Disabled Veterans</h1>
-    <p class="lede">Your VA disability rating unlocks far more than a monthly check. These are the <strong>{len(ROWS)}</strong> federal programs &mdash; health care, housing, education, financial, and employment &mdash; that a service-connected rating can make you eligible for, nationwide.</p>
+    <p class="lede">Your VA disability rating unlocks far more than a monthly check. These are the <strong>{len(ROWS)}</strong> federal programs, health care, housing, education, financial, and employment, that a service-connected rating can make you eligible for, nationwide.</p>
     <div class="meta"><strong>{len(ROWS)} federal benefits</strong> &middot; {', '.join(esc(CATLABEL[c]) for c in cats_present)}</div>
     <p class="trustline">Not sure what your rating qualifies you for? <a href="/va-disability-calculator.html">Check your combined rating &rarr;</a></p>
     {SPOTLIGHT}

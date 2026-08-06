@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """VA disability pay-rate pages (Cluster A): flagship full table + per-rating pages + SMC.
 Data: data/compensation_rates.json, data/smc_rates.json (2026 = effective Dec 1, 2025).
-Verified against VA.gov veteran-rates page (30/70/100% + spouse + child add) — exact match."""
+Verified against VA.gov veteran-rates page (30/70/100% + spouse + child add), exact match."""
 import json, re, os, html
 HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.dirname(HERE)
@@ -11,7 +11,7 @@ os.makedirs(PAYDIR, exist_ok=True)
 def esc(s): return html.escape(str(s) if s is not None else "", quote=True)
 def money(v):
     try: return "$" + "{:,.2f}".format(float(v))
-    except: return "—"
+    except: return ", "
 
 COMP = {r["rating_pct"]: r for r in json.load(open(os.path.join(HERE,"data","compensation_rates.json")))}
 SMC = json.load(open(os.path.join(HERE,"data","smc_rates.json")))
@@ -101,7 +101,7 @@ def rating_page(p):
     canon = f"https://vareadyapp.com/va-disability-pay/{p}-percent.html"
     alone = money(r["veteran_alone"])
     has_dep = p >= 30
-    title = f"{p}% VA Disability Pay ({YEAR}) — Monthly Amount With & Without Dependents"
+    title = f"{p}% VA Disability Pay ({YEAR}). Monthly Amount With & Without Dependents"
     if has_dep:
         desc = f"{p}% VA disability pays {alone}/month for a veteran alone in {YEAR} (effective Dec 1, 2025), more with dependents. Full {p}% rate table by spouse, children, and parents."
     else:
@@ -133,7 +133,7 @@ def rating_page(p):
     faqs = [
         (f"How much is {p}% VA disability per month in {YEAR}?",
          f"{p}% VA disability pays {alone} per month for a veteran with no dependents, effective December 1, 2025. "
-         + (f"With dependents it is higher — for example {money(r['veteran_spouse'])} with a spouse." if has_dep else "Dependent amounts do not apply below 30%.")),
+         + (f"With dependents it is higher, for example {money(r['veteran_spouse'])} with a spouse." if has_dep else "Dependent amounts do not apply below 30%.")),
         ("Is VA disability compensation taxable?",
          "No. VA disability compensation is not taxed by the federal government or by states."),
         ("When did these rates take effect?",
@@ -141,7 +141,7 @@ def rating_page(p):
     ]
     if has_dep:
         faqs.append((f"Does {p}% VA disability include money for a spouse and kids?",
-                     f"Yes. At {p}% VA adds dependent amounts — {money(r['veteran_spouse'])} with a spouse, {money(r['veteran_spouse_1child'])} with a spouse and one child, plus {money(r['add_child_under18'])} for each additional child under 18."))
+                     f"Yes. At {p}% VA adds dependent amounts, {money(r['veteran_spouse'])} with a spouse, {money(r['veteran_spouse_1child'])} with a spouse and one child, plus {money(r['add_child_under18'])} for each additional child under 18."))
     faq_visible = "".join(f'<div class="faq-item"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q,a in faqs)
     lds = [bc_ld([("Home","https://vareadyapp.com/"),("VA Disability Pay Rates","https://vareadyapp.com/va-disability-pay-rates.html"),(f"{p}% VA Disability Pay",canon)]),
            article_ld(title,desc,canon), faq_ld(faqs)]
@@ -153,14 +153,14 @@ def rating_page(p):
     <p class="lede">A {p}% VA disability rating pays the amounts below each month, tax-free. These are the {YEAR} rates, effective {EFFECTIVE}.</p>
     {ratenav(p)}
     <div class="bignum">{alone}<span style="font-size:18px;color:var(--gray);font-weight:600;">/mo</span></div>
-    <div class="bignum-sub">{p}% &mdash; veteran with no dependents</div>
+    <div class="bignum-sub">{p}%, veteran with no dependents</div>
     <article>
         <h2>{p}% VA disability monthly pay by dependents</h2>
         {table}
         {dep_note}
         {added}
         <h2>How VA pays your rating</h2>
-        <p>VA pays compensation in 10% steps from 10% to 100%, and the amount is the same nationwide. If you have <strong>multiple conditions</strong>, VA combines them with its own math (not simple addition) and rounds to the nearest 10% — so a combined 75% pays at the {('80' )}% rate. Use the calculator to see where your conditions land.</p>
+        <p>VA pays compensation in 10% steps from 10% to 100%, and the amount is the same nationwide. If you have <strong>multiple conditions</strong>, VA combines them with its own math (not simple addition) and rounds to the nearest 10%, so a combined 75% pays at the {('80' )}% rate. Use the calculator to see where your conditions land.</p>
     </article>
     {APPBTNS}
     {APP_CTA}
@@ -177,7 +177,7 @@ def rating_page(p):
 # ---------- flagship full chart ----------
 def flagship():
     canon = "https://vareadyapp.com/va-disability-pay-rates.html"
-    title = f"{YEAR} VA Disability Pay Rates — Full Monthly Compensation Chart"
+    title = f"{YEAR} VA Disability Pay Rates. Full Monthly Compensation Chart"
     desc = f"The {YEAR} VA disability pay chart (effective Dec 1, 2025): monthly compensation for every rating 10%–100%, alone and with dependents. Verified against VA.gov."
     desc = desc[:160]
     # main table: ratings x key dependent columns
@@ -194,7 +194,7 @@ def flagship():
          f"For a veteran with no dependents, monthly compensation ranges from {money(COMP[10]['veteran_alone'])} at 10% to {money(COMP[100]['veteran_alone'])} at 100%, effective December 1, 2025. Dependents increase the amount starting at 30%."),
         ("How much is 100% VA disability per month?",
          f"100% VA disability pays {money(COMP[100]['veteran_alone'])} per month for a veteran alone, and {money(COMP[100]['veteran_spouse'])} with a spouse (no children), in {YEAR}."),
-        ("Is VA disability pay taxable?", "No — VA disability compensation is not taxable at the federal or state level."),
+        ("Is VA disability pay taxable?", "No. VA disability compensation is not taxable at the federal or state level."),
         ("How does VA combine multiple ratings?",
          "VA does not add ratings together. It combines them with a formula and rounds to the nearest 10%, so a combined 75% is paid at the 80% rate. The VA Ready calculator does this math for you."),
     ]
@@ -205,7 +205,7 @@ def flagship():
     <div class="crumb"><a href="/index.html">Home</a> / VA Disability Pay Rates</div>
     <div class="eyebrow">{YEAR} Rates &middot; effective {EFFECTIVE}</div>
     <h1>{YEAR} VA Disability Pay Rates</h1>
-    <p class="lede">How much VA disability compensation pays each month, tax-free, for every rating from 10% to 100% &mdash; alone and with dependents. These are the {YEAR} rates (effective {EFFECTIVE}), verified against VA.gov. Tap a rating for the full breakdown.</p>
+    <p class="lede">How much VA disability compensation pays each month, tax-free, for every rating from 10% to 100%, alone and with dependents. These are the {YEAR} rates (effective {EFFECTIVE}), verified against VA.gov. Tap a rating for the full breakdown.</p>
     {ratenav(None)}
     <article>
         <h2>Monthly VA disability compensation by rating</h2>
@@ -242,7 +242,7 @@ def smc_page():
     table = f'<table class="pt"><thead><tr><th>SMC level</th><th>What it covers</th><th class="amt">Veteran alone / mo</th></tr></thead><tbody>{rows}</tbody></table>'
     faqs = [
         ("What is VA Special Monthly Compensation (SMC)?",
-         "SMC is additional, higher-than-100% tax-free compensation for veterans with especially serious disabilities — such as loss or loss of use of a limb, blindness, being housebound, or needing Aid and Attendance — paid on top of or in place of the standard rating amount."),
+         "SMC is additional, higher-than-100% tax-free compensation for veterans with especially serious disabilities, such as loss or loss of use of a limb, blindness, being housebound, or needing Aid and Attendance, paid on top of or in place of the standard rating amount."),
         ("Who qualifies for SMC?",
          "Veterans with qualifying conditions like loss or loss of use of a hand, foot, eye, or reproductive organ; being permanently bedridden or housebound; or requiring the regular aid and attendance of another person. SMC-K is an add-on; higher levels replace the base rate."),
         ("When did these SMC rates take effect?",
@@ -259,14 +259,17 @@ def smc_page():
     <p class="lede">Special Monthly Compensation (SMC) is extra, tax-free compensation above the normal rating schedule for the most serious service-connected disabilities. These are the {YEAR} SMC rates (effective {EFFECTIVE}).</p>
     <article>
         <h2>What SMC is</h2>
-        <p>SMC recognizes disabilities that go beyond what a percentage rating captures &mdash; loss or loss of use of a limb, eye, or reproductive organ; deafness or blindness; being housebound; or needing the regular <strong>Aid and Attendance</strong> of another person. Some SMC levels (like SMC-K) are <em>added</em> to your regular compensation; higher levels <em>replace</em> the base 100% amount with a larger one.</p>
+        <p>SMC recognizes disabilities that go beyond what a percentage rating captures, loss or loss of use of a limb, eye, or reproductive organ; deafness or blindness; being housebound; or needing the regular <strong>Aid and Attendance</strong> of another person. Some SMC levels (like SMC-K) are <em>added</em> to your regular compensation; higher levels <em>replace</em> the base 100% amount with a larger one.</p>
         <h2>{YEAR} SMC rate levels (veteran alone)</h2>
         {table}
         <p>SMC amounts also increase with dependents. The figures above are for a veteran alone; check VA.gov or ask a VSO for your exact amount.</p>
+        <h2>How to actually claim it</h2>
+        <p>Knowing the rate is one thing, getting it awarded is another. Most SMC is supposed to be granted automatically once your rating shows a qualifying loss, but Aid and Attendance and Housebound are the exceptions: those you apply for, using <strong>VA Form 21-2680</strong>. Our step-by-step walkthrough covers which form applies to your basis, what your doctor has to complete, and what to do if VA never considered SMC at all.</p>
+        <p><a href="/guides/special-monthly-compensation-smc.html">Read the guide: How to Claim Special Monthly Compensation (SMC)</a></p>
     </article>
     {APPBTNS}
     {APP_CTA}
-    <p class="trustline">Related: <a href="/va-disability-pay-rates.html">full VA pay chart</a> &middot; <a href="/guides/permanent-and-total-disability.html">Permanent &amp; Total</a> &middot; <a href="/conditions.html">ratings by condition</a></p>
+    <p class="trustline">Related: <a href="/guides/special-monthly-compensation-smc.html">how to claim SMC</a> &middot; <a href="/va-disability-pay-rates.html">full VA pay chart</a> &middot; <a href="/guides/permanent-and-total-disability.html">Permanent &amp; Total</a> &middot; <a href="/conditions.html">ratings by condition</a></p>
     <h2 style="font-size:20px;margin-top:26px;">Common questions</h2>
     {faq_visible}
     {DISCLAIMER}

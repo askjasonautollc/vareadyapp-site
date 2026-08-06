@@ -10,27 +10,27 @@ STUDIES = json.load(open(os.path.join(HERE,"data","studies.json"))) if os.path.e
 
 # DC -> (slug, friendly H1 name, intro lede). Order = most-claimed.
 META = [
- ("6260","tinnitus","Tinnitus","Tinnitus &mdash; a persistent ringing, buzzing, or hissing in the ears &mdash; is the single most-claimed VA disability, common after exposure to loud weapons, aircraft, and engine noise."),
+ ("6260","tinnitus","Tinnitus","Tinnitus, a persistent ringing, buzzing, or hissing in the ears, is the single most-claimed VA disability, common after exposure to loud weapons, aircraft, and engine noise."),
  ("9411","ptsd","PTSD","Post-traumatic stress disorder is one of the most-claimed VA mental-health conditions, rated on how much the symptoms impair your work and daily functioning."),
  ("5237","back-pain","Back Pain (Lumbosacral Strain)","Lower-back and neck strain is among the most-claimed VA conditions, rated primarily on your range of motion and flare-ups."),
  ("5260","knee-pain","Knee Pain (Limited Flexion)","Limited knee bending is one of the most-claimed VA joint conditions, rated on how far you can flex the joint."),
- ("6847","sleep-apnea","Sleep Apnea","Sleep apnea is a high-value VA claim &mdash; a CPAP requirement alone rates 50%. It is frequently service-connected, including as secondary to PTSD, sinus, or weight conditions."),
+ ("6847","sleep-apnea","Sleep Apnea","Sleep apnea is a high-value VA claim, a CPAP requirement alone rates 50%. It is frequently service-connected, including as secondary to PTSD, sinus, or weight conditions."),
  ("8100","migraines","Migraines","Migraines are rated by how often you get prostrating attacks and whether they interfere with your ability to work."),
  ("9434","depression","Depression (MDD)","Major depressive disorder is rated on occupational and social impairment, using the same scale as other VA mental-health conditions."),
  ("5003","arthritis","Arthritis (Degenerative)","Degenerative arthritis is rated on X-ray joint involvement and the limitation of motion it causes."),
  ("5201","shoulder","Shoulder / Arm Limitation","Limited shoulder and arm motion is rated by how high you can raise the arm, with higher ratings for the dominant side."),
  ("5271","ankle","Ankle (Limited Motion)","Limited ankle motion is rated as moderate or marked based on how restricted the joint is."),
- ("5257","knee-instability","Knee Instability","Knee instability &mdash; buckling, giving way, or recurrent subluxation &mdash; is rated separately from limited motion, so many veterans can claim both."),
+ ("5257","knee-instability","Knee Instability","Knee instability, buckling, giving way, or recurrent subluxation, is rated separately from limited motion, so many veterans can claim both."),
  ("7806","eczema","Eczema / Dermatitis","Eczema and dermatitis are rated on how much body or exposed skin is affected and the treatment required."),
  ("6602","asthma","Asthma","Bronchial asthma is rated on your pulmonary function tests (FEV-1) and the medication you require."),
- ("8520","sciatica","Sciatica","Sciatic-nerve radiculopathy is a common secondary to back conditions, rated by the severity of the nerve impairment &mdash; and it qualifies for the bilateral factor when it affects both legs."),
+ ("8520","sciatica","Sciatica","Sciatic-nerve radiculopathy is a common secondary to back conditions, rated by the severity of the nerve impairment, and it qualifies for the bilateral factor when it affects both legs."),
  ("5242","degenerative-disc-disease","Degenerative Disc Disease (Spine)","Degenerative disc disease and spinal arthritis are rated on range of motion or incapacitating episodes, whichever gives the higher rating."),
  ("6100","hearing-loss","Hearing Loss","Bilateral sensorineural hearing loss is rated from a table that combines your audiogram results and speech-recognition scores."),
  ("7101","hypertension","Hypertension","High blood pressure is rated on your diastolic and systolic readings and whether you require continuous medication."),
  ("7346","gerd-acid-reflux","GERD / Acid Reflux","GERD and hiatal hernia are rated on symptoms like reflux, regurgitation, and pain, and are a frequent secondary to other conditions and medications."),
- ("7913","diabetes","Diabetes (Type 2)","Type 2 diabetes is rated on the treatment it requires &mdash; diet, oral medication, insulin, and activity restriction &mdash; and is an Agent Orange presumptive condition."),
- ("7805","scars","Scars","Scars are rated on their size, whether they are painful or unstable, and any functional limitation they cause &mdash; and can be claimed in addition to the underlying injury."),
- ("9905","tmj","TMJ / Temporomandibular Disorder","Temporomandibular disorder (TMJ/TMD) &mdash; jaw pain, clicking, locking, and limited opening &mdash; is rated on how far you can open your jaw (inter-incisal range) and any dietary restrictions. It is commonly claimed secondary to PTSD-related teeth grinding (bruxism) or jaw trauma."),
+ ("7913","diabetes","Diabetes (Type 2)","Type 2 diabetes is rated on the treatment it requires, diet, oral medication, insulin, and activity restriction, and is an Agent Orange presumptive condition."),
+ ("7805","scars","Scars","Scars are rated on their size, whether they are painful or unstable, and any functional limitation they cause, and can be claimed in addition to the underlying injury."),
+ ("9905","tmj","TMJ / Temporomandibular Disorder","Temporomandibular disorder (TMJ/TMD), jaw pain, clicking, locking, and limited opening, is rated on how far you can open your jaw (inter-incisal range) and any dietary restrictions. It is commonly claimed secondary to PTSD-related teeth grinding (bruxism) or jaw trauma."),
 ]
 
 def esc(s): return html.escape(s or "", quote=True)
@@ -61,7 +61,7 @@ CSS = open(os.path.join(HERE,"css.txt")).read() if os.path.exists(os.path.join(H
 # Reuse the guide stylesheet by importing the constant from the guide generator.
 import importlib.util
 spec = importlib.util.spec_from_file_location("gguides", os.path.join(HERE,"gen_guides.py"))
-# guide gen.py runs on import (writes files); avoid that — instead read its CSS via regex.
+# guide gen.py runs on import (writes files); avoid that, instead read its CSS via regex.
 gtext = open(os.path.join(HERE,"gen_guides.py")).read()
 m = re.search(r'CSS = """(.*?)"""', gtext, re.S)
 CSS = m.group(1) if m else ""
@@ -124,7 +124,7 @@ FOOTER = """<footer>
 <script defer src="/track.js"></script>"""
 APP_CTA = """<div class="cta">
     <h3>Rate this condition in the VA Ready app</h3>
-    <p>Free, no account: pick this condition, see the exact 38 CFR criteria, and watch your combined rating update with real VA math &mdash; plus the 50+ filing guides and a personalized timeline.</p>
+    <p>Free, no account: pick this condition, see the exact 38 CFR criteria, and watch your combined rating update with real VA math, plus the 50+ filing guides and a personalized timeline.</p>
     <div class="cta-pro"><span class="pro-pill">With Pro</span><p>Walk away with a <strong>VSO-ready Claim Summary PDF</strong> (peer-reviewed evidence appendix), an <strong>Exposure Profile PDF</strong> of every presumptive your service earned, and the full criteria for all 760 conditions.</p></div>
     <div class="btns"><a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a><a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn ghost">Get Vet Ready for Android</a></div>
 </div>"""
@@ -170,7 +170,7 @@ def evidence_section(dc, fname, fclean):
     html_block = (
         f'<section class="evidence"><h2>Peer-Reviewed Research on {fname}</h2>'
         f'<p class="evintro">{len(studs)} peer-reviewed studies linked to {fclean} (diagnostic code {dc}) in the VA Ready app, '
-        f'sourced from PubMed and the U.S. National Library of Medicine. Every citation is real and links to the source &mdash; '
+        f'sourced from PubMed and the U.S. National Library of Medicine. Every citation is real and links to the source, '
         f'bring them to your C&amp;P exam or hand them to your VSO.</p>'
         f'<ol class="evlist">{"".join(items)}</ol>'
         f'<p class="evi-foot">Citations are provided for general educational use and are not medical advice. '
@@ -224,7 +224,7 @@ def cond_page(dc, slug, fname, intro):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VA Rating for {fclean} (DC {dc}) &mdash; Criteria &amp; Pay | VA Ready</title>
+<title>VA Rating for {fclean} (DC {dc}): Criteria &amp; Pay | VA Ready</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0a0f1a">
@@ -250,7 +250,7 @@ def cond_page(dc, slug, fname, intro):
     <h1>VA Disability Rating for {fname}</h1>
     <p class="lede">{intro}</p>
     <div class="meta"><strong>Diagnostic code {dc}</strong> &middot; {esc(cfr)} &middot; {esc(bsys)} &middot; up to {maxr}%</div>
-    <p class="trustline">Built by a veteran who filed his own claim to 100&#37; P&amp;T &mdash; then built the tool he wished he&rsquo;d had. <a href="/founders.html">Read our story &rarr;</a></p>
+    <p class="trustline">Built by a veteran who filed his own claim to 100&#37; P&amp;T, then built the tool he wished he&rsquo;d had. <a href="/founders.html">Read our story &rarr;</a></p>
     <article>
         <h2>How the VA rates {fname}</h2>
         <p>The VA assigns one of these ratings for {esc(cn)}, based on the severity of your condition. These criteria are summarized from {esc(cfr)}:</p>
@@ -261,7 +261,7 @@ def cond_page(dc, slug, fname, intro):
         <p>The rating you receive depends almost entirely on your evidence and your C&amp;P exam. To put your best claim forward:</p>
         <ul>
             <li>Get a current diagnosis and make sure your symptoms are documented at their worst, not your best day.</li>
-            <li>Prepare for your <a href="/guides/c-and-p-exam-preparation.html">C&amp;P exam</a> &mdash; the examiner's report usually decides your rating.</li>
+            <li>Prepare for your <a href="/guides/c-and-p-exam-preparation.html">C&amp;P exam</a>, the examiner's report usually decides your rating.</li>
             <li>If service connection isn't obvious, a <a href="/guides/nexus-letters.html">nexus letter</a> can link the condition to your service.</li>
             <li>If this condition was caused by another rated condition, file it as a <a href="/guides/secondary-service-connection.html">secondary claim</a>.</li>
         </ul>
@@ -299,7 +299,7 @@ def hub():
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VA Disability Ratings by Condition &mdash; The Most-Claimed Conditions | VA Ready</title>
+<title>VA Disability Ratings by Condition: The Most-Claimed Conditions | VA Ready</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0a0f1a">
 <link rel="canonical" href="https://vareadyapp.com/conditions.html">
@@ -317,11 +317,11 @@ def hub():
     <div class="crumb"><a href="/index.html">Home</a> / VA Ratings by Condition</div>
     <div class="eyebrow">By Condition</div>
     <h1>VA Disability Ratings by Condition</h1>
-    <p class="lede">Plain-language rating breakdowns for the conditions veterans claim most &mdash; the exact 38 CFR breakpoints, diagnostic codes, secondary conditions, and how to claim each. Every page now includes the <strong style="color:var(--white);">real peer-reviewed studies</strong> linked to that condition, with a direct PubMed link for each. All sourced from the regulations and the U.S. National Library of Medicine.</p>
+    <p class="lede">Plain-language rating breakdowns for the conditions veterans claim most, the exact 38 CFR breakpoints, diagnostic codes, secondary conditions, and how to claim each. Every page now includes the <strong style="color:var(--white);">real peer-reviewed studies</strong> linked to that condition, with a direct PubMed link for each. All sourced from the regulations and the U.S. National Library of Medicine.</p>
     <div class="lib-hero">
         <div class="lib-num"><strong>760</strong><span>Conditions in the app</span></div>
         <div class="lib-body">
-            <p>This page details the <strong>{n_top} most-claimed</strong> conditions. The free VA Ready app carries the <strong>complete library &mdash; all 760 diagnostic codes</strong> in 38 CFR Part 4, fully searchable, each with its exact rating criteria and your combined rating calculated as you add them.</p>
+            <p>This page details the <strong>{n_top} most-claimed</strong> conditions. The free VA Ready app carries the <strong>complete library, all 760 diagnostic codes</strong> in 38 CFR Part 4, fully searchable, each with its exact rating criteria and your combined rating calculated as you add them.</p>
             <div class="btns"><a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a><a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn ghost">Get Vet Ready for Android</a></div>
         </div>
     </div>

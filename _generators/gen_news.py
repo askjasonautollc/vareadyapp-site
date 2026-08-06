@@ -2,14 +2,14 @@
 """VA Updates / Federal Register Rule Tracker for vareadyapp.com.
 
 Pulls VA regulatory actions from the Federal Register public API (no key,
-primary source) and bakes a single rich hub at /va-updates.html — original
+primary source) and bakes a single rich hub at /va-updates.html, original
 framing + the official government abstract + Proposed/Final flag + a link to
 the primary source. NOT a raw feed republish: one curated, regularly-rebuilt
 page (run on a schedule via CI) so it's fresh without thin/duplicate pages.
 
 Filters to Rules + Proposed Rules whose title/abstract touch claim-relevant
 topics, so the page surfaces rate-schedule / presumptive / PACT / rating
-changes — not Privacy-Act notices and info-collection chatter.
+changes, not Privacy-Act notices and info-collection chatter.
 """
 import json, re, os, html, urllib.request, urllib.parse
 from datetime import datetime, timezone
@@ -86,7 +86,7 @@ def why_line(doc):
     if t == "Proposed Rule":
         return ("<strong>This is a proposal, not law yet.</strong> Nothing changes for your claim "
                 "until (and unless) it's finalized. You can't claim under a proposed rule.")
-    return ("<strong>This is a final rule.</strong> It's in effect as of its stated date — worth checking "
+    return ("<strong>This is a final rule.</strong> It's in effect as of its stated date, worth checking "
             "if it touches a condition or exposure on your claim.")
 
 def updates_page(docs, generated):
@@ -100,8 +100,8 @@ def updates_page(docs, generated):
     <div class="why">{why_line(d)}</div>
     <a class="src" href="{esc(d.get('html_url'))}" rel="nofollow noopener" target="_blank">Read the official document on FederalRegister.gov &rarr;</a>
 </div>"""
-    desc = ("Track the latest U.S. Department of Veterans Affairs regulatory actions — proposed and final "
-            "rules on disability ratings, presumptive conditions, the PACT Act, and toxic exposure — in plain "
+    desc = ("Track the latest U.S. Department of Veterans Affairs regulatory actions, proposed and final "
+            "rules on disability ratings, presumptive conditions, the PACT Act, and toxic exposure, in plain "
             "language, pulled straight from the Federal Register.")
     breadcrumb = json.dumps({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
         {"@type":"ListItem","position":1,"name":"Home","item":"https://vareadyapp.com/"},
@@ -115,7 +115,7 @@ def updates_page(docs, generated):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VA Rule &amp; Policy Updates — Disability, PACT Act &amp; Presumptive Changes | VA Ready</title>
+<title>VA Rule &amp; Policy Updates: Disability, PACT Act &amp; Presumptive Changes | VA Ready</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0a0f1a">
@@ -138,7 +138,7 @@ def updates_page(docs, generated):
     <div class="crumb"><a href="/index.html">Home</a> / VA Updates</div>
     <div class="eyebrow">VA Updates</div>
     <h1>VA Rule &amp; Policy Updates</h1>
-    <p class="lede">The latest VA regulatory actions that can affect your claim — disability ratings, presumptive conditions, the PACT Act, and toxic exposure — in plain language, pulled straight from the Federal Register.</p>
+    <p class="lede">The latest VA regulatory actions that can affect your claim, disability ratings, presumptive conditions, the PACT Act, and toxic exposure, in plain language, pulled straight from the Federal Register.</p>
     <div class="upd-note">These updates come directly from the <strong>Federal Register</strong>, the U.S. government's official record of rules and proposed rules. We summarize and link to the source; we never change what it says. Remember: a <strong>proposed</strong> rule is not law and you can't claim under it until it's finalized. Always verify current rules at VA.gov and with an accredited VSO.</div>
     {cards if cards else '<p class="lede">No qualifying VA rule actions found in the latest pull. Check back soon.</p>'}
     <p class="upd-note">Most recent VA action shown: {esc(fmt_date(generated)[0])}. This page refreshes automatically as new rules publish in the Federal Register.</p>
@@ -188,7 +188,7 @@ try:
 except Exception as e:
     raise SystemExit(f"Federal Register fetch failed: {e}")
 docs = [d for d in raw if relevant(d)][:20]
-# "Updated" = the newest rule's actual publication date, NOT today — so the page
+# "Updated" = the newest rule's actual publication date, NOT today, so the page
 # (and dateModified/sitemap) only change when real new content appears, avoiding
 # fake daily freshness + pointless redeploys.
 generated = max((d.get("publication_date") for d in docs if d.get("publication_date")),

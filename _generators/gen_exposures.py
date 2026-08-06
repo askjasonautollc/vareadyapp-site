@@ -20,39 +20,39 @@ COND_SLUG = {"6260":"tinnitus","9411":"ptsd","5237":"back-pain","5260":"knee-pai
 # 12 marquee pages: slug, h1, lede, and the exposure_name substrings that feed it
 PAGES = [
  ("agent-orange","Agent Orange Exposure & VA Presumptive Conditions",
-  "Agent Orange and other tactical herbicides were sprayed in Vietnam and stored, tested, or used at sites across Asia and the Pacific. If you served in a recognized location and time, VA presumes certain conditions are service-connected — you don't have to prove the link.",
+  "Agent Orange and other tactical herbicides were sprayed in Vietnam and stored, tested, or used at sites across Asia and the Pacific. If you served in a recognized location and time, VA presumes certain conditions are service-connected, you don't have to prove the link.",
   ["Agent Orange"]),
- ("burn-pits-pact-act","Burn Pits & the PACT Act — Presumptive Conditions",
+ ("burn-pits-pact-act","Burn Pits & the PACT Act. Presumptive Conditions",
   "Open-air burn pits and airborne hazards exposed Gulf War and post-9/11 veterans to smoke and fine particulate. The PACT Act made dozens of cancers and respiratory illnesses presumptive for veterans who served in qualifying locations.",
   ["Burn Pits","Kuwait Oil Well"]),
- ("camp-lejeune","Camp Lejeune Water Contamination — VA Claims & Presumptive Conditions",
+ ("camp-lejeune","Camp Lejeune Water Contamination. VA Claims & Presumptive Conditions",
   "From 1953 to 1987, the drinking water at Marine Corps Base Camp Lejeune and MCAS New River was contaminated with industrial solvents. Veterans, reservists, and guardsmen who served there at least 30 days qualify for presumptive disability benefits for several conditions.",
   ["Camp Lejeune"]),
- ("gulf-war-illness","Gulf War Illness — Undiagnosed Illness & Presumptive Conditions",
-  "Many Gulf War veterans returned with chronic, medically unexplained symptoms. VA recognizes Gulf War Illness — including undiagnosed illnesses and chronic multisymptom conditions — as presumptively service-connected for those who served in the Southwest Asia theater.",
+ ("gulf-war-illness","Gulf War Illness. Undiagnosed Illness & Presumptive Conditions",
+  "Many Gulf War veterans returned with chronic, medically unexplained symptoms. VA recognizes Gulf War Illness, including undiagnosed illnesses and chronic multisymptom conditions, as presumptively service-connected for those who served in the Southwest Asia theater.",
   ["Gulf War Illness"]),
- ("afff-pfas","AFFF / PFAS Firefighting Foam Exposure — VA Claims",
+ ("afff-pfas","AFFF / PFAS Firefighting Foam Exposure. VA Claims",
   "Aqueous Film-Forming Foam (AFFF) used in military firefighting contains PFAS 'forever chemicals' linked to cancers and other illnesses. Veterans exposed at flight lines, fire-training pits, and crash crews may have a claim.",
   ["AFFF / PFAS"]),
- ("k2-karshi-khanabad","K2 (Karshi-Khanabad) Air Base Exposure — VA Claims",
-  "Veterans stationed at K2 — Karshi-Khanabad Air Base in Uzbekistan — were exposed to a stew of jet fuel, solvents, particulate, and possible radiological hazards. K2 service is now recognized under the PACT Act.",
+ ("k2-karshi-khanabad","K2 (Karshi-Khanabad) Air Base Exposure. VA Claims",
+  "Veterans stationed at K2. Karshi-Khanabad Air Base in Uzbekistan, were exposed to a stew of jet fuel, solvents, particulate, and possible radiological hazards. K2 service is now recognized under the PACT Act.",
   ["K2 - Karshi"]),
- ("asbestos","Military Asbestos Exposure — VA Claims & Conditions",
+ ("asbestos","Military Asbestos Exposure. VA Claims & Conditions",
   "Asbestos was everywhere in older ships, buildings, brakes, and insulation. Navy veterans and many trades faced heavy exposure, and asbestos-related diseases can appear decades later.",
   ["Asbestos"]),
- ("radiation","Radiation Exposure & Atomic Veterans — VA Presumptive Conditions",
-  "Atomic veterans and others exposed to ionizing radiation — from atmospheric nuclear tests to cleanup missions and occupational sources — may qualify for presumptive benefits for radiogenic cancers.",
+ ("radiation","Radiation Exposure & Atomic Veterans. VA Presumptive Conditions",
+  "Atomic veterans and others exposed to ionizing radiation, from atmospheric nuclear tests to cleanup missions and occupational sources, may qualify for presumptive benefits for radiogenic cancers.",
   ["Ionizing Radiation","Radiofrequency"]),
- ("depleted-uranium","Depleted Uranium (DU) Exposure — VA Claims",
+ ("depleted-uranium","Depleted Uranium (DU) Exposure. VA Claims",
   "Depleted uranium was used in armor and munitions. Veterans wounded by DU fragments, or who worked on or around struck vehicles, may have internal exposure that VA monitors and evaluates.",
   ["Depleted Uranium"]),
- ("jet-fuel-petroleum","Jet Fuel & Petroleum Exposure (JP-8) — VA Claims",
+ ("jet-fuel-petroleum","Jet Fuel & Petroleum Exposure (JP-8). VA Claims",
   "Jet fuels and petroleum products (JP-4, JP-5, JP-8) exposed flight-line crews, fuel handlers, and maintainers to benzene and other toxins linked to blood disorders and cancers.",
   ["Jet Fuel"]),
- ("fort-mcclellan","Fort McClellan Exposure — VA Claims",
+ ("fort-mcclellan","Fort McClellan Exposure. VA Claims",
   "Fort McClellan, Alabama hosted the Army Chemical Corps and sat near industrial PCB and chemical contamination. Veterans who trained or served there may have multiple exposure pathways.",
   ["Fort McClellan"]),
- ("project-112-shad","Project 112 / Project SHAD — Chemical & Biological Testing",
+ ("project-112-shad","Project 112 / Project SHAD. Chemical & Biological Testing",
   "Project 112 and its naval arm Project SHAD were Cold War DoD tests of chemical and biological agents on service members, often without their knowledge. VA recognizes participants for exposure-related claims.",
   ["Project 112"]),
 ]
@@ -126,11 +126,11 @@ def page(slug, h1, lede, matches):
             nm=esc(c.get("name")); dc=str(c.get("dc") or "")
             sl=COND_SLUG.get(dc)
             cells += f'<a href="/conditions/{sl}.html">{nm}</a>' if sl else f'<span>{nm}</span>'
-        cond_html = f'<h2>Presumptive conditions ({len(conds)})</h2><p>If you have a qualifying diagnosis and the service above, VA presumes these are connected to your exposure &mdash; you don\'t have to prove causation:</p><div class="condgrid">{cells}</div>'
+        cond_html = f'<h2>Presumptive conditions ({len(conds)})</h2><p>If you have a qualifying diagnosis and the service above, VA presumes these are connected to your exposure, you don\'t have to prove causation:</p><div class="condgrid">{cells}</div>'
     # docs
     doc_html=""
     if docs:
-        items="".join(f'<li><strong>{esc(d.get("type"))}</strong> &mdash; {esc(d.get("why"))}</li>' for d in docs)
+        items="".join(f'<li><strong>{esc(d.get("type"))}</strong>, {esc(d.get("why"))}</li>' for d in docs)
         doc_html = f'<h2>What you need to file</h2><ul class="docs">{items}</ul>'
     # FAQ
     cond_names=[c.get("name") for c in conds][:4]
@@ -157,7 +157,7 @@ def page(slug, h1, lede, matches):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{esc(topic)} &mdash; VA Presumptive Conditions &amp; Claims | VA Ready</title>
+<title>{esc(topic)}: VA Presumptive Conditions &amp; Claims | VA Ready</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0a0f1a">
@@ -182,7 +182,7 @@ def page(slug, h1, lede, matches):
         <p>VA recognizes exposure for service in these locations and time periods:</p>
         {covered}
         {cond_html}
-        <p class="trustline">See your conditions and what they rate, then build your combined rating &mdash; <a href="/va-disability-calculator.html">open the free calculator &rarr;</a></p>
+        <p class="trustline">See your conditions and what they rate, then build your combined rating, <a href="/va-disability-calculator.html">open the free calculator &rarr;</a></p>
         {doc_html}
         <h2>How to file</h2>
         <p>File a disability claim for your diagnosed condition and note the exposure. The usual path: lock your date with an <a href="/guides/intent-to-file.html">Intent to File</a>, get a current diagnosis, gather your service records, and prepare for your <a href="/guides/c-and-p-exam-preparation.html">C&amp;P exam</a>. If service connection isn't obvious, a <a href="/guides/nexus-letters.html">nexus letter</a> can help.</p>
@@ -239,7 +239,7 @@ def hub():
     <div class="crumb"><a href="/index.html">Home</a> / Toxic Exposures</div>
     <div class="eyebrow">By Exposure</div>
     <h1>Military Toxic Exposures &amp; Presumptive Conditions</h1>
-    <p class="lede">If you were exposed to toxic substances in service, VA may presume certain conditions are service-connected &mdash; meaning you don't have to prove the link. Here are the major exposures, who qualifies, the presumptive conditions, and how to file. The VA Ready app maps every base and aircraft you served on to the exposures you may have earned.</p>
+    <p class="lede">If you were exposed to toxic substances in service, VA may presume certain conditions are service-connected, meaning you don't have to prove the link. Here are the major exposures, who qualifies, the presumptive conditions, and how to file. The VA Ready app maps every base and aircraft you served on to the exposures you may have earned.</p>
     <div class="hub-sec"><div class="hub-grid">{cards}</div></div>
     {APP_CTA}
     <p class="trustline">More from VA Ready: <a href="/conditions.html">ratings by condition</a> &middot; <a href="/va-disability-pay-rates.html">pay rates</a> &middot; <a href="/states.html">state benefits</a></p>

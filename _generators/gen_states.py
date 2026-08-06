@@ -64,7 +64,7 @@ FOOTER = """<footer>
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/track.js"></script>"""
 APP_CTA = """<div class="cta">
-    <h3>See every benefit you've earned &mdash; free</h3>
+    <h3>See every benefit you've earned, free</h3>
     <p>VA Ready checks your rating against state and federal benefits for all 50 states, builds your combined rating with real VA math, and walks you through filing. No account required.</p>
     <div class="cta-pro"><span class="pro-pill">With Pro</span><p>Get your full <strong>Benefits &amp; Exposure Profile PDF</strong>, every-state lookups, and the complete criteria for all 760 conditions.</p></div>
     <div class="btns"><a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a><a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn ghost">Get Vet Ready for Android</a></div>
@@ -124,13 +124,13 @@ def state_page(sc):
     # FAQ
     top_names = [r["benefit_name"] for r in rows][:3]
     faqs = [(f"What benefits do {sn} veterans get?",
-             f"{sn} offers veteran benefits across {catlist}. Highlights include {', '.join(top_names)}. Eligibility varies — some benefits require a VA disability rating, 100% P&T status, or combat service.")]
+             f"{sn} offers veteran benefits across {catlist}. Highlights include {', '.join(top_names)}. Eligibility varies, some benefits require a VA disability rating, 100% P&T status, or combat service.")]
     pt = next((r for r in rows if r["benefit_category"]=="Property Tax"), None)
     if pt: faqs.append((f"What property tax exemption do disabled veterans get in {sn}?", re.sub("<.*?>","",pt.get("description") or "")[:300]))
     it = next((r for r in rows if r["benefit_category"]=="Income Tax"), None)
     if it: faqs.append((f"Does {sn} tax military retirement or VA disability pay?", re.sub("<.*?>","",it.get("description") or "")[:300]))
     faqs.append((f"Do I need a VA rating to claim {sn} benefits?",
-                 "Many state benefits are tied to your VA disability rating — the higher your rating, the more you may qualify for. Use the free VA Ready calculator to confirm your combined rating, then check which state benefits you've earned."))
+                 "Many state benefits are tied to your VA disability rating, the higher your rating, the more you may qualify for. Use the free VA Ready calculator to confirm your combined rating, then check which state benefits you've earned."))
     faq_visible = "".join(f'<div class="faq-item"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q,a in faqs)
     faq_ld = json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
         {"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faqs]})
@@ -149,7 +149,7 @@ def state_page(sc):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{esc(sn)} Veterans Benefits (2026) &mdash; Disabled Veteran Perks | VA Ready</title>
+<title>{esc(sn)} Veterans Benefits (2026): Disabled Veteran Perks | VA Ready</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0a0f1a">
@@ -173,7 +173,7 @@ def state_page(sc):
     <div class="crumb"><a href="/index.html">Home</a> / <a href="/states.html">State Benefits</a> / {esc(sn)}</div>
     <div class="eyebrow">Veterans Benefits by State</div>
     <h1>{esc(sn)} Veterans Benefits</h1>
-    <p class="lede">Beyond your federal VA disability compensation, {esc(sn)} offers its own benefits for veterans &mdash; {catlist}. Here's what {esc(sn)} veterans can claim, who qualifies, and how to apply.</p>
+    <p class="lede">Beyond your federal VA disability compensation, {esc(sn)} offers its own benefits for veterans, {catlist}. Here's what {esc(sn)} veterans can claim, who qualifies, and how to apply.</p>
     <div class="meta"><strong>{len(rows)} state benefits</strong> &middot; {esc(', '.join(cats))}{(' &middot; ' + lastv_str) if lastv_str else ''}</div>
     <p class="trustline">Not sure what your rating qualifies you for? <a href="/va-disability-calculator.html">Check your combined rating &rarr;</a></p>
     {blocks}
@@ -213,7 +213,7 @@ def hub():
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Veterans Benefits by State (2026) &mdash; Property Tax, Education &amp; More | VA Ready</title>
+<title>Veterans Benefits by State (2026): Property Tax, Education &amp; More | VA Ready</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0a0f1a">
 <link rel="canonical" href="https://vareadyapp.com/states.html">
@@ -231,7 +231,7 @@ def hub():
     <div class="crumb"><a href="/index.html">Home</a> / Veterans Benefits by State</div>
     <div class="eyebrow">By State</div>
     <h1>Veterans Benefits by State</h1>
-    <p class="lede">Your VA rating can unlock more than federal compensation. Most states offer their own benefits &mdash; property-tax exemptions, free or reduced tuition, vehicle and license breaks, and hunting/fishing perks. Browse all 50 states plus DC below &mdash; each fact-checked against official state sources, with how to claim every benefit.</p>
+    <p class="lede">Your VA rating can unlock more than federal compensation. Most states offer their own benefits, property-tax exemptions, free or reduced tuition, vehicle and license breaks, and hunting/fishing perks. Browse all 50 states plus DC below, each fact-checked against official state sources, with how to claim every benefit.</p>
     <div class="hub-sec"><div class="hub-grid">{cards}</div></div>
     <p class="trustline">More from VA Ready: <a href="/conditions.html">VA ratings by condition</a> &middot; <a href="/guides.html">VA claim guides</a> &middot; <a href="/va-disability-calculator.html">Combined-rating calculator</a></p>
     {APP_CTA}

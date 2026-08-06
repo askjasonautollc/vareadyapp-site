@@ -17,10 +17,26 @@ def slugify(s):
 
 def esc(s): return html.escape(s, quote=True)
 
+def _md_link(m):
+    """Render a [text](url) link.
+
+    Internal links get no rel and no target: they are our own pages, and
+    nofollowing them would throw away the internal link equity that makes a
+    hub-and-spoke guide set work. External links keep nofollow + new tab.
+    """
+    text, url = m.group(1), m.group(2)
+    if url.startswith("/") or url.startswith("https://vareadyapp.com"):
+        return f'<a href="{url}">{text}</a>'
+    return f'<a href="{url}" rel="nofollow noopener" target="_blank">{text}</a>'
+
 def inline(s):
     s = html.escape(s)
     s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
-    s = re.sub(r"(https?://[^\s<]+)", r'<a href="\1" rel="nofollow noopener" target="_blank">\1</a>', s)
+    # Markdown links first, so the bare-URL rule below cannot chew up the href.
+    s = re.sub(r"\[([^\]]+)\]\((/[^)\s]+|https?://[^)\s]+)\)", _md_link, s)
+    # Remaining bare URLs, skipping any already inside an anchor we just wrote.
+    s = re.sub(r'(?<!href=")(?<!>)(https?://[^\s<]+)(?![^<]*</a>)',
+               r'<a href="\1" rel="nofollow noopener" target="_blank">\1</a>', s)
     return s
 
 def md_to_html(md):
@@ -57,7 +73,12 @@ def meta_desc(s):
 
 # ---------- enrich rows ----------
 for g in DATA:
-    g["slug"] = slugify(g["title"])
+    # An explicit slug freezes the URL. Deriving it from the title meant any
+    # copy edit to a title silently moved the page, which would 404 a ranking
+    # URL and hand its history to a brand new one. Titles are editable; URLs
+    # are not. slugify() remains only as the fallback for a brand new guide
+    # that has not been given a slug yet.
+    g["slug"] = (g.get("slug") or "").strip() or slugify(g["title"])
     g["is_form"] = g["sort_order"] >= 200
     g["url"] = f"/guides/{g['slug']}.html"
     g["date"] = (g.get("created_at") or "2026-06-07")[:10]
@@ -245,14 +266,14 @@ def hub_page():
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VA Claim Guides — Free Filing Help &amp; VA Form Explainers | VA Ready</title>
+<title>VA Claim Guides: Free Filing Help &amp; VA Form Explainers | VA Ready</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0a0f1a">
 <link rel="canonical" href="https://vareadyapp.com/guides.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="VA Ready">
-<meta property="og:title" content="VA Claim Guides — Free Filing Help &amp; VA Form Explainers">
+<meta property="og:title" content="VA Claim Guides. Free Filing Help &amp; VA Form Explainers">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="https://vareadyapp.com/guides.html">
 <meta property="og:image" content="https://vareadyapp.com/logo.png">
@@ -268,7 +289,7 @@ def hub_page():
     <div class="crumb"><a href="/index.html">Home</a> / VA Claim Guides</div>
     <div class="eyebrow">Free Guides</div>
     <h1>VA Claim Guides</h1>
-    <p class="lede">Plain-language help for filing your VA disability claim — and a straight explainer for every VA form. All free, all sourced from the regulations (38 CFR) and VA.gov.</p>
+    <p class="lede">Plain-language help for filing your VA disability claim, and a straight explainer for every VA form. All free, all sourced from the regulations (38 CFR) and VA.gov.</p>
     <div class="hub-sec">
         <div class="eyebrow">Filing your claim, step by step</div>
         <div class="hub-grid">{cards(process)}</div>
