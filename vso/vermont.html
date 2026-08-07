@@ -81,7 +81,17 @@
     .vso-meta { color:var(--gray); font-size:13.5px; margin:6px 0 14px; }
     .vso-meta strong { color:var(--white); }
     #vsoList { list-style:none; padding:0; margin:0; }
-    .vso-card { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:13px 15px; margin:0 0 11px; }
+    /* content-visibility lets the browser skip layout and paint for cards that
+       are off screen. On a big state like Texas that is 800+ cards it never has
+       to render until scrolled to. contain-intrinsic-size keeps the scrollbar
+       honest by reserving each card's approximate height. */
+    .vso-card { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:13px 15px; margin:0 0 11px;
+                content-visibility:auto; contain-intrinsic-size:auto 118px; }
+    .vso-card[hidden] { display:none; }
+    .faq-item { border-top:1px solid var(--line); padding:16px 0; }
+    .faq-item:first-of-type { border-top:none; }
+    .faq-item h3 { font-size:16px; font-weight:800; color:var(--gold); margin-bottom:6px; }
+    .faq-item p { font-size:14.5px; color:var(--tan); margin:0; }
     .vso-top { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
     .vso-name { color:var(--white); font-weight:800; font-size:16px; }
     .vso-acc { font-size:10.5px; font-weight:800; text-transform:uppercase; letter-spacing:.5px; background:rgba(52,168,83,.16); color:var(--green); padding:3px 8px; border-radius:999px; }

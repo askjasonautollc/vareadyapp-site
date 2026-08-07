@@ -37,7 +37,17 @@ CSS = re.search(r'CSS = """(.*?)"""', open(os.path.join(HERE,"gen_guides.py")).r
     .vso-meta { color:var(--gray); font-size:13.5px; margin:6px 0 14px; }
     .vso-meta strong { color:var(--white); }
     #vsoList { list-style:none; padding:0; margin:0; }
-    .vso-card { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:13px 15px; margin:0 0 11px; }
+    /* content-visibility lets the browser skip layout and paint for cards that
+       are off screen. On a big state like Texas that is 800+ cards it never has
+       to render until scrolled to. contain-intrinsic-size keeps the scrollbar
+       honest by reserving each card's approximate height. */
+    .vso-card { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:13px 15px; margin:0 0 11px;
+                content-visibility:auto; contain-intrinsic-size:auto 118px; }
+    .vso-card[hidden] { display:none; }
+    .faq-item { border-top:1px solid var(--line); padding:16px 0; }
+    .faq-item:first-of-type { border-top:none; }
+    .faq-item h3 { font-size:16px; font-weight:800; color:var(--gold); margin-bottom:6px; }
+    .faq-item p { font-size:14.5px; color:var(--tan); margin:0; }
     .vso-top { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
     .vso-name { color:var(--white); font-weight:800; font-size:16px; }
     .vso-acc { font-size:10.5px; font-weight:800; text-transform:uppercase; letter-spacing:.5px; background:rgba(52,168,83,.16); color:var(--green); padding:3px 8px; border-radius:999px; }
@@ -167,15 +177,29 @@ for sc in states_out:
 # finder.js
 open(os.path.join(VSODIR,"finder.js"),"w").write(
 """(function(){var i=document.getElementById('vsoFilter'),l=document.getElementById('vsoList');if(!l)return;
-var cards=[].slice.call(l.querySelectorAll('.vso-card'));
-function f(){var q=(i.value||'').toLowerCase().trim(),s=0;cards.forEach(function(c){var m=!q||c.getAttribute('data-search').indexOf(q)>-1;c.style.display=m?'':'none';if(m)s++;});var cnt=document.getElementById('vsoCount');if(cnt)cnt.textContent=s;}
+var cards=[].slice.call(l.querySelectorAll('.vso-card')),cnt=document.getElementById('vsoCount'),raf=0;
+/* Cache the haystack once. Reading a data attribute per card per keystroke was
+   forcing a DOM read on 800+ nodes for every character typed. */
+var hay=cards.map(function(c){return (c.getAttribute('data-search')||'').toLowerCase();});
+/* Toggle the hidden attribute instead of writing style.display, and only when
+   the state actually changes. Writing display on every card every keystroke was
+   the layout thrash that made a big state feel stuck while typing. */
+function apply(){raf=0;var q=(i.value||'').toLowerCase().trim(),s=0;
+for(var n=0;n<cards.length;n++){var m=!q||hay[n].indexOf(q)>-1;if(m)s++;
+if(cards[n].hidden===m)cards[n].hidden=!m;}
+if(cnt)cnt.textContent=s;}
+/* Coalesce to one pass per frame, so holding a key down cannot queue work. */
+function f(){if(raf)return;raf=requestAnimationFrame(apply);}
 if(i)i.addEventListener('input',f);
 var b=document.getElementById('vsoNear');
 if(b&&navigator.geolocation){b.addEventListener('click',function(){b.textContent='Locating\\u2026';navigator.geolocation.getCurrentPosition(function(p){var la=p.coords.latitude,lo=p.coords.longitude;
 function d(a,b2,c2,d2){var R=3959,x=Math.PI/180,u=(c2-a)*x,v=(d2-b2)*x,q=Math.sin(u/2)*Math.sin(u/2)+Math.cos(a*x)*Math.cos(c2*x)*Math.sin(v/2)*Math.sin(v/2);return R*2*Math.atan2(Math.sqrt(q),Math.sqrt(1-q));}
-cards.forEach(function(c){var la2=parseFloat(c.getAttribute('data-lat')),lo2=parseFloat(c.getAttribute('data-lng')),dd=(!isNaN(la2)&&!isNaN(lo2))?d(la,lo,la2,lo2):1e9;c.setAttribute('data-dist',dd);var bd=c.querySelector('.vso-dist');if(bd&&dd<1e9)bd.textContent=dd.toFixed(0)+' mi';});
-cards.sort(function(a,b3){return parseFloat(a.getAttribute('data-dist'))-parseFloat(b3.getAttribute('data-dist'));});
-cards.forEach(function(c){l.appendChild(c);});b.textContent='\\u2713 Nearest first';},function(){b.textContent='Location unavailable';});});}
+var order=cards.map(function(c,n){var la2=parseFloat(c.getAttribute('data-lat')),lo2=parseFloat(c.getAttribute('data-lng')),dd=(!isNaN(la2)&&!isNaN(lo2))?d(la,lo,la2,lo2):1e9;var bd=c.querySelector('.vso-dist');if(bd&&dd<1e9)bd.textContent=dd.toFixed(0)+' mi';return{c:c,d:dd,n:n};});
+order.sort(function(a,b3){return a.d-b3.d||a.n-b3.n;});
+/* One fragment, one reflow, instead of 800 appendChild calls against the live list. */
+var fr=document.createDocumentFragment();order.forEach(function(o){fr.appendChild(o.c);});l.appendChild(fr);
+cards=order.map(function(o){return o.c;});hay=cards.map(function(c){return (c.getAttribute('data-search')||'').toLowerCase();});
+b.textContent='\\u2713 Nearest first';},function(){b.textContent='Location unavailable';});});}
 })();""")
 
 # hub
@@ -183,22 +207,48 @@ def hub():
     canon="https://vareadyapp.com/find-a-vso.html"
     total=sum(len(by[sc]) for sc in states_out)
     picks="".join(f'<a href="/vso/{slug(STATES[sc])}.html"><b>{esc(STATES[sc])}</b> <span>{len(by[sc])}</span></a>' for sc in sorted(states_out, key=lambda s:STATES[s]))
-    desc=f"Find a free, VA-accredited Veterans Service Officer (VSO) near you. Search {total,} accredited offices across {len(states_out)} states and territories. Free claim help, no claim sharks."
+    desc=f"Looking for a VSO near me? Search {total:,} free VA-accredited Veterans Service Officer offices across {len(states_out)} states and territories. They file your claim at no cost."
     desc=desc[:160]
     bc={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://vareadyapp.com/"},{"@type":"ListItem","position":2,"name":"Find a VSO","item":canon}]}
+    # ItemList of the state pages. Legitimate: these are our own pages and this
+    # is literally a list of them. Deliberately NOT LocalBusiness, which would
+    # claim we operate these offices; we do not, and marking them up as ours
+    # would be schema spam.
+    il={"@context":"https://schema.org","@type":"ItemList",
+        "name":"Free accredited VSO offices by state",
+        "numberOfItems":len(states_out),
+        "itemListElement":[{"@type":"ListItem","position":n+1,"name":f"VSOs in {STATES[sc]}",
+                            "url":f"https://vareadyapp.com/vso/{slug(STATES[sc])}.html"}
+                           for n,sc in enumerate(sorted(states_out, key=lambda s:STATES[s]))]}
+    faqs=[("What is a VSO?",
+           "A Veterans Service Officer is a representative accredited by the VA to prepare, file, and track your disability claim. They are trained on the rating schedule and on VA procedure, and they can act as your representative with VA."),
+          ("Are VSOs really free?",
+           "Yes. A VA-accredited VSO prepares and files your claim at no cost, including your very first claim. Nobody may legally charge you a fee to file an original claim, and only accredited attorneys, claims agents, and VSO representatives may charge a fee at all, and only after VA has issued a decision."),
+          ("How do I find a VSO near me?",
+           f"Pick your state below to see the accredited offices in it, then sort by distance or search by city, county, or ZIP. We track {total:,} offices across {len(states_out)} states and territories, with phone numbers and directions for each."),
+          ("Can a VSO help me if I live or serve overseas?",
+           "Yes. Accreditation is not tied to where you live, so a VSO in your home state can represent you while you are stationed or living abroad. Overseas filers can also use a Federal Benefits Unit at a U.S. embassy or consulate."),
+          ("What is the difference between a VSO and a claim shark?",
+           "A VSO is accredited and free. An unaccredited consultant is neither, and typically wants a percentage of your back pay. Fees on a VA claim may only ever come out of past-due benefits, which is why fee-seekers concentrate on that lump sum.")]
+    faq_ld={"@context":"https://schema.org","@type":"FAQPage",
+            "mainEntity":[{"@type":"Question","name":q,
+                           "acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faqs]}
+    faq_html="".join(f'<div class="faq-item"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q,a in faqs)
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Find a Free Accredited VSO Near You ({total:,} offices) | VA Ready</title>
+<title>Find a VSO Near Me: {total:,} Free Accredited Offices | VA Ready</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0a0f1a">
 <link rel="canonical" href="{canon}">
 <meta property="og:type" content="website"><meta property="og:site_name" content="VA Ready">
-<meta property="og:title" content="Find a Free Accredited VSO Near You"><meta property="og:description" content="{esc(desc)}">
+<meta property="og:title" content="Find a VSO Near Me: Free Accredited Help"><meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{canon}"><meta property="og:image" content="https://vareadyapp.com/logo.png">
 <meta name="twitter:card" content="summary"><link rel="icon" type="image/png" href="/logo.png">
 <script type="application/ld+json">{json.dumps(bc)}</script>
+<script type="application/ld+json">{json.dumps(il)}</script>
+<script type="application/ld+json">{json.dumps(faq_ld)}</script>
 <style>{CSS}</style>
 </head>
 <body>
@@ -206,11 +256,21 @@ def hub():
 <div class="wrap">
     <div class="crumb"><a href="/index.html">Home</a> / Find a VSO</div>
     <div class="eyebrow">Free Accredited VSO Finder</div>
-    <h1>Find a Free, Accredited VSO Near You</h1>
-    <p class="lede">A Veterans Service Officer helps you file your VA claim, <strong>for free</strong>. We track <strong>{total,}</strong> VA-accredited offices across {len(states_out)} states and territories. Pick your state to search offices near you, call, and get help, and never pay a claim shark for what a VSO does at no cost.</p>
+    <h1>Find a Free, Accredited VSO Near Me</h1>
+    <p class="lede">Looking for a VSO near me? A <strong>Veterans Service Officer</strong> is a VA-accredited rep who will prepare and file your disability claim <strong>for free</strong>, including your very first one. We track <strong>{total:,}</strong> accredited offices across {len(states_out)} states and territories. Pick your state below to find the ones near you, get a phone number, and call.</p>
+    <p class="lede">No vet should hand over a slice of their back pay for work a VSO does at no cost.</p>
     <p class="trustline">First time? Start with <a href="/guides/veterans-service-officers-vsos.html">what a VSO is, what they do, and how they keep you from paying a claim shark &rarr;</a></p>
     <h2>Choose your state</h2>
     <div class="statepick">{picks}</div>
+
+    <h2>Stationed or living overseas?</h2>
+    <p>Accreditation is not tied to where you live, so a VSO in your home state can represent you while you are stationed or living abroad. Pick the state you claim as your residence and work with them by phone and email; plenty of vets file their whole claim that way from Germany, Japan, Korea, or the Philippines.</p>
+    <p>Two things worth knowing if you file from outside the United States. <strong>Federal Benefits Units</strong> at U.S. embassies and consulates handle VA benefits questions overseas and can point you at the right office. And VA can arrange an exam abroad through the Foreign Medical Program, so being OCONUS does not stop a claim from moving.</p>
+    <p class="trustline">Filing from outside the U.S.? Read <a href="/guides/va-benefits-while-abroad.html">VA benefits while abroad: foreign claims, FMP, overseas exams, and international direct deposit &rarr;</a></p>
+
+    <h2>Common questions</h2>
+    {faq_html}
+
     {APP_CTA}
     <div class="disclaimer">Office listings are compiled from public VA accreditation data and may change; confirm details before visiting. Ratings reflect veterans' own opinions submitted in the VA Ready app, not endorsements by VA Ready. VA Ready is not affiliated with the U.S. Department of Veterans Affairs.</div>
 </div>
