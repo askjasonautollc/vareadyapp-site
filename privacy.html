@@ -38,6 +38,7 @@
         h1 { font-size: 32px; font-weight: 900; margin-bottom: 8px; }
         .date { font-size: 13px; color: #4a5568; margin-bottom: 40px; }
         h2 { font-size: 20px; font-weight: 800; color: #d9a621; margin-top: 40px; margin-bottom: 12px; }
+        h3 { font-size: 16px; font-weight: 800; color: #ffffff; margin-top: 24px; margin-bottom: 8px; }
         p, li { font-size: 15px; color: #d1c4a5; margin-bottom: 12px; }
         ul { padding-left: 20px; margin-bottom: 16px; }
         li { margin-bottom: 6px; }
@@ -60,18 +61,18 @@
 
     <div class="content">
         <h1>Privacy Policy</h1>
-        <p class="date">Last updated: June 7, 2026</p>
+        <p class="date">Last updated: August 7, 2026</p>
 
-        <p style="background: rgba(217,166,33,0.08); border-left: 3px solid #d9a621; padding: 12px 16px; border-radius: 6px; font-size: 14px;">This policy applies to <strong>VA Ready</strong> on iOS and <strong>Vet Ready</strong> on Android &mdash; the same software product released under different names per platform. Where this policy says "the App," it means whichever version you installed.</p>
+        <p style="background: rgba(217,166,33,0.08); border-left: 3px solid #d9a621; padding: 12px 16px; border-radius: 6px; font-size: 14px;">This policy applies to <strong>VA Ready</strong> on iOS and <strong>Vet Ready</strong> on Android, the same software product released under different names per platform. Where this policy says "the App," it means whichever version you installed.</p>
 
         <h2>Information Stored on Your Device</h2>
         <p>The App is designed with your privacy as a priority. The vast majority of what you do in the App stays on your device and never leaves it:</p>
         <ul>
-            <li>Your profile (branch, MOS, service dates, separation date, state, county, dependents, deployments, exposures, rating, TDIU/P&amp;T flags) is stored in your device's local storage &mdash; never transmitted</li>
+            <li>Your profile (branch, MOS, service dates, separation date, state, county, dependents, deployments, exposures, rating, TDIU/P&amp;T flags) is stored in your device's local storage, never transmitted</li>
             <li>Your claim list, selected conditions, ratings, bilateral flags, evidence checklists, notes, and C&amp;P appointment dates are stored locally</li>
             <li>Your claim milestone reminders (titles, due dates, notes, reminder lead times) are stored locally</li>
             <li>There are no user accounts, no logins, and no cloud sync of your personal data</li>
-            <li>Payment for Pro subscriptions and Lifetime Pro is handled entirely by Apple (App Store, on iOS) or Google Play Billing (on Android) &mdash; we never see your payment details</li>
+            <li>Payment for Pro subscriptions and Lifetime Pro is handled entirely by Apple (App Store, on iOS) or Google Play Billing (on Android), we never see your payment details</li>
         </ul>
 
         <h2>Information We Fetch (Read-Only)</h2>
@@ -88,7 +89,7 @@
         <h2>Information You Actively Send Us</h2>
         <p>There are only two situations in which data leaves your device, and both require you to tap a button first:</p>
         <ul>
-            <li><strong>Feedback form.</strong> When you open Profile &rarr; Send Feedback and tap "Send," the App transmits the message you typed, your branch, your MOS code(s), whether you are a Pro subscriber, the App version, and your device model (e.g., "iPhone15,3" or "Pixel 8"). This is used solely to triage bugs and feature requests. We do not transmit your name, email, identifiers, health records, or VA claim details &mdash; only what you type in the message body.</li>
+            <li><strong>Feedback form.</strong> When you open Profile &rarr; Send Feedback and tap "Send," the App transmits the message you typed, your branch, your MOS code(s), whether you are a Pro subscriber, the App version, and your device model (e.g., "iPhone15,3" or "Pixel 8"). This is used solely to triage bugs and feature requests. We do not transmit your name, email, identifiers, health records, or VA claim details, only what you type in the message body.</li>
             <li><strong>Store rating prompts.</strong> If you choose to leave a rating, Apple (App Store) or Google (Play Store) handles the submission. We never see review content.</li>
         </ul>
 
@@ -102,10 +103,25 @@
             <li>We do NOT collect your DD-214, Social Security Number, or VA file number</li>
             <li>We do NOT have access to your VA records or claims</li>
             <li>We do NOT send remote push notifications or marketing messages</li>
+            <li>We do NOT register your device with any push service, so there is no device token or push identifier</li>
         </ul>
 
         <h2>Notifications</h2>
-        <p>All notifications are local &mdash; scheduled on your device by the platform's notification system (iOS local notifications on iPhone, Android notification channels on Android) &mdash; and only fire for reminders you explicitly create (C&amp;P exam reminders and claim milestones). We do not send any remote push notifications. Reminder content and timing are stored only on your device. You can disable notifications at any time under <strong>iOS:</strong> Settings &rarr; VA Ready &rarr; Notifications, or <strong>Android:</strong> Settings &rarr; Apps &rarr; Vet Ready &rarr; Notifications.</p>
+        <p><strong>Every notification the App sends is local.</strong> It is scheduled and posted on your own device by the platform's notification system (iOS local notifications on iPhone, Android notification channels on Android). We do not send remote push notifications, and the App is never registered with a push service. There is no device token, no push identifier, and no subscriber list. Nobody, including us, can tell whether your device has notifications turned on.</p>
+
+        <p>The App can post notifications for:</p>
+        <ul>
+            <li>Reminders you create yourself: C&amp;P exam reminders, claim milestones, VSO appointment reminders, and the optional daily symptom check-in</li>
+            <li>A follow-up after a VSO appointment you scheduled, asking how the visit went</li>
+            <li>Optional update alerts, described below</li>
+        </ul>
+
+        <h3>Update alerts, and why they are still local</h3>
+        <p>If you turn them on, the App can notify you when VA pay rates change and when new claim guides are added. This is off unless you choose it, and it works without collecting anything.</p>
+        <p>Rather than us pushing a message to your phone, your device reads a public list of announcements the same way it reads any other reference content, compares it against a number kept locally on your device, and posts the notification itself. The request is anonymous and carries no identifier. We never learn that your device checked, that it showed you anything, or that you opted in at all. If you turn the feature off, nothing needs to be revoked on our end, because nothing was ever registered.</p>
+        <p>Announcements can only link to screens inside the App. They cannot open an outside website.</p>
+
+        <p>Reminder content and timing are stored only on your device. You can turn update alerts on or off in the App under Profile, and you can disable notifications entirely under <strong>iOS:</strong> Settings &rarr; VA Ready &rarr; Notifications, or <strong>Android:</strong> Settings &rarr; Apps &rarr; Vet Ready &rarr; Notifications.</p>
 
         <h2>How We Use Information</h2>
         <p>The information stored on your device is used solely to:</p>
@@ -137,7 +153,7 @@
         <p>The App (VA Ready / Vet Ready) is designed for U.S. military veterans and service members. We do not knowingly collect information from children under 13. If you believe a child has provided us with personal information, please contact us and we will address it immediately.</p>
 
         <h2>Website Analytics</h2>
-        <p>Our marketing website (vareadyapp.com) uses privacy-friendly, cookieless analytics (Vercel Web Analytics) to measure aggregate traffic &mdash; things like page views, top pages, referring sites, country, and device type. It does <strong>not</strong> use cookies, does not track you across sites, does not build an advertising profile, and never identifies you as an individual. This applies only to the website; the App itself contains no analytics SDKs and continues to keep your profile and claim data on your device as described above.</p>
+        <p>Our marketing website (vareadyapp.com) uses privacy-friendly, cookieless analytics (Vercel Web Analytics) to measure aggregate traffic, things like page views, top pages, referring sites, country, and device type. It does <strong>not</strong> use cookies, does not track you across sites, does not build an advertising profile, and never identifies you as an individual. This applies only to the website; the App itself contains no analytics SDKs and continues to keep your profile and claim data on your device as described above.</p>
 
         <h2>Changes to This Policy</h2>
         <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy in the app and on this page with an updated "Last updated" date.</p>
