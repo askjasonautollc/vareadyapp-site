@@ -11,7 +11,7 @@ os.makedirs(PAYDIR, exist_ok=True)
 def esc(s): return html.escape(str(s) if s is not None else "", quote=True)
 def money(v):
     try: return "$" + "{:,.2f}".format(float(v))
-    except: return ", "
+    except: return "N/A"
 
 COMP = {r["rating_pct"]: r for r in json.load(open(os.path.join(HERE,"data","compensation_rates.json")))}
 SMC = json.load(open(os.path.join(HERE,"data","smc_rates.json")))
@@ -101,7 +101,7 @@ def rating_page(p):
     canon = f"https://vareadyapp.com/va-disability-pay/{p}-percent.html"
     alone = money(r["veteran_alone"])
     has_dep = p >= 30
-    title = f"{p}% VA Disability Pay ({YEAR}). Monthly Amount With & Without Dependents"
+    title = f"{p}% VA Disability Pay ({YEAR}): Monthly Amount With & Without Dependents"
     if has_dep:
         desc = f"{p}% VA disability pays {alone}/month for a veteran alone in {YEAR} (effective Dec 1, 2025), more with dependents. Full {p}% rate table by spouse, children, and parents."
     else:
@@ -177,7 +177,7 @@ def rating_page(p):
 # ---------- flagship full chart ----------
 def flagship():
     canon = "https://vareadyapp.com/va-disability-pay-rates.html"
-    title = f"{YEAR} VA Disability Pay Rates. Full Monthly Compensation Chart"
+    title = f"{YEAR} VA Disability Pay Rates: Monthly Compensation Chart"
     desc = f"The {YEAR} VA disability pay chart (effective Dec 1, 2025): monthly compensation for every rating 10%–100%, alone and with dependents. Verified against VA.gov."
     desc = desc[:160]
     # main table: ratings x key dependent columns

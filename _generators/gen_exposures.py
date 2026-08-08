@@ -17,6 +17,26 @@ COND_SLUG = {"6260":"tinnitus","9411":"ptsd","5237":"back-pain","5260":"knee-pai
 "5257":"knee-instability","7806":"eczema","6602":"asthma","8520":"sciatica","5242":"degenerative-disc-disease",
 "6100":"hearing-loss","7101":"hypertension","7346":"gerd-acid-reflux","7913":"diabetes","7805":"scars"}
 
+# Short topic per page, used for the <title>, the meta description and the hub
+# card. Explicit on purpose: this used to be derived by splitting the h1 on an
+# em dash, so editing the h1 silently rewrote the title. It also keeps titles
+# near the ~60 chars Google actually renders, instead of the 100+ the derived
+# version produced.
+TOPICS = {
+    "agent-orange":       "Agent Orange Exposure",
+    "burn-pits-pact-act": "Burn Pits & the PACT Act",
+    "camp-lejeune":       "Camp Lejeune Water Contamination",
+    "gulf-war-illness":   "Gulf War Illness",
+    "afff-pfas":          "AFFF / PFAS Firefighting Foam",
+    "k2-karshi-khanabad": "K2 (Karshi-Khanabad) Air Base",
+    "asbestos":           "Military Asbestos Exposure",
+    "radiation":          "Radiation & Atomic Veterans",
+    "depleted-uranium":   "Depleted Uranium (DU)",
+    "jet-fuel-petroleum": "Jet Fuel & Petroleum (JP-8)",
+    "fort-mcclellan":     "Fort McClellan Exposure",
+    "project-112-shad":   "Project 112 / Project SHAD",
+}
+
 # 12 marquee pages: slug, h1, lede, and the exposure_name substrings that feed it
 PAGES = [
  ("agent-orange","Agent Orange Exposure & VA Presumptive Conditions",
@@ -106,7 +126,7 @@ def page(slug, h1, lede, matches):
             if t in dseen: continue
             dseen.add(t); docs.append(d)
     authority = next((r.get("presumptive_authority") for r in rows if r.get("presumptive_authority")), None)
-    topic = h1.split("—")[0].split("(")[0].strip()
+    topic = TOPICS.get(slug) or h1.split(".")[0].split("(")[0].strip()
     desc = f"{topic}: who qualifies, the VA presumptive conditions, and how to file a claim. " + (f"{len(conds)} presumptive conditions. " if conds else "") + "Free VA rating tools."
     desc = desc[:160]
     # who's covered
@@ -211,7 +231,7 @@ def hub():
         rows=[r for r in ROWS if any(m in r["exposure_name"] for m in matches)]
         nc=len({(c.get("dc"),c.get("name")) for r in rows for c in (r.get("presumptive_conditions") or [])})
         pact=any(r.get("is_pact_eligible") for r in rows)
-        topic=h1.split("—")[0].split("(")[0].strip()
+        topic=TOPICS.get(slug) or h1.split(".")[0].split("(")[0].strip()
         sub=f'{nc} presumptive conditions' + (' &middot; PACT Act' if pact else '')
         cards+=f'<div class="hub-card"><a href="/exposures/{slug}.html">{esc(topic)}</a><p>{sub}</p></div>'
     desc="Military toxic exposures and VA presumptive conditions: Agent Orange, burn pits & the PACT Act, Camp Lejeune, Gulf War Illness, AFFF/PFAS, K2, asbestos, and radiation. Who qualifies and how to file."

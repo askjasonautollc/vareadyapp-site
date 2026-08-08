@@ -48,7 +48,7 @@ FOOTER = """<footer>
 DLBTNS = """<div class="btns"><a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a><a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn ghost">Get Vet Ready for Android</a></div>"""
 
 canon = "https://vareadyapp.com/founders.html"
-title = "About VA Ready. Built by a Retired Army Chief Who Filed His Own Claim"
+title = "About VA Ready: Built by a Retired Army Chief Who Filed His Own Claim"
 desc = "VA Ready was built by Jason, a retired U.S. Army Chief Warrant Officer who filed his own claim to 100% P&T. The story behind the app, chief to soldier."
 desc = desc[:160]
 
