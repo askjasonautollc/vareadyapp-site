@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VA Disability Calculator (2026): Combined Rating &amp; Monthly Pay</title>
-    <meta name="description" content="Free VA disability calculator. Combine your ratings the way the VA actually does it, apply the bilateral factor, and see your 2026 monthly pay. No login.">
-    <meta name="keywords" content="VA disability calculator, VA combined rating calculator, VA disability pay calculator 2026, VA math, bilateral factor, VA compensation with dependents, VA Ready">
+    <title>VA Disability Calculator (2026): Combined Rating, Pay &amp; the 38 CFR Criteria</title>
+    <meta name="description" content="Free VA disability calculator. Combine your ratings the way the VA actually does it, apply the bilateral factor, and see your 2026 monthly pay. The only one that also shows the 38 CFR rating criteria behind every condition, so you are not guessing at a number. No login.">
+    <meta name="keywords" content="VA disability calculator, VA combined rating calculator, VA disability pay calculator 2026, VA math, bilateral factor, VA compensation with dependents, VA rating criteria, 38 CFR rating criteria, VA rating breakpoints, VA Ready">
     <meta name="author" content="JDL Software LLC">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="theme-color" content="#0a0f1a">
@@ -16,7 +16,7 @@
     <meta property="og:site_name" content="VA Ready">
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="VA Disability Calculator (2026): Combined Rating &amp; Monthly Pay">
-    <meta property="og:description" content="Combine your ratings with the VA's real math, apply the bilateral factor, and estimate your 2026 monthly pay with dependents. Free, no login.">
+    <meta property="og:description" content="Combine your ratings with the VA's real math, then see the 38 CFR criteria behind every rating level. The only VA calculator that shows you why a condition sits where it does. Free, no login.">
     <meta property="og:image" content="https://vareadyapp.com/logo.png">
     <meta property="og:image:width" content="1024">
     <meta property="og:image:height" content="1024">
@@ -25,7 +25,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="VA Disability Calculator (2026): Combined Rating &amp; Monthly Pay">
-    <meta name="twitter:description" content="Combine your ratings the way the VA really does it, with bilateral factor and 2026 dependent pay. Free. Nothing leaves your browser.">
+    <meta name="twitter:description" content="Combine your ratings the way the VA really does it, then read the 38 CFR criteria behind every level. Free. Nothing leaves your browser.">
     <meta name="twitter:image" content="https://vareadyapp.com/logo.png">
     <meta name="twitter:image:alt" content="VA Ready app icon">
 
@@ -83,6 +83,26 @@
           "@type": "Question",
           "name": "How accurate is this VA disability calculator?",
           "acceptedAnswer": { "@type": "Answer", "text": "The combined-rating math follows 38 CFR 4.25 exactly, and the pay figures use the published 2026 VA rates. It is an estimate. Your actual award depends on the VA's decision, your effective date, and factors like SMC. This tool is not affiliated with the VA." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know what rating percentage my condition qualifies for?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Every condition in 38 CFR Part 4 has written rating criteria at each percentage, called break points. A rating is assigned by matching your documented symptoms to the criteria for that level, not by estimating a number. For example, PTSD under 38 CFR 4.130 has break points at 0, 10, 30, 50, 70 and 100 percent, each with its own description of occupational and social impairment. The VA Ready app carries these criteria for all 762 conditions in the schedule so you can read the exact language for each level." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are VA rating break points?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A break point is the specific percentage level in the rating schedule with its own written criteria. Conditions do not scale smoothly; they jump between defined levels. Knowing where the break points fall for your condition tells you what evidence would support the next level, which is the difference between guessing at a rating and documenting one." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is it so hard to go from 80 percent to 100 percent?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Because of how 38 CFR 4.25 combines ratings. At 80 percent you have 20 percent of healthy value left, so a new 30 percent condition only adds 30 percent of that remaining 20, which is 6 points. You reach 86, which rounds to 90. Getting to 100 schedular usually takes either a single high rating or several substantial ones, which is also why TDIU exists for veterans who cannot work but do not reach 100 on the schedule." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a VA disability calculator tell me what rating I will get?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No, and be careful with any tool that claims it can. A calculator can combine ratings you already have and show you the published criteria for each level. Your actual rating depends on your medical evidence, your C&P exam, and the rater's application of the criteria to your file. The useful question is not what will I get, it is which criteria do my documented symptoms actually meet." }
         }
       ]
     }
@@ -147,6 +167,19 @@
         section.content { padding: 18px 0; }
         h2.sec { font-size: 24px; font-weight: 900; margin: 22px 0 10px; letter-spacing: -0.3px; }
         section.content p { color: var(--tan); font-size: 15.5px; margin-bottom: 12px; }
+        .crit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin: 18px 0 20px; }
+        .crit-card { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+        .crit-card img { display: block; width: 100%; height: auto; border-bottom: 1px solid var(--line); }
+        .crit-card figcaption { padding: 13px 15px 15px; font-size: 13px; line-height: 1.6; color: var(--tan); }
+        .crit-card figcaption strong { color: #fff; display: block; margin-bottom: 3px; }
+        .guardrail { background: rgba(217,166,33,0.07); border: 1px solid rgba(217,166,33,0.3); border-left-width: 3px; border-radius: 10px; padding: 15px 17px; margin: 18px 0 8px; font-size: 14px; line-height: 1.7; color: var(--tan); }
+        .guardrail strong { color: var(--gold); display: block; margin-bottom: 4px; }
+        .crit-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 9px; margin: 14px 0 12px; }
+        .crit-links a { display: flex; justify-content: space-between; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 11px 13px; font-size: 14px; font-weight: 700; color: #fff; text-decoration: none; transition: border-color .15s ease, transform .15s ease; }
+        .crit-links a:hover { border-color: rgba(217,166,33,0.55); transform: translateY(-2px); }
+        .crit-links a span { font-size: 11px; font-weight: 700; color: var(--gold); letter-spacing: 0.4px; white-space: nowrap; }
+        .crit-more { font-size: 14px; color: var(--tan); margin-bottom: 6px; }
+        .crit-more a { color: var(--gold); font-weight: 700; }
         .example { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; margin: 12px 0; font-size: 14.5px; color: var(--tan); }
         .example strong { color: var(--white); }
         ul.lift { list-style: none; margin: 6px 0 14px; }
@@ -182,7 +215,7 @@
     <header class="hero">
         <div class="eyebrow">Free &middot; No login &middot; 2026 rates</div>
         <h1>VA Disability Calculator</h1>
-        <p class="lede">The VA combines your ratings. It does not add them. Enter what you've been rated below to see your true combined percentage, the bilateral factor, and your 2026 monthly pay with dependents.</p>
+        <p class="lede">The VA combines your ratings. It does not add them. Enter what you've been rated below to see your true combined percentage, the bilateral factor, and your 2026 monthly pay with dependents. Then see the part other calculators leave out: <strong style="color:var(--gold);">the 38 CFR criteria behind every rating level</strong>, so you know why a condition sits where it does.</p>
     </header>
 
     <div class="wrap">
@@ -201,6 +234,64 @@
         </div>
 
         <section class="content">
+            <h2 class="sec">The part most calculators skip: the criteria</h2>
+            <p>Any calculator can combine percentages. The number is the easy half. The half that decides your claim is <strong>why</strong> a condition is rated 30 and not 50, and that lives in the rating criteria of 38 CFR Part 4, written break point by break point.</p>
+            <p>VA Ready carries those criteria for all <strong>762</strong> conditions in the schedule. You pick the level that matches your symptoms, in the VA's own words, instead of guessing at a percentage and hoping.</p>
+
+            <div class="crit-grid">
+                <figure class="crit-card">
+                    <img src="img/app-criteria.jpg" alt="VA Ready showing the 38 CFR 4.130 rating criteria for PTSD, diagnostic code 9411, listing the 0, 10, 30, 50, 70 and 100 percent break points in full with 50 percent selected." width="900" height="1295" loading="lazy" decoding="async">
+                    <figcaption><strong>Read the break points, then choose.</strong> PTSD under 38 CFR 4.130, every level quoted in full. This is the language your rater applies to your file.</figcaption>
+                </figure>
+                <figure class="crit-card">
+                    <img src="img/app-combined.jpg" alt="VA Ready showing a 100 percent combined rating with a step-by-step breakdown of how each condition was combined under 38 CFR 4.25, including the bilateral factor under 38 CFR 4.26." width="900" height="1295" loading="lazy" decoding="async">
+                    <figcaption><strong>Then watch the math run.</strong> Every combine step shown and cited, including the bilateral factor. Nothing hidden in a black box.</figcaption>
+                </figure>
+            </div>
+
+            <div class="guardrail">
+                <strong>What this does, and what it will not do.</strong> This is an educational tool. It shows you the published criteria and runs the published math. It does not predict what the VA will award you, because your rating depends on your evidence, your exam, and the rater's judgment. Anyone promising you a number is guessing. Knowing the criteria is how you stop guessing along with them.
+            </div>
+
+            <h2 class="sec">See the criteria for the most-claimed conditions</h2>
+            <p>Each page below lists the full rating criteria for that condition, break point by break point, with its diagnostic code and the CFR section it comes from. Free to read, no account.</p>
+            <div class="crit-links">
+                <a href="conditions/ptsd.html">PTSD <span>DC 9411</span></a>
+                <a href="conditions/tinnitus.html">Tinnitus <span>DC 6260</span></a>
+                <a href="conditions/sleep-apnea.html">Sleep Apnea <span>DC 6847</span></a>
+                <a href="conditions/back-pain.html">Back Pain <span>DC 5237</span></a>
+                <a href="conditions/knee-pain.html">Knee Pain <span>DC 5260</span></a>
+                <a href="conditions/migraines.html">Migraines <span>DC 8100</span></a>
+                <a href="conditions/hearing-loss.html">Hearing Loss <span>DC 6100</span></a>
+                <a href="conditions/depression.html">Depression <span>DC 9434</span></a>
+                <a href="conditions/sciatica.html">Sciatica <span>DC 8520</span></a>
+                <a href="conditions/shoulder.html">Shoulder <span>DC 5201</span></a>
+                <a href="conditions/gerd-acid-reflux.html">GERD <span>DC 7346</span></a>
+                <a href="conditions/degenerative-disc-disease.html">Degenerative Disc <span>DC 5242</span></a>
+                <a href="conditions/hypertension.html">Hypertension <span>DC 7101</span></a>
+                <a href="conditions/diabetes.html">Diabetes <span>DC 7913</span></a>
+                <a href="conditions/asthma.html">Asthma <span>DC 6602</span></a>
+                <a href="conditions/eczema.html">Eczema <span>DC 7806</span></a>
+                <a href="conditions/arthritis.html">Arthritis <span>DC 5003</span></a>
+                <a href="conditions/ankle.html">Ankle <span>DC 5271</span></a>
+                <a href="conditions/knee-instability.html">Knee Instability <span>DC 5257</span></a>
+                <a href="conditions/scars.html">Scars <span>DC 7805</span></a>
+                <a href="conditions/tmj.html">TMJ <span>DC 9905</span></a>
+            </div>
+            <p class="crit-more"><a href="conditions.html">Browse all condition guides &rarr;</a> &nbsp;&middot;&nbsp; The app carries the full schedule, all <strong>762</strong> diagnostic codes, each with its criteria.</p>
+
+            <h2 class="sec">Then hand your VSO a packet, not a story</h2>
+            <p>Knowing your criteria only helps if the person filing your claim can see it. Most veterans walk into a VSO appointment and try to remember eight years of history out loud. VA Ready builds the packet instead, and you choose what goes in it:</p>
+            <ul class="lift">
+                <li><strong>Conditions and ratings</strong>, each with its diagnostic code, the criteria level you selected, and where your evidence stands</li>
+                <li><strong>Presumptives from your exposures</strong>, matched from the bases and aircraft you actually served on</li>
+                <li><strong>Symptom log summary</strong>, the dated frequency-and-severity record a C&amp;P examiner is looking for</li>
+                <li><strong>Exam Questionnaire answers</strong>, in your own words, written before you are put on the spot</li>
+                <li><strong>Journal timeline</strong>, with any evidence you have gathered but not yet sent flagged</li>
+            </ul>
+            <p>It prints with your full service history on the cover, each period of service listed separately with its branch and component, because a rep cannot apply 38 CFR 3.6 to Active, Reserve and Guard time if they are collapsed into one date range.</p>
+            <p class="crit-more">The packet builder is part of <strong>Pro</strong>. The calculator, the criteria and the condition guides are free, always.</p>
+
             <h2 class="sec">How VA combined ratings work</h2>
             <p>Most veterans assume the VA adds their ratings. It does not. Under <strong>38 CFR 4.25</strong>, the VA combines them. Each condition counts against the healthy percentage you have left, and the total is rounded to the nearest 10 percent.</p>
             <div class="example">
@@ -213,10 +304,10 @@
             <p>This page does one thing: it combines ratings you already have. VA Ready does the rest.</p>
             <div class="appshot"><picture><source srcset="img/app-my-claim.webp" type="image/webp"><img src="img/app-my-claim.png" alt="VA Ready My Claim screen showing a 90% combined VA disability rating with conditions and real VA math" width="680" height="1374" loading="lazy"></picture></div>
             <ul class="lift">
-                <li>Rates every condition for you, condition by condition, with the real 38 CFR criteria for 760 conditions</li>
+                <li>Rates every condition for you, condition by condition, with the real 38 CFR criteria for 762 conditions</li>
                 <li>Finds what you can claim from your bases and your job, duty station by duty station: PACT Act, Camp Lejeune, Agent Orange, AFFF</li>
                 <li>Flags secondary conditions, pyramiding traps, and the bilateral splits that move your rating</li>
-                <li>Links peer-reviewed research to your conditions and builds a claim summary for your VSO</li>
+                <li>Links peer-reviewed research to your conditions, then builds the VSO packet described above</li>
             </ul>
             <p style="color: var(--white); font-weight: 700; font-size: 16px;">Condition by condition. Duty station by duty station. Download VA Ready free, and with Pro, export the VSO-ready Claim Summary and Exposure Profile PDFs you bring to file.</p>
             <div class="btns">
@@ -241,6 +332,22 @@
             <div class="faq-item">
                 <h3>How accurate is this?</h3>
                 <p>The combined-rating math follows 38 CFR 4.25 exactly, and the pay figures use the published 2026 rates. It's an estimate. Your actual award depends on the VA's decision, your effective date, and factors like SMC.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do I know what rating percentage my condition qualifies for?</h3>
+                <p>Every condition in 38 CFR Part 4 has written criteria at each percentage, called break points. A rating is assigned by matching your documented symptoms to the criteria for that level, not by estimating a number. PTSD under 38 CFR 4.130, for example, has break points at 0, 10, 30, 50, 70 and 100 percent, each with its own description of occupational and social impairment. VA Ready carries these criteria for all 762 conditions so you can read the exact language for each level.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What are VA rating break points?</h3>
+                <p>A break point is a specific percentage level in the rating schedule that has its own written criteria. Conditions do not scale smoothly, they jump between defined levels. Knowing where the break points fall for your condition tells you what evidence would support the next level, which is the difference between guessing at a rating and documenting one.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Why is it so hard to go from 80 percent to 100 percent?</h3>
+                <p>Because of how 38 CFR 4.25 combines ratings. At 80 percent you have 20 percent of healthy value left, so a new 30 percent condition adds only 30 percent of that remaining 20, which is 6 points. You reach 86, which rounds to 90. Getting to 100 schedular usually takes either one high rating or several substantial ones, which is also why TDIU exists for veterans who cannot work but do not reach 100 on the schedule.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can a VA disability calculator tell me what rating I will get?</h3>
+                <p>No, and be careful with any tool that claims it can. A calculator can combine ratings you already have and show you the published criteria for each level. Your actual rating depends on your medical evidence, your C&amp;P exam, and how the rater applies the criteria to your file. The useful question is not "what will I get," it is "which criteria do my documented symptoms actually meet."</p>
             </div>
         </section>
 

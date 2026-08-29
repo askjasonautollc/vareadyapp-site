@@ -125,7 +125,7 @@ FOOTER = """<footer>
 APP_CTA = """<div class="cta">
     <h3>Rate this condition in the VA Ready app</h3>
     <p>Free, no account: pick this condition, see the exact 38 CFR criteria, and watch your combined rating update with real VA math, plus the 50+ filing guides and a personalized timeline.</p>
-    <div class="cta-pro"><span class="pro-pill">With Pro</span><p>Walk away with a <strong>VSO-ready Claim Summary PDF</strong> (peer-reviewed evidence appendix), an <strong>Exposure Profile PDF</strong> of every presumptive your service earned, and the full criteria for all 760 conditions.</p></div>
+    <div class="cta-pro"><span class="pro-pill">With Pro</span><p>Walk away with a <strong>VSO-ready Claim Summary PDF</strong> (peer-reviewed evidence appendix), an <strong>Exposure Profile PDF</strong> of every presumptive your service earned, and the full criteria for all 762 conditions.</p></div>
     <div class="btns"><a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a><a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn ghost">Get Vet Ready for Android</a></div>
 </div>"""
 DISCLAIMER = """<div class="disclaimer">This page is for general informational purposes only and is not legal or medical advice. Rating criteria are summarized from 38 CFR Part 4; the VA determines actual ratings based on your evidence and exam. VA Ready is not affiliated with the U.S. Department of Veterans Affairs. Always verify current criteria at VA.gov and consult a VA-accredited representative.</div>"""
@@ -321,7 +321,7 @@ def hub():
     <div class="lib-hero">
         <div class="lib-num"><strong>760</strong><span>Conditions in the app</span></div>
         <div class="lib-body">
-            <p>This page details the <strong>{n_top} most-claimed</strong> conditions. The free VA Ready app carries the <strong>complete library, all 760 diagnostic codes</strong> in 38 CFR Part 4, fully searchable, each with its exact rating criteria and your combined rating calculated as you add them.</p>
+            <p>This page details the <strong>{n_top} most-claimed</strong> conditions. The free VA Ready app carries the <strong>complete library, all 762 diagnostic codes</strong> in 38 CFR Part 4, fully searchable, each with its exact rating criteria and your combined rating calculated as you add them.</p>
             <div class="btns"><a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a><a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn ghost">Get Vet Ready for Android</a></div>
         </div>
     </div>
