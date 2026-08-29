@@ -60,8 +60,8 @@
       "softwareVersion": "1.8.4",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "ratingCount": "225",
+        "ratingValue": "4.8",
+        "ratingCount": "547",
         "bestRating": "5",
         "worstRating": "1"
       },
@@ -251,6 +251,22 @@
         .cs-card figcaption strong { color: var(--white); display: block; margin-bottom: 3px; }
         .cs-guard { font-size: 12.5px; color: var(--gray); max-width: 620px; margin: 0 auto 20px; line-height: 1.7; border-top: 1px solid var(--line); padding-top: 16px; }
         .cs-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+        .revs { padding: 10px 24px 30px; max-width: 1080px; margin: 0 auto; }
+        .revs-head { display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; margin-bottom: 20px; }
+        .revs-score { display: flex; align-items: baseline; gap: 8px; }
+        .revs-score .num { font-size: 46px; font-weight: 900; color: var(--gold); line-height: 1; }
+        .revs-score .of { font-size: 14px; color: var(--gray); }
+        .revs-meta { text-align: left; }
+        .revs-stars { color: var(--gold); font-size: 17px; letter-spacing: 2px; }
+        .revs-count { font-size: 13px; color: var(--tan); }
+        .revs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+        .rev { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+        .rev .rt { font-size: 15px; font-weight: 800; color: var(--white); margin-bottom: 4px; }
+        .rev .rs { color: var(--gold); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 8px; }
+        .rev p { font-size: 14px; line-height: 1.65; color: var(--tan); margin-bottom: 10px; }
+        .rev .rby { font-size: 11.5px; color: var(--gray); }
+        .revs-note { text-align: center; font-size: 12px; color: var(--gray); margin-top: 16px; }
+        .revs-note a { color: var(--gold); font-weight: 700; }
         .eyebrow-v { color: var(--gold); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
         .nav-cta {
             background: var(--gold); color: var(--navy); padding: 8px 20px;
@@ -1006,6 +1022,40 @@
             <a href="va-disability-calculator.html" class="btn-primary">Open the free calculator &rarr;</a>
             <a href="#download" class="btn-secondary">Get the app free</a>
         </div>
+    </section>
+
+    <!-- APP STORE RATING + REVIEWS -->
+    <section class="revs">
+        <div class="revs-head">
+            <div class="revs-score">
+                <span class="num">4.8</span><span class="of">out of 5</span>
+            </div>
+            <div class="revs-meta">
+                <div class="revs-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="revs-count">547 ratings on the App Store</div>
+            </div>
+        </div>
+        <div class="revs-grid">
+            <blockquote class="rev">
+                <div class="rt">Recent Updates</div>
+                <div class="rs" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>&ldquo;The updates to the app recently have been fantastic. The ability to document your evidence, make notations, and review your conditions&hellip;&rdquo;</p>
+                <div class="rby">ChubbyButFunny &middot; Aug 21</div>
+            </blockquote>
+            <blockquote class="rev">
+                <div class="rt">Life changer</div>
+                <div class="rs" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>&ldquo;This app is great. Tracks all your claims and helps you making sure you do not forget any appointments along the road. Definitely download it if you are about to separate / retire from the Military.&rdquo;</p>
+                <div class="rby">TreborG89 &middot; Apr 22</div>
+            </blockquote>
+            <blockquote class="rev">
+                <div class="rt">Most detailed</div>
+                <div class="rs" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>&ldquo;This app is it. The one that hits every function of a claim. Not only just conditions. But what I was missing out on by MOS.&rdquo;</p>
+                <div class="rby">DanielJ87 &middot; Apr 12</div>
+            </blockquote>
+        </div>
+        <p class="revs-note">Ratings and reviews from the <a href="https://apps.apple.com/app/id6761733758">App Store</a>, where veterans left them. Nothing here is solicited or incentivized.</p>
     </section>
 
     <!-- EVIDENCE / RECORD-KEEPING SHOWCASE -->
