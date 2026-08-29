@@ -259,7 +259,7 @@ def hub():
     <div class="crumb"><a href="/index.html">Home</a> / Toxic Exposures</div>
     <div class="eyebrow">By Exposure</div>
     <h1>Military Toxic Exposures &amp; Presumptive Conditions</h1>
-    <p class="lede">If you were exposed to toxic substances in service, VA may presume certain conditions are service-connected, meaning you don't have to prove the link. Here are the major exposures, who qualifies, the presumptive conditions, and how to file. The VA Ready app maps every base and aircraft you served on to the exposures you may have earned.</p>
+    <p class="lede">If you were exposed to toxic substances in service, VA may presume certain conditions are service-connected, meaning you don't have to prove the link. Here are the major exposures, who qualifies, the presumptive conditions, and how to file. The VA Ready app maps every base, ship, aircraft and vehicle you served on to the exposures you may have earned.</p>
     <div class="hub-sec"><div class="hub-grid">{cards}</div></div>
     {APP_CTA}
     <p class="trustline">More from VA Ready: <a href="/conditions.html">ratings by condition</a> &middot; <a href="/va-disability-pay-rates.html">pay rates</a> &middot; <a href="/states.html">state benefits</a></p>
