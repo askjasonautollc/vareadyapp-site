@@ -39,7 +39,7 @@ HERO_1600 = "/img/community-liberty-county-jumbotron-1600.webp"
 HERO_900 = "/img/community-liberty-county-jumbotron-900.webp"
 OG_IMG = "/img/community-liberty-county-jumbotron-og.jpg"
 HERO_ALT = "The Liberty County High School video board at Donell Woods Stadium showing a VA Ready and Vet Ready sponsor ad during a Panthers home game"
-CAPTION = "Donell Woods Stadium, Liberty County High School, September 2026. VA Ready and Vet Ready on the video board during a Panthers home game."
+CAPTION = "Our name on the video board during a Panthers home game, September 2026. Donell Woods Stadium, Liberty County High School."
 
 CSS = chrome("CSS") + """
     h1, article h2, .pull-q { font-family:Georgia,'Times New Roman',Times,serif; }
@@ -64,6 +64,9 @@ CSS = chrome("CSS") + """
     .soft-close .stores span { color:var(--gray); margin:0 10px; }
     .soft-close .note { color:var(--gray); font-size:13px; }
     footer .compliance { max-width:720px; margin:0 auto 14px; color:var(--tan); font-size:12.5px; line-height:1.65; }
+    .sig { margin:34px 0 0; padding-top:16px; border-top:1px solid var(--line); }
+    .sig .sig-name { color:var(--white); font-weight:800; font-size:17px; }
+    .sig .sig-role { color:var(--tan); font-size:14px; }
     @media (max-width:720px){ .facts { grid-template-columns:1fr 1fr; } }
     @media (max-width:620px){ .support { grid-template-columns:1fr; } }
     @media (max-width:560px){ h1 { font-size:30px; } article h2 { font-size:23px; } .pull-q { font-size:21px; } }
@@ -104,8 +107,8 @@ LD = {"@context": "https://schema.org", "@graph": [page, org, team, image, bc]}
 # ---------- body ----------
 BODY_TOP = '''<div class="crumb"><a href="/index.html">Home</a> / In the Community</div>
     <div class="eyebrow">In the Community</div>
-    <h1>We show up in person, not just on your phone.</h1>
-    <p class="lede">VA Ready is a veteran-founded company. This season, that means Friday nights in Liberty County, Georgia, with our name on the board at Donell Woods Stadium.</p>'''
+    <h1>I built this for veterans, so I show up in person.</h1>
+    <p class="lede">I&rsquo;m a retired Army Chief Warrant Officer, and I built VA Ready with a team of fellow veterans and people who know the VA claims process inside and out. This season, you&rsquo;ll find us on Friday nights in Liberty County, Georgia, with our name on the board at Donell Woods Stadium.</p>'''
 
 HERO = f'''<figure class="hero-photo">
     <img src="{HERO_1600}" srcset="{HERO_900} 900w, {HERO_1600} 1600w" sizes="(max-width:1080px) 100vw, 1036px" alt="{esc(HERO_ALT)}" width="1600" height="1000" loading="eager" fetchpriority="high" decoding="async">
@@ -114,38 +117,44 @@ HERO = f'''<figure class="hero-photo">
 
 BODY = f'''<article>
     <h2>Friday nights in Liberty County</h2>
-    <p>We sponsor the <strong>Liberty County High School Panthers</strong> football team for the full 2026 season. Every home game, our name runs on the video board at Donell Woods Stadium.</p>
-    <p>Liberty County is home to Fort Stewart. A lot of the families in those stands are military families. Plenty of the parents have served, and plenty are serving now. Those are the people we built this for, so that is where we wanted to be.</p>
+    <p>VA Ready sponsors the <strong>Liberty County High School Panthers</strong> football team for the full 2026 season. Every home game, our name runs on the video board at Donell Woods Stadium.</p>
+    <p>Liberty County is home to Fort Stewart. A lot of the families in those stands are military families. Plenty of the parents have served, and plenty are serving now. I built this for them, so that is where I wanted to be.</p>
     <dl class="facts">
       <div><dt>Team</dt><dd>Liberty County High School Panthers</dd></div>
       <div><dt>Stadium</dt><dd>Donell Woods Stadium</dd></div>
       <div><dt>Where</dt><dd>Liberty County, Georgia</dd></div>
       <div><dt>Sponsorship</dt><dd>Full 2026 season</dd></div>
     </dl>
-    <p class="pull-q">We&rsquo;d rather earn trust in the stands than buy it in an ad.</p>
+    <p class="pull-q">I&rsquo;d rather earn trust in the stands than buy it in an ad.</p>
 
-    <h2>Built by a veteran, not a marketing company</h2>
-    <p>VA Ready was not built by an agency that found a veteran angle. It was built by a retired U.S. Army Chief Warrant Officer who went through the VA claims process himself.</p>
-    <p>He dug through scattered rules, made his own checklists, and figured out the steps the hard way. Then he built the tool he wished someone had handed him. <a href="/founders.html">Read our story</a>.</p>
+    <h2>I&rsquo;m a veteran, not a marketing company</h2>
+    <p>No agency went looking for a veteran angle here. I served twenty years in the U.S. Army, retired as a Chief Warrant Officer, and went through the VA claims process myself.</p>
+    <p>I dug through scattered rules, made my own checklists, and figured out the steps the hard way. Then I built the tool I wish someone had handed me. <a href="/founders.html">Read my story</a>.</p>
+    <p>I don&rsquo;t do it alone. I built VA Ready with <strong>a team of fellow veterans and people with years of hands-on experience in the VA claims process</strong>, including helping other veterans through it. They keep the app honest about what claims really look like on the ground.</p>
 
     <h2>How we support veterans</h2>
     <div class="support">
       <div class="card">
         <h3>Free accredited help comes first</h3>
-        <p>The app points veterans to accredited Veterans Service Organizations like the DAV, the VFW, and county veterans service offices. Their help is free. <a href="/find-a-vso.html">Find a VSO near you</a>.</p>
+        <p>I built the app to point veterans to accredited Veterans Service Organizations like the DAV, the VFW, and county veterans service offices. Their help is free. <a href="/find-a-vso.html">Find a VSO near you</a>.</p>
       </div>
       <div class="card">
         <h3>Free and private</h3>
-        <p>The core tools are free, with no account. Your claim information stays on your phone. We don&rsquo;t sell your data, we don&rsquo;t take a cut of your claim, and nothing we charge is tied to your benefits.</p>
+        <p>The core tools are free, with no account. Your claim information stays on your phone. I don&rsquo;t sell your data, I don&rsquo;t take a cut of your claim, and nothing I charge is tied to your benefits.</p>
       </div>
       <div class="card">
-        <h3>We show up in person</h3>
-        <p>Liberty County is where we started. We would rather meet veterans where they already gather than chase them with ads.</p>
+        <h3>I show up in person</h3>
+        <p>Liberty County is where I started. I&rsquo;d rather meet veterans where they already gather than chase them with ads.</p>
       </div>
       <div class="card">
         <h3>Built from veteran feedback</h3>
-        <p>Veterans send reports straight from the app. We read them, check them against the primary sources, and ship the fixes. A lot of every update started as a message from a veteran.</p>
+        <p>Veterans send reports straight from the app. My team and I read them, check them against the primary sources, and ship the fixes. A lot of every update started as a message from a veteran.</p>
       </div>
+    </div>
+
+    <div class="sig">
+      <div class="sig-name">Jason, CW2, U.S. Army (Retired)</div>
+      <div class="sig-role">Founder, VA Ready &amp; Vet Ready</div>
     </div>
   </article>
 
