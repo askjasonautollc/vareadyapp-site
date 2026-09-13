@@ -51,3 +51,47 @@ curl -s "$URL/state_benefits?state_code=in.(CA,TX,FL,...)&select=*" \
 ```
 
 (See CHANGELOG entries dated 2026-06-07/08/09 for the original build details.)
+
+## Adding a community entry (In the Community feed)
+
+`gen_community.py` builds `../community.html` and the homepage teaser from
+`data/community.json`. To add an entry:
+
+1. Save the photo as `data/community/photos/<id>.jpg` (jpg, png or heic). This
+   folder is gitignored so originals, which can carry GPS or bystanders, never
+   reach the public repo. The script crops to 16:10 and strips EXIF.
+2. Add an object to `data/community.json`. File order does not matter, the feed
+   sorts newest first by `date`:
+
+```json
+{
+  "id": "short-lowercase-slug-2026",
+  "date": "2026-10-04",
+  "when": "October 2026",
+  "headline": "What happened, in a few words",
+  "location": "Place, City, GA",
+  "body": ["First paragraph.", "Optional second paragraph."],
+  "photo_alt": "Plain description of what is in the photo",
+  "photo_focus": 0.5,
+  "teaser": "Optional one-liner for the homepage card",
+  "link": { "url": "https://partner.example/", "label": "Partner name" }
+}
+```
+
+   For more than one contact, use `links` instead of `link`; they render as buttons:
+
+```json
+"links": [
+  { "url": "https://www.facebook.com/vareadyapp", "label": "Message us on Facebook" },
+  { "url": "mailto:support@vareadyapp.com", "label": "Email support@vareadyapp.com" }
+]
+```
+
+   Required: `id`, `date`, `headline`, `body`, `photo_alt`. Everything else is
+   optional. `photo_focus` moves the crop from 0 (keep the top) to 1 (keep the
+   bottom). An optional `sponsored` object (schema.org, e.g. a SportsTeam)
+   marks the thing we sponsor in the page's structured data.
+3. `python3 gen_community.py`, check `community.html` locally, commit, push.
+
+The homepage shows the newest 3 entries between the `COMMUNITY:START` and
+`COMMUNITY:END` markers in `index.html`. Do not hand-edit that block.

@@ -1,0 +1,64 @@
+[
+  {
+    "id": "veteran-discovery-flights-2026",
+    "date": "2026-09-13",
+    "when": "September to October 2026",
+    "headline": "Putting Veterans Back in the Air",
+    "location": "Runway One Nine Aviation, Waycross, GA",
+    "body": [
+      "We're sponsoring five free discovery flights for veterans in the Fort Stewart, Waycross and Kings Bay area, in partnership with Runway One Nine Aviation in Waycross, Georgia. A real aircraft and a certificated flight instructor, on us.",
+      "I soloed for the first time this summer, and I want to share that with the veterans who earned it. The FAA's MOSAIC rule, which began taking effect in October 2025, expanded the aircraft a sport pilot can fly. A discovery flight is where that path can start.",
+      "Flights run September through October 2026, scheduled with Runway One Nine Aviation. To get a seat, reach out any of these ways:"
+    ],
+    "teaser": "Five free discovery flights for veterans in the Fort Stewart, Waycross and Kings Bay area, with Runway One Nine Aviation. A real aircraft and an instructor, on us.",
+    "links": [
+      { "url": "https://www.facebook.com/vareadyapp", "label": "Message us on Facebook" },
+      { "url": "mailto:support@vareadyapp.com", "label": "Email support@vareadyapp.com" },
+      { "url": "https://runwayonenine.com/contact-us/", "label": "Contact Runway One Nine Aviation" }
+    ],
+    "photo": "veteran-discovery-flights-2026",
+    "photo_focus": 0.62,
+    "photo_alt": "VA Ready founder Jason on the ramp beside Piper Cherokee 140 N3480K, holding the signed shirttail from his first solo flight",
+    "sponsored": {
+      "@type": "Project",
+      "name": "VA Ready veteran discovery flights",
+      "description": "Five free discovery flights for veterans in the Fort Stewart, Waycross and Kings Bay area of Georgia, flown with a certificated flight instructor.",
+      "areaServed": ["Fort Stewart, Georgia", "Waycross, Georgia", "Kings Bay, Georgia"],
+      "member": {
+        "@type": "LocalBusiness",
+        "name": "Runway One Nine Aviation",
+        "url": "https://runwayonenine.com/",
+        "sameAs": ["https://www.facebook.com/runwayonenine/"],
+        "address": { "@type": "PostalAddress", "addressLocality": "Waycross", "addressRegion": "GA", "addressCountry": "US" }
+      }
+    }
+  },
+  {
+    "id": "liberty-county-panthers-2026",
+    "date": "2026-09-11",
+    "when": "2026 season",
+    "headline": "Backing the Home Team at Liberty County",
+    "location": "Donell Woods Stadium, Liberty County, GA",
+    "body": [
+      "We're sponsoring the Liberty County High School Panthers football team for the full 2026 season. Our name is on the board at Donell Woods Stadium every home game, in Fort Stewart country, in front of the military families we built VA Ready for.",
+      "We'd rather earn trust in the stands than buy it in an ad."
+    ],
+    "teaser": "Our name on the board at Donell Woods Stadium every home game, in front of the military families we built VA Ready for.",
+    "photo_alt": "The Liberty County High School video board at Donell Woods Stadium showing a VA Ready and Vet Ready sponsor ad during a Panthers home game",
+    "sponsored": {
+      "@type": "SportsTeam",
+      "name": "Liberty County High School Panthers",
+      "sport": "American football",
+      "parentOrganization": {
+        "@type": "HighSchool",
+        "name": "Liberty County High School",
+        "address": { "@type": "PostalAddress", "addressRegion": "GA", "addressCountry": "US" }
+      },
+      "location": {
+        "@type": "StadiumOrArena",
+        "name": "Donell Woods Stadium",
+        "containedInPlace": { "@type": "AdministrativeArea", "name": "Liberty County, Georgia" }
+      }
+    }
+  }
+]
