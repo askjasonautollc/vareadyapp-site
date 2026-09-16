@@ -110,7 +110,7 @@ CSS += """
 """
 
 NAV = """<nav>
-    <a href="/index.html" class="nav-brand"><img src="/logo.png" alt="VA Ready logo" width="34" height="34"><span>VA READY <span style="color:var(--gray);font-weight:400;">/</span> VET READY</span></a>
+    <a href="/index.html" class="nav-brand"><img src="/logo-96.png" alt="VA Ready logo" width="34" height="34"><span>VA READY <span style="color:var(--gray);font-weight:400;">/</span> VET READY</span></a>
     <input type="checkbox" id="nv" class="nv-cb">
     <label for="nv" class="nv-burger" aria-label="Open menu">&#9776;</label>
     <div class="nav-links"><a href="/va-disability-calculator.html">Calculator</a><a href="/conditions.html">Conditions</a><a href="/exposures.html">Exposures</a><a href="/va-disability-pay-rates.html">Pay Rates</a><a href="/states.html">State Benefits</a><a href="/federal-benefits.html">Federal Benefits</a><a href="/guides.html">Guides</a><a href="/blog.html">Blog</a><a href="/find-a-vso.html">Find a VSO</a><a href="/index.html#download">Get the App</a></div>
@@ -236,7 +236,8 @@ def cond_page(dc, slug, fname, intro):
 <meta property="og:url" content="{canon}">
 <meta property="og:image" content="https://vareadyapp.com/logo.png">
 <meta name="twitter:card" content="summary">
-<link rel="icon" type="image/png" href="/logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <script type="application/ld+json">{bc_ld}</script>
 <script type="application/ld+json">{art_ld}</script>
 <script type="application/ld+json">{faq_ld}</script>
@@ -306,7 +307,7 @@ def hub():
 <meta property="og:type" content="website"><meta property="og:site_name" content="VA Ready">
 <meta property="og:title" content="VA Disability Ratings by Condition"><meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="https://vareadyapp.com/conditions.html"><meta property="og:image" content="https://vareadyapp.com/logo.png">
-<meta name="twitter:card" content="summary"><link rel="icon" type="image/png" href="/logo.png">
+<meta name="twitter:card" content="summary"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <script type="application/ld+json">{bc}</script>
 <script type="application/ld+json">{items}</script>
 <style>{CSS}</style>

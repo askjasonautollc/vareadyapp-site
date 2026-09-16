@@ -139,7 +139,8 @@ def page(sc):
 <meta property="og:type" content="website"><meta property="og:site_name" content="VA Ready">
 <meta property="og:title" content="Find a Free Accredited VSO in {esc(sn)}"><meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{canon}"><meta property="og:image" content="https://vareadyapp.com/logo.png">
-<meta name="twitter:card" content="summary"><link rel="icon" type="image/png" href="/logo.png">
+<meta name="twitter:card" content="summary"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 {lds_html}
 <style>{CSS}</style>
 </head>
@@ -245,7 +246,7 @@ def hub():
 <meta property="og:type" content="website"><meta property="og:site_name" content="VA Ready">
 <meta property="og:title" content="Find a VSO Near Me: Free Accredited Help"><meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{canon}"><meta property="og:image" content="https://vareadyapp.com/logo.png">
-<meta name="twitter:card" content="summary"><link rel="icon" type="image/png" href="/logo.png">
+<meta name="twitter:card" content="summary"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <script type="application/ld+json">{json.dumps(bc)}</script>
 <script type="application/ld+json">{json.dumps(il)}</script>
 <script type="application/ld+json">{json.dumps(faq_ld)}</script>

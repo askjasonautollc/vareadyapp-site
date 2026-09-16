@@ -227,7 +227,8 @@ def build():
 <meta property="og:description" content="Short, plain-language videos on the VA claims process from a retired Army vet.">
 <meta property="og:url" content="{URL}">
 <meta property="og:type" content="website">
-<link rel="icon" href="/logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <style>{CSS}{extra_css}</style>
 <script type="application/ld+json">
 {schema}

@@ -26,8 +26,8 @@
     <meta name="twitter:description" content="Drill weekends cover injury only. Annual Training covers disease too. The difference decides claims.">
     <meta name="twitter:image" content="https://vareadyapp.com/img/app-guard-wizard.jpg">
 
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
     <script type="application/ld+json">
     {
@@ -178,14 +178,28 @@
         .yes { color: var(--green); font-weight:700; }
         .no { color:#e0685f; font-weight:700; }
         .tw { overflow-x:auto; }
-    </style>
+            /* Phone nav: without this the brand and the link row compete for one
+           line and the header wraps to four lines. Same checkbox pattern and
+           1100px breakpoint as index.html and the generated pages. */
+        .nav-burger { display: none; font-size: 26px; color: var(--tan); cursor: pointer; line-height: 1; padding: 2px 6px; user-select: none; }
+        .nav-toggle-cb { display: none; }
+        @media (max-width: 1100px) {
+            nav { flex-wrap: wrap; }
+            .nav-burger { display: block; }
+            .nav-links { display: none; flex-basis: 100%; flex-direction: column; align-items: stretch; margin-top: 10px; }
+            .nav-toggle-cb:checked ~ .nav-links { display: flex; }
+            .nav-links a { display: block; margin-left: 0; padding: 12px 2px; border-top: 1px solid var(--line); font-size: 15px; }
+        }
+</style>
 </head>
 <body>
     <nav>
         <a href="index.html" class="nav-brand">
-            <img src="logo.png" alt="VA Ready and Vet Ready logo" width="34" height="34">
+            <img src="/logo-96.png" alt="VA Ready and Vet Ready logo" width="34" height="34">
             <span>VA READY <span style="color: var(--gray); font-weight: 400;">/</span> VET READY</span>
         </a>
+        <input type="checkbox" id="navToggle" class="nav-toggle-cb">
+        <label for="navToggle" class="nav-burger" aria-label="Open menu">&#9776;</label>
         <div class="nav-links">
             <a href="va-disability-calculator.html">Calculator</a>
             <a href="va-claim-evidence.html">Document Your Claim</a>

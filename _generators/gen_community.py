@@ -284,8 +284,8 @@ PAGE = f'''<!DOCTYPE html>
 <meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{OG_IMG}">
 <meta name="twitter:image:alt" content="{esc(newest["photo_alt"])}">
-<link rel="icon" type="image/png" href="/logo.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="preload" as="image" href="{img_url(newest, "1600.webp")}" imagesrcset="{img_url(newest, "900.webp")} 900w, {img_url(newest, "1600.webp")} 1600w" imagesizes="(max-width:760px) 100vw, 716px">
 <script type="application/ld+json">{json.dumps(LD)}</script>
 <style>{CSS}</style>

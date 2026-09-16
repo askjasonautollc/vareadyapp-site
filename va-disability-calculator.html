@@ -29,8 +29,8 @@
     <meta name="twitter:image" content="https://vareadyapp.com/logo.png">
     <meta name="twitter:image:alt" content="VA Ready app icon">
 
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
     <!-- JSON-LD: Breadcrumb -->
     <script type="application/ld+json">
@@ -197,14 +197,28 @@
         @media (max-width: 560px) { h1 { font-size: 28px; } .cond-row { flex-wrap: wrap; } }
         .appshot { max-width:300px; margin:22px auto 26px; background:#05070d; padding:7px; border-radius:26px; border:1px solid rgba(255,255,255,0.1); box-shadow:0 24px 60px -24px rgba(0,0,0,0.8); }
         .appshot img { display:block; width:100%; height:auto; border-radius:20px; }
-    </style>
+            /* Phone nav: without this the brand and the link row compete for one
+           line and the header wraps to four lines. Same checkbox pattern and
+           1100px breakpoint as index.html and the generated pages. */
+        .nav-burger { display: none; font-size: 26px; color: var(--tan); cursor: pointer; line-height: 1; padding: 2px 6px; user-select: none; }
+        .nav-toggle-cb { display: none; }
+        @media (max-width: 1100px) {
+            nav { flex-wrap: wrap; }
+            .nav-burger { display: block; }
+            .nav-links { display: none; flex-basis: 100%; flex-direction: column; align-items: stretch; margin-top: 10px; }
+            .nav-toggle-cb:checked ~ .nav-links { display: flex; }
+            .nav-links a { display: block; margin-left: 0; padding: 12px 2px; border-top: 1px solid var(--line); font-size: 15px; }
+        }
+</style>
 </head>
 <body>
     <nav>
         <a href="index.html" class="nav-brand">
-            <img src="logo.png" alt="VA Ready and Vet Ready logo" width="34" height="34">
+            <img src="/logo-96.png" alt="VA Ready and Vet Ready logo" width="34" height="34">
             <span>VA READY <span style="color: var(--gray); font-weight: 400;">/</span> VET READY</span>
         </a>
+        <input type="checkbox" id="navToggle" class="nav-toggle-cb">
+        <label for="navToggle" class="nav-burger" aria-label="Open menu">&#9776;</label>
         <div class="nav-links">
             <a href="va-claim-evidence.html">Document Your Claim</a>
             <a href="reserve-national-guard-va-disability.html">Reserve &amp; Guard</a>
