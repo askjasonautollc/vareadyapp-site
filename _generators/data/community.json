@@ -1,5 +1,43 @@
 [
   {
+    "id": "first-discovery-flight-2026",
+    "date": "2026-09-23",
+    "when": "September 2026",
+    "headline": "Our First Veteran Took the Controls",
+    "location": "Waycross-Ware County Airport, Waycross, GA",
+    "body": [
+      "The first of the five discovery flights we're sponsoring happened today. Justin flew out of the Waycross-Ware County Airport with Runway One Nine Aviation, left seat, hands on the yoke.",
+      "That is the part that matters to me. Not a ride in the back, not a tour of the field. A veteran actually flying the airplane.",
+      "Four seats are still open. Flights run through October 2026, scheduled with Runway One Nine Aviation. If you want one, reach out any of these ways:"
+    ],
+    "teaser": "The first of our five sponsored discovery flights. Justin flew out of Waycross-Ware County Airport with Runway One Nine Aviation, left seat, hands on the yoke.",
+    "links": [
+      { "url": "https://www.facebook.com/vareadyapp", "label": "Message us on Facebook" },
+      { "url": "mailto:support@vareadyapp.com", "label": "Email support@vareadyapp.com" },
+      { "url": "https://runwayonenine.com/contact-us/", "label": "Contact Runway One Nine Aviation" }
+    ],
+    "photo": "first-discovery-flight-2026",
+    "photo_focus": 0.45,
+    "photo_alt": "Justin, a veteran, at the controls in the left seat of a single-engine airplane during a VA Ready sponsored discovery flight, headset on and hands on the yoke, with the Georgia landscape below",
+    "sponsored": {
+      "@type": "Event",
+      "name": "VA Ready veteran discovery flight, Waycross",
+      "startDate": "2026-09-23",
+      "description": "The first of five VA Ready sponsored discovery flights for veterans, flown with a certificated flight instructor from Runway One Nine Aviation out of the Waycross-Ware County Airport.",
+      "location": {
+        "@type": "Place",
+        "name": "Waycross-Ware County Airport",
+        "address": { "@type": "PostalAddress", "addressLocality": "Waycross", "addressRegion": "GA", "addressCountry": "US" }
+      },
+      "organizer": {
+        "@type": "LocalBusiness",
+        "name": "Runway One Nine Aviation",
+        "url": "https://runwayonenine.com/",
+        "sameAs": ["https://www.facebook.com/runwayonenine/"]
+      }
+    }
+  },
+  {
     "id": "veteran-discovery-flights-2026",
     "date": "2026-09-13",
     "when": "September to October 2026",
