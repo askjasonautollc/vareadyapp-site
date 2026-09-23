@@ -280,6 +280,7 @@ def hub_page():
 <meta property="og:image" content="https://vareadyapp.com/logo.png">
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <script type="application/ld+json">{breadcrumb}</script>
 <script type="application/ld+json">{itemlist}</script>
 <style>{CSS}</style>
