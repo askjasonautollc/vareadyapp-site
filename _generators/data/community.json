@@ -1,5 +1,62 @@
 [
   {
+    "id": "liberty-county-jumbotron-2026",
+    "date": "2026-09-25",
+    "when": "September 25, 2026",
+    "headline": "On the Board for Homecoming",
+    "location": "Kirk Warner Field, Hinesville, GA",
+    "body": [
+      "Our board went up on the jumbotron at Liberty County High School's homecoming game on September 25, 2026. Panthers were up 14 to 3 in the second quarter when I took this.",
+      "This is Fort Stewart country. The people in those stands are the soldiers, veterans and military families I built this for, so I would rather be on the board at their homecoming than buy an ad somewhere they are never going to see it.",
+      "Know your rating. Claim what you have earned."
+    ],
+    "teaser": "Our board on the jumbotron at Liberty County High School's homecoming game, in front of the Fort Stewart families we built this for.",
+    "photo": "liberty-county-jumbotron-2026",
+    "photo_focus": 0.0,
+    "photo_alt": "The VA Ready and Vet Ready board lit up on the jumbotron at Kirk Warner Field during the Liberty County Panthers homecoming game, with the scoreboard below showing the Panthers leading 14 to 3 in the second quarter",
+    "sponsored": {
+      "@type": "Event",
+      "name": "Liberty County Panthers homecoming game",
+      "startDate": "2026-09-25",
+      "description": "VA Ready and Vet Ready sponsor board shown on the jumbotron at the Liberty County High School Panthers homecoming game.",
+      "location": {
+        "@type": "Place",
+        "name": "Kirk Warner Field",
+        "address": { "@type": "PostalAddress", "addressLocality": "Hinesville", "addressRegion": "GA", "addressCountry": "US" }
+      }
+    }
+  },
+  {
+    "id": "liberty-county-panther-guide-2026",
+    "date": "2026-09-24",
+    "when": "2026 season",
+    "headline": "A Full Page in the Panther Guide",
+    "location": "Liberty County High School, Hinesville, GA",
+    "body": [
+      "We have a full page in the 2026 Panther Guide, the program handed out at Liberty County High School home games all season. Same shield, same promise, in print and in people's hands.",
+      "What it says in there: VA Ready and Vet Ready were built by veterans to help other veterans understand their rating, organize their claim, and get everything they have earned. If you are serving, have served, or love someone who has, it is free to download on iPhone and Android.",
+      "Pick up a guide at a home game and you will find us inside. Or skip the wait:"
+    ],
+    "teaser": "A full page in the 2026 Panther Guide, the program handed out at every Liberty County home game all season.",
+    "links": [
+      { "url": "https://apps.apple.com/app/id6761733758", "label": "VA Ready on the App Store" },
+      { "url": "https://play.google.com/store/apps/details?id=com.vaready.app", "label": "Vet Ready on Google Play" }
+    ],
+    "photo": "liberty-county-panther-guide-2026",
+    "photo_focus": 0.1,
+    "photo_alt": "The full-page VA Ready and Vet Ready advertisement printed in the 2026 Liberty County High School Panther Guide, showing the VR shield above the VA Vet Ready wordmark and the line The Veteran's Tool For Building Stronger VA Claims",
+    "sponsored": {
+      "@type": "SportsTeam",
+      "name": "Liberty County High School Panthers",
+      "sport": "American football",
+      "parentOrganization": {
+        "@type": "HighSchool",
+        "name": "Liberty County High School",
+        "address": { "@type": "PostalAddress", "addressLocality": "Hinesville", "addressRegion": "GA", "addressCountry": "US" }
+      }
+    }
+  },
+  {
     "id": "first-discovery-flight-2026",
     "date": "2026-09-23",
     "when": "September 23, 2026",
