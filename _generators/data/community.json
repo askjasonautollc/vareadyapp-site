@@ -1,5 +1,49 @@
 [
   {
+    "id": "couple-discovery-flight-2026",
+    "date": "2026-09-27",
+    "when": "September 27, 2026",
+    "headline": "Two Air Force Vets, One Airplane",
+    "location": "Waycross-Ware County Airport, Waycross, GA",
+    "body": [
+      "Brent and Gabby flew out of the Waycross-Ware County Airport with Runway One Nine Aviation on September 27. Married, both Air Force, and they took turns at the controls while the other rode in the back and watched.",
+      "Runway One Nine framed it as a date idea, which it is, but the part I care about is that both of them actually flew the airplane. I am told there is still some disagreement about who did it better.",
+      "I want to expand this and keep putting veterans in the air. The veteran community has a lot to offer the aviation community, and that is why I am behind it.",
+      "Two seats are still open. Flights run through October 2026, scheduled with Runway One Nine Aviation. If you want one, reach out any of these ways:"
+    ],
+    "teaser": "Brent and Gabby, married Air Force veterans, took turns at the controls out of Waycross-Ware County Airport with Runway One Nine Aviation.",
+    "links": [
+      { "url": "https://www.facebook.com/vareadyapp", "label": "Message us on Facebook" },
+      { "url": "mailto:support@vareadyapp.com", "label": "Email support@vareadyapp.com" },
+      { "url": "https://runwayonenine.com/contact-us/", "label": "Contact Runway One Nine Aviation" }
+    ],
+    "photo": "couple-discovery-flight-2026",
+    "photo_focus": 0.35,
+    "photo_alt": "Two Air Force veterans, Gabby and Brent, side by side in the cockpit during their VA Ready sponsored discovery flight out of Waycross-Ware County Airport, both wearing headsets with the Georgia landscape visible through the windows",
+    "sponsored": {
+      "@type": "Event",
+      "name": "VA Ready veteran discovery flight, Waycross",
+      "startDate": "2026-09-27",
+      "description": "A VA Ready sponsored discovery flight for two Air Force veterans, flown with a certificated flight instructor from Runway One Nine Aviation out of the Waycross-Ware County Airport.",
+      "location": {
+        "@type": "Place",
+        "name": "Waycross-Ware County Airport",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Waycross",
+          "addressRegion": "GA",
+          "addressCountry": "US"
+        }
+      },
+      "organizer": {
+        "@type": "LocalBusiness",
+        "name": "Runway One Nine Aviation",
+        "url": "https://runwayonenine.com/",
+        "sameAs": ["https://www.facebook.com/runwayonenine/"]
+      }
+    }
+  },
+  {
     "id": "liberty-county-jumbotron-2026",
     "date": "2026-09-25",
     "when": "September 25, 2026",
