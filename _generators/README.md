@@ -16,6 +16,7 @@ from anywhere after a clone — no hardcoded `/tmp` or absolute paths.
 | `gen_conditions.py` | 20 top-condition pages → `../conditions/*.html` + `../conditions.html` | `data/conditions.json`, `data/studies.json` |
 | `gen_states.py` | 20 state-benefit pages → `../states/*.html` + `../states.html` | `data/benefits.json` |
 | `gen_founders.py` | `../founders.html` | none (uses `../img/jason_*.jpg`, `wocs_grad.jpg`) |
+| `gen_mos.py` | 44 MOS / AFSC / rating pages → `../mos/*.html` + `../mos.html` (Phase 1 list in `PHASE1`) | `data/mos_profiles.json` (paginate: table is over 1,000 rows) |
 | `gen_community.py` | `../community.html` (In the Community) | none (uses `../img/community-liberty-county-jumbotron-*`) |
 
 ## How to run
@@ -27,6 +28,7 @@ python3 gen_conditions.py    # these merge their URLs into the sitemap
 python3 gen_states.py
 python3 gen_founders.py
 python3 gen_community.py
+python3 gen_mos.py
 ```
 
 Run `gen_guides.py` first: it regenerates `../sitemap.xml` from the core pages +

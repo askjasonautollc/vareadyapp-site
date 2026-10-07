@@ -264,7 +264,7 @@ def hub():
     <p class="lede">If you were exposed to toxic substances in service, VA may presume certain conditions are service-connected, meaning you don't have to prove the link. Here are the major exposures, who qualifies, the presumptive conditions, and how to file. The VA Ready app maps every base, ship, aircraft and vehicle you served on to the exposures you may have earned.</p>
     <div class="hub-sec"><div class="hub-grid">{cards}</div></div>
     {APP_CTA}
-    <p class="trustline">More from VA Ready: <a href="/conditions.html">ratings by condition</a> &middot; <a href="/va-disability-pay-rates.html">pay rates</a> &middot; <a href="/states.html">state benefits</a></p>
+    <p class="trustline">More from VA Ready: <a href="/conditions.html">ratings by condition</a> &middot; <a href="/mos.html">VA disability by MOS</a> &middot; <a href="/va-disability-pay-rates.html">pay rates</a> &middot; <a href="/states.html">state benefits</a></p>
     <div class="disclaimer">Presumptive lists and eligibility are summarized from VA.gov and can change; confirm current rules at VA.gov. VA Ready is not affiliated with the U.S. Department of Veterans Affairs.</div>
 </div>
 {FOOTER}
