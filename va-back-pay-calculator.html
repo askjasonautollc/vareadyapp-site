@@ -186,7 +186,10 @@
             .nav-toggle-cb:checked ~ .nav-links { display: flex; }
             .nav-links a { display: block; margin-left: 0; padding: 12px 2px; border-top: 1px solid var(--line); font-size: 15px; }
         }
-</style>
+        .nav-links a.nav-cta { background: var(--gold); color: #000; padding: 7px 16px; border-radius: 8px; font-weight: 800; }
+        .nav-links a.nav-cta:hover { color: #000; box-shadow: 0 4px 16px rgba(217,166,33,0.3); }
+        @media (max-width: 1100px) { .nav-links a.nav-cta { margin-top: 10px; text-align: center; border-top: none; padding: 12px; } }
+    </style>
 </head>
 <body>
     <nav>
@@ -201,7 +204,7 @@
             <a href="va-claim-evidence.html">Document Your Claim</a>
             <a href="reserve-national-guard-va-disability.html">Reserve &amp; Guard</a>
             <a href="the-va-ready-difference.html">The Difference</a>
-            <a href="index.html#download">Download</a>
+            <a href="index.html#download" class="nav-cta">Download</a>
         </div>
     </nav>
 

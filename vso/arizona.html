@@ -68,6 +68,9 @@
     @media (max-width:560px){ h1{font-size:27px;} }
     .nv-burger { display:none; font-size:25px; color:var(--tan); cursor:pointer; line-height:1; padding:2px 6px; user-select:none; }
     .nv-cb { display:none; }
+    .nav-links a.nav-cta { background:var(--gold); color:#000; padding:7px 16px; border-radius:8px; font-weight:800; }
+    .nav-links a.nav-cta:hover { color:#000; box-shadow:0 4px 16px rgba(217,166,33,0.3); }
+    @media (max-width:1100px){ .nav-links a.nav-cta { margin-top:10px; text-align:center; border-top:none; padding:12px; } }
     @media (max-width:1100px){
       nav { flex-wrap:wrap; }
       .nv-burger { display:block; }
@@ -115,7 +118,7 @@
     <a href="/index.html" class="nav-brand"><img src="/logo-96.png" alt="VA Ready logo" width="34" height="34"><span>VA READY <span style="color:var(--gray);font-weight:400;">/</span> VET READY</span></a>
     <input type="checkbox" id="nv" class="nv-cb">
     <label for="nv" class="nv-burger" aria-label="Open menu">&#9776;</label>
-    <div class="nav-links"><a href="/va-disability-calculator.html">Calculator</a><a href="/conditions.html">Conditions</a><a href="/exposures.html">Exposures</a><a href="/va-disability-pay-rates.html">Pay Rates</a><a href="/states.html">State Benefits</a><a href="/federal-benefits.html">Federal Benefits</a><a href="/guides.html">Guides</a><a href="/blog.html">Blog</a><a href="/find-a-vso.html">Find a VSO</a><a href="/index.html#download">Get the App</a></div>
+    <div class="nav-links"><a href="/va-disability-calculator.html">Calculator</a><a href="/conditions.html">Conditions</a><a href="/mos.html">MOS</a><a href="/va-disability-pay-rates.html">Pay Rates</a><a href="/federal-benefits.html">Federal Benefits</a><a href="/guides.html">Guides</a><a href="/blog.html">Blog</a><a href="/find-a-vso.html">Find a VSO</a><a href="/index.html#download" class="nav-cta">Get the App</a></div>
 </nav>
 <div class="wrap">
     <div class="crumb"><a href="/index.html">Home</a> / <a href="/find-a-vso.html">Find a VSO</a> / Arizona</div>
