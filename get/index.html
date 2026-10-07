@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get VA Ready | Free VA disability claim app</title>
+<meta name="description" content="Download VA Ready for iPhone or Vet Ready for Android. Free to start: build your VA disability claim, track symptoms and evidence, and see your combined rating.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0a0f1a">
+<link rel="canonical" href="https://vareadyapp.com/get">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VA Ready">
+<meta property="og:title" content="Get VA Ready, free">
+<meta property="og:description" content="A veteran sent you this. VA Ready helps you build and organize your VA disability claim. Free to start.">
+<meta property="og:url" content="https://vareadyapp.com/get">
+<meta property="og:image" content="https://vareadyapp.com/logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<script>
+  // Shared "Get VA Ready" link (in-app Share with a battle buddy). Sends a phone
+  // straight to the right store; a computer sees both buttons and a QR code.
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  (function () {
+    var ua = navigator.userAgent || "";
+    var ios = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    var android = /Android/i.test(ua);
+    var target = ios ? "https://apps.apple.com/app/id6761733758"
+               : android ? "https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US"
+               : null;
+    if (!target) return;
+    function go() {
+      if (typeof window.va === "function") {
+        window.va("event", { name: "share_link_open", data: { store: ios ? "ios" : "android" } });
+      }
+      location.replace(target);
+    }
+    // Give the analytics beacon a moment to load, then go regardless.
+    setTimeout(go, 700);
+  })();
+</script>
+<style>
+  :root { --navy:#0a0f1a; --card:#141b2d; --gold:#d9a621; --tan:#c8bda5; --white:#fff; --gray:#8a93a6; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif; background:var(--navy); color:var(--white); min-height:100vh; display:flex; align-items:center; justify-content:center; padding:32px 16px; -webkit-font-smoothing:antialiased; }
+  main { max-width:520px; width:100%; text-align:center; }
+  .logo { width:84px; height:84px; border-radius:18px; margin:0 auto 22px; display:block; }
+  h1 { font-size:30px; line-height:1.2; font-weight:800; letter-spacing:-0.4px; margin-bottom:12px; }
+  p.lede { color:var(--tan); font-size:17px; line-height:1.6; margin-bottom:28px; }
+  .btns { display:flex; flex-direction:column; gap:12px; margin-bottom:28px; }
+  .btn { display:block; padding:16px 20px; border-radius:12px; font-weight:800; font-size:16px; text-decoration:none; }
+  .btn.primary { background:var(--gold); color:#000; }
+  .btn.ghost { background:var(--card); color:var(--white); }
+  .qr { background:var(--card); border-radius:16px; padding:22px; display:inline-block; }
+  .qr img { width:200px; height:200px; display:block; border-radius:8px; background:#fff; padding:10px; }
+  .qr span { display:block; color:var(--gray); font-size:14px; margin-top:12px; }
+  .fine { color:var(--gray); font-size:13px; margin-top:28px; line-height:1.6; }
+  .fine a { color:var(--tan); }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="/logo.png" alt="VA Ready logo" width="84" height="84">
+  <h1>A veteran sent you VA Ready</h1>
+  <p class="lede">Build and organize your VA disability claim: see your combined rating with real VA math, track symptoms and evidence, and never miss a deadline. Free to start.</p>
+  <div class="btns">
+    <a href="https://apps.apple.com/app/id6761733758" class="btn primary">Get VA Ready for iPhone</a>
+    <a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn ghost">Get Vet Ready for Android</a>
+  </div>
+  <div class="qr">
+    <img src="/img/get-qr.png" alt="QR code that opens vareadyapp.com/get" width="200" height="200">
+    <span>On a computer? Scan with your phone.</span>
+  </div>
+  <p class="fine">VA Ready (iOS) and Vet Ready (Android) are not affiliated with the U.S. Department of Veterans Affairs. <a href="/">vareadyapp.com</a></p>
+</main>
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/track.js"></script>
+</body>
+</html>
