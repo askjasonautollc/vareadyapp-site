@@ -50,14 +50,14 @@
       "@type": "MobileApplication",
       "name": "VA Ready",
       "alternateName": "Vet Ready",
-      "description": "VA disability rating calculator and claim filing toolkit for U.S. veterans. The Exposure Calculator maps every base, ship, aircraft and vehicle a veteran served on to PACT Act, Camp Lejeune, AFFF / PFAS, K2 (Karshi-Khanabad), Agent Orange, and 40+ other presumptive registries. Includes 765 conditions cross-referenced against 38 CFR, 1,098 MOS / AFSC / Rating / Designator profiles, 56 cited exposures with primary-source citations, 824 documented military bases (US PFAS &amp; Superfund sites, Cold War Germany, CENTCOM, and PACT countries), a library of 2,403 peer-reviewed studies from PubMed and the NIH linked to 395 diagnostic codes, full PACT Act presumptive matching, state benefits for all 50 states plus DC (644 programs), a daily Symptom Tracker, and a personalized filing coach.",
+      "description": "VA disability rating calculator and claim filing toolkit for U.S. veterans. The Exposure Calculator maps every base, ship, aircraft and vehicle a veteran served on to PACT Act, Camp Lejeune, AFFF / PFAS, K2 (Karshi-Khanabad), Agent Orange, and 40+ other presumptive registries. Includes 765 conditions cross-referenced against 38 CFR, 1,098 MOS / AFSC / Rating / Designator profiles, 56 cited exposures with primary-source citations, 827 documented military bases (US PFAS &amp; Superfund sites, Cold War Germany, CENTCOM, and PACT countries), a library of 2,403 peer-reviewed studies from PubMed and the NIH linked to 395 diagnostic codes, full PACT Act presumptive matching, state benefits for all 50 states plus DC (644 programs), a daily Symptom Tracker, and a personalized filing coach.",
       "operatingSystem": "iOS 17.0, Android 11, macOS 14.0",
       "applicationCategory": "HealthApplication",
       "applicationSubCategory": "Government Benefits",
       "url": "https://vareadyapp.com/",
       "image": "https://vareadyapp.com/logo.png",
       "screenshot": "https://vareadyapp.com/logo.png",
-      "softwareVersion": "1.9.0",
+      "softwareVersion": "2.0.0",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
@@ -366,7 +366,7 @@
         .pitch-icon { font-size: 28px; margin-bottom: 8px; }
         .pitch-text { font-size: 13px; color: var(--tan); font-weight: 600; }
 
-        /* Section title — refined */
+        /* Section title: refined */
         .section-title {
             text-align: center; padding: 72px 24px 36px; max-width: 720px; margin: 0 auto;
         }
@@ -381,7 +381,7 @@
         }
         .section-title p { font-size: 16px; color: var(--tan); line-height: 1.65; max-width: 580px; margin: 0 auto; }
 
-        /* Divider — refined with subtle gold accent center */
+        /* Divider: refined with subtle gold accent center */
         .divider {
             height: 1px; max-width: 1100px; margin: 0 auto;
             background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.06) 30%, rgba(217,166,33,0.18) 50%, rgba(255,255,255,0.06) 70%, transparent 100%);
@@ -410,7 +410,7 @@
         .split-visual .big-num { font-size: 64px; font-weight: 900; color: var(--gold); }
         .split-visual .label { font-size: 12px; color: var(--gray); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
 
-        /* Feature cards — refined */
+        /* Feature cards: refined */
         .features {
             max-width: 1180px; margin: 0 auto; padding: 0 24px 60px;
             display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;
@@ -483,7 +483,7 @@
         .j-step h3 { font-size: 16px; font-weight: 800; margin-bottom: 4px; }
         .j-step p { font-size: 13px; color: var(--tan); }
 
-        /* Hero stats strip — refined with subtle separators + highlighted leaders */
+        /* Hero stats strip: refined with subtle separators + highlighted leaders */
         .hero-stats {
             display: grid; grid-template-columns: repeat(4, 1fr);
             gap: 1px; margin: 40px auto 24px;
@@ -546,7 +546,7 @@
             letter-spacing: 0.3px;
         }
 
-        /* By the Numbers section — million-dollar visual block */
+        /* By the Numbers section: million-dollar visual block */
         .by-numbers-wrap {
             max-width: 1180px; margin: 0 auto; padding: 0 24px 72px;
         }
@@ -611,7 +611,7 @@
         .bn-num .bn-plus {
             font-size: 26px; vertical-align: top; margin-left: 1px;
         }
-        /* Live-ticker flash effect — applied briefly each time the counter increments */
+        /* Live-ticker flash effect: applied briefly each time the counter increments */
         [data-counter="users"].counter-tick {
             animation: counterTick 0.9s ease-out;
         }
@@ -664,7 +664,7 @@
             margin: 18px auto 0; border-radius: 2px;
         }
 
-        /* Plans / Comparison — four-tier layout */
+        /* Plans / Comparison: four-tier layout */
         .comparison {
             max-width: 1180px; margin: 0 auto; padding: 0 24px 80px;
             display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
@@ -769,7 +769,7 @@
             border: 1px solid rgba(255,255,255,0.04);
         }
 
-        /* CTA — refined with subtle inner card */
+        /* CTA: refined with subtle inner card */
         .cta-section {
             text-align: center; padding: 80px 24px 100px;
             background: linear-gradient(180deg, transparent 0%, rgba(217,166,33,0.04) 100%);
@@ -802,7 +802,7 @@
         .social-pill svg { width: 20px; height: 20px; fill: currentColor; }
         .social-pill:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
 
-        /* Footer — refined */
+        /* Footer: refined */
         footer {
             text-align: center; padding: 48px 24px 36px;
             border-top: 1px solid rgba(255,255,255,0.04);
@@ -881,7 +881,11 @@
             border-radius: 6px; margin-left: 8px; vertical-align: 2px; }
         @media (max-width: 560px) { .calc-band .cgo { display: none; } }
         /* In-app screenshot gallery */
-        .gallery { display:flex; gap:24px; justify-content:center; flex-wrap:wrap; max-width:1080px; margin:0 auto; padding:0 24px 30px; }
+        .v3-note { background:rgba(217,166,33,0.10); border-bottom:1px solid rgba(217,166,33,0.28); text-align:center; padding:11px 16px; font-size:14px; line-height:1.5; color:var(--tan); }
+        .v3-note strong { color:var(--gold); }
+        .v3-note a { color:var(--gold); font-weight:700; text-decoration:none; white-space:nowrap; }
+        .v3-note a:hover { text-decoration:underline; }
+        .gallery { display:flex; gap:24px; justify-content:center; flex-wrap:wrap; max-width:1290px; margin:0 auto; padding:0 24px 30px; }
         .shot { width:228px; margin:0; }
         .phone { background:#05070d; padding:7px; border-radius:30px; border:1px solid rgba(255,255,255,0.1); box-shadow:0 24px 60px -24px rgba(0,0,0,0.8), inset 0 0 0 1px rgba(255,255,255,0.03); }
         .phone img { display:block; width:100%; height:auto; border-radius:24px; }
@@ -951,9 +955,12 @@
 @media (prefers-reduced-motion:reduce){.va-ticker__track{animation:none}}
 </style><div class="va-ticker" aria-label="Latest VA rule and policy updates"><a class="va-ticker__label" href="/va-updates.html"><span class="dot"></span><span class="txt">VA Updates</span></a><div class="va-ticker__win"><div class="va-ticker__track"><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Nondiscrimination in Federally-Assisted Programs of the Department of…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Rescission of Interim Final Rule, Evaluative Rating: Impact of Medication</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Evaluative Rating: Impact of Medication</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Clarification of VA&#x27;s Processing of Survivors Benefits Claims</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Eliminating the Requirement for Laparoscopy To Establish Service…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Objective Evidence of Pain for Painful Scars Under DC 7804</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Presumptive Service Connection for Leukemias, Multiple Myelomas,…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Presumptive Service Connection for Bladder, Ureter, and Related…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Amendments to the Program of Comprehensive Assistance for Family Caregivers</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Changes in Rates VA Pays for Special Modes of Transportation; Delay of…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Nondiscrimination in Federally-Assisted Programs of the Department of…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Rescission of Interim Final Rule, Evaluative Rating: Impact of Medication</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Evaluative Rating: Impact of Medication</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Clarification of VA&#x27;s Processing of Survivors Benefits Claims</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Eliminating the Requirement for Laparoscopy To Establish Service…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Objective Evidence of Pain for Painful Scars Under DC 7804</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Presumptive Service Connection for Leukemias, Multiple Myelomas,…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Presumptive Service Connection for Bladder, Ureter, and Related…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Amendments to the Program of Comprehensive Assistance for Family Caregivers</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Changes in Rates VA Pays for Special Modes of Transportation; Delay of…</a></div></div></div><!-- VATICKER:END -->
 
+    <!-- V3 NOTE -->
+    <div class="v3-note" role="note"><strong>Big changes coming in V3.0.0.</strong> A Claim File for your evidence, a one-tap Ready for VA folder, and a full redesign. <a href="#inside">See the preview &rarr;</a></div>
+
     <!-- HERO -->
     <section class="hero" id="download">
-        <div class="hero-badge"><span class="live-dot"></span> Version 1.9.0 live on the App Store &amp; Google Play &middot; <strong>now on Mac</strong></div>
+        <div class="hero-badge"><span class="live-dot"></span> Version 2.0 live on the App Store &amp; Google Play &middot; <strong>now on Mac</strong></div>
         <div class="hero-logos">
             <div class="logo-wrap">
                 <img src="logo.png" alt="VA Ready app icon on iOS App Store" width="130" height="130">
@@ -974,7 +981,7 @@
             <div class="stat"><div class="stat-num">765</div><div class="stat-lbl">Conditions</div></div>
             <div class="stat"><div class="stat-num">2,403</div><div class="stat-lbl">Peer-reviewed studies</div></div>
             <div class="stat"><div class="stat-num">1,098</div><div class="stat-lbl">MOS profiles</div></div>
-            <div class="stat"><div class="stat-num">824</div><div class="stat-lbl">Bases tracked</div></div>
+            <div class="stat"><div class="stat-num">827</div><div class="stat-lbl">Bases tracked</div></div>
             <div class="stat"><div class="stat-num">644</div><div class="stat-lbl">State benefits</div></div>
             <div class="stat"><div class="stat-num">32</div><div class="stat-lbl">Federal benefits</div></div>
         </div>
@@ -1254,7 +1261,7 @@
                     <div class="bn-sub">All six branches, 213 legacy codes included</div>
                 </div>
                 <div class="bn-card">
-                    <div class="bn-num">824</div>
+                    <div class="bn-num">827</div>
                     <div class="bn-lbl">Bases tracked</div>
                     <div class="bn-sub">DoD PFAS &amp; EPA Superfund sites, overseas + PACT countries</div>
                 </div>
@@ -1269,12 +1276,12 @@
                     <div class="bn-sub">VR&amp;E, VA home-loan funding-fee waiver, CHAMPVA, Chapter 35, and more</div>
                 </div>
                 <div class="bn-card">
-                    <div class="bn-num">87</div>
+                    <div class="bn-num">89</div>
                     <div class="bn-lbl">Additional-duty profiles</div>
                     <div class="bn-sub">Ranger, Pararescue, MARSOC, SEAL, Space Force, and more</div>
                 </div>
                 <div class="bn-card">
-                    <div class="bn-num">52</div>
+                    <div class="bn-num">56</div>
                     <div class="bn-lbl">Cited exposures</div>
                     <div class="bn-sub">Each tied to VA.gov, 38 CFR, ATSDR, or congress.gov</div>
                 </div>
@@ -1313,28 +1320,52 @@
 
     <div class="divider"></div>
 
-    <!-- IN-APP GALLERY -->
-    <div class="section-title">
-        <div class="tag">See it in action</div>
+    <!-- IN-APP GALLERY: 3.0 preview -->
+    <div class="section-title" id="inside">
+        <div class="tag">Preview &middot; Version 3.0.0</div>
         <h2>Inside the app</h2>
-        <p>Real screens from VA Ready, your combined rating, the benefits you've earned, the presumptives your service unlocks, and exactly where you stand in the filing process.</p>
+        <p>Screens from VA Ready 3.0.0 on iPhone. It is not in the stores yet. The whole claim in one place: your evidence, a folder ready for VA.gov, and an export for whoever needs it. You still upload on VA.gov yourself, or a free accredited VSO files for you.</p>
     </div>
     <section class="gallery">
         <figure class="shot">
-            <div class="phone"><picture><source srcset="img/app-my-claim.webp" type="image/webp"><img src="img/app-my-claim.png" alt="VA Ready My Claim screen showing a 90% projected combined VA disability rating with the conditions list and real VA combined-rating math" width="680" height="1374" loading="lazy"></picture></div>
-            <figcaption>Your combined rating, real VA math</figcaption>
+            <div class="phone"><picture><source srcset="img/v3-rating.webp" type="image/webp"><img src="img/v3-rating.jpg" alt="VA Ready 3.0 My Claim screen showing a 90 percent projected combined rating in a green ring, an estimated monthly payment of $2,802.30, the five ratings entered, and how the VA combines them under 38 CFR 4.25." width="600" height="1304" loading="lazy" decoding="async"></picture></div>
+            <figcaption>See your combined rating</figcaption>
         </figure>
         <figure class="shot">
-            <div class="phone"><picture><source srcset="img/app-exposure.webp" type="image/webp"><img src="img/app-exposure.png" alt="VA Ready Exposure Calculator showing service locations like Camp Lejeune and the presumptive conditions they unlock" width="680" height="1374" loading="lazy"></picture></div>
-            <figcaption>Map your service, surface presumptives</figcaption>
+            <div class="phone"><picture><source srcset="img/v3-conditions.webp" type="image/webp"><img src="img/v3-conditions.jpg" alt="VA Ready 3.0 condition list with collapsible cards for PTSD at 70 percent, sleep apnea at 50 percent and a lumbosacral strain at 20 percent, each showing its diagnostic code and how much evidence is in." width="600" height="1304" loading="lazy" decoding="async"></picture></div>
+            <figcaption>Every condition, organized</figcaption>
         </figure>
         <figure class="shot">
-            <div class="phone"><picture><source srcset="img/app-benefits.webp" type="image/webp"><img src="img/app-benefits.png" alt="VA Ready Benefits screen showing federal benefits and estimated value unlocked at a 90% rating" width="680" height="1374" loading="lazy"></picture></div>
-            <figcaption>Every benefit you've earned, by rating</figcaption>
+            <div class="phone"><picture><source srcset="img/v3-claim-file.webp" type="image/webp"><img src="img/v3-claim-file.jpg" alt="VA Ready 3.0 Claim File holding 8 documents stored on the device, with an Add document button, a new document found prompt, and documents grouped by condition." width="600" height="1304" loading="lazy" decoding="async"></picture></div>
+            <figcaption>Your evidence portal</figcaption>
         </figure>
         <figure class="shot">
-            <div class="phone"><picture><source srcset="img/app-filing.webp" type="image/webp"><img src="img/app-filing.png" alt="VA Ready Filing screen showing the presumptive-period countdown and an 11-step claim status tracker" width="680" height="1374" loading="lazy"></picture></div>
-            <figcaption>Know exactly where you stand</figcaption>
+            <div class="phone"><picture><source srcset="img/v3-ready-for-va.webp" type="image/webp"><img src="img/v3-ready-for-va.jpg" alt="VA Ready 3.0 Prepare for VA upload screen that writes a dated folder per condition with claim file documents, symptom logs and signed buddy statements, with an option to include the claim journal." width="600" height="1304" loading="lazy" decoding="async"></picture></div>
+            <figcaption>One folder, ready for VA.gov</figcaption>
+        </figure>
+        <figure class="shot">
+            <div class="phone"><picture><source srcset="img/v3-export-center.webp" type="image/webp"><img src="img/v3-export-center.jpg" alt="VA Ready 3.0 Export Center asking who the PDF is for: My VSO, a C&amp;P examiner, my doctor for a nexus letter, or myself to print, with the conditions to include." width="600" height="1304" loading="lazy" decoding="async"></picture></div>
+            <figcaption>Send it to the right person</figcaption>
+        </figure>
+        <figure class="shot">
+            <div class="phone"><picture><source srcset="img/v3-what-if.webp" type="image/webp"><img src="img/v3-what-if.jpg" alt="VA Ready 3.0 What-If screen stacking a possible secondary claim onto a 90 percent rating to show the new combined rating and estimated payment, with possible claims drawn from the profile." width="600" height="1304" loading="lazy" decoding="async"></picture></div>
+            <figcaption>See what it would take</figcaption>
+        </figure>
+        <figure class="shot">
+            <div class="phone"><picture><source srcset="img/v3-claim-intel.webp" type="image/webp"><img src="img/v3-claim-intel.jpg" alt="VA Ready 3.0 Claim Intel screen for an Army 11B Infantryman, listing conditions commonly granted for the job code, PACT Act presumptives and conditions tied to saved exposures." width="600" height="1304" loading="lazy" decoding="async"></picture></div>
+            <figcaption>Built around your MOS</figcaption>
+        </figure>
+        <figure class="shot">
+            <div class="phone"><picture><source srcset="img/v3-symptom-log.webp" type="image/webp"><img src="img/v3-symptom-log.jpg" alt="VA Ready 3.0 Symptom Tracker asking how you are feeling today, with a daily reminder toggle and a quick check-in row for each condition on the claim." width="600" height="1304" loading="lazy" decoding="async"></picture></div>
+            <figcaption>Log symptoms as they happen</figcaption>
+        </figure>
+        <figure class="shot">
+            <div class="phone"><picture><source srcset="img/v3-buddy.webp" type="image/webp"><img src="img/v3-buddy.jpg" alt="VA Ready 3.0 buddy statement samples, marked as format only because the witness must use their own words, listing qualities the Board of Veterans&#x27; Appeals credited with citations." width="600" height="1304" loading="lazy" decoding="async"></picture></div>
+            <figcaption>Buddy statements done right</figcaption>
+        </figure>
+        <figure class="shot">
+            <div class="phone"><picture><source srcset="img/v3-start-here.webp" type="image/webp"><img src="img/v3-start-here.jpg" alt="VA Ready 3.0 Start here checklist showing 5 of 8 steps done, from how VA disability works and getting a free accredited VSO to filing and what happens after you file." width="600" height="1304" loading="lazy" decoding="async"></picture></div>
+            <figcaption>New to filing? Start here</figcaption>
         </figure>
     </section>
 
@@ -1369,7 +1400,7 @@
                 <div class="feature-icon fi-gold"><svg class="ic"><use href="#ic-wrench"/></svg></div>
                 <h3>More aircraft and ground vehicles</h3>
             </div>
-            <p>Added the <strong>MV-22 Osprey, F-35, KC-46</strong>, and a full ground-vehicle fleet. HMMWV, MRAP, JLTV, LAV, each with the right icon and exposure links. 67 airframes and vehicles now mapped to the exposures tied to them.</p>
+            <p>Added the <strong>MV-22 Osprey, F-35, KC-46</strong>, and a full ground-vehicle fleet. HMMWV, MRAP, JLTV, LAV, each with the right icon and exposure links. 148 aircraft are now mapped to the exposures tied to them.</p>
             <span class="tag-sm tag-free">Free &amp; Pro</span>
         </div>
         <div class="feature green-line">
@@ -1444,14 +1475,30 @@
 
     <div class="divider"></div>
 
-    <!-- WHAT'S NEW IN 1.9.0 -->
-    <div class="section-title">
-        <div class="tag">Version 1.9.0 &middot; September 2026</div>
+    <!-- WHAT'S NEW: 2.0 (live) -->
+    <div class="section-title" id="whats-new">
+        <div class="tag">Version 2.0 &middot; Live now</div>
         <h2>What&rsquo;s New</h2>
-        <p>Claim Intel folds up: YOUR LOCATIONS and PRESUMPTIVE CONDITIONS are now sections you can tap shut, so a dozen assignments no longer bury your matches. Tendinitis, bursitis and tenosynovitis in a paired joint count on both sides, which is what earns the bilateral factor under 38 CFR 4.26. And a full sweep through the job-code tables corrected conditions that named the right injury while carrying the wrong diagnostic code, alongside new Marine Corps, Air Force and Army codes and a search that now finds kyphosis, carbon monoxide poisoning, trunk scars, and 38 CFR section numbers typed straight in.</p>
+        <p>Version 2.0 is the biggest update since launch. Until now, every screen assumed you had already separated. The app now serves service members still in, starting years before you get out, alongside the veterans it already served. The day you sign out, your service treatment record is frozen, and 2.0 is built to help you use that window while you still can. Also in 2.0: the bilateral factor corrected in three places under 38 CFR 4.26, What-If running the real rating engine, and eye and ear conditions no longer split left and right.</p>
     </div>
 
     <section class="features" style="padding-bottom: 40px;">
+        <div class="feature green-line">
+            <div class="feature-head">
+                <div class="feature-icon fi-green"><svg class="ic"><use href="#ic-clipboard"/></svg></div>
+                <h3>Still serving? A runway to separation</h3>
+            </div>
+            <p>A Service Status control works out where you are from your separation date, and you can override it either way. It turns the Filing tab into a runway with five stages: get complaints into your service treatment record, chase down missing diagnoses, pull your records while you still have base access, the BDD window from 180 to 90 days out, and a standard pre-discharge claim under 90 days. <a href="reserve-national-guard-va-disability.html">Reserve or Guard? Check your duty periods &rarr;</a></p>
+            <span class="tag-sm tag-free">New in 2.0</span>
+        </div>
+        <div class="feature green-line">
+            <div class="feature-head">
+                <div class="feature-icon fi-green"><svg class="ic"><use href="#ic-shield"/></svg></div>
+                <h3>A BDD screener and a VR&amp;E guide</h3>
+            </div>
+            <p>Five questions cover the situations the VA handles outside the BDD program, so you know which path is actually yours. BDD does not promise a faster decision: it moves the waiting to while you are still in uniform. A full Veteran Readiness and Employment (Chapter 31) guide covers the rule most people get wrong: if you were discharged on or after January 1, 2013, there is no time limit on your eligibility.</p>
+            <span class="tag-sm tag-free">New in 2.0</span>
+        </div>
         <div class="feature gold-line">
             <div class="feature-head">
                 <div class="feature-icon fi-gold"><svg class="ic"><use href="#ic-clipboard"/></svg></div>
