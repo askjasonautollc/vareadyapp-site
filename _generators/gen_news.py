@@ -22,18 +22,18 @@ def esc(s): return html.escape(s or "", quote=True)
 gtext = open(os.path.join(HERE, "gen_guides.py")).read()
 CSS = re.search(r'CSS = """(.*?)"""', gtext, re.S).group(1)
 CSS += """
-    .upd { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px; margin-bottom:14px; }
+    .upd { border-bottom:1px solid var(--line); padding:20px 0; }
     .upd-top { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:8px; }
-    .badge { font-size:10px; font-weight:900; letter-spacing:1px; text-transform:uppercase; padding:3px 9px; border-radius:6px; }
-    .b-prop { color:#1a1205; background:var(--gold); }
-    .b-final { color:#06210f; background:var(--green); }
-    .b-notice { color:var(--tan); background:rgba(255,255,255,0.08); }
+    .badge { font-size:13px; font-weight:700; }
+    .b-prop { color:#e0a030; }
+    .b-final { color:var(--green); }
+    .b-notice { color:var(--gray); }
     .upd-date { font-size:12px; color:var(--gray); }
     .upd h3 { font-size:17px; font-weight:800; color:var(--white); line-height:1.35; margin-bottom:6px; }
     .upd p { color:var(--tan); font-size:14px; line-height:1.6; margin-bottom:8px; }
-    .upd .why { color:var(--white); font-size:13.5px; border-left:3px solid var(--gold); padding-left:12px; margin:8px 0; }
+    .upd .why { color:var(--white); font-size:14px; margin:8px 0; }
     .upd a.src { font-size:13px; font-weight:700; }
-    .upd-note { font-size:12.5px; color:var(--gray); line-height:1.7; background:rgba(217,166,33,0.06); border:1px solid rgba(217,166,33,0.22); border-radius:11px; padding:13px 15px; margin:16px 0; }
+    .upd-note { font-size:14px; color:var(--gray); line-height:1.7; margin:16px 0; }
 """
 NAV = re.search(r'NAV = """(.*?)"""', gtext, re.S).group(1)
 FOOTER = re.search(r'FOOTER = """(.*?)"""', gtext, re.S).group(1)
@@ -84,10 +84,10 @@ def badge(t):
 def why_line(doc):
     t = doc.get("type")
     if t == "Proposed Rule":
-        return ("<strong>This is a proposal, not law yet.</strong> Nothing changes for your claim "
-                "until (and unless) it's finalized. You can't claim under a proposed rule.")
-    return ("<strong>This is a final rule.</strong> It's in effect as of its stated date, worth checking "
-            "if it touches a condition or exposure on your claim.")
+        return ("This is a proposal, not law yet. Nothing changes for your claim "
+                "until it is finalized. You cannot claim under a proposed rule.")
+    return ("This is a final rule, in effect as of its stated date. Check whether it touches "
+            "a condition or exposure on your claim.")
 
 def updates_page(docs, generated):
     cards = ""
@@ -101,8 +101,8 @@ def updates_page(docs, generated):
     <a class="src" href="{esc(d.get('html_url'))}" rel="nofollow noopener" target="_blank">Read the official document on FederalRegister.gov &rarr;</a>
 </div>"""
     desc = ("Track the latest U.S. Department of Veterans Affairs regulatory actions, proposed and final "
-            "rules on disability ratings, presumptive conditions, the PACT Act, and toxic exposure, in plain "
-            "language, pulled straight from the Federal Register.")
+            "rules on disability ratings, presumptive conditions, the PACT Act, and toxic exposure, "
+            "from the Federal Register.")
     breadcrumb = json.dumps({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
         {"@type":"ListItem","position":1,"name":"Home","item":"https://vareadyapp.com/"},
         {"@type":"ListItem","position":2,"name":"VA Updates","item":"https://vareadyapp.com/va-updates.html"}]})
@@ -137,12 +137,11 @@ def updates_page(docs, generated):
 {NAV}
 <div class="wrap">
     <div class="crumb"><a href="/index.html">Home</a> / VA Updates</div>
-    <div class="eyebrow">VA Updates</div>
     <h1>VA Rule &amp; Policy Updates</h1>
-    <p class="lede">The latest VA regulatory actions that can affect your claim, disability ratings, presumptive conditions, the PACT Act, and toxic exposure, in plain language, pulled straight from the Federal Register.</p>
-    <div class="upd-note">These updates come directly from the <strong>Federal Register</strong>, the U.S. government's official record of rules and proposed rules. We summarize and link to the source; we never change what it says. Remember: a <strong>proposed</strong> rule is not law and you can't claim under it until it's finalized. Always verify current rules at VA.gov and with an accredited VSO.</div>
+    <p class="lede">VA regulatory actions that can affect your claim: disability ratings, presumptive conditions, the PACT Act and toxic exposure, from the Federal Register.</p>
+    <p class="upd-note">These updates come from the Federal Register, the government's official record of rules and proposed rules. We summarize each one and link to the source. A proposed rule is not law, and you cannot claim under it until it is finalized. Verify current rules at VA.gov and with an accredited VSO.</p>
     {cards if cards else '<p class="lede">No qualifying VA rule actions found in the latest pull. Check back soon.</p>'}
-    <p class="upd-note">Most recent VA action shown: {esc(fmt_date(generated)[0])}. This page refreshes automatically as new rules publish in the Federal Register.</p>
+    <p class="upd-note">Most recent VA action shown: {esc(fmt_date(generated)[0])}. The page refreshes as new rules publish.</p>
 </div>
 {FOOTER}
 </body>

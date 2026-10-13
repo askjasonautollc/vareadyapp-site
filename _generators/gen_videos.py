@@ -77,8 +77,7 @@ TOPICS = [
         "h2": "Combined rating math",
         "copy": "VA does not add your ratings together. It applies each one to whatever is left of you after the last, which is why 50% and 30% comes out at 70% and not 80%. Once you see the order the math runs in, your own rating decision stops looking like a typo.",
         "links": [("Combined rating calculator", "/va-disability-calculator.html"),
-                  ("2026 pay rates by rating", "/va-disability-pay-rates.html"),
-                  ("What each rating pays", "/va-disability-pay/")],
+                  ("2026 pay rates by rating", "/va-disability-pay-rates.html")],
     },
     {
         "id": "cp-exams",
@@ -100,7 +99,7 @@ TOPICS = [
     {
         "id": "appeals",
         "h2": "Appeals and denials",
-        "copy": "A denial is not the end of the claim, it is a fork in it. There are three lanes and they are not interchangeable: one takes new evidence, one does not, and one goes to a judge. Picking the wrong lane costs you months.",
+        "copy": "A denial closes one decision, and the claim can keep going. There are three lanes and they are not interchangeable: one takes new evidence, one does not, and one goes to a judge. Picking the wrong lane costs you months.",
         "links": [("Supplemental claims", "/guides/supplemental-claims.html"),
                   ("Denied your appeal, options explained", "/guides/denied-your-appeal-options-explained.html"),
                   ("VA Form 20-0995, Supplemental Claim", "/guides/va-form-20-0995.html"),
@@ -207,12 +206,14 @@ def build():
     schema = json.dumps({"@context": "https://schema.org", "@graph": graph}, indent=2)
 
     extra_css = """
-    .vid-list { list-style:none; padding:0; margin:14px 0; }
+    .vid-list { list-style:none; padding:0; margin:14px 0; max-width:68ch; }
     .vid-list li { padding:10px 0; border-top:1px solid var(--line); }
-    .topic-links { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
-    .topic-links a { font-size:14px; padding:6px 12px; border:1px solid var(--line); border-radius:20px; text-decoration:none; }
-    .toc { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 26px; }
-    .toc a { font-size:14px; padding:6px 12px; background:rgba(217,166,33,.10); border-radius:20px; text-decoration:none; }
+    .topic-links { display:flex; flex-wrap:wrap; gap:0 18px; margin-top:8px; }
+    .topic-links a { display:inline-flex; align-items:center; min-height:44px; font-size:15px; }
+    .toc { display:flex; flex-wrap:wrap; gap:0 18px; margin:14px 0 26px; }
+    .toc a { display:inline-flex; align-items:center; min-height:44px; font-size:15px; }
+    section h2 { font-size:22px; font-weight:800; margin:32px 0 10px; line-height:1.3; }
+    section p { color:var(--tan); max-width:68ch; margin-bottom:10px; }
     """
 
     page = f"""<!DOCTYPE html>
@@ -220,10 +221,10 @@ def build():
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VA Claim Help Videos: Free Guides for Vets | VA Ready</title>
+<title>VA claim help videos | VA Ready</title>
 <meta name="description" content="Free short videos on VA disability claims: combined rating math, C&amp;P exams, Intent to File, appeals, TDIU, and finding a VSO. Made by a retired Army vet. No claim sharks, no referral fees.">
 <link rel="canonical" href="{URL}">
-<meta property="og:title" content="VA Claim Help Videos: Free Guides for Vets">
+<meta property="og:title" content="VA claim help videos">
 <meta property="og:description" content="Short, plain-language videos on the VA claims process from a retired Army vet.">
 <meta property="og:url" content="{URL}">
 <meta property="og:type" content="website">
@@ -237,13 +238,13 @@ def build():
 <body>
 {NAV}
 <div class="wrap">
-    <h1>VA Claim Help Videos: Free Guides from VA Ready</h1>
-    <p class="lede">Short, plain-language videos about how VA disability claims actually work, made by a retired Army vet who has been through the process. No referral fees, no cut of your back pay, no claim shark pitch.</p>
+    <h1>VA claim help videos</h1>
+    <p class="lede">Short, plain-language videos about how VA disability claims work, made by a retired Army vet who has been through the process. No referral fees, no cut of your back pay, no claim shark pitch.</p>
     <p>Every topic below links to the full written guide on this site, so you can watch the short version or read the long one. Both are free.</p>
 
     <div class="toc">{toc}</div>
 
-    <div class="cta" style="margin-bottom:30px;">
+    <div class="cta">
         <h3>Watch on TikTok</h3>
         <p>New videos go up on <a href="{TIKTOK}" target="_blank" rel="me noopener">@vareadyapp</a>. Follow there for the short version; the guides on this site go deeper and cite the regulation.</p>
         <div class="btns"><a href="{TIKTOK}" class="btn" target="_blank" rel="me noopener">Follow @vareadyapp on TikTok</a></div>

@@ -11,7 +11,7 @@ Add a new post by dropping a .md file in data/blog/ with this header:
     ---
     title: Your Headline
     slug: your-slug
-    category: Trust & Privacy
+    category: Trust and privacy
     date: 2026-06-14
     excerpt: One or two sentences for the card + meta description.
     image: /img/blog/your-slug.png
@@ -34,31 +34,25 @@ def esc(s): return html.escape(s or "", quote=True)
 gtext = open(os.path.join(HERE, "gen_guides.py")).read()
 m = re.search(r'CSS = """(.*?)"""', gtext, re.S)
 CSS = m.group(1) if m else ""
+# drop shared rules this template never uses (all-caps eyebrow, pro pill, hub cards)
+CSS = "\n".join(l for l in CSS.split("\n") if not re.search(r"\.eyebrow|\.pro-pill|\.cta-pro|\.hub-", l))
 CSS += """
-    .blog-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(290px,1fr)); gap:18px; margin-bottom:6px; }
-    .bcard { display:flex; background:var(--card); border:1px solid var(--line); border-radius:16px; overflow:hidden; transition:border-color .15s ease, transform .15s ease; }
-    .bcard:hover { border-color:rgba(217,166,33,0.5); transform:translateY(-3px); }
-    .bcard a.bc-link { color:inherit; display:flex; flex-direction:column; height:100%; width:100%; }
-    .bcard .thumb { width:100%; aspect-ratio:16/9; object-fit:cover; object-position:50% 32%; display:block; }
-    .bcard .thumb.ph { display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#16213b,#0c1322); }
-    .bcard .thumb.ph span { font-size:24px; font-weight:900; color:rgba(217,166,33,0.5); letter-spacing:3px; }
-    .bcard .bc-body { padding:15px 17px 18px; display:flex; flex-direction:column; gap:9px; flex:1; }
-    .bc-tag { align-self:flex-start; font-size:10px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); background:rgba(217,166,33,0.10); border:1px solid rgba(217,166,33,0.25); padding:3px 9px; border-radius:6px; }
-    .bcard h3 { font-size:17.5px; font-weight:800; color:var(--white); line-height:1.32; letter-spacing:-0.2px; }
-    .bcard .bc-ex { color:var(--tan); font-size:14px; line-height:1.6; flex:1; }
-    .bc-meta { font-size:12px; color:var(--gray); margin-top:1px; }
-    .cat-head { display:flex; align-items:center; gap:13px; margin:32px 0 15px; }
-    .cat-head h2 { font-size:13px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--tan); white-space:nowrap; margin:0; }
-    .cat-head::after { content:""; flex:1; height:1px; background:var(--line); }
-    .post-hero { display:block; width:100%; max-width:480px; height:auto; margin:8px auto 24px; border-radius:16px; border:1px solid var(--line); }
-    .post-hero.ph { aspect-ratio:1.91/1; max-width:560px; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#16213b,#0c1322); }
-    .post-hero.ph span { font-size:26px; font-weight:900; color:rgba(217,166,33,0.5); letter-spacing:3px; }
-    .post-sign { margin:30px 0 4px; padding-top:18px; border-top:1px solid var(--line); font-size:13px; color:var(--gray); font-style:italic; line-height:1.75; }
+    .post-list { list-style:none; margin:0 0 6px; padding:0; }
+    .post-row { border-top:1px solid var(--line); }
+    .post-row:last-child { border-bottom:1px solid var(--line); }
+    .post-row a { display:block; padding:16px 0; color:inherit; text-decoration:none; }
+    .post-row h3 { font-size:18px; font-weight:700; color:var(--white); line-height:1.3; margin:0 0 4px; }
+    .post-row p { color:var(--tan); font-size:15px; line-height:1.55; margin:0 0 6px; max-width:60ch; }
+    .post-row .pr-meta { font-size:13px; color:var(--gray); }
+    .post-row a:hover h3 { text-decoration:underline; text-decoration-color:var(--gold); text-underline-offset:3px; }
+    .cat-head { margin:30px 0 10px; }
+    .cat-head h2 { font-size:20px; font-weight:700; color:var(--white); margin:0; }
+    .post-sign { margin:30px 0 4px; padding-top:18px; border-top:1px solid var(--line); font-size:13px; color:var(--gray); line-height:1.75; max-width:66ch; }
     article hr { border:none; border-top:1px solid var(--line); margin:26px 0; }
 """
 
 NAV = """<nav>
-    <a href="/index.html" class="nav-brand"><img src="/logo-96.png" alt="VA Ready logo" width="34" height="34"><span>VA READY <span style="color:var(--gray);font-weight:400;">/</span> VET READY</span></a>
+    <a href="/index.html" class="nav-brand"><img src="/logo-96.png" alt="VA Ready logo" width="34" height="34"><span>VA Ready <span style="color:var(--gray);font-weight:400;">/</span> Vet Ready</span></a>
     <input type="checkbox" id="nv" class="nv-cb">
     <label for="nv" class="nv-burger" aria-label="Open menu">&#9776;</label>
     <div class="nav-links"><a href="/va-disability-calculator.html">Calculator</a><a href="/conditions.html">Conditions</a><a href="/mos.html">MOS</a><a href="/va-disability-pay-rates.html">Pay Rates</a><a href="/federal-benefits.html">Federal Benefits</a><a href="/guides.html">Guides</a><a href="/blog.html">Blog</a><a href="/find-a-vso.html">Find a VSO</a><a href="/index.html#download" class="nav-cta">Get the App</a></div>
@@ -73,8 +67,8 @@ FOOTER = """<footer>
 <script defer src="/track.js"></script>"""
 
 BLOG_CTA = """<div class="cta">
-    <h3>VA Ready is the app that practices what this preaches</h3>
-    <p>No account, no login, no data ever leaving your phone, and real, peer-reviewed studies instead of AI guesses. The combined-rating calculator, VSO finder, and core tools are free.</p>
+    <h3>VA Ready app</h3>
+    <p>No account and no login, and your claim data stays on your phone. The combined-rating calculator, claim list, VSO finder and symptom tracker are free; Pro adds full 38 CFR criteria for every condition, every state's benefits and Claim Intel.</p>
     <div class="btns"><a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a><a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn ghost">Get Vet Ready for Android</a></div>
 </div>"""
 
@@ -163,16 +157,14 @@ posts.sort(key=lambda p: p["_dt"], reverse=True)
 def post_page(p, related):
     body = md_to_html(p["body"])
     canon = f'https://vareadyapp.com{p["url"]}'
-    desc = esc(p["excerpt"][:160])
+    desc = esc(p["excerpt"])
     img_url = f'https://vareadyapp.com{p["image"]}' if p.get("image") else "https://vareadyapp.com/logo.png"
-    if img_exists(p.get("image")):
-        hero = f'<img class="post-hero" src="{esc(p["image"])}" alt="{esc(p.get("image_alt",""))}" loading="eager">'
-    else:
-        hero = '<div class="post-hero ph"><span>VA READY</span></div>'
+    # The share graphics repeat the headline and carry old slogans, so posts and the index are text only. They stay as og:image.
+    hero = ""
     rel_html = ""
     if related:
         items = "".join(
-            f'<a href="{r["url"]}">{esc(r["title"])}<span>{esc(r["excerpt"][:90])}</span></a>'
+            f'<a href="{r["url"]}">{esc(r["title"])}<span>{r["date_label"]} &middot; {r["reading"]} min read</span></a>'
             for r in related)
         rel_html = f'<div class="related"><h2>More from the blog</h2>{items}</div>'
     breadcrumb = json.dumps({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
@@ -193,7 +185,7 @@ def post_page(p, related):
         "author":author_ld,
         "publisher":{"@type":"Organization","name":"VA Ready","logo":{"@type":"ImageObject","url":"https://vareadyapp.com/logo.png"}},
         "mainEntityOfPage":canon,"inLanguage":"en-US"})
-    byline = (f'<a href="{esc(author_url)}">{esc(author_name)}</a>' if p.get("author") else "<strong>VA Ready App</strong>")
+    byline = (f'<a href="{esc(author_url)}">{esc(author_name)}</a>' if p.get("author") else "VA Ready App")
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -209,7 +201,7 @@ def post_page(p, related):
 <meta property="og:title" content="{esc(p['title'])}">
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="{canon}">
-<meta property="og:image" content="{img_url}">
+<meta property="og:image" content="https://vareadyapp.com/logo.png">
 <meta property="article:published_time" content="{p['date']}">
 <meta property="article:section" content="{esc(p['category'])}">
 <meta name="twitter:card" content="summary_large_image">
@@ -226,7 +218,6 @@ def post_page(p, related):
 {NAV}
 <div class="wrap">
     <div class="crumb"><a href="/index.html">Home</a> / <a href="/blog.html">Blog</a> / {esc(p['category'])}</div>
-    <div class="eyebrow">{esc(p['category'])}</div>
     <h1>{esc(p['title'])}</h1>
     <p class="lede">{esc(p['excerpt'])}</p>
     <div class="meta">{byline} &middot; {p['date_label']} &middot; {p['reading']} min read</div>
@@ -234,7 +225,7 @@ def post_page(p, related):
     <article>
 {body}
     </article>
-    <div class="post-sign">VA Ready is built by veterans, for veterans. It is not affiliated with the U.S. Department of Veterans Affairs. Information is sourced from public VA regulations (38 CFR) and peer-reviewed medical literature, and is provided for educational purposes only. Consult a VA-accredited VSO, agent, or attorney before filing.<br>VA Ready on iPhone &amp; iPad &middot; Vet Ready on Android &middot; vareadyapp.com</div>
+    <div class="post-sign">Information is sourced from public VA regulations (38 CFR) and peer-reviewed medical literature, and is provided for educational purposes only. Consult a VA-accredited VSO, agent, or attorney before filing.</div>
     {BLOG_CTA}
     {rel_html}
     {DISCLAIMER}
@@ -245,14 +236,9 @@ def post_page(p, related):
 
 # ---------- index page ----------
 def card(p):
-    if img_exists(p.get("image")):
-        thumb = f'<img class="thumb" src="{esc(p["image"])}" alt="{esc(p.get("image_alt",""))}" loading="lazy">'
-    else:
-        thumb = '<div class="thumb ph"><span>VA READY</span></div>'
-    return (f'<div class="bcard"><a class="bc-link" href="{p["url"]}">{thumb}'
-            f'<div class="bc-body"><span class="bc-tag">{esc(p["category"])}</span>'
-            f'<h3>{esc(p["title"])}</h3><p class="bc-ex">{esc(p["excerpt"][:140])}</p>'
-            f'<div class="bc-meta">{p["date_label"]} &middot; {p["reading"]} min read</div></div></a></div>')
+    return (f'<li class="post-row"><a href="{p["url"]}">'
+            f'<div><h3>{esc(p["title"])}</h3><p>{esc(p["excerpt"])}</p>'
+            f'<div class="pr-meta">{p["date_label"]} &middot; {p["reading"]} min read</div></div></a></li>')
 
 def index_page():
     cats = {}
@@ -261,8 +247,8 @@ def index_page():
     sections = ""
     for cat, items in cats.items():
         cards = "".join(card(p) for p in items)
-        sections += f'<div class="cat-head"><h2>{esc(cat)}</h2></div><div class="blog-grid">{cards}</div>'
-    desc = "Straight-talk reads for veterans filing VA disability claims, filing smarter, protecting your information, and getting the rating you earned. From the team behind VA Ready."
+        sections += f'<div class="cat-head"><h2>{esc(cat)}</h2></div><ul class="post-list">{cards}</ul>'
+    desc = "Articles on C&P exams, decision letters, effective dates, back pay and claim fees, from the team behind VA Ready."
     breadcrumb = json.dumps({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
         {"@type":"ListItem","position":1,"name":"Home","item":"https://vareadyapp.com/"},
         {"@type":"ListItem","position":2,"name":"Blog","item":"https://vareadyapp.com/blog.html"}]})
@@ -275,14 +261,14 @@ def index_page():
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VA Ready Blog: Straight Talk for Veterans Filing VA Claims</title>
+<title>VA Ready blog: articles on exams, decision letters and claim fees</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0a0f1a">
 <link rel="canonical" href="https://vareadyapp.com/blog.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="VA Ready">
-<meta property="og:title" content="VA Ready Blog. Straight Talk for Veterans">
+<meta property="og:title" content="VA Ready blog: articles on exams, decision letters and claim fees">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="https://vareadyapp.com/blog.html">
 <meta property="og:image" content="https://vareadyapp.com/logo.png">
@@ -297,9 +283,8 @@ def index_page():
 {NAV}
 <div class="wrap">
     <div class="crumb"><a href="/index.html">Home</a> / Blog</div>
-    <div class="eyebrow">VA Ready Blog</div>
-    <h1>Straight Talk for Veterans Filing VA Claims</h1>
-    <p class="lede">Plain-language reads on filing smarter, protecting your information, and getting the rating you earned, from the team behind VA Ready.</p>
+    <h1>VA Ready blog</h1>
+    <p class="lede">Articles on C&amp;P exams, decision letters, effective dates, back pay and claim fees, from the team behind VA Ready. For step-by-step filing help, see the <a href="/guides.html">VA claim guides</a>.</p>
     {sections}
     {BLOG_CTA}
     {DISCLAIMER}

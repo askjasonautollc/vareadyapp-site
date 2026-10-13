@@ -21,5 +21,5 @@ order.sort(function(a,b3){return a.d-b3.d||a.n-b3.n;});
 /* One fragment, one reflow, instead of 800 appendChild calls against the live list. */
 var fr=document.createDocumentFragment();order.forEach(function(o){fr.appendChild(o.c);});l.appendChild(fr);
 cards=order.map(function(o){return o.c;});hay=cards.map(function(c){return (c.getAttribute('data-search')||'').toLowerCase();});
-b.textContent='\u2713 Nearest first';},function(){b.textContent='Location unavailable';});});}
+b.textContent='Nearest first';},function(){b.textContent='Location unavailable';});});}
 })();

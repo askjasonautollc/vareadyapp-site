@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>VA Back Pay Calculator (2026): Estimate Your Retro Pay</title>
-    <meta name="description" content="Estimate VA back pay from your effective date to your decision, using the real 2026 rate tables. See what an Intent to File locks in, and what can reduce it.">
+    <meta name="description" content="Estimate VA back pay from your effective date to your decision, using the published VA rate tables for 2021 through 2026. See what an Intent to File locks in and what can reduce it.">
     <meta name="keywords" content="VA back pay calculator, backpay calculator, VA retro pay calculator, VA retroactive pay estimator, VA back pay 2026, effective date back pay, intent to file back pay, VA Ready">
     <meta name="author" content="JDL Software LLC">
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -16,7 +16,7 @@
     <meta property="og:site_name" content="VA Ready">
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="VA Back Pay Calculator (2026): Estimate Your Retro Pay">
-    <meta property="og:description" content="Estimate your VA retroactive pay from your effective date to your decision, month by month, on the real VA rate tables. Free, no login, no contact form.">
+    <meta property="og:description" content="Estimate your VA retroactive pay month by month from your effective date to your decision, on the published VA rate tables. Free, no login, no contact form.">
     <meta property="og:image" content="https://vareadyapp.com/logo.png">
     <meta property="og:image:width" content="1024">
     <meta property="og:image:height" content="1024">
@@ -25,7 +25,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="VA Back Pay Calculator (2026): Estimate Your Retro Pay">
-    <meta name="twitter:description" content="Your effective date to your decision, month by month, on the real VA rate tables. Free. Nothing leaves your browser.">
+    <meta name="twitter:description" content="Month by month from your effective date to your decision, on the published VA rate tables. Free. Nothing leaves your browser.">
     <meta name="twitter:image" content="https://vareadyapp.com/logo.png">
     <meta name="twitter:image:alt" content="VA Ready app icon">
 
@@ -106,7 +106,7 @@
         nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; max-width: 1100px; margin: 0 auto; }
         .nav-brand { display: flex; align-items: center; gap: 10px; }
         .nav-brand img { width: 34px; height: 34px; border-radius: 9px; }
-        .nav-brand span { font-size: 14px; font-weight: 900; letter-spacing: 2px; }
+        .nav-brand span { font-size: 14px; font-weight: 900; }
         .nav-links a { font-size: 13px; color: var(--tan); margin-left: 16px; font-weight: 600; }
 
         header.hero { text-align: center; padding: 44px 20px 16px; }
@@ -189,13 +189,68 @@
         .nav-links a.nav-cta { background: var(--gold); color: #000; padding: 7px 16px; border-radius: 8px; font-weight: 800; }
         .nav-links a.nav-cta:hover { color: #000; box-shadow: 0 4px 16px rgba(217,166,33,0.3); }
         @media (max-width: 1100px) { .nav-links a.nav-cta { margin-top: 10px; text-align: center; border-top: none; padding: 12px; } }
+
+        /* Plain-type pass: sentence case, no gold outside buttons and links, no glow, 44px targets */
+        header.hero, .hero { text-align: left; max-width: 760px; margin: 0 auto; padding: 40px 20px 12px; }
+        .hero .lede { margin: 0; max-width: none; font-size: 17px; }
+        .calc { background: var(--card); border: 0; border-radius: 14px; }
+        .calc h2 { font-size: 20px; text-transform: none; letter-spacing: 0; color: var(--white); margin-bottom: 6px; }
+        .calc .hint { font-size: 14px; }
+        .result { border: 0; border-top: 1px solid var(--line); border-radius: 0; background: transparent; padding: 20px 0 0; }
+        .result .rate { color: var(--white); }
+        select, input[type=number], input[type=date] { min-height: 44px; }
+        .rm { min-width: 44px; min-height: 44px; }
+        .bilat { min-height: 44px; font-size: 13px; }
+        .deps label { min-height: 44px; font-size: 14px; }
+        .deps input[type=checkbox], .bilat input { width: 20px; height: 20px; }
+        .add-btn { background: transparent; color: var(--tan); border: 1px solid var(--line); min-height: 44px; }
+        .btn { min-height: 44px; }
+        .faq-item h3 { color: var(--white); }
+        .faq-item p, section.content li { font-size: 15.5px; }
+        ul.lift li { padding-left: 20px; }
+        ul.lift li::before { content: "\2022"; color: var(--gray); font-weight: 400; }
+        .example { border: 0; }
+        .shot, .crit-card, .shot-bp { background: transparent; border: 0; border-radius: 12px; overflow: visible; }
+        .shot img, .crit-card img, .shot-bp img { border: 1px solid var(--line); border-radius: 12px; }
+        .shot figcaption, .crit-card figcaption, .shot-bp figcaption { border: 0; padding: 10px 2px 0; }
+        .appshot { background: none; padding: 0; border: 0; box-shadow: none; }
+        .appshot img { border: 1px solid var(--line); border-radius: 18px; }
+        .guardrail { background: none; border: 0; padding: 0; margin: 16px 0 8px; font-size: 15.5px; }
+        .why { background: none; border: 0; padding: 0; margin: 14px 0; }
+        .why h3, .guardrail h3 { font-size: 16px; font-weight: 800; color: var(--white); margin-bottom: 4px; }
+        .why p, .guardrail p { font-size: 15.5px; color: var(--tan); margin-bottom: 0; }
+        h3.tag-h { font-size: 17px; font-weight: 800; margin: 18px 0 4px; }
+        .tier { font-size: 12px; font-weight: 600; color: var(--gray); margin-left: 4px; white-space: nowrap; }
+        .crit-links a { background: none; border: 0; border-top: 1px solid var(--line); border-radius: 0; min-height: 44px; padding: 8px 2px; transition: none; }
+        .crit-links a:hover { transform: none; border-color: var(--line); text-decoration: underline; }
+        .crit-links a span { color: var(--gray); font-weight: 600; letter-spacing: 0; }
+        table.dt th { color: var(--white); text-transform: none; letter-spacing: 0; font-size: 13px; }
+        .bd th { text-transform: none; letter-spacing: 0; font-size: 12px; }
+        .grp-h { font-size: 15px; font-weight: 700; letter-spacing: 0; text-transform: none; color: var(--white); }
+        h1, h2, h2.sec { line-height: 1.25; }
+        h3 { line-height: 1.35; }
+        .nav-burger { padding: 9px 12px; }
+        .nav-links a.nav-cta:hover { box-shadow: none; }
+        @media (min-width: 1101px) { .nav-links a { display: inline-block; padding: 12px 8px; } .nav-links a.nav-cta { padding: 12px 16px; } }
+        .footer-links a { display: inline-block; padding: 12px 6px; margin: 0 4px; }
+        .footer-social a { padding: 11px; }
+        footer p { font-size: 13px; }
+        .disclaimer { font-size: 13px; }
+        .tw, .scroller { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .result .rate-sub span.v { color: var(--white); }
+        .bd { font-size: 14px; }
+        .fld .sub { font-size: 13px; }
+        .result .bd td, .result .bd th { text-align: left; }
+        .result .bd td.n, .result .bd th.n { text-align: right; }
+        .bd { font-variant-numeric: tabular-nums; }
+        .fld > label { font-size: 15px; }
     </style>
 </head>
 <body>
     <nav>
         <a href="index.html" class="nav-brand">
             <img src="/logo-96.png" alt="VA Ready and Vet Ready logo" width="34" height="34">
-            <span>VA READY <span style="color: var(--gray); font-weight: 400;">/</span> VET READY</span>
+            <span>VA Ready <span style="color: var(--gray); font-weight: 400;">/</span> Vet Ready</span>
         </a>
         <input type="checkbox" id="navToggle" class="nav-toggle-cb">
         <label for="navToggle" class="nav-burger" aria-label="Open menu">&#9776;</label>
@@ -209,9 +264,8 @@
     </nav>
 
     <header class="hero">
-        <div class="eyebrow">Free &middot; No login &middot; No contact form</div>
-        <h1>VA Back Pay Calculator</h1>
-        <p class="lede">Estimate your retroactive pay from your effective date through your decision, month by month, on the VA's published rate tables going back to 2021. We show you the number first. No email, no phone number, no one calling you.</p>
+        <h1>VA back pay calculator</h1>
+        <p class="lede">Estimate your retroactive pay month by month, from your effective date through your decision, on the VA's published rate tables from 2021 to 2026. Free, no login and no contact form. It asks for no email or phone number.</p>
     </header>
 
     <div class="wrap">
@@ -266,53 +320,56 @@
         </div>
 
         <section class="content">
-            <h2 class="sec">How VA back pay actually works</h2>
-            <p>Back pay, also called retro, is the money the VA owes you for the stretch between your <strong>effective date</strong> and the day it finally decided your claim. Three rules control the whole number.</p>
+            <h2 class="sec">How VA back pay works</h2>
+            <p>Back pay, also called retro, is the money the VA owes you for the stretch between your effective date and the day it decided your claim.</p>
 
-            <p><strong>1. Your effective date sets the start.</strong> Normally it is the day the VA received your Intent to File or your claim. But under <strong>38 CFR 3.400(b)(2)</strong>, if you filed within one year of leaving service, your effective date is the day after your discharge instead. That single rule is often worth thousands of dollars, and plenty of veterans never hear about it.</p>
+            <h3 class="tag-h">Your effective date sets the start</h3>
+            <p>Normally it is the day the VA received your Intent to File or your claim. Under 38 CFR 3.400(b)(2), if you filed within one year of leaving service, your effective date is the day after your discharge instead. In the example below it moves the estimate from about $55,400 to about $64,700.</p>
 
-            <p><strong>2. The first month never pays.</strong> Under <strong>38 CFR 3.31</strong>, compensation begins the first day of the month <em>after</em> your effective date. If your effective date is March 15, 2024, your first paid benefit month is April 2024. The partial month is simply not paid.</p>
+            <h3 class="tag-h">The month of your effective date is not paid</h3>
+            <p>Under 38 CFR 3.31, compensation begins the first day of the month after your effective date. If your effective date is March 15, 2024, your first paid benefit month is April 2024. The partial month is not paid.</p>
 
-            <p><strong>3. Every month is paid at that month's rate.</strong> The VA does not apply today's rates to old months. Each benefit month uses the rate table in force at the time, at your combined rating and dependent status. The annual cost-of-living raise lands December 1, so a December benefit month is already paid at the next year's table. The calculator above does all of this.</p>
+            <h3 class="tag-h">Every month is paid at that month's rate</h3>
+            <p>The VA does not apply today's rates to old months. Each benefit month uses the rate table in force at the time, at your combined rating and dependent status. The annual cost-of-living raise lands December 1, so a December benefit month is already paid at the next year's table. The calculator above applies each of these.</p>
 
             <div class="example">
-                <strong>Example.</strong> You file an ITF on March 15, 2024, and the VA grants 70% with a spouse on August 1, 2026. Your first payable month is April 2024. That is 29 benefit months, each paid at the 2024, 2025, and 2026 rates in turn, which comes to roughly <strong>$55,400</strong> in retro. Now change one thing: if you had separated on September 30, 2023, that same March 2024 filing falls inside the one-year window, your effective date becomes October 1, 2023, and the estimate climbs to about <strong>$64,700</strong>. Run your own dates above.
+                Example: you file an ITF on March 15, 2024, and the VA grants 70% with a spouse on August 1, 2026. Your first payable month is April 2024. That is 29 benefit months, each paid at the 2024, 2025, and 2026 rates in turn, which comes to roughly $55,400 in retro. Now change one thing: if you had separated on September 30, 2023, that same March 2024 filing falls inside the one-year window, your effective date becomes October 1, 2023, and the estimate climbs to about $64,700. Run your own dates above.
             </div>
 
             <h2 class="sec">If this is an increase, only the raise counts</h2>
-            <p>This is where most online estimates mislead people. If the VA already pays you at 50% and grants you 70%, your back pay is the <em>difference</em> between the 70% rate and the 50% rate for each month, not the full 70% amount. Enter your current rating above and the estimate reflects real money instead of a fantasy number.</p>
+            <p>If the VA already pays you at 50% and grants you 70%, your back pay is the difference between the 70% rate and the 50% rate for each month, not the full 70% amount. Enter your current rating above and the estimate counts only the raise.</p>
 
-            <h2 class="sec">What can shrink your check</h2>
-            <p>The sticker number is not always what lands in your account. Any of these can reduce it:</p>
+            <h2 class="sec">What can reduce your check</h2>
+            <p>Any of these can reduce the amount you receive:</p>
             <ul class="lift">
-                <li><strong>Military retired pay.</strong> VA compensation offsets retired pay dollar for dollar unless you qualify for CRDP or CRSC.</li>
-                <li><strong>Disability severance pay.</strong> If you received severance for the same condition, the VA recoups it from your award.</li>
-                <li><strong>Drill pay.</strong> Guard and Reserve members must waive VA compensation for the days they drilled.</li>
-                <li><strong>Prior VA debt.</strong> An existing overpayment or debt is withheld from the retro before you see it.</li>
-                <li><strong>Representative fees.</strong> If you used an accredited attorney or claims agent, the VA withholds their fee straight out of the lump sum under <strong>38 CFR 14.636</strong>.</li>
+                <li>Military retired pay: VA compensation offsets retired pay dollar for dollar unless you qualify for CRDP or CRSC.</li>
+                <li>Disability severance pay: if you received severance for the same condition, the VA recoups it from your award.</li>
+                <li>Drill pay: Guard and Reserve members must waive VA compensation for the days they drilled.</li>
+                <li>Prior VA debt: an existing overpayment or debt is withheld from the retro before you see it.</li>
+                <li>Representative fees: if you used an accredited attorney or claims agent, the VA withholds their fee out of the lump sum under 38 CFR 14.636.</li>
             </ul>
 
-            <h2 class="sec">Nobody should charge you to file your first claim</h2>
-            <p>Back pay is the only place a VA claim fee can legally come from, which is exactly why so many "free evaluation" sites crowd around it. Under <strong>38 CFR 14.636(c)</strong>, no one can charge you a fee for preparing and filing your <em>original</em> claim, and only VA-accredited attorneys, claims agents, and VSO representatives can charge a fee at all, and only after a first decision. A VA-accredited VSO will do all of it, including your first claim, for free.</p>
+            <h2 class="sec">Fees for filing a claim</h2>
+            <p>Back pay is the only place a VA claim fee can legally come from. Under 38 CFR 14.636(c), no one can charge you a fee for preparing and filing your original claim, and only VA-accredited attorneys, claims agents, and VSO representatives can charge a fee at all, and only after a first decision. A VA-accredited VSO will do all of it, including your first claim, for free.</p>
             <p><a href="/blog/va-back-pay-and-claim-sharks.html">Read the full breakdown of how predatory claim fees work &rarr;</a> &nbsp;&middot;&nbsp; <a href="/find-a-vso.html">Find a free accredited VSO near you &rarr;</a></p>
 
-            <h2 class="sec">Want the exact number, not the estimate? Get the app.</h2>
-            <p>This page runs the dates and the rate tables. VA Ready runs your whole claim, and shows the effective date it derived along with the regulation it came from.</p>
+            <h2 class="sec" id="get-app">Get the app</h2>
+            <p>This page runs the dates and the rate tables. The app also shows the effective date it derived and the regulation behind it.</p>
             <figure class="shot-bp">
                 <picture><source srcset="img/v3i-backpay.webp" type="image/webp"><img src="img/v3i-backpay.jpg" alt="VA Ready Back Pay Estimator on iPad showing an estimated range of $23,147 to $33,490 from an Intent to File date, with the Intent to File, decision and effective dates, above a list of conditions with expected and low rating estimates and questions about what could reduce back pay." width="900" height="1200" loading="lazy" decoding="async"></picture>
-                <figcaption><strong>Your dates, and the rule behind them.</strong> The app derives your effective date and tells you why, then gives a range from your low and expected ratings instead of one falsely precise number.</figcaption>
+                <figcaption>Back Pay Estimator. The app derives your effective date, explains why, and gives a range from your low and expected ratings.</figcaption>
             </figure>
             <ul class="lift">
-                <li>The Back Pay Estimator with a full month-by-month breakdown, dependent changes over time, and the offsets that could reduce your check</li>
-                <li>The real 38 CFR criteria for 765 conditions, so you can see what rating your symptoms actually support</li>
-                <li>Every presumptive you earned, duty station by duty station: PACT Act, Camp Lejeune, Agent Orange, AFFF, K2</li>
-                <li>A directory of every VA-accredited VSO, free, searchable by ZIP and sortable by distance</li>
+                <li>A month-by-month breakdown, dependent changes over time, and the offsets that could reduce your check</li>
+                <li>The 38 CFR criteria for 765 conditions, to see what rating your symptoms support</li>
+                <li>Presumptive conditions matched to your duty stations: PACT Act, Camp Lejeune, Agent Orange, AFFF, K2</li>
+                <li>A free directory of VA-accredited VSOs, searchable by ZIP and sortable by distance</li>
             </ul>
-            <p style="color: var(--white); font-weight: 700; font-size: 16px;">Free on iPhone and Android. No account, no login, and your claim never leaves your phone.</p>
+            <p>Free on iPhone and Android. No account, no login, and your claim stays on your phone.</p>
             <div class="btns">
                 <a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a>
                 <a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn">Get Vet Ready for Android</a>
-                <a href="va-disability-calculator.html" class="btn ghost">Combined Rating Calculator</a>
+                <a href="va-disability-calculator.html" class="btn ghost">Combined rating calculator</a>
             </div>
 
             <h2 class="sec">Common questions</h2>
@@ -358,7 +415,7 @@
             <a href="privacy.html">Privacy</a>
             <a href="terms.html">Terms</a>
         </div>
-        <div class="footer-social" style="display:flex;justify-content:center;gap:20px;margin:18px 0 2px;"><a href="https://www.tiktok.com/@vareadyapp" target="_blank" rel="me noopener" aria-label="VA Ready on TikTok" style="color:#d9a621;display:inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.01-2.82h-3.3v13.2a2.59 2.59 0 1 1-1.78-2.46V10.2a5.9 5.9 0 1 0 5.09 5.85V8.96a7.56 7.56 0 0 0 4.4 1.41V7.06a4.28 4.28 0 0 1-3.4-1.24Z"/></svg></a><a href="https://www.instagram.com/vareadyapp/" target="_blank" rel="me noopener" aria-label="VA Ready on Instagram" style="color:#d9a621;display:inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 0 0-2.12 1.38A5.86 5.86 0 0 0 .64 4.13C.34 4.9.14 5.77.08 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91a5.86 5.86 0 0 0 1.38 2.12 5.86 5.86 0 0 0 2.12 1.38c.76.3 1.63.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.12-1.38 5.86 5.86 0 0 0 1.38-2.12c.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.12A5.86 5.86 0 0 0 19.87.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4Zm6.41-10.4a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44Z"/></svg></a><a href="https://www.facebook.com/vareadyapp" target="_blank" rel="me noopener" aria-label="VA Ready on Facebook" style="color:#d9a621;display:inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.03 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg></a></div>
+        <div class="footer-social" style="display:flex;justify-content:center;gap:20px;margin:18px 0 2px;"><a href="https://www.tiktok.com/@vareadyapp" target="_blank" rel="me noopener" aria-label="VA Ready on TikTok" style="color:#c8bda5;display:inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.01-2.82h-3.3v13.2a2.59 2.59 0 1 1-1.78-2.46V10.2a5.9 5.9 0 1 0 5.09 5.85V8.96a7.56 7.56 0 0 0 4.4 1.41V7.06a4.28 4.28 0 0 1-3.4-1.24Z"/></svg></a><a href="https://www.instagram.com/vareadyapp/" target="_blank" rel="me noopener" aria-label="VA Ready on Instagram" style="color:#c8bda5;display:inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 0 0-2.12 1.38A5.86 5.86 0 0 0 .64 4.13C.34 4.9.14 5.77.08 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91a5.86 5.86 0 0 0 1.38 2.12 5.86 5.86 0 0 0 2.12 1.38c.76.3 1.63.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.12-1.38 5.86 5.86 0 0 0 1.38-2.12c.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.12A5.86 5.86 0 0 0 19.87.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4Zm6.41-10.4a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44Z"/></svg></a><a href="https://www.facebook.com/vareadyapp" target="_blank" rel="me noopener" aria-label="VA Ready on Facebook" style="color:#c8bda5;display:inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.03 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg></a></div>
 </footer>
 
     <script>
@@ -502,9 +559,9 @@
 
             const usedDayAfter = sep && toOrdinal(ed) !== toOrdinal(itf);
             const edNote = usedDayAfter
-                ? '<div class="rate-sub">Effective date <strong style="color:var(--white)">' + edLabel +
-                  '</strong>, the day after your discharge, because you filed within one year of separating (38 CFR 3.400(b)(2)).</div>'
-                : '<div class="rate-sub">Effective date <strong style="color:var(--white)">' + edLabel + '</strong>.</div>';
+                ? '<div class="rate-sub">Effective date <span class="v">' + edLabel +
+                  '</span>, the day after your discharge, because you filed within one year of separating (38 CFR 3.400(b)(2)).</div>'
+                : '<div class="rate-sub">Effective date <span class="v">' + edLabel + '</span>.</div>';
             const incNote = curR > 0
                 ? '<div class="rate-sub">Counting only the raise from ' + curR + '% to ' + newR + '%, which is what actually accrues as back pay.</div>'
                 : '';
@@ -514,19 +571,15 @@
 
             resultEl.innerHTML =
                 '<div class="rate">' + money0(total) + '</div>' +
-                '<div class="rate-sub">Estimated back pay across <strong style="color:var(--white)">' + months +
-                    ' benefit month' + (months === 1 ? '' : 's') + '</strong>, first paid month ' + firstLabel + '.</div>' +
+                '<div class="rate-sub">Estimated back pay across <span class="v">' + months +
+                    ' benefit month' + (months === 1 ? '' : 's') + '</span>, first paid month ' + firstLabel + '.</div>' +
                 edNote + incNote + clampNote +
                 '<div class="scroller"><table class="bd"><thead><tr><th>Rate table</th><th class="n">Months</th><th class="n">Per month</th><th class="n">Subtotal</th></tr></thead><tbody>' +
                 rows +
                 '<tr class="tot"><td>Total</td><td class="n">' + months + '</td><td class="n"></td><td class="n">' + money(total) + '</td></tr>' +
                 '</tbody></table></div>' +
                 '<div class="result-cta">' +
-                    '<p>This is an estimate on the dates you entered. Offsets like retired pay, severance recoupment, drill pay, or prior VA debt can reduce it. The app walks all of that, month by month, and never asks who you are.</p>' +
-                    '<div class="btns">' +
-                        '<a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a>' +
-                        '<a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn">Get Vet Ready for Android</a>' +
-                    '</div>' +
+                    '<p>This is an estimate on the dates you entered. Offsets like retired pay, severance recoupment, drill pay, or prior VA debt can reduce it. The app walks through each offset month by month. <a href="#get-app">Get the app</a></p>' +
                 '</div>';
         }
 

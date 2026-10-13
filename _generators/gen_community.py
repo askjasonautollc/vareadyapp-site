@@ -30,7 +30,7 @@ HOME_TEASER_COUNT = 3
 ORIGIN = "https://vareadyapp.com"
 canon = ORIGIN + "/community.html"
 # Page-level SEO. Revisit when the mix of entries changes.
-title = "VA Ready in the Community | Veteran Flights & Georgia Football"
+title = "VA Ready in the community: veteran flights and Georgia football"
 desc = "Veteran-founded VA Ready shows up in person in Georgia: free discovery flights for veterans with Runway One Nine Aviation and Liberty County Panthers football."
 assert len(title) <= 65, len(title)
 assert len(desc) <= 160, len(desc)
@@ -113,26 +113,24 @@ photo_log = {e["id"]: build_photos(e) for e in entries}
 # ---------- community page ----------
 CSS = chrome("CSS") + """
     h1, article h2, .entry h2 { font-family:Georgia,'Times New Roman',Times,serif; }
-    h1 { font-size:38px; font-weight:700; letter-spacing:-0.3px; line-height:1.18; margin:4px 0 12px; }
-    article h2 { font-size:26px; font-weight:700; letter-spacing:-0.2px; line-height:1.25; margin:40px 0 12px; }
+    h1 { font-size:38px; font-weight:700; line-height:1.18; margin:4px 0 12px; }
+    article h2 { font-size:26px; font-weight:700; line-height:1.25; margin:40px 0 12px; }
     .lede { margin-bottom:6px; }
     .feed { margin:30px 0 8px; }
-    .entry { background:var(--card); border:1px solid var(--line); border-radius:16px; overflow:hidden; margin:0 0 22px; scroll-margin-top:18px; }
-    .entry img { display:block; width:100%; height:auto; aspect-ratio:1600/1000; object-fit:cover; background:#0f1524; border-bottom:1px solid var(--line); }
-    .entry-body { padding:20px 24px 22px; }
+    .entry { border-top:1px solid var(--line); padding-top:22px; margin:0 0 30px; scroll-margin-top:18px; }
+    .entry img { display:block; width:100%; height:auto; aspect-ratio:1600/1000; object-fit:cover; background:#0f1524; border-radius:12px; }
+    .entry-body { padding:16px 0 0; }
     .entry-meta { display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 14px; margin-bottom:4px; }
-    .entry-meta time { font-size:11.5px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--gold); }
-    .entry-meta .loc { font-size:13px; font-weight:600; color:var(--gray); }
-    .entry h2 { font-size:25px; font-weight:700; line-height:1.25; letter-spacing:-0.2px; color:var(--white); margin:2px 0 10px; }
-    .entry p { color:var(--tan); font-size:16px; margin-bottom:12px; }
+    .entry-meta time { font-size:13px; font-weight:600; color:var(--gray); }
+    .entry-meta .loc { font-size:13px; color:var(--gray); }
+    .entry h2 { font-size:25px; font-weight:700; line-height:1.25; color:var(--white); margin:2px 0 10px; }
+    .entry p { color:var(--tan); font-size:16px; margin-bottom:12px; max-width:68ch; }
     .entry p:last-child { margin-bottom:0; }
-    .entry .entry-link a { font-weight:700; }
     .entry .entry-links { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
-    .entry .entry-links a { display:inline-block; padding:8px 13px; border:1px solid rgba(217,166,33,0.35); border-radius:10px; font-size:14.5px; font-weight:700; line-height:1.3; }
-    .entry .entry-links a:hover { border-color:var(--gold); }
-    .support { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:18px 0 6px; }
-    .support .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px; }
-    .support h3 { color:var(--white); font-size:16px; font-weight:800; margin:0 0 6px; }
+    .entry .entry-links a { display:inline-flex; align-items:center; min-height:44px; padding:8px 14px; border:1px solid rgba(255,255,255,0.22); border-radius:10px; font-size:14.5px; font-weight:700; line-height:1.3; text-decoration:none; }
+    .support { margin:18px 0 6px; max-width:68ch; }
+    .support .item { border-top:1px solid var(--line); padding:14px 0; }
+    .support h3 { color:var(--white); font-size:16px; font-weight:700; margin:0 0 4px; }
     .support p { font-size:15px; line-height:1.65; margin:0; }
     .sig { margin:34px 0 0; padding-top:16px; border-top:1px solid var(--line); }
     .sig .sig-name { color:var(--white); font-weight:800; font-size:17px; }
@@ -143,7 +141,6 @@ CSS = chrome("CSS") + """
     .soft-close .stores span { color:var(--gray); margin:0 10px; }
     .soft-close .note { color:var(--gray); font-size:13px; }
     footer .compliance { max-width:720px; margin:0 auto 14px; color:var(--tan); font-size:12.5px; line-height:1.65; }
-    @media (max-width:620px){ .support { grid-template-columns:1fr; } .entry-body { padding:18px 18px 20px; } }
     @media (max-width:560px){ h1 { font-size:30px; } article h2 { font-size:23px; } .entry h2 { font-size:22px; } }
 """
 
@@ -175,7 +172,6 @@ def entry_html(e, first):
 FEED = '<div class="feed">\n' + "\n".join(entry_html(e, i == 0) for i, e in enumerate(entries)) + "\n  </div>"
 
 BODY_TOP = '''<div class="crumb"><a href="/index.html">Home</a> / In the Community</div>
-    <div class="eyebrow">VA Ready &amp; Vet Ready in the Community</div>
     <h1>I built this for veterans, so I show up in person.</h1>
     <p class="lede">I&rsquo;m a retired Army Chief Warrant Officer, and I built VA Ready with a team of fellow veterans and people who know the VA claims process inside and out. This is where you&rsquo;ll find us off the screen, newest first.</p>'''
 
@@ -183,23 +179,23 @@ ABOUT = f'''<article>
     <h2>I&rsquo;m a veteran, not a marketing company</h2>
     <p>No agency went looking for a veteran angle here. I served twenty years in the U.S. Army, retired as a Chief Warrant Officer, and went through the VA claims process myself.</p>
     <p>I dug through scattered rules, made my own checklists, and figured out the steps the hard way. Then I built the tool I wish someone had handed me. <a href="/founders.html">Read my story</a>.</p>
-    <p>I don&rsquo;t do it alone. I built VA Ready with <strong>a team of fellow veterans and people with years of hands-on experience in the VA claims process</strong>, including helping other veterans through it. They keep the app honest about what claims really look like on the ground.</p>
+    <p>I don&rsquo;t do it alone. I built VA Ready with a team of fellow veterans and people with years of hands-on experience in the VA claims process, including helping other veterans through it. They keep the app honest about what claims look like on the ground.</p>
 
     <h2>How we support veterans</h2>
     <div class="support">
-      <div class="card">
+      <div class="item">
         <h3>Free accredited help comes first</h3>
         <p>I built the app to point veterans to accredited Veterans Service Organizations like the DAV, the VFW, and county veterans service offices. Their help is free. <a href="/find-a-vso.html">Find a VSO near you</a>.</p>
       </div>
-      <div class="card">
+      <div class="item">
         <h3>Free and private</h3>
         <p>The core tools are free, with no account. Your claim information stays on your phone. I don&rsquo;t sell your data, I don&rsquo;t take a cut of your claim, and nothing I charge is tied to your benefits.</p>
       </div>
-      <div class="card">
+      <div class="item">
         <h3>I show up in person</h3>
         <p>I&rsquo;d rather meet veterans where they already gather, in the stands and on the flight line, than chase them with ads.</p>
       </div>
-      <div class="card">
+      <div class="item">
         <h3>Built from veteran feedback</h3>
         <p>Veterans send reports straight from the app. My team and I read them, check them against the primary sources, and ship the fixes. A lot of every update started as a message from a veteran.</p>
       </div>
@@ -362,7 +358,8 @@ else:
     assert s.count(anchor) == 1, "homepage anchor <!-- BY THE NUMBERS --> not found exactly once"
     s = s.replace(anchor, "    " + HOME + "\n\n" + anchor)
     home_note = "homepage teaser inserted"
-open(ip, "w").write(s)
+if s != open(ip).read():  # leave index.html untouched when the block did not change
+    open(ip, "w").write(s)
 
 sp = os.path.join(SITE, "sitemap.xml")
 xml = open(sp).read()

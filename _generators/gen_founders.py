@@ -11,28 +11,25 @@ CSS = m.group(1) if m else ""
 CSS += """
     .founder-hero { display:flex; gap:26px; align-items:flex-start; flex-wrap:wrap; margin:6px 0 10px; }
     .founder-hero .fh-text { flex:1; min-width:260px; }
-    .pphoto { width:150px; height:150px; border-radius:50%; flex-shrink:0; border:2px solid var(--gold);
+    .pphoto { width:150px; height:150px; border-radius:50%; flex-shrink:0; border:1px solid var(--line);
         background:var(--card); display:flex; align-items:center; justify-content:center; overflow:hidden; }
-    .pphoto img { width:100%; height:100%; object-fit:cover; }
-    .pphoto .mono { font-size:54px; font-weight:800; color:var(--gold); font-family:Georgia,serif; }
-    .pphoto img { object-position:50% 28%; }
-    .fimg { width:100%; max-width:520px; height:auto; border-radius:14px; border:1px solid var(--line); margin:14px 0 6px; display:block; }
+    .pphoto img { width:100%; height:100%; object-fit:cover; object-position:50% 28%; }
     .photo-row { display:flex; gap:14px; flex-wrap:wrap; margin:16px 0 6px; }
     .photo-row figure { flex:1; min-width:200px; margin:0; }
-    .photo-row img { width:100%; height:260px; object-fit:cover; object-position:50% 35%; border-radius:14px; border:1px solid var(--line); display:block; }
+    .photo-row img { width:100%; height:260px; object-fit:cover; object-position:50% 35%; border-radius:12px; display:block; }
     .photo-row img.crop-top { object-position:50% 0; }
     figure.fig { margin:16px 0 6px; max-width:430px; }
-    figure.fig img { width:100%; height:auto; border-radius:14px; border:1px solid var(--line); display:block; }
-    figcaption { color:var(--gray); font-size:13px; font-style:italic; margin-top:7px; }
+    figure.fig img { width:100%; height:auto; border-radius:12px; display:block; }
+    figcaption { color:var(--gray); font-size:13px; margin-top:7px; }
     .sig { margin:26px 0 6px; padding-top:16px; border-top:1px solid var(--line); }
     .sig .sig-name { color:var(--white); font-weight:800; font-size:17px; }
     .sig .sig-role { color:var(--tan); font-size:14px; }
     article h2 { margin-top:28px; }
-    .pull { border-left:3px solid var(--gold); padding:4px 0 4px 16px; margin:18px 0; color:var(--white); font-size:18px; font-weight:600; line-height:1.5; }
+    .pull { margin:18px 0; color:var(--white); font-size:17px; max-width:68ch; }
 """
 
 NAV = """<nav>
-    <a href="/index.html" class="nav-brand"><img src="/logo-96.png" alt="VA Ready logo" width="34" height="34"><span>VA READY <span style="color:var(--gray);font-weight:400;">/</span> VET READY</span></a>
+    <a href="/index.html" class="nav-brand"><img src="/logo-96.png" alt="VA Ready logo" width="34" height="34"><span>VA Ready <span style="color:var(--gray);font-weight:400;">/</span> Vet Ready</span></a>
     <input type="checkbox" id="nv" class="nv-cb">
     <label for="nv" class="nv-burger" aria-label="Open menu">&#9776;</label>
     <div class="nav-links"><a href="/va-disability-calculator.html">Calculator</a><a href="/conditions.html">Conditions</a><a href="/mos.html">MOS</a><a href="/va-disability-pay-rates.html">Pay Rates</a><a href="/federal-benefits.html">Federal Benefits</a><a href="/guides.html">Guides</a><a href="/blog.html">Blog</a><a href="/find-a-vso.html">Find a VSO</a><a href="/index.html#download" class="nav-cta">Get the App</a></div>
@@ -40,7 +37,7 @@ NAV = """<nav>
 FOOTER = """<footer>
     <p>&copy; 2026 JDL Software LLC. VA Ready (iOS) &amp; Vet Ready (Android) are not affiliated with the U.S. Department of Veterans Affairs.</p>
     <div class="footer-links"><a href="/index.html">Home</a><a href="/conditions.html">Conditions</a><a href="/exposures.html">Exposures</a><a href="/mos.html">By MOS</a><a href="/va-disability-pay-rates.html">Pay Rates</a><a href="/states.html">State Benefits</a><a href="/federal-benefits.html">Federal Benefits</a><a href="/guides.html">Guides</a><a href="/blog.html">Blog</a><a href="/videos.html">Videos</a><a href="/va-updates.html">VA Updates</a><a href="/va-disability-calculator.html">Calculator</a><a href="/va-back-pay-calculator.html">Back Pay</a><a href="/va-claim-evidence.html">Document Your Claim</a><a href="/reserve-national-guard-va-disability.html">Reserve &amp; Guard</a><a href="/find-a-vso.html">Find a VSO</a><a href="/founders.html">Our Story</a><a href="/community.html">In the Community</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/accessibility.html">Accessibility</a></div>
-    <div class="footer-social" style="display:flex;justify-content:center;gap:20px;margin:18px 0 2px;"><a href="https://www.tiktok.com/@vareadyapp" target="_blank" rel="me noopener" aria-label="VA Ready on TikTok" style="color:#d9a621;display:inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.01-2.82h-3.3v13.2a2.59 2.59 0 1 1-1.78-2.46V10.2a5.9 5.9 0 1 0 5.09 5.85V8.96a7.56 7.56 0 0 0 4.4 1.41V7.06a4.28 4.28 0 0 1-3.4-1.24Z"/></svg></a><a href="https://www.instagram.com/vareadyapp/" target="_blank" rel="me noopener" aria-label="VA Ready on Instagram" style="color:#d9a621;display:inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 0 0-2.12 1.38A5.86 5.86 0 0 0 .64 4.13C.34 4.9.14 5.77.08 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91a5.86 5.86 0 0 0 1.38 2.12 5.86 5.86 0 0 0 2.12 1.38c.76.3 1.63.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.12-1.38 5.86 5.86 0 0 0 1.38-2.12c.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.12A5.86 5.86 0 0 0 19.87.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4Zm6.41-10.4a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44Z"/></svg></a><a href="https://www.facebook.com/vareadyapp" target="_blank" rel="me noopener" aria-label="VA Ready on Facebook" style="color:#d9a621;display:inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.03 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg></a></div>
+    <div class="footer-social" style="display:flex;justify-content:center;gap:0;margin:10px 0 0;"><a href="https://www.tiktok.com/@vareadyapp" target="_blank" rel="me noopener" aria-label="VA Ready on TikTok" style="color:var(--tan);display:inline-flex;padding:11px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.01-2.82h-3.3v13.2a2.59 2.59 0 1 1-1.78-2.46V10.2a5.9 5.9 0 1 0 5.09 5.85V8.96a7.56 7.56 0 0 0 4.4 1.41V7.06a4.28 4.28 0 0 1-3.4-1.24Z"/></svg></a><a href="https://www.instagram.com/vareadyapp/" target="_blank" rel="me noopener" aria-label="VA Ready on Instagram" style="color:var(--tan);display:inline-flex;padding:11px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 0 0-2.12 1.38A5.86 5.86 0 0 0 .64 4.13C.34 4.9.14 5.77.08 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91a5.86 5.86 0 0 0 1.38 2.12 5.86 5.86 0 0 0 2.12 1.38c.76.3 1.63.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.12-1.38 5.86 5.86 0 0 0 1.38-2.12c.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.12A5.86 5.86 0 0 0 19.87.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4Zm6.41-10.4a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44Z"/></svg></a><a href="https://www.facebook.com/vareadyapp" target="_blank" rel="me noopener" aria-label="VA Ready on Facebook" style="color:var(--tan);display:inline-flex;padding:11px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.03 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg></a></div>
 </footer>
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/track.js"></script>"""
@@ -48,7 +45,7 @@ FOOTER = """<footer>
 DLBTNS = """<div class="btns"><a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a><a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn ghost">Get Vet Ready for Android</a></div>"""
 
 canon = "https://vareadyapp.com/founders.html"
-title = "About VA Ready: Built by a Retired Army Chief Who Filed His Own Claim"
+title = "About VA Ready: built by a retired Army chief who filed his own claim"
 desc = "VA Ready was built by Jason, a retired U.S. Army Chief Warrant Officer who filed his own claim to 100% P&T. The story behind the app, chief to soldier."
 desc = desc[:160]
 
@@ -70,34 +67,33 @@ PHOTO_HERO = '''<div class="pphoto"><img src="/img/jason_drill.jpg" alt="Jason, 
 BODY = f'''<div class="founder-hero">
     {PHOTO_HERO}
     <div class="fh-text">
-      <div class="eyebrow">Our Story</div>
       <h1 style="margin:6px 0 10px;">I built VA Ready after filing my own claim.</h1>
       <p class="lede">I&rsquo;m Jason, a retired Army Chief Warrant Officer. After twenty years in uniform and my own trip through the VA claims process, I built the tool I wish someone had handed me. Here&rsquo;s the why.</p>
     </div>
   </div>
   <article>
     <h2>Twenty years, then the paperwork</h2>
-    <p>I spent two decades in the Army. I came up enlisted as a <strong>19D Cavalry Scout</strong>, made it to Sergeant First Class (E-7), and then earned my appointment as a <strong>131A Field Artillery Targeting Technician</strong>, a warrant officer. A Chief. The job took me to Iraq in 2006 and again in 2008&ndash;2009, to Afghanistan in 2011&ndash;2012, plus rotations through Europe, South Korea, and Kuwait. I retired in 2026.</p>
+    <p>I spent two decades in the Army. I came up enlisted as a 19D Cavalry Scout, made it to Sergeant First Class (E-7), and then earned my appointment as a 131A Field Artillery Targeting Technician, a warrant officer. A Chief. The job took me to Iraq in 2006 and again in 2008&ndash;2009, to Afghanistan in 2011&ndash;2012, plus rotations through Europe, South Korea, and Kuwait. I retired in 2026.</p>
     <div class="photo-row">
       <figure><img class="crop-top" src="/img/jason_private.jpg" alt="Jason as a young soldier deployed overseas" width="600" height="833" loading="lazy"><figcaption>Where it started, a young Scout, downrange.</figcaption></figure>
       <figure><img src="/img/jason_afghan.jpg" alt="Jason resting during a deployment to Afghanistan" width="600" height="398" loading="lazy"><figcaption>Afghanistan, 2011&ndash;2012. The grind never made the brochure.</figcaption></figure>
     </div>
-    <p>When it was my turn to transition out, I filed my own claim through the <strong>Benefits Delivery at Discharge (BDD)</strong> program. I was rated <strong>100% Permanent &amp; Total on the first pass</strong>. I&rsquo;m proud of that, but I&rsquo;ll be straight with you about what it took: I had to build my own checklists, dig through an overwhelming pile of scattered information, and figure out most of the steps on my own. That result came from my service and my evidence. It wasn&rsquo;t handed to me, and it isn&rsquo;t a promise to anyone else, every claim stands on its own.</p>
+    <p>When it was my turn to transition out, I filed my own claim through the Benefits Delivery at Discharge (BDD) program. I was rated 100% Permanent &amp; Total on the first pass. I&rsquo;m proud of that, but I&rsquo;ll be straight with you about what it took: I had to build my own checklists, dig through an overwhelming pile of scattered information, and figure out most of the steps on my own. That result came from my service and my evidence. It wasn&rsquo;t handed to me, and it isn&rsquo;t a promise to anyone else, every claim stands on its own.</p>
 
     <h2>The knowledge no one handed me</h2>
-    <p>Here&rsquo;s something I noticed along the way. As an enlisted soldier, all the way up to E-7, nobody really talked about the VA. It wasn&rsquo;t until I put on the warrant officer&rsquo;s bars that I found a different culture. <strong>Chiefs mentor.</strong> They talk openly about the things that matter later, and they take care of their people. That &ldquo;chief knowledge&rdquo; changed how I left the service.</p>
+    <p>Here&rsquo;s something I noticed along the way. As an enlisted soldier, all the way up to E-7, nobody really talked about the VA. It wasn&rsquo;t until I put on the warrant officer&rsquo;s bars that I found a different culture. Chiefs mentor. They talk openly about the things that matter later, and they take care of their people. That &ldquo;chief knowledge&rdquo; changed how I left the service.</p>
     <figure class="fig"><img src="/img/wocs_grad.jpg" alt="Jason at his Warrant Officer Candidate School graduation in Army Service Uniform" width="528" height="528" loading="lazy"><figcaption>Warrant Officer Candidate School graduation, pinning on the bars, and stepping into the Chief community.</figcaption></figure>
     <p class="pull">VA Ready is my way of handing that knowledge down, to every soldier, regardless of rank. Chief to soldier.</p>
 
-    <h2>How it actually started</h2>
-    <p>The honest version: I&rsquo;d already tried building apps during my transition. They flopped. But I learned how to ship. Last year, in a passing conversation with a good friend and fellow retired Chief, <strong>Pablo</strong>, we floated the idea that something like this could really help. Then it just sat there for a while.</p>
+    <h2>How it started</h2>
+    <p>The honest version: I&rsquo;d already tried building apps during my transition. They flopped. But I learned how to ship. Last year, in a passing conversation with a good friend and fellow retired Chief, Pablo, we floated the idea that something like this could really help. Then it just sat there for a while.</p>
     <p>One Easter morning I woke up wanting to be productive, so I started wireframing it out. It got addicting fast, and it looked right. I put my head down for two weeks, shipped it, and I&rsquo;ve been improving it almost every day since.</p>
 
     <h2>I&rsquo;m not doing this alone</h2>
-    <p>To make sure VA Ready grows around what veterans actually need, not just what I think they need. I brought on <strong>Andrew</strong>, a battle buddy with extensive experience navigating the VA claims process and helping others through it. He keeps us honest about the real world: what claims look like on the ground, and what veterans are actually asking for.</p>
+    <p>To make sure VA Ready grows around what veterans actually need, not just what I think they need. I brought on Andrew, a battle buddy with extensive experience navigating the VA claims process and helping others through it. He keeps us honest about the real world: what claims look like on the ground, and what veterans are actually asking for.</p>
 
     <h2>What VA Ready is, and what it isn&rsquo;t</h2>
-    <p>It&rsquo;s <strong>free</strong>, and it&rsquo;s <strong>private</strong>. No account just to look around. We don&rsquo;t sell your data, and we don&rsquo;t track you the way most sites do. We&rsquo;re independent, not a big claims company taking a cut of your back pay, and not affiliated with the Department of Veterans Affairs.</p>
+    <p>The core tools are free, and it&rsquo;s private. No account just to look around. We don&rsquo;t sell your data, and we don&rsquo;t track individual users. We&rsquo;re independent, not a big claims company taking a cut of your back pay, and not affiliated with the Department of Veterans Affairs.</p>
     <p>The app won&rsquo;t file for you, and it won&rsquo;t promise you a rating. What it <em>does</em> is give you the map I had to draw for myself: your conditions and the real rating criteria, the presumptives your service may have earned, the peer-reviewed research behind your conditions, every-state benefits, and a clear path to file <em>ready</em>. The goal is simple, that you walk in better prepared than I was.</p>
 
     <h2>If something&rsquo;s missing, tell me</h2>
@@ -123,7 +119,7 @@ PAGE = f'''<!DOCTYPE html>
 <link rel="canonical" href="{canon}">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="VA Ready">
-<meta property="og:title" content="About VA Ready. Built by a Retired Army Chief">
+<meta property="og:title" content="About VA Ready: built by a retired Army chief">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{canon}">
 <meta property="og:image" content="https://vareadyapp.com/img/jason_drill.jpg">

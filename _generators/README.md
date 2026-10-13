@@ -12,8 +12,8 @@ from anywhere after a clone — no hardcoded `/tmp` or absolute paths.
 
 | Script | Builds | Data source |
 |---|---|---|
-| `gen_guides.py` | 50 filing/claim guide pages → `../guides/*.html` + `../guides.html` | `data/guides.json` |
-| `gen_conditions.py` | 20 top-condition pages → `../conditions/*.html` + `../conditions.html` | `data/conditions.json`, `data/studies.json` |
+| `gen_guides.py` | 55 filing and form guide pages → `../guides/*.html` + `../guides.html` | `data/guides.json` |
+| `gen_conditions.py` | 21 top-condition pages → `../conditions/*.html` + `../conditions.html` | `data/conditions.json`, `data/studies.json` |
 | `gen_states.py` | 20 state-benefit pages → `../states/*.html` + `../states.html` | `data/benefits.json` |
 | `gen_founders.py` | `../founders.html` | none (uses `../img/jason_*.jpg`, `wocs_grad.jpg`) |
 | `gen_mos.py` | 44 MOS / AFSC / rating pages → `../mos/*.html` + `../mos.html` (Phase 1 list in `PHASE1`) | `data/mos_profiles.json` (paginate: table is over 1,000 rows) |

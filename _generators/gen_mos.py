@@ -103,37 +103,31 @@ CSS = re.search(r'CSS = """(.*?)"""', gtext, re.S).group(1)
 ctext = open(os.path.join(HERE, "gen_conditions.py")).read()
 NAV = re.search(r'NAV = """(.*?)"""', ctext, re.S).group(1)
 FOOTER = re.search(r'FOOTER = """(.*?)"""', ctext, re.S).group(1)
-# lib-hero (the big stat block) is defined in gen_conditions.py, reuse it from there
-CSS += "\n".join(l for l in ctext.splitlines() if l.strip().startswith((".lib-", "@media (max-width:560px){ .lib-hero"))) + "\n"
 CSS += """
-    .pillrow { display:flex; flex-wrap:wrap; gap:8px; margin:6px 0 16px; }
-    .pillrow a, .pillrow span { font-size:13px; background:var(--card); border:1px solid var(--line); color:var(--tan); padding:6px 12px; border-radius:999px; }
-    .trustline { font-size:13.5px; color:var(--tan); background:var(--card); border:1px solid var(--line); border-left:3px solid var(--gold); border-radius:10px; padding:9px 13px; margin:14px 0 4px; }
-    .trustline a { color:var(--gold); font-weight:700; text-decoration:none; }
-    .trustline a:hover { text-decoration:underline; }
-    ul.xlist, ul.clist { list-style:none; padding:0; margin:8px 0 18px; }
-    ul.xlist li, ul.clist li { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px 15px; margin:0 0 10px; }
-    ul.xlist li strong, ul.clist li .cn { color:var(--white); font-weight:700; }
-    ul.xlist li p, ul.clist li p { color:var(--tan); font-size:14.5px; margin:4px 0 0; }
-    ul.clist li .cn a { color:var(--white); text-decoration:underline; text-decoration-color:rgba(217,166,33,.5); text-underline-offset:3px; }
-    ul.clist li .cn a:hover { color:var(--gold); }
+    .pillrow { display:flex; flex-wrap:wrap; gap:4px 18px; margin:6px 0 16px; }
+    .pillrow a { font-size:15px; padding:8px 0; }
+    .trustline { font-size:14.5px; color:var(--tan); margin:14px 0 4px; max-width:68ch; }
+    ul.xlist, ul.clist { list-style:none; padding:0; margin:8px 0 18px; max-width:none; }
+    ul.xlist li, ul.clist li { border-top:1px solid var(--line); padding:12px 0; margin:0; }
+    ul.xlist li .cn, ul.clist li .cn { color:var(--white); font-weight:700; }
+    ul.xlist li p, ul.clist li p { color:var(--tan); font-size:15px; margin:4px 0 0; }
+    ul.clist li .cn a { color:var(--white); }
     ul.clist li .dc { color:var(--gray); font-size:13px; font-weight:400; margin-left:6px; }
-    .ctag { display:inline-block; font-size:11px; text-transform:uppercase; letter-spacing:.6px; color:var(--gold); border:1px solid var(--line); border-radius:999px; padding:2px 8px; margin-left:8px; vertical-align:2px; }
-    .xlink { font-size:13px; font-weight:700; color:var(--gold); text-decoration:none; }
-    .xlink:hover { text-decoration:underline; }
-    .pact { background:linear-gradient(135deg, rgba(217,166,33,0.10), rgba(217,166,33,0.02)); border:1px solid rgba(217,166,33,0.28); border-radius:16px; padding:18px 20px; margin:18px 0; }
-    .pact h2 { margin-top:0; }
-    .pact p { color:var(--tan); }
-    .stopline { border:1px dashed rgba(217,166,33,0.45); border-radius:14px; padding:16px 18px; margin:22px 0 6px; color:var(--tan); }
-    .stopline strong { color:var(--white); }
-    .branch-h { margin:26px 0 10px; }
+    .ctag { font-size:13px; color:var(--gray); margin-left:8px; }
+    .xlink { font-size:14px; }
+    .pact { border-top:1px solid var(--line); padding-top:6px; margin:26px 0; }
+    .pact h2 { font-size:22px; font-weight:800; margin:18px 0 10px; line-height:1.3; }
+    .pact p { color:var(--tan); max-width:68ch; margin-bottom:14px; }
+    .branch-h { font-size:21px; font-weight:800; margin:30px 0 6px; }
+    .page-cta { margin:26px 0; }
+    table.rt { width:100%; border-collapse:collapse; margin:8px 0 18px; }
+    table.rt th, table.rt td { text-align:left; padding:11px 12px; border-bottom:1px solid var(--line); font-size:15px; vertical-align:top; color:var(--tan); }
+    table.rt th { color:var(--gray); font-size:13px; font-weight:600; }
+    table.rt td.pct { color:var(--white); font-weight:700; width:74px; font-variant-numeric:tabular-nums; }
+    .wrap > p:not(.lede):not(.note):not(.trustline) { color:var(--tan); margin:0 0 14px; max-width:68ch; }
 """
 
-APP_CTA = """<div class="cta">
-    <h3>Get your version in the app</h3>
-    <p>See your personalized Claim Intel, your exact conditions merged across every MOS you held, your specific exposures cross-referenced, and your combined rating in the app. The combined-rating calculator is free with no account. Claim Intel is part of VA Ready Pro.</p>
-    <div class="btns"><a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a><a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn ghost">Get Vet Ready for Android</a></div>
-</div>"""
+APP_CTA = """<div class="cta cta-line"><p>Claim Intel in <a href="https://apps.apple.com/app/id6761733758">VA Ready for iOS</a> and <a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US">Vet Ready for Android</a> is a Pro feature that merges the conditions from every job you held and cross-references your exposures; the combined-rating calculator is free.</p></div>"""
 DISCLAIMER = """<div class="disclaimer">This page is for general informational purposes only and is not legal or medical advice. It describes what a job typically involved, not what any one veteran experienced, and the VA does not keep a list of conditions by MOS, AFSC, or rating. The VA decides service connection and ratings from your own records, evidence, and exam. VA Ready is not affiliated with the U.S. Department of Veterans Affairs. For free help filing, work with a <a href="/find-a-vso.html">VA-accredited VSO</a>.</div>"""
 
 ORG_ID = "https://vareadyapp.com/#organization"
@@ -186,58 +180,52 @@ def page(r):
     xnames = [x[1].lower() for x in xs[:4]]
     top = short_names(cs, 4)
 
-    page_title = f"VA Disability for {code} {title}: Common Conditions &amp; Presumptives | VA Ready"
-    desc = (f"{code} {title} VA disability: the exposures this {br} {word} typically carried, the conditions "
-            f"commonly claimed, and the PACT Act presumptive rules. Free guide.")
+    label = f"{code} {title}"
+    page_title = f"VA disability for {esc(label)}: common conditions and presumptives | VA Ready"
+    desc = (f"{label} VA disability: the exposures this {br} {word} typically carried, the conditions "
+            f"commonly claimed, and the PACT Act presumptive rules.")
     if len(desc) > 160: desc = desc[:157].rsplit(" ", 1)[0] + "..."
 
-    intro = (f"{br} {code} ({title}) is a job that typically involved {join_words(xnames)}. "
-             f"That pattern is why veterans who held it commonly claim conditions like {join_words(top)}. "
-             f"This page covers the general pattern for the job, not your record.") if xnames and top else \
-            f"This page covers the general pattern of exposures and claimed conditions for the {br} {code} ({title}) job, not your record."
+    def lc(n): return " ".join(w if re.sub(r'[^A-Za-z]', '', w).isupper() and len(re.sub(r'[^A-Za-z]', '', w)) >= 2 else w.lower() for w in n.split())
+    xlinks = [(f'<a href="{lnk}">{esc(lc(n))}</a>' if lnk else esc(lc(n))) for _, n, d, lnk, _ in xs]
+    if xlinks:
+        intro_html = f"{esc(br)} {esc(word)}. The job usually meant {join_words(xlinks)}."
+    else:
+        intro_html = f"{esc(br)} {esc(word)}."
 
-    x_html = "".join(
-        f'<li><strong>{esc(n)}</strong><p>{esc(d)}' + (f' <a class="xlink" href="{lnk}">About this exposure &rarr;</a>' if lnk else "") + '</p></li>'
-        for _, n, d, lnk, _ in xs)
     c_html = "".join(
-        f'<li><span class="cn">{cond_name_html(c)}</span><span class="dc">DC {esc(c["dc"])}</span>'
+        f'<li><span class="cn">{esc(c["name"])}</span><span class="dc">DC {esc(c["dc"])}</span>'
         f'<span class="ctag">{PREV_LBL.get(c.get("prevalence"), "Commonly claimed")}</span>'
         f'<p>{esc(c.get("reason"))}</p></li>' for c in cs)
 
+    linked = [c for c in cs if COND_SLUG.get(c["dc"])]
+    if linked:
+        links = join_words([f'<a href="/conditions/{COND_SLUG[c["dc"]]}.html">{esc(PLAIN.get(c["dc"], c["name"].lower()))}</a>' for c in linked])
+        c_links = f'<p>Rating tables: {links}.</p>'
+    else:
+        c_links = ""
+
     if pact:
         pact_html = f"""<div class="pact">
-        <h2>PACT Act presumptives for {esc(code)} veterans</h2>
-        <p>Many {MEMBER[br]} in this job deployed to Southwest Asia or the post-9/11 theater. Under the PACT Act, the presumption is based on <strong>where and when you served</strong>, not on your job title. It covers Gulf War service on or after August 2, 1990 in places such as Bahrain, Iraq, Kuwait, Oman, Qatar, Saudi Arabia, Somalia, and the United Arab Emirates, and post-9/11 service on or after September 11, 2001 in places such as Afghanistan, Djibouti, Egypt, Jordan, Lebanon, Syria, Uzbekistan, and Yemen.</p>
-        <p>If you served in a qualifying location and are later diagnosed, the VA treats certain conditions as <strong>presumed service-connected</strong>, so you do not have to prove the exposure caused them. The list includes asthma diagnosed after service, chronic bronchitis, COPD, chronic rhinitis, chronic sinusitis, constrictive bronchiolitis, and a range of cancers. Holding this job does not by itself mean you have any of them.</p>
-        <p><a class="xlink" href="/exposures/burn-pits-pact-act.html">Full PACT Act burn pit list and locations &rarr;</a> &nbsp; <a class="xlink" href="/exposures/gulf-war-illness.html">Gulf War Illness &rarr;</a></p>
+        <h2>PACT Act presumptives</h2>
+        <p>Many {MEMBER[br]} in this job deployed to Southwest Asia or the post-9/11 theater. Under the PACT Act, the presumption is based on where and when you served, not on your job title, and holding this job does not by itself mean you have a presumptive condition.</p>
+        <p>See the full <a class="xlink" href="/exposures/burn-pits-pact-act.html">PACT Act burn pit list and locations</a> and the <a class="xlink" href="/exposures/gulf-war-illness.html">Gulf War Illness page</a>.</p>
     </div>"""
     else:
         pact_html = f"""<div class="pact">
         <h2>Presumptive conditions</h2>
-        <p>Presumptive service connection depends on where and when you served, not on your job title. See the <a class="xlink" href="/exposures.html">toxic exposures and presumptives guide</a> for the locations and dates that qualify.</p>
+        <p>Presumptive service connection depends on where and when you served, not on your job title. Earlier eras carry their own location-based presumptives, such as <a class="xlink" href="/exposures/agent-orange.html">Agent Orange</a> and <a class="xlink" href="/exposures/camp-lejeune.html">Camp Lejeune</a> water contamination. The <a class="xlink" href="/exposures.html">toxic exposures page</a> lists the locations and dates that qualify.</p>
     </div>"""
-    era_html = """<p>Earlier eras carry their own location-based presumptives, such as <a href="/exposures/agent-orange.html">Agent Orange</a> and <a href="/exposures/camp-lejeune.html">Camp Lejeune</a> water contamination.</p>"""
 
     same = [p for p in PAGES if p["branch"] == br and p["mos_code"] != code]
     others = "".join(f'<a href="/mos/{slug(p["mos_code"])}.html">{esc(p["mos_code"])} {esc(p["mos_title"])}</a>' for p in same)
 
-    faqs = [
-      (f"Does the VA have a list of conditions for {code}?",
-       f"No. The VA does not keep a list of disabilities by MOS, AFSC, or rating. It decides each claim on your own service records, medical evidence, and exam. What a job typically exposed people to can help explain how a condition started, which is why knowing the pattern for {code} {title} is useful."),
-      (f"What conditions do {code} veterans commonly claim?",
-       f"Veterans who served as {br} {code} ({title}) commonly claim conditions such as {join_words(short_names(cs, 6))}. Each one still needs its own diagnosis and a link to service."),
-      (f"Are {code} veterans covered by the PACT Act?",
-       "The PACT Act presumptions are based on where and when you served, not on your job. If you served in a qualifying Gulf War or post-9/11 location, certain respiratory conditions and cancers are presumed service-connected."),
-    ]
-    faq_visible = "".join(f'<div class="faq-item"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q, a in faqs)
-    faq_ld = json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-        {"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q, a in faqs]})
     bc_ld = json.dumps({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
         {"@type":"ListItem","position":1,"name":"Home","item":"https://vareadyapp.com/"},
-        {"@type":"ListItem","position":2,"name":"VA Disability by MOS","item":"https://vareadyapp.com/mos.html"},
+        {"@type":"ListItem","position":2,"name":"VA disability by MOS","item":"https://vareadyapp.com/mos.html"},
         {"@type":"ListItem","position":3,"name":f"{code} {title}","item":canon}]})
     art_ld = json.dumps({"@context":"https://schema.org","@type":"Article",
-        "headline":f"VA Disability for {code} ({title})","description":desc,"datePublished":"2026-10-07",
+        "headline":f"VA disability for {label}","description":desc,"datePublished":"2026-10-07",
         "author":{"@type":"Organization","name":"JDL Software LLC"},
         "publisher":{"@type":"Organization","@id":ORG_ID,"name":"VA Ready","url":"https://vareadyapp.com/"},
         "mainEntityOfPage":canon,"inLanguage":"en-US"})
@@ -254,7 +242,7 @@ def page(r):
 <link rel="canonical" href="{canon}">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="VA Ready">
-<meta property="og:title" content="VA Disability for {esc(code)} ({esc(title)})">
+<meta property="og:title" content="VA disability for {esc(label)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{canon}">
 <meta property="og:image" content="https://vareadyapp.com/logo.png">
@@ -263,31 +251,23 @@ def page(r):
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <script type="application/ld+json">{bc_ld}</script>
 <script type="application/ld+json">{art_ld}</script>
-<script type="application/ld+json">{faq_ld}</script>
 <style>{CSS}</style>
 </head>
 <body>
 {NAV}
 <div class="wrap">
-    <div class="crumb"><a href="/index.html">Home</a> / <a href="/mos.html">VA Disability by MOS</a> / {esc(code)}</div>
-    <div class="eyebrow">{esc(br)} {esc(word)}</div>
-    <h1>VA Disability for {esc(code)} ({esc(title)})</h1>
-    <p class="lede">{esc(intro)}</p>
+    <div class="crumb"><a href="/index.html">Home</a> / <a href="/mos.html">VA disability by MOS</a> / {esc(code)}</div>
+    <h1>VA disability for {esc(label)}</h1>
+    <p class="lede">{intro_html}</p>
     <article>
-        <h2>Typical exposures for {esc(code)}</h2>
-        <p>These are the general hazards that came with the job. Your own exposure depends on your units, deployments, and duties.</p>
-        <ul class="xlist">{x_html}</ul>
-        <h2>Conditions commonly associated with {esc(code)}</h2>
-        <p>Veterans who held this job commonly claim the conditions below. Each still needs a current diagnosis and evidence linking it to your service.</p>
+        <h2>Conditions veterans in this job claim</h2>
         <ul class="clist">{c_html}</ul>
+        {c_links}
     </article>
     {pact_html}
-    {era_html}
-    <div class="stopline"><strong>This is the general pattern, not your claim.</strong> Most veterans held more than one job, served at specific bases, and worked specific aircraft or ships. Which conditions fit you, how they combine, and what they rate together depends on that full record.</div>
+    <p class="note">Which conditions fit you, how they combine, and what they rate together depends on your full record: every job you held, your bases, ships and aircraft.</p>
     {APP_CTA}
-    <p style="margin:22px 0;"><a href="/va-disability-calculator.html" class="btn">Free combined-rating calculator &rarr;</a> &nbsp; <a href="/find-a-vso.html" class="btn ghost">Find a free accredited VSO &rarr;</a></p>
-    <h2 style="font-size:20px;margin-top:30px;">Common questions</h2>
-    {faq_visible}
+    <div class="btns page-cta"><a href="/va-disability-calculator.html" class="btn">Combined-rating calculator</a><a href="/find-a-vso.html" class="btn ghost">Find an accredited VSO</a></div>
     <h2 style="font-size:20px;margin-top:30px;">Other {esc(br)} jobs</h2>
     <div class="pillrow">{others}</div>
     <p class="trustline">More from VA Ready: <a href="/mos.html">all MOS pages</a> &middot; <a href="/conditions.html">ratings by condition</a> &middot; <a href="/exposures.html">toxic exposures</a></p>
@@ -297,19 +277,32 @@ def page(r):
 </body>
 </html>"""
 
+_COND = {c["diagnostic_code"]: c for c in json.load(open(os.path.join(HERE, "data", "conditions.json")))}
+
+def top_two(p):
+    out = []
+    for c in conditions_for(p)[:2]:
+        nm = PLAIN.get(c["dc"], c["name"].lower())
+        nm = nm[:1].upper() + nm[1:] if not out else nm
+        m = (_COND.get(c["dc"]) or {}).get("max_rating")
+        out.append(f"{nm} {m}%" if m else nm)
+    return ", ".join(out)
+
 def hub():
     secs = ""
     for br in BRANCH_ORDER:
         ps = [p for p in PAGES if p["branch"] == br]
         if not ps: continue
-        cards = "".join(
-            f'<div class="hub-card"><a href="/mos/{slug(p["mos_code"])}.html">{esc(p["mos_code"])} {esc(p["mos_title"])}</a>'
-            f'<p>{len(conditions_for(p))} commonly claimed conditions &middot; {len(exposures_for(p))} exposure types</p></div>' for p in ps)
-        secs += f'<h2 class="branch-h">{esc(br)} {"ratings" if br == "Navy" else ("AFSCs" if br == "Air Force" else "MOS")}</h2><div class="hub-sec"><div class="hub-grid">{cards}</div></div>'
+        rows = "".join(
+            f'<tr><td><a href="/mos/{slug(p["mos_code"])}.html">{esc(p["mos_code"])} {esc(p["mos_title"])}</a></td>'
+            f'<td>{esc(top_two(p))}</td><td class="pct">{len(conditions_for(p))}</td></tr>' for p in ps)
+        tbl = ('<div class="tbl-wrap"><table class="rt"><thead><tr><th>Job</th><th>Most claimed, highest rating</th>'
+               f'<th>Listed</th></tr></thead><tbody>{rows}</tbody></table></div>')
+        secs += f'<div class="hub-sec"><h2 class="branch-h">{esc(br)} {"ratings" if br == "Navy" else ("AFSCs" if br == "Air Force" else "MOS")}</h2>{tbl}</div>'
     desc = "VA disability by military job: typical exposures, commonly claimed conditions, and PACT Act notes for 11B, 68W, 0311, Navy ratings, Air Force AFSCs, and more."
     bc = json.dumps({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
         {"@type":"ListItem","position":1,"name":"Home","item":"https://vareadyapp.com/"},
-        {"@type":"ListItem","position":2,"name":"VA Disability by MOS","item":"https://vareadyapp.com/mos.html"}]})
+        {"@type":"ListItem","position":2,"name":"VA disability by MOS","item":"https://vareadyapp.com/mos.html"}]})
     items = json.dumps({"@context":"https://schema.org","@type":"ItemList","itemListElement":[
         {"@type":"ListItem","position":i+1,"url":f"https://vareadyapp.com/mos/{slug(p['mos_code'])}.html","name":f"{p['mos_code']} {p['mos_title']}"}
         for i, p in enumerate(PAGES)]})
@@ -318,12 +311,12 @@ def hub():
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VA Disability by MOS, AFSC &amp; Rating: Common Conditions | VA Ready</title>
+<title>VA disability by MOS, AFSC and rating: common conditions | VA Ready</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0a0f1a">
 <link rel="canonical" href="https://vareadyapp.com/mos.html">
 <meta property="og:type" content="website"><meta property="og:site_name" content="VA Ready">
-<meta property="og:title" content="VA Disability by MOS, AFSC &amp; Rating"><meta property="og:description" content="{esc(desc)}">
+<meta property="og:title" content="VA disability by MOS, AFSC and rating"><meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="https://vareadyapp.com/mos.html"><meta property="og:image" content="https://vareadyapp.com/logo.png">
 <meta name="twitter:card" content="summary"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -334,17 +327,10 @@ def hub():
 <body>
 {NAV}
 <div class="wrap">
-    <div class="crumb"><a href="/index.html">Home</a> / VA Disability by MOS</div>
-    <div class="eyebrow">By Military Job</div>
-    <h1>VA Disability by MOS, AFSC, and Rating</h1>
-    <p class="lede">What each job typically exposed people to, and the conditions veterans who held it commonly claim. The VA does not keep a list of conditions by job, so treat these as the general pattern, then build your own claim from your record.</p>
-    <div class="lib-hero">
-        <div class="lib-num"><strong>{n_fmt}</strong><span>Job profiles in the app</span></div>
-        <div class="lib-body">
-            <p>This page covers <strong>{len(PAGES)} of the most common jobs</strong>. The VA Ready app carries <strong>{n_fmt} MOS, AFSC, rating, and designator profiles</strong> across every branch, including legacy codes.</p>
-            <div class="btns"><a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a><a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn ghost">Get Vet Ready for Android</a></div>
-        </div>
-    </div>
+    <div class="crumb"><a href="/index.html">Home</a> / VA disability by MOS</div>
+    <h1>VA disability by MOS, AFSC, and rating</h1>
+    <p class="lede">What each job typically exposed people to, and the conditions veterans who held it commonly claim. The VA does not keep a list of conditions by job, so these pages show the general pattern. Your own claim rests on your record.</p>
+    <p class="note">This page covers {len(PAGES)} common jobs. The app carries {n_fmt} MOS, AFSC, rating, and designator profiles across every branch, including legacy codes.</p>
     {secs}
     <p class="trustline">More from VA Ready: <a href="/conditions.html">ratings by condition</a> &middot; <a href="/exposures.html">toxic exposures</a> &middot; <a href="/va-disability-calculator.html">combined-rating calculator</a></p>
     {APP_CTA}

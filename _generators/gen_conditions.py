@@ -10,11 +10,11 @@ STUDIES = json.load(open(os.path.join(HERE,"data","studies.json"))) if os.path.e
 
 # DC -> (slug, friendly H1 name, intro lede). Order = most-claimed.
 META = [
- ("6260","tinnitus","Tinnitus","Tinnitus, a persistent ringing, buzzing, or hissing in the ears, is the single most-claimed VA disability, common after exposure to loud weapons, aircraft, and engine noise."),
- ("9411","ptsd","PTSD","Post-traumatic stress disorder is one of the most-claimed VA mental-health conditions, rated on how much the symptoms impair your work and daily functioning."),
- ("5237","back-pain","Back Pain (Lumbosacral Strain)","Lower-back and neck strain is among the most-claimed VA conditions, rated primarily on your range of motion and flare-ups."),
- ("5260","knee-pain","Knee Pain (Limited Flexion)","Limited knee bending is one of the most-claimed VA joint conditions, rated on how far you can flex the joint."),
- ("6847","sleep-apnea","Sleep Apnea","Sleep apnea is a high-value VA claim, a CPAP requirement alone rates 50%. It is frequently service-connected, including as secondary to PTSD, sinus, or weight conditions."),
+ ("6260","tinnitus","Tinnitus","Tinnitus is a persistent ringing, buzzing, or hissing in the ears. It is common after exposure to loud weapons, aircraft, and engine noise."),
+ ("9411","ptsd","PTSD","The VA rates post-traumatic stress disorder on how much the symptoms impair your work and daily functioning."),
+ ("5237","back-pain","Back Pain (Lumbosacral Strain)","Lower-back and neck strain is rated primarily on your range of motion and flare-ups."),
+ ("5260","knee-pain","Knee Pain (Limited Flexion)","Limited knee bending is rated on how far you can flex the joint."),
+ ("6847","sleep-apnea","Sleep Apnea","Sleep apnea that requires a CPAP rates 50%. It is frequently service-connected, including as secondary to PTSD, sinus, or weight conditions."),
  ("8100","migraines","Migraines","Migraines are rated by how often you get prostrating attacks and whether they interfere with your ability to work."),
  ("9434","depression","Depression (MDD)","Major depressive disorder is rated on occupational and social impairment, using the same scale as other VA mental-health conditions."),
  ("5003","arthritis","Arthritis (Degenerative)","Degenerative arthritis is rated on X-ray joint involvement and the limitation of motion it causes."),
@@ -34,6 +34,14 @@ META = [
 ]
 
 def esc(s): return html.escape(s or "", quote=True)
+
+def prose_name(n):
+    """Condition display name for running prose: acronyms keep their case, other words lowercase."""
+    out = []
+    for w in re.split(r"(\s+)", n):
+        core = re.sub(r"[^A-Za-z]", "", w)
+        out.append(w if (len(core) >= 2 and core.isupper()) or not core or re.search(r"\d", w) and core.isupper() else w.lower())
+    return "".join(out)
 
 # Map secondary-condition names to our existing condition pages (most specific rule first).
 VALID_SLUGS = {sl for _, sl, *_ in META}
@@ -67,50 +75,36 @@ m = re.search(r'CSS = """(.*?)"""', gtext, re.S)
 CSS = m.group(1) if m else ""
 # add condition-specific styles
 CSS += """
+    .tbl-wrap table.rt { margin:0; }
     table.rt { width:100%; border-collapse:collapse; margin:8px 0 18px; }
     table.rt th, table.rt td { text-align:left; padding:11px 12px; border-bottom:1px solid var(--line); font-size:15px; vertical-align:top; }
-    table.rt th { color:var(--gold); font-size:12px; text-transform:uppercase; letter-spacing:1px; }
-    table.rt td.pct { color:var(--white); font-weight:800; white-space:nowrap; width:74px; }
+    table.rt th { color:var(--gray); font-size:13px; font-weight:600; }
+    table.rt td.pct { color:var(--white); font-weight:700; white-space:nowrap; width:74px; font-variant-numeric:tabular-nums; }
     table.rt td { color:var(--tan); }
-    .pillrow { display:flex; flex-wrap:wrap; gap:8px; margin:6px 0 16px; }
-    .pillrow a, .pillrow span { font-size:13px; background:var(--card); border:1px solid var(--line); color:var(--tan); padding:6px 12px; border-radius:999px; }
+    .pillrow { display:flex; flex-wrap:wrap; gap:4px 18px; margin:6px 0 16px; }
+    .pillrow a, .pillrow span { font-size:15px; color:var(--tan); padding:8px 0; }
+    .pillrow a { color:var(--white); }
     .evidence { margin:30px 0 8px; }
-    .evidence > p.evintro { color:var(--tan); margin:2px 0 18px; }
-    ol.evlist { list-style:none; counter-reset:ev; padding:0; margin:0; }
-    ol.evlist > li.evi { position:relative; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 18px 16px 18px; margin:0 0 14px; }
-    .evi-top { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-bottom:7px; }
-    .evi-type { font-size:11px; text-transform:uppercase; letter-spacing:.8px; color:var(--gold); border:1px solid var(--line); border-radius:999px; padding:3px 9px; }
-    .evi-rel { font-size:11px; text-transform:uppercase; letter-spacing:.5px; padding:3px 9px; border-radius:999px; }
-    .rel-primary { background:rgba(201,162,77,.16); color:var(--gold); }
-    .rel-supporting { background:rgba(255,255,255,.06); color:var(--tan); }
-    .rel-tangential { background:rgba(255,255,255,.04); color:var(--gray); }
-    .evi-yr { margin-left:auto; color:var(--gray); font-size:13px; font-weight:700; }
-    a.evi-title { display:block; color:var(--white); font-weight:700; font-size:16px; line-height:1.4; text-decoration:none; margin-bottom:3px; }
-    a.evi-title:hover { color:var(--gold); }
+    .evidence > p.evintro { color:var(--tan); margin:2px 0 18px; max-width:68ch; }
+    ol.evlist { list-style:none; padding:0; margin:0; }
+    ol.evlist > li.evi { border-top:1px solid var(--line); padding:16px 0; margin:0; }
+    .evi-top { display:flex; flex-wrap:wrap; align-items:center; gap:4px 12px; margin-bottom:5px; font-size:13px; color:var(--gray); }
+    .evi-type, .evi-rel { font-size:13px; color:var(--gray); }
+    .evi-yr { margin-left:auto; color:var(--gray); font-size:13px; font-variant-numeric:tabular-nums; }
+    a.evi-title { display:block; color:var(--white); font-weight:700; font-size:16px; line-height:1.4; margin-bottom:3px; }
     .evi-jrnl { color:var(--gray); font-size:13px; font-style:italic; margin-bottom:8px; }
     ul.evi-find { margin:6px 0 8px; padding-left:18px; }
     ul.evi-find li { color:var(--tan); font-size:14.5px; margin-bottom:4px; }
-    .evi-why { color:var(--tan); font-size:14.5px; margin:6px 0 10px; }
-    .evi-why strong { color:var(--white); }
-    a.evi-link { display:inline-block; font-size:13px; font-weight:700; color:var(--gold); text-decoration:none; }
-    a.evi-link:hover { text-decoration:underline; }
-    .evi-foot { color:var(--gray); font-size:13px; margin:14px 0 4px; }
-    .trustline { font-size:13.5px; color:var(--tan); background:var(--card); border:1px solid var(--line); border-left:3px solid var(--gold); border-radius:10px; padding:9px 13px; margin:14px 0 4px; }
-    .trustline a { color:var(--gold); font-weight:700; text-decoration:none; }
-    .trustline a:hover { text-decoration:underline; }
-    .lib-hero { display:flex; align-items:center; gap:0; background:linear-gradient(135deg, rgba(217,166,33,0.10), rgba(217,166,33,0.02)); border:1px solid rgba(217,166,33,0.28); border-radius:16px; padding:22px 24px; margin:20px 0 14px; }
-    .lib-num { flex:0 0 auto; text-align:center; padding-right:24px; margin-right:24px; border-right:1px solid var(--line); }
-    .lib-num strong { display:block; font-size:46px; font-weight:900; color:var(--gold); line-height:1; letter-spacing:-1.5px; }
-    .lib-num span { display:block; font-size:11px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--tan); margin-top:8px; max-width:104px; }
-    .lib-body p { color:var(--tan); font-size:15px; margin:0 0 13px; line-height:1.6; }
-    .lib-body strong { color:var(--white); }
-    .lib-body .btns { display:flex; gap:10px; flex-wrap:wrap; }
+    .evi-why { color:var(--tan); font-size:14.5px; margin:6px 0 10px; max-width:68ch; }
+    a.evi-link { display:inline-block; font-size:14px; padding:8px 0; }
+    .evi-foot { color:var(--gray); font-size:13px; margin:14px 0 4px; max-width:68ch; }
+    .trustline { font-size:14.5px; color:var(--tan); margin:14px 0 4px; max-width:68ch; }
     .grid-eyebrow { margin:18px 0 12px; }
-    @media (max-width:560px){ .lib-hero{ flex-direction:column; align-items:stretch; } .lib-num{ border-right:none; border-bottom:1px solid var(--line); padding:0 0 14px; margin:0 0 16px; } .lib-num span{ max-width:none; } .lib-num strong{ font-size:40px; } }
+    .page-cta { margin:26px 0; }
 """
 
 NAV = """<nav>
-    <a href="/index.html" class="nav-brand"><img src="/logo-96.png" alt="VA Ready logo" width="34" height="34"><span>VA READY <span style="color:var(--gray);font-weight:400;">/</span> VET READY</span></a>
+    <a href="/index.html" class="nav-brand"><img src="/logo-96.png" alt="VA Ready logo" width="34" height="34"><span>VA Ready <span style="color:var(--gray);font-weight:400;">/</span> Vet Ready</span></a>
     <input type="checkbox" id="nv" class="nv-cb">
     <label for="nv" class="nv-burger" aria-label="Open menu">&#9776;</label>
     <div class="nav-links"><a href="/va-disability-calculator.html">Calculator</a><a href="/conditions.html">Conditions</a><a href="/mos.html">MOS</a><a href="/va-disability-pay-rates.html">Pay Rates</a><a href="/federal-benefits.html">Federal Benefits</a><a href="/guides.html">Guides</a><a href="/blog.html">Blog</a><a href="/find-a-vso.html">Find a VSO</a><a href="/index.html#download" class="nav-cta">Get the App</a></div>
@@ -118,22 +112,22 @@ NAV = """<nav>
 FOOTER = """<footer>
     <p>&copy; 2026 JDL Software LLC. VA Ready (iOS) &amp; Vet Ready (Android) are not affiliated with the U.S. Department of Veterans Affairs.</p>
     <div class="footer-links"><a href="/index.html">Home</a><a href="/conditions.html">Conditions</a><a href="/exposures.html">Exposures</a><a href="/mos.html">By MOS</a><a href="/va-disability-pay-rates.html">Pay Rates</a><a href="/states.html">State Benefits</a><a href="/federal-benefits.html">Federal Benefits</a><a href="/guides.html">Guides</a><a href="/blog.html">Blog</a><a href="/videos.html">Videos</a><a href="/va-updates.html">VA Updates</a><a href="/va-disability-calculator.html">Calculator</a><a href="/va-back-pay-calculator.html">Back Pay</a><a href="/va-claim-evidence.html">Document Your Claim</a><a href="/reserve-national-guard-va-disability.html">Reserve &amp; Guard</a><a href="/find-a-vso.html">Find a VSO</a><a href="/founders.html">Our Story</a><a href="/community.html">In the Community</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/accessibility.html">Accessibility</a></div>
-    <div class="footer-social" style="display:flex;justify-content:center;gap:20px;margin:18px 0 2px;"><a href="https://www.tiktok.com/@vareadyapp" target="_blank" rel="me noopener" aria-label="VA Ready on TikTok" style="color:#d9a621;display:inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.01-2.82h-3.3v13.2a2.59 2.59 0 1 1-1.78-2.46V10.2a5.9 5.9 0 1 0 5.09 5.85V8.96a7.56 7.56 0 0 0 4.4 1.41V7.06a4.28 4.28 0 0 1-3.4-1.24Z"/></svg></a><a href="https://www.instagram.com/vareadyapp/" target="_blank" rel="me noopener" aria-label="VA Ready on Instagram" style="color:#d9a621;display:inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 0 0-2.12 1.38A5.86 5.86 0 0 0 .64 4.13C.34 4.9.14 5.77.08 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91a5.86 5.86 0 0 0 1.38 2.12 5.86 5.86 0 0 0 2.12 1.38c.76.3 1.63.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.12-1.38 5.86 5.86 0 0 0 1.38-2.12c.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.12A5.86 5.86 0 0 0 19.87.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4Zm6.41-10.4a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44Z"/></svg></a><a href="https://www.facebook.com/vareadyapp" target="_blank" rel="me noopener" aria-label="VA Ready on Facebook" style="color:#d9a621;display:inline-flex;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.03 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg></a></div>
+    <div class="footer-social" style="display:flex;justify-content:center;gap:0;margin:10px 0 0;"><a href="https://www.tiktok.com/@vareadyapp" target="_blank" rel="me noopener" aria-label="VA Ready on TikTok" style="color:var(--tan);display:inline-flex;padding:11px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.01-2.82h-3.3v13.2a2.59 2.59 0 1 1-1.78-2.46V10.2a5.9 5.9 0 1 0 5.09 5.85V8.96a7.56 7.56 0 0 0 4.4 1.41V7.06a4.28 4.28 0 0 1-3.4-1.24Z"/></svg></a><a href="https://www.instagram.com/vareadyapp/" target="_blank" rel="me noopener" aria-label="VA Ready on Instagram" style="color:var(--tan);display:inline-flex;padding:11px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 0 0-2.12 1.38A5.86 5.86 0 0 0 .64 4.13C.34 4.9.14 5.77.08 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91a5.86 5.86 0 0 0 1.38 2.12 5.86 5.86 0 0 0 2.12 1.38c.76.3 1.63.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.12-1.38 5.86 5.86 0 0 0 1.38-2.12c.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.12A5.86 5.86 0 0 0 19.87.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4Zm6.41-10.4a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44Z"/></svg></a><a href="https://www.facebook.com/vareadyapp" target="_blank" rel="me noopener" aria-label="VA Ready on Facebook" style="color:var(--tan);display:inline-flex;padding:11px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.03 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg></a></div>
 </footer>
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/track.js"></script>"""
-APP_CTA = """<div class="cta">
-    <h3>Rate this condition in the VA Ready app</h3>
-    <p>Free, no account: pick this condition, see the exact 38 CFR criteria, and watch your combined rating update with real VA math, plus the 50+ filing guides and a personalized timeline.</p>
-    <div class="cta-pro"><span class="pro-pill">With Pro</span><p>Walk away with a <strong>VSO-ready Claim Summary PDF</strong> (peer-reviewed evidence appendix), an <strong>Exposure Profile PDF</strong> of every presumptive your service earned, and the full criteria for all 765 conditions.</p></div>
-    <div class="btns"><a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a><a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn ghost">Get Vet Ready for Android</a></div>
-</div>"""
+APP_CTA = """<div class="cta cta-line"><p>The full 38 CFR rating criteria for every condition are Pro in <a href="https://apps.apple.com/app/id6761733758">VA Ready for iOS</a> and <a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US">Vet Ready for Android</a>; the combined-rating calculator is free.</p></div>"""
 DISCLAIMER = """<div class="disclaimer">This page is for general informational purposes only and is not legal or medical advice. Rating criteria are summarized from 38 CFR Part 4; the VA determines actual ratings based on your evidence and exam. VA Ready is not affiliated with the U.S. Department of Veterans Affairs. Always verify current criteria at VA.gov and consult a VA-accredited representative.</div>"""
+
+def max_label(c, prefix="up to "):
+    m = c.get("max_rating")
+    if m in (0, "0", None): return "0% only"
+    return f"{prefix}{m}%"
 
 def rating_table(crit):
     rows = sorted(crit, key=lambda x: -int(x.get("percentage", 0)))
     body = "".join(f'<tr><td class="pct">{int(r["percentage"])}%</td><td>{esc(r.get("description",""))}</td></tr>' for r in rows)
-    return f'<table class="rt"><thead><tr><th>Rating</th><th>When it applies</th></tr></thead><tbody>{body}</tbody></table>'
+    return f'<div class="tbl-wrap"><table class="rt"><thead><tr><th>Rating</th><th>When it applies</th></tr></thead><tbody>{body}</tbody></table></div>'
 
 REL_LBL = {"primary":"Primary","supporting":"Supporting","tangential":"Background"}
 TYPE_LBL = {"meta-analysis":"Meta-analysis","systematic-review":"Systematic review","rct":"Randomized trial",
@@ -141,24 +135,23 @@ TYPE_LBL = {"meta-analysis":"Meta-analysis","systematic-review":"Systematic revi
  "narrative-review":"Review","clinical-guideline":"Clinical guideline","case-series":"Case series","other":"Study"}
 
 def evidence_section(dc, fname, fclean):
+    fname = fclean = prose_name(fclean)
     studs = STUDIES.get(dc) or []
     if not studs: return "", []
     items, cites = [], []
     for s in studs:
         yr = s.get("year") or ""
         tl = TYPE_LBL.get(s.get("type"), "Study")
-        rel = s.get("rel") or "supporting"
-        rlbl = REL_LBL.get(rel, "Supporting")
         finds = "".join(f"<li>{esc(f)}</li>" for f in (s.get("kf") or []) if f)
         finds_html = f'<ul class="evi-find">{finds}</ul>' if finds else ""
         why = s.get("why") or ""
-        why_html = f'<p class="evi-why"><strong>Why it matters:</strong> {esc(why)}</p>' if why else ""
+        why_html = f'<p class="evi-why">{esc(why)}</p>' if why else ""
         jrnl = esc(s.get("journal") or "")
         jline = " &middot; ".join([x for x in [jrnl, str(yr)] if x])
         url = esc(s.get("url"))
         items.append(
             f'<li class="evi"><div class="evi-top"><span class="evi-type">{esc(tl)}</span>'
-            f'<span class="evi-rel rel-{rel}">{rlbl}</span><span class="evi-yr">{yr}</span></div>'
+            f'</div>'
             f'<a class="evi-title" href="{url}" target="_blank" rel="noopener">{esc(s.get("title"))}</a>'
             f'<div class="evi-jrnl">{jline}</div>{finds_html}{why_html}'
             f'<a class="evi-link" href="{url}" target="_blank" rel="noopener">View on PubMed &#8599;</a></li>')
@@ -168,13 +161,11 @@ def evidence_section(dc, fname, fclean):
     for c in cites:
         for k in [k for k,v in c.items() if v is None]: del c[k]
     html_block = (
-        f'<section class="evidence"><h2>Peer-Reviewed Research on {fname}</h2>'
-        f'<p class="evintro">{len(studs)} peer-reviewed studies linked to {fclean} (diagnostic code {dc}) in the VA Ready app, '
-        f'sourced from PubMed and the U.S. National Library of Medicine. Every citation is real and links to the source, '
-        f'bring them to your C&amp;P exam or hand them to your VSO.</p>'
+        f'<section class="evidence"><h2>Peer-reviewed research on {fname}</h2>'
+        f'<p class="evintro">{len(studs)} peer-reviewed studies linked to {fclean} (diagnostic code {dc}), '
+        f'from PubMed and the U.S. National Library of Medicine. Each citation links to its source.</p>'
         f'<ol class="evlist">{"".join(items)}</ol>'
-        f'<p class="evi-foot">Citations are provided for general educational use and are not medical advice. '
-        f'The VA Ready app pairs every study with its key findings and a one-tap Claim Summary PDF appendix.</p></section>')
+        f'<p class="evi-foot">Citations are provided for general educational use and are not medical advice.</p></section>')
     return html_block, cites
 
 def cond_page(dc, slug, fname, intro):
@@ -188,33 +179,29 @@ def cond_page(dc, slug, fname, intro):
     fclean = re.sub("<.*?>", "", fname)
     nstud = len(STUDIES.get(dc) or [])
     stud_bit = f" Plus {nstud} peer-reviewed studies." if nstud else ""
-    desc = f"How the VA rates {fclean} (diagnostic code {dc}): the {len(crit)} rating breakpoints, the {cfr} criteria, secondary conditions, and how to claim it.{stud_bit} Free calculator."
+    lv = "1 rating level" if len(crit) == 1 else f"{len(crit)} rating levels"
+    desc = f"{fclean} (diagnostic code {dc}): the {lv} under {cfr}, related conditions, and linked guides.{stud_bit}"
     desc = desc[:160]
     secs_html = ""
     if secs:
-        pills = "".join(sec_pill(s, slug) for s in secs[:10])
-        secs_html = f'<h2>Conditions commonly connected to {fname}</h2><p>{fclean} is frequently claimed alongside, or as a secondary to, these conditions. If you have any of them, they may be separately ratable:</p><div class="pillrow">{pills}</div>'
-    notes_html = f'<h2>Good to know</h2><p>{esc(notes)}</p>' if notes else ""
-    # FAQ (visible + schema)
-    faqs = [
-      (f"What is the VA rating for {fclean}?",
-       f"The VA rates {cn} under diagnostic code {dc} ({cfr}). Ratings run up to {maxr}%, assigned from the criteria in the table above based on the severity of your condition."),
-      (f"What diagnostic code does the VA use for {fclean}?",
-       f"Diagnostic code {dc}, rated under {cfr} of the VA Schedule for Rating Disabilities."),
-    ]
-    if secs:
-        faqs.append((f"Can {fclean} be claimed as a secondary condition?",
-                     f"Yes. {fclean} is commonly connected to conditions like {', '.join(secs[:3])}. A secondary claim needs a medical nexus linking it to your service-connected condition."))
-    faq_visible = "".join(f'<div class="faq-item"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q,a in faqs)
-    faq_ld = json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-        {"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faqs]})
+        def sec_ref(name):
+            n = (name or "").lower()
+            for kw, sl in SEC_RULES:
+                if kw in n and sl in VALID_SLUGS and sl != slug:
+                    return f'<a href="/conditions/{sl}.html">{esc(name)}</a>'
+            return esc(name)
+        refs = [sec_ref(x) for x in secs[:10]]
+        joined = ", ".join(refs[:-1]) + (", and " if len(refs) > 2 else " and ") + refs[-1] if len(refs) > 1 else refs[0]
+        secs_html = (f'<h2>Related conditions</h2><p>Conditions often claimed with {prose_name(fclean)}: {joined}.</p>'
+                     f'<p>A secondary claim needs a medical nexus linking the condition to a service-connected one.</p>')
+    notes_html = f'<h2>Rating notes</h2><p>{esc(notes)}</p>' if notes else ""
     bc_ld = json.dumps({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
         {"@type":"ListItem","position":1,"name":"Home","item":"https://vareadyapp.com/"},
-        {"@type":"ListItem","position":2,"name":"VA Ratings by Condition","item":"https://vareadyapp.com/conditions.html"},
-        {"@type":"ListItem","position":3,"name":f"VA Rating for {fclean}","item":canon}]})
+        {"@type":"ListItem","position":2,"name":"VA ratings by condition","item":"https://vareadyapp.com/conditions.html"},
+        {"@type":"ListItem","position":3,"name":f"VA rating for {fclean}","item":canon}]})
     ev_html, ev_cites = evidence_section(dc, fname, fclean)
     art_obj = {"@context":"https://schema.org","@type":"Article",
-        "headline":f"VA Disability Rating for {fclean}","description":desc,"datePublished":"2026-06-07",
+        "headline":f"VA disability rating for {fclean}","description":desc,"datePublished":"2026-06-07",
         "author":{"@type":"Organization","name":"JDL Software LLC"},"publisher":{"@type":"Organization","name":"VA Ready"},
         "mainEntityOfPage":canon,"inLanguage":"en-US"}
     if ev_cites: art_obj["citation"] = ev_cites
@@ -224,14 +211,14 @@ def cond_page(dc, slug, fname, intro):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VA Rating for {fclean} (DC {dc}): Criteria &amp; Pay | VA Ready</title>
+<title>VA rating for {fclean} (DC {dc}): criteria and pay | VA Ready</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0a0f1a">
 <link rel="canonical" href="{canon}">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="VA Ready">
-<meta property="og:title" content="VA Disability Rating for {fclean} (DC {dc})">
+<meta property="og:title" content="VA disability rating for {fclean} (DC {dc})">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{canon}">
 <meta property="og:image" content="https://vareadyapp.com/logo.png">
@@ -240,38 +227,30 @@ def cond_page(dc, slug, fname, intro):
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <script type="application/ld+json">{bc_ld}</script>
 <script type="application/ld+json">{art_ld}</script>
-<script type="application/ld+json">{faq_ld}</script>
 <style>{CSS}</style>
 </head>
 <body>
 {NAV}
 <div class="wrap">
-    <div class="crumb"><a href="/index.html">Home</a> / <a href="/conditions.html">VA Ratings by Condition</a> / {esc(fclean)}</div>
-    <div class="eyebrow">VA Disability Rating</div>
-    <h1>VA Disability Rating for {fname}</h1>
+    <div class="crumb"><a href="/index.html">Home</a> / <a href="/conditions.html">VA ratings by condition</a> / {esc(fclean)}</div>
+    <h1>VA disability rating for {fname}</h1>
     <p class="lede">{intro}</p>
-    <div class="meta"><strong>Diagnostic code {dc}</strong> &middot; {esc(cfr)} &middot; {esc(bsys)} &middot; up to {maxr}%</div>
-    <p class="trustline">Built by a veteran who filed his own claim to 100&#37; P&amp;T, then built the tool he wished he&rsquo;d had. <a href="/founders.html">Read our story &rarr;</a></p>
+    <div class="meta">Diagnostic code {dc} &middot; {esc(cfr)} &middot; {esc(bsys)} &middot; {max_label(c)}</div>
     <article>
-        <h2>How the VA rates {fname}</h2>
-        <p>The VA assigns one of these ratings for {esc(cn)}, based on the severity of your condition. These criteria are summarized from {esc(cfr)}:</p>
+        <h2>Rating criteria</h2>
         {rating_table(crit)}
         {notes_html}
         {secs_html}
-        <h2>How to strengthen a {fname} claim</h2>
-        <p>The rating you receive depends almost entirely on your evidence and your C&amp;P exam. To put your best claim forward:</p>
+        <h2>Related guides</h2>
         <ul>
-            <li>Get a current diagnosis and make sure your symptoms are documented at their worst, not your best day.</li>
-            <li>Prepare for your <a href="/guides/c-and-p-exam-preparation.html">C&amp;P exam</a>, the examiner's report usually decides your rating.</li>
-            <li>If service connection isn't obvious, a <a href="/guides/nexus-letters.html">nexus letter</a> can link the condition to your service.</li>
-            <li>If this condition was caused by another rated condition, file it as a <a href="/guides/secondary-service-connection.html">secondary claim</a>.</li>
+            <li><a href="/guides/c-and-p-exam-preparation.html">C&amp;P exam preparation</a></li>
+            <li><a href="/guides/nexus-letters.html">Nexus letters</a></li>
+            {('<li><a href="/guides/secondary-service-connection.html">Secondary service connection</a></li>' if secs else '')}
         </ul>
     </article>
     {ev_html}
-    <p style="margin:22px 0;"><a href="/va-disability-calculator.html" class="btn">Estimate your combined rating &rarr;</a> &nbsp; <a href="/states.html" class="btn ghost">Veterans benefits by state &rarr;</a></p>
+    <div class="btns page-cta"><a href="/va-disability-calculator.html" class="btn">Estimate your combined rating</a><a href="/states.html" class="btn ghost">Veterans benefits by state</a></div>
     {APP_CTA}
-    <h2 style="font-size:20px;margin-top:30px;">Common questions</h2>
-    {faq_visible}
     {DISCLAIMER}
 </div>
 {FOOTER}
@@ -285,27 +264,30 @@ for dc, slug, fname, intro in META:
 
 # hub
 def hub():
-    cards = "".join(
-        f'<div class="hub-card"><a href="/conditions/{slug}.html">VA Rating for {esc(re.sub("<.*?>","",fname))}</a><p>Diagnostic code {dc} &middot; up to {DATA[dc].get("max_rating")}%' + (f' &middot; {len(STUDIES.get(dc) or [])} studies' if STUDIES.get(dc) else '') + f'</p></div>'
+    rows = "".join(
+        f'<tr><td><a href="/conditions/{slug}.html">{esc(re.sub("<.*?>","",fname))}</a></td><td>{dc}</td>'
+        f'<td class="pct">{esc(max_label(DATA[dc], ""))}</td><td>{len(STUDIES.get(dc) or []) or ""}</td></tr>'
         for dc, slug, fname, intro in META if dc in DATA)
+    table = ('<div class="tbl-wrap"><table class="rt"><thead><tr><th>Condition</th><th>Diagnostic code</th>'
+             f'<th>Highest rating</th><th>Studies</th></tr></thead><tbody>{rows}</tbody></table></div>')
     n_top = sum(1 for dc, *_ in META if dc in DATA)  # featured count, kept in sync with the grid
     desc = "VA disability ratings for the most-claimed conditions: tinnitus, PTSD, back pain, sleep apnea, migraines, hearing loss, and more. Rating criteria, diagnostic codes, and how to claim each."
     bc = json.dumps({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
         {"@type":"ListItem","position":1,"name":"Home","item":"https://vareadyapp.com/"},
-        {"@type":"ListItem","position":2,"name":"VA Ratings by Condition","item":"https://vareadyapp.com/conditions.html"}]})
+        {"@type":"ListItem","position":2,"name":"VA ratings by condition","item":"https://vareadyapp.com/conditions.html"}]})
     items = json.dumps({"@context":"https://schema.org","@type":"ItemList","itemListElement":[
-        {"@type":"ListItem","position":i+1,"url":f"https://vareadyapp.com/conditions/{slug}.html","name":f"VA Rating for {re.sub('<.*?>','',fname)}"}
+        {"@type":"ListItem","position":i+1,"url":f"https://vareadyapp.com/conditions/{slug}.html","name":f"VA rating for {re.sub('<.*?>','',fname)}"}
         for i,(dc,slug,fname,intro) in enumerate(META) if dc in DATA]})
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VA Disability Ratings by Condition: The Most-Claimed Conditions | VA Ready</title>
+<title>VA disability ratings by condition: the most-claimed conditions | VA Ready</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0a0f1a">
 <link rel="canonical" href="https://vareadyapp.com/conditions.html">
 <meta property="og:type" content="website"><meta property="og:site_name" content="VA Ready">
-<meta property="og:title" content="VA Disability Ratings by Condition"><meta property="og:description" content="{esc(desc)}">
+<meta property="og:title" content="VA disability ratings by condition"><meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="https://vareadyapp.com/conditions.html"><meta property="og:image" content="https://vareadyapp.com/logo.png">
 <meta name="twitter:card" content="summary"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -316,19 +298,10 @@ def hub():
 <body>
 {NAV}
 <div class="wrap">
-    <div class="crumb"><a href="/index.html">Home</a> / VA Ratings by Condition</div>
-    <div class="eyebrow">By Condition</div>
-    <h1>VA Disability Ratings by Condition</h1>
-    <p class="lede">Plain-language rating breakdowns for the conditions veterans claim most, the exact 38 CFR breakpoints, diagnostic codes, secondary conditions, and how to claim each. Every page now includes the <strong style="color:var(--white);">real peer-reviewed studies</strong> linked to that condition, with a direct PubMed link for each. All sourced from the regulations and the U.S. National Library of Medicine.</p>
-    <div class="lib-hero">
-        <div class="lib-num"><strong>765</strong><span>Conditions in the app</span></div>
-        <div class="lib-body">
-            <p>This page details the <strong>{n_top} most-claimed</strong> conditions. The free VA Ready app carries the <strong>complete library, all 765 diagnostic codes</strong> in 38 CFR Part 4, fully searchable, each with its exact rating criteria and your combined rating calculated as you add them.</p>
-            <div class="btns"><a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a><a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn ghost">Get Vet Ready for Android</a></div>
-        </div>
-    </div>
-    <div class="eyebrow grid-eyebrow">The {n_top} Most-Claimed</div>
-    <div class="hub-sec"><div class="hub-grid">{cards}</div></div>
+    <div class="crumb"><a href="/index.html">Home</a> / VA ratings by condition</div>
+    <h1>VA disability ratings by condition</h1>
+    <p class="lede">Rating tables for the {n_top} conditions veterans claim most, with diagnostic codes, secondary conditions, and the peer-reviewed studies linked to each. Criteria are summarized from 38 CFR Part 4.</p>
+    <div class="hub-sec"><h2>Most-claimed conditions</h2>{table}</div>
     <p class="trustline">More from VA Ready: <a href="/states.html">Veterans benefits by state</a> &middot; <a href="/guides.html">VA claim guides</a> &middot; <a href="/mos.html">VA disability by MOS</a> &middot; <a href="/va-disability-calculator.html">Combined-rating calculator</a></p>
     {APP_CTA}
     {DISCLAIMER}
