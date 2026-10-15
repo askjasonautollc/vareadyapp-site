@@ -174,6 +174,7 @@ def flagship():
     <div class="crumb"><a href="/index.html">Home</a> / VA disability pay rates</div>
     <h1>{YEAR} VA disability pay rates</h1>
     <p class="lede">How much VA disability compensation pays each month, tax-free, for every rating from 10% to 100%, alone and with dependents. These are the {YEAR} rates (effective {EFFECTIVE}), verified against VA.gov. Tap a rating for the full breakdown.</p>
+    <p class="trustline">Social Security announced a 3.6% COLA on October 14, 2026. See the <a href="/va-disability-pay-rates-2027.html">estimated 2027 pay rates</a>.</p>
     {ratenav(None, '<a href="/va-disability-pay/special-monthly-compensation.html">SMC rates</a>')}
     <article>
         <h2>Monthly VA disability compensation by rating</h2>
