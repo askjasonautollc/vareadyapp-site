@@ -47,11 +47,11 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MobileApplication",
+      "@type": ["MobileApplication", "SoftwareApplication"],
       "name": "VA Ready",
       "alternateName": "Vet Ready",
       "description": "VA disability rating calculator and claim filing toolkit for U.S. veterans. The Exposure Calculator maps every base, ship, aircraft and vehicle a veteran served on to PACT Act, Camp Lejeune, AFFF / PFAS, K2 (Karshi-Khanabad), Agent Orange, and 40+ other presumptive registries. Includes 765 conditions cross-referenced against 38 CFR, 1,098 MOS / AFSC / Rating / Designator profiles, 56 cited exposures with primary-source citations, 827 documented military bases (US PFAS &amp; Superfund sites, Cold War Germany, CENTCOM, and PACT countries), a library of 2,403 peer-reviewed studies from PubMed and the NIH linked to 395 diagnostic codes, full PACT Act presumptive matching, state benefits for all 50 states plus DC (644 programs), a daily Symptom Tracker, and a personalized filing coach.",
-      "operatingSystem": "iOS 17.0, Android 11, macOS 14.0",
+      "operatingSystem": "iOS 17.0, Android 11, macOS 14.0, Windows 10, Windows 11",
       "applicationCategory": "HealthApplication",
       "applicationSubCategory": "Government Benefits",
       "url": "https://vareadyapp.com/",
@@ -168,7 +168,7 @@
         {
           "@type": "Question",
           "name": "Is VA Ready affiliated with the Department of Veterans Affairs?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. VA Ready (iOS) and Vet Ready (Android) are independent products and are not affiliated with, endorsed by, or connected to the U.S. Department of Veterans Affairs. All rating criteria come from publicly available federal regulations (38 CFR)." }
+          "acceptedAnswer": { "@type": "Answer", "text": "No. VA Ready (iOS and Windows) and Vet Ready (Android) are independent products and are not affiliated with, endorsed by, or connected to the U.S. Department of Veterans Affairs. All rating criteria come from publicly available federal regulations (38 CFR)." }
         },
         {
           "@type": "Question",
@@ -503,8 +503,12 @@
                         <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.609 22.186A.997.997 0 013 21.286V2.714a.997.997 0 01.609-.9zm10.89 10.892l2.302 2.302-12.4 7.16 10.098-9.462zM18.16 9.18l2.578 1.49a1 1 0 010 1.66l-2.66 1.534-2.99-2.99 3.072-1.694zM4.398 1.815l12.4 7.16-2.282 2.282L4.398 1.815z"/></svg>
                         Vet Ready on Google Play
                     </a>
+                    <a href="https://apps.microsoft.com/detail/9p8xfcqvfjhf" class="btn btn-gold">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></svg>
+                        VA Ready on Microsoft Store
+                    </a>
                 </div>
-                <p class="hero-web">No phone handy? <a href="va-disability-calculator.html">Use the free rating calculator in your browser</a>.</p>
+                <p class="hero-web">On a PC? <a href="va-disability-app-for-windows.html">VA Ready for Windows</a> is on the Microsoft Store, or <a href="va-disability-calculator.html">use the free rating calculator in your browser</a>.</p>
                 <p class="hero-web">2027 VA pay rates after the 3.6% COLA: <a href="va-disability-pay-rates-2027.html">see the estimated tables</a>.</p>
                 <p class="hero-facts">40,000+ downloads. Your data stays on your device.</p>
                 <div class="hero-names">
@@ -512,7 +516,7 @@
                         <img src="logo.png" alt="VA Ready app icon on iOS App Store" width="40" height="40">
                         <img src="logo1.png" alt="Vet Ready app icon on Google Play" width="40" height="40">
                     </span>
-                    <p>One app with two names: VA Ready on iPhone, iPad and Mac, Vet Ready on Android. It runs natively on Mac and fills the screen on iPad and Android tablets.</p>
+                    <p>One app with two names: VA Ready on iPhone, iPad, Mac and Windows, Vet Ready on Android. It runs natively on Mac and Windows and fills the screen on iPad and Android tablets.</p>
                 </div>
             </div>
             <figure class="hero-shot">
@@ -824,7 +828,7 @@
             <div class="faq">
                 <div>
                     <h3>Is VA Ready affiliated with the Department of Veterans Affairs?</h3>
-                    <p>No. VA Ready (iOS) and Vet Ready (Android) are independent products and are not affiliated with, endorsed by, or connected to the U.S. Department of Veterans Affairs. All rating criteria come from publicly available federal regulations (38 CFR).</p>
+                    <p>No. VA Ready (iOS and Windows) and Vet Ready (Android) are independent products and are not affiliated with, endorsed by, or connected to the U.S. Department of Veterans Affairs. All rating criteria come from publicly available federal regulations (38 CFR).</p>
                 </div>
                 <div>
                     <h3>Is the VA disability calculator free?</h3>
@@ -875,7 +879,7 @@
     <section class="sec disclaimer">
         <div class="wrap">
             <p>
-                VA Ready (iOS) and Vet Ready (Android) are not affiliated with, endorsed by, or connected to the U.S. Department of Veterans Affairs or any government agency.
+                VA Ready (iOS and Windows) and Vet Ready (Android) are not affiliated with, endorsed by, or connected to the U.S. Department of Veterans Affairs or any government agency.
                 This app does not provide legal or medical advice. All information is based on publicly available VA regulations (38 CFR)
                 and documented best practices. Ratings and benefit estimates are for informational purposes only. Always consult a qualified
                 healthcare provider for medical decisions and a VA-accredited attorney or claims agent for legal counsel.
@@ -891,6 +895,7 @@
         </div>
         <p>VA disability calculator and claim filing toolkit for veterans.</p>
         <div class="footer-links">
+            <a href="va-disability-app-for-windows.html">Windows App</a>
             <a href="va-disability-calculator.html">VA Disability Calculator</a>
             <a href="va-back-pay-calculator.html">VA Back Pay Calculator</a>
             <a href="conditions.html">VA Ratings by Condition</a>
@@ -924,7 +929,7 @@
             </a>
         </div>
         <div class="footer-meta">
-            &copy; 2026 JDL Software LLC &middot; All rights reserved &middot; VA Ready (iOS) and Vet Ready (Android) are products of JDL Software LLC
+            &copy; 2026 JDL Software LLC &middot; All rights reserved &middot; VA Ready (iOS and Windows) and Vet Ready (Android) are products of JDL Software LLC
         </div>
     </footer>
 

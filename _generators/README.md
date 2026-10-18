@@ -17,6 +17,7 @@ from anywhere after a clone — no hardcoded `/tmp` or absolute paths.
 | `gen_states.py` | 20 state-benefit pages → `../states/*.html` + `../states.html` | `data/benefits.json` |
 | `gen_founders.py` | `../founders.html` | none (uses `../img/jason_*.jpg`, `wocs_grad.jpg`) |
 | `gen_mos.py` | 44 MOS / AFSC / rating pages → `../mos/*.html` + `../mos.html` (Phase 1 list in `PHASE1`) | `data/mos_profiles.json` (paginate: table is over 1,000 rows) |
+| `gen_windows.py` | `../va-disability-app-for-windows.html` (Microsoft Store landing page, 9P8XFCQVFJHF) | none (uses `../img/windows-*.jpg`) |
 | `gen_community.py` | `../community.html` (In the Community) | none (uses `../img/community-liberty-county-jumbotron-*`) |
 
 ## How to run

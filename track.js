@@ -1,10 +1,11 @@
 /* VA Ready — anonymous download-click tracking via Vercel Web Analytics.
-   Fires a `download_click` custom event when any App Store / Google Play link is
+   Fires a `download_click` custom event when any App Store / Google Play / Microsoft Store link is
    clicked, anywhere on the site. No cookies, no PII — store + page + placement only. */
 (function () {
   function store(href) {
     if (href.indexOf('apps.apple.com') > -1)  return 'ios';
     if (href.indexOf('play.google.com') > -1) return 'android';
+    if (href.indexOf('apps.microsoft.com') > -1) return 'windows';
     return null;
   }
   function placement(el) {

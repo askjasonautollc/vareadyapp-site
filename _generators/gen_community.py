@@ -217,7 +217,7 @@ ABOUT = f'''<article>
 ORG_ID, FEED_ID, IMG_ID, BC_ID = ORIGIN + "/#organization", canon + "#feed", canon + "#primary-image", canon + "#breadcrumb"
 org = {"@type": "Organization", "@id": ORG_ID, "name": "JDL Software LLC", "alternateName": ["VA Ready", "Vet Ready"],
        "url": ORIGIN + "/", "logo": ORIGIN + "/logo.png", "email": "support@vareadyapp.com",
-       "description": "Veteran-founded maker of VA Ready (iOS) and Vet Ready (Android), educational apps for veterans working through the VA disability claims process.",
+       "description": "Veteran-founded maker of VA Ready (iOS and Windows) and Vet Ready (Android), educational apps for veterans working through the VA disability claims process.",
        "founder": {"@type": "Person", "name": "Jason", "jobTitle": "Founder", "honorificSuffix": "CW2, U.S. Army (Retired)", "url": ORIGIN + "/founders.html"},
        "knowsAbout": ["VA disability compensation claims", "38 CFR Part 4, Schedule for Rating Disabilities",
                       "PACT Act presumptive conditions", "Accredited Veterans Service Organizations", "State and federal veterans benefits"],

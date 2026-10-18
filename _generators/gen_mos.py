@@ -127,7 +127,7 @@ CSS += """
     .wrap > p:not(.lede):not(.note):not(.trustline) { color:var(--tan); margin:0 0 14px; max-width:68ch; }
 """
 
-APP_CTA = """<div class="cta cta-line"><p>Claim Intel in <a href="https://apps.apple.com/app/id6761733758">VA Ready for iOS</a> and <a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US">Vet Ready for Android</a> is a Pro feature that merges the conditions from every job you held and cross-references your exposures; the combined-rating calculator is free.</p></div>"""
+APP_CTA = """<div class="cta cta-line"><p>Claim Intel in <a href="https://apps.apple.com/app/id6761733758">VA Ready for iOS</a>, <a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US">Vet Ready for Android</a> and <a href="https://apps.microsoft.com/detail/9p8xfcqvfjhf">VA Ready for Windows</a> is a Pro feature that merges the conditions from every job you held and cross-references your exposures; the combined-rating calculator is free.</p></div>"""
 DISCLAIMER = """<div class="disclaimer">This page is for general informational purposes only and is not legal or medical advice. It describes what a job typically involved, not what any one veteran experienced, and the VA does not keep a list of conditions by MOS, AFSC, or rating. The VA decides service connection and ratings from your own records, evidence, and exam. VA Ready is not affiliated with the U.S. Department of Veterans Affairs. For free help filing, work with a <a href="/find-a-vso.html">VA-accredited VSO</a>.</div>"""
 
 ORG_ID = "https://vareadyapp.com/#organization"

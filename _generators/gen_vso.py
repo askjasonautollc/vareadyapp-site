@@ -60,7 +60,7 @@ CSS = re.search(r'CSS = """(.*?)"""', open(os.path.join(HERE,"gen_guides.py")).r
 """
 NAV = re.search(r'NAV = """(.*?)"""', open(os.path.join(HERE,"gen_states.py")).read(), re.S).group(1)
 FOOTER = re.search(r'FOOTER = """(.*?)"""', open(os.path.join(HERE,"gen_states.py")).read(), re.S).group(1)
-APP_CTA = """<div class="cta cta-line"><p>The VSO finder is free in <a href="https://apps.apple.com/app/id6761733758">VA Ready for iOS</a> and <a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US">Vet Ready for Android</a>, along with the combined-rating calculator and claim list; Pro adds Claim Intel and the in-depth filing guides.</p></div>"""
+APP_CTA = """<div class="cta cta-line"><p>The VSO finder is free in <a href="https://apps.apple.com/app/id6761733758">VA Ready for iOS</a>, <a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US">Vet Ready for Android</a> and <a href="https://apps.microsoft.com/detail/9p8xfcqvfjhf">VA Ready for Windows</a>, along with the combined-rating calculator and claim list; Pro adds Claim Intel and the in-depth filing guides.</p></div>"""
 
 TYPE_LABEL = {"state_dva": "State department of veterans affairs", "county_cvso": "County veterans service office",
               "va_ogc_rep": "Service representative", "national_hq": "National headquarters",
