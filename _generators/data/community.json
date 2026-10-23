@@ -9,13 +9,14 @@
       "Brent and Gabby flew out of the Waycross-Ware County Airport with Runway One Nine Aviation on September 27. Married, both Air Force, and they took turns at the controls while the other rode in the back and watched.",
       "Runway One Nine framed it as a date idea, which it is, but the part I care about is that both of them actually flew the airplane. I am told there is still some disagreement about who did it better.",
       "I want to expand this and keep putting veterans in the air. The veteran community has a lot to offer the aviation community, and that is why I am behind it.",
-      "Two seats are still open. Flights run through October 2026, scheduled with Runway One Nine Aviation. If you want one, reach out any of these ways:"
+      "All five sponsored seats have since flown. Runway One Nine Aviation still flies discovery flights out of Waycross:"
     ],
     "teaser": "Brent and Gabby, married Air Force veterans, took turns at the controls out of Waycross-Ware County Airport with Runway One Nine Aviation.",
     "links": [
-      { "url": "https://www.facebook.com/vareadyapp", "label": "Message us on Facebook" },
-      { "url": "mailto:support@vareadyapp.com", "label": "Email support@vareadyapp.com" },
-      { "url": "https://runwayonenine.com/contact-us/", "label": "Contact Runway One Nine Aviation" }
+      {
+        "url": "https://runwayonenine.com/contact-us/",
+        "label": "Contact Runway One Nine Aviation"
+      }
     ],
     "photo": "couple-discovery-flight-2026",
     "photo_focus": 0.35,
@@ -39,7 +40,9 @@
         "@type": "LocalBusiness",
         "name": "Runway One Nine Aviation",
         "url": "https://runwayonenine.com/",
-        "sameAs": ["https://www.facebook.com/runwayonenine/"]
+        "sameAs": [
+          "https://www.facebook.com/runwayonenine/"
+        ]
       }
     }
   },
@@ -66,7 +69,12 @@
       "location": {
         "@type": "Place",
         "name": "Kirk Warner Field",
-        "address": { "@type": "PostalAddress", "addressLocality": "Hinesville", "addressRegion": "GA", "addressCountry": "US" }
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Hinesville",
+          "addressRegion": "GA",
+          "addressCountry": "US"
+        }
       }
     }
   },
@@ -83,8 +91,14 @@
     ],
     "teaser": "A full page in the 2026 Panther Guide, the program handed out at every Liberty County home game all season.",
     "links": [
-      { "url": "https://apps.apple.com/app/id6761733758", "label": "VA Ready on the App Store" },
-      { "url": "https://play.google.com/store/apps/details?id=com.vaready.app", "label": "Vet Ready on Google Play" }
+      {
+        "url": "https://apps.apple.com/app/id6761733758",
+        "label": "VA Ready on the App Store"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.vaready.app",
+        "label": "Vet Ready on Google Play"
+      }
     ],
     "photo": "liberty-county-panther-guide-2026",
     "photo_focus": 0.1,
@@ -96,7 +110,12 @@
       "parentOrganization": {
         "@type": "HighSchool",
         "name": "Liberty County High School",
-        "address": { "@type": "PostalAddress", "addressLocality": "Hinesville", "addressRegion": "GA", "addressCountry": "US" }
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Hinesville",
+          "addressRegion": "GA",
+          "addressCountry": "US"
+        }
       }
     }
   },
@@ -109,13 +128,14 @@
     "body": [
       "The first of the five discovery flights we're sponsoring is in the books. Justin flew out of the Waycross-Ware County Airport with Runway One Nine Aviation, left seat, hands on the yoke.",
       "That is the part that matters to me. Not a ride in the back, not a tour of the field. A veteran actually flying the airplane.",
-      "Three seats are still open. Flights run through October 2026, scheduled with Runway One Nine Aviation. If you want one, reach out any of these ways:"
+      "All five sponsored seats have since flown. Runway One Nine Aviation still flies discovery flights out of Waycross:"
     ],
     "teaser": "The first of our five sponsored discovery flights. Justin flew out of Waycross-Ware County Airport with Runway One Nine Aviation, left seat, hands on the yoke.",
     "links": [
-      { "url": "https://www.facebook.com/vareadyapp", "label": "Message us on Facebook" },
-      { "url": "mailto:support@vareadyapp.com", "label": "Email support@vareadyapp.com" },
-      { "url": "https://runwayonenine.com/contact-us/", "label": "Contact Runway One Nine Aviation" }
+      {
+        "url": "https://runwayonenine.com/contact-us/",
+        "label": "Contact Runway One Nine Aviation"
+      }
     ],
     "photo": "first-discovery-flight-2026",
     "photo_focus": 0.45,
@@ -128,13 +148,20 @@
       "location": {
         "@type": "Place",
         "name": "Waycross-Ware County Airport",
-        "address": { "@type": "PostalAddress", "addressLocality": "Waycross", "addressRegion": "GA", "addressCountry": "US" }
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Waycross",
+          "addressRegion": "GA",
+          "addressCountry": "US"
+        }
       },
       "organizer": {
         "@type": "LocalBusiness",
         "name": "Runway One Nine Aviation",
         "url": "https://runwayonenine.com/",
-        "sameAs": ["https://www.facebook.com/runwayonenine/"]
+        "sameAs": [
+          "https://www.facebook.com/runwayonenine/"
+        ]
       }
     }
   },
@@ -147,13 +174,14 @@
     "body": [
       "We're sponsoring five free discovery flights for veterans in the Fort Stewart, Waycross and Kings Bay area, in partnership with Runway One Nine Aviation in Waycross, Georgia. A real aircraft and a certificated flight instructor, on us.",
       "I soloed for the first time this summer, and I want to share that with the veterans who earned it. The FAA's MOSAIC rule, which began taking effect in October 2025, expanded the aircraft a sport pilot can fly. A discovery flight is where that path can start.",
-      "Flights run September through October 2026, scheduled with Runway One Nine Aviation. To get a seat, reach out any of these ways:"
+      "Flights ran September through October 2026 with Runway One Nine Aviation, and all five seats flew. Runway One Nine still flies discovery flights out of Waycross:"
     ],
     "teaser": "Five free discovery flights for veterans in the Fort Stewart, Waycross and Kings Bay area, with Runway One Nine Aviation. A real aircraft and an instructor, on us.",
     "links": [
-      { "url": "https://www.facebook.com/vareadyapp", "label": "Message us on Facebook" },
-      { "url": "mailto:support@vareadyapp.com", "label": "Email support@vareadyapp.com" },
-      { "url": "https://runwayonenine.com/contact-us/", "label": "Contact Runway One Nine Aviation" }
+      {
+        "url": "https://runwayonenine.com/contact-us/",
+        "label": "Contact Runway One Nine Aviation"
+      }
     ],
     "photo": "veteran-discovery-flights-2026",
     "photo_focus": 0.62,
@@ -162,13 +190,24 @@
       "@type": "Project",
       "name": "VA Ready veteran discovery flights",
       "description": "Five free discovery flights for veterans in the Fort Stewart, Waycross and Kings Bay area of Georgia, flown with a certificated flight instructor.",
-      "areaServed": ["Fort Stewart, Georgia", "Waycross, Georgia", "Kings Bay, Georgia"],
+      "areaServed": [
+        "Fort Stewart, Georgia",
+        "Waycross, Georgia",
+        "Kings Bay, Georgia"
+      ],
       "member": {
         "@type": "LocalBusiness",
         "name": "Runway One Nine Aviation",
         "url": "https://runwayonenine.com/",
-        "sameAs": ["https://www.facebook.com/runwayonenine/"],
-        "address": { "@type": "PostalAddress", "addressLocality": "Waycross", "addressRegion": "GA", "addressCountry": "US" }
+        "sameAs": [
+          "https://www.facebook.com/runwayonenine/"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Waycross",
+          "addressRegion": "GA",
+          "addressCountry": "US"
+        }
       }
     }
   },
@@ -191,12 +230,19 @@
       "parentOrganization": {
         "@type": "HighSchool",
         "name": "Liberty County High School",
-        "address": { "@type": "PostalAddress", "addressRegion": "GA", "addressCountry": "US" }
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "GA",
+          "addressCountry": "US"
+        }
       },
       "location": {
         "@type": "StadiumOrArena",
         "name": "Donell Woods Stadium",
-        "containedInPlace": { "@type": "AdministrativeArea", "name": "Liberty County, Georgia" }
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Liberty County, Georgia"
+        }
       }
     }
   },
@@ -215,5 +261,102 @@
     "photo": "copperas-cove-texas-2026",
     "photo_focus": 0.8,
     "photo_alt": "VA Ready founder and developer Jason (left) and Andrew, marketing and outreach (right), seated at the VA Ready and Vet Ready table at a veterans event in Copperas Cove, Texas"
+  },
+  {
+    "id": "anthony-discovery-flight-2026",
+    "date": "2026-10-23",
+    "when": "October 2026",
+    "headline": "Five for five",
+    "location": "Waycross-Ware County Airport, Waycross, GA",
+    "body": [
+      "Anthony flew out of the Waycross-Ware County Airport with Runway One Nine Aviation in October. First time at the controls of an airplane, and the last of the five discovery flights we sponsored this fall.",
+      "In Anthony's words: “This morning, I had the privilege of flying an aircraft for the first time! That’s one more thing checked off the ole bucket list.”",
+      "That makes five for five. Every seat we sponsored this fall flew.",
+      "Thank you to Tim Scheuing and Runway One Nine Aviation for flying all five with us. I want to keep putting veterans in the air. If you want to fly, or just keep up with what we do next:"
+    ],
+    "teaser": "Anthony took the controls for the first time, the last of our five sponsored discovery flights. Five for five, every seat flew.",
+    "links": [
+      {
+        "url": "https://runwayonenine.com/contact-us/",
+        "label": "Contact Runway One Nine Aviation"
+      },
+      {
+        "url": "https://www.facebook.com/vareadyapp",
+        "label": "Follow VA Ready on Facebook"
+      }
+    ],
+    "photo": "anthony-discovery-flight-2026",
+    "photo_focus": 0.4,
+    "photo_alt": "Anthony, a veteran, at the controls of Piper Cherokee N3480K during a VA Ready sponsored discovery flight, wearing a headset, beanie and sunglasses, with the Georgia landscape below",
+    "sponsored": {
+      "@type": "Event",
+      "name": "VA Ready veteran discovery flight, Waycross",
+      "startDate": "2026-10-23",
+      "description": "The last of five VA Ready sponsored discovery flights for veterans, flown with a certificated flight instructor from Runway One Nine Aviation out of the Waycross-Ware County Airport.",
+      "location": {
+        "@type": "Place",
+        "name": "Waycross-Ware County Airport",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Waycross",
+          "addressRegion": "GA",
+          "addressCountry": "US"
+        }
+      },
+      "organizer": {
+        "@type": "LocalBusiness",
+        "name": "Runway One Nine Aviation",
+        "url": "https://runwayonenine.com/",
+        "sameAs": [
+          "https://www.facebook.com/runwayonenine/"
+        ]
+      }
+    }
+  },
+  {
+    "id": "william-discovery-flight-2026",
+    "date": "2026-10-20",
+    "when": "October 2026",
+    "headline": "Now the family wants a turn",
+    "location": "Waycross-Ware County Airport, Waycross, GA",
+    "body": [
+      "William Tyle flew out of the Waycross-Ware County Airport with Runway One Nine Aviation in October, the fourth of the five discovery flights we sponsored this fall.",
+      "Runway One Nine said it best: “He had a great time and now his wife wants to do it, too! It really is that awesome.”",
+      "That is how this is supposed to work. One veteran flies, and the family wants in."
+    ],
+    "teaser": "William Tyle flew the fourth of our five sponsored discovery flights out of Waycross. Now the family wants a turn.",
+    "links": [
+      {
+        "url": "https://runwayonenine.com/contact-us/",
+        "label": "Contact Runway One Nine Aviation"
+      }
+    ],
+    "photo": "william-discovery-flight-2026",
+    "photo_focus": 0.4,
+    "photo_alt": "William Tyle, a veteran, at the controls of Piper Cherokee N3480K during a VA Ready sponsored discovery flight, wearing a headset, blue mirrored sunglasses and a brown jacket, with the Georgia landscape below",
+    "sponsored": {
+      "@type": "Event",
+      "name": "VA Ready veteran discovery flight, Waycross",
+      "startDate": "2026-10-20",
+      "description": "The fourth of five VA Ready sponsored discovery flights for veterans, flown with a certificated flight instructor from Runway One Nine Aviation out of the Waycross-Ware County Airport.",
+      "location": {
+        "@type": "Place",
+        "name": "Waycross-Ware County Airport",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Waycross",
+          "addressRegion": "GA",
+          "addressCountry": "US"
+        }
+      },
+      "organizer": {
+        "@type": "LocalBusiness",
+        "name": "Runway One Nine Aviation",
+        "url": "https://runwayonenine.com/",
+        "sameAs": [
+          "https://www.facebook.com/runwayonenine/"
+        ]
+      }
+    }
   }
 ]
