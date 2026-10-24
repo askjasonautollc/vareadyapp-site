@@ -14,8 +14,8 @@
     "teaser": "Brent and Gabby, married Air Force veterans, took turns at the controls out of Waycross-Ware County Airport with Runway One Nine Aviation.",
     "links": [
       {
-        "url": "https://runwayonenine.com/contact-us/",
-        "label": "Contact Runway One Nine Aviation"
+        "url": "https://www.facebook.com/runwayonenine",
+        "label": "Message Runway One Nine on Facebook"
       }
     ],
     "photo": "couple-discovery-flight-2026",
@@ -39,10 +39,7 @@
       "organizer": {
         "@type": "LocalBusiness",
         "name": "Runway One Nine Aviation",
-        "url": "https://runwayonenine.com/",
-        "sameAs": [
-          "https://www.facebook.com/runwayonenine/"
-        ]
+        "url": "https://www.facebook.com/runwayonenine"
       }
     }
   },
@@ -133,8 +130,8 @@
     "teaser": "The first of our five sponsored discovery flights. Justin flew out of Waycross-Ware County Airport with Runway One Nine Aviation, left seat, hands on the yoke.",
     "links": [
       {
-        "url": "https://runwayonenine.com/contact-us/",
-        "label": "Contact Runway One Nine Aviation"
+        "url": "https://www.facebook.com/runwayonenine",
+        "label": "Message Runway One Nine on Facebook"
       }
     ],
     "photo": "first-discovery-flight-2026",
@@ -158,10 +155,7 @@
       "organizer": {
         "@type": "LocalBusiness",
         "name": "Runway One Nine Aviation",
-        "url": "https://runwayonenine.com/",
-        "sameAs": [
-          "https://www.facebook.com/runwayonenine/"
-        ]
+        "url": "https://www.facebook.com/runwayonenine"
       }
     }
   },
@@ -179,8 +173,8 @@
     "teaser": "Five free discovery flights for veterans in the Fort Stewart, Waycross and Kings Bay area, with Runway One Nine Aviation. A real aircraft and an instructor, on us.",
     "links": [
       {
-        "url": "https://runwayonenine.com/contact-us/",
-        "label": "Contact Runway One Nine Aviation"
+        "url": "https://www.facebook.com/runwayonenine",
+        "label": "Message Runway One Nine on Facebook"
       }
     ],
     "photo": "veteran-discovery-flights-2026",
@@ -198,10 +192,7 @@
       "member": {
         "@type": "LocalBusiness",
         "name": "Runway One Nine Aviation",
-        "url": "https://runwayonenine.com/",
-        "sameAs": [
-          "https://www.facebook.com/runwayonenine/"
-        ],
+        "url": "https://www.facebook.com/runwayonenine",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Waycross",
@@ -277,8 +268,8 @@
     "teaser": "Anthony took the controls for the first time, the last of our five sponsored discovery flights. Five for five, every seat flew.",
     "links": [
       {
-        "url": "https://runwayonenine.com/contact-us/",
-        "label": "Contact Runway One Nine Aviation"
+        "url": "https://www.facebook.com/runwayonenine",
+        "label": "Message Runway One Nine on Facebook"
       },
       {
         "url": "https://www.facebook.com/vareadyapp",
@@ -306,10 +297,7 @@
       "organizer": {
         "@type": "LocalBusiness",
         "name": "Runway One Nine Aviation",
-        "url": "https://runwayonenine.com/",
-        "sameAs": [
-          "https://www.facebook.com/runwayonenine/"
-        ]
+        "url": "https://www.facebook.com/runwayonenine"
       }
     }
   },
@@ -327,8 +315,8 @@
     "teaser": "William Tyle flew the fourth of our five sponsored discovery flights out of Waycross. Now the family wants a turn.",
     "links": [
       {
-        "url": "https://runwayonenine.com/contact-us/",
-        "label": "Contact Runway One Nine Aviation"
+        "url": "https://www.facebook.com/runwayonenine",
+        "label": "Message Runway One Nine on Facebook"
       }
     ],
     "photo": "william-discovery-flight-2026",
@@ -352,10 +340,7 @@
       "organizer": {
         "@type": "LocalBusiness",
         "name": "Runway One Nine Aviation",
-        "url": "https://runwayonenine.com/",
-        "sameAs": [
-          "https://www.facebook.com/runwayonenine/"
-        ]
+        "url": "https://www.facebook.com/runwayonenine"
       }
     }
   }
