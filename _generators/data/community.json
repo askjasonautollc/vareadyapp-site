@@ -343,5 +343,27 @@
         "url": "https://www.facebook.com/runwayonenine"
       }
     }
+  },
+  {
+    "id": "copperas-cove-trick-or-treat-2026",
+    "date": "2026-10-24",
+    "when": "October 24, 2026",
+    "headline": "Candy for the kids, claim talk for the vets",
+    "location": "Copperas Cove, TX (near Fort Hood)",
+    "body": [
+      "We set up the VA Ready and Vet Ready table at a trick-or-treat event in Copperas Cove, Texas, on October 24. The kids came for the candy. A lot of the parents walking them around turned out to be veterans.",
+      "Between handfuls of candy, we pulled up the app and showed veterans how it works: add your conditions, watch the combined rating update with VA math, and see the claim summary you can hand to your VSO. Most of the conversations ended up on claims. Some had been denied, some were sitting half finished, and some had never been started.",
+      "This was our second trip to Copperas Cove this year. Veterans show up to family events with their kids, so that is where we want to be. Thanks to everyone who stopped by, and to the families who let us be part of their Halloween."
+    ],
+    "teaser": "We handed out candy at a trick-or-treat event in Copperas Cove, Texas, and showed the parents who served how VA Ready works.",
+    "photo": "copperas-cove-trick-or-treat-2026",
+    "photo_focus": 0.2,
+    "photo_alt": "Two VA Ready team members in branded polos handing out candy to two kids in Halloween costumes, a cat and a wizard, at the VA Ready and Vet Ready table during a trick-or-treat event in Copperas Cove, Texas",
+    "links": [
+      {
+        "url": "https://www.facebook.com/vareadyapp",
+        "label": "Follow VA Ready on Facebook"
+      }
+    ]
   }
 ]
