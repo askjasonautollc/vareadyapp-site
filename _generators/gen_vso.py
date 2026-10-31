@@ -217,7 +217,7 @@ def hub():
     # Hub count is the vso_offices table size (Supabase is the source of truth).
     total=len(OFFICES)
     picks="".join(f'<a href="/vso/{slug(STATES[sc])}.html">{esc(STATES[sc])} <span>{len(by[sc])}</span></a>' for sc in sorted(states_out, key=lambda s:STATES[s]))
-    desc=f"Looking for a VSO near me? Search {total:,} Veterans Service Officer offices across {len(states_out)} states and territories. They file your claim at no cost."
+    desc=f"Tap Near me to see the closest of {total:,} free, VA-accredited VSO offices, with phone numbers and directions. A VSO files your VA claim at no cost."
     desc=desc[:160]
     bc={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://vareadyapp.com/"},{"@type":"ListItem","position":2,"name":"Find a VSO","item":canon}]}
     # ItemList of the state pages. Legitimate: these are our own pages and this
@@ -261,7 +261,10 @@ def hub():
 <div class="wrap">
     <div class="crumb"><a href="/index.html">Home</a> / Find a VSO</div>
     <h1>Find a free, accredited VSO near me</h1>
-    <p class="lede">A Veterans Service Officer is a VA-accredited representative who prepares and files your disability claim for free, including your first one. We list {total:,} offices across {len(states_out)} states and territories. Pick your state to see offices, phone numbers and directions.</p>
+    <p class="lede">A Veterans Service Officer is a VA-accredited representative who prepares and files your disability claim for free, including your first one. We list {total:,} offices across {len(states_out)} states and territories. Tap the button for the closest offices, or pick your state for the full list with phone numbers and directions.</p>
+    <div class="vso-tools"><button id="vsoNear" type="button">Show offices near me</button><span class="vso-meta" id="vsoNearMsg"></span></div>
+    <ul id="vsoList" hidden></ul>
+    <script src="/vso/near.js" defer></script>
 
     <p class="trustline">New to VSOs? Read <a href="/guides/veterans-service-officers-vsos.html">what a VSO is, what they do, and how to avoid claim sharks &rarr;</a></p>
     <h2 class="vso-hub-h">Choose your state</h2>
