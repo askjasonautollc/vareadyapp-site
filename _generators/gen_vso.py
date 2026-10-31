@@ -242,7 +242,7 @@ def hub():
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Find a VSO near me: {total:,} offices | VA Ready</title>
+<title>VSO near me: find a free, accredited VSO ({total:,} offices) | VA Ready</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0a0f1a">
 <link rel="canonical" href="{canon}">
