@@ -14,6 +14,8 @@
     if (el.closest('.cta-pro')) return 'cta-pro';
     if (el.closest('.cta'))     return 'cta';
     if (el.closest('.hero'))    return 'hero';
+    if (el.closest('.result'))  return 'calc-result';
+    if (el.closest('.inapp'))   return 'calc-inapp';
     return 'body';
   }
   document.addEventListener('click', function (e) {

@@ -260,6 +260,22 @@
         footer p { font-size: 13px; }
         .disclaimer { font-size: 13px; }
         .tw, .scroller { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+        /* In-app showcase: the app's calculator, shown right under the web one */
+        .inapp { padding: 8px 0 18px; }
+        .inapp > p { color: var(--tan); font-size: 15.5px; margin-bottom: 12px; }
+        .inapp-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 18px 0 16px; }
+        .inapp-grid figure { margin: 0; }
+        .inapp-grid img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 18px; }
+        .inapp-grid figcaption { padding: 10px 2px 0; font-size: 14px; line-height: 1.6; color: var(--tan); }
+        .inapp-grid figcaption strong { color: var(--white); display: block; }
+        .inapp .btns { justify-content: flex-start; margin-top: 14px; }
+        .inapp .fine { font-size: 14px; color: var(--gray); margin-top: 12px; }
+        .result-cta { text-align: left; display: flex; gap: 14px; align-items: center; }
+        .result-cta img { width: 72px; height: auto; flex: none; border: 1px solid var(--line); border-radius: 10px; }
+        .result-cta p { margin-bottom: 8px; }
+        .result-cta .btns { justify-content: flex-start; }
+        @media (max-width: 560px) { .inapp-grid { gap: 12px; } .inapp-grid figcaption { font-size: 13px; } .result-cta img { width: 60px; } }
     
         /* Header matches index.html and the generated pages */
         nav { max-width: 1168px; padding: 16px 24px; }
@@ -296,6 +312,7 @@
     <header class="hero">
         <h1>VA disability calculator</h1>
         <p class="lede">The VA combines your ratings instead of adding them. Enter your ratings to see your combined percentage, the bilateral factor and your 2026 monthly pay with dependents. Free, no login. The 38 CFR criteria behind each rating level are further down the page.</p>
+        <p class="lede" style="margin-top:10px;"><a href="#in-app">See the same calculator in the app &darr;</a></p>
     </header>
 
     <div class="wrap">
@@ -312,6 +329,33 @@
 
             <div class="result" id="result"></div>
         </div>
+
+        <section class="inapp" id="in-app">
+            <h2 class="sec">Here is how it looks in the app</h2>
+            <p>This page runs the math on numbers you type in. In VA Ready, the calculator runs on your claim: each condition by name, the combine steps the VA uses, and your pay with the dependents from your profile.</p>
+            <div class="inapp-grid">
+                <figure>
+                    <picture><source srcset="img/v3-rating.webp" type="image/webp"><img src="img/v3-rating.jpg" alt="VA Ready My Claim screen on iPhone showing a 90% projected combined VA disability rating, an estimated $2,802.30 a month, the five ratings entered by name, and how the VA combines them" width="600" height="1304" loading="lazy" decoding="async"></picture>
+                    <figcaption><strong>My Claim</strong>Your rating and monthly pay at the top, every condition by name, and each 38 CFR 4.25 step below.</figcaption>
+                </figure>
+                <figure>
+                    <picture><source srcset="img/v3-what-if.webp" type="image/webp"><img src="img/v3-what-if.jpg" alt="VA Ready What-if screen on iPhone: setting a pending hearing loss claim to 40 percent moves the combined rating from 90 to 100 percent and the estimated pay from $2,802.30 to $4,428.10 a month, with possible claims from the veteran's profile listed below" width="600" height="1304" loading="lazy" decoding="async"></picture>
+                    <figcaption><strong>What-if</strong>Pick a percentage for a pending claim and see your new rating and pay next to what you get now.</figcaption>
+                </figure>
+            </div>
+            <ul class="lift">
+                <li>Pick conditions by name from the 765 in the rating schedule. The app applies the bilateral factor to paired limbs for you.</li>
+                <li>See TDIU pay next to your schedular rate.</li>
+                <li>See possible claims from your bases, your job and the conditions you already have.</li>
+            </ul>
+            <p>Download VA Ready free. The calculator and What-if are free. Pro adds the 38 CFR criteria behind each rating level, every possible-claim suggestion and the PDF exports.</p>
+            <div class="btns">
+                <a href="https://apps.apple.com/app/id6761733758" class="btn">Download for iPhone</a>
+                <a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn">Download for Android</a>
+                <a href="https://apps.microsoft.com/detail/9p8xfcqvfjhf" class="btn ghost">Windows</a>
+            </div>
+            <p class="fine">Also on iPad and Mac. On Android the app is called Vet Ready.</p>
+        </section>
 
         <section class="content">
             <h2 class="sec">The 38 CFR criteria behind each rating</h2>
@@ -382,7 +426,6 @@
 
             <h2 class="sec" id="get-app">Get the app</h2>
             <p>This page combines ratings you already have. The app covers the rest:</p>
-            <div class="appshot"><picture><source srcset="img/v3-rating.webp" type="image/webp"><img src="img/v3-rating.jpg" alt="VA Ready My Claim screen on iPhone showing a 90% projected combined VA disability rating, an estimated $2,802.30 a month, the five ratings entered, and how the VA combines them" width="600" height="1304" loading="lazy" decoding="async"></picture></div>
             <ul class="lift">
                 <li>Rate each condition against the 38 CFR criteria for 765 conditions</li>
                 <li>Match your bases and your job to presumptive conditions: PACT Act, Camp Lejeune, Agent Orange, AFFF</li>
@@ -564,7 +607,14 @@
                 '<div class="pay">' + money(pay) + '<span style="font-size:14px;color:var(--gray);font-weight:600;">/mo</span></div>' +
                 flatNote +
                 '<div class="result-cta">' +
-                    '<p>This is the math on ratings you already have. The app rates each condition against the 38 CFR criteria and matches your service to presumptive conditions. <a href="#get-app">Get the app</a></p>' +
+                    '<a href="#in-app"><img src="img/v3-rating.jpg" alt="VA Ready My Claim screen" width="600" height="1304"></a>' +
+                    '<div>' +
+                        '<p>See this rating on your own claim, with each condition by name and a What-if for pending claims. <a href="#in-app">Here is how it looks</a></p>' +
+                        '<div class="btns">' +
+                            '<a href="https://apps.apple.com/app/id6761733758" class="btn">Download for iPhone</a>' +
+                            '<a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn">Download for Android</a>' +
+                        '</div>' +
+                    '</div>' +
                 '</div>';
         }
 
