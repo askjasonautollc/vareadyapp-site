@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Returning to VA Ready</title>
+<style>
+  :root { --bg: #0a0f1a; --text: #f2f4f8; --muted: #a3acbd; --gold: #d9a621; }
+  body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 24px; }
+  main { max-width: 420px; text-align: center; }
+  h1 { font-size: 22px; margin: 0 0 10px; }
+  p { color: var(--muted); font-size: 16px; line-height: 1.6; margin: 0 0 16px; }
+  a { color: var(--gold); font-weight: 700; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Returning to VA Ready</h1>
+  <p>VA.gov sent you back here after you signed in. The app should open by itself.</p>
+  <p id="manual" hidden><a id="open" href="#">Open VA Ready</a></p>
+</main>
+<script>
+  // VA.gov redirects here after sign-in. Hand the sign-in code to the app, which holds
+  // the PKCE verifier needed to use it. Nothing on this page stores or sends the code.
+  (function () {
+    var target = 'vareadyconnect://oauth/callback' + location.search;
+    var link = document.getElementById('open');
+    link.href = target;
+    if (history.replaceState) { history.replaceState(null, '', location.pathname); }
+    location.replace(target);
+    setTimeout(function () { document.getElementById('manual').hidden = false; }, 1500);
+  })();
+</script>
+</body>
+</html>
