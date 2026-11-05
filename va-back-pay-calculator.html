@@ -365,10 +365,11 @@
                 <li>Presumptive conditions matched to your duty stations: PACT Act, Camp Lejeune, Agent Orange, AFFF, K2</li>
                 <li>A free directory of VA-accredited VSOs, searchable by ZIP and sortable by distance</li>
             </ul>
-            <p>Free on iPhone and Android. No account, no login, and your claim stays on your phone.</p>
+            <p>Free on iPhone, Android and Windows PC. No account, no login, and your claim stays on your device.</p>
             <div class="btns">
                 <a href="https://apps.apple.com/app/id6761733758" class="btn">Get VA Ready for iOS</a>
                 <a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn">Get Vet Ready for Android</a>
+                <a href="https://apps.microsoft.com/detail/9p8xfcqvfjhf" class="btn" data-pc>Download for Windows</a>
                 <a href="va-disability-calculator.html" class="btn ghost">Combined rating calculator</a>
             </div>
 
@@ -598,5 +599,16 @@
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/track.js"></script>
+<script>
+/* Windows desktop visitors see the Microsoft Store button first. */
+function pcFirst(root) {
+    if (!/Windows NT/.test(navigator.userAgent)) return;
+    (root || document).querySelectorAll('a[data-pc]').forEach(function (a) {
+        a.textContent = 'Get it free for your Windows PC';
+        a.parentNode.insertBefore(a, a.parentNode.firstChild);
+    });
+}
+document.addEventListener('DOMContentLoaded', function () { pcFirst(); });
+</script>
 </body>
 </html>

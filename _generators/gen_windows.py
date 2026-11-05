@@ -25,7 +25,7 @@ extra = """<style>
     .btns .btn svg { width:20px; height:20px; vertical-align:-4px; margin-right:8px; }
 </style>"""
 
-title = "VA Ready for Windows: VA disability calculator and claim organizer for PC"
+title = "VA Disability Calculator for Windows PC, Free"
 desc = ("VA Ready for Windows is a free VA disability calculator and claim organizer for Windows 10 and 11. "
         "Real VA rating math, a Claim File, C&P exam prep and VSO search. On the Microsoft Store.")
 

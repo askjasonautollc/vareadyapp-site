@@ -20,6 +20,11 @@ from anywhere after a clone — no hardcoded `/tmp` or absolute paths.
 | `gen_windows.py` | `../va-disability-app-for-windows.html` (Microsoft Store landing page, 9P8XFCQVFJHF) | none (uses `../img/windows-*.jpg`) |
 | `gen_community.py` | `../community.html` (In the Community) | none (uses `../img/community-liberty-county-jumbotron-*`) |
 
+## IndexNow (Bing)
+
+After a push is live, run `python3 indexnow.py` to ask Bing to recrawl every sitemap URL
+(or pass paths to submit only changed pages). The key file in the site root must stay.
+
 ## How to run
 
 ```bash
