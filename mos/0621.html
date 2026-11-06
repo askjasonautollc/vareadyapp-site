@@ -115,6 +115,20 @@
     table.rt th, table.rt td { text-align:left; padding:11px 12px; border-bottom:1px solid var(--line); font-size:15px; vertical-align:top; color:var(--tan); }
     table.rt th { color:var(--gray); font-size:13px; font-weight:600; }
     table.rt td.pct { color:var(--white); font-weight:700; width:74px; font-variant-numeric:tabular-nums; }
+    .inapp { margin:22px 0 8px; }
+    .inapp h2 { font-size:22px; font-weight:800; margin:0 0 6px; line-height:1.3; }
+    .inapp .sub { color:var(--tan); font-size:15px; margin:0 0 16px; max-width:68ch; }
+    .inapp .shots { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; align-items:start; }
+    .inapp figure { margin:0; }
+    .inapp .phone { background:#05070d; padding:7px; border-radius:32px; border:1px solid rgba(255,255,255,0.08); }
+    .inapp .phone img { display:block; width:100%; height:auto; border-radius:26px; }
+    .inapp figcaption { margin-top:10px; font-size:14.5px; color:var(--tan); line-height:1.45; }
+    .inapp figcaption b { display:block; color:var(--white); font-size:15px; margin-bottom:2px; }
+    .inapp .fine { color:var(--gray); font-size:13px; margin:14px 0 0; max-width:68ch; }
+    @media (max-width:720px) {
+      .inapp .shots { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; gap:14px; padding-bottom:8px; margin:0 -16px; padding-left:16px; padding-right:16px; }
+      .inapp figure { flex:0 0 68%; max-width:280px; scroll-snap-align:start; }
+    }
     .wrap > p:not(.lede):not(.note):not(.trustline) { color:var(--tan); margin:0 0 14px; max-width:68ch; }
 </style>
 </head>
@@ -129,6 +143,19 @@
     <div class="crumb"><a href="/index.html">Home</a> / <a href="/mos.html">VA disability by MOS</a> / 0621</div>
     <h1>VA disability for 0621 Field Radio Operator</h1>
     <p class="lede">Marine Corps MOS. The job usually meant hazardous noise, combat and traumatic stress, heavy loads and impact, and <a href="/exposures/burn-pits-pact-act.html">burn pits and airborne hazards</a>.</p>
+    <section class="inapp" aria-labelledby="inapp-h">
+        <h2 id="inapp-h">See it in the app</h2>
+        <p class="sub">VA Ready lays this out for your own service record. These screens show a Pro account with a sample Army 11B profile.</p>
+        <div class="shots">
+            <figure><div class="phone"><picture><source srcset="/img/v3-claim-intel-conditions.webp" type="image/webp"><img src="/img/v3-claim-intel-conditions.jpg" alt="VA Ready Claim Intel screen listing 15 common conditions for an Army 11B Infantryman, ranked by prevalence, with check marks on conditions already on the claim and plus buttons to add the rest." width="600" height="1304" fetchpriority="high" decoding="async"></picture></div>
+            <figcaption><b>Claim Intel</b>Conditions common for a job code, ranked by prevalence. Tap one to add it to your claim.</figcaption></figure>
+            <figure><div class="phone"><picture><source srcset="/img/v3-what-if.webp" type="image/webp"><img src="/img/v3-what-if.jpg" alt="VA Ready What-If screen showing a sample 90 percent rating with a 40 percent secondary hearing loss condition added, and possible claims from the profile listed below." width="600" height="1304" loading="lazy" decoding="async"></picture></div>
+            <figcaption><b>What-If</b>Test a possible claim against a sample rating before you decide what to pursue.</figcaption></figure>
+            <figure><div class="phone"><picture><source srcset="/img/v3-conditions.webp" type="image/webp"><img src="/img/v3-conditions.jpg" alt="VA Ready My Claim screen listing a sample veteran's new conditions to claim with a rating and an evidence count on each." width="600" height="1304" loading="lazy" decoding="async"></picture></div>
+            <figcaption><b>My Claim</b>Each condition with its evidence count, kept on your device.</figcaption></figure>
+        </div>
+        <p class="fine">Sample profile for illustration. Not a rating, a result or a VA decision.</p>
+    </section>
     <article>
         <h2>Conditions veterans in this job claim</h2>
         <ul class="clist"><li><span class="cn">Lumbosacral/cervical strain</span><span class="dc">DC 5237</span><span class="ctag">Frequently claimed</span><p>Carrying PRC-117/152 radios plus combat load (80+ lbs total)</p></li><li><span class="cn">Knee, limitation of flexion</span><span class="dc">DC 5260</span><span class="ctag">Frequently claimed</span><p>Heavy loads during dismounted operations</p></li><li><span class="cn">Tinnitus</span><span class="dc">DC 6260</span><span class="ctag">Also commonly claimed</span><p>Attached to infantry units, weapons fire</p></li><li><span class="cn">PTSD</span><span class="dc">DC 9411</span><span class="ctag">Also commonly claimed</span><p>Attached to combat units, high-value target as RTO</p></li><li><span class="cn">Shoulder, limitation of motion</span><span class="dc">DC 5201</span><span class="ctag">Also commonly claimed</span><p>Radio equipment on shoulders for extended periods</p></li><li><span class="cn">Hearing loss</span><span class="dc">DC 6100</span><span class="ctag">Also commonly claimed</span><p>Cumulative noise exposure across weapons qual, training, and deployments</p></li><li><span class="cn">Ankle, limited motion</span><span class="dc">DC 5271</span><span class="ctag">Also commonly claimed</span><p>Uneven terrain, ruck marches, and obstacle-course training throughout service</p></li><li><span class="cn">Foot injuries, other</span><span class="dc">DC 5284</span><span class="ctag">Also commonly claimed</span><p>Boots, marching, long days on feet, cumulative across any military role</p></li></ul>

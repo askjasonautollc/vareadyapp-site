@@ -124,10 +124,37 @@ CSS += """
     table.rt th, table.rt td { text-align:left; padding:11px 12px; border-bottom:1px solid var(--line); font-size:15px; vertical-align:top; color:var(--tan); }
     table.rt th { color:var(--gray); font-size:13px; font-weight:600; }
     table.rt td.pct { color:var(--white); font-weight:700; width:74px; font-variant-numeric:tabular-nums; }
+    .inapp { margin:22px 0 8px; }
+    .inapp h2 { font-size:22px; font-weight:800; margin:0 0 6px; line-height:1.3; }
+    .inapp .sub { color:var(--tan); font-size:15px; margin:0 0 16px; max-width:68ch; }
+    .inapp .shots { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; align-items:start; }
+    .inapp figure { margin:0; }
+    .inapp .phone { background:#05070d; padding:7px; border-radius:32px; border:1px solid rgba(255,255,255,0.08); }
+    .inapp .phone img { display:block; width:100%; height:auto; border-radius:26px; }
+    .inapp figcaption { margin-top:10px; font-size:14.5px; color:var(--tan); line-height:1.45; }
+    .inapp figcaption b { display:block; color:var(--white); font-size:15px; margin-bottom:2px; }
+    .inapp .fine { color:var(--gray); font-size:13px; margin:14px 0 0; max-width:68ch; }
+    @media (max-width:720px) {
+      .inapp .shots { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; gap:14px; padding-bottom:8px; margin:0 -16px; padding-left:16px; padding-right:16px; }
+      .inapp figure { flex:0 0 68%; max-width:280px; scroll-snap-align:start; }
+    }
     .wrap > p:not(.lede):not(.note):not(.trustline) { color:var(--tan); margin:0 0 14px; max-width:68ch; }
 """
 
 APP_CTA = """<div class="cta cta-line"><p>Claim Intel in <a href="https://apps.apple.com/app/id6761733758">VA Ready for iOS</a>, <a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US">Vet Ready for Android</a> and <a href="https://apps.microsoft.com/detail/9p8xfcqvfjhf">VA Ready for Windows</a> is a Pro feature that merges the conditions from every job you held and cross-references your exposures; the combined-rating calculator is free.</p></div>"""
+INAPP = """<section class="inapp" aria-labelledby="inapp-h">
+        <h2 id="inapp-h">See it in the app</h2>
+        <p class="sub">VA Ready lays this out for your own service record. These screens show a Pro account with a sample Army 11B profile.</p>
+        <div class="shots">
+            <figure><div class="phone"><picture><source srcset="/img/v3-claim-intel-conditions.webp" type="image/webp"><img src="/img/v3-claim-intel-conditions.jpg" alt="VA Ready Claim Intel screen listing 15 common conditions for an Army 11B Infantryman, ranked by prevalence, with check marks on conditions already on the claim and plus buttons to add the rest." width="600" height="1304" fetchpriority="high" decoding="async"></picture></div>
+            <figcaption><b>Claim Intel</b>Conditions common for a job code, ranked by prevalence. Tap one to add it to your claim.</figcaption></figure>
+            <figure><div class="phone"><picture><source srcset="/img/v3-what-if.webp" type="image/webp"><img src="/img/v3-what-if.jpg" alt="VA Ready What-If screen showing a sample 90 percent rating with a 40 percent secondary hearing loss condition added, and possible claims from the profile listed below." width="600" height="1304" loading="lazy" decoding="async"></picture></div>
+            <figcaption><b>What-If</b>Test a possible claim against a sample rating before you decide what to pursue.</figcaption></figure>
+            <figure><div class="phone"><picture><source srcset="/img/v3-conditions.webp" type="image/webp"><img src="/img/v3-conditions.jpg" alt="VA Ready My Claim screen listing a sample veteran's new conditions to claim with a rating and an evidence count on each." width="600" height="1304" loading="lazy" decoding="async"></picture></div>
+            <figcaption><b>My Claim</b>Each condition with its evidence count, kept on your device.</figcaption></figure>
+        </div>
+        <p class="fine">Sample profile for illustration. Not a rating, a result or a VA decision.</p>
+    </section>"""
 DISCLAIMER = """<div class="disclaimer">This page is for general informational purposes only and is not legal or medical advice. It describes what a job typically involved, not what any one veteran experienced, and the VA does not keep a list of conditions by MOS, AFSC, or rating. The VA decides service connection and ratings from your own records, evidence, and exam. VA Ready is not affiliated with the U.S. Department of Veterans Affairs. For free help filing, work with a <a href="/find-a-vso.html">VA-accredited VSO</a>.</div>"""
 
 ORG_ID = "https://vareadyapp.com/#organization"
@@ -259,6 +286,7 @@ def page(r):
     <div class="crumb"><a href="/index.html">Home</a> / <a href="/mos.html">VA disability by MOS</a> / {esc(code)}</div>
     <h1>VA disability for {esc(label)}</h1>
     <p class="lede">{intro_html}</p>
+    {INAPP}
     <article>
         <h2>Conditions veterans in this job claim</h2>
         <ul class="clist">{c_html}</ul>
