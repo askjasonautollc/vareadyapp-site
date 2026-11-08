@@ -330,6 +330,26 @@
         /* Tier tags, facts, framed tablet shots */
         .tier { font-size: 14px; font-weight: 600; color: var(--t3); white-space: nowrap; margin-left: 0; }
         .hero-facts { font-size: 15px; margin-bottom: 22px; }
+        /* Hero proof row and try-it box (2026-11-08) */
+        .hero-for { font-size: 15px; color: var(--t2); margin: 0 0 14px; max-width: 60ch; }
+        .tryit-share { margin: 6px 0 10px; font-size: 14px; }
+        .tryit-share .btn { padding: 8px 14px; font-size: 14px; min-height: 40px; }
+        .founder-strip { padding: 36px 0; }
+        .founder-strip h2 { font-size: 22px; margin-bottom: 10px; }
+        .founder-strip .lede { max-width: 70ch; margin: 0; }
+
+        .proof { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0 0 22px; padding: 0; font-size: 15px; color: var(--t2); }
+        .proof strong { color: var(--t1); font-weight: 700; }
+        .tryit { background: var(--s1); border: 1px solid var(--sep); border-radius: 14px; padding: 16px 18px; margin: 4px 0 20px; max-width: 520px; }
+        .tryit h2 { font-size: 17px; margin: 0 0 10px; }
+        .tryit-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+        .tryit-row label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--t2); }
+        .tryit-row select { font: inherit; font-size: 16px; padding: 8px 6px; border-radius: 8px; border: 1px solid var(--sep); background: var(--bg, #fff); color: var(--t1); min-height: 44px; }
+        .tryit-out { font-size: 15px; color: var(--t2); margin: 12px 0 6px; }
+        .tryit-out.has { font-size: 22px; font-weight: 700; color: var(--t1); }
+        .tryit-fine { font-size: 13px; color: var(--t2); margin: 0; }
+        @media (max-width: 520px) { .tryit-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
         .facts { list-style: none; margin-top: 18px; }
         .facts li { padding: 10px 0; border-top: 1px solid var(--sep); color: var(--t2); font-size: 16px; }
         .facts b { color: var(--t1); font-weight: 650; font-variant-numeric: tabular-nums; margin-right: 4px; }
@@ -471,31 +491,15 @@
         </div>
     </nav>
 
-    <!-- VATICKER:START --><style>
-.va-ticker{display:flex;align-items:stretch;background:#0e1626;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);overflow:hidden;font-size:13px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
-.va-ticker__label{flex:0 0 auto;display:flex;align-items:center;gap:7px;background:#d9a621;color:#1a1205;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:9px 14px;font-size:11px;white-space:nowrap;text-decoration:none;z-index:2}
-.va-ticker__label .dot{width:7px;height:7px;border-radius:50%;background:#1a1205;animation:vablink 1.6s ease-in-out infinite}
-@keyframes vablink{0%,100%{opacity:1}50%{opacity:.25}}
-.va-ticker__win{flex:1;overflow:hidden;position:relative}
-.va-ticker__track{display:inline-flex;white-space:nowrap;align-items:center;animation:vascroll 80s linear infinite;will-change:transform}
-.va-ticker__win:hover .va-ticker__track{animation-play-state:paused}
-@keyframes vascroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.va-ticker__item{display:inline-flex;align-items:center;gap:8px;color:#c8bda5;text-decoration:none;padding:9px 0;margin:0 20px}
-.va-ticker__item:hover{color:#fff}
-.va-ticker__item .tb{font-size:9px;font-weight:900;letter-spacing:.5px;text-transform:uppercase;padding:2px 7px;border-radius:4px;flex:0 0 auto}
-.va-ticker__item .tb.p{background:rgba(217,166,33,.9);color:#1a1205}
-.va-ticker__item .tb.f{background:rgba(52,168,83,.9);color:#06210f}
-@media (max-width:700px){.va-ticker__label span.txt{display:none}}
-@media (prefers-reduced-motion:reduce){.va-ticker__track{animation:none}}
-</style><div class="va-ticker" aria-label="Latest VA rule and policy updates"><a class="va-ticker__label" href="/va-updates.html"><span class="dot"></span><span class="txt">VA Updates</span></a><div class="va-ticker__win"><div class="va-ticker__track"><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Nondiscrimination in Federally-Assisted Programs of the Department of…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Rescission of Interim Final Rule, Evaluative Rating: Impact of Medication</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Evaluative Rating: Impact of Medication</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Clarification of VA&#x27;s Processing of Survivors Benefits Claims</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Eliminating the Requirement for Laparoscopy To Establish Service…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Objective Evidence of Pain for Painful Scars Under DC 7804</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Presumptive Service Connection for Leukemias, Multiple Myelomas,…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Presumptive Service Connection for Bladder, Ureter, and Related…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Amendments to the Program of Comprehensive Assistance for Family Caregivers</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Changes in Rates VA Pays for Special Modes of Transportation; Delay of…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Nondiscrimination in Federally-Assisted Programs of the Department of…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Rescission of Interim Final Rule, Evaluative Rating: Impact of Medication</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Evaluative Rating: Impact of Medication</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Clarification of VA&#x27;s Processing of Survivors Benefits Claims</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Eliminating the Requirement for Laparoscopy To Establish Service…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Objective Evidence of Pain for Painful Scars Under DC 7804</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Presumptive Service Connection for Leukemias, Multiple Myelomas,…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Presumptive Service Connection for Bladder, Ureter, and Related…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Amendments to the Program of Comprehensive Assistance for Family Caregivers</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Changes in Rates VA Pays for Special Modes of Transportation; Delay of…</a></div></div></div><!-- VATICKER:END -->
 
     <main>
     <!-- HERO -->
     <section class="hero" id="download">
         <div class="wrap hero-grid">
             <div>
-                <h1>VA Ready calculates your VA disability rating and keeps your claim organized until you file.</h1>
-                <p class="lede">Calculate your combined VA rating, see the 38 CFR criteria behind each condition with Pro, find the conditions and benefits that apply to you, and keep your evidence in order until you file.</p>
+                <h1>Know your combined VA rating before you file.</h1>
+                <p class="lede">VA Ready estimates your combined VA disability rating, shows the 38 CFR criteria behind each condition with Pro, and keeps your evidence organized until you file.</p>
+                <ul class="proof" aria-label="Ratings and downloads"><li><strong>4.8</strong> on the App Store, 750+ ratings</li><li><strong>4.6</strong> on Google Play</li><li><strong>40,000+</strong> downloads</li></ul>
                 <div class="btn-row">
                     <a href="https://apps.apple.com/app/id6761733758" class="btn btn-gold">
                         <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -510,9 +514,22 @@
                         VA Ready on Microsoft Store
                     </a>
                 </div>
-                <p class="hero-web">On a PC? <a href="va-disability-app-for-windows.html">VA Ready for Windows</a> is on the Microsoft Store, or <a href="va-disability-calculator.html">use the free rating calculator in your browser</a>.</p>
+                <form class="tryit" id="tryit" aria-labelledby="tryit-h" onsubmit="return false">
+                    <h2 id="tryit-h">Try it now: your combined rating</h2>
+                    <div class="tryit-row">
+                        <label>Rating 1<select aria-label="Rating 1"><option value="">None</option><option value="10">10%</option><option value="20">20%</option><option value="30">30%</option><option value="40">40%</option><option value="50">50%</option><option value="60">60%</option><option value="70">70%</option><option value="80">80%</option><option value="90">90%</option><option value="100">100%</option></select></label>
+                        <label>Rating 2<select aria-label="Rating 2"><option value="">None</option><option value="10">10%</option><option value="20">20%</option><option value="30">30%</option><option value="40">40%</option><option value="50">50%</option><option value="60">60%</option><option value="70">70%</option><option value="80">80%</option><option value="90">90%</option><option value="100">100%</option></select></label>
+                        <label>Rating 3<select aria-label="Rating 3"><option value="">None</option><option value="10">10%</option><option value="20">20%</option><option value="30">30%</option><option value="40">40%</option><option value="50">50%</option><option value="60">60%</option><option value="70">70%</option><option value="80">80%</option><option value="90">90%</option><option value="100">100%</option></select></label>
+                        <label>Rating 4<select aria-label="Rating 4"><option value="">None</option><option value="10">10%</option><option value="20">20%</option><option value="30">30%</option><option value="40">40%</option><option value="50">50%</option><option value="60">60%</option><option value="70">70%</option><option value="80">80%</option><option value="90">90%</option><option value="100">100%</option></select></label>
+                    </div>
+                    <p class="tryit-out" id="tryit-out" aria-live="polite">Pick the ratings the VA gave you, or one you are considering.</p>
+                    <p class="tryit-share"><button type="button" id="tryit-share" class="btn btn-quiet">Send this calculator to a buddy</button> <span id="tryit-shared" aria-live="polite"></span></p>
+                    <p class="tryit-fine">Combined the way 38 CFR 4.25 does it. The bilateral factor is not included. An estimate, not a decision. <a href="va-disability-calculator.html">Open the full free calculator</a></p>
+                </form>
+                <p class="hero-web">On a PC? <a href="va-disability-app-for-windows.html">VA Ready for Windows</a> is on the Microsoft Store.</p>
                 <p class="hero-web">2027 VA pay rates after the 3.6% COLA: <a href="va-disability-pay-rates-2027.html">see the estimated tables</a>.</p>
-                <p class="hero-facts">40,000+ downloads. Your data stays on your device.</p>
+                <p class="hero-for">For every branch and component: Army, Navy, Air Force, Marine Corps, Coast Guard, Space Force, Guard and Reserve. <a href="mos.html">Start with your job code</a></p>
+                <p class="hero-facts">Your data stays on your device.</p>
                 <div class="hero-names">
                     <span class="icons">
                         <img src="logo.png" alt="VA Ready app icon on iOS App Store" width="40" height="40">
@@ -528,6 +545,14 @@
     </section>
 
     <!-- CALCULATOR -->
+    <!-- FOUNDER -->
+    <section class="sec founder-strip" aria-labelledby="fs-h">
+        <div class="wrap">
+            <h2 id="fs-h">Built by a retired Army Chief who filed his own claim</h2>
+            <p class="lede">&ldquo;I had to build my own checklists, dig through an overwhelming pile of scattered information, and figure out most of the steps on my own.&rdquo; Jason, retired Army Chief Warrant Officer, built the tool he wished someone had handed him. <a href="founders.html">Read the story</a></p>
+        </div>
+    </section>
+
     <section class="sec" id="calculator">
         <div class="wrap">
             <h2>See the 38 CFR criteria behind each rating</h2>
@@ -680,6 +705,7 @@
         <div class="wrap">
             <h2>Filing</h2>
             <p class="lede">Based on your separation date, the app tells you where you are in the VA process and what to do next. You still upload on VA.gov yourself, or a free accredited VSO files for you.</p>
+            <p class="fine">Missing your service treatment records? <a href="blog/service-treatment-records.html">Here is where to request them.</a></p>
             <table class="tbl two">
                 <tbody>
                     <tr><th scope="row">Start here</th><td>Eight steps in the order most first claims go, from a free accredited VSO and an Intent to File to the C&amp;P exam. Steps tick themselves off as you do them.</td></tr>
@@ -859,6 +885,25 @@
     </section>
 
     <!-- CTA -->
+    <!-- VA rule updates: below the fold so the first screen is the app -->
+    <!-- VATICKER:START --><style>
+.va-ticker{display:flex;align-items:stretch;background:#0e1626;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);overflow:hidden;font-size:13px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.va-ticker__label{flex:0 0 auto;display:flex;align-items:center;gap:7px;background:#d9a621;color:#1a1205;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:9px 14px;font-size:11px;white-space:nowrap;text-decoration:none;z-index:2}
+.va-ticker__label .dot{width:7px;height:7px;border-radius:50%;background:#1a1205;animation:vablink 1.6s ease-in-out infinite}
+@keyframes vablink{0%,100%{opacity:1}50%{opacity:.25}}
+.va-ticker__win{flex:1;overflow:hidden;position:relative}
+.va-ticker__track{display:inline-flex;white-space:nowrap;align-items:center;animation:vascroll 80s linear infinite;will-change:transform}
+.va-ticker__win:hover .va-ticker__track{animation-play-state:paused}
+@keyframes vascroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.va-ticker__item{display:inline-flex;align-items:center;gap:8px;color:#c8bda5;text-decoration:none;padding:9px 0;margin:0 20px}
+.va-ticker__item:hover{color:#fff}
+.va-ticker__item .tb{font-size:9px;font-weight:900;letter-spacing:.5px;text-transform:uppercase;padding:2px 7px;border-radius:4px;flex:0 0 auto}
+.va-ticker__item .tb.p{background:rgba(217,166,33,.9);color:#1a1205}
+.va-ticker__item .tb.f{background:rgba(52,168,83,.9);color:#06210f}
+@media (max-width:700px){.va-ticker__label span.txt{display:none}}
+@media (prefers-reduced-motion:reduce){.va-ticker__track{animation:none}}
+</style><div class="va-ticker" aria-label="Latest VA rule and policy updates"><a class="va-ticker__label" href="/va-updates.html"><span class="dot"></span><span class="txt">VA Updates</span></a><div class="va-ticker__win"><div class="va-ticker__track"><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Nondiscrimination in Federally-Assisted Programs of the Department of…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Rescission of Interim Final Rule, Evaluative Rating: Impact of Medication</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Evaluative Rating: Impact of Medication</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Clarification of VA&#x27;s Processing of Survivors Benefits Claims</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Eliminating the Requirement for Laparoscopy To Establish Service…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Objective Evidence of Pain for Painful Scars Under DC 7804</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Presumptive Service Connection for Leukemias, Multiple Myelomas,…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Presumptive Service Connection for Bladder, Ureter, and Related…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Amendments to the Program of Comprehensive Assistance for Family Caregivers</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Changes in Rates VA Pays for Special Modes of Transportation; Delay of…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Nondiscrimination in Federally-Assisted Programs of the Department of…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Rescission of Interim Final Rule, Evaluative Rating: Impact of Medication</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Evaluative Rating: Impact of Medication</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Clarification of VA&#x27;s Processing of Survivors Benefits Claims</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Eliminating the Requirement for Laparoscopy To Establish Service…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Objective Evidence of Pain for Painful Scars Under DC 7804</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Presumptive Service Connection for Leukemias, Multiple Myelomas,…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Presumptive Service Connection for Bladder, Ureter, and Related…</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb p">Proposed</span>Amendments to the Program of Comprehensive Assistance for Family Caregivers</a><a class="va-ticker__item" href="/va-updates.html"><span class="tb f">Final</span>Changes in Rates VA Pays for Special Modes of Transportation; Delay of…</a></div></div></div><!-- VATICKER:END -->
+
     <section class="sec band cta-section closing">
         <div class="wrap">
             <h2>Download the app</h2>
@@ -942,7 +987,54 @@
     </footer>
 
 
-    <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+(function () {
+  function ev(name, data) { if (typeof window.va === 'function') window.va('event', { name: name, data: data || {} }); }
+  var f = document.getElementById('tryit'); if (!f) return;
+  var out = document.getElementById('tryit-out');
+  var used = false;
+  function run() {
+    var r = Array.prototype.map.call(f.querySelectorAll('select'), function (x) { return parseInt(x.value, 10); })
+      .filter(function (n) { return n > 0; }).sort(function (a, b) { return b - a; });
+    if (!r.length) { out.className = 'tryit-out'; out.textContent = 'Pick the ratings the VA gave you, or one you are considering.'; return; }
+    out.className = 'tryit-out has';
+    var c = 0;
+    r.forEach(function (n) { c = Math.floor((c * 100 + n * (100 - c) + 50) / 100); });
+    var rounded = Math.floor((c + 5) / 10) * 10;
+    out.textContent = 'Combined: ' + rounded + '%' + (c !== rounded ? ' (' + c + ' rounded to the nearest 10)' : '');
+    if (!used) { used = true; ev('tryit_use', { ratings: r.length }); }
+  }
+  f.addEventListener('change', run);
+
+  // Share the page, never the result: nothing about the user's rating leaves the browser.
+  var share = document.getElementById('tryit-share'), note = document.getElementById('tryit-shared');
+  if (share) share.addEventListener('click', function () {
+    var url = 'https://vareadyapp.com/va-disability-calculator.html';
+    var text = 'Free VA combined rating calculator, no login:';
+    ev('tryit_share', { method: navigator.share ? 'native' : 'copy' });
+    if (navigator.share) { navigator.share({ title: 'VA combined rating calculator', text: text, url: url }).catch(function () {}); return; }
+    if (navigator.clipboard) navigator.clipboard.writeText(text + ' ' + url).then(function () { note.textContent = 'Link copied.'; }, function () { note.textContent = url; });
+    else note.textContent = url;
+  });
+
+  // Where people stop reading: one event per section the first time it scrolls into view, and 50/90 percent depth.
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { ev('section_view', { id: e.target.id }); io.unobserve(e.target); } });
+    }, { threshold: 0.35 });
+    ['calculator', 'reviews', 'service', 'inside', 'filing', 'benefits', 'vso', 'community', 'plans', 'faq'].forEach(function (id) {
+      var el = document.getElementById(id); if (el) io.observe(el);
+    });
+  }
+  var marks = { 50: false, 90: false };
+  window.addEventListener('scroll', function () {
+    var h = document.documentElement.scrollHeight - window.innerHeight; if (h <= 0) return;
+    var pct = window.scrollY / h * 100;
+    [50, 90].forEach(function (m) { if (!marks[m] && pct >= m) { marks[m] = true; ev('scroll_depth', { pct: m }); } });
+  }, { passive: true });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/track.js"></script>
 </body>
 </html>
