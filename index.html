@@ -304,7 +304,7 @@
 
         /* Phone and tablet screenshots */
         .phone { background: #05070d; padding: 7px; border-radius: 32px; border: 1px solid rgba(255,255,255,0.08); }
-        .phone img { display: block; width: 100%; height: auto; border-radius: 26px; }
+        .phone img, .phone video { display: block; width: 100%; height: auto; border-radius: 26px; }
         figure { margin: 0; }
         figcaption { font-size: 15px; line-height: 1.55; color: var(--t2); margin-top: 12px; }
         .figs-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin: 36px 0 28px; }
@@ -539,7 +539,7 @@
                 </div>
             </div>
             <figure class="hero-shot">
-                <div class="phone"><picture><source srcset="img/v3-rating.webp" type="image/webp"><img src="img/v3-rating.jpg" alt="VA Ready 3.0 My Claim screen showing a 90 percent projected combined rating in a green ring, an estimated monthly payment of $2,802.30, the five ratings entered, and how the VA combines them under 38 CFR 4.25." width="600" height="1304" fetchpriority="high" decoding="async"></picture></div>
+                <div class="phone"><video id="hero-video" poster="img/hero-poster.jpg" width="720" height="1498" autoplay muted loop playsinline preload="metadata" aria-label="Screen recording of VA Ready: a 50 percent combined rating becomes 70 percent after an irritable bowel syndrome rating of 30 percent is added, with the estimated monthly payment rising from $1,273 to $1,948."><source src="img/hero.webm" type="video/webm"><source src="img/hero.mp4" type="video/mp4"><img src="img/v3-rating.jpg" alt="VA Ready 3.0 My Claim screen showing a 90 percent projected combined rating, an estimated monthly payment and the five ratings entered." width="600" height="1304"></video></div>
             </figure>
         </div>
     </section>
@@ -1000,6 +1000,12 @@
     <script>
 (function () {
   function ev(name, data) { if (typeof window.va === 'function') window.va('event', { name: name, data: data || {} }); }
+  var hv = document.getElementById('hero-video');
+  if (hv) {
+    var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (calm) { hv.removeAttribute('autoplay'); hv.pause(); hv.controls = true; }
+    else { var sent = false; hv.addEventListener('playing', function () { if (!sent) { sent = true; ev('hero_video_play'); } }); }
+  }
   var f = document.getElementById('tryit'); if (!f) return;
   var out = document.getElementById('tryit-out');
   var used = false;
