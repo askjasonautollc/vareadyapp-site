@@ -33,6 +33,21 @@ META = [
  ("9905","tmj","TMJ / Temporomandibular Disorder","Temporomandibular disorder (TMJ/TMD), jaw pain, clicking, locking, and limited opening, is rated on how far you can open your jaw (inter-incisal range) and any dietary restrictions. It is commonly claimed secondary to PTSD-related teeth grinding (bruxism) or jaw trauma."),
 ]
 
+BOARD = {r["diagnostic_code"]: r for r in json.load(open(os.path.join(HERE,"data","board_evidence.json")))} if os.path.exists(os.path.join(HERE,"data","board_evidence.json")) else {}
+
+BOARD_CSS = """
+    .board { margin:28px 0; }
+    .bd-intro, .bd-foot { color:var(--muted,#9aa4b2); font-size:15px; line-height:1.55; }
+    .bd-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:14px 0; }
+    @media (max-width:720px){ .bd-cols{ grid-template-columns:1fr; } }
+    .bd-col h3 { margin:0 0 8px; font-size:16px; }
+    .bd-col ul { list-style:none; margin:0; padding:0; }
+    .bd-col li { padding:10px 0; border-bottom:1px solid var(--line); }
+    .bd-t { display:block; font-size:15px; line-height:1.45; }
+    .bd-n { display:block; margin-top:4px; font-size:12px; color:var(--muted,#9aa4b2); word-break:break-word; }
+    .bd-cta { margin-top:10px; font-size:15px; }
+"""
+
 def esc(s): return html.escape(s or "", quote=True)
 
 def prose_name(n):
@@ -168,6 +183,28 @@ def evidence_section(dc, fname, fclean):
         f'<p class="evi-foot">Citations are provided for general educational use and are not medical advice.</p></section>')
     return html_block, cites
 
+def board_section(dc, fclean):
+    """What decided Board of Veterans' Appeals cases: top-condition pages only (data/board_evidence.json)."""
+    r = BOARD.get(dc)
+    if not r: return ""
+    name = prose_name(fclean)
+    def block(label, rows):
+        if not rows: return ""
+        lis = "".join(
+            f'<li><span class="bd-t">{esc(b["text"])}</span>'
+            f'<span class="bd-n">Decisions: {esc(", ".join(b.get("decisions") or []))}</span></li>' for b in rows)
+        return f'<div class="bd-col"><h3>{label}</h3><ul>{lis}</ul></div>'
+    n = r.get("decisions_read") or 0
+    return (
+        f'<section class="board"><h2>What decided Board of Veterans&rsquo; Appeals cases on {esc(name)}</h2>'
+        f'<p class="bd-intro">We read {n} decisions of the Board of Veterans&rsquo; Appeals on {esc(name)} (diagnostic code {dc}). '
+        f'Below is what the Board pointed to when it helped or hurt a veteran&rsquo;s claim. Each finding lists the decision numbers behind it, '
+        f'which you can look up on the Board&rsquo;s public decision search at va.gov.</p>'
+        f'<div class="bd-cols">{block("Helped", r.get("helped"))}{block("Hurt", r.get("hurt"))}</div>'
+        f'<p class="bd-foot">From Board of Veterans&rsquo; Appeals decisions. Cases differ. This is not legal advice and does not predict how your claim will be decided.</p>'
+        f'<p class="bd-cta">VA Ready shows this breakdown, with the same decision numbers, on the condition cards in your claim, for more than 130 conditions. '
+        f'<a href="/index.html#download">Get the app</a>.</p></section>')
+
 def cond_page(dc, slug, fname, intro):
     c = DATA[dc]
     cn, cfr, bsys = c["condition_name"], c.get("cfr_section") or "", c.get("body_system") or ""
@@ -200,6 +237,7 @@ def cond_page(dc, slug, fname, intro):
         {"@type":"ListItem","position":2,"name":"VA ratings by condition","item":"https://vareadyapp.com/conditions.html"},
         {"@type":"ListItem","position":3,"name":f"VA rating for {fclean}","item":canon}]})
     ev_html, ev_cites = evidence_section(dc, fname, fclean)
+    board_html = board_section(dc, fclean)
     art_obj = {"@context":"https://schema.org","@type":"Article",
         "headline":f"VA disability rating for {fclean}","description":desc,"datePublished":"2026-06-07",
         "author":{"@type":"Organization","name":"JDL Software LLC"},"publisher":{"@type":"Organization","name":"VA Ready"},
@@ -227,7 +265,7 @@ def cond_page(dc, slug, fname, intro):
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <script type="application/ld+json">{bc_ld}</script>
 <script type="application/ld+json">{art_ld}</script>
-<style>{CSS}</style>
+<style>{CSS}{BOARD_CSS if board_html else ""}</style>
 </head>
 <body>
 {NAV}
@@ -247,7 +285,7 @@ def cond_page(dc, slug, fname, intro):
             <li><a href="/guides/nexus-letters.html">Nexus letters</a></li>
             {('<li><a href="/guides/secondary-service-connection.html">Secondary service connection</a></li>' if secs else '')}
         </ul>
-    </article>
+    </article>{board_html}
     {ev_html}
     <div class="btns page-cta"><a href="/va-disability-calculator.html" class="btn">Estimate your combined rating</a><a href="/states.html" class="btn ghost">Veterans benefits by state</a></div>
     {APP_CTA}
