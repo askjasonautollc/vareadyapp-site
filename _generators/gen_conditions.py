@@ -196,7 +196,7 @@ def board_section(dc, fclean):
         return f'<div class="bd-col"><h3>{label}</h3><ul>{lis}</ul></div>'
     n = r.get("decisions_read") or 0
     return (
-        f'<section class="board"><h2>What decided Board of Veterans&rsquo; Appeals cases on {esc(name)}</h2>'
+        f'<section class="board" id="board-cases"><h2>What decided Board of Veterans&rsquo; Appeals cases on {esc(name)}</h2>'
         f'<p class="bd-intro">We read {n} decisions of the Board of Veterans&rsquo; Appeals on {esc(name)} (diagnostic code {dc}). '
         f'Below is what the Board pointed to when it helped or hurt a veteran&rsquo;s claim. Each finding lists the decision numbers behind it, '
         f'which you can look up on the Board&rsquo;s public decision search at va.gov.</p>'
@@ -339,6 +339,7 @@ def hub():
     <div class="crumb"><a href="/index.html">Home</a> / VA ratings by condition</div>
     <h1>VA disability ratings by condition</h1>
     <p class="lede">Rating tables for the {n_top} conditions veterans claim most, with diagnostic codes, secondary conditions, and the peer-reviewed studies linked to each. Criteria are summarized from 38 CFR Part 4.</p>
+    <p class="lede">The <a href="/conditions/tinnitus.html#board-cases">tinnitus</a>, <a href="/conditions/ptsd.html#board-cases">PTSD</a>, <a href="/conditions/back-pain.html#board-cases">back pain</a>, <a href="/conditions/knee-pain.html#board-cases">knee pain</a> and <a href="/conditions/sleep-apnea.html#board-cases">sleep apnea</a> pages also show what helped and hurt in real Board of Veterans&rsquo; Appeals decisions, with the decision numbers.</p>
     <div class="hub-sec"><h2>Most-claimed conditions</h2>{table}</div>
     <p class="trustline">More from VA Ready: <a href="/states.html">Veterans benefits by state</a> &middot; <a href="/guides.html">VA claim guides</a> &middot; <a href="/mos.html">VA disability by MOS</a> &middot; <a href="/va-disability-calculator.html">Combined-rating calculator</a></p>
     {APP_CTA}

@@ -258,6 +258,8 @@ APP_CTA = """<div class="cta cta-line"><p>The in-depth filing guides are Pro in 
 
 DISCLAIMER = """<div class="disclaimer">This guide is for general informational purposes only and is not legal or medical advice. VA Ready is not affiliated with, endorsed by, or connected to the U.S. Department of Veterans Affairs. Regulations and procedures change; always verify current requirements at VA.gov and consult a VA-accredited representative for help with your claim.</div>"""
 
+BOARD_SEE_ALSO = {"denied-your-appeal-options-explained","va-form-10182","va-form-20-0995","va-form-20-0996","supplemental-claims"}
+
 def guide_page(g, related):
     body = md_to_html(g["content"])
     cat = "VA forms" if g["is_form"] else "Filing guides"
@@ -268,6 +270,14 @@ def guide_page(g, related):
             f'<a href="{r["url"]}">{esc(r["title"].split("—")[0].strip())}<span>{esc(meta_desc(r["summary"]))}</span></a>'
             for r in related)
         rel_html = f'<div class="related"><h2>Related guides</h2>{items}</div>'
+    if g["slug"] in BOARD_SEE_ALSO:
+        rel_html = (
+            '<div class="related"><h2>See what decided real Board cases</h2>'
+            '<a href="/conditions/tinnitus.html#board-cases">Tinnitus<span>What helped and what hurt in Board of Veterans\' Appeals decisions, with decision numbers.</span></a>'
+            '<a href="/conditions/ptsd.html#board-cases">PTSD<span>Stressors, opinions and records the Board credited or set aside.</span></a>'
+            '<a href="/conditions/sleep-apnea.html#board-cases">Sleep apnea<span>Direct, secondary and rating decisions, and what carried them.</span></a>'
+            '<a href="/conditions/back-pain.html#board-cases">Back pain<span>Flare-ups, exams and opinions the Board weighed.</span></a>'
+            '<a href="/conditions/knee-pain.html#board-cases">Knee pain<span>Motion findings and VA opinions the Board found adequate or not.</span></a></div>') + rel_html
     desc = meta_desc(g["summary"])
     title_tag = f'{esc(g["title"])} | VA Ready'
     canon = f'https://vareadyapp.com{g["url"]}'
