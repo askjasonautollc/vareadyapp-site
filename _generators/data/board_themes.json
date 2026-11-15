@@ -1,0 +1,636 @@
+{
+ "totals": {
+  "cards": 171,
+  "decisions": 5458,
+  "bullets": 1071
+ },
+ "themes": [
+  {
+   "direction": "helped",
+   "title": "VA negative opinions lost weight when thin",
+   "summary": "The Board gave little weight to VA opinions that skipped records, ignored the veteran's account, used wrong facts or gave no reasons.",
+   "card_count": 106,
+   "examples": [
+    {
+     "dc": "7530",
+     "condition": "Chronic renal disease requiring regular dialysis",
+     "bullet": "Negative VA opinions lost weight when they skipped the theory, literature or full record."
+    },
+    {
+     "dc": "5239",
+     "condition": "Spondylolisthesis or segmental instability",
+     "bullet": "Negative VA opinions lost weight when based on wrong facts or ignoring the veteran's account"
+    },
+    {
+     "dc": "6260",
+     "condition": "Tinnitus, recurrent",
+     "bullet": "A negative VA opinion lost weight when it leaned on silent service records."
+    },
+    {
+     "dc": "7901",
+     "condition": "Thyroid enlargement, toxic",
+     "bullet": "Negative VA opinions that were conclusory or skipped key evidence lost weight."
+    },
+    {
+     "dc": "9434",
+     "condition": "Major depressive disorder",
+     "bullet": "VA negative opinions built on wrong facts or missed questions got little or no weight"
+    }
+   ]
+  },
+  {
+   "direction": "helped",
+   "title": "A reasoned doctor opinion linked it to service",
+   "summary": "Private or treating doctors who gave reasons, cited records or studies, and tied the condition to service carried weight with the Board.",
+   "card_count": 69,
+   "examples": [
+    {
+     "dc": "9312",
+     "condition": "Major or mild neurocognitive disorder due to Alzheimer's disease",
+     "bullet": "Private doctor opinions that reviewed the file and cited medical studies got strong weight."
+    },
+    {
+     "dc": "7712",
+     "condition": "Multiple myeloma",
+     "bullet": "Board gave high weight to private opinions that cited medical studies and explained the link."
+    },
+    {
+     "dc": "5019",
+     "condition": "Bursitis",
+     "bullet": "Favorable opinion giving a stated reason, such as service activity or medical literature, was credited."
+    },
+    {
+     "dc": "7307",
+     "condition": "Gastritis, chronic",
+     "bullet": "Doctor opinions tying gastritis to NSAID use for service-connected conditions were accepted."
+    },
+    {
+     "dc": "9201",
+     "condition": "Schizophrenia",
+     "bullet": "Private opinions with full record review and written reasoning drew significant weight from the Board."
+    }
+   ]
+  },
+  {
+   "direction": "helped",
+   "title": "Credible personal accounts were accepted",
+   "summary": "The Board accepted believable accounts of symptoms that began in service and continued, especially when records fit the story.",
+   "card_count": 66,
+   "examples": [
+    {
+     "dc": "5002",
+     "condition": "Multi-Joint Arthritis (Active Process, 2+ Joints)",
+     "bullet": "Credible veteran accounts of when joint symptoms began were accepted."
+    },
+    {
+     "dc": "6034",
+     "condition": "Pterygium",
+     "bullet": "Credible personal account of eye problems since service, consistent with records, was accepted."
+    },
+    {
+     "dc": "6025",
+     "condition": "Disorders of the lacrimal apparatus (epiphora, dacryocystitis, etc.)",
+     "bullet": "Veteran's own report of dry eyes starting in service and continuing was accepted."
+    },
+    {
+     "dc": "5239",
+     "condition": "Spondylolisthesis or segmental instability",
+     "bullet": "Consistent veteran accounts of back injury and pain since service were found credible"
+    },
+    {
+     "dc": "7326",
+     "condition": "Crohn's disease or undifferentiated form of inflammatory bowel disease",
+     "bullet": "Credible accounts from the veteran and family of stomach symptoms in service and after helped."
+    }
+   ]
+  },
+  {
+   "direction": "helped",
+   "title": "Sent back for a new exam or opinion",
+   "summary": "When VA gave no exam, or an exam that skipped a theory, a symptom or the records, the Board sent the claim back instead of deciding it.",
+   "card_count": 92,
+   "examples": [
+    {
+     "dc": "5017",
+     "condition": "Gout",
+     "bullet": "Sent back when the VA examiner ignored the veteran's account or gave no reasons."
+    },
+    {
+     "dc": "7010",
+     "condition": "Supraventricular tachycardia",
+     "bullet": "Sent back for a new opinion when VA's opinion was conclusory or skipped a theory."
+    },
+    {
+     "dc": "6601",
+     "condition": "Bronchiectasis",
+     "bullet": "Sent back for new opinions when VA examiners skipped a secondary or direct theory."
+    },
+    {
+     "dc": "7110",
+     "condition": "Aortic aneurysm: Ascending, thoracic, or abdominal",
+     "bullet": "Sent back for an opinion when no examiner addressed a possible secondary link."
+    },
+    {
+     "dc": "7522",
+     "condition": "Erectile dysfunction, with or without penile deformity",
+     "bullet": "Claims were sent back when VA examiners did not address aggravation by a service-connected condition."
+    }
+   ]
+  },
+  {
+   "direction": "helped",
+   "title": "Records from service showed the problem",
+   "summary": "Treatment notes, complaints or diagnoses recorded during service supported the in-service part of the claim.",
+   "card_count": 36,
+   "examples": [
+    {
+     "dc": "5282",
+     "condition": "Hammer toe",
+     "bullet": "Service records showing foot or toe complaints or treatment supported the claim."
+    },
+    {
+     "dc": "6034",
+     "condition": "Pterygium",
+     "bullet": "Eye injury or diagnosis recorded during service backed the later claim."
+    },
+    {
+     "dc": "7618",
+     "condition": "Uterus, removal of, including corpus",
+     "bullet": "Service records showing gynecologic treatment during service supported the grants."
+    },
+    {
+     "dc": "7806",
+     "condition": "Dermatitis or eczema",
+     "bullet": "Service records showing a rash or eczema supported finding an in-service start."
+    },
+    {
+     "dc": "5399-5321",
+     "condition": "Costochondritis (chest wall pain)",
+     "bullet": "Treatment records showing chest pain or costochondritis in service supported the claim."
+    }
+   ]
+  },
+  {
+   "direction": "helped",
+   "title": "Secondary link to a service-connected condition",
+   "summary": "Medical opinions linking a new condition to one already service connected, by cause or by making it worse, supported secondary grants.",
+   "card_count": 45,
+   "examples": [
+    {
+     "dc": "6012",
+     "condition": "Angle-closure glaucoma",
+     "bullet": "A clinician tied glaucoma to a service-connected condition or its treatment."
+    },
+    {
+     "dc": "7006",
+     "condition": "Myocardial infarction",
+     "bullet": "A heart attack tied to a service-connected mental health condition or hypertension was granted."
+    },
+    {
+     "dc": "9412",
+     "condition": "Panic disorder and/or agoraphobia",
+     "bullet": "Panic disorder was granted as secondary to another condition when the evidence was balanced."
+    },
+    {
+     "dc": "7700",
+     "condition": "Anemia, hypochromic-microcytic and megaloblastic",
+     "bullet": "Anemia tied by a medical opinion to a service-connected kidney or blood condition"
+    },
+    {
+     "dc": "5229",
+     "condition": "Index or long finger, limitation of motion",
+     "bullet": "Reasoned opinions tying finger or thumb problems to duties or a service-connected condition carried weight."
+    }
+   ]
+  },
+  {
+   "direction": "helped",
+   "title": "Exposure was conceded or presumed",
+   "summary": "Where service location or records supported exposure to herbicides, burn pits or similar hazards, the Board accepted exposure and the case turned on the medical link.",
+   "card_count": 30,
+   "examples": [
+    {
+     "dc": "6522",
+     "condition": "Allergic or vasomotor rhinitis",
+     "bullet": "Verified Southwest Asia service plus a current rhinitis diagnosis supported presumptive service connection"
+    },
+    {
+     "dc": "7528",
+     "condition": "Malignant neoplasms of the genitourinary system",
+     "bullet": "Credible accounts of work near a base perimeter or the DMZ established exposure."
+    },
+    {
+     "dc": "7703",
+     "condition": "Leukemia (except for chronic myelogenous leukemia)",
+     "bullet": "Conceded or presumed herbicide exposure, from service location or a VA memo, supported the claim."
+    },
+    {
+     "dc": "6603",
+     "condition": "Emphysema, pulmonary",
+     "bullet": "Conceded Gulf region service or toxic exposure supported grants of lung disease."
+    },
+    {
+     "dc": "7901",
+     "condition": "Thyroid enlargement, toxic",
+     "bullet": "Board linked thyroid disease to conceded herbicide or toxic exposure when medical evidence supported it."
+    }
+   ]
+  },
+  {
+   "direction": "helped",
+   "title": "Close evidence went to the veteran",
+   "summary": "When medical opinions or records were evenly balanced, the Board gave the veteran the benefit of the doubt.",
+   "card_count": 22,
+   "examples": [
+    {
+     "dc": "8007",
+     "condition": "Brain, vessels, embolism of",
+     "bullet": "Evidence on stroke cause found evenly balanced, so doubt went to the veteran"
+    },
+    {
+     "dc": "6604",
+     "condition": "Chronic obstructive pulmonary disease",
+     "bullet": "Positive medical opinions balanced the evidence, and doubt was resolved for the veteran."
+    },
+    {
+     "dc": "7345",
+     "condition": "Chronic liver disease without cirrhosis",
+     "bullet": "Competing medical opinions left the Board at even balance, and the claim was granted."
+    },
+    {
+     "dc": "7527",
+     "condition": "Prostate Conditions (Injury, Infection, BPH, Postop)",
+     "bullet": "Favorable medical opinions, private or VA, supported grants, including when opinions were evenly balanced."
+    },
+    {
+     "dc": "5283",
+     "condition": "Tarsal, or metatarsal bones, malunion of, or nonunion of",
+     "bullet": "Positive opinions with reasoning, or split opinions, put foot claims in balance."
+    }
+   ]
+  },
+  {
+   "direction": "helped",
+   "title": "Exams that missed flare-ups or pain were faulted",
+   "summary": "Exams that left out flare-ups, repeated use or medication effects were found inadequate, and many of those claims were sent back for a new exam.",
+   "card_count": 14,
+   "examples": [
+    {
+     "dc": "5229",
+     "condition": "Index or long finger, limitation of motion",
+     "bullet": "Sent back for a new exam when it missed flare-up or medication effects."
+    },
+    {
+     "dc": "7336",
+     "condition": "Hemorrhoids, external or internal",
+     "bullet": "Sent back for a new exam when the examiner skipped flare-ups, bleeding or medication effects."
+    },
+    {
+     "dc": "5261",
+     "condition": "Leg, limitation of extension of",
+     "bullet": "Exams missing weight-bearing, passive or flare-up testing were inadequate; some claims sent back."
+    },
+    {
+     "dc": "5239",
+     "condition": "Spondylolisthesis or segmental instability",
+     "bullet": "Back exams that ignored flare-ups or repeated-use effects were sent back for a new exam"
+    },
+    {
+     "dc": "5019",
+     "condition": "Bursitis",
+     "bullet": "Exams missing flare-up findings were found inadequate and the claim was sent back."
+    }
+   ]
+  },
+  {
+   "direction": "helped",
+   "title": "A current diagnosis was confirmed",
+   "summary": "An exam, treatment record or private diagnosis showing the condition during the claim met the current-disability question.",
+   "card_count": 11,
+   "examples": [
+    {
+     "dc": "5013",
+     "condition": "Osteoporosis, residuals of",
+     "bullet": "A diagnosis in a VA exam or treatment record met the current-condition question."
+    },
+    {
+     "dc": "7831",
+     "condition": "Alopecia areata",
+     "bullet": "A skin exam or treatment record naming alopecia met the current-disability question."
+    },
+    {
+     "dc": "7703",
+     "condition": "Leukemia (except for chronic myelogenous leukemia)",
+     "bullet": "Diagnosis shown by lab tests, records or a VA exam met the current disability element."
+    },
+    {
+     "dc": "9404",
+     "condition": "Obsessive compulsive disorder",
+     "bullet": "A formal OCD diagnosis from a licensed clinician met the current-disability requirement."
+    },
+    {
+     "dc": "7819",
+     "condition": "Benign skin neoplasms",
+     "bullet": "A VA exam confirming lipomas or keratosis established the current diagnosis."
+    }
+   ]
+  },
+  {
+   "direction": "hurt",
+   "title": "Service records were silent",
+   "summary": "Records from service that showed no complaint, injury or diagnosis, or a normal separation exam, weighed against the claim.",
+   "card_count": 84,
+   "examples": [
+    {
+     "dc": "7901",
+     "condition": "Thyroid enlargement, toxic",
+     "bullet": "Service treatment records silent on thyroid problems weighed against the claim."
+    },
+    {
+     "dc": "7346",
+     "condition": "Hiatal hernia and paraesophageal hernia",
+     "bullet": "Service records with no GERD complaint or diagnosis weighed against a link."
+    },
+    {
+     "dc": "5262",
+     "condition": "Tibia and fibula, impairment of",
+     "bullet": "Quiet service records and a clean separation exam weighed against in-service shin injury."
+    },
+    {
+     "dc": "7720",
+     "condition": "Iron deficiency anemia",
+     "bullet": "Service records silent on anemia, with first diagnosis years after discharge"
+    },
+    {
+     "dc": "5252",
+     "condition": "Thigh, limitation of flexion of",
+     "bullet": "Service treatment records and separation exam said nothing about the hips"
+    }
+   ]
+  },
+  {
+   "direction": "hurt",
+   "title": "No current diagnosis was found",
+   "summary": "Exams and records that showed no diagnosis during the claim period ended the claim at the first step.",
+   "card_count": 58,
+   "examples": [
+    {
+     "dc": "5024",
+     "condition": "Tenosynovitis, tendinitis, tendinosis, tendinopathy",
+     "bullet": "Records with no diagnosis of a tendon condition left the claim without a current disability."
+    },
+    {
+     "dc": "6204",
+     "condition": "Peripheral vestibular disorders",
+     "bullet": "Claims failed where VA exams or records showed no vertigo diagnosis, despite dizziness complaints."
+    },
+    {
+     "dc": "7122",
+     "condition": "Cold injury residuals",
+     "bullet": "No current diagnosis of cold injury residuals in exams or records"
+    },
+    {
+     "dc": "7336",
+     "condition": "Hemorrhoids, external or internal",
+     "bullet": "No current hemorrhoid diagnosis in treatment records or exams ended the service claim."
+    },
+    {
+     "dc": "6522",
+     "condition": "Allergic or vasomotor rhinitis",
+     "bullet": "No current rhinitis diagnosis in the records ended the service connection claim"
+    }
+   ]
+  },
+  {
+   "direction": "hurt",
+   "title": "The veteran's own belief was not enough",
+   "summary": "Personal views on diagnosis or cause were not accepted as medical evidence, because those are medical questions.",
+   "card_count": 73,
+   "examples": [
+    {
+     "dc": "6260",
+     "condition": "Tinnitus, recurrent",
+     "bullet": "The veteran's own view that service caused the ringing was not accepted"
+    },
+    {
+     "dc": "7345",
+     "condition": "Chronic liver disease without cirrhosis",
+     "bullet": "The veteran's own view of the liver cause carried little weight without medical backing."
+    },
+    {
+     "dc": "8100",
+     "condition": "Migraine",
+     "bullet": "The veteran's own belief about the cause of migraines was not accepted as medical proof"
+    },
+    {
+     "dc": "5284",
+     "condition": "Foot injuries, other",
+     "bullet": "A veteran's own belief about foot diagnosis or cause got little weight against medical evidence."
+    },
+    {
+     "dc": "9312",
+     "condition": "Major or mild neurocognitive disorder due to Alzheimer's disease",
+     "bullet": "Veteran or family belief that service caused dementia was not competent evidence of cause."
+    }
+   ]
+  },
+  {
+   "direction": "hurt",
+   "title": "Years passed before the first diagnosis or care",
+   "summary": "Long gaps between service and the first complaint, treatment or diagnosis weighed against a link to service.",
+   "card_count": 43,
+   "examples": [
+    {
+     "dc": "5239",
+     "condition": "Spondylolisthesis or segmental instability",
+     "bullet": "Long gaps between service and first back treatment weighed against a link to service"
+    },
+    {
+     "dc": "6601",
+     "condition": "Bronchiectasis",
+     "bullet": "Silent service records and respiratory records first appearing decades later weighed against the claim."
+    },
+    {
+     "dc": "7006",
+     "condition": "Myocardial infarction",
+     "bullet": "Heart disease first diagnosed decades after service, with silent service records, weighed against the claim."
+    },
+    {
+     "dc": "5003",
+     "condition": "Degenerative arthritis, other than post-traumatic",
+     "bullet": "Arthritis first appearing in records decades after service weighed against the claim."
+    },
+    {
+     "dc": "7327",
+     "condition": "Diverticulitis and diverticulosis",
+     "bullet": "A first diagnosis long after service, with normal earlier records, weakened the claim."
+    }
+   ]
+  },
+  {
+   "direction": "hurt",
+   "title": "Reasoned VA opinions against a link carried weight",
+   "summary": "VA opinions that reviewed the file and explained why the condition was not linked to service outweighed competing views.",
+   "card_count": 26,
+   "examples": [
+    {
+     "dc": "8007",
+     "condition": "Brain, vessels, embolism of",
+     "bullet": "Negative VA opinions citing medical literature and other stroke risk factors were given high weight"
+    },
+    {
+     "dc": "6604",
+     "condition": "Chronic obstructive pulmonary disease",
+     "bullet": "A negative VA opinion with clear reasons, often a long smoking history, was adopted."
+    },
+    {
+     "dc": "7327",
+     "condition": "Diverticulitis and diverticulosis",
+     "bullet": "Negative VA opinions with explained reasoning were found probative against a service link."
+    },
+    {
+     "dc": "7818",
+     "condition": "Malignant skin neoplasms (other than malignant melanoma)",
+     "bullet": "Negative VA opinions with a rationale, literature and an accurate history were found persuasive."
+    },
+    {
+     "dc": "7314",
+     "condition": "Chronic biliary tract disease",
+     "bullet": "Explained negative VA opinion with no opposing medical opinion weighed against the claim"
+    }
+   ]
+  },
+  {
+   "direction": "hurt",
+   "title": "No doctor tied it to service",
+   "summary": "Without a medical opinion linking the condition or exposure to service, the link was left unsupported.",
+   "card_count": 16,
+   "examples": [
+    {
+     "dc": "7530",
+     "condition": "Chronic renal disease requiring regular dialysis",
+     "bullet": "No medical opinion linking kidney disease to service left direct claims unsupported."
+    },
+    {
+     "dc": "7833",
+     "condition": "Malignant melanoma",
+     "bullet": "Board found no medical opinion or evidence linking melanoma to the reported exposure."
+    },
+    {
+     "dc": "7114",
+     "condition": "Peripheral arterial disease",
+     "bullet": "Conceded herbicide or toxic exposure did not carry the claim without a medical link"
+    },
+    {
+     "dc": "6351",
+     "condition": "HIV-related illness",
+     "bullet": "No medical opinion tied HIV to service, so the claim fell short."
+    },
+    {
+     "dc": "6042",
+     "condition": "Retinal Dystrophy (Macular Degeneration, Retinitis Pigmentosa)",
+     "bullet": "No medical opinion linked the eye disease to service."
+    }
+   ]
+  },
+  {
+   "direction": "hurt",
+   "title": "The claimed exposure was not shown",
+   "summary": "Records that did not place the veteran in a covered place, or did not confirm the exposure, left the exposure theory unproven.",
+   "card_count": 16,
+   "examples": [
+    {
+     "dc": "6819",
+     "condition": "Respiratory System Cancer (Malignant)",
+     "bullet": "Herbicide exposure was not accepted when service location or dates fell outside the presumption."
+    },
+    {
+     "dc": "7528",
+     "condition": "Malignant neoplasms of the genitourinary system",
+     "bullet": "Service outside the listed places and periods meant exposure was not presumed."
+    },
+    {
+     "dc": "8004",
+     "condition": "Paralysis agitans",
+     "bullet": "Herbicide exposure stayed unproven when records showed no service in a listed location."
+    },
+    {
+     "dc": "7017",
+     "condition": "Coronary bypass surgery",
+     "bullet": "Records did not show herbicide exposure, so the heart claim failed on that theory."
+    },
+    {
+     "dc": "8008",
+     "condition": "Brain, vessels, thrombosis of",
+     "bullet": "Herbicide or toxic exposure claimed for a stroke was not shown by the record."
+    }
+   ]
+  },
+  {
+   "direction": "hurt",
+   "title": "Opinions without reasons got little weight",
+   "summary": "Opinions, letters or notes with no stated reasons, no record review or no clinical findings were given little or no weight.",
+   "card_count": 14,
+   "examples": [
+    {
+     "dc": "6522",
+     "condition": "Allergic or vasomotor rhinitis",
+     "bullet": "A private opinion with no stated reasons or no examination carried little weight"
+    },
+    {
+     "dc": "7110",
+     "condition": "Aortic aneurysm: Ascending, thoracic, or abdominal",
+     "bullet": "Private opinions without full reasoning were found inadequate or given no weight."
+    },
+    {
+     "dc": "5002",
+     "condition": "Multi-Joint Arthritis (Active Process, 2+ Joints)",
+     "bullet": "Favorable opinions with no rationale, or built on the veteran account alone, were discounted."
+    },
+    {
+     "dc": "7305",
+     "condition": "Ulcer, gastric",
+     "bullet": "Private opinions got little weight when they lacked reasoning or skipped the period at issue."
+    },
+    {
+     "dc": "8100",
+     "condition": "Migraine",
+     "bullet": "A positive opinion with no explanation, or built on general articles, got little weight"
+    }
+   ]
+  },
+  {
+   "direction": "hurt",
+   "title": "Earlier records contradicted the veteran's account",
+   "summary": "Accounts of continuous symptoms lost weight when older records, separation paperwork or earlier histories said something different.",
+   "card_count": 9,
+   "examples": [
+    {
+     "dc": "5242",
+     "condition": "Degenerative Disc Disease / Arthritis (Spine)",
+     "bullet": "Later claims of constant pain were not believed when older records said otherwise"
+    },
+    {
+     "dc": "5284",
+     "condition": "Foot injuries, other",
+     "bullet": "Later claims of foot symptoms since service lost credibility when earlier histories said otherwise."
+    },
+    {
+     "dc": "5239",
+     "condition": "Spondylolisthesis or segmental instability",
+     "bullet": "Claims of pain since service lost weight when contemporaneous records showed no back complaints"
+    },
+    {
+     "dc": "6260",
+     "condition": "Tinnitus, recurrent",
+     "bullet": "Separation paperwork where the veteran denied ear trouble was weighed against the claim"
+    },
+    {
+     "dc": "5304",
+     "condition": "Rotator Cuff Muscle Injury (Group IV)",
+     "bullet": "A veteran's account of in-service onset was outweighed when records did not corroborate it"
+    }
+   ]
+  }
+ ]
+}

@@ -202,7 +202,7 @@ def board_section(dc, fclean):
         f'which you can look up on the Board&rsquo;s public decision search at va.gov.</p>'
         f'<div class="bd-cols">{block("Helped", r.get("helped"))}{block("Hurt", r.get("hurt"))}</div>'
         f'<p class="bd-foot">From Board of Veterans&rsquo; Appeals decisions. Cases differ. This is not legal advice and does not predict how your claim will be decided.</p>'
-        f'<p class="bd-cta">VA Ready shows this breakdown, with the same decision numbers, on the condition cards in your claim, for more than 130 conditions. '
+        f'<p class="bd-cta">VA Ready shows this breakdown, with the same decision numbers, on the condition cards in your claim, for more than 170 conditions. '
         f'<a href="/index.html#download">Get the app</a>.</p></section>')
 
 def cond_page(dc, slug, fname, intro):
