@@ -57,7 +57,7 @@ faqs = [
  ("Is VA Ready available for Windows?",
   "Yes. VA Ready is on the Microsoft Store for Windows 10 (version 1809 or later) and Windows 11, 64-bit. It is the same product as VA Ready on iPhone, iPad and Mac and Vet Ready on Android."),
  ("Does VA Ready for Windows cost anything?",
-  "The download is free, with no account. Pro adds full rating criteria, all 50 states, Claim Intel and sharing or exporting documents. Pro is billed through your Microsoft account: $4.99 a month, $39.99 a year, or $59.99 once."),
+  "The download is free, with no account. Pro adds full rating criteria, all 50 states, Claim Intel and sharing or exporting documents. Pro is billed through your Microsoft account: $8.99 a month, $69.99 a year, or $89.99 once."),
  ("Where is my claim data stored?",
   "On your PC. VA Ready has no account and does not upload your claim, documents or notes. You can back up to a folder you choose, documents included."),
  ("Does it need an internet connection?",
@@ -125,7 +125,7 @@ page = f"""<!DOCTYPE html>
         {shot("windows-claim-intel", "VA Ready on Windows, Claim Intel tab listing conditions commonly claimed for an Army 11B.", "Claim Intel lists the conditions commonly claimed for your job code, with PACT Act presumptives for your bases.")}
         <h2>Free and Pro</h2>
         <div class="tbl-wrap"><table class="pt"><thead><tr><th>Free</th><th>Pro</th></tr></thead><tbody>{rows}</tbody></table></div>
-        <p>Pro is billed through your Microsoft account: $4.99 a month, $39.99 a year, or $59.99 once.</p>
+        <p>Pro is billed through your Microsoft account: $8.99 a month, $69.99 a year, or $89.99 once.</p>
         {shot("windows-filing", "VA Ready on Windows, Filing tab with step-by-step filing guides.", "Filing is a task list: eight plain steps that tick themselves off, plus guides for each VA form.")}
         <h2>Your data stays on your PC</h2>
         <p>VA Ready has no account. Your claim, documents and notes live on your PC, and you can back them up to a folder you choose, documents included. Light and dark mode follow your Windows setting.</p>
