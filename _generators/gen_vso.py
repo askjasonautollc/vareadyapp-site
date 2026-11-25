@@ -30,6 +30,26 @@ for o in OFFICES:
     sc = o.get("state_code")
     if sc in STATES: by.setdefault(sc, []).append(o)
 
+# County landing pages (gen_vso_county.py): counties with at least this many
+# offices get their own page. DC is skipped, its state page already covers it.
+COUNTY_MIN = 5
+def county_label(sc, county):
+    c = county.strip()
+    if re.search(r"(County|Parish|Borough|Census Area|Municipality)$", c): return c
+    if re.search(r"\bcity$", c, re.I): return c[:-4] + "City"
+    return c + " County"
+def qualifying_counties(sc):
+    if sc == "DC": return []
+    n = {}
+    for o in by.get(sc, []):
+        if o.get("county"): n[o["county"]] = n.get(o["county"], 0) + 1
+    return sorted([c for c, k in n.items() if k >= COUNTY_MIN], key=lambda c: county_label(sc, c))
+def county_url(sc, county):
+    return f"/vso/{slug(STATES[sc])}/{slug(county_label(sc, county))}.html"
+
+states_out = [sc for sc in STATES if sc in by]
+states_out.sort(key=lambda sc: -len(by[sc]))
+
 CSS = re.search(r'CSS = """(.*?)"""', open(os.path.join(HERE,"gen_guides.py")).read(), re.S).group(1) + """
     .vso-tools { display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 6px; align-items:center; }
     #vsoFilter { flex:1; min-width:200px; min-height:44px; background:var(--card); border:1px solid rgba(255,255,255,0.22); color:var(--white); border-radius:10px; padding:10px 14px; font-size:16px; }
@@ -116,6 +136,12 @@ def card(o):
             + (f'<div class="vso-loc">{loc}</div>' if loc.strip() else '')
             + f'<div class="vso-actions">{"".join(acts)}</div></li>')
 
+def county_block(sc):
+    qs = qualifying_counties(sc)
+    if not qs: return ""
+    links = "".join(f'<a href="{county_url(sc, c)}">{esc(county_label(sc, c))}</a>' for c in qs)
+    return f'<h2 class="vso-hub-h">VSO offices by county in {esc(STATES[sc])}</h2><div class="statepick">{links}</div>'
+
 def page(sc):
     sn = STATES[sc]; offs = by[sc]; sl = slug(sn)
     offs = sorted(offs, key=lambda o:(o.get("city") or "zzz", o.get("office_name") or ""))
@@ -167,6 +193,7 @@ def page(sc):
     </div>
     <div class="vso-meta">Showing <span id="vsoCount">{len(offs)}</span> of {len(offs)} offices &middot; {norgs} organizations &middot; {ncities} cities{(' &middot; incl. ' + ', '.join(esc(o) for o in top_orgs[:3])) if top_orgs else ''}</div>
     <ul id="vsoList">{cards}</ul>
+    {county_block(sc)}
     <p class="trustline">New to VSOs? See <a href="/guides/veterans-service-officers-vsos.html">what a VSO does and how to avoid claim sharks &rarr;</a></p>
     {APP_CTA}
     <p class="trustline">Find a VSO in another state: <a href="/find-a-vso.html">browse all states &rarr;</a></p>
@@ -177,14 +204,13 @@ def page(sc):
 </body>
 </html>"""
 
+MAIN = __name__ == "__main__"   # importable by gen_vso_county.py without writing anything
 # write state pages
-states_out = [sc for sc in STATES if sc in by]
-states_out.sort(key=lambda sc: -len(by[sc]))
-for sc in states_out:
+for sc in (states_out if MAIN else []):
     open(os.path.join(VSODIR, slug(STATES[sc])+".html"),"w").write(page(sc))
 
 # finder.js
-open(os.path.join(VSODIR,"finder.js"),"w").write(
+if MAIN: open(os.path.join(VSODIR,"finder.js"),"w").write(
 """(function(){var i=document.getElementById('vsoFilter'),l=document.getElementById('vsoList');if(!l)return;
 var cards=[].slice.call(l.querySelectorAll('.vso-card')),cnt=document.getElementById('vsoCount'),raf=0;
 /* Cache the haystack once. Reading a data attribute per card per keystroke was
@@ -284,19 +310,22 @@ def hub():
 {FOOTER}
 </body>
 </html>"""
-open(os.path.join(SITE,"find-a-vso.html"),"w").write(hub())
+if MAIN: open(os.path.join(SITE,"find-a-vso.html"),"w").write(hub())
 
-# sitemap
-sp=os.path.join(SITE,"sitemap.xml"); xml=open(sp).read(); new=[]
-urls=[("https://vareadyapp.com/find-a-vso.html","0.8")]+[(f"https://vareadyapp.com/vso/{slug(STATES[sc])}.html","0.7") for sc in states_out]
-for u,pr in urls:
-    if u not in xml: new.append(f'  <url>\n    <loc>{u}</loc>\n    <lastmod>2026-06-12</lastmod>\n    <priority>{pr}</priority>\n  </url>')
-if new: xml=xml.replace("</urlset>","\n".join(new)+"\n</urlset>"); open(sp,"w").write(xml)
+# sitemap + JSON-LD check
+def finish():
+    sp=os.path.join(SITE,"sitemap.xml"); xml=open(sp).read(); new=[]
+    urls=[("https://vareadyapp.com/find-a-vso.html","0.8")]+[(f"https://vareadyapp.com/vso/{slug(STATES[sc])}.html","0.7") for sc in states_out]
+    for u,pr in urls:
+        if u not in xml: new.append(f'  <url>\n    <loc>{u}</loc>\n    <lastmod>2026-06-12</lastmod>\n    <priority>{pr}</priority>\n  </url>')
+    if new: xml=xml.replace("</urlset>","\n".join(new)+"\n</urlset>"); open(sp,"w").write(xml)
 
-import glob
-bad=0
-for f in [os.path.join(SITE,"find-a-vso.html")]+glob.glob(os.path.join(VSODIR,"*.html")):
-    for b in re.findall(r'<script type="application/ld\+json">(.*?)</script>',open(f).read(),re.S):
-        try: json.loads(b)
-        except Exception as e: bad+=1;print("BAD",f,e)
-print(f"wrote {len(states_out)} state pages + hub + finder.js; total offices {sum(len(by[sc]) for sc in states_out)}; sitemap +{len(new)}; JSON-LD bad={bad}")
+    import glob
+    bad=0
+    for f in [os.path.join(SITE,"find-a-vso.html")]+glob.glob(os.path.join(VSODIR,"*.html")):
+        for b in re.findall(r'<script type="application/ld\+json">(.*?)</script>',open(f).read(),re.S):
+            try: json.loads(b)
+            except Exception as e: bad+=1;print("BAD",f,e)
+    print(f"wrote {len(states_out)} state pages + hub + finder.js; total offices {sum(len(by[sc]) for sc in states_out)}; sitemap +{len(new)}; JSON-LD bad={bad}")
+
+if MAIN: finish()

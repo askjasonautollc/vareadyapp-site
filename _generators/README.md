@@ -19,6 +19,10 @@ from anywhere after a clone — no hardcoded `/tmp` or absolute paths.
 | `gen_mos.py` | 44 MOS / AFSC / rating pages → `../mos/*.html` + `../mos.html` (Phase 1 list in `PHASE1`) | `data/mos_profiles.json` (paginate: table is over 1,000 rows) |
 | `gen_windows.py` | `../va-disability-app-for-windows.html` (Microsoft Store landing page, 9P8XFCQVFJHF) | none (uses `../img/windows-*.jpg`) |
 | `gen_community.py` | `../community.html` (In the Community) | none (uses `../img/community-liberty-county-jumbotron-*`) |
+| `fetch_vso.py` | refreshes `data/vso_offices.json` and `data/vso_ratings.json` (stars and counts only) | Supabase REST; needs `SUPABASE_ANON_KEY` in the environment, never in the repo |
+| `gen_vso.py` | `../find-a-vso.html`, 56 state pages `../vso/<state>.html`, `../vso/finder.js` | `data/vso_offices.json`, `data/vso_ratings.json` |
+| `gen_vso_county.py` | county pages `../vso/<state>/<county>.html` for counties with 5+ offices (392 on 2026-11-24) | same as `gen_vso.py` (imports it) |
+| `gen_vso_near.py` | `../vso/near.json` for the hub's Near me button | the state pages |
 
 ## IndexNow (Bing)
 
@@ -35,6 +39,9 @@ python3 gen_states.py
 python3 gen_founders.py
 python3 gen_community.py
 python3 gen_mos.py
+# VSO finder (in this order):
+SUPABASE_ANON_KEY=... python3 fetch_vso.py
+python3 gen_vso.py && python3 gen_vso_county.py && python3 gen_vso_near.py
 ```
 
 Run `gen_guides.py` first: it regenerates `../sitemap.xml` from the core pages +
