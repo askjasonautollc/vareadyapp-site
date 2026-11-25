@@ -1,0 +1,5452 @@
+{
+ "total_in_app": 226,
+ "pages": [
+  {
+   "slug": "infantry-dismounted-patrols",
+   "activity_name": "Infantry field work and foot patrols",
+   "category": "Infantry and close combat",
+   "summary": "Day-to-day grunt work: dismounted patrols, humping gear in body armor, and living out of a pack for weeks on deployment or in training.",
+   "search_aliases": [
+    "infantry work",
+    "grunt work",
+    "humping",
+    "foot patrols",
+    "dismounted patrols",
+    "11B",
+    "0311",
+    "rifleman",
+    "boots on the ground",
+    "walking patrols",
+    "line unit",
+    "trigger puller"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps"
+   ],
+   "exposure_codes": [],
+   "common_conditions": [
+    {
+     "dc": "5237",
+     "name": "Lumbosacral or cervical strain",
+     "reason": "Hours in body armor, heavy gear and walking patrols strain the low back muscles and joints.",
+     "prevalence": "high",
+     "source_keys": [
+      "s1",
+      "s2",
+      "s3"
+     ]
+    },
+    {
+     "dc": "5258",
+     "name": "Meniscus, Dislocated (Locking, Pain, Effusion)",
+     "reason": "Loaded pivots, kneeling and rough ground tear knee cartilage; infantry show more meniscus tears.",
+     "prevalence": "high",
+     "source_keys": [
+      "s3",
+      "s4"
+     ]
+    },
+    {
+     "dc": "5271",
+     "name": "Ankle, limited motion of",
+     "reason": "Patrolling uneven ground under load rolls ankles; infantry have more ankle sprains than most jobs.",
+     "prevalence": "high",
+     "source_keys": [
+      "s5"
+     ]
+    },
+    {
+     "dc": "6260",
+     "name": "Tinnitus, recurrent",
+     "reason": "Weapons fire and blasts around combat jobs damage the inner ear and cause ringing.",
+     "prevalence": "high",
+     "source_keys": [
+      "s6"
+     ]
+    },
+    {
+     "dc": "6100",
+     "name": "Hearing loss, bilateral sensorineural",
+     "reason": "Repeated gunfire near the ear wears down hearing; combat arms Marines show worse thresholds.",
+     "prevalence": "high",
+     "source_keys": [
+      "s7"
+     ]
+    },
+    {
+     "dc": "5243",
+     "name": "Intervertebral Disc Syndrome (Herniated Disc)",
+     "reason": "Heavy armor and carry loads compress the lower discs and can push them out of place.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s8",
+      "s9"
+     ]
+    },
+    {
+     "dc": "5003",
+     "name": "Degenerative arthritis, other than post-traumatic",
+     "reason": "Service members get arthritis more than civilians their age, most often in the knee and shoulder.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s10",
+      "s11"
+     ]
+    },
+    {
+     "dc": "5279",
+     "name": "Metatarsalgia, anterior (Morton's disease), unilateral, or bilateral",
+     "reason": "Long loaded marches pound the forefoot and inflame the nerves between the toes.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s12"
+     ]
+    },
+    {
+     "dc": "8529",
+     "name": "Paralysis of external cutaneous nerve of the thigh",
+     "reason": "Hip belts and body armor press on the thigh's outer skin nerve and cause burning numbness.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s13",
+      "s14"
+     ]
+    },
+    {
+     "dc": "7338",
+     "name": "Hernia (Inguinal, Femoral, Umbilical, Ventral, Incisional)",
+     "reason": "Heavy lifting and loaded carries raise belly pressure; combat jobs show more groin hernias.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s15"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "s1",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/23532119/",
+     "pmid": "23532119",
+     "year": 2013,
+     "title": "Loads worn by soldiers predict episodes of low back pain during deployment to Afghanistan",
+     "supports": "Prospective BCT cohort in Afghanistan: infantry, hours in body armor, walking patrol, lifting hours and equipment weight predicted low back pain.",
+     "publisher": "Spine"
+    },
+    {
+     "key": "s2",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/23929059/",
+     "pmid": "23929059",
+     "year": 2013,
+     "title": "A comparison of deployed occupational tasks performed by different types of military battalions and resulting low back pain",
+     "supports": "Infantry wore the heaviest gear (70 lb), spent 49 h/wk in armor and 35 h/wk lifting; armor time predicted low back pain.",
+     "publisher": "Military medicine"
+    },
+    {
+     "key": "s3",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/21882780/",
+     "pmid": "21882780",
+     "year": 2011,
+     "title": "Diagnoses and mechanisms of musculoskeletal injuries in an infantry brigade combat team deployed to Afghanistan evaluated by the brigade physical therapist",
+     "supports": "Deployed infantry BCT: mechanical low back pain was the top diagnosis and infantry MOS was tied to meniscal tears.",
+     "publisher": "Military medicine"
+    },
+    {
+     "key": "s4",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35259766/",
+     "pmid": "35259766",
+     "year": 2022,
+     "title": "Epidemiology of Meniscus Injuries in the Military Health System and Predictive Factors for Arthroscopic Surgery",
+     "supports": "Military Health System data: meniscus injuries occur at a higher rate in the military than in the general population.",
+     "publisher": "The journal of knee surgery"
+    },
+    {
+     "key": "s5",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/33707156/",
+     "pmid": "33707156",
+     "year": 2021,
+     "title": "Sex and occupation are salient factors associated with lateral ankle sprain risk in military tactical athletes",
+     "supports": "DoD data 2006-2015: enlisted infantry had higher lateral ankle sprain risk than armor, aviation, maintenance and SOF.",
+     "publisher": "Journal of science and medicine in sport"
+    },
+    {
+     "key": "s6",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40268697/",
+     "pmid": "40268697",
+     "year": 2025,
+     "title": "Incidence and Risk Factors for Tinnitus Among Military Service Members in the Millennium Cohort Study",
+     "supports": "Millennium Cohort: new tinnitus tied to Army or Marine service, combat deployment, combat specialist jobs, mild TBI and PTSD.",
+     "publisher": "American journal of audiology"
+    },
+    {
+     "key": "s7",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/16422454/",
+     "pmid": "16422454",
+     "year": 2006,
+     "title": "Hearing thresholds for U.S. Marines: comparison of aviation, combat arms, and other personnel",
+     "supports": "Navy and Marine Corps hearing database: Marines in combat arms MOS were more likely to have elevated hearing thresholds.",
+     "publisher": "Aviation, space, and environmental medicine"
+    },
+    {
+     "key": "s8",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38554267/",
+     "pmid": "38554267",
+     "year": 2024,
+     "title": "Body Armor and Lumbar Disc Herniation in Young Military Veterans: A Case Series",
+     "supports": "VA case series: young veterans with heavy body armor and carry loads had L4-L5 and L5-S1 disc herniations (small sample).",
+     "publisher": "Military medicine"
+    },
+    {
+     "key": "s9",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/24028439/",
+     "pmid": "24028439",
+     "year": 2014,
+     "title": "Soldier occupational load carriage: a narrative review of associated injuries",
+     "supports": "Review: load carriage injuries are mostly lower limb (stress fractures, knee and foot pain), plus brachial plexus palsy, meralgia and low back injury.",
+     "publisher": "International journal of injury control and safety promotion"
+    },
+    {
+     "key": "s10",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/21717422/",
+     "pmid": "21717422",
+     "year": 2011,
+     "title": "Incidence of physician-diagnosed osteoarthritis among active duty United States military service members",
+     "supports": "DoD data: osteoarthritis rates in service members are higher than in comparable civilian age groups.",
+     "publisher": "Arthritis and rheumatism"
+    },
+    {
+     "key": "s11",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35320662/",
+     "pmid": "35320662",
+     "year": 2021,
+     "title": "Update: Osteoarthritis and Spondylosis, Active Component, U.S. Armed Forces, 2016-2020",
+     "supports": "MSMR: incident osteoarthritis in service members most often involves the knee and shoulder.",
+     "publisher": "MSMR"
+    },
+    {
+     "key": "s12",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/14964502/",
+     "pmid": "14964502",
+     "year": 2004,
+     "title": "Soldier load carriage: historical, physiological, biomechanical, and medical aspects",
+     "supports": "Army review: prolonged load carriage causes blisters, stress fractures, back strains, metatarsalgia, rucksack palsy and knee pain.",
+     "publisher": "Military medicine"
+    },
+    {
+     "key": "s13",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28285487/",
+     "pmid": "28285487",
+     "year": 2017,
+     "title": "Load Carriage-Related Paresthesias (Part 2): Meralgia Paresthetica",
+     "supports": "Review: meralgia paresthetica is compression of the thigh's lateral cutaneous nerve by hip belts, pistol belts and body armor.",
+     "publisher": "Journal of special operations medicine : a peer reviewed journal for SOF medical professionals"
+    },
+    {
+     "key": "s14",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/17615854/",
+     "pmid": "17615854",
+     "year": 2007,
+     "title": "Meralgia paresthetica due to body armor wear in U.S. soldiers serving in Iraq: a case report and review of the literature",
+     "supports": "Case report: two soldiers in Iraq developed meralgia paresthetica from repeated body armor wear.",
+     "publisher": "Military medicine"
+    },
+    {
+     "key": "s15",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32991195/",
+     "pmid": "32991195",
+     "year": 2020,
+     "title": "Incidence of inguinal hernia and repair procedures and rate of subsequent pain diagnoses, active component service members, U.S. Armed Forces, 2010-2019",
+     "supports": "MSMR: inguinal hernia incidence was higher in combat-specific occupations among active component members.",
+     "publisher": "MSMR"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "close-quarters-battle",
+   "activity_name": "Close quarters battle and room clearing",
+   "category": "Infantry and close combat",
+   "summary": "Stacking on doors, kicking or ramming them, throwing flashbangs and clearing rooms in shoot houses, MOUT sites or on real raids.",
+   "search_aliases": [
+    "kicked in doors",
+    "CQB",
+    "CQC",
+    "room clearing",
+    "shoot house",
+    "stacking up",
+    "MOUT",
+    "urban ops",
+    "flashbangs",
+    "door kicking",
+    "battering ram",
+    "Halligan"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Navy",
+    "Air Force"
+   ],
+   "exposure_codes": [
+    "blast_overpressure"
+   ],
+   "common_conditions": [
+    {
+     "dc": "6260",
+     "name": "Tinnitus, recurrent",
+     "reason": "Rifles fired inches from your head and flashbang blasts in small rooms damage the inner ear.",
+     "prevalence": "high",
+     "source_keys": [
+      "s1",
+      "s2",
+      "s3"
+     ]
+    },
+    {
+     "dc": "6100",
+     "name": "Hearing loss, bilateral sensorineural",
+     "reason": "Gunfire within 2 m and repeated blast pressure in rooms cause lasting high-pitch hearing loss.",
+     "prevalence": "high",
+     "source_keys": [
+      "s1",
+      "s4"
+     ]
+    },
+    {
+     "dc": "8045",
+     "name": "Residuals of traumatic brain injury (TBI)",
+     "reason": "Repeated flashbang and breaching charge blasts near the head are tied to brain changes over a career.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s3",
+      "s5"
+     ]
+    },
+    {
+     "dc": "5237",
+     "name": "Lumbosacral or cervical strain",
+     "reason": "Long hours in plates and gear while moving low and fast strain the low back.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s6"
+     ]
+    },
+    {
+     "dc": "5258",
+     "name": "Meniscus, Dislocated (Locking, Pain, Effusion)",
+     "reason": "Kicking doors and sharp pivots under load twist the knee and tear the meniscus.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s7",
+      "s8"
+     ]
+    },
+    {
+     "dc": "5271",
+     "name": "Ankle, limited motion of",
+     "reason": "Quick cuts on stairs, rubble and thresholds roll ankles; infantry sprain ankles more often.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s9"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "s1",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/9187006/",
+     "pmid": "9187006",
+     "year": 1997,
+     "title": "Impulse noise and acute acoustic trauma in Finnish conscripts. Number of shots fired and safe distances",
+     "supports": "Acute acoustic trauma in conscripts: 87% happened in combat training, mostly small arms, 92% within 2 m of the firearm.",
+     "publisher": "Scandinavian audiology"
+    },
+    {
+     "key": "s2",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/33492379/",
+     "pmid": "33492379",
+     "year": 2022,
+     "title": "Repeated Occupational Exposure to Low-level Blast in the Canadian Armed Forces: Effects on Hearing, Balance, and Ataxia",
+     "supports": "Breaching instructors and range staff: some blasts exceeded 3 psi and tinnitus was much more common than in controls.",
+     "publisher": "Military medicine"
+    },
+    {
+     "key": "s3",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35934872/",
+     "pmid": "35934872",
+     "year": 2023,
+     "title": "Cumulative Blast Exposure Estimate Model for Special Operations Forces Combat Soldiers",
+     "supports": "Measured flashbang and interior breaching charge blasts at breacher positions during CQB training for SOF soldiers.",
+     "publisher": "Journal of neurotrauma"
+    },
+    {
+     "key": "s4",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38984918/",
+     "pmid": "38984918",
+     "year": 2024,
+     "title": "Blast Exposure Associations With Hearing Loss and Self-Reported Hearing Difficulty",
+     "supports": "NOISE study: blast-exposed service members had higher odds of high-frequency hearing loss and hearing difficulty.",
+     "publisher": "Otolaryngology--head and neck surgery : official journal of American Academy of Otolaryngology-Head and Neck Surgery"
+    },
+    {
+     "key": "s5",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37950709/",
+     "pmid": "37950709",
+     "year": 2024,
+     "title": "Neurological Effects of Repeated Blast Exposure in Special Operations Personnel",
+     "supports": "Pilot study: career blast exposure in special operators tracked with brain inflammation and cortical volume changes.",
+     "publisher": "Journal of neurotrauma"
+    },
+    {
+     "key": "s6",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/23532119/",
+     "pmid": "23532119",
+     "year": 2013,
+     "title": "Loads worn by soldiers predict episodes of low back pain during deployment to Afghanistan",
+     "supports": "Prospective BCT cohort in Afghanistan: infantry, hours in body armor, walking patrol, lifting hours and equipment weight predicted low back pain.",
+     "publisher": "Spine"
+    },
+    {
+     "key": "s7",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/21882780/",
+     "pmid": "21882780",
+     "year": 2011,
+     "title": "Diagnoses and mechanisms of musculoskeletal injuries in an infantry brigade combat team deployed to Afghanistan evaluated by the brigade physical therapist",
+     "supports": "Deployed infantry BCT: mechanical low back pain was the top diagnosis and infantry MOS was tied to meniscal tears.",
+     "publisher": "Military medicine"
+    },
+    {
+     "key": "s8",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35259766/",
+     "pmid": "35259766",
+     "year": 2022,
+     "title": "Epidemiology of Meniscus Injuries in the Military Health System and Predictive Factors for Arthroscopic Surgery",
+     "supports": "Military Health System data: meniscus injuries occur at a higher rate in the military than in the general population.",
+     "publisher": "The journal of knee surgery"
+    },
+    {
+     "key": "s9",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/33707156/",
+     "pmid": "33707156",
+     "year": 2021,
+     "title": "Sex and occupation are salient factors associated with lateral ankle sprain risk in military tactical athletes",
+     "supports": "DoD data 2006-2015: enlisted infantry had higher lateral ankle sprain risk than armor, aviation, maintenance and SOF.",
+     "publisher": "Journal of science and medicine in sport"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "live-fire-maneuver",
+   "activity_name": "Live-fire and maneuver training",
+   "category": "Infantry and close combat",
+   "summary": "Fire and movement on live and blank ranges: bounding, 3 to 5 second rushes, diving to the prone, low crawls and squad attack lanes.",
+   "search_aliases": [
+    "live fire",
+    "bounding",
+    "rushes",
+    "I'm up he sees me I'm down",
+    "diving to the prone",
+    "low crawl",
+    "high crawl",
+    "fire and maneuver",
+    "STX lanes",
+    "squad attack",
+    "blank fire",
+    "MILES"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps"
+   ],
+   "exposure_codes": [],
+   "common_conditions": [
+    {
+     "dc": "6260",
+     "name": "Tinnitus, recurrent",
+     "reason": "Rifle and machine gun blasts near the ear in training, even blanks, trigger lasting ringing.",
+     "prevalence": "high",
+     "source_keys": [
+      "s1",
+      "s2"
+     ]
+    },
+    {
+     "dc": "6100",
+     "name": "Hearing loss, bilateral sensorineural",
+     "reason": "Impulse noise from weapons fired close by causes acoustic trauma and high-pitch hearing loss.",
+     "prevalence": "high",
+     "source_keys": [
+      "s1",
+      "s2",
+      "s3"
+     ]
+    },
+    {
+     "dc": "5271",
+     "name": "Ankle, limited motion of",
+     "reason": "Sprinting and diving on rough ground under load rolls ankles; infantry sprain them more.",
+     "prevalence": "high",
+     "source_keys": [
+      "s4"
+     ]
+    },
+    {
+     "dc": "8099-8045",
+     "name": "Heat Injury Residuals (Heat Stroke / Heat Exhaustion)",
+     "reason": "Repeated rushes in full kit on hot ranges drive core heat up; combat jobs top heat stroke rates.",
+     "prevalence": "high",
+     "source_keys": [
+      "s5",
+      "s6"
+     ]
+    },
+    {
+     "dc": "5258",
+     "name": "Meniscus, Dislocated (Locking, Pain, Effusion)",
+     "reason": "Dropping to the knees and twisting up from the prone loads and tears knee cartilage.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s7",
+      "s8"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "s1",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36834060/",
+     "pmid": "36834060",
+     "year": 2023,
+     "title": "Acute Acoustic Trauma after Exposure to Assault Rifle Noise among Conscripts in the Finnish Defence Forces-A Population-Based Survey",
+     "supports": "Finnish conscripts: 1,617 acoustic trauma hearing losses from rifle fire, 90% while firing blanks, most without ear protection.",
+     "publisher": "International journal of environmental research and public health"
+    },
+    {
+     "key": "s2",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/9187006/",
+     "pmid": "9187006",
+     "year": 1997,
+     "title": "Impulse noise and acute acoustic trauma in Finnish conscripts. Number of shots fired and safe distances",
+     "supports": "Acute acoustic trauma in conscripts: 87% happened in combat training, mostly small arms, 92% within 2 m of the firearm.",
+     "publisher": "Scandinavian audiology"
+    },
+    {
+     "key": "s3",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/16422454/",
+     "pmid": "16422454",
+     "year": 2006,
+     "title": "Hearing thresholds for U.S. Marines: comparison of aviation, combat arms, and other personnel",
+     "supports": "Navy and Marine Corps hearing database: Marines in combat arms MOS were more likely to have elevated hearing thresholds.",
+     "publisher": "Aviation, space, and environmental medicine"
+    },
+    {
+     "key": "s4",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/33707156/",
+     "pmid": "33707156",
+     "year": 2021,
+     "title": "Sex and occupation are salient factors associated with lateral ankle sprain risk in military tactical athletes",
+     "supports": "DoD data 2006-2015: enlisted infantry had higher lateral ankle sprain risk than armor, aviation, maintenance and SOF.",
+     "publisher": "Journal of science and medicine in sport"
+    },
+    {
+     "key": "s5",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35608520/",
+     "pmid": "35608520",
+     "year": 2022,
+     "title": "Update: Heat illness, active component, U.S. Armed Forces, 2021",
+     "supports": "MSMR 2021: heat stroke and heat exhaustion rates highest in Marines, Army, recruits and combat-specific occupations.",
+     "publisher": "MSMR"
+    },
+    {
+     "key": "s6",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35608507/",
+     "pmid": "35608507",
+     "year": 2022,
+     "title": "Exertional heat illness at Fort Benning, GA: Unique insights from the Army Heat Center",
+     "supports": "Army Heat Center: 1,911 heat casualties at Fort Benning 2017-2021, heat stroke tied to arduous physical activity.",
+     "publisher": "MSMR"
+    },
+    {
+     "key": "s7",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/21882780/",
+     "pmid": "21882780",
+     "year": 2011,
+     "title": "Diagnoses and mechanisms of musculoskeletal injuries in an infantry brigade combat team deployed to Afghanistan evaluated by the brigade physical therapist",
+     "supports": "Deployed infantry BCT: mechanical low back pain was the top diagnosis and infantry MOS was tied to meniscal tears.",
+     "publisher": "Military medicine"
+    },
+    {
+     "key": "s8",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34911509/",
+     "pmid": "34911509",
+     "year": 2021,
+     "title": "Occupational risk factors for meniscal lesions: a systematic review and meta-analysis",
+     "supports": "Meta-analysis: kneeling, squatting and lifting or carrying 10 to 25 kg or more raise the risk of meniscal lesions.",
+     "publisher": "BMC musculoskeletal disorders"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "combatives-training",
+   "activity_name": "Combatives and hand-to-hand training",
+   "category": "Infantry and close combat",
+   "summary": "Army Combatives, MCMAP belts, pugil sticks, ground fighting and sparring in basic training, unit programs and tournaments.",
+   "search_aliases": [
+    "combatives",
+    "MCMAP",
+    "Modern Army Combatives",
+    "MACP",
+    "pugil sticks",
+    "hand-to-hand",
+    "ground fighting",
+    "sparring",
+    "grappling",
+    "boxing",
+    "tan belt",
+    "smokers"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Air Force",
+    "Navy"
+   ],
+   "exposure_codes": [],
+   "common_conditions": [
+    {
+     "dc": "8045",
+     "name": "Residuals of traumatic brain injury (TBI)",
+     "reason": "Strikes, takedowns and head contact in sparring cause concussions.",
+     "prevalence": "high",
+     "source_keys": [
+      "s1",
+      "s2"
+     ]
+    },
+    {
+     "dc": "5257",
+     "name": "Knee, other impairment of",
+     "reason": "Takedowns and leg locks twist the knee; the knee is the most injured joint in Army Combatives.",
+     "prevalence": "high",
+     "source_keys": [
+      "s3"
+     ]
+    },
+    {
+     "dc": "5202",
+     "name": "Humerus, other impairment of",
+     "reason": "Arm bars and falls on the arm hurt the shoulder; labral repair is the top combatives surgery.",
+     "prevalence": "high",
+     "source_keys": [
+      "s3",
+      "s4"
+     ]
+    },
+    {
+     "dc": "5215",
+     "name": "Wrist, limitation of motion of",
+     "reason": "Punching and blocking jam the wrist and hand, the most injured area in hand-to-hand training.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s4"
+     ]
+    },
+    {
+     "dc": "8100",
+     "name": "Migraine",
+     "reason": "Headaches, often migraine type, are the most common lasting symptom after a military concussion.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s5",
+      "s1"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "s1",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40818615/",
+     "pmid": "40818615",
+     "year": 2025,
+     "title": "Factors associated with concussion during combatives activities in a military training environment",
+     "supports": "Service academy cohort: 484 concussions occurred during combatives training such as boxing and hand-to-hand combat.",
+     "publisher": "Journal of sport and health science"
+    },
+    {
+     "key": "s2",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29420793/",
+     "pmid": "29420793",
+     "year": 2018,
+     "title": "Injuries Sustained During Modern Army Combatives Tournaments",
+     "supports": "Fort Hood combatives tournaments: 67 injuries in 195 fighters, with MMA-style rounds 4.3 times riskier than grappling only.",
+     "publisher": "Military medicine"
+    },
+    {
+     "key": "s3",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/22338982/",
+     "pmid": "22338982",
+     "year": 2012,
+     "title": "Musculoskeletal injuries sustained in modern army combatives",
+     "supports": "Orthopedic data on 1,025 soldiers hurt in Modern Army Combatives: knee most injured, then shoulder; labral repair most common surgery.",
+     "publisher": "Military medicine"
+    },
+    {
+     "key": "s4",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29087872/",
+     "pmid": "29087872",
+     "year": 2017,
+     "title": "Prevalence and Patterns of Injury Sustained During Military Hand-to-Hand Combat Training (Krav-Maga)",
+     "supports": "IDF hand-to-hand combat training: 946 injuries in a year, fingers, hands and wrists most often, then the shoulder.",
+     "publisher": "Military medicine"
+    },
+    {
+     "key": "s5",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39028222/",
+     "pmid": "39028222",
+     "year": 2025,
+     "title": "Evaluating the Phenotypic Patterns of Post-Traumatic Headache: A Systematic Review of Military Personnel",
+     "supports": "Systematic review: post-traumatic headache is the most common symptom after military mild TBI; migraine type dominates.",
+     "publisher": "Military medicine"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "ied-blast-on-patrol",
+   "activity_name": "IED strikes and blasts on patrol",
+   "category": "Infantry and close combat",
+   "summary": "Being hit by or near an IED, mine, rocket or mortar on foot or mounted patrol, including blasts that knocked you down or out.",
+   "search_aliases": [
+    "IED",
+    "got blown up",
+    "hit an IED",
+    "blast exposure",
+    "VBIED",
+    "RPG",
+    "mortar attack",
+    "rocket attack",
+    "mounted patrol",
+    "MRAP hit",
+    "rung my bell",
+    "knocked out"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Navy",
+    "Air Force"
+   ],
+   "exposure_codes": [
+    "blast_overpressure"
+   ],
+   "common_conditions": [
+    {
+     "dc": "8045",
+     "name": "Residuals of traumatic brain injury (TBI)",
+     "reason": "Blast waves and being thrown cause concussions; about 15% of infantry reported one after Iraq.",
+     "prevalence": "high",
+     "source_keys": [
+      "s1",
+      "s2"
+     ]
+    },
+    {
+     "dc": "9411",
+     "name": "Posttraumatic stress disorder (PTSD)",
+     "reason": "Blast injury and nearby explosions are strongly tied to PTSD, highest after loss of consciousness.",
+     "prevalence": "high",
+     "source_keys": [
+      "s1",
+      "s2"
+     ]
+    },
+    {
+     "dc": "6260",
+     "name": "Tinnitus, recurrent",
+     "reason": "Blast pressure damages the ear; ringing follows many blasts and eardrum injuries.",
+     "prevalence": "high",
+     "source_keys": [
+      "s2",
+      "s3"
+     ]
+    },
+    {
+     "dc": "6100",
+     "name": "Hearing loss, bilateral sensorineural",
+     "reason": "Blast exposure is tied to lasting high-frequency hearing loss in service members.",
+     "prevalence": "high",
+     "source_keys": [
+      "s4",
+      "s3"
+     ]
+    },
+    {
+     "dc": "6211",
+     "name": "Tympanic membrane, perforation of",
+     "reason": "Blast overpressure tears the eardrum in about 1 in 6 explosion casualties.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s3"
+     ]
+    },
+    {
+     "dc": "8100",
+     "name": "Migraine",
+     "reason": "Headache, mostly migraine type, is the most common lasting symptom after blast concussion.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s5",
+      "s1"
+     ]
+    },
+    {
+     "dc": "9434",
+     "name": "Major depressive disorder",
+     "reason": "Blast-related concussion is linked to later depression, more so after more than one.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s2"
+     ]
+    },
+    {
+     "dc": "5235",
+     "name": "Vertebral fracture or dislocation",
+     "reason": "Underbody vehicle blasts drive the seat up and cause compression fractures of the spine.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s6"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "s1",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/18234750/",
+     "pmid": "18234750",
+     "year": 2008,
+     "title": "Mild traumatic brain injury in U.S. Soldiers returning from Iraq",
+     "supports": "2,525 Army infantry soldiers after Iraq: concussion with loss of consciousness tied to PTSD (43.9%) and headache.",
+     "publisher": "The New England journal of medicine"
+    },
+    {
+     "key": "s2",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/22705240/",
+     "pmid": "22705240",
+     "year": 2012,
+     "title": "Health outcomes associated with military deployment: mild traumatic brain injury, blast, trauma, and combat associations in the Florida National Guard",
+     "supports": "Florida Guard: deployment mild TBI linked to PTSD, depression and anxiety; blast linked to hearing loss and tinnitus.",
+     "publisher": "Archives of physical medicine and rehabilitation"
+    },
+    {
+     "key": "s3",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/18376162/",
+     "pmid": "18376162",
+     "year": 2008,
+     "title": "Tympanic membrane perforation and hearing loss from blast overpressure in Operation Enduring Freedom and Operation Iraqi Freedom wounded",
+     "supports": "Eardrum perforation occurred in 16% of explosion-wounded service members; most had hearing loss or tinnitus.",
+     "publisher": "The Journal of trauma"
+    },
+    {
+     "key": "s4",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38984918/",
+     "pmid": "38984918",
+     "year": 2024,
+     "title": "Blast Exposure Associations With Hearing Loss and Self-Reported Hearing Difficulty",
+     "supports": "NOISE study: blast-exposed service members had higher odds of high-frequency hearing loss and hearing difficulty.",
+     "publisher": "Otolaryngology--head and neck surgery : official journal of American Academy of Otolaryngology-Head and Neck Surgery"
+    },
+    {
+     "key": "s5",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39028222/",
+     "pmid": "39028222",
+     "year": 2025,
+     "title": "Evaluating the Phenotypic Patterns of Post-Traumatic Headache: A Systematic Review of Military Personnel",
+     "supports": "Systematic review: post-traumatic headache is the most common symptom after military mild TBI; migraine type dominates.",
+     "publisher": "Military medicine"
+    },
+    {
+     "key": "s6",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/26571178/",
+     "pmid": "26571178",
+     "year": 2016,
+     "title": "Identifying Spinal Injury Patterns in Underbody Blast to Develop Mechanistic Hypotheses",
+     "supports": "UK underbody blast victims: 101 thoracolumbar compression fractures and 39 cervical fractures among 78 casualties.",
+     "publisher": "Spine"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "firefights-ground-combat",
+   "activity_name": "Firefights and direct ground combat",
+   "category": "Infantry and close combat",
+   "summary": "Being shot at, returning fire, taking casualties and fighting through ambushes or raids as part of a ground combat unit.",
+   "search_aliases": [
+    "firefight",
+    "troops in contact",
+    "TIC",
+    "contact",
+    "got shot at",
+    "ambush",
+    "raids",
+    "combat patrol",
+    "kinetic",
+    "CIB",
+    "CAR",
+    "CAB"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Navy",
+    "Air Force"
+   ],
+   "exposure_codes": [],
+   "common_conditions": [
+    {
+     "dc": "9411",
+     "name": "Posttraumatic stress disorder (PTSD)",
+     "reason": "Infantry PTSD rates rose after Iraq, where firefights were far more common than in Afghanistan.",
+     "prevalence": "high",
+     "source_keys": [
+      "s1",
+      "s2"
+     ]
+    },
+    {
+     "dc": "9434",
+     "name": "Major depressive disorder",
+     "reason": "Heavy combat duty in infantry units raised rates of major depression after deployment.",
+     "prevalence": "high",
+     "source_keys": [
+      "s1"
+     ]
+    },
+    {
+     "dc": "6260",
+     "name": "Tinnitus, recurrent",
+     "reason": "Combat deployment and combat jobs are top risk factors for new tinnitus in service members.",
+     "prevalence": "high",
+     "source_keys": [
+      "s3"
+     ]
+    },
+    {
+     "dc": "6100",
+     "name": "Hearing loss, bilateral sensorineural",
+     "reason": "Gunfire and explosions in combat arms work wear down hearing thresholds.",
+     "prevalence": "high",
+     "source_keys": [
+      "s4",
+      "s5"
+     ]
+    },
+    {
+     "dc": "9400",
+     "name": "Generalized anxiety disorder",
+     "reason": "Combat duty raised rates of generalized anxiety in Army and Marine infantry units.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s1"
+     ]
+    },
+    {
+     "dc": "8045",
+     "name": "Residuals of traumatic brain injury (TBI)",
+     "reason": "Blasts, falls and blows in combat cause concussions in infantry soldiers.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s6"
+     ]
+    },
+    {
+     "dc": "5237",
+     "name": "Lumbosacral or cervical strain",
+     "reason": "Contact with the enemy was the top injury activity in deployed men, and the low back led.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s7"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "s1",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/15229303/",
+     "pmid": "15229303",
+     "year": 2004,
+     "title": "Combat duty in Iraq and Afghanistan, mental health problems, and barriers to care",
+     "supports": "Four Army and Marine infantry units: PTSD, major depression and anxiety screens were higher after Iraq, where combat exposure was greater.",
+     "publisher": "The New England journal of medicine"
+    },
+    {
+     "key": "s2",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/22705240/",
+     "pmid": "22705240",
+     "year": 2012,
+     "title": "Health outcomes associated with military deployment: mild traumatic brain injury, blast, trauma, and combat associations in the Florida National Guard",
+     "supports": "Florida Guard: deployment mild TBI linked to PTSD, depression and anxiety; blast linked to hearing loss and tinnitus.",
+     "publisher": "Archives of physical medicine and rehabilitation"
+    },
+    {
+     "key": "s3",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40268697/",
+     "pmid": "40268697",
+     "year": 2025,
+     "title": "Incidence and Risk Factors for Tinnitus Among Military Service Members in the Millennium Cohort Study",
+     "supports": "Millennium Cohort: new tinnitus tied to Army or Marine service, combat deployment, combat specialist jobs, mild TBI and PTSD.",
+     "publisher": "American journal of audiology"
+    },
+    {
+     "key": "s4",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/16422454/",
+     "pmid": "16422454",
+     "year": 2006,
+     "title": "Hearing thresholds for U.S. Marines: comparison of aviation, combat arms, and other personnel",
+     "supports": "Navy and Marine Corps hearing database: Marines in combat arms MOS were more likely to have elevated hearing thresholds.",
+     "publisher": "Aviation, space, and environmental medicine"
+    },
+    {
+     "key": "s5",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38984918/",
+     "pmid": "38984918",
+     "year": 2024,
+     "title": "Blast Exposure Associations With Hearing Loss and Self-Reported Hearing Difficulty",
+     "supports": "NOISE study: blast-exposed service members had higher odds of high-frequency hearing loss and hearing difficulty.",
+     "publisher": "Otolaryngology--head and neck surgery : official journal of American Academy of Otolaryngology-Head and Neck Surgery"
+    },
+    {
+     "key": "s6",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/18234750/",
+     "pmid": "18234750",
+     "year": 2008,
+     "title": "Mild traumatic brain injury in U.S. Soldiers returning from Iraq",
+     "supports": "2,525 Army infantry soldiers after Iraq: concussion with loss of consciousness tied to PTSD (43.9%) and headache.",
+     "publisher": "The New England journal of medicine"
+    },
+    {
+     "key": "s7",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25643377/",
+     "pmid": "25643377",
+     "year": 2015,
+     "title": "A description of injuries in men and women while serving in Afghanistan",
+     "supports": "BCT in Afghanistan: low back was the most injured region in men, and contact with the enemy was the top injury activity.",
+     "publisher": "Military medicine"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "shoulder-fired-heavy-weapons",
+   "activity_name": "Firing shoulder-fired rockets and recoilless",
+   "category": "Weapons, blast and noise",
+   "summary": "Firing or crewing the AT4, Carl Gustaf (M3 MAAWS), SMAW, LAW or Javelin, which put a strong blast wave on the gunner and crew.",
+   "search_aliases": [
+    "AT4",
+    "Carl Gustaf",
+    "Goose",
+    "MAAWS",
+    "SMAW",
+    "LAW",
+    "Javelin",
+    "rocket launcher",
+    "bazooka",
+    "recoilless rifle",
+    "84 mike mike",
+    "assaultman"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps"
+   ],
+   "exposure_codes": [
+    "blast_overpressure"
+   ],
+   "common_conditions": [
+    {
+     "dc": "6260",
+     "name": "Tinnitus, recurrent",
+     "reason": "Back blast and launch noise near the ear can damage hair cells and leave lasting ringing.",
+     "prevalence": "high",
+     "source_keys": [
+      "s1",
+      "s2",
+      "s3"
+     ]
+    },
+    {
+     "dc": "6100",
+     "name": "Hearing loss, bilateral sensorineural",
+     "reason": "The MAAWS reaches about 190 dB at the gunner's ear, loud enough to injure even protected ears.",
+     "prevalence": "high",
+     "source_keys": [
+      "s4",
+      "s5"
+     ]
+    },
+    {
+     "dc": "8045",
+     "name": "Residuals of traumatic brain injury (TBI)",
+     "reason": "Shoulder-fired weapons gave the highest measured blast on the body, and blast jobs carry more TBI diagnoses.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s6",
+      "s3"
+     ]
+    },
+    {
+     "dc": "8100",
+     "name": "Migraine",
+     "reason": "Repeated low-level blast is tied to headache diagnoses and post-firing headaches.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s3",
+      "s2"
+     ]
+    },
+    {
+     "dc": "9411",
+     "name": "Posttraumatic stress disorder (PTSD)",
+     "reason": "Service members in high-blast jobs were diagnosed with PTSD more often than those in low-blast jobs.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s3"
+     ]
+    },
+    {
+     "dc": "9400",
+     "name": "Generalized anxiety disorder",
+     "reason": "High-blast jobs also showed more anxiety disorder diagnoses in DoD medical records.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s3"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "s1",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32849167/",
+     "pmid": "32849167",
+     "year": 2020,
+     "title": "Association of MOS-Based Blast Exposure With Medical Outcomes.",
+     "supports": "Among 50,254 matched pairs, MOSs with likely blast exposure had higher risk of tinnitus visits at every career stage.",
+     "publisher": "Front Neurol"
+    },
+    {
+     "key": "s2",
+     "url": "https://www.denix.osd.mil/soh/denix-files/sites/21/2024/04/Interim-Safety-Guidance-For-Managing-Brain-Health-Risk-From-Blast-Overpressure-3.pdf",
+     "pmid": null,
+     "year": 2021,
+     "title": "Interim Recommendation for Blast Overpressure Exposure Safety for Brain Health (NDAA FY2018 Section 734)",
+     "supports": "DoD review: repeated blast tied to post-concussive symptoms; heavy weapons tied to tinnitus and hearing loss; top concerns tinnitus, hearing, headache, memory, attention, mood.",
+     "publisher": "Defense Health Agency, Section 734 Workgroup"
+    },
+    {
+     "key": "s3",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34948535/",
+     "pmid": "34948535",
+     "year": 2021,
+     "title": "Occupational Risk of Low-Level Blast Exposure and TBI-Related Medical Diagnoses: A Population-Based Epidemiological Investigation (2005-2015).",
+     "supports": "In over 2 million service members, high-blast jobs (artillery, armor, infantry and gun crews, combat engineers, rocket artillery, instructors) had more TBI, tinnitus, hearing problems, headaches, PTSD and anxiety.",
+     "publisher": "Int J Environ Res Public Health"
+    },
+    {
+     "key": "s4",
+     "url": "https://nap.nationalacademies.org/read/11443/chapter/5",
+     "pmid": null,
+     "year": 2006,
+     "title": "Noise and Military Service: Implications for Hearing Loss and Tinnitus (Chapter 3: Noise and Noise-Induced Hearing Loss in the Military)",
+     "supports": "Lists shooter-ear impulse levels (M16 157 dBP, M2 .50 cal 153, M249 160, M26 grenade 164, LAW 182, MAAWS 190, M119 howitzer 183 dBP) and higher hearing thresholds in infantry, armor, artillery and high-noise Navy jobs.",
+     "publisher": "Institute of Medicine, National Academies Press"
+    },
+    {
+     "key": "s5",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/9187006/",
+     "pmid": "9187006",
+     "year": 1997,
+     "title": "Impulse noise and acute acoustic trauma in Finnish conscripts. Number of shots fired and safe distances.",
+     "supports": "449 acute acoustic trauma cases: 83% from small arms, 41% from a single shot, and most injuries in protected ears came from heavy arms.",
+     "publisher": "Scand Audiol"
+    },
+    {
+     "key": "s6",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37305738/",
+     "pmid": "37305738",
+     "year": 2023,
+     "title": "Dynamic monitoring of service members to quantify blast exposure levels during combat training using BlackBox Biometrics Blast Gauges: explosive breaching, shoulder-fired weapons, artillery, mortars, and 0.50 caliber guns.",
+     "supports": "Body-worn gauges on 202 service members: the highest peak overpressure (13.1 psi) came from shoulder-fired weapon training.",
+     "publisher": "Front Neurol"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "artillery-cannon-rocket-crew",
+   "activity_name": "Artillery cannon and rocket crew",
+   "category": "Weapons, blast and noise",
+   "summary": "Firing towed or self-propelled howitzers, or crewing MLRS and HIMARS rocket launchers, with repeated muzzle blast at the gun line.",
+   "search_aliases": [
+    "cannon crewmember",
+    "cannon cocker",
+    "gun bunny",
+    "redleg",
+    "howitzer",
+    "M777",
+    "Paladin",
+    "155",
+    "13B",
+    "0811",
+    "HIMARS",
+    "MLRS"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps"
+   ],
+   "exposure_codes": [
+    "blast_overpressure"
+   ],
+   "common_conditions": [
+    {
+     "dc": "6260",
+     "name": "Tinnitus, recurrent",
+     "reason": "Each round's muzzle blast hits the crew's ears, and blast jobs log more tinnitus visits.",
+     "prevalence": "high",
+     "source_keys": [
+      "s1",
+      "s2"
+     ]
+    },
+    {
+     "dc": "6100",
+     "name": "Hearing loss, bilateral sensorineural",
+     "reason": "Howitzers reach 178 to 183 dB at the gunner, and hearing worsens with years and rounds fired.",
+     "prevalence": "high",
+     "source_keys": [
+      "s3",
+      "s4"
+     ]
+    },
+    {
+     "dc": "8045",
+     "name": "Residuals of traumatic brain injury (TBI)",
+     "reason": "Repeated blast at the gun line is tied to brain chemistry changes and more TBI diagnoses.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s5",
+      "s2"
+     ]
+    },
+    {
+     "dc": "8100",
+     "name": "Migraine",
+     "reason": "Artillery and rocket crews fall in the high-blast job group linked to more headache diagnoses.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s2",
+      "s6"
+     ]
+    },
+    {
+     "dc": "9411",
+     "name": "Posttraumatic stress disorder (PTSD)",
+     "reason": "High-blast jobs, including artillery and rocket crews, had more PTSD diagnoses.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s2"
+     ]
+    },
+    {
+     "dc": "9400",
+     "name": "Generalized anxiety disorder",
+     "reason": "High-blast jobs, including artillery and rocket crews, had more anxiety disorder diagnoses.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s2"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "s1",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32849167/",
+     "pmid": "32849167",
+     "year": 2020,
+     "title": "Association of MOS-Based Blast Exposure With Medical Outcomes.",
+     "supports": "Among 50,254 matched pairs, MOSs with likely blast exposure had higher risk of tinnitus visits at every career stage.",
+     "publisher": "Front Neurol"
+    },
+    {
+     "key": "s2",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34948535/",
+     "pmid": "34948535",
+     "year": 2021,
+     "title": "Occupational Risk of Low-Level Blast Exposure and TBI-Related Medical Diagnoses: A Population-Based Epidemiological Investigation (2005-2015).",
+     "supports": "In over 2 million service members, high-blast jobs (artillery, armor, infantry and gun crews, combat engineers, rocket artillery, instructors) had more TBI, tinnitus, hearing problems, headaches, PTSD and anxiety.",
+     "publisher": "Int J Environ Res Public Health"
+    },
+    {
+     "key": "s3",
+     "url": "https://nap.nationalacademies.org/read/11443/chapter/5",
+     "pmid": null,
+     "year": 2006,
+     "title": "Noise and Military Service: Implications for Hearing Loss and Tinnitus (Chapter 3: Noise and Noise-Induced Hearing Loss in the Military)",
+     "supports": "Lists shooter-ear impulse levels (M16 157 dBP, M2 .50 cal 153, M249 160, M26 grenade 164, LAW 182, MAAWS 190, M119 howitzer 183 dBP) and higher hearing thresholds in infantry, armor, artillery and high-noise Navy jobs.",
+     "publisher": "Institute of Medicine, National Academies Press"
+    },
+    {
+     "key": "s4",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39523222/",
+     "pmid": "39523222",
+     "year": 2024,
+     "title": "Determination of conventional and high frequency hearing thresholds of infantry and artillery.",
+     "supports": "Artillery personnel had higher hearing thresholds than controls, rising with years of service and number of shots fired.",
+     "publisher": "J Laryngol Otol"
+    },
+    {
+     "key": "s5",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36940008/",
+     "pmid": "36940008",
+     "year": 2023,
+     "title": "Two-dimensional correlated spectroscopy records reduced neurotransmission in blast-exposed artillery soldiers after live fire training.",
+     "supports": "Brain scans of soldiers before and after a week of artillery live fire showed chemical changes linked to disrupted neurotransmission.",
+     "publisher": "NMR Biomed"
+    },
+    {
+     "key": "s6",
+     "url": "https://www.denix.osd.mil/soh/denix-files/sites/21/2024/04/Interim-Safety-Guidance-For-Managing-Brain-Health-Risk-From-Blast-Overpressure-3.pdf",
+     "pmid": null,
+     "year": 2021,
+     "title": "Interim Recommendation for Blast Overpressure Exposure Safety for Brain Health (NDAA FY2018 Section 734)",
+     "supports": "DoD review: repeated blast tied to post-concussive symptoms; heavy weapons tied to tinnitus and hearing loss; top concerns tinnitus, hearing, headache, memory, attention, mood.",
+     "publisher": "Defense Health Agency, Section 734 Workgroup"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "mortar-crew",
+   "activity_name": "Mortar crew",
+   "category": "Weapons, blast and noise",
+   "summary": "Hanging and firing 60, 81 and 120 mm mortars, often hundreds of rounds in a training cycle, with the crew close to the tube.",
+   "search_aliases": [
+    "mortarman",
+    "mortars",
+    "11C",
+    "0341",
+    "hanging rounds",
+    "81s",
+    "60 mike mike",
+    "120 mortar",
+    "indirect fire",
+    "gun team"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps"
+   ],
+   "exposure_codes": [
+    "blast_overpressure"
+   ],
+   "common_conditions": [
+    {
+     "dc": "6260",
+     "name": "Tinnitus, recurrent",
+     "reason": "Most mortarmen in one Ranger study reported ear ringing during a single week of firing.",
+     "prevalence": "high",
+     "source_keys": [
+      "s1",
+      "s2"
+     ]
+    },
+    {
+     "dc": "6100",
+     "name": "Hearing loss, bilateral sensorineural",
+     "reason": "Infantry jobs with repeated blast, mortars included, show more hearing problem diagnoses.",
+     "prevalence": "high",
+     "source_keys": [
+      "s2",
+      "s3"
+     ]
+    },
+    {
+     "dc": "8045",
+     "name": "Residuals of traumatic brain injury (TBI)",
+     "reason": "Mortar blast caused concussion-like symptoms and slower pupil responses, even under the 4 psi limit.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s1",
+      "s2"
+     ]
+    },
+    {
+     "dc": "8100",
+     "name": "Migraine",
+     "reason": "Over 70% of mortarmen in one study had headaches during a week of live fire.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s1",
+      "s2"
+     ]
+    },
+    {
+     "dc": "9411",
+     "name": "Posttraumatic stress disorder (PTSD)",
+     "reason": "High-blast infantry jobs had more PTSD diagnoses than low-blast jobs.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s2"
+     ]
+    },
+    {
+     "dc": "9400",
+     "name": "Generalized anxiety disorder",
+     "reason": "High-blast infantry jobs had more anxiety disorder diagnoses than low-blast jobs.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s2"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "s1",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34557921/",
+     "pmid": "34557921",
+     "year": 2023,
+     "title": "Repetitive Low-level Blast Exposure and Neurocognitive Effects in Army Ranger Mortarmen.",
+     "supports": "Over 70% of Ranger mortarmen firing 81 and 120 mm mortars had headaches, ear ringing and memory problems during the training week.",
+     "publisher": "Mil Med"
+    },
+    {
+     "key": "s2",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34948535/",
+     "pmid": "34948535",
+     "year": 2021,
+     "title": "Occupational Risk of Low-Level Blast Exposure and TBI-Related Medical Diagnoses: A Population-Based Epidemiological Investigation (2005-2015).",
+     "supports": "In over 2 million service members, high-blast jobs (artillery, armor, infantry and gun crews, combat engineers, rocket artillery, instructors) had more TBI, tinnitus, hearing problems, headaches, PTSD and anxiety.",
+     "publisher": "Int J Environ Res Public Health"
+    },
+    {
+     "key": "s3",
+     "url": "https://nap.nationalacademies.org/read/11443/chapter/5",
+     "pmid": null,
+     "year": 2006,
+     "title": "Noise and Military Service: Implications for Hearing Loss and Tinnitus (Chapter 3: Noise and Noise-Induced Hearing Loss in the Military)",
+     "supports": "Lists shooter-ear impulse levels (M16 157 dBP, M2 .50 cal 153, M249 160, M26 grenade 164, LAW 182, MAAWS 190, M119 howitzer 183 dBP) and higher hearing thresholds in infantry, armor, artillery and high-noise Navy jobs.",
+     "publisher": "Institute of Medicine, National Academies Press"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "rifle-pistol-ranges",
+   "activity_name": "Rifle and pistol ranges, indoor and outdoor",
+   "category": "Weapons, blast and noise",
+   "summary": "Qualifying, coaching or running ranges with rifles and pistols, including indoor ranges and shoot houses where lead dust and noise build up.",
+   "search_aliases": [
+    "range day",
+    "rifle qual",
+    "pistol qual",
+    "marksmanship",
+    "range cadre",
+    "range safety",
+    "PMI",
+    "KD range",
+    "indoor range",
+    "shoot house",
+    "M4",
+    "M9"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Navy",
+    "Air Force",
+    "Coast Guard"
+   ],
+   "exposure_codes": [],
+   "common_conditions": [
+    {
+     "dc": "6260",
+     "name": "Tinnitus, recurrent",
+     "reason": "Each rifle or pistol shot is about 157 dB at the shooter's ear and can trigger acoustic trauma.",
+     "prevalence": "high",
+     "source_keys": [
+      "s1",
+      "s2"
+     ]
+    },
+    {
+     "dc": "6100",
+     "name": "Hearing loss, bilateral sensorineural",
+     "reason": "Most acute acoustic trauma in one military series came from small arms within 2 meters of the ear.",
+     "prevalence": "high",
+     "source_keys": [
+      "s2",
+      "s1"
+     ]
+    },
+    {
+     "dc": "7101",
+     "name": "Hypertensive vascular disease (hypertension and isolated systolic hypertension)",
+     "reason": "Range lead raises blood lead, and even low blood lead is linked to higher blood pressure.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s3",
+      "s4",
+      "s5"
+     ]
+    },
+    {
+     "dc": "7535",
+     "name": "Toxic Nephropathy (Drug/Heavy Metal Kidney Damage)",
+     "reason": "Lead absorbed from range dust and fumes is linked to reduced kidney function over time.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s6",
+      "s5"
+     ]
+    },
+    {
+     "dc": "6600",
+     "name": "Bronchitis, chronic",
+     "reason": "Heavy indoor range use is linked to cough, mucus and early airway narrowing from gunshot fumes.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s7"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "s1",
+     "url": "https://nap.nationalacademies.org/read/11443/chapter/5",
+     "pmid": null,
+     "year": 2006,
+     "title": "Noise and Military Service: Implications for Hearing Loss and Tinnitus (Chapter 3: Noise and Noise-Induced Hearing Loss in the Military)",
+     "supports": "Lists shooter-ear impulse levels (M16 157 dBP, M2 .50 cal 153, M249 160, M26 grenade 164, LAW 182, MAAWS 190, M119 howitzer 183 dBP) and higher hearing thresholds in infantry, armor, artillery and high-noise Navy jobs.",
+     "publisher": "Institute of Medicine, National Academies Press"
+    },
+    {
+     "key": "s2",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/9187006/",
+     "pmid": "9187006",
+     "year": 1997,
+     "title": "Impulse noise and acute acoustic trauma in Finnish conscripts. Number of shots fired and safe distances.",
+     "supports": "449 acute acoustic trauma cases: 83% from small arms, 41% from a single shot, and most injuries in protected ears came from heavy arms.",
+     "publisher": "Scand Audiol"
+    },
+    {
+     "key": "s3",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/33201787/",
+     "pmid": "33201787",
+     "year": 2020,
+     "title": "Reduction in lead exposures with lead-free ammunition in an advanced urban assault course.",
+     "supports": "Army course data: soldiers' blood lead rose a mean 13.3 ug/dL over 45 days of range and shoot house firing with lead ammunition.",
+     "publisher": "J Occup Environ Hyg"
+    },
+    {
+     "key": "s4",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28376827/",
+     "pmid": "28376827",
+     "year": 2017,
+     "title": "Lead exposure at firing ranges-a review.",
+     "supports": "Review of 36 studies: shooters at firing ranges, including military, often have blood lead above 10 to 40 ug/dL tied to rounds fired.",
+     "publisher": "Environ Health"
+    },
+    {
+     "key": "s5",
+     "url": "https://ntp.niehs.nih.gov/sites/default/files/ntp/ohat/lead/final/monographhealtheffectslowlevellead_newissn_508.pdf",
+     "pmid": null,
+     "year": 2012,
+     "title": "NTP Monograph on Health Effects of Low-Level Lead",
+     "supports": "Sufficient evidence in adults that blood lead under 10 ug/dL raises blood pressure and hypertension, and under 5 ug/dL lowers kidney function.",
+     "publisher": "National Toxicology Program, U.S. Department of Health and Human Services"
+    },
+    {
+     "key": "s6",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/24759656/",
+     "pmid": "24759656",
+     "year": 2014,
+     "title": "Indoor firing ranges and elevated blood lead levels - United States, 2002-2013.",
+     "supports": "CDC/NIOSH: indoor firing ranges are a documented source of elevated blood lead in range workers and shooters.",
+     "publisher": "MMWR Morb Mortal Wkly Rep"
+    },
+    {
+     "key": "s7",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36539958/",
+     "pmid": "36539958",
+     "year": 2023,
+     "title": "Long-term indoor gunshot exposure of special police forces induces bronchitic reactions and elevated blood lead levels-The Berlin shooting range study.",
+     "supports": "Officers with heavy indoor range exposure had more cough and breathing symptoms, early airway obstruction and higher blood lead.",
+     "publisher": "J Cachexia Sarcopenia Muscle"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "ruck-marching",
+   "activity_name": "Ruck marching and load carriage",
+   "category": "Load, impact and training",
+   "summary": "Road marches and foot movements carrying a rucksack, weapon and gear, often 50 pounds or more, over miles of road and rough ground.",
+   "search_aliases": [
+    "rucking",
+    "ruck march",
+    "road march",
+    "humping a ruck",
+    "forced march",
+    "foot march",
+    "carrying a heavy pack",
+    "12 mile ruck",
+    "hump",
+    "load bearing"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Navy",
+    "Air Force"
+   ],
+   "exposure_codes": [],
+   "common_conditions": [
+    {
+     "dc": "5237 (2)",
+     "name": "Lumbosacral strain (low back)",
+     "reason": "Heavy packs load the low back for hours and strain its muscles and ligaments.",
+     "prevalence": "high",
+     "source_keys": [
+      "1603388",
+      "14964502"
+     ]
+    },
+    {
+     "dc": "5299-5261",
+     "name": "Patellofemoral Pain Syndrome (PFPS)",
+     "reason": "Carrying load downhill and over distance loads the kneecap joint and causes chronic knee pain.",
+     "prevalence": "high",
+     "source_keys": [
+      "14964502",
+      "24028439"
+     ]
+    },
+    {
+     "dc": "5262",
+     "name": "Tibia and fibula, impairment of",
+     "reason": "Repeated foot strikes under load can crack the tibia or fibula as a stress fracture.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "24028439",
+      "14964502"
+     ]
+    },
+    {
+     "dc": "5284",
+     "name": "Foot injuries, other",
+     "reason": "Long marches under load cause metatarsal stress fractures and lasting foot injury.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "24028439",
+      "28986087"
+     ]
+    },
+    {
+     "dc": "5279",
+     "name": "Metatarsalgia, anterior (Morton's disease), unilateral, or bilateral",
+     "reason": "Load pressing through the forefoot on long marches causes metatarsalgia.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "14964502"
+     ]
+    },
+    {
+     "dc": "8510",
+     "name": "Paralysis of upper radicular group (5th and 6th cervicals)",
+     "reason": "Rucksack straps press on the brachial plexus and can cause rucksack palsy in the arm.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "28088822",
+      "24028439"
+     ]
+    },
+    {
+     "dc": "8529",
+     "name": "Paralysis of external cutaneous nerve of the thigh",
+     "reason": "Hip belts press on the outer thigh nerve and cause numb, burning thighs (meralgia paresthetica).",
+     "prevalence": "moderate",
+     "source_keys": [
+      "28285487",
+      "24028439"
+     ]
+    },
+    {
+     "dc": "8519",
+     "name": "Paralysis of long thoracic nerve",
+     "reason": "Ruck straps can compress the long thoracic nerve and cause shoulder blade weakness.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "33231605"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "1603388",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/1603388/",
+     "pmid": "1603388",
+     "year": 1992,
+     "title": "Injuries associated with strenuous road marching.",
+     "supports": "In a 20 km, 46 kg road march, 24% of infantry soldiers were injured; all injuries hit the legs or back.",
+     "publisher": "Military Medicine"
+    },
+    {
+     "key": "14964502",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/14964502/",
+     "pmid": "14964502",
+     "year": 2004,
+     "title": "Soldier load carriage: historical, physiological, biomechanical, and medical aspects.",
+     "supports": "Army review listing common load carriage injuries: stress fractures, back strains, metatarsalgia, rucksack palsy and knee pain.",
+     "publisher": "Military Medicine"
+    },
+    {
+     "key": "24028439",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/24028439/",
+     "pmid": "24028439",
+     "year": 2014,
+     "title": "Soldier occupational load carriage: a narrative review of associated injuries.",
+     "supports": "Load carriage injuries center on the lower limbs: stress fractures, knee and foot pain, neuropathies, back injuries and rucksack palsy.",
+     "publisher": "Int J Inj Contr Saf Promot"
+    },
+    {
+     "key": "28986087",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28986087/",
+     "pmid": "28986087",
+     "year": 2017,
+     "title": "Risk factors for injury associated with low, moderate, and high mileage road marching in a U.S. Army infantry brigade.",
+     "supports": "APHC study: road marching injury risk rises with load over 25% of body weight and with more pound-miles per month.",
+     "publisher": "J Sci Med Sport"
+    },
+    {
+     "key": "28088822",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28088822/",
+     "pmid": "28088822",
+     "year": 2016,
+     "title": "Load Carriage-Related Paresthesias: Part 1: Rucksack Palsy and Digitalgia Paresthetica.",
+     "supports": "Rucksack palsy is a traction or compression injury of the brachial plexus caused by rucksack shoulder straps.",
+     "publisher": "J Spec Oper Med"
+    },
+    {
+     "key": "28285487",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28285487/",
+     "pmid": "28285487",
+     "year": 2017,
+     "title": "Load Carriage-Related Paresthesias (Part 2): Meralgia Paresthetica.",
+     "supports": "Meralgia paresthetica (lateral femoral cutaneous nerve) is reported from hip belts, pistol belts, parachute harnesses and body armor.",
+     "publisher": "J Spec Oper Med"
+    },
+    {
+     "key": "33231605",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/33231605/",
+     "pmid": "33231605",
+     "year": 2021,
+     "title": "Isolated Mononeuropathy From Rucksack Palsy: A Case Series.",
+     "supports": "Walter Reed case series of rucksack-related long thoracic and spinal accessory nerve injuries.",
+     "publisher": "Military Medicine"
+    }
+   ],
+   "proof_count": 4,
+   "prompt_count": 6
+  },
+  {
+   "slug": "parachute-jumps",
+   "activity_name": "Parachute jumps",
+   "category": "Load, impact and training",
+   "summary": "Static line and military freefall (HALO/HAHO) jumps, including opening shock, night and combat-load jumps, and parachute landing falls.",
+   "search_aliases": [
+    "airborne",
+    "jumping out of planes",
+    "static line",
+    "HALO",
+    "HAHO",
+    "freefall",
+    "PLF",
+    "parachute landing fall",
+    "jump wings",
+    "night jump",
+    "Hollywood jump",
+    "mass tactical jump"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Navy",
+    "Air Force"
+   ],
+   "exposure_codes": [],
+   "common_conditions": [
+    {
+     "dc": "5271",
+     "name": "Ankle, limited motion of",
+     "reason": "The ankle takes the most parachute landing injuries, sprains and fractures.",
+     "prevalence": "high",
+     "source_keys": [
+      "9274742",
+      "28068166"
+     ]
+    },
+    {
+     "dc": "8045",
+     "name": "Residuals of traumatic brain injury (TBI)",
+     "reason": "Head strikes on landing cause closed head injuries, about 3 per 1,000 jumps.",
+     "prevalence": "high",
+     "source_keys": [
+      "24597153",
+      "9121659"
+     ]
+    },
+    {
+     "dc": "5237 (2)",
+     "name": "Lumbosacral strain (low back)",
+     "reason": "Hard landings and opening shock strain the back; back strains rank among top jump injuries.",
+     "prevalence": "high",
+     "source_keys": [
+      "9121659",
+      "10414070"
+     ]
+    },
+    {
+     "dc": "5237 (1)",
+     "name": "Cervical strain (neck)",
+     "reason": "Parachute opening shock and landings jolt the neck under helmet weight and strain it.",
+     "prevalence": "high",
+     "source_keys": [
+      "42048248",
+      "9121659"
+     ]
+    },
+    {
+     "dc": "5257",
+     "name": "Knee, other impairment of",
+     "reason": "Hard or twisting landings can tear knee ligaments.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "9274742",
+      "10451583"
+     ]
+    },
+    {
+     "dc": "5262",
+     "name": "Tibia and fibula, impairment of",
+     "reason": "Landing forces can fracture the lower leg; fractures lead freefall training injuries.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "10414070",
+      "9274742"
+     ]
+    },
+    {
+     "dc": "5243",
+     "name": "Intervertebral Disc Syndrome (Herniated Disc)",
+     "reason": "Sudden neck flexion at canopy opening has been linked to cervical disc protrusion.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "9056033"
+     ]
+    },
+    {
+     "dc": "8529",
+     "name": "Paralysis of external cutaneous nerve of the thigh",
+     "reason": "Parachute harness straps can compress the outer thigh nerve (meralgia paresthetica).",
+     "prevalence": "moderate",
+     "source_keys": [
+      "28285487"
+     ]
+    },
+    {
+     "dc": "5003",
+     "name": "Degenerative arthritis, other than post-traumatic",
+     "reason": "Veteran military parachutists show higher rates of knee and hip arthritis.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "27115044"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "9274742",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/9274742/",
+     "pmid": "9274742",
+     "year": 1997,
+     "title": "Injuries in military parachuting: a prospective study of 4499 jumps.",
+     "supports": "The ankle was the most injured site and 80% of jump injuries hit the legs; severe ones included fractures and knee ligament tears.",
+     "publisher": "Injury"
+    },
+    {
+     "key": "28068166",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28068166/",
+     "pmid": "28068166",
+     "year": 2016,
+     "title": "Risk Factors for Injuries During Military Static-Line Airborne Operations: A Systematic Review and Meta-Analysis.",
+     "supports": "APHC meta-analysis: night jumps, combat loads, high winds and skipping the parachute ankle brace raise jump injury risk.",
+     "publisher": "J Athl Train"
+    },
+    {
+     "key": "24597153",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/24597153/",
+     "pmid": "24597153",
+     "year": 2014,
+     "title": "Risk factors for closed-head injuries during military airborne operations.",
+     "supports": "In 96,132 jumps there were 310 closed-head injuries; 98% came on landing.",
+     "publisher": "Aviat Space Environ Med"
+    },
+    {
+     "key": "9121659",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/9121659/",
+     "pmid": "9121659",
+     "year": 1997,
+     "title": "Parachuting injury surveillance, Fort Bragg, North Carolina, May 1993 to December 1994.",
+     "supports": "At Fort Bragg, leg injuries, back and neck strains and closed head injuries were the leading jump injuries.",
+     "publisher": "Military Medicine"
+    },
+    {
+     "key": "10414070",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/10414070/",
+     "pmid": "10414070",
+     "year": 1999,
+     "title": "Military free fall training injuries.",
+     "supports": "HALO training injuries were mostly fractures and sprains, hitting the legs, arms and spine, mainly on landing.",
+     "publisher": "Military Medicine"
+    },
+    {
+     "key": "42048248",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42048248/",
+     "pmid": "42048248",
+     "year": 2026,
+     "title": "Cervical Spine Injuries and Head-Supported Mass: A Descriptive Epidemiology Study in Special Operations Combat Soldiers.",
+     "supports": "Special operators reported neck sprains and strains from whiplash, parachute opening shock and landings while wearing helmets.",
+     "publisher": "Military Medicine"
+    },
+    {
+     "key": "10451583",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/10451583/",
+     "pmid": "10451583",
+     "year": 1999,
+     "title": "Military parachuting injuries: a literature review.",
+     "supports": "Occupational medicine review of static line parachuting injury mechanisms and classic parachuting injuries.",
+     "publisher": "Occup Med (Lond)"
+    },
+    {
+     "key": "9056033",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/9056033/",
+     "pmid": "9056033",
+     "year": 1997,
+     "title": "Neck injury after repeated flexions due to parachuting.",
+     "supports": "Case: HALO canopy opening led to C7 root damage with cervical disc protrusions and degeneration.",
+     "publisher": "Aviat Space Environ Med"
+    },
+    {
+     "key": "28285487",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28285487/",
+     "pmid": "28285487",
+     "year": 2017,
+     "title": "Load Carriage-Related Paresthesias (Part 2): Meralgia Paresthetica.",
+     "supports": "Meralgia paresthetica (lateral femoral cutaneous nerve) is reported from hip belts, pistol belts, parachute harnesses and body armor.",
+     "publisher": "J Spec Oper Med"
+    },
+    {
+     "key": "27115044",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/27115044/",
+     "pmid": "27115044",
+     "year": 2016,
+     "title": "Osteoarthritis and the Tactical Athlete: A Systematic Review.",
+     "supports": "Service members and veteran parachutists had higher rates of knee, hip or any osteoarthritis than unexposed groups.",
+     "publisher": "J Athl Train"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "basic-training",
+   "activity_name": "Basic training and boot camp",
+   "category": "Load, impact and training",
+   "summary": "Initial entry training: sudden jumps in running, marching, drill and field training for weeks, often in heat, before the body adapts.",
+   "search_aliases": [
+    "boot camp",
+    "basic",
+    "BCT",
+    "initial entry training",
+    "IET",
+    "recruit training",
+    "OSUT",
+    "OCS",
+    "drill sergeants",
+    "Parris Island",
+    "Great Lakes",
+    "Lackland"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Navy",
+    "Air Force",
+    "Space Force",
+    "Coast Guard"
+   ],
+   "exposure_codes": [],
+   "common_conditions": [
+    {
+     "dc": "5262",
+     "name": "Tibia and fibula, impairment of",
+     "reason": "A sudden jump in running and marching cracks the tibia; recruit stress fracture rates are high.",
+     "prevalence": "high",
+     "source_keys": [
+      "41302705",
+      "28599045"
+     ]
+    },
+    {
+     "dc": "5299-5024",
+     "name": "Shin Splints (Medial Tibial Stress Syndrome)",
+     "reason": "Shin splints affect 35% to 56% of recruits as training loads ramp up fast.",
+     "prevalence": "high",
+     "source_keys": [
+      "39660227",
+      "24500537"
+     ]
+    },
+    {
+     "dc": "5299-5261",
+     "name": "Patellofemoral Pain Syndrome (PFPS)",
+     "reason": "The knee is the most injured site in basic training, much of it overuse kneecap pain.",
+     "prevalence": "high",
+     "source_keys": [
+      "30623395",
+      "8450721"
+     ]
+    },
+    {
+     "dc": "5284",
+     "name": "Foot injuries, other",
+     "reason": "Metatarsal stress fractures are among the most common recruit foot injuries.",
+     "prevalence": "high",
+     "source_keys": [
+      "41302705"
+     ]
+    },
+    {
+     "dc": "5255",
+     "name": "Femur, impairment of",
+     "reason": "Femoral neck stress fractures in trainees can need surgery and end service.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "35319514",
+      "28599045"
+     ]
+    },
+    {
+     "dc": "5271",
+     "name": "Ankle, limited motion of",
+     "reason": "Ankle sprains are a leading recruit injury, and prior sprains raise injury risk.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "8450721"
+     ]
+    },
+    {
+     "dc": "5237 (2)",
+     "name": "Lumbosacral strain (low back)",
+     "reason": "The low back is the second most injured area in initial entry training.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "30623395"
+     ]
+    },
+    {
+     "dc": "8099-8045",
+     "name": "Heat Injury Residuals (Heat Stroke / Heat Exhaustion)",
+     "reason": "Unacclimated recruits training in hot months suffer heat illness, mostly in the first weeks.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "31026172"
+     ]
+    },
+    {
+     "dc": "5330",
+     "name": "Rhabdomyolysis, residuals of",
+     "reason": "Recruits have the highest exertional rhabdomyolysis rates, from extreme muscle breakdown.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "40591365"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "41302705",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41302705/",
+     "pmid": "41302705",
+     "year": 2025,
+     "title": "Incidence and Risk Factors for the Development of Stress Fractures in Military Recruits and Qualified Personnel: A Systematic Review.",
+     "supports": "Review of 70 studies: stress fractures hit the tibia, fibula and metatarsals most, far more often in recruits.",
+     "publisher": "Int J Environ Res Public Health"
+    },
+    {
+     "key": "28599045",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28599045/",
+     "pmid": "28599045",
+     "year": 2017,
+     "title": "Stress Fractures: Etiology, Epidemiology, Diagnosis, Treatment, and Prevention.",
+     "supports": "Stress fractures come from repeated loading; Army basic trainees run 19 (men) and 80 (women) per 1,000.",
+     "publisher": "J Spec Oper Med"
+    },
+    {
+     "key": "39660227",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39660227/",
+     "pmid": "39660227",
+     "year": 2024,
+     "title": "Highlights of Medial Tibial Stress Syndrome in Military Recruits: A Narrative Review.",
+     "supports": "Review of 35 studies: shin splints (MTSS) affect 35% to 56% of military recruits, driven by training demands.",
+     "publisher": "Cureus"
+    },
+    {
+     "key": "24500537",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/24500537/",
+     "pmid": "24500537",
+     "year": 2014,
+     "title": "Gait retraining and incidence of medial tibial stress syndrome in army recruits.",
+     "supports": "British Army trial tracked medial tibial stress syndrome in 450 recruits over 26 weeks of basic training.",
+     "publisher": "Med Sci Sports Exerc"
+    },
+    {
+     "key": "30623395",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30623395/",
+     "pmid": "30623395",
+     "year": 2018,
+     "title": "The Etiology of Injuries in US Army Initial Entry Training.",
+     "supports": "APHC: in 106,367 trainees, 75% of injuries hit the legs, mostly overuse; the knee was the top site, then the low back.",
+     "publisher": "US Army Med Dep J"
+    },
+    {
+     "key": "8450721",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/8450721/",
+     "pmid": "8450721",
+     "year": 1993,
+     "title": "Epidemiology of injuries associated with physical training among young men in the army.",
+     "supports": "In infantry basic training, 37% had leg injuries; strains, sprains and overuse knee problems led, with high running mileage a risk.",
+     "publisher": "Med Sci Sports Exerc"
+    },
+    {
+     "key": "35319514",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35319514/",
+     "pmid": "35319514",
+     "year": 2022,
+     "title": "Surgically Treated Femoral Neck Stress Fractures Are Likely to Result in Military Separation During Basic Combat Training.",
+     "supports": "Femoral neck stress fractures are common in basic combat trainees and often end in surgery and separation.",
+     "publisher": "Clin Orthop Relat Res"
+    },
+    {
+     "key": "31026172",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31026172/",
+     "pmid": "31026172",
+     "year": 2019,
+     "title": "Incidence, timing, and seasonal patterns of heat illnesses during U.S. Army basic combat training, 2014-2018.",
+     "supports": "1,210 heat illness events in Army basic training from 2014 to 2018, over half in the first 3 weeks.",
+     "publisher": "MSMR"
+    },
+    {
+     "key": "40591365",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40591365/",
+     "pmid": "40591365",
+     "year": 2025,
+     "title": "Exertional rhabdomyolysis among active component members of the U.S. Armed Forces, 2020-2024.",
+     "supports": "Recruit trainees had the highest exertional rhabdomyolysis rates, over 13 times those of other members.",
+     "publisher": "MSMR"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "body-armor-helmet-wear",
+   "activity_name": "Wearing body armor and helmets",
+   "category": "Load, impact and training",
+   "summary": "Hours a day in plate carriers, IOTV or flak vests and helmets with NVGs on patrol, guard, convoys or standby.",
+   "search_aliases": [
+    "body armor",
+    "plate carrier",
+    "IOTV",
+    "IBA",
+    "flak vest",
+    "kit",
+    "full battle rattle",
+    "Kevlar",
+    "helmet with NODs",
+    "NVGs",
+    "40 pounds of gear"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Navy",
+    "Air Force"
+   ],
+   "exposure_codes": [],
+   "common_conditions": [
+    {
+     "dc": "5237 (2)",
+     "name": "Lumbosacral strain (low back)",
+     "reason": "More hours in body armor each day predicted low back pain on deployment.",
+     "prevalence": "high",
+     "source_keys": [
+      "23532119",
+      "23929059"
+     ]
+    },
+    {
+     "dc": "5237 (1)",
+     "name": "Cervical strain (neck)",
+     "reason": "Armor and helmet mass load the neck; neck pain rises with 4 or more hours a day in armor.",
+     "prevalence": "high",
+     "source_keys": [
+      "18436136",
+      "42048248"
+     ]
+    },
+    {
+     "dc": "5201",
+     "name": "Arm, limitation of motion of",
+     "reason": "Plate weight hangs on the shoulders; shoulder visits rose when armor was mandated.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "39602596",
+      "18436136"
+     ]
+    },
+    {
+     "dc": "8529",
+     "name": "Paralysis of external cutaneous nerve of the thigh",
+     "reason": "Armor and belts press on the outer thigh nerve, causing numb, burning thighs.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "17615854",
+      "28285487"
+     ]
+    },
+    {
+     "dc": "5243",
+     "name": "Intervertebral Disc Syndrome (Herniated Disc)",
+     "reason": "Years of heavy armor and loads are linked to early low back disc herniation in veterans.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "38554267"
+     ]
+    },
+    {
+     "dc": "8720",
+     "name": "Neuralgia of sciatic nerve (sciatica)",
+     "reason": "Disc herniation after armor wear often brings sciatic leg pain.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "38554267"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "23532119",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/23532119/",
+     "pmid": "23532119",
+     "year": 2013,
+     "title": "Loads worn by soldiers predict episodes of low back pain during deployment to Afghanistan.",
+     "supports": "In 805 deployed soldiers, more hours in body armor and heavier gear predicted low back pain.",
+     "publisher": "Spine"
+    },
+    {
+     "key": "23929059",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/23929059/",
+     "pmid": "23929059",
+     "year": 2013,
+     "title": "A comparison of deployed occupational tasks performed by different types of military battalions and resulting low back pain.",
+     "supports": "Time in body armor and prior back pain were the most consistent predictors of low back pain on deployment.",
+     "publisher": "Military Medicine"
+    },
+    {
+     "key": "18436136",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/18436136/",
+     "pmid": "18436136",
+     "year": 2008,
+     "title": "Association between back, neck, and upper extremity musculoskeletal pain and the individual body armor.",
+     "supports": "Survey of 863 soldiers in Iraq: back, neck and arm pain rose on deployment and tracked with 4+ hours a day in armor.",
+     "publisher": "J Hand Ther"
+    },
+    {
+     "key": "42048248",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42048248/",
+     "pmid": "42048248",
+     "year": 2026,
+     "title": "Cervical Spine Injuries and Head-Supported Mass: A Descriptive Epidemiology Study in Special Operations Combat Soldiers.",
+     "supports": "Special operators reported neck sprains and strains from whiplash, parachute opening shock and landings while wearing helmets.",
+     "publisher": "Military Medicine"
+    },
+    {
+     "key": "39602596",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39602596/",
+     "pmid": "39602596",
+     "year": 2025,
+     "title": "Injuries Associated With Mandated Wear of Body Armor in Iraq.",
+     "supports": "When body armor was mandated, musculoskeletal visits rose, led by shoulder and back, with more neck injuries.",
+     "publisher": "Military Medicine"
+    },
+    {
+     "key": "17615854",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/17615854/",
+     "pmid": "17615854",
+     "year": 2007,
+     "title": "Meralgia paresthetica due to body armor wear in U.S. soldiers serving in Iraq: a case report and review of the literature.",
+     "supports": "Two soldiers in Iraq developed meralgia paresthetica most likely from repetitive body armor wear.",
+     "publisher": "Military Medicine"
+    },
+    {
+     "key": "28285487",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28285487/",
+     "pmid": "28285487",
+     "year": 2017,
+     "title": "Load Carriage-Related Paresthesias (Part 2): Meralgia Paresthetica.",
+     "supports": "Meralgia paresthetica (lateral femoral cutaneous nerve) is reported from hip belts, pistol belts, parachute harnesses and body armor.",
+     "publisher": "J Spec Oper Med"
+    },
+    {
+     "key": "38554267",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38554267/",
+     "pmid": "38554267",
+     "year": 2024,
+     "title": "Body Armor and Lumbar Disc Herniation in Young Military Veterans: A Case Series.",
+     "supports": "VA case series: young veterans with L4-S1 disc herniation and radicular pain after heavy armor and load wear.",
+     "publisher": "Military Medicine"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "tactical-vehicle-riding",
+   "activity_name": "Riding in tactical vehicles",
+   "category": "Vehicles, aircraft and ships",
+   "summary": "Long hours in Humvees, MRAPs, Strykers and LMTVs over rough roads in armor, with jolts, vibration and turret time.",
+   "search_aliases": [
+    "Humvee",
+    "HMMWV",
+    "MRAP",
+    "Stryker",
+    "LMTV",
+    "mounted patrol",
+    "turret gunner",
+    "rough roads",
+    "vehicle vibration",
+    "mounted ops"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Air Force",
+    "Navy"
+   ],
+   "exposure_codes": [
+    "vehicle_diesel_exhaust"
+   ],
+   "common_conditions": [
+    {
+     "dc": "5237 (2)",
+     "name": "Lumbosacral strain (low back)",
+     "reason": "Hours of jolting and vibration in a seat, under armor and gear, wear out the low back.",
+     "prevalence": "high",
+     "source_keys": [
+      "roy2013",
+      "kollock2016",
+      "burstrom2015"
+     ]
+    },
+    {
+     "dc": "8720",
+     "name": "Neuralgia of sciatic nerve (sciatica)",
+     "reason": "Whole-body vibration from vehicle rides is tied to sciatic nerve pain down the leg.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "burstrom2015"
+     ]
+    },
+    {
+     "dc": "5243",
+     "name": "Intervertebral Disc Syndrome (Herniated Disc)",
+     "reason": "Long-term vibration exposure raises the risk of a herniated lumbar disc.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "wahlstrom2018"
+     ]
+    },
+    {
+     "dc": "5237 (1)",
+     "name": "Cervical strain (neck)",
+     "reason": "Jolts and bouncing with a helmet on load the neck in ground vehicles.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "kollock2015"
+     ]
+    },
+    {
+     "dc": "6100",
+     "name": "Hearing loss, bilateral sensorineural",
+     "reason": "Engine, road and track noise inside military vehicles can exceed safe limits for hours.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "luha2020",
+      "iom2006"
+     ]
+    },
+    {
+     "dc": "6260",
+     "name": "Tinnitus, recurrent",
+     "reason": "Long rides in loud vehicles add to the noise that causes ringing in the ears.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "luha2020",
+      "iom2006"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "roy2013",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/23532119/",
+     "pmid": "23532119",
+     "year": 2013,
+     "title": "Loads worn by soldiers predict episodes of low back pain during deployment to Afghanistan.",
+     "supports": "In a deployed Army brigade, 21 to 40 hours a week in a tactical vehicle, body armor time and load weight raised low back pain risk.",
+     "publisher": "Spine (Phila Pa 1976)"
+    },
+    {
+     "key": "kollock2016",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28068167/",
+     "pmid": "28068167",
+     "year": 2016,
+     "title": "Vehicle Exposure and Spinal Musculature Fatigue in Military Warfighters: A Meta-Analysis.",
+     "supports": "Meta-analysis: military vehicle rides significantly fatigued the lumbar muscles.",
+     "publisher": "J Athl Train"
+    },
+    {
+     "key": "burstrom2015",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25142739/",
+     "pmid": "25142739",
+     "year": 2015,
+     "title": "Whole-body vibration and the risk of low back pain and sciatica: a systematic review and meta-analysis.",
+     "supports": "Meta-analysis of 20 studies: whole-body vibration roughly doubled the odds of low back pain (OR 2.17) and sciatica (OR 1.92).",
+     "publisher": "Int Arch Occup Environ Health"
+    },
+    {
+     "key": "wahlstrom2018",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29855719/",
+     "pmid": "29855719",
+     "year": 2018,
+     "title": "Exposure to whole-body vibration and hospitalization due to lumbar disc herniation.",
+     "supports": "Cohort of 288,926 workers: medium to high whole-body vibration raised hospitalization for lumbar disc herniation (RR 1.35).",
+     "publisher": "Int Arch Occup Environ Health"
+    },
+    {
+     "key": "kollock2015",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25739897/",
+     "pmid": "25739897",
+     "year": 2015,
+     "title": "Effects of vehicle-ride exposure on cervical pathology: a meta-analysis.",
+     "supports": "Meta-analysis: ground vehicle rides (OR 2.33) and fixed-wing flight, especially fighter jets (OR 1.78), raised cervical pathology.",
+     "publisher": "Ind Health"
+    },
+    {
+     "key": "luha2020",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30683800/",
+     "pmid": "30683800",
+     "year": 2020,
+     "title": "In-vehicle noise exposure among military personnel depending on type of vehicle, riding compartment and road surface.",
+     "supports": "Noise inside armored personnel carriers and military trucks exceeded limits, putting riders at high risk of noise-induced hearing loss.",
+     "publisher": "BMJ Mil Health"
+    },
+    {
+     "key": "iom2006",
+     "url": "https://www.nationalacademies.org/publications/11443",
+     "pmid": "",
+     "year": 2006,
+     "title": "Noise and Military Service: Implications for Hearing Loss and Tinnitus",
+     "supports": "National Academies review of hazardous military noise and the noise levels that cause hearing loss and tinnitus.",
+     "publisher": "Institute of Medicine, The National Academies Press"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "helicopter-aircrew",
+   "activity_name": "Flying in helicopters as aircrew",
+   "category": "Vehicles, aircraft and ships",
+   "summary": "Pilot, crew chief, gunner or medic time in helicopters: rotor vibration, bent posture, heavy helmets with NVGs and engine noise.",
+   "search_aliases": [
+    "helo",
+    "rotary wing",
+    "Black Hawk",
+    "Chinook",
+    "Apache",
+    "CH-53",
+    "Seahawk",
+    "NVGs",
+    "night vision goggles",
+    "flight medic",
+    "helicopter pilot"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Navy",
+    "Air Force",
+    "Coast Guard"
+   ],
+   "exposure_codes": [
+    "jet_fuel_petroleum"
+   ],
+   "common_conditions": [
+    {
+     "dc": "5237 (2)",
+     "name": "Lumbosacral strain (low back)",
+     "reason": "Rotor vibration and hours bent forward in the seat wear on the low back.",
+     "prevalence": "high",
+     "source_keys": [
+      "cooper2026",
+      "kelley2017"
+     ]
+    },
+    {
+     "dc": "5237 (1)",
+     "name": "Cervical strain (neck)",
+     "reason": "Heavy helmets with night vision goggles strain the neck on every flight.",
+     "prevalence": "high",
+     "source_keys": [
+      "cooper2026",
+      "posch2019"
+     ]
+    },
+    {
+     "dc": "6100",
+     "name": "Hearing loss, bilateral sensorineural",
+     "reason": "Rotor and engine noise damages hearing over a flying career.",
+     "prevalence": "high",
+     "source_keys": [
+      "white2025",
+      "raynal2006"
+     ]
+    },
+    {
+     "dc": "6260",
+     "name": "Tinnitus, recurrent",
+     "reason": "Helicopter pilots are diagnosed with tinnitus at about 3 times the rate of ground crews.",
+     "prevalence": "high",
+     "source_keys": [
+      "white2025"
+     ]
+    },
+    {
+     "dc": "5201",
+     "name": "Arm, limitation of motion of",
+     "reason": "Shoulder pain is common in helicopter crews from posture and controls.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "posch2019"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "cooper2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42229896/",
+     "pmid": "42229896",
+     "year": 2026,
+     "title": "Prevalence of Back and Neck Complaints in Military Rotary Wing Aircrew: A Systematic Review.",
+     "supports": "Review of 28 studies (3,786 military helicopter aircrew): pooled back pain 64% and neck pain 52%.",
+     "publisher": "Aerosp Med Hum Perform"
+    },
+    {
+     "key": "kelley2017",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28095953/",
+     "pmid": "28095953",
+     "year": 2017,
+     "title": "Reported Back Pain in Army Aircrew in Relation to Airframe, Gender, Age, and Experience.",
+     "supports": "84.6% of 467 U.S. Army aviation crewmembers reported back pain during their flying career.",
+     "publisher": "Aerosp Med Hum Perform"
+    },
+    {
+     "key": "posch2019",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30696437/",
+     "pmid": "30696437",
+     "year": 2019,
+     "title": "Prevalence and potential risk factors of flight-related neck, shoulder and low back pain among helicopter pilots and crewmembers: a questionnaire-based study.",
+     "supports": "Helicopter pilots: 67% neck, 48% low back, 43% shoulder pain in 12 months; night vision goggle use nearly doubled neck pain odds.",
+     "publisher": "BMC Musculoskelet Disord"
+    },
+    {
+     "key": "white2025",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40984069/",
+     "pmid": "40984069",
+     "year": 2025,
+     "title": "Army and Marine Aviation Corps Exposome Signatures From the Pharmaceutical Impacts on Tinnitus and Hearing Loss.",
+     "supports": "Army and Marine helicopter pilots had almost 3 times the tinnitus rate and twice the hearing loss rate of ground crew controls.",
+     "publisher": "Mil Med"
+    },
+    {
+     "key": "raynal2006",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/16422455/",
+     "pmid": "16422455",
+     "year": 2006,
+     "title": "Hearing in military pilots: one-time audiometry in pilots of fighters, transports, and helicopters.",
+     "supports": "521 military pilots: noise notch at 6 kHz; fighter and helicopter pilots had higher hearing loss risk than transport pilots.",
+     "publisher": "Aviat Space Environ Med"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "flight-line-work",
+   "activity_name": "Working the flight line",
+   "category": "Vehicles, aircraft and ships",
+   "summary": "Launching, recovering, fueling, loading and fixing aircraft on the flight line: jet noise, fuels, solvents and awkward postures.",
+   "search_aliases": [
+    "flight line",
+    "crew chief",
+    "marshaller",
+    "engine runs",
+    "jet noise",
+    "turning wrenches",
+    "fuels troop",
+    "weapons loader",
+    "hush house",
+    "intake"
+   ],
+   "branches": [
+    "Air Force",
+    "Army",
+    "Navy",
+    "Marine Corps",
+    "Coast Guard"
+   ],
+   "exposure_codes": [
+    "jet_fuel_petroleum",
+    "turbine_engine_oil",
+    "aviation_hydraulic_fluid",
+    "deicing_fluid"
+   ],
+   "common_conditions": [
+    {
+     "dc": "6100",
+     "name": "Hearing loss, bilateral sensorineural",
+     "reason": "Jet engine noise plus fuel and solvent exposure damages hearing in maintainers.",
+     "prevalence": "high",
+     "source_keys": [
+      "blair2021",
+      "iom2006"
+     ]
+    },
+    {
+     "dc": "6260",
+     "name": "Tinnitus, recurrent",
+     "reason": "Flight support crews report ringing ears tied to noise-related hearing loss.",
+     "prevalence": "high",
+     "source_keys": [
+      "lu2022",
+      "iom2006"
+     ]
+    },
+    {
+     "dc": "5237 (2)",
+     "name": "Lumbosacral strain (low back)",
+     "reason": "Lifting, bending and reaching into aircraft at awkward angles strains the low back.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "bi2026",
+      "nogueira2012"
+     ]
+    },
+    {
+     "dc": "5201",
+     "name": "Arm, limitation of motion of",
+     "reason": "Overhead work and heavy parts lead to shoulder disorders in aircraft maintainers.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "nogueira2012"
+     ]
+    },
+    {
+     "dc": "5237 (1)",
+     "name": "Cervical strain (neck)",
+     "reason": "Looking up into wheel wells and panels for hours strains the neck.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "nogueira2012"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "blair2021",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34100693/",
+     "pmid": "34100693",
+     "year": 2021,
+     "title": "Effect of noise and ototoxicants on developing standard threshold shifts at a U.S. Air Force depot level maintenance facility.",
+     "supports": "2,372 USAF aircraft maintainers: metal plus solvent exposure with noise raised hearing threshold shift risk (RR 2.44).",
+     "publisher": "J Occup Environ Hyg"
+    },
+    {
+     "key": "iom2006",
+     "url": "https://www.nationalacademies.org/publications/11443",
+     "pmid": "",
+     "year": 2006,
+     "title": "Noise and Military Service: Implications for Hearing Loss and Tinnitus",
+     "supports": "National Academies review of hazardous military noise and the noise levels that cause hearing loss and tinnitus.",
+     "publisher": "Institute of Medicine, The National Academies Press"
+    },
+    {
+     "key": "lu2022",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35172543/",
+     "pmid": "35172543",
+     "year": 2022,
+     "title": "[A cross-sectional study and risk factors analysis of tinnitus in flight support personnel of PLA air force].",
+     "supports": "24.2% of 666 air force flight support personnel had tinnitus, tied to high-frequency hearing loss.",
+     "publisher": "Lin Chuang Er Bi Yan Hou Tou Jing Wai Ke Za Zhi"
+    },
+    {
+     "key": "bi2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41574933/",
+     "pmid": "41574933",
+     "year": 2026,
+     "title": "Serum lipids and low back pain in male aircraft maintenance technicians: association after ergonomic exposure adjustment.",
+     "supports": "42.4% of 1,713 aircraft maintenance technicians had low back pain; high back exposure and work pace raised the odds.",
+     "publisher": "J Occup Health"
+    },
+    {
+     "key": "nogueira2012",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/22317460/",
+     "pmid": "22317460",
+     "year": 2012,
+     "title": "Musculoskeletal disorders and psychosocial risk factors among workers of the aircraft maintenance industry.",
+     "supports": "Aircraft maintenance workers: low back most affected; exams found shoulder disorders; neck also painful.",
+     "publisher": "Work"
+    }
+   ],
+   "proof_count": 4,
+   "prompt_count": 6
+  },
+  {
+   "slug": "carrier-flight-deck",
+   "activity_name": "Working a carrier flight deck",
+   "category": "Vehicles, aircraft and ships",
+   "summary": "Launch and recovery crews on aircraft carriers and big-deck amphibs: jet blast noise, 12-hour days, steel decks and chains.",
+   "search_aliases": [
+    "flight deck",
+    "carrier",
+    "bird farm",
+    "shooter",
+    "grape",
+    "yellow shirt",
+    "blue shirt",
+    "chocks and chains",
+    "cat launch",
+    "ABH",
+    "ABE",
+    "hangar bay"
+   ],
+   "branches": [
+    "Navy",
+    "Marine Corps"
+   ],
+   "exposure_codes": [
+    "jet_fuel_petroleum"
+   ],
+   "common_conditions": [
+    {
+     "dc": "6100",
+     "name": "Hearing loss, bilateral sensorineural",
+     "reason": "Flight deck noise averages 109 dBA over 11-hour days, causing hearing loss.",
+     "prevalence": "high",
+     "source_keys": [
+      "rovig2004",
+      "schaal2019"
+     ]
+    },
+    {
+     "dc": "6260",
+     "name": "Tinnitus, recurrent",
+     "reason": "Constant jet noise with little quiet time to recover leads to ringing in the ears.",
+     "prevalence": "high",
+     "source_keys": [
+      "schaal2019",
+      "iom2006"
+     ]
+    },
+    {
+     "dc": "5237 (2)",
+     "name": "Lumbosacral strain (low back)",
+     "reason": "Hauling chains, chocks and gear on steel decks makes low back injury the top complaint.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "hiebert2020",
+      "krentz1997"
+     ]
+    },
+    {
+     "dc": "5257",
+     "name": "Knee, other impairment of",
+     "reason": "Kneeling on steel decks and slips around moving aircraft injure the knees.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "hiebert2020",
+      "krentz1997"
+     ]
+    },
+    {
+     "dc": "5237 (1)",
+     "name": "Cervical strain (neck)",
+     "reason": "Neck injuries on the flight deck cost sailors lost duty time.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "krentz1997"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "rovig2004",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/15281670/",
+     "pmid": "15281670",
+     "year": 2004,
+     "title": "Hearing health risk in a population of aircraft carrier flight deck personnel.",
+     "supports": "Carrier flight deck crews averaged 109 dBA over 11.5-hour days; 17% of flight deck and 27% of engineers had hearing loss vs 4%.",
+     "publisher": "Mil Med"
+    },
+    {
+     "key": "schaal2019",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30855086/",
+     "pmid": "30855086",
+     "year": 2019,
+     "title": "Living at Work: 24-hour Noise Exposure Aboard US Navy Aircraft Carriers.",
+     "supports": "On a Nimitz-class carrier, 93% of sailors exceeded the 24-hour noise limit, with little quiet time for ears to recover.",
+     "publisher": "Ann Work Expo Health"
+    },
+    {
+     "key": "iom2006",
+     "url": "https://www.nationalacademies.org/publications/11443",
+     "pmid": "",
+     "year": 2006,
+     "title": "Noise and Military Service: Implications for Hearing Loss and Tinnitus",
+     "supports": "National Academies review of hazardous military noise and the noise levels that cause hearing loss and tinnitus.",
+     "publisher": "Institute of Medicine, The National Academies Press"
+    },
+    {
+     "key": "hiebert2020",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32852526/",
+     "pmid": "32852526",
+     "year": 2020,
+     "title": "Incidence and Mechanisms of Musculoskeletal Injuries in Deployed Navy Active Duty Service Members Aboard Two U.S. Navy Air Craft Carriers.",
+     "supports": "On two deployed carriers, low back (34%), shoulder (25%) and knee (15%) were the most common musculoskeletal complaints.",
+     "publisher": "Mil Med"
+    },
+    {
+     "key": "krentz1997",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/9006883/",
+     "pmid": "9006883",
+     "year": 1997,
+     "title": "At work and play in a hazardous environment: injuries aboard a deployed U.S. Navy aircraft carrier.",
+     "supports": "335 injuries on a deployed carrier's flight deck, hangar bay and gym; lower extremity, neck and back injuries cost the most duty time.",
+     "publisher": "Aviat Space Environ Med"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "shipboard-life",
+   "activity_name": "Shipboard life and engineering spaces",
+   "category": "Vehicles, aircraft and ships",
+   "summary": "Living and working aboard ship: steep ladder wells, hatches, steel decks, heavy lifting, and loud engine rooms and machinery spaces.",
+   "search_aliases": [
+    "ship life",
+    "ladder wells",
+    "knee knockers",
+    "snipes",
+    "engine room",
+    "main space",
+    "the hole",
+    "machinist mate",
+    "boiler tech",
+    "underway",
+    "cutter",
+    "ship's company"
+   ],
+   "branches": [
+    "Navy",
+    "Coast Guard",
+    "Marine Corps"
+   ],
+   "exposure_codes": [
+    "asbestos_shipboard"
+   ],
+   "common_conditions": [
+    {
+     "dc": "5237 (2)",
+     "name": "Lumbosacral strain (low back)",
+     "reason": "Lifting, climbing ladders and working in tight spaces make low back injury the top complaint.",
+     "prevalence": "high",
+     "source_keys": [
+      "hiebert2020",
+      "balcom2000"
+     ]
+    },
+    {
+     "dc": "6100",
+     "name": "Hearing loss, bilateral sensorineural",
+     "reason": "Engine rooms are the loudest spaces aboard, and engineers show high hearing loss rates.",
+     "prevalence": "high",
+     "source_keys": [
+      "rovig2004",
+      "kaerlev2008"
+     ]
+    },
+    {
+     "dc": "6260",
+     "name": "Tinnitus, recurrent",
+     "reason": "Engine and machinery noise at sea is tied to ringing in the ears.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "febriyanto2024",
+      "iom2006"
+     ]
+    },
+    {
+     "dc": "5201",
+     "name": "Arm, limitation of motion of",
+     "reason": "Shoulder injuries are the second most common sailor complaint on deployed ships.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "hiebert2020"
+     ]
+    },
+    {
+     "dc": "5257",
+     "name": "Knee, other impairment of",
+     "reason": "Ladders, hatches and knee knockers make knee injuries common aboard ship.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "hiebert2020"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "hiebert2020",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32852526/",
+     "pmid": "32852526",
+     "year": 2020,
+     "title": "Incidence and Mechanisms of Musculoskeletal Injuries in Deployed Navy Active Duty Service Members Aboard Two U.S. Navy Air Craft Carriers.",
+     "supports": "On two deployed carriers, low back (34%), shoulder (25%) and knee (15%) were the most common musculoskeletal complaints.",
+     "publisher": "Mil Med"
+    },
+    {
+     "key": "balcom2000",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/11149062/",
+     "pmid": "11149062",
+     "year": 2000,
+     "title": "Epidemiology of musculoskeletal and soft tissue injuries aboard a U.S. Navy ship.",
+     "supports": "Navy ship crew: 16.5 injuries per 100 man-months, overuse musculoskeletal injuries most common.",
+     "publisher": "Mil Med"
+    },
+    {
+     "key": "rovig2004",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/15281670/",
+     "pmid": "15281670",
+     "year": 2004,
+     "title": "Hearing health risk in a population of aircraft carrier flight deck personnel.",
+     "supports": "Carrier flight deck crews averaged 109 dBA over 11.5-hour days; 17% of flight deck and 27% of engineers had hearing loss vs 4%.",
+     "publisher": "Mil Med"
+    },
+    {
+     "key": "kaerlev2008",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/18580037/",
+     "pmid": "18580037",
+     "year": 2008,
+     "title": "Hospital contacts for noise-related hearing loss among Danish seafarers and fishermen: a population-based cohort study.",
+     "supports": "Engine room personnel had 2.39 times the hearing loss hospital contacts of other seafarers.",
+     "publisher": "Noise Health"
+    },
+    {
+     "key": "febriyanto2024",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37820712/",
+     "pmid": "37820712",
+     "year": 2024,
+     "title": "The physical and psychological effects of occupational noise among seafarers: a systematic review.",
+     "supports": "Review: the engine room is the noisiest space aboard; shipboard noise linked to hearing loss and tinnitus.",
+     "publisher": "Int J Environ Health Res"
+    },
+    {
+     "key": "iom2006",
+     "url": "https://www.nationalacademies.org/publications/11443",
+     "pmid": "",
+     "year": 2006,
+     "title": "Noise and Military Service: Implications for Hearing Loss and Tinnitus",
+     "supports": "National Academies review of hazardous military noise and the noise levels that cause hearing loss and tinnitus.",
+     "publisher": "Institute of Medicine, The National Academies Press"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "military-diving",
+   "activity_name": "Military diving",
+   "category": "Vehicles, aircraft and ships",
+   "summary": "Scuba, surface-supplied and mixed gas diving for salvage, EOD, search and rescue or special operations.",
+   "search_aliases": [
+    "diver",
+    "dive school",
+    "scuba",
+    "hard hat diver",
+    "salvage diver",
+    "the bends",
+    "DCS",
+    "decompression sickness",
+    "ear squeeze",
+    "barotrauma",
+    "rescue swimmer"
+   ],
+   "branches": [
+    "Navy",
+    "Army",
+    "Marine Corps",
+    "Air Force",
+    "Coast Guard"
+   ],
+   "exposure_codes": [],
+   "common_conditions": [
+    {
+     "dc": "5011",
+     "name": "Decompression Illness Residuals",
+     "reason": "Gas bubbles from ascent can damage nerves and bone and leave lasting effects.",
+     "prevalence": "high",
+     "source_keys": [
+      "sundal2022",
+      "houssaini2026"
+     ]
+    },
+    {
+     "dc": "6299-6200",
+     "name": "Eustachian Tube Dysfunction",
+     "reason": "Pressure changes on descent squeeze the middle ear when ear tubes do not equalize.",
+     "prevalence": "high",
+     "source_keys": [
+      "klingmann2007",
+      "sandoval2026"
+     ]
+    },
+    {
+     "dc": "6510",
+     "name": "Sinusitis, pansinusitis, chronic",
+     "reason": "Sinus squeeze on dives irritates the lining; chronic sinusitis rises with dive count.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "klingmann2007"
+     ]
+    },
+    {
+     "dc": "6211",
+     "name": "Tympanic membrane, perforation of",
+     "reason": "Ear barotrauma can tear the eardrum.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "sandoval2026"
+     ]
+    },
+    {
+     "dc": "6100",
+     "name": "Hearing loss, bilateral sensorineural",
+     "reason": "Inner ear barotrauma or inner ear DCS can leave permanent hearing loss.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "onderkova2026",
+      "maguire2022"
+     ]
+    },
+    {
+     "dc": "6204",
+     "name": "Peripheral vestibular disorders",
+     "reason": "Inner ear injury from pressure or bubbles can cause lasting balance problems.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "onderkova2026"
+     ]
+    },
+    {
+     "dc": "6210",
+     "name": "Chronic otitis externa",
+     "reason": "Long hours in the water lead to outer ear canal infections in divers.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "onderkova2026"
+     ]
+    },
+    {
+     "dc": "5237 (2)",
+     "name": "Lumbosacral strain (low back)",
+     "reason": "Heavy dive gear and topside work give Navy divers high rates of back disorders.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "maguire2022"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "sundal2022",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35131550/",
+     "pmid": "35131550",
+     "year": 2022,
+     "title": "Long-term neurological sequelae after decompression sickness in retired professional divers.",
+     "supports": "Retired divers with past decompression sickness had more long-term neurological findings than divers without it.",
+     "publisher": "J Neurol Sci"
+    },
+    {
+     "key": "houssaini2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41777987/",
+     "pmid": "41777987",
+     "year": 2026,
+     "title": "Dysbaric Osteonecrosis in Divers: A Narrative Review With a Systematic Literature Search of Pathophysiology, Prevalence, Clinical Features, and Screening.",
+     "supports": "Decompression bubbles can kill bone, mostly in the shoulder and hip heads (dysbaric osteonecrosis).",
+     "publisher": "Cureus"
+    },
+    {
+     "key": "klingmann2007",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/17639445/",
+     "pmid": "17639445",
+     "year": 2007,
+     "title": "Otorhinolaryngologic disorders and diving accidents: an analysis of 306 divers.",
+     "supports": "306 divers with ENT problems: Eustachian tube dysfunction most common (24%); chronic sinusitis rose with number of dives.",
+     "publisher": "Eur Arch Otorhinolaryngol"
+    },
+    {
+     "key": "sandoval2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42457460/",
+     "pmid": "42457460",
+     "year": 2026,
+     "title": "Otitic Barotrauma Due to Eustachian Tube Dysfunction and Special Considerations in At-Risk Populations.",
+     "supports": "Ear barotrauma, mostly from Eustachian tube dysfunction, is highly prevalent in divers and aircrew; it can injure the eardrum.",
+     "publisher": "Otolaryngol Clin North Am"
+    },
+    {
+     "key": "onderkova2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42743574/",
+     "pmid": "42743574",
+     "year": 2026,
+     "title": "Diving-related ear, nose, and throat disorders: a structured review using a phase-of-dive framework.",
+     "supports": "Review: middle ear barotrauma most common; inner ear barotrauma and DCS leave lasting hearing or balance loss; otitis externa.",
+     "publisher": "Diving Hyperb Med"
+    },
+    {
+     "key": "maguire2022",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35226973/",
+     "pmid": "35226973",
+     "year": 2022,
+     "title": "Health conditions among Navy divers at end of service: a retrospective cohort study.",
+     "supports": "4,623 separating Navy divers: high rates of joint and back disorders; special warfare divers had high hearing loss rates.",
+     "publisher": "Undersea Hyperb Med"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "cold-weather-and-arctic-duty",
+   "activity_name": "Cold weather training and arctic posts",
+   "category": "Climate and terrain",
+   "summary": "Field training, guard duty or deployment in freezing or wet cold: Alaska, Korea winters, northern Europe, mountains, long hours in wet boots.",
+   "search_aliases": [
+    "froze in Korea",
+    "Alaska",
+    "arctic training",
+    "cold weather training",
+    "frostbite",
+    "trench foot",
+    "immersion foot",
+    "Korea winter",
+    "winter field exercise",
+    "Northern Warfare",
+    "cold injury"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Navy",
+    "Air Force",
+    "Coast Guard"
+   ],
+   "exposure_codes": [],
+   "common_conditions": [
+    {
+     "dc": "7122",
+     "name": "Cold injury residuals",
+     "reason": "Frostbite and wet-cold injury damage nerves and blood vessels, leaving pain, numbness and cold sensitivity.",
+     "prevalence": "high",
+     "source_keys": [
+      "c1",
+      "c2",
+      "c3",
+      "c4"
+     ]
+    },
+    {
+     "dc": "7117",
+     "name": "Raynaud's Syndrome (Secondary Raynaud's Phenomenon)",
+     "reason": "Cold injury can damage small blood vessels so fingers and toes turn white and painful in the cold.",
+     "prevalence": "high",
+     "source_keys": [
+      "c1",
+      "c2",
+      "c5"
+     ]
+    },
+    {
+     "dc": "5003",
+     "name": "Degenerative arthritis, other than post-traumatic",
+     "reason": "Severe cold injury can damage joints and bone in the hands and feet, showing later as arthritis on X-ray.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "c1",
+      "c2"
+     ]
+    },
+    {
+     "dc": "7804",
+     "name": "Scar(s), unstable or painful",
+     "reason": "Frostbite that kills skin can heal with painful or unstable scars on fingers, toes, ears or nose.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "c1",
+      "c2"
+     ]
+    },
+    {
+     "dc": "7818",
+     "name": "Malignant skin neoplasms (other than malignant melanoma)",
+     "reason": "Skin cancer can form years later in old frostbite scars, which VA rates separately from the cold injury.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "c1",
+      "c2"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "c1",
+     "url": "https://www.ecfr.gov/current/title-38/part-4/section-4.104",
+     "pmid": null,
+     "year": 2025,
+     "title": "38 CFR 4.104, Schedule of ratings, cardiovascular system (DC 7122 Cold injury residuals)",
+     "supports": "Lists cold injury residual findings and says to rate Raynaud's, skin cancer at cold injury scars and amputations separately.",
+     "publisher": "eCFR, National Archives"
+    },
+    {
+     "key": "c2",
+     "url": "https://www.publichealth.va.gov/exposures/cold-injuries/index.asp",
+     "pmid": null,
+     "year": 2024,
+     "title": "Cold Injuries",
+     "supports": "VA lists long-term cold injury problems: changes in muscle, skin, nails and bones, skin cancer in frostbite scars, nerve injury and Raynaud's.",
+     "publisher": "U.S. Department of Veterans Affairs, Public Health"
+    },
+    {
+     "key": "c3",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39621826/",
+     "pmid": "39621826",
+     "year": 2024,
+     "title": "Cold weather injuries among the active and reserve components of the U.S. Armed Forces, July 2019-June 2024.",
+     "supports": "DoD surveillance of frostbite and other cold injuries each season, with the highest rates in the Army and Marine Corps.",
+     "publisher": "MSMR"
+    },
+    {
+     "key": "c4",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30826752/",
+     "pmid": "30826752",
+     "year": 2020,
+     "title": "Case series of non-freezing cold injury: the modern clinical syndrome.",
+     "supports": "In 76 service members with non-freezing cold injury, lasting cold sensitivity and abnormal sensation were the main chronic signs.",
+     "publisher": "BMJ Military Health"
+    },
+    {
+     "key": "c5",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36919578/",
+     "pmid": "36919578",
+     "year": 2023,
+     "title": "Botulinum Toxin A in the treatment of frostbite sequelae - results from a blinded, early-phase, comparative trial.",
+     "supports": "Notes freezing cold injuries are associated with long-term sequelae including vasospasm.",
+     "publisher": "International Journal of Circumpolar Health"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "extreme-heat-and-desert-operations",
+   "activity_name": "Extreme heat and desert operations",
+   "category": "Climate and terrain",
+   "summary": "Training or deploying in high heat: summer field exercises, ruck marches in heat, desert deployments, work in full gear with little water or shade.",
+   "search_aliases": [
+    "heat stroke",
+    "heat exhaustion",
+    "heat casualty",
+    "desert deployment",
+    "the sandbox",
+    "black flag day",
+    "Fort Benning summer",
+    "Twentynine Palms",
+    "hot weather ops",
+    "dehydration"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Navy",
+    "Air Force",
+    "Space Force"
+   ],
+   "exposure_codes": [],
+   "common_conditions": [
+    {
+     "dc": "8099-8045",
+     "name": "Heat Injury Residuals (Heat Stroke / Heat Exhaustion)",
+     "reason": "Heat stroke can injure the brain, leaving lasting balance, coordination or memory problems in some.",
+     "prevalence": "high",
+     "source_keys": [
+      "h1",
+      "h2"
+     ]
+    },
+    {
+     "dc": "7508",
+     "name": "Nephrolithiasis/Ureterolithiasis/Nephrocalcinosis",
+     "reason": "Heavy sweating and too little water concentrate urine, which raises the risk of kidney stones.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "h3",
+      "h4"
+     ]
+    },
+    {
+     "dc": "7530",
+     "name": "Chronic renal disease requiring regular dialysis",
+     "reason": "Heat stroke can injure the kidneys; a large cohort found later chronic kidney disease and dialysis more often.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "h5",
+      "h6"
+     ]
+    },
+    {
+     "dc": "7005",
+     "name": "Arteriosclerotic heart disease (coronary artery disease)",
+     "reason": "In a long-term cohort, people who had heat stroke later had more heart attacks than those who had not.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "h6"
+     ]
+    },
+    {
+     "dc": "7813",
+     "name": "Dermatophytosis / Ringworm (Tinea Pedis, Cruris, Capitis, Corporis)",
+     "reason": "Hot, humid conditions and sweaty boots help fungus grow, so athlete's foot is common in troops.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "h7"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "h1",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42308086/",
+     "pmid": "42308086",
+     "year": 2026,
+     "title": "Heat exhaustion and heat stroke among U.S. active component service members, 2021-2025.",
+     "supports": "DoD surveillance: heat stroke and heat exhaustion rates highest in Marine Corps, Army and recruit training.",
+     "publisher": "MSMR"
+    },
+    {
+     "key": "h2",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29851280/",
+     "pmid": "29851280",
+     "year": 2019,
+     "title": "Review article: Environmental heatstroke and long-term clinical neurological outcomes: A literature review of case reports and case series 2000-2016.",
+     "supports": "Permanent neurological deficits, mostly cerebellar, were found in about a third of heatstroke survivors with known outcome.",
+     "publisher": "Emergency Medicine Australasia"
+    },
+    {
+     "key": "h3",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/16780245/",
+     "pmid": "16780245",
+     "year": 2006,
+     "title": "Renal lithiasis: addressing the risks of austere desert deployments.",
+     "supports": "Kidney stone cases in Air Force members deployed to desert bases; field hydration advice may not prevent stones.",
+     "publisher": "Aviation, Space, and Environmental Medicine"
+    },
+    {
+     "key": "h4",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/27255947/",
+     "pmid": "27255947",
+     "year": 2016,
+     "title": "Update: Urinary stones, active component, U.S. Armed Forces, 2011-2015.",
+     "supports": "Tracks urinary stones in service members and advises avoiding dehydration to prevent them.",
+     "publisher": "MSMR"
+    },
+    {
+     "key": "h5",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32614909/",
+     "pmid": "32614909",
+     "year": 2020,
+     "title": "Risk of chronic kidney disease in patients with heat injury: A nationwide longitudinal cohort study in Taiwan.",
+     "supports": "Heat injury patients had about 4 times the risk of chronic kidney disease and 9 times the risk of end-stage renal disease.",
+     "publisher": "PLoS One"
+    },
+    {
+     "key": "h6",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30759128/",
+     "pmid": "30759128",
+     "year": 2019,
+     "title": "The association between heat stroke and subsequent cardiovascular diseases.",
+     "supports": "Over 14 years, heat stroke patients had more heart attacks, strokes and chronic kidney disease than controls.",
+     "publisher": "PLoS One"
+    },
+    {
+     "key": "h7",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40993673/",
+     "pmid": "40993673",
+     "year": 2025,
+     "title": "Prevalence of Tinea pedis in military personnel: a systematic review and meta-analysis.",
+     "supports": "Pooled tinea pedis prevalence of 17% in military personnel, highest in hot and humid regions.",
+     "publisher": "BMC Public Health"
+    }
+   ],
+   "proof_count": 4,
+   "prompt_count": 6
+  },
+  {
+   "slug": "motor-pool-vehicle-maintenance",
+   "activity_name": "Motor pool and vehicle maintenance",
+   "category": "Hours and support work",
+   "summary": "Working on trucks, tanks and tactical vehicles: under-vehicle work, brake jobs, impact wrenches, fuels, oils, solvents and running engines in the bay.",
+   "search_aliases": [
+    "motor pool",
+    "wrench turner",
+    "91B",
+    "mechanic",
+    "PMCS",
+    "wheeled vehicle mechanic",
+    "tank mechanic",
+    "3521",
+    "motor T",
+    "under the truck",
+    "brake jobs",
+    "2T3"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Navy",
+    "Air Force"
+   ],
+   "exposure_codes": [
+    "vehicle_diesel_exhaust",
+    "asbestos_friction",
+    "jet_fuel_petroleum",
+    "carc_isocyanates"
+   ],
+   "common_conditions": [
+    {
+     "dc": "5237 (2)",
+     "name": "Lumbosacral strain (low back)",
+     "reason": "Bending under hoods and lying under vehicles in awkward positions strains the low back.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "m1"
+     ]
+    },
+    {
+     "dc": "5237 (1)",
+     "name": "Cervical strain (neck)",
+     "reason": "Working overhead and craning to see into engine bays strains the neck.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "m1"
+     ]
+    },
+    {
+     "dc": "7806",
+     "name": "Dermatitis or eczema",
+     "reason": "Daily skin contact with oils, fuels and solvents irritates skin and causes hand dermatitis.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "m2"
+     ]
+    },
+    {
+     "dc": "7117",
+     "name": "Raynaud's Syndrome (Secondary Raynaud's Phenomenon)",
+     "reason": "Years on impact wrenches and air tools can damage finger blood vessels: vibration white finger.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "m3"
+     ]
+    },
+    {
+     "dc": "8615",
+     "name": "Neuritis of median nerve",
+     "reason": "Forceful, repetitive gripping and vibrating tools raise the risk of carpal tunnel syndrome.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "m3",
+      "m4"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "m1",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37248938/",
+     "pmid": "37248938",
+     "year": 2023,
+     "title": "Epidemiological study of work-related musculoskeletal disorders and related risk factors among automobile maintenance workers.",
+     "supports": "In 539 auto maintenance workers, the low back, neck and shoulders were most affected, tied to uncomfortable postures.",
+     "publisher": "Work"
+    },
+    {
+     "key": "m2",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34109582/",
+     "pmid": "34109582",
+     "year": 2021,
+     "title": "Assessment of hand or foot eczema and contact dermatitis among car mechanics.",
+     "supports": "Mineral oil and petroleum contact causes dermatitis in vehicle repair workers; hands most often affected.",
+     "publisher": "European Review for Medical and Pharmacological Sciences"
+    },
+    {
+     "key": "m3",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28704466/",
+     "pmid": "28704466",
+     "year": 2017,
+     "title": "Hand-arm vibration and the risk of vascular and neurological diseases-A systematic review and meta-analysis.",
+     "supports": "Vibrating tool users had higher risk of Raynaud's phenomenon (OR 6.9), nerve injury (7.4) and carpal tunnel syndrome (2.9).",
+     "publisher": "PLoS One"
+    },
+    {
+     "key": "m4",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36340637/",
+     "pmid": "36340637",
+     "year": 2022,
+     "title": "Work-relatedness of carpal tunnel syndrome: Systematic review including meta-analysis and GRADE.",
+     "supports": "High-certainty evidence that high hand force and repetition raise carpal tunnel syndrome rates.",
+     "publisher": "Health Science Reports"
+    }
+   ],
+   "proof_count": 4,
+   "prompt_count": 6
+  },
+  {
+   "slug": "vehicle-turret-gunner",
+   "activity_name": "Vehicle turret gunner",
+   "category": "Vehicles, aircraft and ships",
+   "summary": "Riding up in the turret of a Humvee, MRAP or gun truck on patrols and convoys, behind a .50 cal, M240 or Mk19, with your upper body above the roof.",
+   "search_aliases": [
+    "turret gunner",
+    "up in the turret",
+    "top gunner",
+    "MRAP gunner",
+    "Humvee gunner",
+    "convoy gunner",
+    "gun truck",
+    "CROWS",
+    "in the hatch",
+    "gunner sling"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Air Force",
+    "Navy"
+   ],
+   "exposure_codes": [
+    "blast_overpressure"
+   ],
+   "common_conditions": [
+    {
+     "dc": "6260",
+     "name": "Tinnitus, recurrent",
+     "reason": "Gunfire from the turret and blasts near the truck damage the inner ear; combat jobs show more tinnitus.",
+     "prevalence": "high",
+     "source_keys": [
+      "p40268697",
+      "p34948535"
+     ]
+    },
+    {
+     "dc": "6100",
+     "name": "Hearing loss, bilateral sensorineural",
+     "reason": "Hours of vehicle noise plus weapon fire next to your head wear down hearing over a deployment.",
+     "prevalence": "high",
+     "source_keys": [
+      "p30683800",
+      "p34948535"
+     ]
+    },
+    {
+     "dc": "5237 (1)",
+     "name": "Cervical strain (neck)",
+     "reason": "Out of the hatch, every jolt and swerve whips your neck; military vehicle rides raise neck problems.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "p25739897",
+      "p22934378"
+     ]
+    },
+    {
+     "dc": "5237 (2)",
+     "name": "Lumbosacral strain (low back)",
+     "reason": "Long weeks in tactical vehicles while wearing armor predicted low back pain in a deployed brigade.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "p23532119"
+     ]
+    },
+    {
+     "dc": "8045",
+     "name": "Residuals of traumatic brain injury (TBI)",
+     "reason": "Gunners had the highest injury risk of any seat in Humvee crashes, and blast-exposed jobs show more TBI.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "p22934378",
+      "p34948535"
+     ]
+    },
+    {
+     "dc": "9411",
+     "name": "Posttraumatic stress disorder (PTSD)",
+     "reason": "Concussions on deployment, often from blasts, are strongly tied to PTSD afterward.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "p18234750"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "p40268697",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40268697/",
+     "pmid": "40268697",
+     "year": 2025,
+     "title": "Incidence and Risk Factors for Tinnitus Among Military Service Members in the Millennium Cohort Study",
+     "supports": "Millennium Cohort: new tinnitus tied to Army or Marine service, combat deployment, combat jobs and mild TBI.",
+     "publisher": "American journal of audiology"
+    },
+    {
+     "key": "p34948535",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34948535/",
+     "pmid": "34948535",
+     "year": 2021,
+     "title": "Occupational Risk of Low-Level Blast Exposure and TBI-Related Medical Diagnoses: A Population-Based Epidemiological Investigation (2005-2015)",
+     "supports": "Over 2 million service members: jobs with low-level blast exposure had more TBI, hearing problems, headaches and anxiety.",
+     "publisher": "International journal of environmental research and public health"
+    },
+    {
+     "key": "p30683800",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30683800/",
+     "pmid": "30683800",
+     "year": 2020,
+     "title": "In-vehicle noise exposure among military personnel depending on type of vehicle, riding compartment and road surface",
+     "supports": "Noise in military truck cabs and rear compartments exceeded limits, putting riders at high risk of noise hearing loss.",
+     "publisher": "BMJ military health"
+    },
+    {
+     "key": "p25739897",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25739897/",
+     "pmid": "25739897",
+     "year": 2015,
+     "title": "Effects of vehicle-ride exposure on cervical pathology: a meta-analysis",
+     "supports": "Meta-analysis: riding in ground military vehicles raised the odds of neck (cervical) problems (OR 2.33).",
+     "publisher": "Industrial health"
+    },
+    {
+     "key": "p22934378",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/22934378/",
+     "pmid": "22934378",
+     "year": 2012,
+     "title": "Injuries to deployed U.S. Army soldiers involved in HMMWV crashes, 2002-2006",
+     "supports": "Army HMMWV crash data 1999-2006: gunners had the highest injury risk of any seat (OR 2.37), and combat raised risk.",
+     "publisher": "Military medicine"
+    },
+    {
+     "key": "p23532119",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/23532119/",
+     "pmid": "23532119",
+     "year": 2013,
+     "title": "Loads worn by soldiers predict episodes of low back pain during deployment to Afghanistan",
+     "supports": "Deployed Army brigade in Afghanistan: 21 to 40 hours a week in a tactical vehicle and armor time predicted low back pain.",
+     "publisher": "Spine"
+    },
+    {
+     "key": "p18234750",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/18234750/",
+     "pmid": "18234750",
+     "year": 2008,
+     "title": "Mild traumatic brain injury in U.S. Soldiers returning from Iraq",
+     "supports": "2,525 infantry soldiers after Iraq: 43.9% of those knocked out by a concussion met PTSD criteria, vs 9.1% uninjured.",
+     "publisher": "The New England journal of medicine"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 5
+  },
+  {
+   "slug": "cs-gas-chamber-training",
+   "activity_name": "CS gas chamber and mask confidence training",
+   "category": "Weapons, blast and noise",
+   "summary": "Breaking the mask seal or pulling it off in a CS-filled chamber in training, or running the chamber as CBRN cadre class after class.",
+   "search_aliases": [
+    "gas chamber",
+    "gas house",
+    "CS gas",
+    "tear gas",
+    "mask confidence",
+    "pro mask",
+    "CBRN training",
+    "NBC training",
+    "74D",
+    "chamber NCO",
+    "riot control agent",
+    "gassed"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Navy",
+    "Air Force",
+    "Coast Guard"
+   ],
+   "exposure_codes": [],
+   "common_conditions": [
+    {
+     "dc": "6602",
+     "name": "Asthma, bronchial",
+     "reason": "Heavy CS in a closed room can trigger lasting airway twitchiness that acts like asthma.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s4",
+      "s5",
+      "s3"
+     ]
+    },
+    {
+     "dc": "6600",
+     "name": "Bronchitis, chronic",
+     "reason": "CS inflames the airways; chamber trainees get more respiratory illness after exposure.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s1",
+      "s2",
+      "s7"
+     ]
+    },
+    {
+     "dc": "6001",
+     "name": "Keratopathy",
+     "reason": "Tear gas can burn the cornea and, with heavy exposure, leave opacities or nerve damage.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s6",
+      "s3"
+     ]
+    },
+    {
+     "dc": "6018",
+     "name": "Chronic conjunctivitis (nontrachomatous)",
+     "reason": "CS irritates the eye surface; reviews report lasting conjunctival damage after heavy exposure.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s6",
+      "s3"
+     ]
+    },
+    {
+     "dc": "7806",
+     "name": "Dermatitis or eczema",
+     "reason": "CS reacts with sweaty skin; some people become sensitized and develop lasting rashes.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s5",
+      "s3"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "s1",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25003867/",
+     "pmid": "25003867",
+     "year": 2014,
+     "title": "O-chlorobenzylidene malononitrile (CS riot control agent) associated acute respiratory illnesses in a U.S. Army Basic Combat Training cohort.",
+     "supports": "6,723 Fort Jackson recruits: risk of acute respiratory illness rose 2.44 times after the CS mask confidence chamber.",
+     "publisher": "Military Medicine"
+    },
+    {
+     "key": "s2",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25603650/",
+     "pmid": "25603650",
+     "year": 2014,
+     "title": "O-chlorobenzylidene malononitrile (CS riot control agent) exposure in a U.S. Army basic combat training cohort.",
+     "supports": "Nearly all trainees, and every chamber operator, were exposed to CS above the NIOSH immediately dangerous level.",
+     "publisher": "Journal of Environmental Health"
+    },
+    {
+     "key": "s3",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25633030/",
+     "pmid": "25633030",
+     "year": 2015,
+     "title": "Exposure to the riot control agent CS and potential health effects: a systematic review of the evidence.",
+     "supports": "Review of 35 studies: skin, eye and breathing effects, with lasting effects tied to enclosed-space exposure.",
+     "publisher": "International Journal of Environmental Research and Public Health"
+    },
+    {
+     "key": "s4",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/1351200/",
+     "pmid": "1351200",
+     "year": 1992,
+     "title": "Reactive airways dysfunction after exposure to teargas.",
+     "supports": "Case report of reactive airways dysfunction syndrome, an asthma-like condition, after tear gas exposure.",
+     "publisher": "The Lancet"
+    },
+    {
+     "key": "s5",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/10941352/",
+     "pmid": "10941352",
+     "year": 2000,
+     "title": "Medical hazards of the tear gas CS. A case of persistent, multisystem, hypersensitivity reaction and review of the literature.",
+     "supports": "CS caused months of dermatitis and asthma-like airway disease still present a year later in a sensitized man.",
+     "publisher": "Medicine (Baltimore)"
+    },
+    {
+     "key": "s6",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36733462/",
+     "pmid": "36733462",
+     "year": 2023,
+     "title": "Noxious effects of riot control agents on the ocular surface: Pathogenic mechanisms and management.",
+     "supports": "Tear gases and pepper spray can cause corneal opacities, neurotrophic keratopathy and conjunctival damage.",
+     "publisher": "Frontiers in Toxicology"
+    },
+    {
+     "key": "s7",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30958982/",
+     "pmid": "30958982",
+     "year": 2019,
+     "title": "Extensive Exposure to Tear Gases in Ankara.",
+     "supports": "Indoor tear gas exposure brought cough, phlegm and lower lung function than outdoor exposure.",
+     "publisher": "Turkish Thoracic Journal"
+    }
+   ],
+   "proof_count": 4,
+   "prompt_count": 5
+  },
+  {
+   "slug": "main-engine-gas-turbine",
+   "activity_name": "Main engine rooms and gas turbines",
+   "category": "Vehicles, aircraft and ships",
+   "summary": "Watches and repairs in main machinery rooms on gas turbine and diesel ships: engines, generators, reduction gears, fuel and lube oil.",
+   "search_aliases": [
+    "gas turbine",
+    "GSM",
+    "GSE",
+    "main engine room",
+    "MER",
+    "engineman",
+    "EN",
+    "machinery space",
+    "snipe",
+    "engineering watch",
+    "generator room",
+    "reduction gear"
+   ],
+   "branches": [
+    "Navy",
+    "Coast Guard"
+   ],
+   "exposure_codes": [
+    "jet_fuel_petroleum"
+   ],
+   "common_conditions": [
+    {
+     "dc": "6100",
+     "name": "Hearing loss, bilateral sensorineural",
+     "reason": "Engine room crews have more noise hearing loss than other sailors.",
+     "prevalence": "high",
+     "source_keys": [
+      "s1",
+      "s2",
+      "s3"
+     ]
+    },
+    {
+     "dc": "6260",
+     "name": "Tinnitus, recurrent",
+     "reason": "The engine room is the noisiest space aboard, and that noise is tied to tinnitus.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s4",
+      "s5"
+     ]
+    },
+    {
+     "dc": "6819",
+     "name": "Respiratory System Cancer (Malignant)",
+     "reason": "Engine room crews had higher lung cancer rates, from exhaust, oil mist and old asbestos.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s6",
+      "s7"
+     ]
+    },
+    {
+     "dc": "7806",
+     "name": "Dermatitis or eczema",
+     "reason": "Daily skin contact with fuel and lube oil causes hand dermatitis.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s8"
+     ]
+    },
+    {
+     "dc": "9499-9411",
+     "name": "Chronic Sleep Disturbance",
+     "reason": "Rotating engineering watches break up sleep and build sleep debt that can become insomnia.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s9",
+      "s10"
+     ]
+    },
+    {
+     "dc": "5237 (2)",
+     "name": "Lumbosacral strain (low back)",
+     "reason": "Bending over machinery and climbing ladders in tight spaces strains the low back.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s11",
+      "s12"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "s1",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/18580037/",
+     "pmid": "18580037",
+     "year": 2008,
+     "title": "Hospital contacts for noise-related hearing loss among Danish seafarers and fishermen: a population-based cohort study.",
+     "supports": "Civilian seafarers, same engine room work: engine room personnel had 2.39 times the hearing loss hospital contacts of other seafarers.",
+     "publisher": "Noise Health"
+    },
+    {
+     "key": "s2",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/17484318/",
+     "pmid": "17484318",
+     "year": 2007,
+     "title": "Statistical analysis of hearing loss among navy personnel.",
+     "supports": "268,000 enlisted sailors: half a career on surface warships raised the chance of leaving with hearing loss by 13 points.",
+     "publisher": "Mil Med"
+    },
+    {
+     "key": "s3",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32267889/",
+     "pmid": "32267889",
+     "year": 2020,
+     "title": "Physical influences on seafarers are different during their voyage episodes of port stay, river passage and sea passage: A maritime field study.",
+     "supports": "Civilian merchant crews, same spaces: ship field study: engine room 104 dB(A); engine crews averaged 96 dB(A), deck crews 83 dB(A) during work.",
+     "publisher": "PLoS One"
+    },
+    {
+     "key": "s4",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37820712/",
+     "pmid": "37820712",
+     "year": 2024,
+     "title": "The physical and psychological effects of occupational noise among seafarers: a systematic review.",
+     "supports": "Civilian seafarers, same ship noise: review: the engine room is the noisiest space aboard; shipboard noise linked to hearing loss and tinnitus.",
+     "publisher": "Int J Environ Health Res"
+    },
+    {
+     "key": "s5",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31795665/",
+     "pmid": "31795665",
+     "year": 2019,
+     "title": "Occupational noise exposure: A review of its effects, epidemiology, and impact with recommendations for reducing its burden.",
+     "supports": "Workers in many trades: repeated noise at or above 85 dBA causes permanent hearing loss and tinnitus.",
+     "publisher": "J Acoust Soc Am"
+    },
+    {
+     "key": "s6",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/16234401/",
+     "pmid": "16234401",
+     "year": 2005,
+     "title": "Cancer incidence among Danish seafarers: a population based cohort study.",
+     "supports": "Civilian seafarers, same engine and deck work: danish seafarers: lung cancer risk 2.3 times expected in engine room crew and 4.1 in maintenance crew (exhaust, oil, asbestos).",
+     "publisher": "Occup Environ Med"
+    },
+    {
+     "key": "s7",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/12205234/",
+     "pmid": "12205234",
+     "year": 2002,
+     "title": "Cancer at sea: a case-control study among male Finnish seafarers.",
+     "supports": "Civilian seafarers, same engine and deck work: finnish seafarers: engine crew lung cancer rose with years at sea, mesothelioma OR 9.75; icebreaker deck crew had more lung cancer.",
+     "publisher": "Occup Environ Med"
+    },
+    {
+     "key": "s8",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34109582/",
+     "pmid": "34109582",
+     "year": 2021,
+     "title": "Assessment of hand or foot eczema and contact dermatitis among car mechanics.",
+     "supports": "Civilian mechanics, same oils and fuels: mineral oil and petroleum contact causes hand dermatitis in vehicle repair workers.",
+     "publisher": "Eur Rev Med Pharmacol Sci"
+    },
+    {
+     "key": "s9",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/26360772/",
+     "pmid": "26360772",
+     "year": 2016,
+     "title": "Operational assessment of the 5-h on/10-h off watchstanding schedule on a US Navy ship: sleep patterns, mood and psychomotor vigilance performance of crewmembers in the nuclear reactor department.",
+     "supports": "Sailors on a rotating 5/10 watch built up sleep debt from long workdays and sleep out of sync with the body clock.",
+     "publisher": "Ergonomics"
+    },
+    {
+     "key": "s10",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31185484/",
+     "pmid": "31185484",
+     "year": 2020,
+     "title": "Sleep in the United States Military.",
+     "supports": "Review: night shifts and continuous ops cause insufficient sleep, tied to insomnia, sleep apnea, PTSD and heart disease.",
+     "publisher": "Neuropsychopharmacology"
+    },
+    {
+     "key": "s11",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37248938/",
+     "pmid": "37248938",
+     "year": 2023,
+     "title": "Epidemiological study of work-related musculoskeletal disorders and related risk factors among automobile maintenance workers.",
+     "supports": "Civilian mechanics, same postures: in 539 auto maintenance workers, the low back, neck and shoulders were most affected, tied to awkward postures.",
+     "publisher": "Work"
+    },
+    {
+     "key": "s12",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32852526/",
+     "pmid": "32852526",
+     "year": 2020,
+     "title": "Incidence and Mechanisms of Musculoskeletal Injuries in Deployed Navy Active Duty Service Members Aboard Two U.S. Navy Air Craft Carriers.",
+     "supports": "On two deployed carriers, low back (34%), shoulder (25%) and knee (15%) were the most common musculoskeletal complaints.",
+     "publisher": "Mil Med"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "welding-metal-fabrication",
+   "activity_name": "Welding, cutting and metal fabrication",
+   "category": "Hours and support work",
+   "summary": "Arc, MIG and TIG welding, torch cutting and grinding on vehicles, equipment and structures, often in tight spaces full of fumes and noise.",
+   "search_aliases": [
+    "welder",
+    "welding",
+    "allied trades",
+    "91E",
+    "metal worker",
+    "Seabee steelworker",
+    "torch cutting",
+    "MIG welding",
+    "TIG welding",
+    "stick welding",
+    "weld shop",
+    "fabrication"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Navy",
+    "Air Force",
+    "Coast Guard"
+   ],
+   "exposure_codes": [
+    "hexavalent_chromium"
+   ],
+   "common_conditions": [
+    {
+     "dc": "6819",
+     "name": "Respiratory System Cancer (Malignant)",
+     "reason": "Welding fumes are a known lung carcinogen, even after accounting for smoking and asbestos.",
+     "prevalence": "high",
+     "source_keys": [
+      "s1"
+     ]
+    },
+    {
+     "dc": "6602",
+     "name": "Asthma, bronchial",
+     "reason": "Welders develop adult-onset asthma more often; nickel in the fume is one driver.",
+     "prevalence": "high",
+     "source_keys": [
+      "s2",
+      "s3"
+     ]
+    },
+    {
+     "dc": "6600",
+     "name": "Bronchitis, chronic",
+     "reason": "Years of fume and dust raise the risk of chronic bronchitis in welders.",
+     "prevalence": "high",
+     "source_keys": [
+      "s3"
+     ]
+    },
+    {
+     "dc": "6604",
+     "name": "Chronic obstructive pulmonary disease",
+     "reason": "Dust and chromium in weld fume were tied to COPD in a welder cohort.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s3"
+     ]
+    },
+    {
+     "dc": "6522",
+     "name": "Allergic or vasomotor rhinitis",
+     "reason": "Welders show higher rates of new rhinitis from breathing metal fume.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s2",
+      "s3"
+     ]
+    },
+    {
+     "dc": "6100",
+     "name": "Hearing loss, bilateral sensorineural",
+     "reason": "Grinding, cutting and metal shop noise wears down hearing over years of work.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s4",
+      "s5"
+     ]
+    },
+    {
+     "dc": "6260",
+     "name": "Tinnitus, recurrent",
+     "reason": "The same metal shop noise can leave lasting ringing in the ears.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s5",
+      "s6"
+     ]
+    },
+    {
+     "dc": "5201",
+     "name": "Arm, limitation of motion of",
+     "reason": "Holding a torch or grinder with arms raised for long periods is linked to shoulder impingement.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s7"
+     ]
+    },
+    {
+     "dc": "6009",
+     "name": "Unhealed eye injury",
+     "reason": "Grinding throws metal slivers into the eye that often heal with a corneal scar.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "s8"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "s1",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30948521/",
+     "pmid": "30948521",
+     "year": 2019,
+     "title": "Welding fumes and lung cancer: a meta-analysis of case-control and cohort studies.",
+     "supports": "IARC-led meta-analysis: welding fumes raise lung cancer risk regardless of steel type, after adjusting for smoking and asbestos (civilian welders, same task).",
+     "publisher": "Occupational and environmental medicine"
+    },
+    {
+     "key": "s2",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/26206878/",
+     "pmid": "26206878",
+     "year": 2015,
+     "title": "Incidence of rhinitis and asthma related to welding in Northern Europe.",
+     "supports": "Population study in Northern Europe: welders had higher incidence of adult-onset rhinitis and, in men, asthma (civilian welders, same task).",
+     "publisher": "The European respiratory journal"
+    },
+    {
+     "key": "s3",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39663610/",
+     "pmid": "39663610",
+     "year": 2025,
+     "title": "Respiratory Ill-Health and Welding Exposures: A Canadian Cohort Study.",
+     "supports": "Canadian welder cohort: welders had more asthma, rhinitis and COPD/bronchitis, tied to dust, chromium and nickel in fume (civilian welders, same task).",
+     "publisher": "American journal of industrial medicine"
+    },
+    {
+     "key": "s4",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25236312/",
+     "pmid": "25236312",
+     "year": 2014,
+     "title": "Noise-induced hearing loss in small-scale metal industry in Nepal.",
+     "supports": "Metal workers had far more noise-induced hearing loss than unexposed controls (civilian metal shops, same task).",
+     "publisher": "The Journal of laryngology and otology"
+    },
+    {
+     "key": "s5",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31795665/",
+     "pmid": "31795665",
+     "year": 2019,
+     "title": "Occupational noise exposure: A review of its effects, epidemiology, and impact with recommendations for reducing its burden.",
+     "supports": "Review: repeated noise at or above 85 dBA causes permanent hearing loss and tinnitus; construction and mining have the highest burden (civilian workers, same task).",
+     "publisher": "The Journal of the Acoustical Society of America"
+    },
+    {
+     "key": "s6",
+     "url": "https://www.publichealth.va.gov/exposures/noise/",
+     "pmid": null,
+     "year": 2026,
+     "title": "Noise Exposure",
+     "supports": "VA: noise from machinery, heavy weapons and aircraft in general job duties can cause or contribute to hearing loss and tinnitus.",
+     "publisher": "U.S. Department of Veterans Affairs, Public Health"
+    },
+    {
+     "key": "s7",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/20094690/",
+     "pmid": "20094690",
+     "year": 2010,
+     "title": "Associations between work-related factors and specific disorders of the shoulder--a systematic review of the literature.",
+     "supports": "Systematic review: working with arms raised, forceful exertion and repetitive work are linked to shoulder impingement (civilian workers, same task).",
+     "publisher": "Scandinavian journal of work, environment & health"
+    },
+    {
+     "key": "s8",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/22315936/",
+     "pmid": "22315936",
+     "year": 2012,
+     "title": "Corneal metallic foreign body injuries due to suboptimal ocular protection.",
+     "supports": "Hospital series: most metallic corneal foreign bodies came from grinding and 88% healed with a corneal scar (civilian workers, same task).",
+     "publisher": "Archives of environmental & occupational health"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "structural-firefighting",
+   "activity_name": "Military firefighting and fire calls",
+   "category": "Medical, police and fire",
+   "summary": "Base and shipboard fire crews: structure fires, smoke, SCBA, ladders and hose lines, sirens, 24-hour shifts, and rescues on crash and medical calls.",
+   "search_aliases": [
+    "firefighter",
+    "fire department",
+    "3E7X1",
+    "12M",
+    "7051",
+    "fire protection",
+    "fire station",
+    "structure fire",
+    "smoke eater",
+    "SCBA",
+    "hose line",
+    "fire academy"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Navy",
+    "Air Force"
+   ],
+   "exposure_codes": [],
+   "common_conditions": [
+    {
+     "dc": "7528",
+     "name": "Malignant neoplasms of the genitourinary system",
+     "reason": "Smoke and soot carcinogens raise bladder cancer risk in firefighters; prostate and testis also rise.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "f1",
+      "f2"
+     ]
+    },
+    {
+     "dc": "6819",
+     "name": "Respiratory System Cancer (Malignant)",
+     "reason": "Firefighting causes mesothelioma, a cancer of the lining around the lungs, per IARC.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "f1",
+      "f2"
+     ]
+    },
+    {
+     "dc": "7343",
+     "name": "Malignant neoplasms of the digestive system, exclusive of skin growths",
+     "reason": "Career firefighters show higher colon cancer rates in pooled cohort studies.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "f1",
+      "f2"
+     ]
+    },
+    {
+     "dc": "7833",
+     "name": "Malignant melanoma",
+     "reason": "Firefighters have a higher rate of skin melanoma in pooled cohort studies.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "f1",
+      "f2"
+     ]
+    },
+    {
+     "dc": "7715",
+     "name": "Non-Hodgkin's lymphoma",
+     "reason": "Firefighting is linked to a modest rise in non-Hodgkin lymphoma.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "f1",
+      "f2"
+     ]
+    },
+    {
+     "dc": "7914",
+     "name": "Neoplasm, malignant, any specified part of the endocrine system",
+     "reason": "Pooled firefighter studies found more thyroid cancer than expected.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "f2"
+     ]
+    },
+    {
+     "dc": "6100",
+     "name": "Hearing loss, bilateral sensorineural",
+     "reason": "Sirens, pumps, saws and alarms are loud; nearly 30% of tested firefighters had hearing loss.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "f3"
+     ]
+    },
+    {
+     "dc": "9411",
+     "name": "Posttraumatic stress disorder (PTSD)",
+     "reason": "Burn victims, dead children and injured crew members add up; event load tracks PTSD symptoms.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "f4",
+      "f5"
+     ]
+    },
+    {
+     "dc": "7005",
+     "name": "Arteriosclerotic heart disease (coronary artery disease)",
+     "reason": "Heavy exertion in hot gear strains the heart; coronary disease causes most on-duty firefighter cardiac deaths.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "f6"
+     ]
+    },
+    {
+     "dc": "7101",
+     "name": "Hypertensive vascular disease (hypertension and isolated systolic hypertension)",
+     "reason": "About 4 in 10 firefighters have high blood pressure in pooled studies.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "f7"
+     ]
+    },
+    {
+     "dc": "6847",
+     "name": "Sleep Apnea Syndromes (Obstructive, Central, Mixed)",
+     "reason": "Broken sleep on 24-hour shifts; 28% of firefighters screened positive for sleep apnea.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "f8"
+     ]
+    },
+    {
+     "dc": "5237 (2)",
+     "name": "Lumbosacral strain (low back)",
+     "reason": "Hauling hose, ladders and victims in heavy gear makes the low back the most common pain site.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "f9"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "f1",
+     "url": "https://monographs.iarc.who.int/news-events/volume-132-occupational-exposure-as-a-firefighter/",
+     "year": 2022,
+     "title": "Volume 132: Occupational exposure as a firefighter",
+     "supports": "IARC Group 1: firefighting causes mesothelioma and bladder cancer; limited evidence for colon, prostate, testis, melanoma and non-Hodgkin lymphoma (civilian firefighters, same task).",
+     "publisher": "International Agency for Research on Cancer (IARC Monographs)"
+    },
+    {
+     "key": "f2",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37389311/",
+     "pmid": "37389311",
+     "year": 2023,
+     "title": "Firefighting and Cancer: A Meta-analysis of Cohort Studies in the Context of Cancer Hazard Identification.",
+     "supports": "IARC meta-analysis: career firefighters had higher rates of mesothelioma, bladder, prostate, testicular, colon, thyroid cancer, melanoma and NHL (civilian firefighters, same task).",
+     "publisher": "Safety and Health at Work"
+    },
+    {
+     "key": "f3",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36900832/",
+     "pmid": "36900832",
+     "year": 2023,
+     "title": "Prevalence of Hearing Loss and Perceptions of Hearing Health and Protection among Florida Firefighters.",
+     "supports": "Nearly 30% of 214 audiometry-tested firefighters had mild to profound hearing loss, worse than aging alone (civilian firefighters, same task).",
+     "publisher": "International Journal of Environmental Research and Public Health"
+    },
+    {
+     "key": "f4",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37523669/",
+     "pmid": "37523669",
+     "year": 2023,
+     "title": "Duty-related trauma and PTSD symptoms in US urban firefighters.",
+     "supports": "755 career firefighters: event load and the stress of duty-related events were linked to PTSD symptoms (civilian firefighters, same task).",
+     "publisher": "Occupational Medicine"
+    },
+    {
+     "key": "f5",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/21681455/",
+     "pmid": "21681455",
+     "year": 2012,
+     "title": "Rescuers at risk: a systematic review and meta-regression analysis of the worldwide current prevalence and correlates of PTSD in rescue workers.",
+     "supports": "28 studies, 20,424 rescue workers including firefighters: pooled PTSD prevalence of 10%, much higher than the general population.",
+     "publisher": "Social Psychiatry and Psychiatric Epidemiology"
+    },
+    {
+     "key": "f6",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42960733/",
+     "pmid": "42960733",
+     "year": 2026,
+     "title": "Sudden Cardiac Death in Firefighters From the United States: A 16-Year Postmortem Analysis.",
+     "supports": "39.3% of autopsied on-duty firefighter deaths were sudden cardiac death; 81.8% were due to coronary or hypertensive heart disease (civilian firefighters, same task).",
+     "publisher": "Journal of the American Heart Association"
+    },
+    {
+     "key": "f7",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37835084/",
+     "pmid": "37835084",
+     "year": 2023,
+     "title": "The Prevalence of Metabolic Syndrome and Its Components in Firefighters: A Systematic Review and Meta-Analysis.",
+     "supports": "25 studies, 31,309 firefighters: hypertension prevalence 39.1% (civilian firefighters, same task).",
+     "publisher": "International Journal of Environmental Research and Public Health"
+    },
+    {
+     "key": "f8",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25580602/",
+     "pmid": "25580602",
+     "year": 2015,
+     "title": "Common sleep disorders increase risk of motor vehicle crashes and adverse health outcomes in firefighters.",
+     "supports": "6,933 firefighters: 28.4% screened positive for obstructive sleep apnea; sleep disorders tied to crashes, heart disease, depression (civilian firefighters, same task).",
+     "publisher": "Journal of Clinical Sleep Medicine"
+    },
+    {
+     "key": "f9",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38105113/",
+     "pmid": "38105113",
+     "year": 2024,
+     "title": "The global prevalence of musculoskeletal disorders among firefighters: a systematic review and meta-analysis.",
+     "supports": "31 studies: 41% of firefighters had musculoskeletal disorders; low back the most common site at 31% (civilian firefighters, same task).",
+     "publisher": "International Journal of Occupational Safety and Ergonomics"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "gulf-war-ground-war",
+   "activity_name": "Gulf War ground war, 1990 to 1991",
+   "category": "Deployments and eras",
+   "summary": "Desert Shield and Desert Storm: months in Saudi and Kuwaiti desert, the ground push, PB pills, bug spray, smoke and tent life.",
+   "search_aliases": [
+    "Desert Storm",
+    "Desert Shield",
+    "Gulf War",
+    "the Gulf",
+    "ground war",
+    "100 hour war",
+    "Kuwait liberation",
+    "PB pills",
+    "Khamisiyah",
+    "Gulf War syndrome",
+    "SWA 1991"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Navy",
+    "Air Force",
+    "Space Force",
+    "Coast Guard"
+   ],
+   "exposure_codes": [
+    "gulf_war_illness_swa",
+    "burn_pits_pact_gulfwar"
+   ],
+   "common_conditions": [
+    {
+     "dc": "8850",
+     "name": "Chronic Multi-Symptom Illness (Gulf War Illness)",
+     "reason": "Fatigue, pain and memory trouble with no clear cause are covered for Gulf War vets under 38 CFR 3.317.",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr317",
+      "fukuda",
+      "kang09"
+     ]
+    },
+    {
+     "dc": "6354",
+     "name": "Chronic fatigue syndrome (CFS)",
+     "reason": "Gulf War vets had nearly 5 times the CFS-like illness; 38 CFR 3.317 covers chronic fatigue syndrome.",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr317",
+      "kang03"
+     ]
+    },
+    {
+     "dc": "7319",
+     "name": "Irritable bowel syndrome (IBS)",
+     "reason": "IBS is common in Gulf War vets and counts as a functional GI disorder under 38 CFR 3.317.",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr317",
+      "ibs",
+      "va_gw"
+     ]
+    },
+    {
+     "dc": "9411",
+     "name": "Posttraumatic stress disorder (PTSD)",
+     "reason": "Gulf War vets had about 3 times the PTSD of era peers, rising with deployment stress.",
+     "prevalence": "high",
+     "source_keys": [
+      "kang03",
+      "kang09"
+     ]
+    },
+    {
+     "dc": "5025",
+     "name": "Fibromyalgia (fibrositis, primary fibromyalgia syndrome)",
+     "reason": "Widespread muscle pain with no clear cause, fibromyalgia, is covered under 38 CFR 3.317.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "cfr317",
+      "va_gw"
+     ]
+    },
+    {
+     "dc": "6602",
+     "name": "Asthma, bronchial",
+     "reason": "VA presumes asthma after Gulf War service under 38 CFR 3.320; dust and smoke inflame airways.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "cfr320"
+     ]
+    },
+    {
+     "dc": "6522",
+     "name": "Allergic or vasomotor rhinitis",
+     "reason": "VA presumes rhinitis after Gulf War service under 38 CFR 3.320; particles irritate the nose.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "cfr320"
+     ]
+    },
+    {
+     "dc": "6510",
+     "name": "Sinusitis, pansinusitis, chronic",
+     "reason": "VA presumes sinusitis after Gulf War service under 38 CFR 3.320; particles block sinus drainage.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "cfr320"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "cfr317",
+     "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title38-vol1/xml/CFR-2025-title38-vol1-sec3-317.xml",
+     "year": 2025,
+     "title": "38 CFR 3.317, Compensation for certain disabilities occurring in Persian Gulf veterans",
+     "supports": "Covers undiagnosed illness and chronic multisymptom illness (CFS, fibromyalgia, functional GI disorders like IBS) and nine infectious diseases for Southwest Asia and Afghanistan.",
+     "publisher": "U.S. Government Publishing Office (Code of Federal Regulations)"
+    },
+    {
+     "key": "fukuda",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/9749480/",
+     "pmid": "9749480",
+     "year": 1998,
+     "title": "Chronic multisymptom illness affecting Air Force veterans of the Gulf War.",
+     "supports": "Chronic multisymptom illness hit 45% of 1,155 Air Force Gulf War veterans vs 15% of nondeployed peers.",
+     "publisher": "JAMA"
+    },
+    {
+     "key": "kang09",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/19322107/",
+     "pmid": "19322107",
+     "year": 2009,
+     "title": "Health of US veterans of 1991 Gulf War: a follow-up survey in 10 years.",
+     "supports": "Fourteen years later, Gulf War vets still reported more multisymptom illness, CFS-like illness, PTSD and other conditions than era controls.",
+     "publisher": "J Occup Environ Med"
+    },
+    {
+     "key": "kang03",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/12522021/",
+     "pmid": "12522021",
+     "year": 2003,
+     "title": "Post-traumatic stress disorder and chronic fatigue syndrome-like illness among Gulf War veterans: a population-based survey of 30,000 veterans.",
+     "supports": "Survey of 30,000 veterans: Gulf War vets had 3 times the PTSD and nearly 5 times the CFS-like illness of era peers; PTSD rose with deployment stress.",
+     "publisher": "Am J Epidemiol"
+    },
+    {
+     "key": "ibs",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38771213/",
+     "pmid": "38771213",
+     "year": 2024,
+     "title": "Irritable Bowel Syndrome in Veterans With Gulf War Illness Evaluated at VA's War-Related Illness and Injury Study Center.",
+     "supports": "Among 578 deployed Gulf War vets seen at the WRIISC, half had physician-diagnosed IBS, tied to severe Gulf War illness.",
+     "publisher": "Mil Med"
+    },
+    {
+     "key": "va_gw",
+     "url": "https://www.va.gov/disability/eligibility/hazardous-materials-exposure/gulf-war-illness-southwest-asia/",
+     "year": 2025,
+     "title": "Gulf War Illnesses linked to Southwest Asia service",
+     "supports": "Undiagnosed illnesses (CFS, fibromyalgia, functional GI disorders) and infectious diseases VA connects to Gulf War service from 1990 to now.",
+     "publisher": "U.S. Department of Veterans Affairs"
+    },
+    {
+     "key": "cfr320",
+     "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title38-vol1/xml/CFR-2025-title38-vol1-sec3-320.xml",
+     "year": 2025,
+     "title": "38 CFR 3.320, Claims based on exposure to fine particulate matter",
+     "supports": "Presumes asthma, rhinitis and sinusitis (and rare airway cancers) for Southwest Asia theater service, and Afghanistan, Syria, Djibouti or Uzbekistan after Sept. 19, 2001.",
+     "publisher": "U.S. Government Publishing Office (Code of Federal Regulations)"
+    }
+   ],
+   "proof_count": 5,
+   "prompt_count": 6
+  },
+  {
+   "slug": "burn-pit-bases",
+   "activity_name": "Living on bases with burn pits",
+   "category": "Deployments and eras",
+   "summary": "Living, working or pulling details near open burn pits on bases in Iraq, Afghanistan and nearby countries after 9/11.",
+   "search_aliases": [
+    "burn pits",
+    "burn pit smoke",
+    "trash burning",
+    "Balad burn pit",
+    "Camp Victory",
+    "Bagram",
+    "Kandahar",
+    "FOB life",
+    "shit burning",
+    "OIF",
+    "OEF",
+    "OIR"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Navy",
+    "Air Force",
+    "Space Force",
+    "Coast Guard"
+   ],
+   "exposure_codes": [
+    "burn_pits_pact_post911"
+   ],
+   "common_conditions": [
+    {
+     "dc": "6602",
+     "name": "Asthma, bronchial",
+     "reason": "More days at burn pit bases raised asthma odds; VA presumes asthma here under 38 CFR 3.320.",
+     "prevalence": "high",
+     "source_keys": [
+      "burnjama",
+      "mcasthma",
+      "cfr320"
+     ]
+    },
+    {
+     "dc": "6604",
+     "name": "Chronic obstructive pulmonary disease",
+     "reason": "Each 100 days at a burn pit base raised COPD odds; VA lists COPD under the PACT Act.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "burnjama",
+      "va_haz"
+     ]
+    },
+    {
+     "dc": "6522",
+     "name": "Allergic or vasomotor rhinitis",
+     "reason": "Smoke and dust irritate the nose; VA presumes rhinitis for this service under 38 CFR 3.320.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "shade",
+      "cfr320"
+     ]
+    },
+    {
+     "dc": "6510",
+     "name": "Sinusitis, pansinusitis, chronic",
+     "reason": "VA presumes sinusitis for this service under 38 CFR 3.320; rhinosinusitis began on deployment.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "shade",
+      "cfr320"
+     ]
+    },
+    {
+     "dc": "7101",
+     "name": "Hypertensive vascular disease (hypertension and isolated systolic hypertension)",
+     "reason": "Longer stays at burn pit bases were linked to higher odds of high blood pressure.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "burnjama"
+     ]
+    },
+    {
+     "dc": "6600",
+     "name": "Bronchitis, chronic",
+     "reason": "Smoke inflames the bronchial tubes; VA lists chronic bronchitis for burn pit locations.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "va_haz",
+      "ats"
+     ]
+    },
+    {
+     "dc": "6825",
+     "name": "Diffuse interstitial fibrosis (interstitial pneumonitis, fibrosing alveolitis)",
+     "reason": "VA lists interstitial lung disease and pulmonary fibrosis for burn pit service under the PACT Act.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "va_haz"
+     ]
+    },
+    {
+     "dc": "6846",
+     "name": "Sarcoidosis",
+     "reason": "VA lists sarcoidosis and granulomatous disease for burn pit service under the PACT Act.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "va_haz"
+     ]
+    },
+    {
+     "dc": "6603",
+     "name": "Emphysema, pulmonary",
+     "reason": "VA lists emphysema for burn pit service under the PACT Act.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "va_haz"
+     ]
+    },
+    {
+     "dc": "7715",
+     "name": "Non-Hodgkin's lymphoma",
+     "reason": "VA lists lymphoma of any type for burn pit locations under the PACT Act.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "va_haz"
+     ]
+    },
+    {
+     "dc": "8002",
+     "name": "Malignant",
+     "reason": "VA lists brain cancer and glioblastoma for burn pit locations under the PACT Act.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "va_haz"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "burnjama",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38662371/",
+     "pmid": "38662371",
+     "year": 2024,
+     "title": "Deployment to Military Bases With Open Burn Pits and Respiratory and Cardiovascular Disease.",
+     "supports": "In 459,381 OEF/OIF veterans, more days at burn pit bases raised odds of asthma, COPD and hypertension.",
+     "publisher": "JAMA Netw Open"
+    },
+    {
+     "key": "mcasthma",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29893775/",
+     "pmid": "29893775",
+     "year": 2018,
+     "title": "New-Onset Asthma and Combat Deployment: Findings From the Millennium Cohort Study.",
+     "supports": "Millennium Cohort: deployers with combat experience were 24% to 30% more likely to develop new asthma.",
+     "publisher": "Am J Epidemiol"
+    },
+    {
+     "key": "cfr320",
+     "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title38-vol1/xml/CFR-2025-title38-vol1-sec3-320.xml",
+     "year": 2025,
+     "title": "38 CFR 3.320, Claims based on exposure to fine particulate matter",
+     "supports": "Presumes asthma, rhinitis and sinusitis (and rare airway cancers) for Southwest Asia theater service, and Afghanistan, Syria, Djibouti or Uzbekistan after Sept. 19, 2001.",
+     "publisher": "U.S. Government Publishing Office (Code of Federal Regulations)"
+    },
+    {
+     "key": "va_haz",
+     "url": "https://www.va.gov/disability/eligibility/hazardous-materials-exposure/specific-environmental-hazards/",
+     "year": 2026,
+     "title": "Exposure to burn pits and other specific environmental hazards",
+     "supports": "Names the Mishraq sulfur fire and Qarmat Ali hexavalent chromium exposures, and lists burn pit cancers and lung illnesses VA treats as presumptive under the PACT Act.",
+     "publisher": "U.S. Department of Veterans Affairs"
+    },
+    {
+     "key": "shade",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39659739/",
+     "pmid": "39659739",
+     "year": 2025,
+     "title": "Sinusitis and rhinitis among US veterans deployed to Southwest Asia and Afghanistan after September 11, 2001.",
+     "supports": "VA SHADE study of 1,960 post-9/11 land deployers: rhinitis and sinusitis began during and after deployment; rhinitis tied to pesticide and repellent use.",
+     "publisher": "J Allergy Clin Immunol Glob"
+    },
+    {
+     "key": "ats",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42360728/",
+     "pmid": "42360728",
+     "year": 2026,
+     "title": "Deployment-related respiratory health: bridging the gap between clinical and epidemiological associations and disease mechanisms: an official American Thoracic Society Workshop Report.",
+     "supports": "ATS workshop: land deployers to Southwest Asia and Afghanistan breathed high particulate levels from desert dust, burn pits and jobs, with lung effects.",
+     "publisher": "Ann Am Thorac Soc"
+    }
+   ],
+   "proof_count": 4,
+   "prompt_count": 6
+  },
+  {
+   "slug": "blue-water-navy-vietnam",
+   "activity_name": "Blue Water Navy off Vietnam",
+   "category": "Deployments and eras",
+   "summary": "Serving aboard ships within 12 nautical miles of Vietnam or Cambodia between 1962 and 1975, including gunline, Yankee Station and offshore duty.",
+   "search_aliases": [
+    "Blue Water Navy",
+    "Blue Water",
+    "gunline",
+    "Yankee Station",
+    "Dixie Station",
+    "Tonkin Gulf",
+    "offshore Vietnam",
+    "12 nautical miles",
+    "Market Time",
+    "Agent Orange ship"
+   ],
+   "branches": [
+    "Navy",
+    "Marine Corps",
+    "Coast Guard"
+   ],
+   "exposure_codes": [
+    "agent_orange_vietnam"
+   ],
+   "common_conditions": [
+    {
+     "dc": "7913",
+     "name": "Diabetes mellitus",
+     "reason": "VA presumes type 2 diabetes after herbicide exposure under 38 CFR 3.309(e); dioxin is tied to it.",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309",
+      "acc06"
+     ]
+    },
+    {
+     "dc": "7005",
+     "name": "Arteriosclerotic heart disease (coronary artery disease)",
+     "reason": "VA presumes ischemic heart disease after herbicide exposure under 38 CFR 3.309(e).",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309",
+      "acc06"
+     ]
+    },
+    {
+     "dc": "7101",
+     "name": "Hypertensive vascular disease (hypertension and isolated systolic hypertension)",
+     "reason": "VA added high blood pressure to its Agent Orange list under the PACT Act; sprayers had more of it.",
+     "prevalence": "high",
+     "source_keys": [
+      "va_ao",
+      "acc16"
+     ]
+    },
+    {
+     "dc": "6819",
+     "name": "Respiratory System Cancer (Malignant)",
+     "reason": "VA presumes lung, bronchus, larynx and trachea cancers after herbicide exposure under 38 CFR 3.309(e).",
+     "prevalence": "moderate",
+     "source_keys": [
+      "cfr309",
+      "ph_bwn"
+     ]
+    },
+    {
+     "dc": "7528",
+     "name": "Malignant neoplasms of the genitourinary system",
+     "reason": "Prostate cancer is on 38 CFR 3.309(e); VA also lists bladder cancer for Agent Orange exposure.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "cfr309",
+      "va_ao"
+     ]
+    },
+    {
+     "dc": "7715",
+     "name": "Non-Hodgkin's lymphoma",
+     "reason": "VA presumes non-Hodgkin's lymphoma after herbicide exposure under 38 CFR 3.309(e).",
+     "prevalence": "moderate",
+     "source_keys": [
+      "cfr309",
+      "ph_bwn"
+     ]
+    },
+    {
+     "dc": "7709",
+     "name": "Hodgkin's lymphoma",
+     "reason": "VA presumes Hodgkin's disease after herbicide exposure under 38 CFR 3.309(e).",
+     "prevalence": "moderate",
+     "source_keys": [
+      "cfr309"
+     ]
+    },
+    {
+     "dc": "7703",
+     "name": "Leukemia (except for chronic myelogenous leukemia)",
+     "reason": "Chronic B-cell leukemias, including CLL, are presumed after herbicide exposure under 38 CFR 3.309(e).",
+     "prevalence": "moderate",
+     "source_keys": [
+      "cfr309"
+     ]
+    },
+    {
+     "dc": "7712",
+     "name": "Multiple myeloma",
+     "reason": "VA presumes multiple myeloma after herbicide exposure under 38 CFR 3.309(e).",
+     "prevalence": "moderate",
+     "source_keys": [
+      "cfr309"
+     ]
+    },
+    {
+     "dc": "8004",
+     "name": "Paralysis agitans",
+     "reason": "VA presumes Parkinson's disease after herbicide exposure under 38 CFR 3.309(e).",
+     "prevalence": "moderate",
+     "source_keys": [
+      "cfr309",
+      "va_ao"
+     ]
+    },
+    {
+     "dc": "7903",
+     "name": "Hypothyroidism",
+     "reason": "VA added hypothyroidism to its Agent Orange presumptive list under the PACT Act.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "va_ao"
+     ]
+    },
+    {
+     "dc": "7717",
+     "name": "AL amyloidosis (primary amyloidosis)",
+     "reason": "VA presumes AL amyloidosis after herbicide exposure under 38 CFR 3.309(e).",
+     "prevalence": "moderate",
+     "source_keys": [
+      "cfr309"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "cfr309",
+     "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title38-vol1/xml/CFR-2025-title38-vol1-sec3-309.xml",
+     "year": 2025,
+     "title": "38 CFR 3.309, Disease subject to presumptive service connection",
+     "supports": "Lists tropical diseases (b), former POW diseases (c), radiation-exposed veteran cancers and radiation-risk activities (d), and herbicide diseases (e).",
+     "publisher": "U.S. Government Publishing Office (Code of Federal Regulations)"
+    },
+    {
+     "key": "acc06",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/17006952/",
+     "pmid": "17006952",
+     "year": 2006,
+     "title": "Health status of Army Chemical Corps Vietnam veterans who sprayed defoliant in Vietnam.",
+     "supports": "Chemical Corps Vietnam veterans who sprayed defoliant had more diabetes, heart disease, hypertension and chronic respiratory disease.",
+     "publisher": "Am J Ind Med"
+    },
+    {
+     "key": "va_ao",
+     "url": "https://www.va.gov/disability/eligibility/hazardous-materials-exposure/agent-orange/",
+     "year": 2025,
+     "title": "Agent Orange exposure and disability compensation",
+     "supports": "VA's Agent Orange disease list (adds hypertension, MGUS, bladder cancer, hypothyroidism) and exposure locations: Vietnam waters within 12 nautical miles, Thailand, Laos, Cambodia, Guam, American Samoa, Johnston Atoll.",
+     "publisher": "U.S. Department of Veterans Affairs"
+    },
+    {
+     "key": "acc16",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/27820763/",
+     "pmid": "27820763",
+     "year": 2016,
+     "title": "Herbicide Exposure, Vietnam Service, and Hypertension Risk in Army Chemical Corps Veterans.",
+     "supports": "Army Chemical Corps veterans who sprayed herbicide had 1.74 times the odds of hypertension; serum dioxin was highest in Vietnam sprayers.",
+     "publisher": "J Occup Environ Med"
+    },
+    {
+     "key": "ph_bwn",
+     "url": "https://www.publichealth.va.gov/exposures/agentorange/locations/blue-water-veterans.asp",
+     "year": 2025,
+     "title": "Blue Water Navy Veterans and Agent Orange Exposure",
+     "supports": "Public Law 116-23 extended the herbicide exposure presumption to ships within 12 nautical miles of Vietnam and Cambodia, 1962 to 1975.",
+     "publisher": "VA Office of Public Health"
+    }
+   ],
+   "proof_count": 4,
+   "prompt_count": 5
+  },
+  {
+   "slug": "stationed-at-camp-lejeune",
+   "activity_name": "Stationed at Camp Lejeune, 1953 to 1987",
+   "category": "Deployments and eras",
+   "summary": "Living, training or working at Camp Lejeune or MCAS New River for 30 days or more between August 1953 and December 1987, when base water held TCE and PCE.",
+   "search_aliases": [
+    "Camp Lejeune",
+    "Lejeune water",
+    "MCAS New River",
+    "Hadnot Point",
+    "Tarawa Terrace",
+    "contaminated water",
+    "TCE",
+    "PCE",
+    "Camp Geiger",
+    "II MEF"
+   ],
+   "branches": [
+    "Marine Corps",
+    "Navy",
+    "Army",
+    "Air Force",
+    "Coast Guard"
+   ],
+   "exposure_codes": [
+    "camp_lejeune_water"
+   ],
+   "common_conditions": [
+    {
+     "dc": "7528",
+     "name": "Malignant neoplasms of the genitourinary system",
+     "reason": "Kidney and bladder cancer are presumed for Lejeune water exposure under 38 CFR 3.309(f).",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309",
+      "cfr307",
+      "bove_mort"
+     ]
+    },
+    {
+     "dc": "7343",
+     "name": "Malignant neoplasms of the digestive system, exclusive of skin growths",
+     "reason": "Liver cancer is presumed under 38 CFR 3.309(f); Lejeune Marines also had more esophageal cancer.",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309",
+      "bove_inc"
+     ]
+    },
+    {
+     "dc": "7715",
+     "name": "Non-Hodgkin's lymphoma",
+     "reason": "Non-Hodgkin's lymphoma is presumed for Lejeune water exposure under 38 CFR 3.309(f).",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309",
+      "va_lej"
+     ]
+    },
+    {
+     "dc": "7703",
+     "name": "Leukemia (except for chronic myelogenous leukemia)",
+     "reason": "Adult leukemia is presumed under 38 CFR 3.309(f); Lejeune Marines had more acute myeloid leukemia.",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309",
+      "bove_inc"
+     ]
+    },
+    {
+     "dc": "7712",
+     "name": "Multiple myeloma",
+     "reason": "Multiple myeloma is presumed for Lejeune water exposure under 38 CFR 3.309(f).",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309",
+      "va_lej"
+     ]
+    },
+    {
+     "dc": "8004",
+     "name": "Paralysis agitans",
+     "reason": "Parkinson's is presumed under 38 CFR 3.309(f); Lejeune vets had 70% higher odds of it.",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309",
+      "pd_lej"
+     ]
+    },
+    {
+     "dc": "7716",
+     "name": "Aplastic anemia",
+     "reason": "Aplastic anemia is presumed for Lejeune water exposure under 38 CFR 3.309(f).",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309",
+      "va_lej"
+     ]
+    },
+    {
+     "dc": "7725",
+     "name": "Myelodysplastic syndromes",
+     "reason": "Myelodysplastic syndromes are presumed under 38 CFR 3.309(f); Lejeune Marines had more of them.",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309",
+      "bove_inc"
+     ]
+    },
+    {
+     "dc": "7630",
+     "name": "Malignant neoplasms of the breast",
+     "reason": "Breast cancer is on VA's Lejeune health care list and caused more deaths in Lejeune women.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "va_lej",
+      "bove_mort"
+     ]
+    },
+    {
+     "dc": "6819",
+     "name": "Respiratory System Cancer (Malignant)",
+     "reason": "Lung cancer is on VA's Lejeune health care list; Lejeune Marines had more lung adenocarcinoma.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "va_lej",
+      "bove_inc"
+     ]
+    },
+    {
+     "dc": "7821",
+     "name": "Skin from Collagen-Vascular Disease (Scleroderma, Lupus, Dermatomyositis)",
+     "reason": "Scleroderma is on VA's Lejeune health care list; workplace TCE is tied to scleroderma.",
+     "prevalence": "moderate",
+     "source_keys": [
+      "va_lej",
+      "tce_tf"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "cfr309",
+     "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title38-vol1/xml/CFR-2025-title38-vol1-sec3-309.xml",
+     "year": 2025,
+     "title": "38 CFR 3.309, Disease subject to presumptive service connection",
+     "supports": "Lists radiation-exposed veteran cancers and gaseous diffusion plant service (d), herbicide diseases (e) and the eight Camp Lejeune diseases (f).",
+     "publisher": "U.S. Government Publishing Office (Code of Federal Regulations)"
+    },
+    {
+     "key": "cfr307",
+     "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title38-vol1/xml/CFR-2025-title38-vol1-sec3-307.xml",
+     "year": 2025,
+     "title": "38 CFR 3.307, Presumptive service connection for chronic, tropical, or prisoner-of-war related disease, disease associated with exposure to certain herbicide agents, or disease associated with exposure to contaminants in the water supply at Camp Lejeune",
+     "supports": "Sets the Camp Lejeune rule (30 days, Aug 1, 1953 to Dec 31, 1987, in 3.307(a)(7)) and the Korean DMZ herbicide exposure rule in 3.307(a)(6)(iv).",
+     "publisher": "U.S. Government Publishing Office (Code of Federal Regulations)"
+    },
+    {
+     "key": "bove_mort",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38961410/",
+     "pmid": "38961410",
+     "year": 2024,
+     "title": "Evaluation of mortality among Marines, Navy personnel, and civilian workers exposed to contaminated drinking water at USMC base Camp Lejeune: a cohort study.",
+     "supports": "Lejeune Marines and sailors had higher death rates from kidney, esophageal and female breast cancer than Camp Pendleton peers.",
+     "publisher": "Environ Health"
+    },
+    {
+     "key": "bove_inc",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39446420/",
+     "pmid": "39446420",
+     "year": 2024,
+     "title": "Cancer Incidence among Marines and Navy Personnel and Civilian Workers Exposed to Industrial Solvents in Drinking Water at US Marine Corps Base Camp Lejeune: A Cohort Study.",
+     "supports": "Compared with Camp Pendleton, Lejeune Marines and sailors had more myeloid cancers, MDS, and cancers of the esophagus, larynx, thyroid and lung (adenocarcinoma).",
+     "publisher": "Environ Health Perspect"
+    },
+    {
+     "key": "va_lej",
+     "url": "https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/",
+     "year": 2025,
+     "title": "Camp Lejeune water contamination",
+     "supports": "Lists the eight Lejeune presumptive conditions and the 15 conditions VA covers for health care, including breast, esophageal and lung cancer and scleroderma.",
+     "publisher": "U.S. Department of Veterans Affairs"
+    },
+    {
+     "key": "pd_lej",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37184848/",
+     "pmid": "37184848",
+     "year": 2023,
+     "title": "Risk of Parkinson Disease Among Service Members at Marine Corps Base Camp Lejeune.",
+     "supports": "Veterans who lived at Camp Lejeune 1975 to 1985 had 70% higher odds of Parkinson disease than Camp Pendleton veterans.",
+     "publisher": "JAMA Neurol"
+    },
+    {
+     "key": "tce_tf",
+     "url": "https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=172&toxid=30",
+     "year": 2023,
+     "title": "ToxFAQs for Trichloroethylene (TCE)",
+     "supports": "Strong evidence TCE causes kidney cancer, some evidence for liver cancer and lymphoma; workplace TCE may cause scleroderma; high levels harm kidneys.",
+     "publisher": "Agency for Toxic Substances and Disease Registry (CDC)"
+    }
+   ],
+   "proof_count": 4,
+   "prompt_count": 5
+  },
+  {
+   "slug": "korea-dmz-herbicide-1967-1971",
+   "activity_name": "Korean DMZ unit, 1967 to 1971",
+   "category": "Deployments and eras",
+   "summary": "Serving in a unit in or near the Korean DMZ between September 1, 1967 and August 31, 1971, when herbicides were sprayed along the southern barrier fence.",
+   "search_aliases": [
+    "Korea DMZ",
+    "Agent Orange Korea",
+    "2nd Infantry Division",
+    "2ID",
+    "Camp Casey",
+    "Imjin",
+    "DMZ fence",
+    "Korea 1968",
+    "Camp Greaves"
+   ],
+   "branches": [
+    "Army",
+    "Marine Corps",
+    "Air Force"
+   ],
+   "exposure_codes": [
+    "agent_orange_korean_dmz"
+   ],
+   "common_conditions": [
+    {
+     "dc": "7913",
+     "name": "Diabetes mellitus",
+     "reason": "Type 2 diabetes is presumed after herbicide exposure under 38 CFR 3.309(e); sprayers had more of it.",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309",
+      "ph_korea",
+      "acc06"
+     ]
+    },
+    {
+     "dc": "7005",
+     "name": "Arteriosclerotic heart disease (coronary artery disease)",
+     "reason": "Ischemic heart disease is presumed after herbicide exposure under 38 CFR 3.309(e).",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309",
+      "acc06"
+     ]
+    },
+    {
+     "dc": "7101",
+     "name": "Hypertensive vascular disease (hypertension and isolated systolic hypertension)",
+     "reason": "VA added high blood pressure to its Agent Orange list under the PACT Act; sprayers had more of it.",
+     "prevalence": "high",
+     "source_keys": [
+      "va_ao",
+      "acc16"
+     ]
+    },
+    {
+     "dc": "6819",
+     "name": "Respiratory System Cancer (Malignant)",
+     "reason": "Lung, bronchus, larynx and trachea cancers are presumed after herbicide exposure under 38 CFR 3.309(e).",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309"
+     ]
+    },
+    {
+     "dc": "7528",
+     "name": "Malignant neoplasms of the genitourinary system",
+     "reason": "Prostate cancer is on 38 CFR 3.309(e); VA also lists bladder cancer for Agent Orange.",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309",
+      "va_ao"
+     ]
+    },
+    {
+     "dc": "7715",
+     "name": "Non-Hodgkin's lymphoma",
+     "reason": "Non-Hodgkin's lymphoma is presumed after herbicide exposure under 38 CFR 3.309(e).",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309"
+     ]
+    },
+    {
+     "dc": "7709",
+     "name": "Hodgkin's lymphoma",
+     "reason": "Hodgkin's disease is presumed after herbicide exposure under 38 CFR 3.309(e).",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309"
+     ]
+    },
+    {
+     "dc": "7703",
+     "name": "Leukemia (except for chronic myelogenous leukemia)",
+     "reason": "Chronic B-cell leukemias, including CLL, are presumed after herbicide exposure under 38 CFR 3.309(e).",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309"
+     ]
+    },
+    {
+     "dc": "7712",
+     "name": "Multiple myeloma",
+     "reason": "Multiple myeloma is presumed after herbicide exposure under 38 CFR 3.309(e).",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309"
+     ]
+    },
+    {
+     "dc": "8004",
+     "name": "Paralysis agitans",
+     "reason": "Parkinson's disease is presumed after herbicide exposure under 38 CFR 3.309(e).",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309",
+      "va_ao"
+     ]
+    },
+    {
+     "dc": "7903",
+     "name": "Hypothyroidism",
+     "reason": "VA lists hypothyroidism on its Agent Orange presumptive list under the PACT Act.",
+     "prevalence": "high",
+     "source_keys": [
+      "va_ao"
+     ]
+    },
+    {
+     "dc": "7717",
+     "name": "AL amyloidosis (primary amyloidosis)",
+     "reason": "AL amyloidosis is presumed after herbicide exposure under 38 CFR 3.309(e).",
+     "prevalence": "high",
+     "source_keys": [
+      "cfr309"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "key": "cfr309",
+     "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title38-vol1/xml/CFR-2025-title38-vol1-sec3-309.xml",
+     "year": 2025,
+     "title": "38 CFR 3.309, Disease subject to presumptive service connection",
+     "supports": "Lists radiation-exposed veteran cancers and gaseous diffusion plant service (d), herbicide diseases (e) and the eight Camp Lejeune diseases (f).",
+     "publisher": "U.S. Government Publishing Office (Code of Federal Regulations)"
+    },
+    {
+     "key": "ph_korea",
+     "url": "https://www.publichealth.va.gov/exposures/agentorange/locations/korea.asp",
+     "year": 2025,
+     "title": "Korean Demilitarized Zone and Agent Orange Exposure",
+     "supports": "Veterans in a unit in or near the Korean DMZ between September 1, 1967 and August 31, 1971 are presumed exposed to herbicides.",
+     "publisher": "VA Office of Public Health"
+    },
+    {
+     "key": "acc06",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/17006952/",
+     "pmid": "17006952",
+     "year": 2006,
+     "title": "Health status of Army Chemical Corps Vietnam veterans who sprayed defoliant in Vietnam.",
+     "supports": "Veterans who sprayed herbicide had higher odds of diabetes, heart disease, hypertension and chronic respiratory disease.",
+     "publisher": "Am J Ind Med"
+    },
+    {
+     "key": "va_ao",
+     "url": "https://www.va.gov/disability/eligibility/hazardous-materials-exposure/agent-orange/",
+     "year": 2025,
+     "title": "Agent Orange exposure and disability compensation",
+     "supports": "VA's Agent Orange list, including bladder cancer, hypertension, hypothyroidism and MGUS, and the Korean DMZ service window.",
+     "publisher": "U.S. Department of Veterans Affairs"
+    },
+    {
+     "key": "acc16",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/27820763/",
+     "pmid": "27820763",
+     "year": 2016,
+     "title": "Herbicide Exposure, Vietnam Service, and Hypertension Risk in Army Chemical Corps Veterans.",
+     "supports": "Herbicide spray history was tied to higher hypertension risk in Army Chemical Corps veterans.",
+     "publisher": "J Occup Environ Med"
+    }
+   ],
+   "proof_count": 4,
+   "prompt_count": 5
+  }
+ ]
+}
