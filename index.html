@@ -234,6 +234,10 @@
         .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
         .sec { padding: 72px 0; border-top: 1px solid var(--sep); }
         .band { background: var(--s1); }
+        .howto-list { list-style:none; padding:0; margin:18px 0 22px; display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:0 28px; }
+        .howto-list li { border-top:1px solid var(--sep); }
+        .howto-list a { display:block; padding:13px 0; color:var(--t1); font-weight:600; text-decoration:none; }
+        .howto-list a:hover { text-decoration:underline; }
         h1, h2, h3 { color: var(--t1); }
         h2 { font-size: 32px; line-height: 1.2; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 14px; max-width: 30ch; }
         h3 { font-size: 18px; line-height: 1.35; font-weight: 650; margin-bottom: 6px; }
@@ -479,6 +483,7 @@
         <input type="checkbox" id="navToggle" class="nav-toggle-cb">
         <label for="navToggle" class="nav-burger" aria-label="Open menu">&#9776;</label>
         <div class="nav-links">
+            <a href="features.html">Features</a>
             <a href="va-disability-calculator.html">Calculator</a>
             <a href="conditions.html">Conditions</a>
             <a href="mos.html">MOS</a>
@@ -550,6 +555,15 @@
         <div class="wrap">
             <h2 id="fs-h">Built by a retired Army Chief who filed his own claim</h2>
             <p class="lede">&ldquo;I had to build my own checklists, dig through an overwhelming pile of scattered information, and figure out most of the steps on my own.&rdquo; Jason, retired Army Chief Warrant Officer, built the tool he wished someone had handed him. <a href="founders.html">Read the story</a></p>
+        </div>
+    </section>
+
+    <section class="sec" id="how-to" aria-labelledby="ht-h">
+        <div class="wrap">
+            <h2 id="ht-h">Start from where you are in your claim</h2>
+            <p class="lede">Each guide shows the steps in the app with screenshots, and answers the questions veterans ask about that situation, citing the regulation or VA page behind each answer.</p>
+            <ul class="howto-list"><li><a href="how-to/claim-denied.html">My claim was denied</a></li><li><a href="how-to/rating-increase.html">Going for a rating increase</a></li><li><a href="how-to/cp-exam-prep.html">C&amp;P exam coming up</a></li><li><a href="how-to/what-to-claim.html">What to claim from my job</a></li><li><a href="how-to/toxic-exposures.html">PACT Act and toxic exposures</a></li><li><a href="how-to/wear-and-tear.html">Wear and tear from what I did</a></li><li><a href="how-to/secondary-conditions.html">Secondary conditions</a></li><li><a href="how-to/back-pay.html">Estimate my back pay</a></li><li><a href="how-to/tdiu.html">Can't work: TDIU</a></li><li><a href="how-to/rating-reduction.html">VA proposed a reduction</a></li><li><a href="how-to/benefits-by-rating.html">Benefits at my rating</a></li><li><a href="how-to/find-vso.html">Find a free VSO</a></li></ul>
+            <a class="more" href="features.html">Every feature and how to use it &rarr;</a>
         </div>
     </section>
 
