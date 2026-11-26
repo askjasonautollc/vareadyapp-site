@@ -1,0 +1,332 @@
+[
+  {
+    "feature": "claim-denied",
+    "file": "claim-denied-1.png",
+    "shows": "Claim Navigator start picker listing every starting point, including I was denied.",
+    "pro": true
+  },
+  {
+    "feature": "claim-denied",
+    "file": "claim-denied-2.png",
+    "shows": "Claim denied route: the one-year next step, the route map, what happened next, and the Supplemental Claim and Higher-Level Review detours with typical days.",
+    "pro": true
+  },
+  {
+    "feature": "claim-denied",
+    "file": "claim-denied-3.png",
+    "shows": "Lower on the denied route: the Board Appeal detour, a one-year deadline reminder, the appeal options guide and Share this route as PDF.",
+    "pro": true
+  },
+  {
+    "feature": "rating-increase",
+    "file": "rating-increase-1.png",
+    "shows": "Claim Navigator increase route: show your condition got worse, the route map, and the re-exam risk detour.",
+    "pro": true
+  },
+  {
+    "feature": "rating-increase",
+    "file": "rating-increase-2.png",
+    "shows": "Lower on the increase route: a reminder to gather worsening evidence and the Filing for an Increase guide.",
+    "pro": true
+  },
+  {
+    "feature": "rating-increase",
+    "file": "rating-increase-3.png",
+    "shows": "Edit rating screen for Migraine (DC 8100, 38 CFR 4.124a) showing the rating criteria for 0, 10, 30 and 50 percent with 30 percent selected.",
+    "pro": true
+  },
+  {
+    "feature": "cp-exam-prep",
+    "file": "cp-exam-prep-1.png",
+    "shows": "C&P exam questionnaire for PTSD with 0 of 30 answered, the Why this matters section and the first question.",
+    "pro": true
+  },
+  {
+    "feature": "cp-exam-prep",
+    "file": "cp-exam-prep-2.png",
+    "shows": "The same questionnaire with the first answer typed in and the Export my answers (PDF) button enabled.",
+    "pro": true
+  },
+  {
+    "feature": "cp-exam-prep",
+    "file": "cp-exam-prep-3.png",
+    "shows": "iOS share sheet holding the exported exam questionnaire PDF, with Save to Files and Print.",
+    "pro": true
+  },
+  {
+    "feature": "what-to-claim",
+    "file": "what-to-claim-1.png",
+    "shows": "Claim Intel MOS view for 11B Infantryman with the PACT Act prompt and the ranked common conditions.",
+    "pro": true
+  },
+  {
+    "feature": "what-to-claim",
+    "file": "what-to-claim-2.png",
+    "shows": "Claim Intel additional duties list for the Army, each with its condition count and PACT tag.",
+    "pro": true
+  },
+  {
+    "feature": "toxic-exposures",
+    "file": "toxic-exposures-1.png",
+    "shows": "Claim Intel Exposures with Bagram Air Field and Joint Base Balad added and 24 possible presumptive matches.",
+    "pro": true
+  },
+  {
+    "feature": "toxic-exposures",
+    "file": "toxic-exposures-2.png",
+    "shows": "The presumptive conditions list from those locations, each with its diagnostic code and exposure source.",
+    "pro": true
+  },
+  {
+    "feature": "toxic-exposures",
+    "file": "toxic-exposures-3.png",
+    "shows": "Why it's listed sheet for asthma: the burn pit exposure at Bagram, contaminants, the 2001 to 2021 window and the PACT Act authority.",
+    "pro": true
+  },
+  {
+    "feature": "wear-and-tear",
+    "file": "wear-and-tear-1.png",
+    "shows": "Wear and Tear list with What you did (close quarters battle, ruck marching, parachute jumps) and the conditions it points to.",
+    "pro": true
+  },
+  {
+    "feature": "wear-and-tear",
+    "file": "wear-and-tear-2.png",
+    "shows": "Ruck marching and load carriage activity detail, marked I did this, with its linked conditions.",
+    "pro": true
+  },
+  {
+    "feature": "wear-and-tear",
+    "file": "wear-and-tear-3.png",
+    "shows": "The How to prove you did this section: DD 214, training records, SF 600 sick call notes and the DA 3349 profile.",
+    "pro": true
+  },
+  {
+    "feature": "secondary-conditions",
+    "file": "secondary-conditions-1.png",
+    "shows": "Suggestions sheet with PACT Act presumptives for 11B and conditions secondary to PTSD, each with an Add button.",
+    "pro": true
+  },
+  {
+    "feature": "secondary-conditions",
+    "file": "secondary-conditions-2.png",
+    "shows": "More PTSD secondaries in the Suggestions sheet, such as major depressive disorder, migraine and sleep apnea.",
+    "pro": true
+  },
+  {
+    "feature": "secondary-conditions",
+    "file": "secondary-conditions-3.png",
+    "shows": "What-if screen moving the rating from 60 to 70 percent with a new monthly payment and the closest condition to the next level.",
+    "pro": true
+  },
+  {
+    "feature": "back-pay",
+    "file": "back-pay-1.png",
+    "shows": "Back pay estimator showing estimated back pay from an Intent to File date, the dates and the conditions with expected ratings.",
+    "pro": false
+  },
+  {
+    "feature": "back-pay",
+    "file": "back-pay-2.png",
+    "shows": "The conditions in the estimate with expected and low ratings, and the What could reduce my back pay section.",
+    "pro": false
+  },
+  {
+    "feature": "benefits-by-rating",
+    "file": "benefits-by-rating-1.png",
+    "shows": "Benefits tab at 100 percent: the rating picker, P&T and TDIU switches and the federal benefit categories.",
+    "pro": false
+  },
+  {
+    "feature": "benefits-by-rating",
+    "file": "benefits-by-rating-2.png",
+    "shows": "Federal Financial benefits at 100 percent, with amounts such as the automobile allowance and clothing allowance.",
+    "pro": false
+  },
+  {
+    "feature": "benefits-by-rating",
+    "file": "benefits-by-rating-3.png",
+    "shows": "Texas state benefits, Education, with the Hazlewood Act tuition exemption opened.",
+    "pro": false
+  },
+  {
+    "feature": "buddy-statement",
+    "file": "buddy-statement-1.png",
+    "shows": "Buddy statement template picker: in-service event, spouse or family, behavior change, physical limitation and general.",
+    "pro": false
+  },
+  {
+    "feature": "buddy-statement",
+    "file": "buddy-statement-2.png",
+    "shows": "The In-Service Event Witness editor with the statement details and witness name filled in.",
+    "pro": false
+  },
+  {
+    "feature": "symptom-log",
+    "file": "symptom-log-1.png",
+    "shows": "Symptom Tracker today's check-in list, with PTSD and the low back logged and the other conditions ready to log.",
+    "pro": false
+  },
+  {
+    "feature": "symptom-log",
+    "file": "symptom-log-2.png",
+    "shows": "Daily check-in for PTSD at severity 6 with a note about nightmares and sleep.",
+    "pro": false
+  },
+  {
+    "feature": "symptom-log",
+    "file": "symptom-log-3.png",
+    "shows": "Medications list with Meloxicam for the low back and Sertraline for PTSD.",
+    "pro": false
+  },
+  {
+    "feature": "claim-evidence",
+    "file": "claim-evidence-1.png",
+    "shows": "Claim file with 8 documents, a new document to label, and documents grouped by condition.",
+    "pro": false
+  },
+  {
+    "feature": "claim-evidence",
+    "file": "claim-evidence-2.png",
+    "shows": "Ready for VA: files renamed with the VA.gov upload category to pick for each, grouped by condition.",
+    "pro": true
+  },
+  {
+    "feature": "claim-evidence",
+    "file": "claim-evidence-3.png",
+    "shows": "VSO packet contents: conditions, exposure presumptives, symptom log summary and journal timeline, with Build the packet.",
+    "pro": true
+  },
+  {
+    "feature": "intent-to-file",
+    "file": "intent-to-file-1.png",
+    "shows": "Filing tab Upcoming list with VA requests and the Intent to File end date, plus reminder settings.",
+    "pro": false
+  },
+  {
+    "feature": "intent-to-file",
+    "file": "intent-to-file-2.png",
+    "shows": "Claim status screen Intent to File section showing the saved ITF and the date it holds the effective date through.",
+    "pro": false
+  },
+  {
+    "feature": "tdiu",
+    "file": "tdiu-1.png",
+    "shows": "TDIU card on My Claim: schedular 80 percent against the 100 percent TDIU rate and the monthly difference.",
+    "pro": false
+  },
+  {
+    "feature": "tdiu",
+    "file": "tdiu-2.png",
+    "shows": "TDIU explainer: the monthly difference, the 38 CFR 4.16(a) percentage threshold met, and what the decision turns on.",
+    "pro": false
+  },
+  {
+    "feature": "smc",
+    "file": "smc-1.png",
+    "shows": "My Claim Compensation section with the Special monthly compensation panel and its Check button above the TDIU card.",
+    "pro": false
+  },
+  {
+    "feature": "smc",
+    "file": "smc-2.png",
+    "shows": "SMC picker with SMC-K added on top, SMC-S housebound and SMC-L, each with its monthly rate.",
+    "pro": false
+  },
+  {
+    "feature": "smc",
+    "file": "smc-3.png",
+    "shows": "More SMC levels, L through N and the half steps, each with its replacement monthly rate.",
+    "pro": false
+  },
+  {
+    "feature": "track-claim",
+    "file": "track-claim-1.png",
+    "shows": "Claim status at step 7 of 10, C&P Exam Scheduled, with what to do next and what is happening now.",
+    "pro": false
+  },
+  {
+    "feature": "track-claim",
+    "file": "track-claim-2.png",
+    "shows": "All steps list with steps 1 to 6 checked and step 7 waiting on VA.",
+    "pro": false
+  },
+  {
+    "feature": "track-claim",
+    "file": "track-claim-3.png",
+    "shows": "Claim Journal timeline with 5 records over 4 months, newest entry a PTSD C&P exam.",
+    "pro": false
+  },
+  {
+    "feature": "rating-reduction",
+    "file": "rating-reduction-1.png",
+    "shows": "Claim Navigator rating reduction route: the 60-day response window, the route map and the protected ratings note.",
+    "pro": true
+  },
+  {
+    "feature": "rating-reduction",
+    "file": "rating-reduction-2.png",
+    "shows": "Lower on the reduction route: the proposed reduction notice guide and the appeal guide.",
+    "pro": true
+  },
+  {
+    "feature": "rating-reduction",
+    "file": "rating-reduction-3.png",
+    "shows": "Protected Ratings guide: the 5, 10 and 20-year rules with the 38 CFR 3.344 stabilization rule.",
+    "pro": false
+  },
+  {
+    "feature": "board-cases",
+    "file": "board-cases-1.png",
+    "shows": "What decided Board cases for PTSD: 31 Board decisions read and what helped.",
+    "pro": true
+  },
+  {
+    "feature": "board-cases",
+    "file": "board-cases-2.png",
+    "shows": "What hurt in those PTSD Board decisions, with Decision numbers and Preview and share.",
+    "pro": true
+  },
+  {
+    "feature": "claim-scenarios",
+    "file": "claim-scenarios-1.png",
+    "shows": "My Claim scenario menu open over the rating hero: My claim plus scenarios 2 to 5.",
+    "pro": true
+  },
+  {
+    "feature": "claim-scenarios",
+    "file": "claim-scenarios-2.png",
+    "shows": "Scenario 2 open on My Claim with the This is a scenario, not your claim banner and its own rating.",
+    "pro": true
+  },
+  {
+    "feature": "combined-rating",
+    "file": "combined-rating-1.png",
+    "shows": "My Claim rating hero at 90 percent with the monthly payment, body figure and the five ratings.",
+    "pro": false
+  },
+  {
+    "feature": "combined-rating",
+    "file": "combined-rating-2.png",
+    "shows": "How the VA combines them: step by step from 70 to 85, 88, 89, 90 and rounding to 90 percent.",
+    "pro": false
+  },
+  {
+    "feature": "find-vso",
+    "file": "find-vso-1.png",
+    "shows": "My VSO results for ZIP 76522, offices within 50 miles with distance, rating, phone and email.",
+    "pro": false
+  },
+  {
+    "feature": "find-vso",
+    "file": "find-vso-2.png",
+    "shows": "VSO detail lower half: make this my VSO, visit reminder, rate this VSO and a 4-star veteran review.",
+    "pro": false
+  },
+  {
+    "feature": "top-claims",
+    "file": "top-claims-1.png",
+    "shows": "Top VA claims: what VA rates most for all veterans, with counts and percentages.",
+    "pro": false
+  }
+]

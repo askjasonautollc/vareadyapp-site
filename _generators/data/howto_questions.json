@@ -1,0 +1,1118 @@
+{
+  "claim-denied": [
+    {
+      "q": "What should I do if my VA disability claim is denied?",
+      "a": "You can ask VA to review the decision in one of three ways: file a Supplemental Claim with new and relevant evidence, request a Higher-Level Review by a more senior reviewer, or appeal to the Board of Veterans' Appeals for a Veterans Law Judge to review your case.",
+      "source": "https://www.va.gov/decision-reviews/",
+      "source_title": "VA decision reviews and appeals (VA.gov)"
+    },
+    {
+      "q": "How long do I have to appeal a VA decision?",
+      "a": "For most VA benefits, you have 1 year from the date on your decision letter to request a Higher-Level Review or a Board Appeal. You can file a Supplemental Claim at any time, but VA recommends filing within 1 year of the decision letter to keep your effective date.",
+      "source": "https://www.va.gov/decision-reviews/faq/",
+      "source_title": "Decision reviews FAQs (VA.gov)"
+    },
+    {
+      "q": "What counts as new and relevant evidence for a Supplemental Claim?",
+      "a": "New evidence is evidence that was not part of the record VA had before. Relevant evidence tends to prove or disprove something at issue in your claim, and that includes evidence raising a theory of entitlement VA has not addressed before.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-2501",
+      "source_title": "38 CFR 3.2501"
+    },
+    {
+      "q": "Can I submit new evidence with a Higher-Level Review?",
+      "a": "No. The higher-level reviewer looks only at the evidence that was in your file when VA issued the decision under review. If you have new evidence, a Supplemental Claim or a Board Appeal with evidence submission or a hearing fits better.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-2601",
+      "source_title": "38 CFR 3.2601"
+    },
+    {
+      "q": "What is an informal conference in a Higher-Level Review?",
+      "a": "It is an optional call with the higher-level reviewer where you or your representative point out factual or legal errors in the decision. You get one informal conference per Higher-Level Review, you cannot add new evidence during it, and asking for one may make the review take longer.",
+      "source": "https://www.va.gov/decision-reviews/higher-level-review/",
+      "source_title": "Higher-Level Reviews (VA.gov)"
+    },
+    {
+      "q": "What are the three types of Board Appeals?",
+      "a": "Direct Review uses only the evidence already in your file, with a goal of a decision within 365 days. Evidence Submission lets you add evidence with your request or within 90 days, with a goal of 550 days. Hearing lets you talk with a Veterans Law Judge and add evidence within 90 days after the hearing, with a goal of 730 days.",
+      "source": "https://www.va.gov/decision-reviews/board-appeal/",
+      "source_title": "Board Appeals (VA.gov)"
+    },
+    {
+      "q": "Can I file a Supplemental Claim and a Higher-Level Review at the same time?",
+      "a": "Not on the same issue. While one review option is pending on an issue, you cannot file a different review option for that issue.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-2500",
+      "source_title": "38 CFR 3.2500"
+    },
+    {
+      "q": "Can I switch to a different review option after I file?",
+      "a": "Often yes, if VA has not decided the review yet. You can switch to a Higher-Level Review or Board Appeal while you are still within 1 year of your decision letter, and to a Supplemental Claim at any time, by withdrawing the first request in a signed letter and filing the new one.",
+      "source": "https://www.va.gov/decision-reviews/after-you-request-review/",
+      "source_title": "After you request a decision review (VA.gov)"
+    },
+    {
+      "q": "What happens if a Higher-Level Review finds VA did not help gather evidence?",
+      "a": "That is called a duty-to-assist error. If the reviewer finds one and cannot grant the full benefit, VA returns the claim to fix the error, gathers the missing evidence, and issues a new decision.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-2601",
+      "source_title": "38 CFR 3.2601"
+    },
+    {
+      "q": "What can I do if the Board of Veterans' Appeals denies my appeal?",
+      "a": "You can file a Supplemental Claim if you have new and relevant evidence, or appeal to the U.S. Court of Appeals for Veterans Claims within 120 days from the date on the Board's decision letter. The Court appeal is filed with the Court, not with VA.",
+      "source": "https://www.va.gov/decision-reviews/board-appeal/",
+      "source_title": "Board Appeals (VA.gov)"
+    }
+  ],
+  "rating-increase": [
+    {
+      "q": "How do I ask VA for a higher disability rating?",
+      "a": "File a claim for increased disability compensation for the rated service-connected condition that has gotten worse. You need to submit up-to-date medical evidence that shows the condition is worse.",
+      "source": "https://www.va.gov/disability/how-to-file-claim/when-to-file/",
+      "source_title": "Types of disability claims and when to file (VA.gov)"
+    },
+    {
+      "q": "What evidence do I need for a VA rating increase?",
+      "a": "You need current evidence showing the disability has gotten worse. VA asks for at least one of these: medical records or medical opinions from healthcare providers, or lay evidence such as a buddy statement on VA Form 21-10210. You can send both.",
+      "source": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+      "source_title": "Evidence needed for your disability claim (VA.gov)"
+    },
+    {
+      "q": "Should I file a Supplemental Claim if my service-connected condition got worse?",
+      "a": "No. A Supplemental Claim is for disagreeing with a past decision. If a rated condition has gotten worse, VA says to file a claim for increased disability compensation.",
+      "source": "https://www.va.gov/decision-reviews/supplemental-claim/",
+      "source_title": "Supplemental Claims (VA.gov)"
+    },
+    {
+      "q": "Will I need a C&P exam for a rating increase?",
+      "a": "VA schedules an exam when the medical evidence you send with a claim for increase is not adequate for rating. A private doctor's statement or exam report can be accepted without a VA exam if it is adequate for rating purposes.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-326",
+      "source_title": "38 CFR 3.326"
+    },
+    {
+      "q": "What happens if I miss the C&P exam for my increase claim?",
+      "a": "If you miss an exam scheduled for a claim for increase without good cause, the regulation says the claim will be denied. Good cause includes things like your own illness or hospitalization or a death in your immediate family.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-655",
+      "source_title": "38 CFR 3.655"
+    },
+    {
+      "q": "Can VA lower my rating if I file for an increase?",
+      "a": "VA can propose a lower rating if the evidence shows your condition improved. Before it reduces your payments, VA must send you a proposal with its reasons and give you 60 days to send evidence showing the rating should stay.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-105",
+      "source_title": "38 CFR 3.105"
+    },
+    {
+      "q": "Does a rating I have had for years get extra protection?",
+      "a": "Yes. For ratings that have stayed at the same level for 5 years or more, VA should not reduce the rating based on one exam for conditions that come and go, unless all the evidence clearly shows sustained improvement.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-344",
+      "source_title": "38 CFR 3.344"
+    },
+    {
+      "q": "How far back will VA pay a rating increase?",
+      "a": "VA can pay from the earliest date the evidence shows your disability got worse, as long as VA receives your complete claim or intent to file within 1 year of that date. Otherwise the effective date is the date VA receives your claim.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-400",
+      "source_title": "38 CFR 3.400"
+    }
+  ],
+  "cp-exam-prep": [
+    {
+      "q": "What is a C&P exam?",
+      "a": "A compensation and pension (C&P) exam, also called a VA claim exam, helps VA decide whether you have a service-connected disability and, if you do, how to rate it. Your rating affects how much compensation you receive.",
+      "source": "https://www.va.gov/disability/va-claim-exam/",
+      "source_title": "VA claim exam (C&P exam) (VA.gov)"
+    },
+    {
+      "q": "Does everyone who files a VA claim need a C&P exam?",
+      "a": "No. VA asks for an exam only when it needs more information. If your file already has enough medical evidence, VA may decide using the Acceptable Clinical Evidence (ACE) process and review your records instead.",
+      "source": "https://www.va.gov/disability/va-claim-exam/",
+      "source_title": "VA claim exam (C&P exam) (VA.gov)"
+    },
+    {
+      "q": "What happens at a C&P exam?",
+      "a": "The provider may do a basic physical exam, ask questions from the Disability Benefits Questionnaire (DBQ) for each condition you claimed, and order tests like X-rays or blood work at no cost to you. The provider will not treat you, prescribe medicine, or tell you the results.",
+      "source": "https://www.va.gov/disability/va-claim-exam/",
+      "source_title": "VA claim exam (C&P exam) (VA.gov)"
+    },
+    {
+      "q": "Can my own doctor fill out a DBQ for my VA claim?",
+      "a": "Yes. You can have your own provider examine you and complete a DBQ, then submit it to VA. VA will not pay for your provider to complete it.",
+      "source": "https://www.va.gov/disability/va-claim-exam/",
+      "source_title": "VA claim exam (C&P exam) (VA.gov)"
+    },
+    {
+      "q": "What should I bring to my C&P exam?",
+      "a": "You do not need to bring anything. If you have new non-VA medical records, submit them before the appointment, for example through the claim status tool. The provider may look at records you bring, but cannot submit them for you.",
+      "source": "https://www.va.gov/disability/va-claim-exam/",
+      "source_title": "VA claim exam (C&P exam) (VA.gov)"
+    },
+    {
+      "q": "How do I reschedule a C&P exam?",
+      "a": "Call the number on your appointment letter at least 48 hours ahead. With a contractor exam, you can usually reschedule only once, and the new appointment must be within 5 days of the original one.",
+      "source": "https://www.va.gov/disability/va-claim-exam/",
+      "source_title": "VA claim exam (C&P exam) (VA.gov)"
+    },
+    {
+      "q": "What happens if I miss my C&P exam?",
+      "a": "Missing the exam delays your claim, and VA may decide your claim on the evidence it already has. If you had good cause, such as a death in your immediate family, homelessness, hospitalization, or a terminal illness, VA will schedule a new appointment.",
+      "source": "https://www.va.gov/disability/va-claim-exam/",
+      "source_title": "VA claim exam (C&P exam) (VA.gov)"
+    },
+    {
+      "q": "Can VA deny my claim if I miss the exam?",
+      "a": "It depends on the claim. If you miss an exam for an original compensation claim without good cause, VA rates the claim on the evidence of record. For a claim for increase or a supplemental claim, the claim is denied.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-655",
+      "source_title": "38 CFR 3.655"
+    },
+    {
+      "q": "Will the examiner test pain in my joints?",
+      "a": "The rating schedule says joints should be tested for pain on both active and passive motion, in weight-bearing and nonweight-bearing positions, and if possible compared with the opposite undamaged joint.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec4-59",
+      "source_title": "38 CFR 4.59"
+    },
+    {
+      "q": "How do I get a copy of my C&P exam results?",
+      "a": "You cannot get the results at the exam or from the provider. Request a copy of the final exam report with a Freedom of Information Act or Privacy Act Request, VA Form 20-10206, online, by mail, or in person.",
+      "source": "https://www.va.gov/disability/va-claim-exam/",
+      "source_title": "VA claim exam (C&P exam) (VA.gov)"
+    }
+  ],
+  "what-to-claim": [
+    {
+      "q": "What do I need to prove to get a VA disability rating?",
+      "a": "For a condition tied to active duty, VA needs evidence of three things: a current physical or mental disability, an event, injury, or disease during service, and a link between them. The link usually comes from medical records or a medical opinion.",
+      "source": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+      "source_title": "Evidence needed for your disability claim (VA.gov)"
+    },
+    {
+      "q": "Does my military job or MOS matter for my VA claim?",
+      "a": "Yes. VA must consider each claimed condition in light of the places, types, and circumstances of your service, as shown by your service records, your unit's official history, your medical records, and all medical and lay evidence.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-303",
+      "source_title": "38 CFR 3.303"
+    },
+    {
+      "q": "What is a presumptive condition?",
+      "a": "A presumptive condition is one VA assumes your service caused because a law or regulation says so. If you have one, you do not need to prove your service caused it. You only need to meet the service requirements for the presumption.",
+      "source": "https://www.va.gov/resources/the-pact-act-and-your-va-benefits/",
+      "source_title": "The PACT Act and your VA benefits (VA.gov)"
+    },
+    {
+      "q": "Which conditions are presumed service connected if they show up within a year of discharge?",
+      "a": "Chronic conditions listed in 38 CFR 3.309(a), such as high blood pressure, arthritis, diabetes, and peptic ulcers, can be presumed service connected if they are at least 10% disabling within 1 year after discharge. Multiple sclerosis has 7 years, Hansen's disease and tuberculosis have 3 years, and ALS can appear any time.",
+      "source": "https://www.va.gov/disability/eligibility/illnesses-within-one-year-of-discharge/",
+      "source_title": "Disabilities that appear within 1 year after discharge (VA.gov)"
+    },
+    {
+      "q": "What are the presumptive conditions for Gulf War veterans?",
+      "a": "If you served in a recognized Southwest Asia location and have been ill for at least 6 months, VA presumes certain undiagnosed illnesses are connected to service, including chronic fatigue syndrome, fibromyalgia, functional gastrointestinal disorders, and medically unexplained chronic multisymptom illness.",
+      "source": "https://www.va.gov/disability/eligibility/hazardous-materials-exposure/gulf-war-illness-southwest-asia/",
+      "source_title": "Gulf War Illnesses linked to Southwest Asia service (VA.gov)"
+    },
+    {
+      "q": "Can I claim a condition I had before I joined the military?",
+      "a": "Yes, if your service made it worse. VA pays based on the level of aggravation, meaning how much worse the condition got because of service. For example, a condition rated 10% at entry that became 20% because of service has a 10% level of aggravation.",
+      "source": "https://www.va.gov/disability/about-disability-ratings/",
+      "source_title": "About disability ratings (VA.gov)"
+    },
+    {
+      "q": "Is there a time limit to file a VA disability claim?",
+      "a": "There is no time limit on filing a claim for a disability that appears after discharge. VA notes the process may become more complex the longer you wait, and the filing date affects your effective date.",
+      "source": "https://www.va.gov/disability/how-to-file-claim/when-to-file/",
+      "source_title": "Types of disability claims and when to file (VA.gov)"
+    },
+    {
+      "q": "Can I file a VA claim before I get out of the military?",
+      "a": "Yes. If you have 180 to 90 days left on active duty, you may be able to file a pre-discharge claim through the Benefits Delivery at Discharge (BDD) program. With fewer than 90 days left, you can still file, and VA processes it after separation.",
+      "source": "https://www.va.gov/disability/how-to-file-claim/when-to-file/",
+      "source_title": "Types of disability claims and when to file (VA.gov)"
+    }
+  ],
+  "toxic-exposures": [
+    {
+      "q": "What is the PACT Act?",
+      "a": "The PACT Act is a law that expands VA health care and benefits for veterans exposed to burn pits, Agent Orange, and other toxic substances. It added more than 20 presumptive conditions, added presumptive locations for Agent Orange and radiation, and requires a toxic exposure screening for every veteran enrolled in VA health care.",
+      "source": "https://www.va.gov/resources/the-pact-act-and-your-va-benefits/",
+      "source_title": "The PACT Act and your VA benefits (VA.gov)"
+    },
+    {
+      "q": "What conditions are presumptive for burn pit exposure?",
+      "a": "VA lists cancers including brain, gastrointestinal, glioblastoma, genitourinary, head, hematologic and lymphatic, lymphoma, melanoma, neck, pancreatic, reproductive, and respiratory cancers. It also lists illnesses including asthma diagnosed after service, chronic bronchitis, COPD, chronic rhinitis, chronic sinusitis, constrictive or obliterative bronchiolitis, emphysema, granulomatous disease, interstitial lung disease, pleuritis, pulmonary fibrosis, and sarcoidosis.",
+      "source": "https://www.va.gov/disability/eligibility/hazardous-materials-exposure/specific-environmental-hazards/",
+      "source_title": "Exposure to burn pits and other specific environmental hazards (VA.gov)"
+    },
+    {
+      "q": "Where do I need to have served to be presumed exposed to burn pits?",
+      "a": "On or after August 2, 1990: Bahrain, Iraq, Kuwait, Oman, Qatar, Saudi Arabia, Somalia, the UAE, and certain waters including the Persian Gulf and Red Sea. On or after September 11, 2001: Afghanistan, Djibouti, Egypt, Jordan, Lebanon, Syria, Uzbekistan, and Yemen. The airspace above these countries also counts.",
+      "source": "https://www.va.gov/disability/eligibility/hazardous-materials-exposure/specific-environmental-hazards/",
+      "source_title": "Exposure to burn pits and other specific environmental hazards (VA.gov)"
+    },
+    {
+      "q": "Where was Agent Orange exposure presumed?",
+      "a": "VA presumes exposure for service in the Republic of Vietnam, on its inland waterways, or within 12 nautical miles offshore from January 9, 1962, to May 7, 1975. The PACT Act added U.S. or Royal Thai bases in Thailand, Laos, parts of Cambodia, Guam or American Samoa, and Johnston Atoll for set dates, and service in or near the Korean DMZ from September 1, 1967, to August 31, 1971, also qualifies.",
+      "source": "https://www.va.gov/disability/eligibility/hazardous-materials-exposure/agent-orange/",
+      "source_title": "Agent Orange exposure and disability compensation (VA.gov)"
+    },
+    {
+      "q": "What are the Agent Orange presumptive conditions?",
+      "a": "Cancers on the list include bladder cancer, chronic B-cell leukemia, Hodgkin's disease, multiple myeloma, non-Hodgkin's lymphoma, prostate cancer, respiratory cancers, and some soft tissue sarcomas. Other conditions include type 2 diabetes, high blood pressure, hypothyroidism, ischemic heart disease, MGUS, Parkinson's disease, parkinsonism, AL amyloidosis, and, with timing rules, chloracne, early-onset peripheral neuropathy, and porphyria cutanea tarda.",
+      "source": "https://www.va.gov/disability/eligibility/hazardous-materials-exposure/agent-orange/",
+      "source_title": "Agent Orange exposure and disability compensation (VA.gov)"
+    },
+    {
+      "q": "Who qualifies for Camp Lejeune VA disability benefits?",
+      "a": "You must have served at Camp Lejeune or MCAS New River, North Carolina, for at least 30 days total between August 1, 1953, and December 31, 1987, without a dishonorable discharge, and have a diagnosis of one of 8 presumptive conditions: adult leukemia, aplastic anemia and other myelodysplastic syndromes, bladder cancer, kidney cancer, liver cancer, multiple myeloma, non-Hodgkin's lymphoma, or Parkinson's disease.",
+      "source": "https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/",
+      "source_title": "Camp Lejeune water contamination health issues (VA.gov)"
+    },
+    {
+      "q": "Do I need a lawyer to get VA benefits for Camp Lejeune?",
+      "a": "No. You do not need to hire a lawyer or file a lawsuit to get VA benefits, including benefits related to Camp Lejeune. Filing for relief under the Camp Lejeune Justice Act does not affect your eligibility for VA disability or health care.",
+      "source": "https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/",
+      "source_title": "Camp Lejeune water contamination health issues (VA.gov)"
+    },
+    {
+      "q": "VA denied my claim before, but my condition is now presumptive. What do I do?",
+      "a": "File a Supplemental Claim, and VA will review your case again. You do not have to wait for VA to contact you first.",
+      "source": "https://www.va.gov/resources/the-pact-act-and-your-va-benefits/",
+      "source_title": "The PACT Act and your VA benefits (VA.gov)"
+    },
+    {
+      "q": "What records do I need to prove toxic exposure?",
+      "a": "For Agent Orange claims, VA asks for a medical record showing the condition and military records showing your time and location of service, such as your DD214. For C-123 aircraft claims, VA also lists USAF Forms 2096, 5, or 781 as supporting records.",
+      "source": "https://www.va.gov/disability/eligibility/hazardous-materials-exposure/agent-orange/",
+      "source_title": "Agent Orange exposure and disability compensation (VA.gov)"
+    },
+    {
+      "q": "What is the VA toxic exposure screening?",
+      "a": "Every veteran enrolled in VA health care gets an initial toxic exposure screening and a follow-up at least once every 5 years. It asks about exposures like burn pits, Gulf War hazards, Agent Orange, radiation, and Camp Lejeune water, then points you to related benefits and registry exams.",
+      "source": "https://www.va.gov/resources/the-pact-act-and-your-va-benefits/",
+      "source_title": "The PACT Act and your VA benefits (VA.gov)"
+    }
+  ],
+  "wear-and-tear": [
+    {
+      "q": "Can I get VA disability for injuries from training, like rucking or parachute jumps?",
+      "a": "Yes, if the evidence shows a current disability, an injury or event during service, and a link between them. VA must weigh the places, types, and circumstances of your service along with all medical and lay evidence, not only formal sick call records.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-303",
+      "source_title": "38 CFR 3.303"
+    },
+    {
+      "q": "How do I prove something happened in service if it is not in my records?",
+      "a": "You can submit lay evidence: written statements from you or from people who know about your condition or the events, such as service members who served with you, family, or friends. VA reviews lay evidence along with your other evidence.",
+      "source": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+      "source_title": "Evidence needed for your disability claim (VA.gov)"
+    },
+    {
+      "q": "Does VA accept my own statement about what I experienced?",
+      "a": "Yes, for things a layperson can observe and describe. VA defines competent lay evidence as evidence from a person with knowledge of the facts who describes matters a layperson can observe, without needing specialized training.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-159",
+      "source_title": "38 CFR 3.159"
+    },
+    {
+      "q": "What if my injury happened in combat and was never documented?",
+      "a": "For combat veterans, satisfactory lay or other evidence that an injury or disease was incurred or aggravated in combat is accepted as proof if it is consistent with the circumstances, conditions, or hardships of that service, even without an official record.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-304",
+      "source_title": "38 CFR 3.304"
+    },
+    {
+      "q": "What does benefit of the doubt mean for my claim?",
+      "a": "When the positive and negative evidence on a point is roughly balanced, VA must resolve the doubt in your favor. The rule applies even without official records, especially when the incident arose in combat or similarly strenuous conditions.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-102",
+      "source_title": "38 CFR 3.102"
+    },
+    {
+      "q": "Do I need a medical opinion to connect my condition to service?",
+      "a": "Usually. VA says it usually needs medical records or medical opinions to support the link between your current condition and what happened in service, and it may also accept lay evidence like a buddy statement.",
+      "source": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+      "source_title": "Evidence needed for your disability claim (VA.gov)"
+    },
+    {
+      "q": "How bad does my hearing need to be for VA to count it as hearing loss?",
+      "a": "VA counts hearing loss as a disability when your threshold at any of 500, 1000, 2000, 3000, or 4000 Hz is 40 decibels or more, when at least three of those frequencies are 26 decibels or more, or when your Maryland CNC speech recognition score is below 94 percent.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-385",
+      "source_title": "38 CFR 3.385"
+    },
+    {
+      "q": "I had joint pain in service. Is my arthritis now automatically service connected?",
+      "a": "Not automatically. Isolated findings like joint pain in service do not by themselves establish later arthritis. You can still get service connection for a condition diagnosed after discharge when all the evidence, including evidence about your service, shows it began in service.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-303",
+      "source_title": "38 CFR 3.303"
+    },
+    {
+      "q": "What if my service records were destroyed in the 1973 St. Louis fire?",
+      "a": "The 1973 fire at the National Personnel Records Center destroyed records for some Army and Air Force veterans discharged during certain periods. If your records were lost, VA can help you reconstruct them to support your claim.",
+      "source": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+      "source_title": "Evidence needed for your disability claim (VA.gov)"
+    }
+  ],
+  "secondary-conditions": [
+    {
+      "q": "What is a secondary service-connected condition?",
+      "a": "It is a disability caused by a condition that is already service connected. Under VA rules, a disability that is proximately due to or the result of a service-connected disease or injury is itself service connected.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-310",
+      "source_title": "38 CFR 3.310"
+    },
+    {
+      "q": "What are examples of secondary VA claims?",
+      "a": "VA gives two examples: arthritis caused by a service-connected knee injury, and heart disease caused by high blood pressure VA already connected to your service.",
+      "source": "https://www.va.gov/disability/how-to-file-claim/when-to-file/",
+      "source_title": "Types of disability claims and when to file (VA.gov)"
+    },
+    {
+      "q": "What evidence do I need for a secondary claim?",
+      "a": "You need evidence of a new physical or mental condition and a link between it and the disability VA already service connected. VA usually needs medical records or medical opinions for that link, and in certain circumstances may accept lay evidence.",
+      "source": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+      "source_title": "Evidence needed for your disability claim (VA.gov)"
+    },
+    {
+      "q": "Can a service-connected condition make a non-service-connected condition worse?",
+      "a": "Yes. Any increase in severity of a non-service-connected condition that is caused by a service-connected condition, and is not due to the condition's natural progress, can be service connected. This is called aggravation.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-310",
+      "source_title": "38 CFR 3.310"
+    },
+    {
+      "q": "How does VA rate secondary aggravation?",
+      "a": "VA sets a baseline severity from medical evidence created before the aggravation began, or the earliest medical evidence after it began. It then subtracts that baseline and any natural progression from your current severity to find the part it compensates.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-310",
+      "source_title": "38 CFR 3.310"
+    },
+    {
+      "q": "Is heart disease secondary to a leg amputation?",
+      "a": "VA holds that ischemic heart disease or other cardiovascular disease is the proximate result of a service-connected amputation of one leg at or above the knee, or of both legs at or above the ankles.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-310",
+      "source_title": "38 CFR 3.310"
+    },
+    {
+      "q": "What conditions does VA connect to a service-connected TBI?",
+      "a": "Unless clear evidence shows otherwise, VA connects these to a service-connected TBI when timing and severity rules are met: Parkinsonism after moderate or severe TBI, unprovoked seizures after moderate or severe TBI, certain dementias within 15 years, depression within 3 years of moderate or severe TBI or 12 months of mild TBI, and certain hormone deficiency diseases within 12 months. Other conditions can still be connected with evidence.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-310",
+      "source_title": "38 CFR 3.310"
+    }
+  ],
+  "back-pay": [
+    {
+      "q": "What is a VA effective date?",
+      "a": "The effective date is the day you can start getting disability benefits for a claim VA approves. It depends on the type of benefit and the kind of claim.",
+      "source": "https://www.va.gov/disability/about-disability-ratings/effective-date/",
+      "source_title": "Disability compensation effective dates (VA.gov)"
+    },
+    {
+      "q": "How far back will VA pay if I file within a year of getting out?",
+      "a": "If VA receives your claim within 1 year after you leave active service, the effective date for direct service connection can be the day after your separation.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-400",
+      "source_title": "38 CFR 3.400"
+    },
+    {
+      "q": "What is my effective date if I file more than a year after discharge?",
+      "a": "It is the later of the date VA received your claim or the date your entitlement arose, meaning when you first had the illness or injury.",
+      "source": "https://www.va.gov/disability/about-disability-ratings/effective-date/",
+      "source_title": "Disability compensation effective dates (VA.gov)"
+    },
+    {
+      "q": "Does an intent to file give me back pay?",
+      "a": "An intent to file sets a potential start date for your benefits. If you file the complete claim within 1 year and VA approves it, you may get retroactive payments back to that date.",
+      "source": "https://www.va.gov/resources/your-intent-to-file-a-va-claim/",
+      "source_title": "Your intent to file a VA claim (VA.gov)"
+    },
+    {
+      "q": "Do I keep my effective date if I appeal?",
+      "a": "Yes, if you keep pursuing the issue by filing a review option within 1 year of each decision. If VA receives a Supplemental Claim more than a year after the decision, the effective date can be no earlier than the date VA received that Supplemental Claim.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-2500",
+      "source_title": "38 CFR 3.2500"
+    },
+    {
+      "q": "Can I get back pay for my spouse or children?",
+      "a": "VA may pay back to the date of your marriage or your child's birth or adoption if you already had a combined rating of at least 30% at the time, you file for the dependent within a year of the event, and you answer any VA request for more information within a year.",
+      "source": "https://www.va.gov/disability/add-remove-dependent/",
+      "source_title": "Add or remove dependents on VA benefits (VA.gov)"
+    },
+    {
+      "q": "How far back does VA pay when a new law like the PACT Act makes my condition presumptive?",
+      "a": "If VA gets your claim within 1 year of the law or regulation change, the effective date may be the date of the change. If more than 1 year passes, the effective date may be up to 1 year before the date VA received your request.",
+      "source": "https://www.va.gov/disability/about-disability-ratings/effective-date/",
+      "source_title": "Disability compensation effective dates (VA.gov)"
+    },
+    {
+      "q": "What happens to my back pay if VA made a clear and unmistakable error?",
+      "a": "If VA finds a clear and unmistakable error in an earlier decision, the effective date of the new decision is the date benefits would have been paid if the error had not happened.",
+      "source": "https://www.va.gov/disability/about-disability-ratings/effective-date/",
+      "source_title": "Disability compensation effective dates (VA.gov)"
+    },
+    {
+      "q": "Why did my first VA payment start the month after my effective date?",
+      "a": "VA rules say payments on original, supplemental, or increased compensation awards cannot be made for any period before the first day of the calendar month after the month the award became effective.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-31",
+      "source_title": "38 CFR 3.31"
+    }
+  ],
+  "benefits-by-rating": [
+    {
+      "q": "How much is VA disability pay at 10%, 30%, 50%, 70%, and 100%?",
+      "a": "For a veteran with no dependents, 2026 monthly rates effective December 1, 2025, are $180.42 at 10%, $552.47 at 30%, $1,132.90 at 50%, $1,808.45 at 70%, and $3,938.58 at 100%. Rates rise with dependents starting at 30%.",
+      "source": "https://www.va.gov/disability/compensation-rates/veteran-rates/",
+      "source_title": "Current Veterans disability compensation rates (VA.gov)"
+    },
+    {
+      "q": "At what rating can I get extra pay for dependents?",
+      "a": "You can get added compensation for a spouse, children, or dependent parents once your combined rating is at least 30%. At 10% and 20%, you won't receive a higher rate even if you have a dependent spouse, child, or parent.",
+      "source": "https://www.va.gov/disability/compensation-rates/veteran-rates/",
+      "source_title": "Current Veterans disability compensation rates (VA.gov)"
+    },
+    {
+      "q": "What VA health care priority group am I in with my rating?",
+      "a": "A rating of 50% or more, or being found unemployable due to service-connected disability, can place you in priority group 1. A rating of 30% or 40% can place you in group 2, and 10% or 20% can place you in group 3.",
+      "source": "https://www.va.gov/health-care/eligibility/priority-groups/",
+      "source_title": "VA health care priority groups (VA.gov)"
+    },
+    {
+      "q": "Do disabled veterans pay the VA home loan funding fee?",
+      "a": "No, if you are receiving VA compensation for a service-connected disability, or you are eligible for it but receive retirement or active-duty pay instead. If VA later awards compensation with an effective date before your loan closing, you may get a refund.",
+      "source": "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+      "source_title": "VA funding fee and loan closing costs (VA.gov)"
+    },
+    {
+      "q": "What rating do I need for Veteran Readiness and Employment (VR&E)?",
+      "a": "Veterans need a service-connected disability rating of at least 10% and a discharge that is not dishonorable to apply. Service members may qualify with a memorandum rating of 20% or more before discharge.",
+      "source": "https://www.va.gov/careers-employment/vocational-rehabilitation/eligibility/",
+      "source_title": "Veteran Readiness and Employment eligibility (VA.gov)"
+    },
+    {
+      "q": "Do I get VA dental care at 100%?",
+      "a": "If you have service-connected disabilities rated 100%, or you are unemployable and paid at the 100% rate, you are in dental Class IV. A temporary 100% rating, such as for a long hospital stay, does not qualify.",
+      "source": "https://www.va.gov/health-care/about-va-health-benefits/dental-care/",
+      "source_title": "VA dental care (VA.gov)"
+    },
+    {
+      "q": "Can my family get CHAMPVA health care?",
+      "a": "Your spouse or dependent child may qualify for CHAMPVA if VA rated you permanently and totally disabled from a service-connected disability. VA defines permanent and total as rated 100% and not expected to improve.",
+      "source": "https://www.va.gov/family-and-caregiver-benefits/health-and-disability/champva/",
+      "source_title": "CHAMPVA benefits (VA.gov)"
+    },
+    {
+      "q": "Can my spouse or kids get education benefits from my rating?",
+      "a": "The Survivors' and Dependents' Educational Assistance (DEA) program, also called Chapter 35, may cover the child or spouse of a veteran who is permanently and totally disabled due to a service-connected disability.",
+      "source": "https://www.va.gov/education/survivor-dependent-benefits/dependents-education-assistance/",
+      "source_title": "Survivors' and Dependents' Educational Assistance (VA.gov)"
+    }
+  ],
+  "buddy-statement": [
+    {
+      "q": "What is a VA buddy statement?",
+      "a": "A buddy statement is a formal lay or witness statement that supports your VA claim, or the claim of another veteran or eligible family member. VA's form for it is the Lay/Witness Statement, VA Form 21-10210.",
+      "source": "https://www.va.gov/forms/21-10210/",
+      "source_title": "Lay/Witness Statement, VA Form 21-10210 (VA.gov)"
+    },
+    {
+      "q": "Who can write a buddy statement for VA?",
+      "a": "Anyone who knows about your condition or related events can provide lay evidence, and they do not need any special training or education. VA suggests people like service members who served with you, family and friends, clergy, and law enforcement officers.",
+      "source": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+      "source_title": "Evidence needed for your disability claim (VA.gov)"
+    },
+    {
+      "q": "What can a buddy statement prove?",
+      "a": "A lay statement is competent evidence for things the writer has personal knowledge of and that a layperson can observe and describe, such as what happened in an incident or symptoms they saw.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-159",
+      "source_title": "38 CFR 3.159"
+    },
+    {
+      "q": "Do I have to use VA Form 21-10210?",
+      "a": "No. You or someone else can write a statement on a blank piece of paper, complete VA Form 21-10210, or complete a Statement in Support of Claim on VA Form 21-4138.",
+      "source": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+      "source_title": "Evidence needed for your disability claim (VA.gov)"
+    },
+    {
+      "q": "What should a buddy statement say?",
+      "a": "VA describes a helpful statement as one from a person who knows about your condition and how and when it happened. In VA's example, a fellow service member who saw the incident describes what happened and how the condition has affected you.",
+      "source": "https://www.va.gov/decision-reviews/supplemental-claim/",
+      "source_title": "Supplemental Claims (VA.gov)"
+    },
+    {
+      "q": "Can a buddy statement count as new evidence for a Supplemental Claim?",
+      "a": "Yes. VA gives the example of a denied back pain claim where a fellow service member who witnessed the incident writes a statement, which can be submitted as new and relevant evidence.",
+      "source": "https://www.va.gov/decision-reviews/supplemental-claim/",
+      "source_title": "Supplemental Claims (VA.gov)"
+    },
+    {
+      "q": "Can a buddy statement help with a rating increase?",
+      "a": "Yes. For an increased claim, VA accepts either medical records or opinions or lay evidence like a buddy statement, and you can submit both.",
+      "source": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+      "source_title": "Evidence needed for your disability claim (VA.gov)"
+    },
+    {
+      "q": "How do I submit a buddy statement?",
+      "a": "You can submit VA Form 21-10210 online, or download the PDF, fill it out, and mail it to the address on the form.",
+      "source": "https://www.va.gov/forms/21-10210/",
+      "source_title": "Lay/Witness Statement, VA Form 21-10210 (VA.gov)"
+    }
+  ],
+  "symptom-log": [
+    {
+      "q": "Can I submit my own symptom journal as evidence for a VA claim?",
+      "a": "Yes. VA accepts lay evidence, which is written testimony from you or someone who knows about your condition. You can write it on a blank piece of paper or use VA Form 21-4138 or 21-10210.",
+      "source": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+      "source_title": "Evidence needed for your disability claim (VA.gov)"
+    },
+    {
+      "q": "Does my own description of symptoms count as evidence?",
+      "a": "Yes, for matters you can observe and describe without medical training. VA defines competent lay evidence as coming from a person with knowledge of the facts who describes things a layperson can observe.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-159",
+      "source_title": "38 CFR 3.159"
+    },
+    {
+      "q": "Does VA consider flare-ups when rating a condition?",
+      "a": "VA's rating schedule says each disability must be viewed in relation to its history, and its ratings are considered adequate to compensate for considerable lost working time from exacerbations, or flare-ups, in proportion to the severity of each rating level.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec4-1",
+      "source_title": "38 CFR 4.1"
+    },
+    {
+      "q": "Does pain count in a VA rating?",
+      "a": "Yes. Under VA's rules, functional loss can be due to pain supported by adequate pathology, weakness matters as much as limited motion, and a body part that becomes painful on use must be regarded as seriously disabled.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec4-40",
+      "source_title": "38 CFR 4.40"
+    },
+    {
+      "q": "What joint symptoms should I track for a VA claim?",
+      "a": "VA's joint rules look at less or more movement than normal, weakened movement, excess fatigability, incoordination, and pain on movement, swelling, deformity, or atrophy. Trouble sitting, standing, walking, or bearing weight is also considered.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec4-45",
+      "source_title": "38 CFR 4.45"
+    },
+    {
+      "q": "Does VA consider how my condition affects work and daily life?",
+      "a": "Yes. VA bases ratings on how well your body or mind functions under the ordinary conditions of daily life, including employment, and each disability must be considered from the point of view of a veteran working or seeking work.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec4-10",
+      "source_title": "38 CFR 4.10"
+    },
+    {
+      "q": "Should I bring my symptom log to my C&P exam?",
+      "a": "VA says you do not need to bring anything, and that new records should be submitted before the exam. The provider may look at records you bring, but cannot submit them for you, so upload your log to your claim ahead of time.",
+      "source": "https://www.va.gov/disability/va-claim-exam/",
+      "source_title": "VA claim exam (C&P exam) (VA.gov)"
+    },
+    {
+      "q": "How do I add my symptom log after I file my claim?",
+      "a": "While you wait for a decision, upload it with VA's claim status tool. You can keep uploading evidence for up to 1 year from the date VA receives your claim.",
+      "source": "https://www.va.gov/disability/upload-supporting-evidence/",
+      "source_title": "Upload evidence to support your disability claim (VA.gov)"
+    }
+  ],
+  "claim-evidence": [
+    {
+      "q": "What documents do I need for a VA disability claim?",
+      "a": "VA needs your DD214 or other separation documents, your service treatment records, and medical evidence related to your condition, such as doctor's reports, X-rays, and test results. You can submit these or give VA permission to gather them.",
+      "source": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+      "source_title": "Evidence needed for your disability claim (VA.gov)"
+    },
+    {
+      "q": "How do I get VA to request my private medical records?",
+      "a": "Complete VA Form 21-4142 and VA Form 21-4142a to authorize VA to get records from a non-VA provider or Vet Center. Both forms come in the same PDF, and you can submit online or by mail.",
+      "source": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+      "source_title": "Evidence needed for your disability claim (VA.gov)"
+    },
+    {
+      "q": "Does VA help me gather evidence?",
+      "a": "Yes. VA is required to help you gather evidence to support your claim, which is called the duty to assist.",
+      "source": "https://www.va.gov/decision-reviews/faq/",
+      "source_title": "Decision reviews FAQs (VA.gov)"
+    },
+    {
+      "q": "Do I need to request my DD214 before I file?",
+      "a": "No. When VA receives your application for benefits, it requests your DD214 for you.",
+      "source": "https://www.va.gov/records/get-military-service-records/",
+      "source_title": "Request your military service records (VA.gov)"
+    },
+    {
+      "q": "How do I upload evidence to my VA claim?",
+      "a": "If you file online, you can upload evidence during the application. After you file, use the claim status tool. For a decision review or appeal, use the QuickSubmit tool.",
+      "source": "https://www.va.gov/disability/upload-supporting-evidence/",
+      "source_title": "Upload evidence to support your disability claim (VA.gov)"
+    },
+    {
+      "q": "How long do I have to send evidence after I file?",
+      "a": "You can keep uploading documents for up to 1 year from the date VA receives your claim. If you do not send evidence or the information VA needs within 30 days, VA may decide your claim sooner, and you still have the rest of the year to send more.",
+      "source": "https://www.va.gov/disability/upload-supporting-evidence/",
+      "source_title": "Upload evidence to support your disability claim (VA.gov)"
+    },
+    {
+      "q": "What happens if I add evidence after filing a fully developed claim?",
+      "a": "VA removes your claim from the Fully Developed Claims program and processes it as a standard claim.",
+      "source": "https://www.va.gov/disability/upload-supporting-evidence/",
+      "source_title": "Upload evidence to support your disability claim (VA.gov)"
+    },
+    {
+      "q": "What kinds of records help a VA disability claim?",
+      "a": "VA lists military medical and personnel records, Social Security or other federal or state treatment records, National Guard or Reserve records, private records like doctor's reports, X-rays, and lab results, and supporting statements from people who know about your condition.",
+      "source": "https://www.va.gov/disability/upload-supporting-evidence/",
+      "source_title": "Upload evidence to support your disability claim (VA.gov)"
+    }
+  ],
+  "intent-to-file": [
+    {
+      "q": "What is a VA intent to file?",
+      "a": "An intent to file tells VA you plan to file a claim and sets a potential start date, or effective date, for your benefits. If VA approves your claim, you may get retroactive payments back to that date.",
+      "source": "https://www.va.gov/resources/your-intent-to-file-a-va-claim/",
+      "source_title": "Your intent to file a VA claim (VA.gov)"
+    },
+    {
+      "q": "How long do I have to file after submitting an intent to file?",
+      "a": "You have 1 year to complete and file your claim. If VA receives your complete claim within that year, it treats the claim as filed on the date it received your intent to file.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-155",
+      "source_title": "38 CFR 3.155"
+    },
+    {
+      "q": "How do I submit an intent to file?",
+      "a": "You can submit it online, call VA, or submit VA Form 21-0966 in person or by mail. You can also get help from an accredited attorney, claims agent, or VSO representative.",
+      "source": "https://www.va.gov/resources/your-intent-to-file-a-va-claim/",
+      "source_title": "Your intent to file a VA claim (VA.gov)"
+    },
+    {
+      "q": "Does starting my claim online count as an intent to file?",
+      "a": "Yes. If you sign in with an identity-verified account and start an online disability compensation claim or a Supplemental Claim for disability, VA records your intent to file automatically.",
+      "source": "https://www.va.gov/resources/your-intent-to-file-a-va-claim/",
+      "source_title": "Your intent to file a VA claim (VA.gov)"
+    },
+    {
+      "q": "Do I have to list my conditions on an intent to file?",
+      "a": "No. An intent to file must identify the general benefit, such as compensation, but it does not need to name specific conditions.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-155",
+      "source_title": "38 CFR 3.155"
+    },
+    {
+      "q": "What happens to my intent to file after I submit my claim?",
+      "a": "Once you file the completed claim, that intent to file is no longer active, and VA will not use it for the effective date of other claims. You can still add conditions while VA decides your claim. You can have only 1 active intent to file at a time.",
+      "source": "https://www.va.gov/resources/your-intent-to-file-a-va-claim/",
+      "source_title": "Your intent to file a VA claim (VA.gov)"
+    },
+    {
+      "q": "Do I need a separate intent to file for each benefit?",
+      "a": "Yes. An intent to file for disability compensation does not cover a pension claim. You need a new intent to file for each benefit type.",
+      "source": "https://www.va.gov/resources/your-intent-to-file-a-va-claim/",
+      "source_title": "Your intent to file a VA claim (VA.gov)"
+    },
+    {
+      "q": "Who can submit an intent to file for me?",
+      "a": "You, your authorized representative, a Member of Congress, or someone acting as next friend for a claimant who is not of full age or capacity can submit an intent to file.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-155",
+      "source_title": "38 CFR 3.155"
+    }
+  ],
+  "tdiu": [
+    {
+      "q": "What is TDIU or Individual Unemployability?",
+      "a": "Individual Unemployability lets VA pay you at the same rate as a veteran rated 100% if your service-connected disability keeps you from holding a steady job that supports you financially.",
+      "source": "https://www.va.gov/disability/eligibility/special-claims/unemployability/",
+      "source_title": "Individual Unemployability if you can't work (VA.gov)"
+    },
+    {
+      "q": "What rating do I need for TDIU?",
+      "a": "You need one service-connected disability rated 60% or more, or two or more service-connected disabilities with at least one rated 40% or more and a combined rating of 70% or more.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec4-16",
+      "source_title": "38 CFR 4.16"
+    },
+    {
+      "q": "What counts as one disability for the TDIU 60% or 40% rule?",
+      "a": "VA counts these as one disability: disabilities of one or both arms or one or both legs, disabilities from a common cause or a single accident, disabilities of a single body system, multiple injuries incurred in action, and multiple disabilities incurred as a prisoner of war.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec4-16",
+      "source_title": "38 CFR 4.16"
+    },
+    {
+      "q": "Can I get TDIU if I don't meet the percentages?",
+      "a": "Possibly. VA policy is that every veteran unable to work because of service-connected disabilities should be rated totally disabled, so rating boards send those cases to the Director of Compensation Service for extra-schedular consideration.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec4-16",
+      "source_title": "38 CFR 4.16"
+    },
+    {
+      "q": "Can I work and still get TDIU?",
+      "a": "Marginal employment does not count as substantially gainful employment. VA generally treats work as marginal when your earned annual income is at or below the Census Bureau poverty threshold for one person, and it can also find marginal work above that, such as in a family business or sheltered workshop.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec4-16",
+      "source_title": "38 CFR 4.16"
+    },
+    {
+      "q": "What forms do I need to apply for TDIU?",
+      "a": "Submit VA Form 21-8940, the application for increased compensation based on unemployability, and VA Form 21-4192, which your last employer completes. You must already have a service-connected disability.",
+      "source": "https://www.va.gov/disability/eligibility/special-claims/unemployability/",
+      "source_title": "Individual Unemployability if you can't work (VA.gov)"
+    },
+    {
+      "q": "Does TDIU change my disability rating?",
+      "a": "No. Your monthly payment changes, but your disability rating stays the same.",
+      "source": "https://www.va.gov/disability/eligibility/special-claims/unemployability/",
+      "source_title": "Individual Unemployability if you can't work (VA.gov)"
+    },
+    {
+      "q": "How do I verify my employment status for TDIU?",
+      "a": "If VA asks you to verify your employment status, fill out the Employee Questionnaire, VA Form 21-4140.",
+      "source": "https://www.va.gov/disability/eligibility/special-claims/unemployability/",
+      "source_title": "Individual Unemployability if you can't work (VA.gov)"
+    }
+  ],
+  "smc": [
+    {
+      "q": "What is special monthly compensation (SMC)?",
+      "a": "SMC is a higher rate of compensation VA pays to veterans, and in some cases their spouses, surviving spouses, and parents, who have certain needs or disabilities.",
+      "source": "https://www.va.gov/disability/compensation-rates/special-monthly-compensation-rates/",
+      "source_title": "Current special monthly compensation rates (VA.gov)"
+    },
+    {
+      "q": "What is SMC-K and who qualifies?",
+      "a": "SMC-K is paid for each anatomical loss or loss of use of one hand, one foot, both buttocks, or one or more creative organs, and for certain losses of sight, hearing, or speech. It also covers a woman veteran's loss of 25% or more of breast tissue, or radiation treatment of breast tissue.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-350",
+      "source_title": "38 CFR 3.350"
+    },
+    {
+      "q": "Is SMC-K added on top of my regular compensation?",
+      "a": "Yes. VA adds SMC-K, $139.87 a month in 2026, to your basic compensation for any rating from 0% to 100%, and to SMC basic rates except O, Q, and R. You can receive 1 to 3 SMC-K awards.",
+      "source": "https://www.va.gov/disability/compensation-rates/special-monthly-compensation-rates/",
+      "source_title": "Current special monthly compensation rates (VA.gov)"
+    },
+    {
+      "q": "What qualifies for SMC-L?",
+      "a": "SMC-L is payable for loss or loss of use of both feet, or of one hand and one foot, blindness in both eyes with visual acuity of 5/200 or less, or being permanently bedridden or so helpless that you need regular aid and attendance.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-350",
+      "source_title": "38 CFR 3.350"
+    },
+    {
+      "q": "What is SMC-S or housebound status?",
+      "a": "SMC-S applies when you have a single service-connected disability rated 100% and either additional service-connected disabilities independently rated 60% involving different body parts or systems, or you are permanently housebound by service-connected disability.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-350",
+      "source_title": "38 CFR 3.350"
+    },
+    {
+      "q": "What is SMC-R?",
+      "a": "Level R may apply if you need daily help from another person for basic needs like dressing, eating, and bathing.",
+      "source": "https://www.va.gov/disability/compensation-rates/special-monthly-compensation-rates/",
+      "source_title": "Current special monthly compensation rates (VA.gov)"
+    },
+    {
+      "q": "How much is SMC in 2026?",
+      "a": "For a veteran with no dependents, rates effective December 1, 2025, include $4,408.53 for SMC-S, $4,900.83 for SMC-L, and $6,152.64 for SMC-N. Higher amounts apply with dependents, and levels L through S each have their own basic rate.",
+      "source": "https://www.va.gov/disability/compensation-rates/special-monthly-compensation-rates/",
+      "source_title": "Current special monthly compensation rates (VA.gov)"
+    },
+    {
+      "q": "Can I check the status of an SMC claim online?",
+      "a": "Yes. VA's claim status tool covers special monthly compensation claims, such as Aid and Attendance, along with disability compensation claims.",
+      "source": "https://www.va.gov/claim-or-appeal-status/",
+      "source_title": "Check your VA claim, decision review, or appeal status (VA.gov)"
+    }
+  ],
+  "track-claim": [
+    {
+      "q": "How long does a VA disability claim take?",
+      "a": "VA reported an average of 69.2 days to complete disability-related claims in October 2026. Your claim can take more or less time depending on the claim type, how many conditions you claimed and how complex they are, and how long evidence takes to collect.",
+      "source": "https://www.va.gov/disability/after-you-file-claim/",
+      "source_title": "The VA claim process after you file your claim (VA.gov)"
+    },
+    {
+      "q": "What are the steps of a VA disability claim?",
+      "a": "VA uses 8 steps: claim received, initial review, evidence gathering, evidence review, rating, preparing decision letter, final review, and claim decided.",
+      "source": "https://www.va.gov/resources/what-your-claim-status-means/",
+      "source_title": "What your claim status means (VA.gov)"
+    },
+    {
+      "q": "Why did my VA claim go back to evidence gathering?",
+      "a": "If VA needs more evidence, or you submit more evidence after step 3, your claim goes back to the evidence gathering step for review.",
+      "source": "https://www.va.gov/resources/what-your-claim-status-means/",
+      "source_title": "What your claim status means (VA.gov)"
+    },
+    {
+      "q": "What is the longest step in the VA claim process?",
+      "a": "Evidence gathering is usually the longest step. That is when VA may ask you for evidence, schedule a claim exam, request private medical records, or pull VA records.",
+      "source": "https://www.va.gov/disability/after-you-file-claim/",
+      "source_title": "The VA claim process after you file your claim (VA.gov)"
+    },
+    {
+      "q": "Why doesn't a document I mailed show in my claim status?",
+      "a": "The online tool does not list documents you sent by mail or fax, documents you brought in person, or documents VA restricted to protect privacy.",
+      "source": "https://www.va.gov/claim-or-appeal-status/",
+      "source_title": "Check your VA claim, decision review, or appeal status (VA.gov)"
+    },
+    {
+      "q": "What should I do while I wait for my claim decision?",
+      "a": "You do not need to do anything unless VA sends you a letter asking for more information. If VA schedules exams for you, do not miss them.",
+      "source": "https://www.va.gov/disability/after-you-file-claim/",
+      "source_title": "The VA claim process after you file your claim (VA.gov)"
+    },
+    {
+      "q": "When will I get my decision letter?",
+      "a": "When your claim is decided, you can review and download the decision letter in the claim status tool. VA also mails a copy, which should arrive within 10 business days but may take longer.",
+      "source": "https://www.va.gov/resources/what-your-claim-status-means/",
+      "source_title": "What your claim status means (VA.gov)"
+    },
+    {
+      "q": "How long does a Supplemental Claim or Higher-Level Review take?",
+      "a": "Supplemental Claims for disability compensation or pension averaged 59.1 days in October 2026, with a goal of 125 days. VA's goal for a Higher-Level Review not related to health care is an average of 125 days.",
+      "source": "https://www.va.gov/decision-reviews/supplemental-claim/",
+      "source_title": "Supplemental Claims (VA.gov)"
+    },
+    {
+      "q": "Can I get my Board appeal moved up?",
+      "a": "The Board generally reviews appeals in docket order, but it may advance an appeal on the docket if you show unusual hardship, such as serious illness or severe financial hardship, or other sufficient cause.",
+      "source": "https://department.va.gov/board-of-veterans-appeals/",
+      "source_title": "Board of Veterans' Appeals (VA)"
+    }
+  ],
+  "rating-reduction": [
+    {
+      "q": "Can VA reduce my disability rating?",
+      "a": "Yes, but it must first send you a proposed reduction that explains the facts and reasons. You then have 60 days to send evidence showing your payments should continue at the current level.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-105",
+      "source_title": "38 CFR 3.105"
+    },
+    {
+      "q": "What happens after the 60-day window on a proposed reduction?",
+      "a": "If VA does not receive more evidence within 60 days, it takes final action. The reduction takes effect on the last day of the month in which a 60-day period from the notice of the final action ends.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-105",
+      "source_title": "38 CFR 3.105"
+    },
+    {
+      "q": "Can I ask for a hearing on a proposed reduction?",
+      "a": "Yes. If VA receives your request for a predetermination hearing within 30 days of the notice, your payments continue at the current level until VA makes a final decision.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-105",
+      "source_title": "38 CFR 3.105"
+    },
+    {
+      "q": "What is the VA 5-year rule?",
+      "a": "For ratings that have stayed at the same level for 5 years or more, VA should not reduce the rating on one exam for conditions that come and go unless all the evidence clearly shows sustained improvement. An exam less thorough than the one that set your rating cannot be used to reduce it.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-344",
+      "source_title": "38 CFR 3.344"
+    },
+    {
+      "q": "What is the VA 10-year rule?",
+      "a": "Service connection that has been in effect for 10 or more years will not be severed unless the original grant was based on fraud or military records clearly show you lacked the required service or character of discharge. This rule protects the service connection itself.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-957",
+      "source_title": "38 CFR 3.957"
+    },
+    {
+      "q": "What is the VA 20-year rule?",
+      "a": "A disability rated continuously at or above a level for 20 or more years will not be reduced below that level unless the rating was based on fraud. VA counts the 20 years from the effective date of the rating to the effective date of the reduction.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-951",
+      "source_title": "38 CFR 3.951"
+    },
+    {
+      "q": "Can a change to the rating schedule lower my rating?",
+      "a": "A change to the Schedule for Rating Disabilities is not, by itself, grounds to reduce a rating in effect on the date of the change. VA would need medical evidence that your disability actually improved.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-951",
+      "source_title": "38 CFR 3.951"
+    },
+    {
+      "q": "Can VA reduce a 100% rating?",
+      "a": "A total rating based on the severity of your condition will not be reduced, absent clear error, without an exam showing material improvement. VA must consider whether the improvement happened under the ordinary conditions of life, like while working.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-343",
+      "source_title": "38 CFR 3.343"
+    },
+    {
+      "q": "When does VA stop scheduling reexams?",
+      "a": "VA generally does not schedule periodic reexams when your disability is static, when it has shown no material improvement for 5 years or more, when it is permanent with no likelihood of improvement, when you are over 55 except in unusual cases, when you are at a scheduled minimum rating, or when a reduction would not change your combined rating.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-327",
+      "source_title": "38 CFR 3.327"
+    },
+    {
+      "q": "What happens if I miss a VA reexam?",
+      "a": "VA sends a notice that payment for that disability will stop or be reduced. You have 60 days to say you are willing to report for a reexam or to send evidence that payment should continue.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-655",
+      "source_title": "38 CFR 3.655"
+    }
+  ],
+  "board-cases": [
+    {
+      "q": "What is the Board of Veterans' Appeals?",
+      "a": "When you appeal to the Board, a Veterans Law Judge at the Board of Veterans' Appeals in Washington, D.C., who is an expert in veterans law, reviews your case.",
+      "source": "https://www.va.gov/decision-reviews/board-appeal/",
+      "source_title": "Board Appeals (VA.gov)"
+    },
+    {
+      "q": "Can I read other veterans' Board decisions?",
+      "a": "Yes. The Board's website links to a public Search Decisions tool where you can search past Board decisions.",
+      "source": "https://department.va.gov/board-of-veterans-appeals/",
+      "source_title": "Board of Veterans' Appeals (VA)"
+    },
+    {
+      "q": "Do past Board decisions decide my case?",
+      "a": "No. A Board decision is binding only in the specific case it decided. The Board may consider prior decisions that reasonably relate to your case, but it decides each appeal on its own facts under the law and procedure that apply.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol2/CFR-2025-title38-vol2-sec20-1303",
+      "source_title": "38 CFR 20.1303"
+    },
+    {
+      "q": "Can I submit new evidence to the Board?",
+      "a": "Only with some options. You choose on your Notice of Disagreement: direct review with no new evidence or hearing, a hearing with the chance to add evidence at the hearing and within 90 days after, or evidence submission with your notice and within 90 days after the Board receives it.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol2/CFR-2025-title38-vol2-sec20-202",
+      "source_title": "38 CFR 20.202"
+    },
+    {
+      "q": "What happens at a Board hearing?",
+      "a": "The judge swears you in, and you explain why you think you qualify, answer the judge's questions, and share any new evidence. Hearings usually last 30 minutes, and you have 90 days after the hearing to submit new evidence.",
+      "source": "https://www.va.gov/decision-reviews/board-appeal/veterans-law-judge-hearing/",
+      "source_title": "Board hearings with a Veterans Law Judge (VA.gov)"
+    },
+    {
+      "q": "What does the benefit of the doubt rule mean in an appeal?",
+      "a": "When the evidence for and against a point is in approximate balance, VA must resolve the doubt in your favor. It does not apply to pure speculation or remote possibility.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec3-102",
+      "source_title": "38 CFR 3.102"
+    },
+    {
+      "q": "What is a remand?",
+      "a": "A remand is when the Board sends an appeal back to VA to gather more evidence or take another action. For appeals of decisions made on or after February 19, 2019, VA makes the final decision after gathering the information, and the appeal does not return to the Board.",
+      "source": "https://www.va.gov/decision-reviews/faq/",
+      "source_title": "Decision reviews FAQs (VA.gov)"
+    },
+    {
+      "q": "Does someone helping me with a Board hearing need to be accredited?",
+      "a": "Yes. A representative who helps you prepare for a Board hearing must be a VA-accredited attorney, claims agent, or Veterans Service Organization representative.",
+      "source": "https://www.va.gov/decision-reviews/board-appeal/veterans-law-judge-hearing/",
+      "source_title": "Board hearings with a Veterans Law Judge (VA.gov)"
+    }
+  ],
+  "claim-scenarios": [
+    {
+      "q": "How will adding a new condition change my combined VA rating?",
+      "a": "VA combines the new rating with your existing combined value using the combined ratings table, so it adds less than its face value. In VA's example, a combined value of 65 plus a new 10% rating becomes 69, which rounds to 70%.",
+      "source": "https://www.va.gov/disability/about-disability-ratings/",
+      "source_title": "About disability ratings (VA.gov)"
+    },
+    {
+      "q": "Why do two 10% ratings only equal 20%?",
+      "a": "Two 10% ratings have a combined value of 19, and VA converts the final combined value to the nearest number divisible by 10, which is 20%.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec4-25",
+      "source_title": "38 CFR 4.25"
+    },
+    {
+      "q": "In what order does VA combine my ratings?",
+      "a": "VA arranges your disabilities from most to least severe, combines the first two, then combines that unrounded value with the next highest rating, and repeats until all ratings are included.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec4-25",
+      "source_title": "38 CFR 4.25"
+    },
+    {
+      "q": "When does VA round my combined rating?",
+      "a": "Only once per rating decision, after all disabilities are combined. Combined values ending in 5 round up.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec4-25",
+      "source_title": "38 CFR 4.25"
+    },
+    {
+      "q": "If one disease causes several problems, are they rated separately?",
+      "a": "Yes. Unless the rating schedule says otherwise, disabilities arising from a single disease entity, such as arthritis, multiple sclerosis, or a stroke, are rated separately and then combined.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec4-25",
+      "source_title": "38 CFR 4.25"
+    },
+    {
+      "q": "Can adding a condition make me eligible for dependent pay?",
+      "a": "Yes, if it raises your combined rating to at least 30%. At that point you can file to add a spouse, children, or dependent parents for additional compensation.",
+      "source": "https://www.va.gov/disability/add-remove-dependent/",
+      "source_title": "Add or remove dependents on VA benefits (VA.gov)"
+    },
+    {
+      "q": "Can my combined VA rating go above 100%?",
+      "a": "No. VA uses the whole person theory so your total combined rating does not exceed 100%, because a person cannot be more than 100% able-bodied.",
+      "source": "https://www.va.gov/disability/about-disability-ratings/",
+      "source_title": "About disability ratings (VA.gov)"
+    }
+  ],
+  "combined-rating": [
+    {
+      "q": "Why doesn't 50% plus 30% equal 80% in VA math?",
+      "a": "VA applies each rating to the efficiency left after the higher rating. A 50% rating leaves you 50% efficient, and 30% of that remaining 50% is 15, so the combined value is 65, which rounds to 70%.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec4-25",
+      "source_title": "38 CFR 4.25"
+    },
+    {
+      "q": "How does VA combine three or more ratings?",
+      "a": "VA combines the two highest, then combines that exact value with the next rating. With 60%, 40%, and 20%, the first two combine to 76, then 76 and 20 combine to 81, which converts to 80%.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec4-25",
+      "source_title": "38 CFR 4.25"
+    },
+    {
+      "q": "How does VA round a combined rating?",
+      "a": "VA rounds to the nearest 10. Combined values ending in 1 to 4 round down, and those ending in 5 to 9 round up.",
+      "source": "https://www.va.gov/disability/about-disability-ratings/",
+      "source_title": "About disability ratings (VA.gov)"
+    },
+    {
+      "q": "What is the VA bilateral factor?",
+      "a": "When you have partial disabilities of both arms, both legs, or paired skeletal muscles, VA combines the right and left ratings, then adds 10% of that value before combining with your other ratings.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec4-26",
+      "source_title": "38 CFR 4.26"
+    },
+    {
+      "q": "How does the bilateral factor work in an example?",
+      "a": "In VA's example, with ratings of 60%, 20%, 10%, and 10% where the two 10s are bilateral, the order becomes 60, 21, and 20. Those combine to 68, then 74, which converts to 70%.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec4-26",
+      "source_title": "38 CFR 4.26"
+    },
+    {
+      "q": "When does the bilateral factor apply?",
+      "a": "It applies only when each of two paired extremities, or paired skeletal muscles, has a partial disability rated at a compensable level. Arms and legs are treated as whole limbs, so a right thigh condition and a left foot condition can qualify.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec4-26",
+      "source_title": "38 CFR 4.26"
+    },
+    {
+      "q": "Can the bilateral factor lower my combined rating?",
+      "a": "No. If including a bilateral disability in the bilateral factor would produce a lower combined rating, VA removes it from that calculation and combines it separately to reach the result most favorable to you.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec4-26",
+      "source_title": "38 CFR 4.26"
+    },
+    {
+      "q": "How do I use the VA combined ratings table?",
+      "a": "Find your highest rating in the left column and your next highest rating in the top row. The number where they meet is the combined value, which VA rounds to the nearest 10% if you have only two ratings.",
+      "source": "https://www.va.gov/disability/about-disability-ratings/",
+      "source_title": "About disability ratings (VA.gov)"
+    }
+  ],
+  "find-vso": [
+    {
+      "q": "What is a VSO and does it cost anything?",
+      "a": "An accredited Veterans Service Organization (VSO) representative can help you gather evidence, file a claim, request a decision review, and talk with VA for you. Their services on your VA claim are always free.",
+      "source": "https://www.va.gov/resources/va-accredited-representative-faqs/",
+      "source_title": "VA accredited representative FAQs (VA.gov)"
+    },
+    {
+      "q": "What types of VA-accredited representatives are there?",
+      "a": "VA's Office of General Counsel accredits three types: VSO representatives, attorneys, and claims agents. An attorney must be in good standing with at least one state bar, and a claims agent must pass a written test on VA law and procedure.",
+      "source": "https://www.va.gov/resources/va-accredited-representative-faqs/",
+      "source_title": "VA accredited representative FAQs (VA.gov)"
+    },
+    {
+      "q": "When can a VA attorney or claims agent charge me?",
+      "a": "Only after VA has decided your initial claim, VA has a fee agreement signed by you and the representative, and VA has your VA Form 21-22a appointing them.",
+      "source": "https://www.va.gov/resources/va-accredited-representative-faqs/",
+      "source_title": "VA accredited representative FAQs (VA.gov)"
+    },
+    {
+      "q": "How much can a VA-accredited attorney charge?",
+      "a": "Fees that do not exceed 20% of past-due benefits awarded are presumed reasonable if the representation continued through the decision awarding benefits. Fees above 33 1/3% of past-due benefits are presumed unreasonable.",
+      "source": "https://www.govinfo.gov/app/details/CFR-2025-title38-vol1/CFR-2025-title38-vol1-sec14-636",
+      "source_title": "38 CFR 14.636"
+    },
+    {
+      "q": "Is it legal to charge a veteran to file an initial VA claim?",
+      "a": "No. VA says it is unlawful for anyone to charge a fee for preparing an initial claim, and warns against signing a contract to pay a percentage of your award for help with an initial claim.",
+      "source": "https://www.vsafe.gov/va-toolkit/va-fraud-prevention-kit/claims-predators",
+      "source_title": "Predatory claims practices (VA VSAFE)"
+    },
+    {
+      "q": "What is a claim shark?",
+      "a": "VA describes predatory claims practices as bad actors trying to unlawfully charge veterans to help process initial claims. Warning signs include guaranteeing a large benefit, promising faster processing or higher ratings for a fee, and refusing to be paid through VA.",
+      "source": "https://www.vsafe.gov/va-toolkit/va-fraud-prevention-kit/claims-predators",
+      "source_title": "Predatory claims practices (VA VSAFE)"
+    },
+    {
+      "q": "How do I appoint a VSO or accredited representative?",
+      "a": "Use VA Form 21-22 to appoint a VSO, or VA Form 21-22a for an attorney or claims agent, or fill it out with VA's online tool. You and the representative both sign, then submit it through QuickSubmit, by mail, or in person.",
+      "source": "https://www.va.gov/get-help-from-accredited-representative/",
+      "source_title": "Get help from a VA accredited representative (VA.gov)"
+    },
+    {
+      "q": "Can I fire my VA representative?",
+      "a": "Yes, you can discharge your accredited representative at any time for any reason, or appoint a new one to replace them. Tell your former representative right away.",
+      "source": "https://www.va.gov/resources/va-accredited-representative-faqs/",
+      "source_title": "VA accredited representative FAQs (VA.gov)"
+    },
+    {
+      "q": "How do I report a claim shark or bad representative?",
+      "a": "If you think someone acted unlawfully or unethically while helping you file a VA claim, call the VSAFE fraud hotline at 833-38V-SAFE or visit VSAFE.gov.",
+      "source": "https://www.vsafe.gov/va-toolkit/va-fraud-prevention-kit/claims-predators",
+      "source_title": "Predatory claims practices (VA VSAFE)"
+    },
+    {
+      "q": "Can I file a complaint against a VA-accredited representative?",
+      "a": "Yes. If you believe an accredited representative showed a lack of skill or engaged in misconduct, you can file a complaint with VA's Office of General Counsel. You can also complain about someone who is not accredited who tries to help with your VA claims.",
+      "source": "https://www.va.gov/resources/va-accredited-representative-faqs/",
+      "source_title": "VA accredited representative FAQs (VA.gov)"
+    }
+  ]
+}

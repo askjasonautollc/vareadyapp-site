@@ -289,7 +289,7 @@ written = []
 for p in PAGES:
     open(os.path.join(OUT, p["slug"] + ".html"), "w").write(page(p)); written.append(url_of(p))
 open(os.path.join(SITE, "wear-and-tear.html"), "w").write(hub()); written.append("/wear-and-tear.html")
-open(os.path.join(SITE, "features.html"), "w").write(features()); written.append("/features.html")
+# /features.html is written by gen_howto.py (overview of every feature).
 
 sp = os.path.join(SITE, "sitemap.xml"); xml = open(sp).read(); new = []
 for u in written:
