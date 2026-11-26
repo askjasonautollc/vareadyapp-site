@@ -58,6 +58,40 @@ CSS += """
     @media (max-width:760px) { .ov { grid-template-columns:minmax(0,1fr); } .ov .phone { max-width:260px; } }
 """
 
+
+SVG_APPLE, SVG_PLAY, SVG_WIN = '<svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>', '<svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.609 22.186A.997.997 0 013 21.286V2.714a.997.997 0 01.609-.9zm10.89 10.892l2.302 2.302-12.4 7.16 10.098-9.462zM18.16 9.18l2.578 1.49a1 1 0 010 1.66l-2.66 1.534-2.99-2.99 3.072-1.694zM4.398 1.815l12.4 7.16-2.282 2.282L4.398 1.815z"/></svg>', '<svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></svg>'
+CSS += """
+    .getapp { display:flex; gap:18px; align-items:center; flex-wrap:wrap; background:var(--navy2, #111a2b); border:1px solid rgba(217,166,33,0.55); border-radius:18px; padding:18px 20px; margin:6px 0 26px; }
+    .getapp .gi { width:64px; height:64px; border-radius:15px; flex:none; }
+    .getapp .gt { flex:1 1 260px; min-width:0; }
+    .getapp .gh { color:var(--white); font-size:19px; font-weight:800; line-height:1.3; margin:0 0 4px; }
+    .getapp .gp { color:var(--tan); font-size:14.5px; margin:0; }
+    .getapp .gp b { color:var(--white); }
+    .getapp .gb { display:flex; flex-wrap:wrap; gap:10px; flex-basis:100%; }
+    .sb { display:inline-flex; align-items:center; gap:9px; background:var(--gold); color:#000 !important; font-weight:800; font-size:15.5px; padding:13px 18px; border-radius:12px; text-decoration:none !important; min-height:48px; }
+    .sb svg { width:20px; height:20px; flex:none; }
+    .sb:hover { filter:brightness(1.08); }
+    .stickybar { position:fixed; left:0; right:0; bottom:0; z-index:50; display:flex; align-items:center; gap:12px; justify-content:center; background:rgba(8,12,22,0.96); border-top:1px solid rgba(217,166,33,0.5); padding:10px 16px calc(10px + env(safe-area-inset-bottom)); backdrop-filter:blur(8px); }
+    .stickybar img { width:36px; height:36px; border-radius:9px; }
+    .stickybar .st { color:var(--white); font-weight:700; font-size:15px; line-height:1.25; }
+    .stickybar .st span { display:block; color:var(--tan); font-weight:400; font-size:13px; }
+    .stickybar .sb { padding:10px 18px; min-height:44px; margin-left:8px; }
+    body { padding-bottom:84px; }
+    @media (max-width:560px) { .getapp .sb { flex:1 1 100%; justify-content:center; } }
+"""
+
+def getapp(headline):
+    return (f'<div class="getapp"><img class="gi" src="/logo-96.png" alt="VA Ready app icon" width="64" height="64">'
+            f'<div class="gt"><p class="gh">{esc(headline)}</p>'
+            f'<p class="gp"><b>4.8</b> on the App Store, 750+ ratings &middot; <b>4.6</b> on Google Play &middot; <b>50,000+</b> downloads &middot; free to download</p></div>'
+            f'<div class="gb"><a class="sb" href="https://apps.apple.com/app/id6761733758">{SVG_APPLE}App Store</a>'
+            f'<a class="sb" href="https://play.google.com/store/apps/details?id=com.vaready.app&amp;hl=en_US">{SVG_PLAY}Google Play</a>'
+            f'<a class="sb" href="https://apps.microsoft.com/detail/9p8xfcqvfjhf">{SVG_WIN}Microsoft Store</a></div></div>')
+
+STICKY = ("""<div class="stickybar"><img src="/logo-96.png" alt="" width="36" height="36"><div class="st">VA Ready<span>4.8 on the App Store, free to download</span></div>"""
+          """<a class="sb" id="sbget" href="https://apps.apple.com/app/id6761733758">Get the app</a></div>"""
+          """<script>(function(){var u=navigator.userAgent,a=document.getElementById('sbget');if(/Android/i.test(u))a.href='https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US';else if(/Windows/i.test(u))a.href='https://apps.microsoft.com/detail/9p8xfcqvfjhf';})();</script>""")
+
 STORES = """<div class="btns page-cta"><a href="https://apps.apple.com/app/id6761733758" class="btn primary">VA Ready for iPhone, iPad and Mac</a><a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US" class="btn ghost">Vet Ready for Android</a><a href="https://apps.microsoft.com/detail/9p8xfcqvfjhf" class="btn ghost">VA Ready for Windows</a></div>"""
 DISCLAIMER = """<div class="disclaimer">This page is for general informational purposes only and is not legal or medical advice. Answers summarize the regulation or VA page cited under each one; check the source for your situation. The VA decides service connection and ratings from your own records, evidence, and exam. VA Ready is not affiliated with the U.S. Department of Veterans Affairs. For free help filing, work with a <a href="/find-a-vso.html">VA-accredited VSO</a>.</div>"""
 ORG_ID = "https://vareadyapp.com/#organization"
@@ -309,6 +343,31 @@ F = [
   blurb="Free accredited offices near your ZIP code, with reviews from veterans."),
 ]
 
+CTA = {
+ "claim-denied": "Denied? Get your appeal route in VA Ready",
+ "rating-increase": "See what the next rating level takes, in VA Ready",
+ "cp-exam-prep": "Walk into your C&P exam ready, with VA Ready",
+ "what-to-claim": "See what to claim for your job code in VA Ready",
+ "toxic-exposures": "Check your bases for PACT Act presumptives in VA Ready",
+ "wear-and-tear": "Turn what you did in service into a claim list, in VA Ready",
+ "secondary-conditions": "Find the secondaries you are missing, in VA Ready",
+ "back-pay": "Estimate your back pay in VA Ready",
+ "benefits-by-rating": "See every benefit your rating unlocks, in VA Ready",
+ "buddy-statement": "Write a buddy statement in minutes with VA Ready",
+ "symptom-log": "Start your symptom log today in VA Ready",
+ "claim-evidence": "Get your evidence VA-ready with VA Ready",
+ "intent-to-file": "Never lose your Intent to File date: track it in VA Ready",
+ "tdiu": "Check if you qualify for TDIU in VA Ready",
+ "smc": "See what SMC would pay you, in VA Ready",
+ "track-claim": "Know what every claim step means, in VA Ready",
+ "rating-reduction": "Fight a proposed reduction with VA Ready",
+ "board-cases": "See what won Board cases on your condition, in VA Ready",
+ "claim-scenarios": "Try different claims side by side in VA Ready",
+ "combined-rating": "Get your combined rating and pay in VA Ready",
+ "find-vso": "Find a free VSO near you with VA Ready",
+}
+for _f in F: _f["cta"] = CTA[_f["key"]]
+
 GROUPS = [("start", "Find what to claim"), ("evidence", "Prove it"), ("money", "Your rating and pay"),
           ("track", "Deadlines, status and help"), ("decision", "After a decision")]
 
@@ -350,6 +409,7 @@ def head(title, desc, canon, lds, og_type="article", ogimg="https://vareadyapp.c
 def tail():
     return f"""</div>
 {FOOTER}
+{STICKY}
 </body>
 </html>"""
 
@@ -390,6 +450,7 @@ def page(f):
     <div class="crumb"><a href="/index.html">Home</a> / <a href="/features.html">Features</a> / {esc(grp[1])}</div>
     <h1>{esc(f["h1"])}</h1>
     <p class="lede">{esc(f["intro"])}</p>
+    {getapp(f["cta"])}
     <p class="where">Where it is in the app: {esc(f["where"])} {esc(tier_line)}</p>
     <article>
         <h2>Steps</h2>
@@ -427,6 +488,7 @@ def features():
     <div class="crumb"><a href="/index.html">Home</a> / Features</div>
     <h1>What VA Ready does</h1>
     <p class="lede">VA Ready helps you build a VA disability claim from start to finish: what to claim, how it rates, how to prove it, and where you are in the process. Everything stays on your device. Each feature below links to a page with the steps, screenshots from the app and the questions it answers.</p>
+    {getapp("Get VA Ready: every feature below, on your phone, tablet or computer")}
     {secs}
     {STORES}
     <p class="trustline">More from VA Ready: <a href="/wear-and-tear.html">Wear and Tear pages</a> &middot; <a href="/mos.html">conditions by job code</a> &middot; <a href="/guides.html">filing guides</a> &middot; <a href="/conditions.html">conditions</a></p>

@@ -9,6 +9,8 @@
     return null;
   }
   function placement(el) {
+    if (el.closest('.getapp'))  return 'getapp';
+    if (el.closest('.stickybar')) return 'sticky';
     if (el.closest('nav'))      return 'nav';
     if (el.closest('footer'))   return 'footer';
     if (el.closest('.cta-pro')) return 'cta-pro';
