@@ -81,7 +81,16 @@ def run(script, env):
 def sql():
     """Print the Supabase inserts for the apps (owner runs them on switch day; the apps use the newest year)."""
     out = []
-    for table, name in (("compensation_rates", "compensation_rates_2027.json"), ("smc_rates", "smc_rates_2027.json")):
+    # SMC rows copy description, is_additive and allows_smc_k from the 2026 row in Supabase; only amounts change.
+    for r in load("smc_rates_2027.json"):
+        amts = {k: v for k, v in r.items() if k not in ("id", "effective_year", "smc_level", "smc_description", "is_additive")}
+        cols = ", ".join(amts)
+        vals = ", ".join("null" if v is None else str(v) for v in amts.values())
+        lvl = r["smc_level"].replace("'", "''")
+        out.append(f"insert into public.smc_rates (effective_year, smc_level, smc_description, is_additive, allows_smc_k, {cols}) "
+                   f"select 2027, smc_level, smc_description, is_additive, allows_smc_k, {vals} "
+                   f"from public.smc_rates where effective_year = 2026 and smc_level = '{lvl}';")
+    for table, name in (("compensation_rates", "compensation_rates_2027.json"),):
         for r in load(name):
             r = {k: v for k, v in r.items() if k != "id"}
             r["effective_year"] = 2027
