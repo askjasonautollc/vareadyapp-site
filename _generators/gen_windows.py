@@ -133,7 +133,7 @@ page = f"""<!DOCTYPE html>
         {faq_html}
     </article>
     {cta}
-    <p class="trustline">Also on <a href="https://apps.apple.com/app/id6761733758">iPhone, iPad and Mac</a> and <a href="https://play.google.com/store/apps/details?id=com.vaready.app&amp;hl=en_US">Android</a>. Not on a PC? <a href="/va-disability-calculator.html">Use the free calculator in your browser</a>, or see the <a href="/va-disability-pay-rates.html">VA pay rates</a>.</p>
+    <p class="trustline">Also on <a href="https://apps.apple.com/app/id6761733758">iPhone, iPad and Mac</a> and <a href="/va-disability-app-for-android.html">Android</a>. Not on a PC? <a href="/va-disability-calculator.html">Use the free calculator in your browser</a>, or see the <a href="/va-disability-pay-rates.html">VA pay rates</a>.</p>
     <div class="disclaimer">VA Ready is not affiliated with, endorsed by, or connected to the U.S. Department of Veterans Affairs or any government agency. Estimates are not VA decisions. This page is not financial or legal advice.</div>
 </div>
 {footer}

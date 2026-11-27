@@ -1,16 +1,43 @@
 {
   "rewrites": [
-    { "source": "/oauth/callback", "destination": "/oauth/callback.html" },
-    { "source": "/oauth/vsh-callback", "destination": "/oauth/callback.html" }
+    {
+      "source": "/oauth/callback",
+      "destination": "/oauth/callback.html"
+    },
+    {
+      "source": "/oauth/vsh-callback",
+      "destination": "/oauth/callback.html"
+    }
   ],
   "headers": [
     {
       "source": "/oauth/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "no-store" },
-        { "key": "Referrer-Policy", "value": "no-referrer" },
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/android",
+      "destination": "/va-disability-app-for-android.html",
+      "permanent": true
+    },
+    {
+      "source": "/android.html",
+      "destination": "/va-disability-app-for-android.html",
+      "permanent": true
     }
   ]
 }
