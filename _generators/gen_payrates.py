@@ -13,11 +13,18 @@ def money(v):
     try: return "$" + "{:,.2f}".format(float(v))
     except: return "N/A"
 
-COMP = {r["rating_pct"]: r for r in json.load(open(os.path.join(HERE,"data","compensation_rates.json")))}
-SMC = json.load(open(os.path.join(HERE,"data","smc_rates.json")))
+# PAY_YEAR=2027 switches every page to VA's published 2027 table (data/*_2027.json), keeping the
+# 2026 table as the prior year. Run through switch_pay_2027.py, which checks the numbers first.
+YEAR = os.environ.get("PAY_YEAR", "2026")
+SUFFIX = "" if YEAR == "2026" else f"_{YEAR}"
+COMP = {r["rating_pct"]: r for r in json.load(open(os.path.join(HERE,"data",f"compensation_rates{SUFFIX}.json")))}
+SMC = json.load(open(os.path.join(HERE,"data",f"smc_rates{SUFFIX}.json")))
+PRIOR = ({r["rating_pct"]: r for r in json.load(open(os.path.join(HERE,"data","compensation_rates.json")))}
+         if YEAR != "2026" else None)
 RATINGS = [10,20,30,40,50,60,70,80,90,100]
-EFFECTIVE = "December 1, 2025"
-YEAR = "2026"
+EFFECTIVE = {"2026": "December 1, 2025", "2027": "December 1, 2026"}[YEAR]
+EFF_SHORT = {"2026": "Dec 1, 2025", "2027": "Dec 1, 2026"}[YEAR]
+MODIFIED = os.environ.get("PAY_MODIFIED", "2026-06-09")
 
 CSS = re.search(r'CSS = """(.*?)"""', open(os.path.join(HERE,"gen_guides.py")).read(), re.S).group(1) + """
     table.pt { width:100%; border-collapse:collapse; margin:0; font-size:15px; }
@@ -79,7 +86,7 @@ def head(title, desc, canon, ld_blocks):
 
 def article_ld(title, desc, canon):
     return {"@context":"https://schema.org","@type":"Article","headline":title,"description":desc,
-        "datePublished":"2026-06-09","dateModified":"2026-06-09",
+        "datePublished":"2026-06-09","dateModified":MODIFIED,
         "author":{"@type":"Organization","name":"JDL Software LLC"},"publisher":{"@type":"Organization","name":"VA Ready"},
         "mainEntityOfPage":canon,"inLanguage":"en-US"}
 def faq_ld(faqs):
@@ -93,17 +100,25 @@ def ratenav(cur, extra=""):
     links = "".join(f'<span class="cur">{p}%</span>' if p==cur else f'<a href="/va-disability-pay/{p}-percent.html">{p}%</a>' for p in RATINGS)
     return f'<div class="ratenav">{links}{extra}</div>'
 
+def prior_line(p):
+    """2027 mode only: one line comparing the veteran-alone amount with 2026."""
+    if PRIOR is None: return ""
+    a, b = float(PRIOR[p]["veteran_alone"]), float(COMP[p]["veteran_alone"])
+    return (f'\n    <p class="trustline">In 2026 a veteran alone at {p}% received {money(a)} a month, so the '
+            f'{YEAR} rate is {money(b - a)} more. <a href="/va-disability-pay-rates-2027.html">See every 2026 to {YEAR} change &rarr;</a></p>')
+
 # ---------- per-rating page ----------
 def rating_page(p):
     r = COMP[p]
     canon = f"https://vareadyapp.com/va-disability-pay/{p}-percent.html"
     alone = money(r["veteran_alone"])
     has_dep = p >= 30
-    title = f"{p}% VA disability pay ({YEAR}): monthly amount with and without dependents"
+    title = (f"{p}% VA disability pay ({YEAR}): monthly amount with and without dependents" if PRIOR is None
+             else f"{p}% VA disability pay: {alone} a month in {YEAR}")
     if has_dep:
-        desc = f"{p}% VA disability pays {alone}/month for a veteran alone in {YEAR} (effective Dec 1, 2025), more with dependents. Full {p}% rate table by spouse, children, and parents."
+        desc = f"{p}% VA disability pays {alone}/month for a veteran alone in {YEAR} (effective {EFF_SHORT}), more with dependents. Full {p}% rate table by spouse, children, and parents."
     else:
-        desc = f"{p}% VA disability pays {alone}/month in {YEAR} (effective Dec 1, 2025). Dependent amounts don't start until 30%. See the full VA pay chart."
+        desc = f"{p}% VA disability pays {alone}/month in {YEAR} (effective {EFF_SHORT}). Dependent amounts don't start until 30%. See the full VA pay chart."
     desc = desc[:160]
     # table rows
     rows = [("Veteran alone (no dependents)", r["veteran_alone"])]
@@ -134,7 +149,7 @@ def rating_page(p):
     out += f"""
     <div class="crumb"><a href="/index.html">Home</a> / <a href="/va-disability-pay-rates.html">Pay Rates</a> / {p}%</div>
     <h1>{p}% VA disability pay</h1>
-    <p class="lede">A {p}% VA disability rating pays the amounts below each month, tax-free. These are the {YEAR} rates, effective {EFFECTIVE}.</p>
+    <p class="lede">A {p}% VA disability rating pays the amounts below each month, tax-free. These are the {YEAR} rates, effective {EFFECTIVE}.</p>{prior_line(p)}
     {ratenav(p)}
     <article>
         <h2>{p}% VA disability monthly pay by dependents</h2>
@@ -157,7 +172,7 @@ def rating_page(p):
 def flagship():
     canon = "https://vareadyapp.com/va-disability-pay-rates.html"
     title = f"{YEAR} VA disability pay rates: monthly compensation chart"
-    desc = f"The {YEAR} VA disability pay chart (effective Dec 1, 2025): monthly compensation for every rating 10%–100%, alone and with dependents. Verified against VA.gov."
+    desc = f"The {YEAR} VA disability pay chart (effective {EFF_SHORT}): monthly compensation for every rating 10%–100%, alone and with dependents. Verified against VA.gov."
     desc = desc[:160]
     # main table: ratings x key dependent columns
     cols = [("Alone","veteran_alone"),("+ Spouse","veteran_spouse"),("+ Spouse, 1 child","veteran_spouse_1child"),("+ Spouse, 2 children","veteran_spouse_2child")]
@@ -174,7 +189,7 @@ def flagship():
     <div class="crumb"><a href="/index.html">Home</a> / VA disability pay rates</div>
     <h1>{YEAR} VA disability pay rates</h1>
     <p class="lede">How much VA disability compensation pays each month, tax-free, for every rating from 10% to 100%, alone and with dependents. These are the {YEAR} rates (effective {EFFECTIVE}), verified against VA.gov. Tap a rating for the full breakdown.</p>
-    <p class="trustline">Social Security announced a 3.6% COLA on October 14, 2026. See the <a href="/va-disability-pay-rates-2027.html">estimated 2027 pay rates</a>.</p>
+    {TRUST_COLA}
     {ratenav(None, '<a href="/va-disability-pay/special-monthly-compensation.html">SMC rates</a>')}
     <article>
         <h2>Monthly VA disability compensation by rating</h2>
@@ -197,7 +212,7 @@ def flagship():
 def smc_page():
     canon = "https://vareadyapp.com/va-disability-pay/special-monthly-compensation.html"
     title = f"VA special monthly compensation (SMC) rates {YEAR}"
-    desc = f"{YEAR} VA Special Monthly Compensation (SMC) rates, effective Dec 1, 2025: what SMC is, the SMC levels (K through R), and the monthly amounts. Verified against VA.gov."
+    desc = f"{YEAR} VA Special Monthly Compensation (SMC) rates, effective {EFF_SHORT}: what SMC is, the SMC levels (K through R), and the monthly amounts. Verified against VA.gov."
     desc = desc[:160]
     rows = ""
     for s in SMC:
@@ -231,6 +246,10 @@ def smc_page():
 </body>
 </html>"""
     return out
+
+TRUST_COLA = ('<p class="trustline">Social Security announced a 3.6% COLA on October 14, 2026. See the <a href="/va-disability-pay-rates-2027.html">estimated 2027 pay rates</a>.</p>'
+              if PRIOR is None else
+              '<p class="trustline">These replace the 2026 rates after the 3.6% cost-of-living increase. See <a href="/va-disability-pay-rates-2027.html">every amount next to its 2026 figure</a>.</p>')
 
 # App call-to-action, one honest sentence about what is free and what is Pro
 APP_CTA = """<div class="cta cta-line"><p>The combined-rating calculator is free in <a href="https://apps.apple.com/app/id6761733758">VA Ready for iOS</a>, <a href="https://play.google.com/store/apps/details?id=com.vaready.app&hl=en_US">Vet Ready for Android</a> and <a href="https://apps.microsoft.com/detail/9p8xfcqvfjhf">VA Ready for Windows</a>; Pro adds the full 38 CFR criteria for every condition, every state's benefits and Claim Intel.</p></div>"""
