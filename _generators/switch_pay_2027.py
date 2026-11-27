@@ -15,8 +15,9 @@ Run on the day VA posts its 2027 rates (expected around December 1, 2026).
 2. python3 switch_pay_2027.py --check    compares VA's figures with our estimates, writes nothing
 3. python3 switch_pay_2027.py            regenerates the chart, the 10 rating pages, SMC and the 2027 page
 4. Review `git diff`, then push and run indexnow.py with the printed paths.
+5. python3 switch_pay_2027.py --sql      writes data/pay_2027_supabase.sql so the apps switch too
 
-Keeps data/compensation_rates.json as the 2026 table. Does not touch Supabase or the apps.
+Keeps data/compensation_rates.json as the 2026 table. Never writes to Supabase itself.
 """
 import json, os, subprocess, sys
 from decimal import Decimal, ROUND_HALF_UP
@@ -77,8 +78,27 @@ def check():
 def run(script, env):
     subprocess.run([sys.executable, "-I", os.path.join(HERE, script)], check=True, env={**os.environ, **env})
 
+def sql():
+    """Print the Supabase inserts for the apps (owner runs them on switch day; the apps use the newest year)."""
+    out = []
+    for table, name in (("compensation_rates", "compensation_rates_2027.json"), ("smc_rates", "smc_rates_2027.json")):
+        for r in load(name):
+            r = {k: v for k, v in r.items() if k != "id"}
+            r["effective_year"] = 2027
+            cols = ", ".join(r)
+            vals = ", ".join("null" if v is None else ("true" if v is True else "false" if v is False else
+                             ("'" + v.replace("'", "''") + "'") if isinstance(v, str) else str(v)) for v in r.values())
+            out.append(f"insert into public.{table} ({cols}) values ({vals});")
+    path = os.path.join(DATA, "pay_2027_supabase.sql")
+    open(path, "w").write("begin;\n" + "\n".join(out) + "\ncommit;\n")
+    print(f"wrote {path} ({len(out)} rows). Check that no 2027 rows exist first: "
+          "select effective_year, count(*) from compensation_rates group by 1;")
+
 if __name__ == "__main__":
     if "--template" in sys.argv: template(); sys.exit()
+    if "--sql" in sys.argv:
+        if check(): sys.exit("Stopped: fix the CHECK lines first.")
+        sql(); sys.exit()
     problems = check()
     if "--check" in sys.argv: sys.exit(1 if problems else 0)
     if problems and "--force" not in sys.argv:
