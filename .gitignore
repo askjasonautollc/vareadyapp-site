@@ -3,3 +3,5 @@
 # Original community photos can carry GPS and bystanders. Only the processed
 # images in img/community/ are committed (gen_community.py strips EXIF).
 _generators/data/community/photos/
+__pycache__/
+_drafts/
