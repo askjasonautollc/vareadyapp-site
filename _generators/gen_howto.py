@@ -83,7 +83,7 @@ CSS += """
 def getapp(headline):
     return (f'<div class="getapp"><img class="gi" src="/logo-96.png" alt="VA Ready app icon" width="64" height="64">'
             f'<div class="gt"><p class="gh">{esc(headline)}</p>'
-            f'<p class="gp"><b>4.8</b> on the App Store, 800+ ratings &middot; <b>4.7</b> on Google Play &middot; <b>50,000+</b> downloads &middot; free to download</p></div>'
+            f'<p class="gp"><b>4.8</b> on the App Store, 800+ ratings &middot; <b>4.7</b> on Google Play &middot; <b>53,000+</b> downloads &middot; free to download</p></div>'
             f'<div class="gb"><a class="sb" href="https://apps.apple.com/app/id6761733758">{SVG_APPLE}App Store</a>'
             f'<a class="sb" href="https://play.google.com/store/apps/details?id=com.vaready.app&amp;hl=en_US">{SVG_PLAY}Google Play</a>'
             f'<a class="sb" href="https://apps.microsoft.com/detail/9p8xfcqvfjhf">{SVG_WIN}Microsoft Store</a></div></div>')
