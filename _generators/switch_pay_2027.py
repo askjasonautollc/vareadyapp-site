@@ -27,7 +27,8 @@ SITE = os.path.dirname(HERE)
 DATA = os.path.join(HERE, "data")
 FACTOR = Decimal("1.036")
 RATINGS = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-PAGES = (["va-disability-pay-rates.html", "va-disability-pay-rates-2027.html",
+PAGES = ([f"conditions/{s}.html" for s in ("tinnitus ptsd back-pain knee-pain sleep-apnea migraines depression arthritis shoulder ankle knee-instability eczema asthma sciatica degenerative-disc-disease hearing-loss hypertension gerd-acid-reflux diabetes scars tmj".split())] +
+         ["va-disability-pay-rates.html", "va-disability-pay-rates-2027.html",
           "va-disability-pay/special-monthly-compensation.html"] +
          [f"va-disability-pay/{p}-percent.html" for p in RATINGS])
 
@@ -115,6 +116,8 @@ if __name__ == "__main__":
     modified = load("pay_2027_meta.json")["modified"]
     run("gen_payrates.py", {"PAY_YEAR": "2027", "PAY_MODIFIED": modified})
     run("gen_payrates_2027_official.py", {})
+    run("gen_conditions.py", {"PAY_YEAR": "2027", "COND_MODIFIED": modified})   # pay table on the 21 condition pages
+    run("apply_byline.py", {})
     # sitemap lastmod for the switched pages
     sp = os.path.join(SITE, "sitemap.xml"); xml = open(sp).read()
     import re

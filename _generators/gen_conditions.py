@@ -205,6 +205,168 @@ def board_section(dc, fclean):
         f'<p class="bd-cta">VA Ready shows this breakdown, with the same decision numbers, on the condition cards in your claim, for more than 170 conditions. '
         f'<a href="/index.html#download">Get the app</a>.</p></section>')
 
+
+# ---- 2026-11-27: key facts, pay at each level, condition CTA ----
+PAY_YEAR = os.environ.get("PAY_YEAR", "2026")
+_PSUF = "" if PAY_YEAR == "2026" else f"_{PAY_YEAR}"
+PAY = {r["rating_pct"]: r["veteran_alone"] for r in json.load(open(os.path.join(HERE, "data", f"compensation_rates{_PSUF}.json")))}
+PAY_EFFECTIVE = {"2026": "December 1, 2025", "2027": "December 1, 2026"}[PAY_YEAR]
+MODIFIED = os.environ.get("COND_MODIFIED", "2026-11-27")
+PAY_LADDER = {"scars": "7804"}   # 7805 is a pointer code; painful or unstable scars (7804) carry the ladder
+BILATERAL = {"knee-pain", "knee-instability", "ankle", "shoulder", "sciatica"}
+
+def money(v): return "${:,.2f}".format(float(v))
+
+# slug: (title, meta lead, [key facts]). Facts checked against the stored 38 CFR criteria (conditions table).
+KEY = {
+ "tinnitus": ("Tinnitus VA rating: 10%, one ear or both, {Y} pay",
+   "Tinnitus (DC 6260) rates a single 10%, whether you hear it in one ear or both: {p10} a month in {Y}.",
+   ["Tinnitus rates 10%, and only 10%. VA assigns a single rating whether you hear it in one ear, both ears or in your head (38 CFR 4.87, DC 6260, Note 2).",
+    "Hearing loss is a separate claim with its own rating, so claim both if you have both.",
+    "Your own account counts. Tell the examiner when the ringing started and what noise you worked around."]),
+ "ptsd": ("PTSD VA rating: 0% to 100% criteria and {Y} pay",
+   "PTSD (DC 9411) rates 0, 10, 30, 50, 70 or 100% on work and social impairment. {Y} pay runs {plo} to {phi} a month.",
+   ["VA rates PTSD on the General Rating Formula for Mental Disorders: 0, 10, 30, 50, 70 or 100%, based on how much your symptoms affect work and social life (38 CFR 4.130).",
+    "With depression or anxiety too, you get one mental health rating that covers all of them, not one per diagnosis.",
+    "A single condition rated 60% or more meets the TDIU threshold (38 CFR 4.16(a)) if it keeps you from steady work."]),
+ "depression": ("Depression VA rating: 0% to 100% and {Y} pay",
+   "Major depressive disorder (DC 9434) rates 0 to 100% on the same scale as PTSD. {Y} pay runs {plo} to {phi} a month.",
+   ["Depression uses the same General Rating Formula for Mental Disorders as PTSD: 0, 10, 30, 50, 70 or 100% (38 CFR 4.130).",
+    "Depression and PTSD together get one combined mental health rating, based on all your symptoms.",
+    "Depression is often claimed secondary to chronic pain or another service-connected condition. That needs a medical nexus."]),
+ "back-pain": ("Back pain VA rating: 10% to 100% and {Y} pay",
+   "Back strain (DC 5237) is rated on forward bending: 10% past 60 degrees, 20% at 31 to 60, 40% at 30 or less. {Y} pay from {plo}.",
+   ["Back strain is rated mainly on forward flexion of the lower spine: more than 60 up to 85 degrees is 10%, more than 30 up to 60 is 20%, 30 or less is 40%.",
+    "Leg nerve pain from the back (radiculopathy, often sciatica) is rated separately, on top of the back rating.",
+    "Describe your flare-ups at the exam. The examiner should estimate how much motion you lose during one."]),
+ "degenerative-disc-disease": ("Degenerative disc disease VA rating and {Y} pay",
+   "Degenerative disc disease (DC 5242) is rated on spinal motion, 10% to 100%. {Y} pay runs {plo} to {phi} a month.",
+   ["Spine conditions are rated on forward flexion of the lower spine: more than 60 up to 85 degrees is 10%, more than 30 up to 60 is 20%, 30 or less is 40%.",
+    "With intervertebral disc syndrome (DC 5243) and bed rest prescribed by a doctor, VA can rate on incapacitating episodes instead: at least 6 weeks in the past 12 months is 60%. You get the higher of the two.",
+    "Nerve pain into the legs or arms is rated separately from the spine."]),
+ "knee-pain": ("Knee pain VA rating: flexion, 0% to 30%, {Y} pay",
+   "Limited knee flexion (DC 5260): 45 degrees is 10%, 30 is 20%, 15 is 30%. {Y} pay {plo} to {phi} a month, before the bilateral factor.",
+   ["Flexion limited to 45 degrees is 10%, to 30 degrees is 20%, to 15 degrees is 30%. Flexion to 60 degrees is 0%.",
+    "Limited straightening (extension, DC 5261) and instability (DC 5257) can each be rated separately on the same knee.",
+    "Both knees rated? The bilateral factor adds 10% of the pair's combined value before it joins your other ratings (38 CFR 4.26)."]),
+ "knee-instability": ("Knee instability VA rating: 10% to 30% and {Y} pay",
+   "Knee instability (DC 5257) rates 10% to 30% on ligament damage and a prescribed cane or brace. {Y} pay {plo} to {phi} a month.",
+   ["Instability rates 10% for a sprain or ligament tear causing persistent instability, 20% when an unrepaired or failed-repair tear needs a prescribed cane, crutches, walker or brace, and 30% when both a device and a brace are prescribed.",
+    "Instability is rated separately from limited bending, so one knee can carry more than one rating.",
+    "Both knees rated? The bilateral factor applies (38 CFR 4.26)."]),
+ "ankle": ("Ankle VA rating: 10% or 20% and {Y} pay",
+   "Limited ankle motion (DC 5271) rates 10% when moderate and 20% when marked. {Y} pay {plo} to {phi} a month.",
+   ["Moderate limitation (less than 15 degrees up or less than 30 degrees down) is 10%. Marked limitation (less than 5 up or less than 10 down) is 20%, the top rating.",
+    "A joint with painful motion is entitled to at least the minimum compensable rating (38 CFR 4.59).",
+    "Both ankles rated? The bilateral factor applies (38 CFR 4.26)."]),
+ "shoulder": ("Shoulder VA rating: 20% to 40% and {Y} pay",
+   "Limited shoulder motion (DC 5201) rates 20% to 40%, higher on your dominant arm. {Y} pay {plo} to {phi} a month.",
+   ["Motion limited to shoulder level (90 degrees) is 20% on either arm. Midway (45 degrees) is 30% on your dominant arm and 20% on the other. Limited to 25 degrees from your side is 40% dominant, 30% other.",
+    "Your dominant arm is rated as the major arm, so the same limitation pays more there.",
+    "Both shoulders rated? The bilateral factor applies (38 CFR 4.26)."]),
+ "arthritis": ("Arthritis VA rating: how VA rates it and {Y} pay",
+   "Degenerative arthritis (DC 5003) is rated on the joint's motion, or 10% to 20% on X-ray findings. {Y} pay {plo} to {phi} a month.",
+   ["Arthritis that limits motion is rated under that joint's own code. If the motion loss is too slight to rate, each major joint or group of minor joints with limited motion still gets 10%.",
+    "Without limited motion, X-ray evidence in 2 or more major joints or minor joint groups rates 10%, or 20% with occasional incapacitating flare-ups.",
+    "Arthritis is often claimed secondary to an old injury in the same joint."]),
+ "sleep-apnea": ("Sleep apnea VA rating: 50% with CPAP, and {Y} pay",
+   "Sleep apnea (DC 6847) rates 50% when you need a CPAP or other breathing device: {p50} a month in {Y}.",
+   ["Needing a CPAP or other breathing device rates 50% under the current criteria (DC 6847).",
+    "VA proposed changing this rule in 2022 and 2024. As of November 2026 no final rule has been published, so CPAP still rates 50%.",
+    "Sleep apnea is often claimed secondary to PTSD or another service-connected condition. That needs a medical nexus."]),
+ "migraines": ("Migraine VA rating: 0% to 50% and {Y} pay",
+   "Migraines (DC 8100) rate on prostrating attacks: once every 2 months is 10%, monthly is 30%, very frequent is 50%. {Y} pay {plo} to {phi}.",
+   ["Ratings turn on the word prostrating. Attacks averaging once every 2 months are 10%, once a month 30%. Very frequent, completely prostrating, prolonged attacks causing severe economic inadaptability are 50%.",
+    "Keep a headache log: the date, how long it lasted and whether you had to lie down. That is the evidence these criteria ask for.",
+    "Migraines are often claimed secondary to TBI, neck conditions or PTSD."]),
+ "eczema": ("Eczema VA rating: 0% to 60% and {Y} pay",
+   "Eczema (DC 7806) rates on skin area or systemic medication: 5 to 20% of skin is 10%, 20 to 40% is 30%, over 40% is 60%. {Y} pay from {plo}.",
+   ["5% to under 20% of your body or exposed skin is 10%, 20 to 40% is 30%, more than 40% is 60%.",
+    "Systemic drugs such as oral steroids raise the rating: 6 weeks or more in the past 12 months is 30%, constant or near-constant use is 60%.",
+    "Photograph your flare-ups. Your skin may be clear on exam day."]),
+ "asthma": ("Asthma VA rating: 10% to 100% and {Y} pay",
+   "Asthma (DC 6602): daily inhaled medication rates 30%. Otherwise your FEV-1 sets 10% to 100%. {Y} pay {plo} to {phi} a month.",
+   ["Daily inhaled or oral bronchodilator therapy, or inhaled anti-inflammatory medication, rates 30% on its own.",
+    "Otherwise your breathing test sets the rating: FEV-1 of 71 to 80% predicted is 10%, 56 to 70% is 30%, 40 to 55% is 60%, under 40% is 100%.",
+    "Asthma is on the PACT Act presumptive list for veterans with qualifying burn pit and particulate exposure."]),
+ "sciatica": ("Sciatica VA rating: 10% to 80% per leg and {Y} pay",
+   "Sciatica (DC 8520) rates 10% to 80% per leg by nerve severity, with the bilateral factor if both legs. {Y} pay {plo} to {phi} a month.",
+   ["Sciatic nerve involvement rates by severity: mild 10%, moderate 20%, moderately severe 40%, severe with marked muscle atrophy 60%, complete paralysis 80%.",
+    "Each leg is rated separately, and when both legs are affected the bilateral factor applies (38 CFR 4.26).",
+    "Sciatica from a back condition is rated on top of the back rating."]),
+ "hearing-loss": ("Hearing loss VA rating: audiogram rules and {Y} pay",
+   "Hearing loss (DC 6100) is rated from your audiogram and speech score, 0% to 100%. Many veterans with hearing aids rate 0%. {Y} pay from {plo}.",
+   ["Hearing loss is rated mechanically: your pure tone average at 1000 to 4000 Hz and your Maryland CNC speech score go through Tables VI and VII (38 CFR 4.85).",
+    "Many veterans with hearing aids still rate 0%. A 0% service-connected rating still matters, because it can rise as your hearing gets worse.",
+    "Tinnitus is a separate 10% claim."]),
+ "hypertension": ("Hypertension VA rating: 10% to 60% and {Y} pay",
+   "Hypertension (DC 7101): diastolic 100+ or systolic 160+ rates 10%, as does a 100+ history on daily medication. {Y} pay {plo} to {phi}.",
+   ["Diastolic readings predominantly 100 or more, or systolic 160 or more, rate 10%. So does a history of diastolic 100 or more that now needs continuous medication.",
+    "Higher ratings need diastolic 110 or more or systolic 200 or more (20%), diastolic 120 or more (40%), or 130 or more (60%).",
+    "VA confirms hypertension with readings taken two or more times on at least three different days."]),
+ "gerd-acid-reflux": ("GERD VA rating: the 2024 criteria and {Y} pay",
+   "Since May 19, 2024, GERD (DC 7206) is rated on esophageal stricture criteria, 0% to 80%. {Y} pay {plo} to {phi} a month.",
+   ["Since May 19, 2024, GERD has its own code (DC 7206) and is rated on the esophageal stricture criteria (DC 7203). Hiatal hernia (DC 7346, shown below) uses the same criteria.",
+    "10% needs a documented stricture that requires daily medication to control trouble swallowing. 30% and up need repeated dilation (stretching) of the esophagus.",
+    "GERD is often claimed secondary to medications for other service-connected conditions, such as NSAIDs."]),
+ "diabetes": ("Diabetes VA rating: 10% to 100% and {Y} pay",
+   "Type 2 diabetes (DC 7913): diet alone is 10%, medication or insulin plus diet is 20%, add activity limits for 40%. {Y} pay {plo} to {phi}.",
+   ["Restricted diet alone rates 10%. Insulin or an oral medication plus a restricted diet rates 20%. Add regulation of activities for 40%.",
+    "Type 2 diabetes is presumptive for veterans exposed to herbicides such as Agent Orange (38 CFR 3.309(e)).",
+    "Complications such as neuropathy are rated separately when they reach a compensable level."]),
+ "scars": ("Painful scars VA rating: 10% to 30% and {Y} pay",
+   "Painful or unstable scars (DC 7804) rate by count: 1 or 2 is 10%, 3 or 4 is 20%, 5 or more is 30%. {Y} pay {plo} to {phi} a month.",
+   ["Painful or unstable scars rate by count under DC 7804: 1 or 2 scars is 10%, 3 or 4 is 20%, 5 or more is 30%.",
+    "Deep or large scars and scars of the head, face or neck have their own codes (7800, 7801, 7802).",
+    "A scar can be rated in addition to the injury or surgery that caused it."]),
+ "tmj": ("TMJ VA rating: 10% to 50% and {Y} pay",
+   "TMJ (DC 9905) rates on how far your jaw opens and your diet: 30 to 34 mm is 10%, up to 50% with severe limits. {Y} pay {plo} to {phi}.",
+   ["TMJ rates on your maximum jaw opening (inter-incisal range) and diet: 30 to 34 mm is 10%, 21 to 29 mm is 20%. Smaller openings or soft, pureed or liquid diets rate higher, up to 50%.",
+    "Limited opening and limited side-to-side motion are not combined; you get the higher rating.",
+    "TMJ is often claimed secondary to PTSD-related teeth grinding (bruxism)."]),
+}
+
+def ladder(slug, dc):
+    src = DATA.get(PAY_LADDER.get(slug, dc), DATA[dc])
+    return sorted({int(r["percentage"]) for r in (src.get("rating_criteria") or []) if int(r["percentage"]) > 0})
+
+def fill(t, slug, dc):
+    L = ladder(slug, dc)
+    vals = {"Y": PAY_YEAR, "plo": money(PAY[L[0]]) if L else "", "phi": money(PAY[L[-1]]) if L else ""}
+    for p in L: vals[f"p{p}"] = money(PAY[p])
+    return t.format(**vals)
+
+def key_html(slug, dc):
+    k = KEY.get(slug)
+    if not k: return ""
+    lis = "".join(f"<li>{esc(fill(f, slug, dc))}</li>" for f in k[2])
+    return f'<div class="keyfacts"><h2>Key facts</h2><ul>{lis}</ul></div>'
+
+def pay_html(slug, dc, fclean):
+    L = ladder(slug, dc)
+    if not L: return ""
+    rows = "".join(f'<tr><td class="pct">{p}%</td><td>{money(PAY[p])}</td></tr>' for p in L)
+    note = " Code 7805 itself has no ladder, so this uses painful or unstable scars (DC 7804)." if slug in PAY_LADDER else ""
+    bil = " If the same condition is rated on both sides, the bilateral factor raises the combined value." if slug in BILATERAL else ""
+    return (f'<h2>{PAY_YEAR} monthly pay at each rating</h2>'
+            f'<p>Veteran alone, tax-free, effective {PAY_EFFECTIVE}, if this is your only rating.{note}</p>'
+            f'<div class="tbl-wrap"><table class="rt"><thead><tr><th>Rating</th><th>Monthly pay</th></tr></thead><tbody>{rows}</tbody></table></div>'
+            f'<p>A spouse or children add to the amount from 30% up: see <a href="/va-disability-pay-rates.html">every rate with dependents</a>. '
+            f'With other ratings, VA combines them with its own math, so 30% and 20% make 40%, not 50%.{bil}</p>')
+
+def cond_cta(fclean):
+    return (f'<div class="cond-cta"><p><strong>See your own number.</strong> Add {esc(fclean)} to My Claim in VA Ready with your other conditions. '
+            f'It shows your combined rating and monthly pay, applies the bilateral factor, and, with Pro, opens the exact criteria for each level before your exam. '
+            f'<a href="/index.html#download">Download VA Ready</a>.</p></div>')
+
+KEY_CSS = """
+    .keyfacts { background:rgba(212,175,55,.07); border:1px solid rgba(212,175,55,.28); border-radius:12px; padding:4px 18px 6px; margin:18px 0 6px; }
+    .keyfacts h2 { margin-top:14px; }
+    .keyfacts ul { padding-left:20px; }
+    .keyfacts li { margin:6px 0; }
+    .cond-cta { border:1px solid rgba(212,175,55,.35); border-radius:12px; padding:12px 18px; margin:22px 0; }
+"""
+
 def cond_page(dc, slug, fname, intro):
     c = DATA[dc]
     cn, cfr, bsys = c["condition_name"], c.get("cfr_section") or "", c.get("body_system") or ""
@@ -218,7 +380,9 @@ def cond_page(dc, slug, fname, intro):
     stud_bit = f" Plus {nstud} peer-reviewed studies." if nstud else ""
     lv = "1 rating level" if len(crit) == 1 else f"{len(crit)} rating levels"
     desc = f"{fclean} (diagnostic code {dc}): the {lv} under {cfr}, related conditions, and linked guides.{stud_bit}"
+    if slug in KEY: desc = fill(KEY[slug][1], slug, dc)
     desc = desc[:160]
+    page_title = fill(KEY[slug][0], slug, dc) if slug in KEY else f"VA rating for {fclean} (DC {dc}): criteria and pay"
     secs_html = ""
     if secs:
         def sec_ref(name):
@@ -239,7 +403,7 @@ def cond_page(dc, slug, fname, intro):
     ev_html, ev_cites = evidence_section(dc, fname, fclean)
     board_html = board_section(dc, fclean)
     art_obj = {"@context":"https://schema.org","@type":"Article",
-        "headline":f"VA disability rating for {fclean}","description":desc,"datePublished":"2026-06-07",
+        "headline":f"VA disability rating for {fclean}","description":desc,"datePublished":"2026-06-07","dateModified":MODIFIED,
         "author":{"@type":"Organization","name":"JDL Software LLC"},"publisher":{"@type":"Organization","name":"VA Ready"},
         "mainEntityOfPage":canon,"inLanguage":"en-US"}
     if ev_cites: art_obj["citation"] = ev_cites
@@ -249,7 +413,7 @@ def cond_page(dc, slug, fname, intro):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VA rating for {fclean} (DC {dc}): criteria and pay | VA Ready</title>
+<title>{esc(page_title)} | VA Ready</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0a0f1a">
@@ -265,7 +429,7 @@ def cond_page(dc, slug, fname, intro):
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <script type="application/ld+json">{bc_ld}</script>
 <script type="application/ld+json">{art_ld}</script>
-<style>{CSS}{BOARD_CSS if board_html else ""}</style>
+<style>{CSS}{BOARD_CSS if board_html else ""}{KEY_CSS}</style>
 </head>
 <body>
 {NAV}
@@ -274,9 +438,12 @@ def cond_page(dc, slug, fname, intro):
     <h1>VA disability rating for {fname}</h1>
     <p class="lede">{intro}</p>
     <div class="meta">Diagnostic code {dc} &middot; {esc(cfr)} &middot; {esc(bsys)} &middot; {max_label(c)}</div>
+    {key_html(slug, dc)}
     <article>
         <h2>Rating criteria</h2>
         {rating_table(crit)}
+        {pay_html(slug, dc, fclean)}
+        {cond_cta(fclean)}
         {notes_html}
         {secs_html}
         <h2>Related guides</h2>
