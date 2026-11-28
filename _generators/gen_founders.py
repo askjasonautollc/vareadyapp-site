@@ -49,13 +49,14 @@ title = "About VA Ready: built by a retired Army chief who filed his own claim"
 desc = "VA Ready was built by Jason, a retired U.S. Army Chief Warrant Officer who filed his own claim to 100% P&T. The story behind the app, chief to soldier."
 desc = desc[:160]
 
-person = {"@type":"Person","name":"Jason","honorificSuffix":"CW2, U.S. Army (Retired)",
-  "jobTitle":"Founder","worksFor":{"@type":"Organization","name":"JDL Software LLC"},
+person = {"@type":"Person","@id":"https://vareadyapp.com/founders.html#jason","name":"Jason","honorificSuffix":"CW2 (R), U.S. Army",
+  "jobTitle":"Founder and developer of VA Ready","url":"https://vareadyapp.com/founders.html",
+  "knowsAbout":["VA disability claims","Benefits Delivery at Discharge","Systems integration","Full-stack software development","IT and OT systems"],"worksFor":{"@type":"Organization","name":"JDL Software LLC"},
   "image":"https://vareadyapp.com/img/jason_drill.jpg",
-  "description":"Retired U.S. Army Chief Warrant Officer (CW2). Served as a 19D Cavalry Scout (enlisted, to E-7) and a 131A Field Artillery Targeting Technician. Deployed to Iraq and Afghanistan. Founder of the VA Ready / Vet Ready disability-claims app."}
+  "description":"Retired U.S. Army Chief Warrant Officer (CW2). Served as a 19D Cavalry Scout (enlisted, to E-7) and a 131A Field Artillery Targeting Technician. Deployed to Iraq and Afghanistan. Systems integration engineer and full-stack developer with IT and OT experience. Founder and developer of the VA Ready / Vet Ready disability-claims app."}
 org = {"@type":"Organization","name":"VA Ready","alternateName":"Vet Ready","url":"https://vareadyapp.com/",
   "logo":"https://vareadyapp.com/logo.png","parentOrganization":{"@type":"Organization","name":"JDL Software LLC"},
-  "founder":{"@type":"Person","name":"Jason"}}
+  "founder":{"@type":"Person","@id":"https://vareadyapp.com/founders.html#jason","name":"Jason"}}
 aboutpage = {"@context":"https://schema.org","@type":"AboutPage","name":"About VA Ready",
   "url":canon,"description":re.sub(", ","-",desc),"mainEntity":person,"about":org,"inLanguage":"en-US"}
 bc = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
@@ -74,6 +75,7 @@ BODY = f'''<div class="founder-hero">
   <article>
     <h2>Twenty years, then the paperwork</h2>
     <p>I spent two decades in the Army. I came up enlisted as a 19D Cavalry Scout, made it to Sergeant First Class (E-7), and then earned my appointment as a 131A Field Artillery Targeting Technician, a warrant officer. A Chief. The job took me to Iraq in 2006 and again in 2008&ndash;2009, to Afghanistan in 2011&ndash;2012, plus rotations through Europe, South Korea, and Kuwait. I retired in 2026.</p>
+    <p>Outside the uniform I work as a systems integration engineer and full-stack developer, on both IT and OT systems. I design, build and maintain VA Ready myself.</p>
     <div class="photo-row">
       <figure><img class="crop-top" src="/img/jason_private.jpg" alt="Jason as a young soldier deployed overseas" width="600" height="833" loading="lazy"><figcaption>Where it started, a young Scout, downrange.</figcaption></figure>
       <figure><img src="/img/jason_afghan.jpg" alt="Jason resting during a deployment to Afghanistan" width="600" height="398" loading="lazy"><figcaption>Afghanistan, 2011&ndash;2012. The grind never made the brochure.</figcaption></figure>
