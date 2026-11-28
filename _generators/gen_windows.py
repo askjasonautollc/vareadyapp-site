@@ -39,13 +39,13 @@ features = [
  ("Get ready for your C&P exam",
   "A C&P/DBQ Guideline for each condition, an exam questionnaire you answer in your own words before the exam, and peer-reviewed studies mapped to your diagnostic codes, all exportable to PDF."),
  ("Find what you may be missing",
-  "Claim Intel shows the conditions commonly claimed for your MOS, AFSC or rating, plus PACT Act presumptives from the bases you served at and the aircraft you worked on. 1,102 military job codes and 827 bases with exposure mapping are built in."),
+  "Claim Intel shows the conditions commonly claimed for your MOS, AFSC or rating, plus PACT Act presumptives from the bases you served at and the aircraft you worked on. 1,106 military job codes and 834 bases with exposure mapping are built in."),
  ("Never miss a VA date",
   "One Upcoming list for your Intent to File expiration, VA evidence requests, decision review windows, C&P exams and VSO visits. Print the schedule for the fridge."),
  ("Find free help",
-  "Search 8,957 VSO offices, read ratings from other veterans, track visits, and hand your rep a VSO Packet. VA Ready saves the visit and a reminder on your PC. It does not book or confirm an appointment."),
+  "Search 8,959 VSO offices, read ratings from other veterans, track visits, and hand your rep a VSO Packet. VA Ready saves the visit and a reminder on your PC. It does not book or confirm an appointment."),
  ("Benefits and back pay",
-  "Federal and state benefits at your rating (644 state entries), the current pay rate chart, and a back pay estimate from your effective date. 60 filing guides cover appeals, proposed reductions, protected ratings and more."),
+  "Federal and state benefits at your rating (644 state entries), the current pay rate chart, and a back pay estimate from your effective date. 62 filing guides cover appeals, proposed reductions, protected ratings and more."),
 ]
 free_pro = [
  ("Combined rating and estimated pay", "Full 38 CFR rating criteria for every condition"),

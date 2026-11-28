@@ -129,7 +129,7 @@ page = f"""<!DOCTYPE html>
     <h1>Vet Ready for Android</h1>
     <p class="lede">Vet Ready is VA Ready on Android. Calculate your combined VA disability rating, build your claim and keep your evidence in order on your phone. Free on Google Play, no account.</p>
     {cta}
-    <p class="facts">4.6 on Google Play. Android 8.0 or later, phones and tablets.</p>
+    <p class="facts">4.7 on Google Play. Android 8.0 or later, phones and tablets.</p>
     {phones}
     <article>
         <h2>What you can do on Android</h2>
